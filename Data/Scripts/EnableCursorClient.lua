@@ -1,27 +1,21 @@
-function ToggleCursor()
 
+
+function ToggleCursor()
     if (not UI.IsCursorVisible()) then
         UI.SetCursorVisible(true)
     else
         UI.SetCursorVisible(false)
     end
-
-
-
 end
 
-
-
 function OnBindingPressed(player, binding)
-    if (binding == "ability_extra_39") then 
-        
+    if (binding == "ability_extra_39") then
         ToggleCursor()
-
 	end
 end
 
 function OnBindingReleased(player, binding)
-	if (binding == "ability_extra_39") then 
+	if (binding == "ability_extra_39") then
 	end
 end
 

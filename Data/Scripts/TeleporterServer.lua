@@ -57,7 +57,7 @@ function TryTeleportPlayer(player)
 	end
 	player:SetWorldPosition(destinationPosition)
 
-	Events.BroadcastToAllPlayers("PT_Internal", COMPONENT_ROOT.id, COMPONENT_ROOT:GetWorldPosition(), destinationPosition)
+	Events.BroadcastToAllPlayers("PT_Internal", player, COMPONENT_ROOT.id, COMPONENT_ROOT:GetWorldPosition(), destinationPosition)
 	useTime = time()
 	player.serverUserData.TeleporterServer_TeleportTime = time()
 	_G.TeleporterServer.isTeleporting = false

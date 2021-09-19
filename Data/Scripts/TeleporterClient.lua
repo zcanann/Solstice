@@ -18,9 +18,11 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local START_POINT_EFFECTS = COMPONENT_ROOT:GetCustomProperty("StartPointEffects")
 local END_POINT_EFFECTS = COMPONENT_ROOT:GetCustomProperty("EndPointEffects")
 
+local localPlayer = Game.GetLocalPlayer()
+
 -- nil OnPlayerTeleport(Vector3, Vector3)
 -- Create effects for a teleport
-function OnPlayerTeleport(id, startPosition, endPosition)
+function OnPlayerTeleport(player, id, startPosition, endPosition)
 	if COMPONENT_ROOT.id == id then
 		if START_POINT_EFFECTS then
 			World.SpawnAsset(START_POINT_EFFECTS, {position = startPosition})
@@ -28,6 +30,10 @@ function OnPlayerTeleport(id, startPosition, endPosition)
 		if END_POINT_EFFECTS then
 			World.SpawnAsset(END_POINT_EFFECTS, {position = endPosition})
 		end
+	end
+
+	if player == localPlayer then
+		Events.Broadcast("on_player_teleported")
 	end
 end
 

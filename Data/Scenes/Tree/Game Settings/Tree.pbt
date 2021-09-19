@@ -893,13 +893,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 8304240649824206014
-    SubobjectId: 11729803102646375547
-    InstanceId: 15898384833411692313
-    TemplateId: 12349252354184589945
-    WasRoot: true
-  }
 }
 Objects {
   Id: 7927719428287702832
@@ -930,16 +923,10 @@ Objects {
   }
   NetworkContext {
   }
-  InstanceHistory {
-    SelfId: 500925669810598107
-    SubobjectId: 15493950792516048926
-    InstanceId: 15898384833411692313
-    TemplateId: 12349252354184589945
-  }
 }
 Objects {
   Id: 410966446227673769
-  Name: "Top Down Camera"
+  Name: "Camera"
   Transform {
     Location {
       X: -1558.94824
@@ -957,6 +944,7 @@ Objects {
     }
   }
   ParentId: 7927719428287702832
+  ChildIds: 16979616322488010798
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -971,10 +959,10 @@ Objects {
   Camera {
     UseAsDefault: true
     AttachToLocalPlayer: true
-    InitialDistance: 2500
+    InitialDistance: 1500
     IsDistanceAdjustable: true
     MinDistance: 500
-    MaxDistance: 2500
+    MaxDistance: 1500
     PositionOffset {
     }
     RotationOffset {
@@ -988,11 +976,52 @@ Objects {
     MinPitch: -89
     MaxPitch: 89
   }
-  InstanceHistory {
-    SelfId: 9936520501318515511
-    SubobjectId: 6346605252096791538
-    InstanceId: 15898384833411692313
-    TemplateId: 12349252354184589945
+}
+Objects {
+  Id: 16979616322488010798
+  Name: "C_CameraControls"
+  Transform {
+    Location {
+      X: 2695.30444
+      Y: 362.804626
+      Z: 328.036865
+    }
+    Rotation {
+      Pitch: 37.86763
+      Yaw: 58.443779
+      Roll: 44.9854546
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 410966446227673769
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Camera"
+      ObjectReference {
+        SelfId: 410966446227673769
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5793929070704032215
+    }
   }
 }
 Objects {

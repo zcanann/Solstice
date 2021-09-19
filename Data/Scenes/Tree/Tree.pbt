@@ -17,11 +17,11 @@ Objects {
   ChildIds: 18014765257829886886
   ChildIds: 2654916338316290302
   ChildIds: 5628166357863187692
-  ChildIds: 413991195585998862
+  ChildIds: 1667228622666609854
   ChildIds: 10161513107212306387
+  ChildIds: 413991195585998862
   ChildIds: 940409630796027154
   ChildIds: 9028404267357836196
-  ChildIds: 1667228622666609854
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -34,38 +34,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 1667228622666609854
-  Name: "Movement"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Movement"
   }
 }
 Objects {
@@ -331,6 +299,35 @@ Objects {
   }
 }
 Objects {
+  Id: 413991195585998862
+  Name: "Map"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Map_1"
+  }
+}
+Objects {
   Id: 10161513107212306387
   Name: "ItemSystems"
   Transform {
@@ -376,8 +373,8 @@ Objects {
   }
 }
 Objects {
-  Id: 413991195585998862
-  Name: "Map"
+  Id: 1667228622666609854
+  Name: "Movement"
   Transform {
     Location {
     }
@@ -399,9 +396,12 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Map_1"
+    FilePartitionName: "Movement"
   }
 }
 Objects {

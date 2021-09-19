@@ -4,7 +4,7 @@ local bindingKey = "ability_secondary"
 
 -- Navigation
 local remainingWayPoints = nil
-local resetDistance = 16
+local wayPointClearDistance = 16
 
 -- Visuals
 local goalPulse = nil
@@ -14,10 +14,6 @@ function DestroyIfValid(object)
 	if Object.IsValid(object) then
 		object:Destroy()
 	end
-end
-
-function OnNavigationPathCharted(wayPoints)
-	remainingWayPoints = wayPoints
 end
 
 function MoveToGoal(player, params)
@@ -33,10 +29,11 @@ function MoveToGoal(player, params)
 	local playerPos2D = Vector2.New(playerPos)
 	local distance2D = (wayPoint2D - playerPos2D).size
 
-	if distance2D <= resetDistance then
+	if distance2D <= wayPointClearDistance then
 		table.remove(remainingWayPoints, 1)
 	else
 		-- Setting the direction from 2D avoids "wasting" part of the direction normal on an unused Z component
+		-- Without this, the player would slow down as they approach each waypoint
 		params.direction = Vector3.New((wayPoint2D - playerPos2D):GetNormalized(), 0.0)
 	end
 
@@ -57,8 +54,16 @@ function OnBindingPressed(player, binding)
 			-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
 			-- local pulsePos = goal + Vector3.UP * 300
 			goalPulse = World.SpawnAsset(CLICK_VFX, {position = goal})
+
+			local playerPos = player:GetWorldPosition()
+			local wayPoints = _G.NavMesh.FindPath(playerPos, goal)
 			
-			Events.BroadcastToServer("request_navigation_path", player, goal)
+			-- Remove the starting waypoint, as the player is already there
+			if wayPoints ~= nil and #wayPoints >= 1 then
+				table.remove(wayPoints, 1)
+			end
+
+			remainingWayPoints = wayPoints
 		end
 	end
 
@@ -92,10 +97,14 @@ function Tick(dt)
 	end
 end
 
+function OnPlayerTeleported()
+	remainingWayPoints = nil
+end
+
 local movementHook = localPlayer.movementHook:Connect(MoveToGoal)
 movementHook.priority = 99
 
-Events.Connect("navigation_path", OnNavigationPathCharted)
+Events.Connect("on_player_teleported", OnPlayerTeleported)
 localPlayer.bindingPressedEvent:Connect(OnBindingPressed)
 localPlayer.bindingReleasedEvent:Connect(OnBindingReleased)
 

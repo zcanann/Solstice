@@ -1013,6 +1013,8 @@ HandleTeamChanged()
 
 ROOT.networkedPropertyChangedEvent:Connect(OnPropertyChanged)
 
+-- Disable collision for all enemies
+SetCollision(false)
 
 NPC_MANAGER().Register(script)
 NPC_MANAGER().RegisterCollider(script, COLLIDER)

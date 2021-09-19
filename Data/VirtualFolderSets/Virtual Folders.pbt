@@ -45,5 +45,9 @@ Assets {
       VirtualFolderPath: "Destructibles"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Camera"
+      PlatformAssetType: 3
+    }
   }
 }

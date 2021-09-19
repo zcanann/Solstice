@@ -658,7 +658,6 @@ if REGISTER_IN_GLOBALS then
             end
         end
         _G.NavMesh, _G.Pathfinder, _G.PathfindingManager = wrapper, wrapper, wrapper -- Bind a generic wrapper
-        print(_G.NavMesh)
         _G[DD_PATHFINDER_GLOBAL_ACCESS] = script.context
     end
 end
