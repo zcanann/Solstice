@@ -1607,7 +1607,7 @@ Objects {
   Transform {
     Location {
       X: -5150
-      Y: -3000
+      Y: -1380
     }
     Rotation {
       Yaw: 8.53773713e-07

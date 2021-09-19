@@ -1,145 +1,6 @@
 Name: "Game Settings"
 RootId: 2654916338316290302
 Objects {
-  Id: 18400809806042693018
-  Name: "Top Down Camera Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2654916338316290302
-  ChildIds: 7927719428287702832
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:IsCursorVisible"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:IsCursorVisible:tooltip"
-      String: "Whether or not to show the cursor for the top down view."
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 8304240649824206014
-    SubobjectId: 11729803102646375547
-    InstanceId: 15898384833411692313
-    TemplateId: 12349252354184589945
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 7927719428287702832
-  Name: "Client Context"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18400809806042693018
-  ChildIds: 410966446227673769
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 500925669810598107
-    SubobjectId: 15493950792516048926
-    InstanceId: 15898384833411692313
-    TemplateId: 12349252354184589945
-  }
-}
-Objects {
-  Id: 410966446227673769
-  Name: "Top Down Camera"
-  Transform {
-    Location {
-      X: -1558.94824
-      Y: 926.983276
-      Z: 2052.87231
-    }
-    Rotation {
-      Pitch: -56.0579834
-      Yaw: -42.2754517
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7927719428287702832
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Camera {
-    UseAsDefault: true
-    AttachToLocalPlayer: true
-    InitialDistance: 2500
-    MinDistance: 2000
-    MaxDistance: 3000
-    PositionOffset {
-    }
-    RotationOffset {
-      Pitch: 10
-    }
-    FieldOfView: 90
-    ViewWidth: 1200
-    RotationMode {
-      Value: "mc:erotationmode:default"
-    }
-    MinPitch: -89
-    MaxPitch: 89
-  }
-  InstanceHistory {
-    SelfId: 9936520501318515511
-    SubobjectId: 6346605252096791538
-    InstanceId: 15898384833411692313
-    TemplateId: 12349252354184589945
-  }
-}
-Objects {
   Id: 3153961077820125633
   Name: "Combat Dependencies"
   Transform {
@@ -995,8 +856,148 @@ Objects {
   }
 }
 Objects {
+  Id: 18400809806042693018
+  Name: "Camera Settings"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2654916338316290302
+  ChildIds: 7927719428287702832
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsCursorVisible"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:IsCursorVisible:tooltip"
+      String: "Whether or not to show the cursor for the top down view."
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  InstanceHistory {
+    SelfId: 8304240649824206014
+    SubobjectId: 11729803102646375547
+    InstanceId: 15898384833411692313
+    TemplateId: 12349252354184589945
+    WasRoot: true
+  }
+}
+Objects {
+  Id: 7927719428287702832
+  Name: "Client Context"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18400809806042693018
+  ChildIds: 410966446227673769
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 500925669810598107
+    SubobjectId: 15493950792516048926
+    InstanceId: 15898384833411692313
+    TemplateId: 12349252354184589945
+  }
+}
+Objects {
+  Id: 410966446227673769
+  Name: "Top Down Camera"
+  Transform {
+    Location {
+      X: -1558.94824
+      Y: 926.983276
+      Z: 2052.87231
+    }
+    Rotation {
+      Pitch: -56.0579834
+      Yaw: -42.2754517
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7927719428287702832
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Camera {
+    UseAsDefault: true
+    AttachToLocalPlayer: true
+    InitialDistance: 2500
+    IsDistanceAdjustable: true
+    MinDistance: 500
+    MaxDistance: 2500
+    PositionOffset {
+    }
+    RotationOffset {
+      Pitch: 10
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:default"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+  }
+  InstanceHistory {
+    SelfId: 9936520501318515511
+    SubobjectId: 6346605252096791538
+    InstanceId: 15898384833411692313
+    TemplateId: 12349252354184589945
+  }
+}
+Objects {
   Id: 5575738881908676007
-  Name: "Top Down Player Settings"
+  Name: "Player Settings"
   Transform {
     Location {
     }
@@ -1034,13 +1035,13 @@ Objects {
       BrakingDecelerationFlying: 600
       MaxFlightSpeed: 600
       MovementControlMode {
-        Value: "mc:emovementcontrolmode:viewrelative"
+        Value: "mc:emovementcontrolmode:none"
       }
       LookControlMode {
-        Value: "mc:elookcontrolmode:absolute_tocursor"
+        Value: "mc:elookcontrolmode:relative"
       }
       FacingMode {
-        Value: "mc:efacingmode:faceaimalways"
+        Value: "mc:efacingmode:facemovement"
       }
       DefaultRotationRate: 540
       SlideRotationRate: 20
