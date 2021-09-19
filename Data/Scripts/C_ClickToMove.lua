@@ -27,14 +27,17 @@ function MoveToGoal(player, params)
 
 	local wayPoint = remainingWayPoints[1]
 	local playerPos = player:GetWorldPosition()
-	local distance2D = (Vector2.New(wayPoint) - Vector2.New(playerPos)).size
 
-	-- print(distance2D)
+	-- Convert to 2D space
+	local wayPoint2D = Vector2.New(wayPoint)
+	local playerPos2D = Vector2.New(playerPos)
+	local distance2D = (wayPoint2D - playerPos2D).size
 
 	if distance2D <= resetDistance then
 		table.remove(remainingWayPoints, 1)
 	else
-		params.direction = (wayPoint - playerPos):GetNormalized()
+		-- Setting the direction from 2D avoids "wasting" part of the direction normal on an unused Z component
+		params.direction = Vector3.New((wayPoint2D - playerPos2D):GetNormalized(), 0.0)
 	end
 
 	if #remainingWayPoints <= 0 then
