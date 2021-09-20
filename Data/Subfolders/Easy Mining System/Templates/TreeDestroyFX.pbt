@@ -1,25 +1,23 @@
 Assets {
-  Id: 9459281094711195245
-  Name: "ITEM_Consumable_HealthPotion"
+  Id: 16850299033822059407
+  Name: "TreeDestroyFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1558197855077483019
+      RootId: 15087230032479395646
       Objects {
-        Id: 1558197855077483019
-        Name: "ITEM_Consumable_HealthPotion"
+        Id: 15087230032479395646
+        Name: "TreeDestroyFX"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.705662489
+            Y: 0.705662489
+            Z: 0.705662489
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 4755894725365256958
-        UnregisteredParameters {
-        }
-        WantsNetworking: true
+        ChildIds: 13099994393093305205
+        Lifespan: 15
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -30,11 +28,11 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Folder {
-          IsGroup: true
+          IsFilePartition: true
         }
       }
       Objects {
-        Id: 4755894725365256958
+        Id: 13099994393093305205
         Name: "ClientContext"
         Transform {
           Location {
@@ -47,11 +45,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1558197855077483019
-        ChildIds: 1648101658357956748
-        WantsNetworking: true
+        ParentId: 15087230032479395646
+        ChildIds: 6541542775366206088
+        ChildIds: 7925226584041158798
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -63,51 +61,26 @@ Assets {
         }
       }
       Objects {
-        Id: 1648101658357956748
-        Name: "Gem - Baguette Polished"
+        Id: 6541542775366206088
+        Name: "TreeFallClient"
         Transform {
           Location {
-            Z: 0.741634369
+            Z: 5.40583869e-06
           }
           Rotation {
           }
           Scale {
-            X: 0.714918315
-            Y: 0.655736625
-            Z: 0.567655385
+            X: 1.41710806
+            Y: 1.41710806
+            Z: 1.41710806
           }
         }
-        ParentId: 4755894725365256958
+        ParentId: 13099994393093305205
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1261118093406815502
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.101787984
-              G: 1
-              B: 0.00999999
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail2:color"
-            Color {
-              R: 0.950000048
-              G: 0.849337816
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.928079426
-              G: 0.98
-              A: 1
+            Name: "cs:Tree"
+            ObjectReference {
+              SubObjectId: 7925226584041158798
             }
           }
         }
@@ -118,19 +91,52 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13067809374867122501
+          }
+        }
+      }
+      Objects {
+        Id: 7925226584041158798
+        Name: "Tree Oak 01"
+        Transform {
+          Location {
+            Z: 393.700714
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.812703311
+            Y: 0.993346512
+            Z: 0.619393229
+          }
+        }
+        ParentId: 13099994393093305205
+        Collidable_v2 {
           Value: "mc:ecollisionsetting:forceon"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
         }
         CoreMesh {
           MeshAsset {
-            Id: 6689736241578524897
+            Id: 5669233139951365038
           }
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          InteractWithTriggers: true
           StaticMesh {
             Physics {
+              IsEnabled: true
+              Mass: 100
+              LinearDamping: 0.01
             }
             BoundsScale: 1
           }
@@ -138,12 +144,12 @@ Assets {
       }
     }
     Assets {
-      Id: 6689736241578524897
-      Name: "Bottle 05"
+      Id: 5669233139951365038
+      Name: "Tree Redwood Bare Medium"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_fantasy_bottle_005"
+        AssetId: "sm_tree_redwood_004"
       }
     }
     PrimaryAssetId {
@@ -152,5 +158,4 @@ Assets {
     }
   }
   SerializationVersion: 98
-  VirtualFolderPath: "Items"
 }

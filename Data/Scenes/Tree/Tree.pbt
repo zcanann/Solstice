@@ -19,7 +19,7 @@ Objects {
   ChildIds: 16844910628275373465
   ChildIds: 1495303198340745656
   ChildIds: 413991195585998862
-  ChildIds: 3001595816527461672
+  ChildIds: 15851008806786609599
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,8 +35,8 @@ Objects {
   }
 }
 Objects {
-  Id: 3001595816527461672
-  Name: "ITEM_Sword_ExampleSword"
+  Id: 15851008806786609599
+  Name: "ITEM_Misc_Copper"
   Transform {
     Scale {
       X: 1
@@ -54,16 +54,16 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 1550651346007304081
+      key: 420443016326485644
       value {
         Overrides {
           Name: "Name"
-          String: "ITEM_Sword_ExampleSword"
+          String: "ITEM_Misc_Copper"
         }
       }
     }
     TemplateAsset {
-      Id: 17932466227187007890
+      Id: 17677168820282134244
     }
   }
 }

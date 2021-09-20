@@ -1,13 +1,13 @@
 Assets {
-  Id: 9459281094711195245
-  Name: "ITEM_Consumable_HealthPotion"
+  Id: 17677168820282134244
+  Name: "ITEM_Misc_Copper"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1558197855077483019
+      RootId: 420443016326485644
       Objects {
-        Id: 1558197855077483019
-        Name: "ITEM_Consumable_HealthPotion"
+        Id: 420443016326485644
+        Name: "ITEM_Misc_Copper"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 4755894725365256958
+        ChildIds: 559411280118877764
         UnregisteredParameters {
         }
         WantsNetworking: true
@@ -34,7 +34,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4755894725365256958
+        Id: 559411280118877764
         Name: "ClientContext"
         Transform {
           Location {
@@ -47,8 +47,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1558197855077483019
-        ChildIds: 1648101658357956748
+        ParentId: 420443016326485644
+        ChildIds: 10513546957225219785
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -63,50 +63,34 @@ Assets {
         }
       }
       Objects {
-        Id: 1648101658357956748
+        Id: 10513546957225219785
         Name: "Gem - Baguette Polished"
         Transform {
           Location {
-            Z: 0.741634369
+            Z: 5.04182816
           }
           Rotation {
           }
           Scale {
-            X: 0.714918315
-            Y: 0.655736625
-            Z: 0.567655385
+            X: 0.380211413
+            Y: 0.348737
+            Z: 0.301893175
           }
         }
-        ParentId: 4755894725365256958
+        ParentId: 559411280118877764
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 1261118093406815502
+              Id: 8541340586281732265
             }
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.101787984
+              R: 1
               G: 1
-              B: 0.00999999
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail2:color"
-            Color {
-              R: 0.950000048
-              G: 0.849337816
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:color"
-            Color {
-              R: 0.928079426
-              G: 0.98
+              B: 1
               A: 1
             }
           }
@@ -122,7 +106,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 6689736241578524897
+            Id: 10283743880838515553
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -138,12 +122,21 @@ Assets {
       }
     }
     Assets {
-      Id: 6689736241578524897
-      Name: "Bottle 05"
+      Id: 10283743880838515553
+      Name: "Gem - Baguette Polished"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_fantasy_bottle_005"
+        AssetId: "sm_gem_baguette_polished_001"
+      }
+    }
+    Assets {
+      Id: 8541340586281732265
+      Name: "Metal Iron Rusted 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_002"
       }
     }
     PrimaryAssetId {

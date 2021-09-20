@@ -1,8 +1,8 @@
 Name: "Game Systems"
 RootId: 16844910628275373465
 Objects {
-  Id: 16669426050102956743
-  Name: "ItemSystems"
+  Id: 1478832748876151997
+  Name: "MiningSystem"
   Transform {
     Scale {
       X: 1
@@ -19,102 +19,64 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 3832418787418834059
+      key: 1727160089757241126
       value {
         Overrides {
-          Name: "UIX"
-          Float: 10
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 20
+          Name: "Position"
+          Vector {
+          }
         }
       }
     }
     ParameterOverrideMap {
-      key: 4314147467082345459
+      key: 4330931824825420711
       value {
         Overrides {
-          Name: "UIX"
-          Float: 10
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 20
+          Name: "Position"
+          Vector {
+            X: -3685
+            Y: 893.368286
+          }
         }
       }
     }
     ParameterOverrideMap {
-      key: 7265764426136168206
+      key: 11844619883856046321
       value {
         Overrides {
-          Name: "UIX"
-          Float: 10
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 20
+          Name: "cs:MineableItemsData"
+          String: ""
         }
       }
     }
     ParameterOverrideMap {
-      key: 7786516455799475632
+      key: 14387560729205165188
       value {
         Overrides {
-          Name: "UIX"
-          Float: 10
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 20
+          Name: "cs:Database"
+          AssetReference {
+            Id: 397976853662803105
+          }
         }
       }
     }
     ParameterOverrideMap {
-      key: 8906475708421672423
+      key: 16096839622383059432
       value {
         Overrides {
-          Name: "UIX"
-          Float: 10
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 20
+          Name: "Position"
+          Vector {
+            X: -3935
+          }
         }
       }
     }
     ParameterOverrideMap {
-      key: 11557409782739209575
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: -116.674438
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 34.4065399
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 12195465302076587339
-      value {
-        Overrides {
-          Name: "UIX"
-          Float: 10
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 20
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 12698535283932223295
+      key: 16243201084122659118
       value {
         Overrides {
           Name: "Name"
-          String: "ItemSystems"
+          String: "MiningSystem"
         }
         Overrides {
           Name: "Position"
@@ -136,16 +98,45 @@ Objects {
         }
       }
     }
+    TemplateAsset {
+      Id: 158343807111201364
+    }
+  }
+}
+Objects {
+  Id: 16669426050102956743
+  Name: "ItemSystems"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16844910628275373465
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
     ParameterOverrideMap {
-      key: 16744303702188185168
+      key: 12698535283932223295
       value {
         Overrides {
-          Name: "UIX"
-          Float: -25
+          Name: "Name"
+          String: "ItemSystems"
         }
         Overrides {
-          Name: "UIY"
-          Float: -75
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }
