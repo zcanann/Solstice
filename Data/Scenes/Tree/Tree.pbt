@@ -19,6 +19,7 @@ Objects {
   ChildIds: 16844910628275373465
   ChildIds: 1495303198340745656
   ChildIds: 413991195585998862
+  ChildIds: 3001595816527461672
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -31,6 +32,39 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 3001595816527461672
+  Name: "ITEM_Sword_ExampleSword"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1550651346007304081
+      value {
+        Overrides {
+          Name: "Name"
+          String: "ITEM_Sword_ExampleSword"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17932466227187007890
+    }
   }
 }
 Objects {

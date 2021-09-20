@@ -19,6 +19,97 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 3832418787418834059
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 10
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 20
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 4314147467082345459
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 10
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 20
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 7265764426136168206
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 10
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 20
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 7786516455799475632
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 10
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 20
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8906475708421672423
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 10
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 20
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11557409782739209575
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: -116.674438
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 34.4065399
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12195465302076587339
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 10
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 20
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 12698535283932223295
       value {
         Overrides {
@@ -42,6 +133,19 @@ Objects {
             Y: 1
             Z: 1
           }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16744303702188185168
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: -25
+        }
+        Overrides {
+          Name: "UIY"
+          Float: -75
         }
       }
     }

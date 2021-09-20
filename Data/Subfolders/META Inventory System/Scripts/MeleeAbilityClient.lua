@@ -73,7 +73,7 @@
 	   changes final.
 	9. Delete the weapon from the hierarchy when you are done.
 --]]
-
+return
 local EQUIPMENT = script:FindAncestorByType("Equipment")
 
 local ABILITY = script:GetCustomProperty("Ability"):WaitForObject()
