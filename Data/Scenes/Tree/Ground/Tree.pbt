@@ -1,6 +1,82 @@
 Name: "Ground"
 RootId: 12014395485368686659
 Objects {
+  Id: 5329430110358088332
+  Name: "Dungeon Floor 8m"
+  Transform {
+    Location {
+      X: -4560
+      Y: -2990
+      Z: 600
+    }
+    Rotation {
+      Yaw: 179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12014395485368686659
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Building_Ceiling:color"
+      Color {
+        R: 0.486164957
+        G: 0.694824
+        B: 0.90625
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Building_Floor:color"
+      Color {
+        R: 0.486164957
+        G: 0.694824
+        B: 0.90625
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Building_Ceiling:id"
+      AssetReference {
+        Id: 14031147348977058477
+      }
+    }
+    Overrides {
+      Name: "ma:Building_Floor:id"
+      AssetReference {
+        Id: 14031147348977058477
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17546982558755096284
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 14057237781620641060
   Name: "Dungeon Floor 8m"
   Transform {
@@ -10849,6 +10925,7 @@ Objects {
     }
   }
   ParentId: 12014395485368686659
+  ChildIds: 8156170653314919204
   UnregisteredParameters {
     Overrides {
       Name: "ma:Building_Ceiling:color"
@@ -10911,11 +10988,9 @@ Objects {
   Name: "Dungeon Floor 8m"
   Transform {
     Location {
-      X: -3199.99902
-      Y: 0.00114440906
     }
     Rotation {
-      Yaw: -89.9999924
+      Yaw: -179.999939
     }
     Scale {
       X: 1
@@ -10923,7 +10998,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12014395485368686659
+  ParentId: 11982595876054674755
   UnregisteredParameters {
     Overrides {
       Name: "ma:Building_Ceiling:color"

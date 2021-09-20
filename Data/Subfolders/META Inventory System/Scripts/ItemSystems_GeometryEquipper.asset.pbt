@@ -1,5 +1,5 @@
 Assets {
-  Id: 727487829445709487
+  Id: 5804108065862747075
   Name: "ItemSystems_GeometryEquipper"
   PlatformAssetType: 3
   TextAsset {
@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:Database"
         AssetReference {
-          Id: 801326033750583795
+          Id: 397976853662803105
         }
       }
     }

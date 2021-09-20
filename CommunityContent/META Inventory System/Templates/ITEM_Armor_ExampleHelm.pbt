@@ -1,5 +1,5 @@
 Assets {
-  Id: 16651624036651554643
+  Id: 15677101595154085473
   Name: "ITEM_Armor_ExampleHelm"
   PlatformAssetType: 5
   TemplateAsset {
@@ -41,12 +41,11 @@ Assets {
       }
       Objects {
         Id: 15673133818328271334
-        Name: "Geo"
+        Name: "head"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: -87.7948608
           }
           Scale {
             X: 1
@@ -93,18 +92,18 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: -4.93798828
-            Y: 1.37127686
-            Z: -1.25346375
+            X: 0.309326172
+            Y: 4.24436951
+            Z: 0.283325195
           }
           Rotation {
-            Pitch: -3.15349817
-            Yaw: -89.9992218
-            Roll: 11.2508736
+            Pitch: -3.15350342
+            Yaw: 178.620499
+            Roll: 11.2525616
           }
           Scale {
             X: -0.201039791
-            Y: 0.134322852
+            Y: 0.134322867
             Z: 0.0896813795
           }
         }
@@ -113,7 +112,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -151,14 +150,13 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: 6.32629395
-            Z: 11.7141113
+            X: 5.14306164
+            Y: -0.872620225
+            Z: 13.2507925
           }
           Rotation {
-            Pitch: 0.000819622655
-            Yaw: 0.000637814228
-            Roll: -80.054306
+            Yaw: -91.3791809
+            Roll: -80.0526428
           }
           Scale {
             X: 0.258632213
@@ -171,7 +169,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -181,13 +179,13 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
         }
@@ -221,18 +219,17 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: 13.4663086
-            Z: 10.3817825
+            X: 12.2809114
+            Y: -1.04449606
+            Z: 11.9184637
           }
           Rotation {
-            Pitch: -3.4150944e-05
-            Yaw: -179.999893
-            Roll: -178.252548
+            Yaw: 88.6195
+            Roll: -178.252487
           }
           Scale {
             X: 1.00000334
-            Y: 2.11199975
+            Y: 2.112
             Z: 0.552112341
           }
         }
@@ -241,7 +238,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -251,7 +248,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 7451031674883167046
+              Id: 15906807978030617588
             }
           }
         }
@@ -285,19 +282,18 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: 0.746948242
-            Z: 5.3918457
+            X: -0.434715152
+            Y: -0.738086641
+            Z: 6.92852449
           }
           Rotation {
-            Pitch: 32.1797256
-            Yaw: 90.000061
-            Roll: 3.22794731e-05
+            Pitch: 32.1794319
+            Yaw: -1.38012695
           }
           Scale {
             X: 0.281180888
             Y: 0.198164061
-            Z: 0.281181067
+            Z: 0.281181097
           }
         }
         ParentId: 15673133818328271334
@@ -305,7 +301,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -351,14 +347,13 @@ Assets {
         Name: "Pipe - Half Thick"
         Transform {
           Location {
-            X: 0.0618896484
-            Y: -5.77008057
-            Z: -0.147018433
+            X: -6.94979668
+            Y: -0.581147671
+            Z: 1.38965929
           }
           Rotation {
-            Pitch: 1.36603776e-05
-            Yaw: 0.000254496204
-            Roll: 30.3391018
+            Yaw: -91.3794556
+            Roll: 30.3397083
           }
           Scale {
             X: 0.182196945
@@ -371,7 +366,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -417,17 +412,16 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: 3.27404785
-            Z: 5.3918457
+            X: 2.09165049
+            Y: -0.798998892
+            Z: 6.92852449
           }
           Rotation {
-            Pitch: 4.00053024
-            Yaw: 90.0000763
-            Roll: 3.08109229e-05
+            Pitch: 4
+            Yaw: -1.38015747
           }
           Scale {
-            X: 0.244594947
+            X: 0.244594961
             Y: 0.192058757
             Z: 0.244595036
           }
@@ -437,7 +431,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -483,14 +477,14 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 5.61621094
-            Y: 3.37524414
-            Z: -1.13264465
+            X: 2.059093
+            Y: -6.3540411
+            Z: 0.404031157
           }
           Rotation {
             Pitch: 3.15349126
-            Yaw: 89.9990311
-            Roll: 11.2504263
+            Yaw: -1.38134766
+            Roll: 11.2520895
           }
           Scale {
             X: 0.17499961
@@ -503,7 +497,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -541,19 +535,18 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 5.61621094
-            Y: 3.41967773
-            Z: 0.0933227539
+            X: 2.1034987
+            Y: -6.35520601
+            Z: 1.63000143
           }
           Rotation {
-            Pitch: 6.83018879e-05
-            Yaw: 4.14480892e-05
+            Yaw: -91.3797607
             Roll: 176.845657
           }
           Scale {
-            X: 0.116924167
+            X: 0.116924174
             Y: 0.175
-            Z: 0.116924167
+            Z: 0.116924174
           }
         }
         ParentId: 15673133818328271334
@@ -561,7 +554,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -599,14 +592,14 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: -5.18383789
-            Y: 3.37457275
-            Z: -1.14215088
+            X: 2.3181
+            Y: 4.44191
+            Z: 0.394668579
           }
           Rotation {
-            Pitch: -3.15349817
-            Yaw: -89.9992218
-            Roll: 11.2507887
+            Pitch: -3.15350342
+            Yaw: 178.620743
+            Roll: 11.2524786
           }
           Scale {
             X: -0.17499961
@@ -619,7 +612,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -657,13 +650,12 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: -5.18383789
-            Y: 3.41925049
-            Z: 0.0893859863
+            X: 2.36248779
+            Y: 4.44061279
+            Z: 1.62623215
           }
           Rotation {
-            Pitch: 2.73207552e-05
-            Yaw: 3.36864214e-05
+            Yaw: -91.3797302
             Roll: 176.845383
           }
           Scale {
@@ -677,7 +669,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -715,19 +707,18 @@ Assets {
         Name: "Pipe - Half Thick"
         Transform {
           Location {
-            X: 0.0618896484
-            Y: -6.30615234
-            Z: -2.90809631
+            X: -7.48577929
+            Y: -0.568160117
+            Z: -1.3714186
           }
           Rotation {
             Pitch: -16.5838013
-            Yaw: -89.9995422
-            Roll: -0.000182619973
+            Yaw: 178.620209
           }
           Scale {
             X: 0.22378701
             Y: 0.22378701
-            Z: 0.224522918
+            Z: 0.224522933
           }
         }
         ParentId: 15673133818328271334
@@ -735,7 +726,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -781,14 +772,14 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: -4.82739258
-            Z: 8.71263123
+            X: -6.00735283
+            Y: -0.603856862
+            Z: 10.2493095
           }
           Rotation {
-            Pitch: -1.45809507
-            Yaw: 178.686066
-            Roll: -48.1384926
+            Pitch: -1.45809937
+            Yaw: 87.3056946
+            Roll: -48.136261
           }
           Scale {
             X: 0.259273589
@@ -801,7 +792,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -811,13 +802,13 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
         }
@@ -851,16 +842,16 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: -1.16101074
-            Z: 4.33853149
+            X: -2.34195781
+            Y: -0.692237854
+            Z: 5.87520838
           }
           Rotation {
-            Yaw: 1.37851575e-05
-            Roll: -70.5428925
+            Yaw: -91.3798828
+            Roll: -70.5428467
           }
           Scale {
-            X: 0.200765848
+            X: 0.200765878
             Y: 0.231936008
             Z: 0.3512263
           }
@@ -870,7 +861,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 12062016904725202306
+              Id: 10477521851009102920
             }
           }
           Overrides {
@@ -916,19 +907,18 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 0.06199646
-            Y: 14.0540161
-            Z: 16.1204453
+            X: 12.8685408
+            Y: -1.05877483
+            Z: 17.6571217
           }
           Rotation {
-            Pitch: -3.4150944e-05
-            Yaw: -179.999893
+            Yaw: 88.6194916
             Roll: 176.159698
           }
           Scale {
             X: 0.636205852
             Y: 1.40295136
-            Z: 0.871777773
+            Z: 0.871777833
           }
         }
         ParentId: 15673133818328271334
@@ -936,7 +926,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -946,7 +936,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 7451031674883167046
+              Id: 15906807978030617588
             }
           }
         }
@@ -980,18 +970,17 @@ Assets {
         Name: "Pipe - Half Thick"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: -6.30615234
-            Z: -1.78144836
+            X: -7.48570299
+            Y: -0.568261385
+            Z: -0.244772524
           }
           Rotation {
-            Pitch: -15.6906309
-            Yaw: -89.9995499
-            Roll: -0.000181798125
+            Pitch: -15.6906433
+            Yaw: 178.620331
           }
           Scale {
             X: 0.220019817
-            Y: 0.220019192
+            Y: 0.220019206
             Z: 0.214055732
           }
         }
@@ -1000,7 +989,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7451031674883167046
+              Id: 15906807978030617588
             }
           }
           Overrides {
@@ -1046,14 +1035,13 @@ Assets {
         Name: "Pipe - Half Thick"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: -4.96209717
-            Z: 1.41400146
+            X: -6.14211416
+            Y: -0.600565672
+            Z: 2.95067883
           }
           Rotation {
-            Pitch: 1.36603776e-05
-            Yaw: 0.000254496146
-            Roll: 30.339159
+            Yaw: -91.3795166
+            Roll: 30.3398113
           }
           Scale {
             X: 0.182196945
@@ -1066,7 +1054,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7451031674883167046
+              Id: 15906807978030617588
             }
           }
           Overrides {
@@ -1112,19 +1100,18 @@ Assets {
         Name: "Hemisphere"
         Transform {
           Location {
-            X: 0.0620117188
-            Y: 0.746948242
-            Z: 6.23854065
+            X: -0.434715152
+            Y: -0.738086641
+            Z: 7.77521706
           }
           Rotation {
-            Pitch: 32.179718
-            Yaw: 90.0000534
-            Roll: 3.22794695e-05
+            Pitch: 32.1793709
+            Yaw: -1.38009644
           }
           Scale {
             X: 0.281180888
             Y: 0.198164061
-            Z: 0.281181067
+            Z: 0.281181097
           }
         }
         ParentId: 15673133818328271334
@@ -1132,7 +1119,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 7451031674883167046
+              Id: 15906807978030617588
             }
           }
           Overrides {
@@ -1178,18 +1165,17 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: -4.93798828
-            Y: 1.41595459
-            Z: -0.0219421387
+            X: 0.354187
+            Y: 4.24317932
+            Z: 1.51488876
           }
           Rotation {
-            Pitch: 2.73207552e-05
-            Yaw: 3.36864323e-05
+            Yaw: -91.3797302
             Roll: 176.845383
           }
           Scale {
             X: -0.134322658
-            Y: 0.201478168
+            Y: 0.201478198
             Z: 0.134323344
           }
         }
@@ -1198,7 +1184,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -1236,13 +1222,12 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 5.06201172
-            Y: 1.41638184
-            Z: -0.017074585
+            X: 0.114102915
+            Y: -5.75291872
+            Z: 1.51960421
           }
           Rotation {
-            Pitch: 6.83018879e-05
-            Yaw: 4.14480892e-05
+            Yaw: -91.3797607
             Roll: 176.845657
           }
           Scale {
@@ -1256,7 +1241,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {
@@ -1294,14 +1279,14 @@ Assets {
         Name: "Capsule"
         Transform {
           Location {
-            X: 5.06201172
-            Y: 1.37194824
-            Z: -1.24304199
+            X: 0.0697225258
+            Y: -5.75177956
+            Z: 0.293634
           }
           Rotation {
             Pitch: 3.15349126
-            Yaw: 89.9990311
-            Roll: 11.2504988
+            Yaw: -1.38128662
+            Roll: 11.2521715
           }
           Scale {
             X: 0.201039791
@@ -1314,7 +1299,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 488411505624116365
+              Id: 10720196711171784801
             }
           }
           Overrides {

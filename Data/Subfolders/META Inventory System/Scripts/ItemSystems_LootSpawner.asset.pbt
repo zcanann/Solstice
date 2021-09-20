@@ -1,5 +1,5 @@
 Assets {
-  Id: 15595386898621980751
+  Id: 14187385002248741878
   Name: "ItemSystems_LootSpawner"
   PlatformAssetType: 3
   TextAsset {
@@ -7,13 +7,13 @@ Assets {
       Overrides {
         Name: "cs:LootTemplate"
         AssetReference {
-          Id: 10869331102694036667
+          Id: 2724010054612845698
         }
       }
       Overrides {
         Name: "cs:ItemSystems_Database"
         AssetReference {
-          Id: 801326033750583795
+          Id: 397976853662803105
         }
       }
       Overrides {

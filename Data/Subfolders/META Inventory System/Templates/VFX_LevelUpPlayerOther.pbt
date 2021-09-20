@@ -1,5 +1,5 @@
 Assets {
-  Id: 15631136145372022761
+  Id: 7044480391590617215
   Name: "VFX_LevelUpPlayerOther"
   PlatformAssetType: 5
   TemplateAsset {

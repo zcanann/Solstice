@@ -5,5 +5,5 @@ Assets {
   TextAsset {
   }
   SerializationVersion: 98
-  VirtualFolderPath: "Camera"
+  VirtualFolderPath: "Input"
 }

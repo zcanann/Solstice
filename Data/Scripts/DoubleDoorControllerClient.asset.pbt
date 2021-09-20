@@ -6,5 +6,5 @@ Assets {
   }
   SerializationVersion: 98
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Props"
+  VirtualFolderPath: "SortMe"
 }

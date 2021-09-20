@@ -1,5 +1,5 @@
 Assets {
-  Id: 16477107639529508759
+  Id: 2958109500187423432
   Name: "ITEM_Sword_ExampleSuperSword"
   PlatformAssetType: 5
   TemplateAsset {
@@ -25,19 +25,19 @@ Assets {
           Overrides {
             Name: "cs:PickupSound"
             AssetReference {
-              Id: 15037182071251439677
+              Id: 11597739807149893917
             }
           }
           Overrides {
             Name: "cs:SwingSound"
             AssetReference {
-              Id: 14093555456122352676
+              Id: 747745736321837268
             }
           }
           Overrides {
             Name: "cs:PlayerImpact"
             AssetReference {
-              Id: 7825958880337534611
+              Id: 10354179149281363882
             }
           }
           Overrides {
@@ -162,7 +162,7 @@ Assets {
           Overrides {
             Name: "cs:SwingEffect"
             AssetReference {
-              Id: 471869455090146543
+              Id: 4693458783411506428
             }
           }
           Overrides {
@@ -277,7 +277,7 @@ Assets {
           Overrides {
             Name: "cs:SwingEffect"
             AssetReference {
-              Id: 471869455090146543
+              Id: 4693458783411506428
             }
           }
           Overrides {
@@ -422,7 +422,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 12912617078600920083
+            Id: 3867166497654376523
           }
         }
       }
@@ -445,13 +445,13 @@ Assets {
           Overrides {
             Name: "cs:ModuleManager"
             AssetReference {
-              Id: 931403226440658681
+              Id: 10066275529701033174
             }
           }
           Overrides {
             Name: "cs:PlayerStats_Combat"
             AssetReference {
-              Id: 4046903598302651986
+              Id: 13960119017282890687
             }
           }
         }
@@ -466,7 +466,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 905846023411707641
+            Id: 10873498687716818094
           }
         }
       }
@@ -508,7 +508,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15668517636857699088
+            Id: 10390340713492606406
           }
         }
       }
@@ -945,7 +945,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 13222689764745782033
+            Id: 13863079321317902142
           }
         }
       }
@@ -977,7 +977,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15126538572038380584
+            Id: 18136457963682106469
           }
         }
       }

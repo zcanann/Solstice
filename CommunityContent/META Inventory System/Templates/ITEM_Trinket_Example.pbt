@@ -1,5 +1,5 @@
 Assets {
-  Id: 12141666491653779619
+  Id: 14597401623409258547
   Name: "ITEM_Trinket_Example"
   PlatformAssetType: 5
   TemplateAsset {
@@ -41,7 +41,7 @@ Assets {
       }
       Objects {
         Id: 4453921070036894618
-        Name: "Hearts Volume VFX"
+        Name: "head"
         Transform {
           Location {
             Z: -2.28881836e-05

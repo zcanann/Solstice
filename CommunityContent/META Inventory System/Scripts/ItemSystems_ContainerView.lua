@@ -189,12 +189,15 @@ local view = {}
 -- @param int or MUID stashID
 -- @param string stashHash
 function view:InitStashContainer(stashID,stashHash)
+
     -- If the stash we're trying to use is the one we're currently on then don't do anything.
     if self.stashID == stashID then return end
+
     -- If we're in an existing stash and we're opening another one then unlock the other stash
     if self.stashID then
         Events.BroadcastToServer("UnlockStash",self.stashID)
     end
+
     self:ResetSlots()
 
     if containerInventory then
@@ -206,6 +209,28 @@ function view:InitStashContainer(stashID,stashHash)
     -- Construct a inventory with 20 backpack slots only
     containerInventory = Inventory.New(ItemDatabase,LOCAL_PLAYER,20,nil)
     containerInventory:LoadHash(stashHash)
+
+    Events.Connect("ML_SSI",function(player,id,itemHash,quantity,toSlot)
+        if id == stashID and player ~= LOCAL_PLAYER then
+            local item = ItemDatabase:CreateItemFromHash(itemHash)
+            if item:IsStackable() then
+                item:SetStackSize(quantity)
+            end
+            containerInventory:SetItemToSlot(item, quantity, toSlot, true)
+        end
+    end)
+
+    Events.Connect("ML_SDI",function(player,id,fromSlotIndex)
+        if id == stashID and player ~= LOCAL_PLAYER then
+            containerInventory:MoveItem(fromSlotIndex,0,true)
+        end
+    end)
+
+    Events.Connect("ML_SIM",function(player,id,fromSlotIndex,toSlotIndex)
+        if id == stashID and player ~= LOCAL_PLAYER then
+            containerInventory:MoveItem(fromSlotIndex, toSlotIndex, true)
+        end
+    end)
 
     -- Whenever a local rearrangement is made, broadcast to server.
     containerInventory.itemMovedEvent:Connect(function(fromSlotIndex, toSlotIndex)
@@ -221,6 +246,7 @@ function view:InitStashContainer(stashID,stashHash)
     containerInventory.itemSetToSlot:Connect(function(itemHash,quantity,toSlot)
         ReliableEvents.BroadcastToServer("SSI",stashID,itemHash,quantity,toSlot)
     end)
+
 
     self.stashID = stashID
     LOCAL_PLAYER.clientUserData.containerInventory = containerInventory

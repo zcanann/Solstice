@@ -1,5 +1,5 @@
 Assets {
-  Id: 471869455090146543
+  Id: 4693458783411506428
   Name: "Melee Half Circle Swing Effect"
   PlatformAssetType: 5
   TemplateAsset {

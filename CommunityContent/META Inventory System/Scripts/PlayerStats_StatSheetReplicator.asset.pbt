@@ -1,5 +1,5 @@
 Assets {
-  Id: 2547395717737905742
+  Id: 17660565466028939374
   Name: "PlayerStats_StatSheetReplicator"
   PlatformAssetType: 3
   TextAsset {
@@ -7,8 +7,24 @@ Assets {
       Overrides {
         Name: "cs:StatSheet"
         AssetReference {
-          Id: 3841990485156346267
+          Id: 11376279769132170104
         }
+      }
+      Overrides {
+        Name: "cs:WriteToResource"
+        Bool: true
+      }
+      Overrides {
+        Name: "cs:SharedStorageKey"
+        NetReference {
+          Type {
+            Value: "mc:enetreferencetype:unknown"
+          }
+        }
+      }
+      Overrides {
+        Name: "cs:WriteToResource:tooltip"
+        String: "When enabled both the XP and level will be written into the players resource."
       }
     }
   }

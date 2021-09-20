@@ -1,5 +1,5 @@
 Assets {
-  Id: 1204878944526301617
+  Id: 1878928400577957435
   Name: "SFX_InventoryItemMetalSharp"
   PlatformAssetType: 5
   TemplateAsset {

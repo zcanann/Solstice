@@ -1,5 +1,5 @@
 Assets {
-  Id: 11724087271050127044
+  Id: 5940248652996789017
   Name: "RollForLootExample"
   PlatformAssetType: 3
   TextAsset {

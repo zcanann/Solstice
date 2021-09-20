@@ -315,7 +315,7 @@ function StatSheet:__tostring()
             statName,
             self.statTotals[statName],
             self.statBases[statName],
-            self.statTotalModifiersAdd[statName],
+            CoreMath.Round(self.statTotalModifiersAdd[statName]),
             self.statTotalModifiersMul[statName]
         ))
     end

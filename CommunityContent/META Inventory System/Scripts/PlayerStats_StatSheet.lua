@@ -109,6 +109,12 @@ function StatSheet:GetLevelExperienceRemaining()
     end
 end
 
+function StatSheet:GetLevelExperienceRequired()
+    if not self:IsMaxLevel() then
+        return self.EXPERIENCE_CURVE[self.level + 1]
+    end
+end
+
 function StatSheet:IsMaxLevel()
     return self.level == self.MAX_LEVEL
 end
@@ -172,6 +178,29 @@ function StatSheet:RemoveStatModifier(modifier) -- string
     self:Update()
 end
 
+-- Returns the level based on the given XP.
+function StatSheet:GetLevelFromXP(xp)
+    if self.experience >= self.EXPERIENCE_CURVE[self.MAX_LEVEL] then
+        return self.MAX_LEVEL
+    end
+    local oldLevel = self.level
+    -- Bisect the experience curve to find the correct level.
+    local lo = 1
+    local hi = self.MAX_LEVEL
+    while true do
+        local mi = (lo + hi) // 2
+        local isAboveLoCutoff = self.experience >= self.EXPERIENCE_CURVE[mi]
+        local isBelowHiCutoff = self.experience <  self.EXPERIENCE_CURVE[mi+1]
+        if isAboveLoCutoff and isBelowHiCutoff then
+            return mi
+        elseif not isAboveLoCutoff then
+            hi = mi - 1
+        elseif not isBelowHiCutoff then
+            lo = mi + 1
+        end
+    end
+end
+
 ---------------------------------------------------------------------------------------------------------
 -- PRIVATE
 ---------------------------------------------------------------------------------------------------------
@@ -185,6 +214,9 @@ function StatSheet:_Init()
     self.statModifiersMul = {}
     self.statHasUppers = {}
     self.statHasDowners = {}
+
+    self:_DefineEvent("OnLevelChanged")
+
     self:Update()
 end
 
@@ -213,9 +245,12 @@ function StatSheet:_UpdateLevel()
     local newLevel = self.level
     if oldLevel and newLevel and newLevel ~= oldLevel and newLevel - oldLevel == 1 then
         -- Tells the client to create the cool level up VFX
+        self:_FireEvent("OnLevelChanged",self.owner,newLevel,oldLevel)
         Events.Broadcast("StatSheet_LevelChanged", self, newLevel, oldLevel)
     end
 end
+
+
 
 function StatSheet:_UpdateStats()
     -- Base.
@@ -250,16 +285,37 @@ function StatSheet:_UpdateStats()
     end
 end
 
+function StatSheet:_FireEvent(eventName, ...)
+    for _,handler in ipairs(self.eventHandlers[eventName]) do
+        handler(...)
+    end
+end
+
+function StatSheet:_DefineEvent(eventName)
+    self.eventHandlers = self.eventHandlers or {}
+    self.eventHandlers[eventName] = self.eventHandlers[eventName] or {}
+    self[eventName] = {
+        Connect = function(_, handler)
+            table.insert(self.eventHandlers[eventName], handler)
+            return self[eventName]
+        end,
+        Disconnect = function(_, handler)
+            table.remove(self.eventHandlers[eventName], handler)
+        end
+    }
+end
+
 function StatSheet:__tostring()
     local s = {}
     table.insert(s, "----------------------------------------------------------------")
     table.insert(s, "STAT SHEET:")
+    table.insert(s, string.format("XP:%s | Level:%s",self.experience, self.level))
     for _,statName in ipairs(self.STATS) do
         table.insert(s, string.format("\t%-12s%-8d = (%-6d + %-6d) * %.3f",
             statName,
             self.statTotals[statName],
             self.statBases[statName],
-            self.statTotalModifiersAdd[statName],
+            CoreMath.Round(self.statTotalModifiersAdd[statName]),
             self.statTotalModifiersMul[statName]
         ))
     end

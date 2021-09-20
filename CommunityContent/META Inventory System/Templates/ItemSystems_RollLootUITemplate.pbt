@@ -1,5 +1,5 @@
 Assets {
-  Id: 16422905905636061945
+  Id: 12666721572410366001
   Name: "ItemSystems_RollLootUITemplate"
   PlatformAssetType: 5
   TemplateAsset {
@@ -94,19 +94,19 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
           Overrides {
             Name: "cs:ItemSystems_ItemThemes"
             AssetReference {
-              Id: 9147260011795785376
+              Id: 6327984228048049821
             }
           }
           Overrides {
             Name: "cs:ReliableEvents"
             AssetReference {
-              Id: 3134039137318897930
+              Id: 16757881821046423614
             }
           }
           Overrides {
@@ -187,7 +187,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 13295446457406357206
+            Id: 4418126556613112675
           }
         }
       }
@@ -1331,7 +1331,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 9194277046987960105
+              Id: 3835077165367365353
             }
           }
         }

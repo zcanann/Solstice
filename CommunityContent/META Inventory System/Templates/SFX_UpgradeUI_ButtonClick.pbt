@@ -1,5 +1,5 @@
 Assets {
-  Id: 15840912764131178564
+  Id: 6722305990691296915
   Name: "SFX_UpgradeUI_ButtonClick"
   PlatformAssetType: 5
   TemplateAsset {

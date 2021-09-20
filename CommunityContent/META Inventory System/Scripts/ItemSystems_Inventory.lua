@@ -121,13 +121,13 @@ end
 -- Remove an item from the inventory with an optional quantity
 function Inventory:RemoveItem(item, quantity, _hasRepeated) -- Item item, int quantity (optional), bool (ignore)
     assert(item:GetName(),string.format("%s is not of type ItemSystems_Item. Use the item database to create an item then call this method with your item.",item))
-    assert(quantity > 0,"Quantity can not be less than or equal to zero.")
-    local storedQuantity = quantity > 0 and quantity or 1
+    local storedQuantity = (quantity ~= nil and quantity > 0) and quantity or 1
     local hasItem, slotIndex, _ = self:HasItem(item)
     if hasItem and item:IsStackable() then
-        quantity = quantity > 0 and quantity or 1
-        item:SetStackSize(quantity)
+        item:SetStackSize(storedQuantity)
         self:_RemoveItemFromBackpack(item)
+    else
+        self:_SetSlotItem(slotIndex, nil)
     end
     if not _hasRepeated then -- Prevents an infinite context loop.
         -- Replicate the state of the inventory to either client or server.
@@ -380,7 +380,7 @@ function Inventory:GetWeakestAccessory()
                 weakestAcessorySlot = slot
             end
             local weakScore = 0
-            local stats = item:GetStats()
+            local stats = item:GetStatsBase()
             for _, statName in pairs(stats) do
                 if Item.StatGreaterThan(weakestAccessory,item,statName.name) then
                     weakScore = weakScore + 1
@@ -446,7 +446,8 @@ end
 
 -- Move an item. If there is an item in the destination slot the items will swap. Acts as delete if destination slot is zero.
 -- If the destination is nil then it will drop the item.
-function Inventory:MoveItem(fromSlotIndex, toSlotIndex) -- int fromSlotIndex, int toSlotIndex
+function Inventory:MoveItem(fromSlotIndex, toSlotIndex, _hasRepeated) -- int fromSlotIndex, int toSlotIndex, bool _hasRepeated
+    _hasRepeated = _hasRepeated or false
     -- If it's being thrown out of the inventory and we allowed item drops.
     if self.DROP_ITEM_INSTEAD_OF_DELETE and toSlotIndex == nil then
         if self.owner and (self.owner:IsA("Player")) then if(self.owner.isDead) then return end end
@@ -476,9 +477,10 @@ function Inventory:MoveItem(fromSlotIndex, toSlotIndex) -- int fromSlotIndex, in
         self:_SetSlotItem(fromSlotIndex, swapItem)
     end
 
-    
-    self:_FireEvent("itemMovedEvent", fromSlotIndex, toSlotIndex)
-    self:_FireEvent("OnInventoryChanged",self.owner)
+    if not _hasRepeated then
+        self:_FireEvent("itemMovedEvent", fromSlotIndex, toSlotIndex)
+        self:_FireEvent("OnInventoryChanged",self.owner)
+    end
 end
 
 -- Registers a loot item with the inventory. This will display the loot item in the loot window.

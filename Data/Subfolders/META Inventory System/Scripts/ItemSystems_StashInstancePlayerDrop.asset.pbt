@@ -1,5 +1,5 @@
 Assets {
-  Id: 3735711567488211385
+  Id: 1725233828484737196
   Name: "ItemSystems_StashInstancePlayerDrop"
   PlatformAssetType: 3
   TextAsset {
@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:ItemSystems_Stash"
         AssetReference {
-          Id: 14374331734188378901
+          Id: 538871481801250433
         }
       }
     }

@@ -1,5 +1,5 @@
 Assets {
-  Id: 11983728222913561034
+  Id: 591532783741481337
   Name: "Kustom ArmourSet2 Base Metal - Copy"
   PlatformAssetType: 13
   SerializationVersion: 98

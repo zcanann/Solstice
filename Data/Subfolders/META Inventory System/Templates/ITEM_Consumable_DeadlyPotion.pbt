@@ -1,5 +1,5 @@
 Assets {
-  Id: 16643250343586995278
+  Id: 15516700061424539269
   Name: "ITEM_Consumable_DeadlyPotion"
   PlatformAssetType: 5
   TemplateAsset {
@@ -82,7 +82,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4197894822398883176
+              Id: 15570095057852652216
             }
           }
           Overrides {

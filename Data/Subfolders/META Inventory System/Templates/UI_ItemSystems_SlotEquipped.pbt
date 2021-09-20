@@ -1,5 +1,5 @@
 Assets {
-  Id: 3077652974893717902
+  Id: 15265469872033016363
   Name: "UI_ItemSystems_SlotEquipped"
   PlatformAssetType: 5
   TemplateAsset {

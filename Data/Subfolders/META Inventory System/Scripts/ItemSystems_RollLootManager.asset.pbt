@@ -1,5 +1,5 @@
 Assets {
-  Id: 18238309621941901975
+  Id: 14213097774236125144
   Name: "ItemSystems_RollLootManager"
   PlatformAssetType: 3
   TextAsset {
@@ -7,25 +7,25 @@ Assets {
       Overrides {
         Name: "cs:RollEntryTemplate"
         AssetReference {
-          Id: 10057691044005049950
+          Id: 2234777822598968261
         }
       }
       Overrides {
         Name: "cs:ReliableEvents"
         AssetReference {
-          Id: 13889690048093816715
+          Id: 9913335482599357769
         }
       }
       Overrides {
         Name: "cs:RollerTemplate"
         AssetReference {
-          Id: 7744484988692660332
+          Id: 9500114379867497110
         }
       }
       Overrides {
         Name: "cs:ItemSystems_Database"
         AssetReference {
-          Id: 801326033750583795
+          Id: 397976853662803105
         }
       }
       Overrides {

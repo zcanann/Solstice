@@ -50,7 +50,7 @@ local currentLevel = nil
 
 -----------------------------------------------------------------------------------------------------------------
 PLAYER_NAME.text = LOCAL_PLAYER.name
-PLAYER_ICON:SetImage(LOCAL_PLAYER)
+PLAYER_ICON:SetPlayerProfile(LOCAL_PLAYER)
 
 -----------------------------------------------------------------------------------------------------------------
 

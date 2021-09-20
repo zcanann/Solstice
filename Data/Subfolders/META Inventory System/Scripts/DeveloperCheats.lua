@@ -25,7 +25,7 @@ Needless to say.
 CLEAR INVENTORY
 [delete]
 Clears all items from the player's inventory. The game must be restarted in order
-to take effect.
+to take effect. Removes the flag for starter items as well.
 
 QUICK SAVE INVENTORY
 [F1]
@@ -118,6 +118,7 @@ local function OnBindingPressed(player, binding)
     elseif binding == BINDING_INVENTORY_CLEAR then
         local playerData = Storage.GetPlayerData(player)
         playerData.inventoryHash = nil
+        playerData.hasJoinedBefore = nil
         Storage.SetPlayerData(player, playerData)
         print("CHEAT: CLEAR INVENTORY")
     elseif binding == BINDING_INVENTORY_PRINT then

@@ -1,5 +1,5 @@
 Assets {
-  Id: 15037182071251439677
+  Id: 11597739807149893917
   Name: "Melee Sound Pickup"
   PlatformAssetType: 5
   TemplateAsset {

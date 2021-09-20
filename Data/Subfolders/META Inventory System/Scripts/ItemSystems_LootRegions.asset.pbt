@@ -1,5 +1,5 @@
 Assets {
-  Id: 2968737485489074583
+  Id: 2280796848006124617
   Name: "ItemSystems_LootRegions"
   PlatformAssetType: 3
   TextAsset {
@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:Region"
         AssetReference {
-          Id: 12298161151788149310
+          Id: 15307900730397692957
         }
       }
       Overrides {

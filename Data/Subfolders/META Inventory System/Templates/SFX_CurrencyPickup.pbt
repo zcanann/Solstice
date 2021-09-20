@@ -1,5 +1,5 @@
 Assets {
-  Id: 289757576166287362
+  Id: 17994585095906577450
   Name: "SFX_CurrencyPickup"
   PlatformAssetType: 5
   TemplateAsset {

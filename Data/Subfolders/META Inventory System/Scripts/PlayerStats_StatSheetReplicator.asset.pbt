@@ -1,5 +1,5 @@
 Assets {
-  Id: 14148351332545775033
+  Id: 7817978854859876165
   Name: "PlayerStats_StatSheetReplicator"
   PlatformAssetType: 3
   TextAsset {
@@ -7,12 +7,20 @@ Assets {
       Overrides {
         Name: "cs:StatSheet"
         AssetReference {
-          Id: 14223997986635462166
+          Id: 13033281137583773125
         }
       }
       Overrides {
         Name: "cs:WriteToResource"
         Bool: true
+      }
+      Overrides {
+        Name: "cs:SharedStorageKey"
+        NetReference {
+          Type {
+            Value: "mc:enetreferencetype:unknown"
+          }
+        }
       }
       Overrides {
         Name: "cs:WriteToResource:tooltip"

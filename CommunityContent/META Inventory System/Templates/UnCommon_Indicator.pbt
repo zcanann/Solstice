@@ -1,5 +1,5 @@
 Assets {
-  Id: 7828466826247136470
+  Id: 17371484583676032339
   Name: "UnCommon_Indicator"
   PlatformAssetType: 5
   TemplateAsset {
@@ -10,20 +10,20 @@ Assets {
         Name: "UnCommon_Indicator"
         Transform {
           Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
+            X: 0.25
+            Y: 0.25
+            Z: 0.25
           }
         }
         ParentId: 4781671109827199097
         UnregisteredParameters {
           Overrides {
             Name: "bp:Life"
-            Float: 0.403554082
+            Float: 0.9
           }
           Overrides {
             Name: "bp:Upward Velocity"
-            Float: 0.836646855
+            Float: 0.5
           }
           Overrides {
             Name: "bp:Enable Beam"
@@ -52,6 +52,15 @@ Assets {
           Overrides {
             Name: "bp:Particle Scale Multiplier"
             Float: 0.103249907
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.0199999809
+              G: 1
+              B: 0.0264900923
+              A: 1
+            }
           }
         }
         Collidable_v2 {

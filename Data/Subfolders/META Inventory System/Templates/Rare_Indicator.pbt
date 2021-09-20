@@ -1,5 +1,5 @@
 Assets {
-  Id: 3304794410142065514
+  Id: 9922414662559950221
   Name: "Rare_Indicator"
   PlatformAssetType: 5
   TemplateAsset {

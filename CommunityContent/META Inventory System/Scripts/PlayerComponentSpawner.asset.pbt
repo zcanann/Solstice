@@ -1,5 +1,5 @@
 Assets {
-  Id: 8675145634350269521
+  Id: 3329858920115418854
   Name: "PlayerComponentSpawner"
   PlatformAssetType: 3
   TextAsset {

@@ -1,5 +1,5 @@
 Assets {
-  Id: 9872713451290030187
+  Id: 12537088901621824539
   Name: "ITEM_Consumable_TeleScroll"
   PlatformAssetType: 5
   TemplateAsset {

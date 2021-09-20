@@ -1,5 +1,5 @@
 Assets {
-  Id: 1411725899605232238
+  Id: 1272886005934058196
   Name: "ITEM_Consumable_LootCrate"
   PlatformAssetType: 5
   TemplateAsset {

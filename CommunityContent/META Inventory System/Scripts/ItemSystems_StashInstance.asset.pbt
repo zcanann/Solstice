@@ -1,5 +1,5 @@
 Assets {
-  Id: 15665264859450817541
+  Id: 6883115059687609339
   Name: "ItemSystems_StashInstance"
   PlatformAssetType: 3
   TextAsset {
@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:ItemSystems_Stash"
         AssetReference {
-          Id: 9216126752339912557
+          Id: 9188722321541145488
         }
       }
     }

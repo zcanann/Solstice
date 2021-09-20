@@ -8,6 +8,7 @@ local Inventory = require(script:GetCustomProperty("ItemSystems_Inventory"))
 local Database = require(script:GetCustomProperty("ItemSystems_Database"))
 local ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local SHARED_STORAGE_KEY = script:GetCustomProperty("SharedStorageKey")
+local STARTER_ITEMS_TABLE = World.FindObjectByName("StarterItems"):GetChildren()
 local COMPONENT = script:GetCustomProperty("InventoryComponent"):WaitForObject()
 
 -- TODO: Move this to the Hierarchy as this would be easier to edit later.
@@ -53,13 +54,35 @@ end
 local function ServerLoadInventory()
     
     local playerData = nil
-    if SHARED_STORAGE_KEY then
+    if tostring(SHARED_STORAGE_KEY) ~= "Unknown NetReference" then
         playerData = Storage.GetSharedPlayerData(SHARED_STORAGE_KEY,OWNER)
+        if not playerData.inventoryHash then
+            playerData = Storage.GetPlayerData(OWNER)
+        end
     else
         playerData = Storage.GetPlayerData(OWNER)
     end
 
     OWNER.serverUserData.inventory:LoadHash(playerData.inventoryHash)
+
+    if not playerData.hasJoinedBefore then
+        OWNER.serverUserData.hasJoined = true
+        for _, item in pairs(STARTER_ITEMS_TABLE) do
+            local itemRef = item:GetCustomProperty("Item"):GetObject()
+            local itemName = itemRef:GetCustomProperty("Name")
+            local quantity = item:GetCustomProperty("Quantity") or 1
+            local slotIndex = item:GetCustomProperty("Slot") or 0
+            local newItem = Database:CreateLootItemFromName(itemName)
+            if slotIndex == 0 then
+                OWNER.serverUserData.inventory:AddItem(newItem,quantity,true)
+            else
+                OWNER.serverUserData.inventory:SetItemToSlot(newItem,quantity,slotIndex,true)
+            end
+        end
+    else
+        OWNER.serverUserData.hasJoined = true
+    end
+
     COMPONENT:SetNetworkedCustomProperty("LOAD", OWNER.serverUserData.inventory:RuntimeHash())
     local currentHash = OWNER.serverUserData.inventory:RuntimeHash()
     while Task.Wait(1) do
@@ -125,14 +148,20 @@ end
 -- @param Inventory inventory
 local function ServerSaveInventory(inventory)
     local playerData = nil
-    if SHARED_STORAGE_KEY then
+    if tostring(SHARED_STORAGE_KEY) ~= "Unknown NetReference" then
         playerData = Storage.GetSharedPlayerData(SHARED_STORAGE_KEY,OWNER)
+        if not playerData.inventoryHash then
+            playerData = Storage.GetPlayerData(OWNER)
+        end
     else
         playerData = Storage.GetPlayerData(OWNER)
     end
+    if OWNER.serverUserData.hasJoined then
+        playerData.hasJoinedBefore = true
+    end
     playerData.inventoryHash = inventory:PersistentHash()
-    if SHARED_STORAGE_KEY then
-        playerData = Storage.SetSharedPlayerData(SHARED_STORAGE_KEY,OWNER,playerData)
+    if tostring(SHARED_STORAGE_KEY) ~= "Unknown NetReference" then
+        Storage.SetSharedPlayerData(SHARED_STORAGE_KEY,OWNER,playerData)
     else
         Storage.SetPlayerData(OWNER, playerData)
     end
@@ -147,6 +176,7 @@ local function ServerInitInventory()
     inventory:ConnectToStatSheet(OWNER.serverUserData.statSheet)
     -- Prepare a set of stat modifiers for each equipped item.
     local statModifiers = {}
+
     -- Whenever an item is equipped by the server inventory, replicate to all clients.
     inventory.itemEquippedEvent:Connect(function(equipIndex, equipItem)   
         if not equipIndex and not equipItem then
@@ -164,7 +194,6 @@ local function ServerInitInventory()
             OWNER.animationStance = equipItem and equipItem:GetAnimationStance() or "unarmed_stance"
         end
     end)
-    
     -- Whenever an item is added to the players server inventory, replicate it to the client
     inventory.itemAdded:Connect(function(itemHash,quantity)
         ReliableEvents.BroadcastToPlayer(OWNER,"IAI",itemHash,quantity)

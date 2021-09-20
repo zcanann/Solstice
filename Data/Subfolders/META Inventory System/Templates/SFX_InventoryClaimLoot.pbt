@@ -1,5 +1,5 @@
 Assets {
-  Id: 14783232983369854096
+  Id: 2990496911965889305
   Name: "SFX_InventoryClaimLoot"
   PlatformAssetType: 5
   TemplateAsset {

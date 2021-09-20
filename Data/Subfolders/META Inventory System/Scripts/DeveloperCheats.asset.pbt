@@ -1,5 +1,5 @@
 Assets {
-  Id: 11884013061127831575
+  Id: 17820305579430282154
   Name: "DeveloperCheats"
   PlatformAssetType: 3
   TextAsset {
@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:ItemSystems_Database"
         AssetReference {
-          Id: 801326033750583795
+          Id: 397976853662803105
         }
       }
       Overrides {

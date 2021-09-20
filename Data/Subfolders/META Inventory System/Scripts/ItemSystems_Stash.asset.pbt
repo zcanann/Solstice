@@ -1,5 +1,5 @@
 Assets {
-  Id: 14374331734188378901
+  Id: 538871481801250433
   Name: "ItemSystems_Stash"
   PlatformAssetType: 3
   TextAsset {
@@ -7,25 +7,25 @@ Assets {
       Overrides {
         Name: "cs:ItemSystems_LootableContainer"
         AssetReference {
-          Id: 4519337042296426848
+          Id: 14354779159244939660
         }
       }
       Overrides {
         Name: "cs:ItemSystems_StashReplicator"
         AssetReference {
-          Id: 17080833073892066201
+          Id: 8801143828623069174
         }
       }
       Overrides {
         Name: "cs:ItemSystems_Database"
         AssetReference {
-          Id: 801326033750583795
+          Id: 397976853662803105
         }
       }
       Overrides {
         Name: "cs:ReliableEvents"
         AssetReference {
-          Id: 13889690048093816715
+          Id: 9913335482599357769
         }
       }
     }

@@ -1,5 +1,4 @@
 local localPlayer = Game.GetLocalPlayer()
-local holdPosition = false
 local bindingKey = "ability_secondary"
 
 -- Navigation
@@ -43,46 +42,29 @@ function MoveToGoal(player, params)
 end
 
 function OnBindingPressed(player, binding)
-	if not holdPosition and binding == bindingKey then
+	if binding ~= bindingKey then
+		return
+	end
 
-		local hitResult = UI.GetCursorHitResult()
+	local hitResult = UI.GetCursorHitResult()
 
-		if hitResult then
-			DestroyIfValid(goalPulse)
-			local goalTransform = hitResult:GetTransform()
-			local goal = goalTransform:GetPosition()
-			-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
-			-- local pulsePos = goal + Vector3.UP * 300
-			goalPulse = World.SpawnAsset(CLICK_VFX, {position = goal})
+	if hitResult then
+		DestroyIfValid(goalPulse)
+		local goalTransform = hitResult:GetTransform()
+		local goal = goalTransform:GetPosition()
+		-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
+		-- local pulsePos = goal + Vector3.UP * 300
+		goalPulse = World.SpawnAsset(CLICK_VFX, {position = goal})
 
-			local playerPos = player:GetWorldPosition()
-			local wayPoints = _G.NavMesh.FindPath(playerPos, goal)
-			
-			-- Remove the starting waypoint, as the player is already there
-			if wayPoints ~= nil and #wayPoints >= 1 then
-				table.remove(wayPoints, 1)
-			end
-
-			remainingWayPoints = wayPoints
+		local playerPos = player:GetWorldPosition()
+		local wayPoints = _G.NavMesh.FindPath(playerPos, goal)
+		
+		-- Remove the starting waypoint, as the player is already there
+		if wayPoints ~= nil and #wayPoints >= 1 then
+			table.remove(wayPoints, 1)
 		end
-	end
 
-	if binding == "ability_feet" then
-		holdPosition = true
-	end
-
-	if binding == "ability_extra_40" then -- X key
-		if bindingKey == "ability_primary" then
-			bindingKey = "ability_secondary"
-		else
-			bindingKey = "ability_primary"
-		end
-	end
-end
-
-function OnBindingReleased(player, binding)
-	if binding == "ability_feet" then
-		holdPosition = false
+		remainingWayPoints = wayPoints
 	end
 end
 
@@ -106,6 +88,5 @@ movementHook.priority = 99
 
 Events.Connect("on_player_teleported", OnPlayerTeleported)
 localPlayer.bindingPressedEvent:Connect(OnBindingPressed)
-localPlayer.bindingReleasedEvent:Connect(OnBindingReleased)
 
 InitMouseCursor()

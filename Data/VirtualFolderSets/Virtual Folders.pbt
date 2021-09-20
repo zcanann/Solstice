@@ -1,5 +1,5 @@
 Assets {
-  Id: 14636964962148046434
+  Id: 11237267171393895703
   Name: "Virtual Folders"
   PlatformAssetType: 30
   SerializationVersion: 98
@@ -29,11 +29,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Props"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "UI"
       PlatformAssetType: 3
     }
@@ -46,8 +41,25 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Camera"
+      VirtualFolderPath: "Input"
       PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Interactables"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "SortMe"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      PlatformAssetType: 5
     }
   }
 }

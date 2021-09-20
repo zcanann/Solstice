@@ -1,5 +1,5 @@
 Assets {
-  Id: 3272934743298698443
+  Id: 17264864285479690535
   Name: "Helper_PlayerStats"
   PlatformAssetType: 5
   TemplateAsset {
@@ -306,7 +306,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 2547395717737905742
+            Id: 17660565466028939374
           }
         }
       }
@@ -373,7 +373,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 2547395717737905742
+            Id: 17660565466028939374
           }
         }
       }

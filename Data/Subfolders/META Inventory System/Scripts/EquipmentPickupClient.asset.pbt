@@ -1,5 +1,5 @@
 Assets {
-  Id: 13222689764745782033
+  Id: 13863079321317902142
   Name: "EquipmentPickupClient"
   PlatformAssetType: 3
   TextAsset {

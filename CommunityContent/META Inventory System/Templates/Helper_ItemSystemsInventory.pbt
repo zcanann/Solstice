@@ -1,5 +1,5 @@
 Assets {
-  Id: 9073641025442457040
+  Id: 17488189108563934732
   Name: "Helper_ItemSystemsInventory"
   PlatformAssetType: 5
   TemplateAsset {
@@ -179,7 +179,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 10065269295270730351
+            Id: 6145762766812867080
           }
         }
       }
@@ -247,7 +247,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 10065269295270730351
+            Id: 6145762766812867080
           }
         }
       }
@@ -285,7 +285,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 8978287308420087665
+            Id: 16665406784963751092
           }
         }
       }
@@ -314,13 +314,13 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
           Overrides {
             Name: "cs:ItemSystems_Item"
             AssetReference {
-              Id: 6250667256569127442
+              Id: 8329504973258545688
             }
           }
         }
@@ -336,7 +336,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 12678343713078078801
+            Id: 14496755720534087726
           }
         }
       }

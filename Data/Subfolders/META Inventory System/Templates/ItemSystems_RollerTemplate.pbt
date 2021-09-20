@@ -1,5 +1,5 @@
 Assets {
-  Id: 7744484988692660332
+  Id: 7131199000030932622
   Name: "ItemSystems_RollerTemplate"
   PlatformAssetType: 5
   TemplateAsset {

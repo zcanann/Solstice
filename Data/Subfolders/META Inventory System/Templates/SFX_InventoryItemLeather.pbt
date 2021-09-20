@@ -1,5 +1,5 @@
 Assets {
-  Id: 13997251661087434483
+  Id: 1301359337439304276
   Name: "SFX_InventoryItemLeather"
   PlatformAssetType: 5
   TemplateAsset {

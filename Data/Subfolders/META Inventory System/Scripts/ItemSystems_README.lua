@@ -1,7 +1,7 @@
 --[[
 ---------------------------------------------------------------------------------------------------------------------------------------
     ItemSystems - README
-    v1.0.8 (01/04/2021)
+    v1.19.1 (02/19/2021)
     
     Creation by: structfoo (Kevin) (Manticore) (https://www.coregames.com/user/b9a4f899f12946f1b467f671f0fc0410)
     Adaptation and Modification by: Coderz (Drake) (META) (https://www.coregames.com/user/d5daea732ee3422fbe85aecb900e73ec)
@@ -20,12 +20,15 @@
         6) Consumable Items
         7) Customizable Item Themes
         8) Lootable Stashes
-        9) Backpacks
-        10) Roll for loot Mechanic
-        11) Developer Cheats
-        12) Proximity Looting
-        13) Item Upgrading
-        14) Personal Looting
+        9) Personal loot stashes
+        10) Multi loot stashes
+        11) Backpacks
+        12) Roll for loot Mechanic
+        13) Developer Cheats
+        14) Proximity Looting
+        15) Item Upgrading
+        16) Personal Looting
+        17) Shared Stoarge
     
     Here are some examples to search for in project content.
     Examples:
@@ -47,7 +50,7 @@ Discord
 --------------------------------------
  
     If you find any bugs or problems with the Item System please direct your questions to
-    my discord: Coderz#0441
+    my discord: Coderz#0001
 
  
     If you have any questions, feel free to join the Core Hub Discord server:
@@ -59,7 +62,7 @@ Discord
 Framework Setup
 --------------------------------------
 
-    1) Search for "ItemSystems" template in project content. Drag and drop ItemSystems template into the hierarchy.
+    1) Search for "ItemSystems" template in project content. Drag and drop ItemSystems template into the hierarchy. ( Make sure ItemSystems is centered in the world. Position should be 0,0,0 )
 
     2) Right-click the template in the hierarchy and select, "Deinstance this Object"
 
@@ -132,14 +135,8 @@ Framework usage
 
     ---------------------------------------
 
-    ------ TODO: Creating or Removing Equipment Slots ------
-    --------------------------------------------------------
-
-    ------ TODO: Making Items Upgradable ------
-    -------------------------------------------
-
     ------ Creating Stashes ------
-        In this tutorial, you'll create stashes that players can loot in the world.
+        In this tutorial you'll create stashes that players can loot in the world.
 
         1) Inside the ItemSystems folder search for the "Searchable Loots" folder
 
@@ -150,6 +147,8 @@ Framework usage
         4) Change the LootTable property to match an existing table in the LootTable folder inside ItemRegistry.
 
         5) Change the ItemCountMin, ItemCountMax, and SecondsToSearch property to something different.
+
+        6) Optionally if you want players the player to have personal loot then by adding boolean custom property named "IsPersonal" and having it set to true.
 
         Optionally you can change the SFX
         Now your stash is ready to be looted by players.
@@ -208,6 +207,36 @@ Framework usage
         7) Assign your new template to the Item property of your item in registered items.
 
     ----------------------------------
+
+    --------- Armor attaching to sockets ---------
+        In this tutorial you'll make pieces of armor attach to different sockets on a player.
+        Refer to Core documentation on sockets to you know which strings to use when making your armor.
+        In this tutorial we'll just modify an existing piece of armor.
+        Socket documentation here: https://docs.coregames.com/api/animations/
+
+        1) In project content search for "ITEM_Armor_ExampleChest" and drag and drop it into your scene.
+
+        2) Deinstance the template in the hierarchy by right clicking and selecting "Deinstance This Object".
+
+        2) Inside the template is a single folder called "upper_spine" the name of this folder determines what the folder will attach to on the player.
+        In this case the folder will attach to the upper_spine of the player when this armor is equipped.
+
+        3) Make a new folder that is a child of the template and name it "left_shoulder".
+
+        4) Position the folder so that it's in the center of the left shoulder.
+
+        4) Select all the parts of the left shoulder for the chest piece.
+        To make this easy make sure you enter object mode by changing the option on the top left of your core editor
+        The third button on the top left allows you to switch between group and object mode. Crtl select all your objects that you want
+        the left shoulder to contain.
+
+        5) Once you've selected all your parts drag and drop them into your left_shoulder folder.
+
+        6) Right click and select "Update template From This"
+
+        When you equip this armor you'll have the two folders connect to their coresponding sockets.
+        If the the shoulder armor is not center on your players left shoulder then you may need to adjust the geometry in the folder a bit.
+    ----------------------------------------------
 
     -------- Stats For Weapons or Armor  --------
         In this tutorial you'll add stats to weapons or armor of your choice.
@@ -273,16 +302,25 @@ Framework usage
         local totalAttack = statSheet:GetStatTotalValue("Attack")
         print(totalAttack)
 
+        -- This will print out the entire statSheet
+        print(statSheet)
+
+        ------------------------------------------------------------------
         -- Server Context
         -- You must have a reference to the player.
 
-            -- Wait for the stat sheet to load
+        -- Wait for the stat sheet to load
         while not player.serverUserData.statSheet do Task.Wait() end
         local statSheet = player.serverUserData.statSheet
 
-            -- This will return total stat value for Attack
+        Task.Wait()
+
+        -- This will return total stat value for Attack
         local totalDefense = statSheet:GetStatTotalValue("Defense")
-        print(totalDefense)
+        print("Defense:",totalDefense)
+
+        -- This will print out the entire statSheet
+        print(statSheet)
 
         --------------------------------------------------------------------
         
@@ -352,6 +390,25 @@ Framework usage
 
     ----------------------------
 
+    ---------- Shared Storage Setup ----------
+    Shared game storage allows multiple games to utilize the same storage for the inventory.
+    This is great if you want players inventory data to carry over to other games that also use the inventory system.
+
+        1) In the core editor got to the top and go to Window -> Shared Storage
+        2) Click "Create a New Shared Key"
+        3) Name it "ItemSystems_Inventory"
+        4) Click "Create a New Shared Key"
+        5) Name it "PlayerStats_StatSheet"
+        6) Find "ItemSystems_InventoryReplicator" in project content and click on it
+        7) Drag and drop your "ItemSystems_Inventory" key onto the "SharedStorageKey" custom property
+        8) Find "PlayerStats_StatSheetReplicator" in project content and click on it
+        9) Drag and drop your "PlayerStats_StatSheet" key onto the "SharedStorageKey" custom property
+        
+        Once you've done that the inventory will now be saved into shared storage! 
+        You must refer to the shared key into all your games that need to utlizie the same storage.
+
+    ------------------------------------------
+
 ------------------------------------------------------------------------------------------------------------------
 
     --------------------------------------
@@ -417,6 +474,20 @@ Framework usage
     --------------------------------------
 
     --------------------------------------
+    Start Items Table Properties
+    --------------------------------------
+        Here is a list of custom properties that need or can be added to a loot table.
+            * is required
+            @ is optional
+            $ is required together
+
+                * Item : CoreObjectReference
+                @ Quantity : Integer
+                @ Slot : Integer (The slot to put this item into. If zero or doesn't exist then then the item will occupy an empty slot.)
+
+    --------------------------------------
+
+    --------------------------------------
     Loot Table Properties
     --------------------------------------
         Here is a list of custom properties that need or can be added to a loot table.
@@ -444,6 +515,9 @@ Framework usage
 
                 * ID : MUID or Integer
                 @ IsStash : Boolean ( When true the stash will save the player's items )
+
+                @ IsPersonal : Boolean ( When true the items from the stash will be personal to the player )
+                @ AllowMultiLooting : Boolean ( A highly experimental feature that allows for multiple players to loot one stash at the same time )
                 
                 @ (Optional, but must be paired.)
                     $ LootTable : String ( Assign an existing loot table name )

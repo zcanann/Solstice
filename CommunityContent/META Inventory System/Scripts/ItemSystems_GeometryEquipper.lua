@@ -68,22 +68,26 @@ local function UpdateItemGeometry(slotIndex, item)
             return
         end
         itemRoot.clientUserData.geometries = {}
-        for propName,propValue in pairs(itemRoot:GetCustomProperties()) do
-            local socket = propName:match("SOCKET_(.+)")
-            if socket then
-                local geometry = propValue:WaitForObject()
-                if socket == "both_feet" then
-                    local copy = World.SpawnAsset(item:GetMUID(), { parent = COMPONENT })
-                    geometry:AttachToPlayer(OWNER, "right_ankle")
-                    copy:AttachToPlayer(OWNER, "left_ankle")
-                    table.insert(itemRoot.clientUserData.geometries, copy)
-                else
-                    geometry:AttachToPlayer(OWNER, socket)
-                end
-
-                table.insert(itemRoot.clientUserData.geometries, geometry)
-            end
+        for _, child in pairs(itemRoot:GetChildren()) do
+            child:AttachToPlayer(OWNER, child.name)
+            table.insert(itemRoot.clientUserData.geometries, child)
         end
+        -- for propName,propValue in pairs(itemRoot:GetCustomProperties()) do
+        --     local socket = propName:match("SOCKET_(.+)")
+        --     if socket then
+        --         local geometry = propValue:WaitForObject()
+        --         if socket == "both_feet" then
+        --             local copy = World.SpawnAsset(item:GetMUID(), { parent = COMPONENT })
+        --             geometry:AttachToPlayer(OWNER, "right_ankle")
+        --             copy:AttachToPlayer(OWNER, "left_ankle")
+        --             table.insert(itemRoot.clientUserData.geometries, copy)
+        --         else
+        --             geometry:AttachToPlayer(OWNER, socket)
+        --         end
+
+        --         table.insert(itemRoot.clientUserData.geometries, geometry)
+        --     end
+        -- end
         currentEquippedGeometry[slotIndex] = itemRoot
 
     end

@@ -1,5 +1,5 @@
 Assets {
-  Id: 2406802272276945150
+  Id: 6192174844639388770
   Name: "Helper_ItemSystemsLoot"
   PlatformAssetType: 5
   TemplateAsset {
@@ -24,7 +24,15 @@ Assets {
             String: ""
           }
           Overrides {
+            Name: "cs:OWNER"
+            String: ""
+          }
+          Overrides {
             Name: "cs:LOOTINFO:isrep"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:OWNER:isrep"
             Bool: true
           }
         }
@@ -97,7 +105,7 @@ Assets {
           Overrides {
             Name: "cs:ItemThemes"
             AssetReference {
-              Id: 9147260011795785376
+              Id: 6327984228048049821
             }
           }
           Overrides {
@@ -118,7 +126,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 17153849474781792190
+            Id: 2296471266371796260
           }
         }
       }
@@ -144,7 +152,7 @@ Assets {
           Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
+          Value: "mc:evisibilitysetting:forceon"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:forceoff"
@@ -177,37 +185,37 @@ Assets {
           Overrides {
             Name: "cs:IndicatorCommon"
             AssetReference {
-              Id: 7828466826247136470
+              Id: 17371484583676032339
             }
           }
           Overrides {
             Name: "cs:IndicatorUncommon"
             AssetReference {
-              Id: 7828466826247136470
+              Id: 17371484583676032339
             }
           }
           Overrides {
             Name: "cs:IndicatorEpic"
             AssetReference {
-              Id: 845318166162081072
+              Id: 10519971601520791272
             }
           }
           Overrides {
             Name: "cs:IndicatorRare"
             AssetReference {
-              Id: 16599428729469767303
+              Id: 965755847338640475
             }
           }
           Overrides {
             Name: "cs:IndicatorLegendary"
             AssetReference {
-              Id: 16319551883118936128
+              Id: 14486741753089352550
             }
           }
           Overrides {
             Name: "cs:ItemThemes"
             AssetReference {
-              Id: 9147260011795785376
+              Id: 6327984228048049821
             }
           }
           Overrides {
@@ -228,7 +236,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 17153849474781792190
+            Id: 2296471266371796260
           }
         }
       }

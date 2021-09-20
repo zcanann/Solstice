@@ -1,5 +1,5 @@
 Assets {
-  Id: 1254554194622620569
+  Id: 7662471653455900368
   Name: "SFX_InventoryOpen"
   PlatformAssetType: 5
   TemplateAsset {

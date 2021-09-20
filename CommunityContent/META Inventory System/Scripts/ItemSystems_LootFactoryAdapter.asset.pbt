@@ -1,5 +1,5 @@
 Assets {
-  Id: 3279912131816597961
+  Id: 13443905618605117733
   Name: "ItemSystems_LootFactoryAdapter"
   PlatformAssetType: 3
   TextAsset {

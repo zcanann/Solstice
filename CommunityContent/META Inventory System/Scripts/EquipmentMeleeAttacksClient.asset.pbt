@@ -1,5 +1,5 @@
 Assets {
-  Id: 13014781628086243035
+  Id: 16241599643101031883
   Name: "EquipmentMeleeAttacksClient"
   PlatformAssetType: 3
   TextAsset {

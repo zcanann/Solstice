@@ -1,5 +1,5 @@
 Assets {
-  Id: 8275941879406152698
+  Id: 13587284760762942756
   Name: "SFX_InventoryDiscard"
   PlatformAssetType: 5
   TemplateAsset {

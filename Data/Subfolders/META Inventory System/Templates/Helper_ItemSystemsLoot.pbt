@@ -1,5 +1,5 @@
 Assets {
-  Id: 10869331102694036667
+  Id: 2724010054612845698
   Name: "Helper_ItemSystemsLoot"
   PlatformAssetType: 5
   TemplateAsset {
@@ -105,7 +105,7 @@ Assets {
           Overrides {
             Name: "cs:ItemThemes"
             AssetReference {
-              Id: 12219953276519373834
+              Id: 11776453390793562952
             }
           }
           Overrides {
@@ -126,7 +126,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 2869733418331798706
+            Id: 9577343894373463345
           }
         }
       }
@@ -185,37 +185,37 @@ Assets {
           Overrides {
             Name: "cs:IndicatorCommon"
             AssetReference {
-              Id: 4446622577552326341
+              Id: 13398903343021002461
             }
           }
           Overrides {
             Name: "cs:IndicatorUncommon"
             AssetReference {
-              Id: 4446622577552326341
+              Id: 13398903343021002461
             }
           }
           Overrides {
             Name: "cs:IndicatorEpic"
             AssetReference {
-              Id: 6294239505937929855
+              Id: 11325337220915198834
             }
           }
           Overrides {
             Name: "cs:IndicatorRare"
             AssetReference {
-              Id: 3304794410142065514
+              Id: 9922414662559950221
             }
           }
           Overrides {
             Name: "cs:IndicatorLegendary"
             AssetReference {
-              Id: 11009443926035600925
+              Id: 5556600189123919886
             }
           }
           Overrides {
             Name: "cs:ItemThemes"
             AssetReference {
-              Id: 12219953276519373834
+              Id: 11776453390793562952
             }
           }
           Overrides {
@@ -236,7 +236,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 2869733418331798706
+            Id: 9577343894373463345
           }
         }
       }

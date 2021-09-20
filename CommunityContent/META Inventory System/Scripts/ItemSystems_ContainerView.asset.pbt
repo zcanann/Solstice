@@ -1,5 +1,5 @@
 Assets {
-  Id: 5386350024722718841
+  Id: 6786782939373611438
   Name: "ItemSystems_ContainerView"
   PlatformAssetType: 3
   TextAsset {
@@ -7,31 +7,31 @@ Assets {
       Overrides {
         Name: "cs:ItemSystems_ItemThemes"
         AssetReference {
-          Id: 9147260011795785376
+          Id: 6327984228048049821
         }
       }
       Overrides {
         Name: "cs:ItemSystems_Database"
         AssetReference {
-          Id: 15198739990512235690
+          Id: 3542065191199654948
         }
       }
       Overrides {
         Name: "cs:ItemSystems_Inventory"
         AssetReference {
-          Id: 10836322075651648043
+          Id: 710440149114067611
         }
       }
       Overrides {
         Name: "cs:ReliableEvents"
         AssetReference {
-          Id: 3134039137318897930
+          Id: 16757881821046423614
         }
       }
       Overrides {
         Name: "cs:StashReplicator"
         AssetReference {
-          Id: 11607967220077598823
+          Id: 10970152297188873579
         }
       }
       Overrides {
@@ -73,19 +73,19 @@ Assets {
       Overrides {
         Name: "cs:SFX_Move"
         AssetReference {
-          Id: 14629309376595437386
+          Id: 15342434532215860027
         }
       }
       Overrides {
         Name: "cs:SFX_DISCARD"
         AssetReference {
-          Id: 8275941879406152698
+          Id: 13587284760762942756
         }
       }
       Overrides {
         Name: "cs:SFX_DENY"
         AssetReference {
-          Id: 17485980645916803754
+          Id: 14547613413934394516
         }
       }
       Overrides {

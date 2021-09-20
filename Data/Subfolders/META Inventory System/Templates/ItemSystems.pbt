@@ -1,5 +1,5 @@
 Assets {
-  Id: 2217025626329187778
+  Id: 230646110503003734
   Name: "ItemSystems"
   PlatformAssetType: 5
   TemplateAsset {
@@ -71,7 +71,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 13247339432981952512
+            Id: 15718227380629059748
           }
         }
       }
@@ -91,6 +91,7 @@ Assets {
         }
         ParentId: 12698535283932223295
         ChildIds: 11006943044317341319
+        ChildIds: 10892116107523557366
         ChildIds: 17010217697790982627
         ChildIds: 9628804448115820476
         ChildIds: 14972381572201902478
@@ -259,7 +260,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 472971380980019498
+              Id: 17932466227187007890
             }
           }
           Overrides {
@@ -639,7 +640,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 16477107639529508759
+              Id: 2958109500187423432
             }
           }
           Overrides {
@@ -1129,7 +1130,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 6072413271756145139
+              Id: 11120298767313361948
             }
           }
           Overrides {
@@ -1379,7 +1380,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12924051150070208515
+              Id: 12236400783540805855
             }
           }
           Overrides {
@@ -1591,7 +1592,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 5137802864982390995
+              Id: 16228225932609419316
             }
           }
           Overrides {
@@ -1803,7 +1804,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 2566303720816969665
+              Id: 10286702411779439079
             }
           }
           Overrides {
@@ -2070,7 +2071,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 17237226450946601255
+              Id: 16389794192045354092
             }
           }
           Overrides {
@@ -2337,7 +2338,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 16301956755852222092
+              Id: 7798123657984690192
             }
           }
           Overrides {
@@ -2772,7 +2773,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 14981753837521153745
+              Id: 12334113535857409973
             }
           }
           Overrides {
@@ -3207,7 +3208,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 3293135210203877674
+              Id: 10591616372713159549
             }
           }
           Overrides {
@@ -3642,7 +3643,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 123994272168548394
+              Id: 5553781830711213120
             }
           }
           Overrides {
@@ -4077,7 +4078,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12748734323520414329
+              Id: 8321959024123631390
             }
           }
           Overrides {
@@ -4712,7 +4713,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 17464082150560872563
+              Id: 7910493193924186942
             }
           }
           Overrides {
@@ -4811,7 +4812,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 15340614480537848917
+              Id: 11291907256249403735
             }
           }
           Overrides {
@@ -4910,7 +4911,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -5009,7 +5010,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 10940107997809671472
+              Id: 9240646685705016476
             }
           }
           Overrides {
@@ -5138,7 +5139,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 915424967371685292
+              Id: 15384791092718262763
             }
           }
           Overrides {
@@ -5298,7 +5299,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 11403201190422673446
+              Id: 5785569906704025205
             }
           }
           Overrides {
@@ -5673,7 +5674,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 10602615862215690575
+              Id: 16983308995482756686
             }
           }
           Overrides {
@@ -6082,7 +6083,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12934988676707487032
+              Id: 11229534706988133470
             }
           }
           Overrides {
@@ -6320,7 +6321,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 13588448595513749435
+              Id: 9560186342304326989
             }
           }
           Overrides {
@@ -6527,7 +6528,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 17449813779270174802
+              Id: 4298083007607406051
             }
           }
           Overrides {
@@ -7021,7 +7022,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 9603556728599257905
+              Id: 2245914351466824578
             }
           }
           Overrides {
@@ -7228,7 +7229,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 6531576030013373651
+              Id: 17259217530511755673
             }
           }
           Overrides {
@@ -7640,7 +7641,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12310040006016569318
+              Id: 1520184978883944988
             }
           }
           Overrides {
@@ -7739,7 +7740,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 1226478198712896929
+              Id: 4042697528181051610
             }
           }
           Overrides {
@@ -7838,7 +7839,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 16206986112501755574
+              Id: 9682066027133040849
             }
           }
           Overrides {
@@ -7937,7 +7938,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 2096442024046915934
+              Id: 15347944941568638156
             }
           }
           Overrides {
@@ -8036,7 +8037,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 13514199212849345265
+              Id: 12025800167129899501
             }
           }
           Overrides {
@@ -8168,13 +8169,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 9459281094711195245
+              Id: 3374736175105236241
             }
           }
           Overrides {
             Name: "cs:ConsumptionEffect"
             AssetReference {
-              Id: 5779079269679144629
+              Id: 2940226000389389926
             }
           }
           Overrides {
@@ -8269,13 +8270,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 16643250343586995278
+              Id: 15516700061424539269
             }
           }
           Overrides {
             Name: "cs:ConsumptionEffect"
             AssetReference {
-              Id: 5779079269679144629
+              Id: 2940226000389389926
             }
           }
           Overrides {
@@ -8370,13 +8371,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 15774662769213528899
+              Id: 4667835014608609984
             }
           }
           Overrides {
             Name: "cs:ConsumptionEffect"
             AssetReference {
-              Id: 2878358150577985038
+              Id: 1478864412035164461
             }
           }
           Overrides {
@@ -8475,13 +8476,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 13176166165605336170
+              Id: 1971870312213625968
             }
           }
           Overrides {
             Name: "cs:ConsumptionEffect"
             AssetReference {
-              Id: 808387771151370783
+              Id: 3876356513950109338
             }
           }
           Overrides {
@@ -8528,6 +8529,151 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10892116107523557366
+        Name: "StarterItems"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14400948508677778830
+        ChildIds: 9724725709942447754
+        ChildIds: 6606735810749458693
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "StarterItems"
+        }
+      }
+      Objects {
+        Id: 9724725709942447754
+        Name: "GoldGems"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10892116107523557366
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 6697966002060352471
+            }
+          }
+          Overrides {
+            Name: "cs:Quantity"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:Slot"
+            Int: 9
+          }
+          Overrides {
+            Name: "cs:Slot:tooltip"
+            String: "The slot the item should be in. Zero will just add it to the next empty spot. Anything before 8 is for players equipment and anything past 8 is the inventory."
+          }
+          Overrides {
+            Name: "cs:Quantity:tooltip"
+            String: "The amount of the item to add."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item to add."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "GoldGems"
+        }
+      }
+      Objects {
+        Id: 6606735810749458693
+        Name: "StarterSword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10892116107523557366
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 14549268695127572384
+            }
+          }
+          Overrides {
+            Name: "cs:Slot"
+            Int: 1
+          }
+          Overrides {
+            Name: "cs:Slot:tooltip"
+            String: "The slot the item should be in. Zero will just add it to the next empty spot. Anything before 8 is for players equipment and anything past 8 is the inventory."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item to add."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
         }
       }
       Objects {
@@ -10874,7 +11020,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 472971380980019498
+              Id: 17932466227187007890
             }
           }
           Overrides {
@@ -10914,7 +11060,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -10960,7 +11106,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 16477107639529508759
+              Id: 2958109500187423432
             }
           }
           Overrides {
@@ -11000,7 +11146,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11048,7 +11194,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 915424967371685292
+              Id: 15384791092718262763
             }
           }
           Overrides {
@@ -11099,7 +11245,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 6072413271756145139
+              Id: 11120298767313361948
             }
           }
           Overrides {
@@ -11139,7 +11285,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11187,7 +11333,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 17464082150560872563
+              Id: 7910493193924186942
             }
           }
           Overrides {
@@ -11235,7 +11381,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 15340614480537848917
+              Id: 11291907256249403735
             }
           }
           Overrides {
@@ -11285,7 +11431,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 12934988676707487032
+              Id: 11229534706988133470
             }
           }
           Overrides {
@@ -11325,7 +11471,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11373,7 +11519,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 915424967371685292
+              Id: 15384791092718262763
             }
           }
           Overrides {
@@ -11422,7 +11568,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 11403201190422673446
+              Id: 5785569906704025205
             }
           }
           Overrides {
@@ -11462,7 +11608,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11511,7 +11657,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 10602615862215690575
+              Id: 16983308995482756686
             }
           }
           Overrides {
@@ -11551,7 +11697,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11600,7 +11746,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 9603556728599257905
+              Id: 2245914351466824578
             }
           }
           Overrides {
@@ -11640,7 +11786,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11689,7 +11835,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 6531576030013373651
+              Id: 17259217530511755673
             }
           }
           Overrides {
@@ -11729,7 +11875,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11778,7 +11924,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 13588448595513749435
+              Id: 9560186342304326989
             }
           }
           Overrides {
@@ -11818,7 +11964,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11867,7 +12013,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 17449813779270174802
+              Id: 4298083007607406051
             }
           }
           Overrides {
@@ -11907,7 +12053,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -11956,7 +12102,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 2566303720816969665
+              Id: 10286702411779439079
             }
           }
           Overrides {
@@ -11996,7 +12142,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12045,7 +12191,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 17237226450946601255
+              Id: 16389794192045354092
             }
           }
           Overrides {
@@ -12085,7 +12231,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12134,7 +12280,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 16301956755852222092
+              Id: 7798123657984690192
             }
           }
           Overrides {
@@ -12174,7 +12320,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12223,7 +12369,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 472971380980019498
+              Id: 17932466227187007890
             }
           }
           Overrides {
@@ -12263,7 +12409,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12312,7 +12458,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 16477107639529508759
+              Id: 2958109500187423432
             }
           }
           Overrides {
@@ -12352,7 +12498,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12401,7 +12547,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 14981753837521153745
+              Id: 12334113535857409973
             }
           }
           Overrides {
@@ -12441,7 +12587,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12490,7 +12636,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 3293135210203877674
+              Id: 10591616372713159549
             }
           }
           Overrides {
@@ -12530,7 +12676,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12579,7 +12725,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 123994272168548394
+              Id: 5553781830711213120
             }
           }
           Overrides {
@@ -12619,7 +12765,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12668,7 +12814,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 12748734323520414329
+              Id: 8321959024123631390
             }
           }
           Overrides {
@@ -12708,7 +12854,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 7360101594085042809
+              Id: 6048472407663481986
             }
           }
           Overrides {
@@ -12802,7 +12948,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 13997251661087434483
+              Id: 1301359337439304276
             }
           }
           Overrides {
@@ -12858,7 +13004,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 13997251661087434483
+              Id: 1301359337439304276
             }
           }
           Overrides {
@@ -12914,7 +13060,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 13997251661087434483
+              Id: 1301359337439304276
             }
           }
           Overrides {
@@ -12970,7 +13116,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 11367244617952738601
+              Id: 1165748833239322875
             }
           }
           Overrides {
@@ -13026,7 +13172,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 18266892944281061424
+              Id: 9748888761950414476
             }
           }
           Overrides {
@@ -13082,7 +13228,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 18266892944281061424
+              Id: 9748888761950414476
             }
           }
           Overrides {
@@ -13138,7 +13284,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 18266892944281061424
+              Id: 9748888761950414476
             }
           }
           Overrides {
@@ -13194,7 +13340,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 3973546070371371323
+              Id: 5833755027367001857
             }
           }
           Overrides {
@@ -13250,7 +13396,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 18266892944281061424
+              Id: 9748888761950414476
             }
           }
           Overrides {
@@ -13306,7 +13452,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 13997251661087434483
+              Id: 1301359337439304276
             }
           }
           Overrides {
@@ -13366,7 +13512,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 13482224472435318280
+              Id: 4251869665840862059
             }
           }
           Overrides {
@@ -13410,7 +13556,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 14459606480928098432
+              Id: 13637497533670557478
             }
           }
           Overrides {
@@ -13454,7 +13600,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 13482224472435318280
+              Id: 4251869665840862059
             }
           }
           Overrides {
@@ -13498,7 +13644,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 289757576166287362
+              Id: 17994585095906577450
             }
           }
           Overrides {
@@ -13580,7 +13726,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 7461034369320311343
+              Id: 5775988419195845851
             }
           }
           Overrides {
@@ -13632,7 +13778,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 14407663946353213755
+              Id: 16792621806958638658
             }
           }
           Overrides {
@@ -13684,7 +13830,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 10447719410900497806
+              Id: 15619984532215720413
             }
           }
           Overrides {
@@ -13736,7 +13882,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 11871563476575266186
+              Id: 18109108803849305130
             }
           }
           Overrides {
@@ -13788,7 +13934,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 11166371826263504188
+              Id: 5496435161057607286
             }
           }
           Overrides {
@@ -13961,7 +14107,7 @@ Assets {
           Overrides {
             Name: "cs:ComponentTemplate"
             AssetReference {
-              Id: 1768929281646589155
+              Id: 4369988646004940808
             }
           }
         }
@@ -13976,7 +14122,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 215455770287141276
+            Id: 1144358849606408591
           }
         }
       }
@@ -14027,13 +14173,13 @@ Assets {
           Overrides {
             Name: "cs:VFX_LocalPlayer"
             AssetReference {
-              Id: 16466799274818211491
+              Id: 11619624576121402155
             }
           }
           Overrides {
             Name: "cs:VFX_OtherPlayer"
             AssetReference {
-              Id: 15631136145372022761
+              Id: 7044480391590617215
             }
           }
         }
@@ -14048,7 +14194,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 16538434868404369504
+            Id: 16534370939253226781
           }
         }
       }
@@ -14078,7 +14224,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 4046903598302651986
+            Id: 13960119017282890687
           }
         }
       }
@@ -14139,7 +14285,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 5069596998943437979
+            Id: 14736668866715839490
           }
         }
       }
@@ -14161,7 +14307,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Enabled"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "cs:CheatDropKey"
@@ -14179,7 +14325,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 11884013061127831575
+            Id: 17820305579430282154
           }
         }
       }
@@ -14263,7 +14409,7 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 801326033750583795
+              Id: 397976853662803105
             }
           }
         }
@@ -14278,7 +14424,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 5069596998943437979
+            Id: 14736668866715839490
           }
         }
       }
@@ -14320,7 +14466,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 3117820920136677583
+            Id: 15303828093960287964
           }
         }
       }
@@ -14347,7 +14493,7 @@ Assets {
           Overrides {
             Name: "cs:ReliableEvents"
             AssetReference {
-              Id: 13889690048093816715
+              Id: 9913335482599357769
             }
           }
           Overrides {
@@ -14378,7 +14524,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 16663995818275597602
+            Id: 2167929238361309706
           }
         }
       }
@@ -14549,13 +14695,13 @@ Assets {
           Overrides {
             Name: "cs:SFX_InventoryOpen"
             AssetReference {
-              Id: 1254554194622620569
+              Id: 7662471653455900368
             }
           }
           Overrides {
             Name: "cs:SFX_InventoryClose"
             AssetReference {
-              Id: 14381120649760430453
+              Id: 13155530564501253684
             }
           }
         }
@@ -14570,7 +14716,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 1038205288517784048
+            Id: 7986432622782447100
           }
         }
       }
@@ -14593,13 +14739,13 @@ Assets {
           Overrides {
             Name: "cs:RollEntryUITemplate"
             AssetReference {
-              Id: 15278278414122725327
+              Id: 14022729810295500281
             }
           }
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 801326033750583795
+              Id: 397976853662803105
             }
           }
           Overrides {
@@ -14626,7 +14772,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 16605580983680927638
+            Id: 3204186378764875662
           }
         }
       }
@@ -14655,13 +14801,13 @@ Assets {
           Overrides {
             Name: "cs:RolledUITemplate"
             AssetReference {
-              Id: 18081118963236018234
+              Id: 7236086426346080097
             }
           }
           Overrides {
             Name: "cs:ItemDatabase"
             AssetReference {
-              Id: 801326033750583795
+              Id: 397976853662803105
             }
           }
         }
@@ -14676,7 +14822,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 2957855561595000281
+            Id: 1096260886241513853
           }
         }
       }
@@ -14854,31 +15000,31 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 801326033750583795
+              Id: 397976853662803105
             }
           }
           Overrides {
             Name: "cs:ItemSystems_Inventory"
             AssetReference {
-              Id: 3502930065386103998
+              Id: 3184064684076525141
             }
           }
           Overrides {
             Name: "cs:StashReplicator"
             AssetReference {
-              Id: 17080833073892066201
+              Id: 8801143828623069174
             }
           }
           Overrides {
             Name: "cs:ReliableEvents"
             AssetReference {
-              Id: 13889690048093816715
+              Id: 9913335482599357769
             }
           }
           Overrides {
             Name: "cs:ItemSystems_ItemThemes"
             AssetReference {
-              Id: 12219953276519373834
+              Id: 11776453390793562952
             }
           }
           Overrides {
@@ -14929,7 +15075,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 1832048379728428895
+            Id: 13666664365218867391
           }
         }
       }
@@ -26699,7 +26845,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 3912522241268900314
+              Id: 2410617516610157426
             }
           }
           Overrides {
@@ -28619,7 +28765,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 271541995081587132
+            Id: 14919060246010669473
           }
         }
       }
@@ -28867,19 +29013,19 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_ItemThemes"
             AssetReference {
-              Id: 12219953276519373834
+              Id: 11776453390793562952
             }
           }
           Overrides {
             Name: "cs:LootEntryTemplate"
             AssetReference {
-              Id: 6722075920690874784
+              Id: 5388757655133780062
             }
           }
           Overrides {
             Name: "cs:SFX_Claim"
             AssetReference {
-              Id: 14783232983369854096
+              Id: 2990496911965889305
             }
           }
         }
@@ -28894,7 +29040,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 17389254487595305404
+            Id: 16414073041320916009
           }
         }
       }
@@ -29535,7 +29681,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 271541995081587132
+            Id: 14919060246010669473
           }
         }
       }
@@ -29753,19 +29899,19 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 2870560336752301594
+              Id: 2333535962011975385
             }
           }
           Overrides {
             Name: "cs:ItemThemes"
             AssetReference {
-              Id: 12219953276519373834
+              Id: 11776453390793562952
             }
           }
           Overrides {
             Name: "cs:UpgradesCostBasis"
             AssetReference {
-              Id: 6440101732770715439
+              Id: 15401817112640563372
             }
           }
           Overrides {
@@ -29819,31 +29965,31 @@ Assets {
           Overrides {
             Name: "cs:SFX_ItemSelected"
             AssetReference {
-              Id: 9474932970077419193
+              Id: 13010019304172501686
             }
           }
           Overrides {
             Name: "cs:SFX_UpgradeEnhanced"
             AssetReference {
-              Id: 17173248355894936882
+              Id: 13613816093131143675
             }
           }
           Overrides {
             Name: "cs:SFX_UpgradeLimitBroken"
             AssetReference {
-              Id: 8002999436216438548
+              Id: 9404836387550872816
             }
           }
           Overrides {
             Name: "cs:SFX_ButtonHover"
             AssetReference {
-              Id: 9761881350274792908
+              Id: 17487927828707935884
             }
           }
           Overrides {
             Name: "cs:SFX_ButtonClick"
             AssetReference {
-              Id: 5973411055250870960
+              Id: 9064219624819993421
             }
           }
         }
@@ -29858,7 +30004,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 16655379438406328002
+            Id: 14927533787897015845
           }
         }
       }
@@ -30277,7 +30423,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 271541995081587132
+            Id: 14919060246010669473
           }
         }
       }
@@ -30619,7 +30765,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 3912522241268900314
+              Id: 2410617516610157426
             }
           }
           Overrides {
@@ -30646,7 +30792,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 98012563553025519
+            Id: 9207102567520706390
           }
         }
       }
@@ -34466,7 +34612,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 3912522241268900314
+              Id: 2410617516610157426
             }
           }
           Overrides {
@@ -34493,7 +34639,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 98012563553025519
+            Id: 9207102567520706390
           }
         }
       }
@@ -41252,13 +41398,13 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_ItemThemes"
             AssetReference {
-              Id: 12219953276519373834
+              Id: 11776453390793562952
             }
           }
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 801326033750583795
+              Id: 397976853662803105
             }
           }
           Overrides {
@@ -41356,13 +41502,13 @@ Assets {
           Overrides {
             Name: "cs:TemplateSlotEquipped"
             AssetReference {
-              Id: 3077652974893717902
+              Id: 15265469872033016363
             }
           }
           Overrides {
             Name: "cs:TemplateSlotBackpack"
             AssetReference {
-              Id: 2829197133702935973
+              Id: 11458936862556863342
             }
           }
           Overrides {
@@ -41374,25 +41520,25 @@ Assets {
           Overrides {
             Name: "cs:SFX_Move"
             AssetReference {
-              Id: 3907656038578649494
+              Id: 12266459279892768651
             }
           }
           Overrides {
             Name: "cs:SFX_Discard"
             AssetReference {
-              Id: 14728951712240454329
+              Id: 6400740569870052293
             }
           }
           Overrides {
             Name: "cs:SFX_Denied"
             AssetReference {
-              Id: 9376551563511133787
+              Id: 16531586234658524984
             }
           }
           Overrides {
             Name: "cs:SFX_Salvage"
             AssetReference {
-              Id: 4055150683495335327
+              Id: 11569507209624750746
             }
           }
         }
@@ -41407,7 +41553,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 2575557581097288978
+            Id: 17582264852731543420
           }
         }
       }
@@ -47694,12 +47840,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -48351,12 +48497,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -49008,12 +49154,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -49665,12 +49811,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -50322,12 +50468,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -50979,12 +51125,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -51636,12 +51782,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -52293,12 +52439,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -69225,7 +69371,7 @@ Assets {
           Overrides {
             Name: "cs:ResourceEntry"
             AssetReference {
-              Id: 5124176654966681366
+              Id: 10609705469439240295
             }
           }
           Overrides {
@@ -70276,7 +70422,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 3912522241268900314
+              Id: 2410617516610157426
             }
           }
           Overrides {
@@ -71682,7 +71828,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 271541995081587132
+            Id: 14919060246010669473
           }
         }
       }
@@ -72707,7 +72853,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 4432124364998232786
+            Id: 11019001220923276114
           }
         }
       }
@@ -72738,7 +72884,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 10464504251479332540
+            Id: 15280695276498713199
           }
         }
       }
@@ -75641,7 +75787,7 @@ Assets {
           Overrides {
             Name: "cs:ComponentTemplate"
             AssetReference {
-              Id: 8178880081204102869
+              Id: 6688639634842287784
             }
           }
         }
@@ -75656,7 +75802,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 215455770287141276
+            Id: 1144358849606408591
           }
         }
       }
@@ -75694,7 +75840,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15595386898621980751
+            Id: 14187385002248741878
           }
         }
       }
@@ -75717,7 +75863,7 @@ Assets {
           Overrides {
             Name: "cs:ModuleManager"
             AssetReference {
-              Id: 931403226440658681
+              Id: 10066275529701033174
             }
           }
         }
@@ -75732,7 +75878,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 6883808042089088631
+            Id: 10700615077016685059
           }
         }
       }
@@ -75762,7 +75908,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 267697562897867823
+            Id: 10389853284905649510
           }
         }
       }
@@ -75785,19 +75931,19 @@ Assets {
           Overrides {
             Name: "cs:RollEntryTemplate"
             AssetReference {
-              Id: 10057691044005049950
+              Id: 11999006557936676568
             }
           }
           Overrides {
             Name: "cs:RollerTemplate"
             AssetReference {
-              Id: 7744484988692660332
+              Id: 7131199000030932622
             }
           }
           Overrides {
             Name: "cs:ReliableEvents"
             AssetReference {
-              Id: 13889690048093816715
+              Id: 9913335482599357769
             }
           }
           Overrides {
@@ -75816,7 +75962,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 18238309621941901975
+            Id: 14213097774236125144
           }
         }
       }
@@ -75839,13 +75985,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 2870560336752301594
+              Id: 2333535962011975385
             }
           }
           Overrides {
             Name: "cs:Database"
             AssetReference {
-              Id: 801326033750583795
+              Id: 397976853662803105
             }
           }
         }
@@ -75860,7 +76006,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 9508977933250363221
+            Id: 16036280338590316572
           }
         }
       }
@@ -75883,7 +76029,7 @@ Assets {
           Overrides {
             Name: "cs:StashToDrop"
             AssetReference {
-              Id: 5376604880413348593
+              Id: 2367483036658406984
             }
           }
           Overrides {
@@ -75906,7 +76052,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15177253602365527930
+            Id: 8075740049917504491
           }
         }
       }
@@ -75929,13 +76075,13 @@ Assets {
           Overrides {
             Name: "cs:ModuleManager"
             AssetReference {
-              Id: 14726232445330980541
+              Id: 13195094501091167367
             }
           }
           Overrides {
             Name: "cs:PlayerStats_Combat"
             AssetReference {
-              Id: 4046903598302651986
+              Id: 13960119017282890687
             }
           }
         }
@@ -75950,7 +76096,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 3412971927627992535
+            Id: 3891829630489992349
           }
         }
       }
@@ -76586,6 +76732,15 @@ Assets {
       }
     }
     Assets {
+      Id: 14919473863846089207
+      Name: "Sci-fi Frame 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Scifi_Frame_001"
+      }
+    }
+    Assets {
       Id: 2461529389641718171
       Name: "Center Circle 001 Outline"
       PlatformAssetType: 9
@@ -76654,7 +76809,7 @@ Assets {
     }
   }
   Marketplace {
-    Description: "ItemSystems is a framework for inventory and item management such that you\'d find in MMO games.\r\nIt contains a plethora of awesome features to help jump start your RPG-style game. \r\nIt also removes the hassle of creating an inventory system from scratch.\r\n\r\nMake sure to read the ItemSystems_README file for setup and configuration instructions. You can find the README inside of the ItemSystems template.\r\n\r\nMessage @Coderz or @Buckmonster  in Discord with feedback or feature requests - https://discord.com/invite/core-creators\r\n\r\nThanks to:\r\n* @structfoo - Creating the original inventory system.\r\n* @Coderz - Adaptation and Modification\r\n* @blaking707 -  Testing and Bug fixing.\r\n* @Morticai - Testing and Bug fixing.\r\n* @Waffle - Stash search progress circle. \r\n* @KonzZwodrei  - UI Indicators\r\n* @standardcombo - Review and Loot Factory adapter.\r\n* @Buckmonster - Lead of Team META, review and input.\r\n* @Mucusinator - Armor Sets.\r\n\342\200\242 @Aggripina - UI thumbnail design.\r\n* @Mirc - Testing and Reporting of bugs.\r\n* @RandomPhantom - Backpack bug fix.\r\n\r\nChangelog.\r\nv1.1.1\r\n* Fixed equipment bug\r\n* Fixed blank string passed into database which caused warnings.\r\n\r\nv1.1.0\r\n* Updated README with example code at the bottom.\r\n* Fixed a bug with item equipping.\r\n* Added additional credits.\r\n\r\nv1.0.8\r\n* Updated stash interactor so it supports camera zoom.\r\n\r\nv1.0.7\r\n* Larger stacks are now allowed. Refer to framework components details section of the README for more info.\r\n\r\nv1.0.6\r\n* Added item upgrading mechanic.\r\n\r\nv1.0.2\r\n* Fixed bug where having a shield and two handed weapon equipped at the same time completely nulls stats.\r\n\r\nv1.0.1\r\n* Added stats example for players dealing and receiving from NPCs. Refer to ItemSystems_NPCCombat."
+    Description: "ItemSystems is a framework for inventory and item management such that you\'d find in MMO games.\r\nIt contains a plethora of awesome features to help jump start your RPG-style game. \r\nIt also removes the hassle of creating an inventory system from scratch.\r\n\r\nMake sure to read the ItemSystems_README file for setup and configuration instructions. You can find the README inside of the ItemSystems template.\r\n\r\nMessage @Coderz or @Buckmonster  in Discord with feedback or feature requests - https://discord.com/invite/core-creators\r\n\r\nThanks to:\r\n* @structfoo - Creating the original inventory system.\r\n* @Coderz - Adaptation and Modification\r\n* @blaking707 -  Testing and Bug fixing.\r\n* @Morticai - Testing and Bug fixing.\r\n* @Waffle - Stash search progress circle. \r\n* @KonzZwodrei  - UI Indicators\r\n* @standardcombo - Review and Loot Factory adapter.\r\n* @Buckmonster - Lead of Team META, review and input.\r\n* @Mucusinator - Armor Sets.\r\n\342\200\242 @Aggripina - UI thumbnail design.\r\n* @Mirc - Testing and Reporting of bugs.\r\n* @RandomPhantom - Backpack bug fix.\r\n\r\nChangelog.\r\n\r\nv1.28.0\r\n* Multi-Looting support added to stashes\r\n* Personal looting added to stashes\r\n* Updated Itemsystems and searchable loot example with latest multi-looting and personal looting features.\r\n* Revised README\r\n\r\nv.1.29.0\r\n* Fixed issue with invalid UI asset being used. \r\n\r\nv.1.27.0\r\n* Updated readme as discord handle has changed.\r\n\r\nv.1.26.0\r\n* Fixed edge case with stat calculation.\r\n* Updated README of \"Accessing Player Stats\" section to be more readable.\r\n\r\nv.1.25.0\r\n* Fixed a bug with client side stat calculations\r\n\r\nv1.24.0\r\n* Added equipment support for items. Refer to the readme for more details.\r\n\r\nv1.23.0\r\n* Fixed a bug in public RemovItem() method inside the inventory.\r\n\r\nv1.22.0\r\n* Fixed a bug with shared storage compatiability.\r\n* Updated shared storage section of readme.\r\n\r\nv1.19.0\r\n* Refactored geometry equipper to allow equipment to use multiple sockets\r\n* Updated README with geometry equipper info.\r\n\r\nV1.1.3\r\n* Added cross game storage\r\n* Fixed bug where stats were doubled\r\n\r\nV1.1.2\r\n* Updated loot factory adapter for latest of A.I Kit from standardcombo.\r\n* Updated weapons to adapt to A.I kit update.\r\n* Gain XP from killing enemies now.\r\n\r\nv1.1.1\r\n* Fixed equipment bug\r\n* Fixed blank string passed into database which caused warnings.\r\n\r\nv1.1.0\r\n* Updated README with example code at the bottom.\r\n* Fixed a bug with item equipping.\r\n* Added additional credits.\r\n\r\nv1.0.8\r\n* Updated stash interactor so it supports camera zoom.\r\n\r\nv1.0.7\r\n* Larger stacks are now allowed. Refer to framework components details section of the README for more info.\r\n\r\nv1.0.6\r\n* Added item upgrading mechanic.\r\n\r\nv1.0.2\r\n* Fixed bug where having a shield and two handed weapon equipped at the same time completely nulls stats.\r\n\r\nv1.0.1\r\n* Added stats example for players dealing and receiving from NPCs. Refer to ItemSystems_NPCCombat."
   }
   SerializationVersion: 98
   DirectlyPublished: true

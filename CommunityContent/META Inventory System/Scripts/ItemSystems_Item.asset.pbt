@@ -1,5 +1,5 @@
 Assets {
-  Id: 6250667256569127442
+  Id: 8329504973258545688
   Name: "ItemSystems_Item"
   PlatformAssetType: 3
   TextAsset {
@@ -7,12 +7,12 @@ Assets {
       Overrides {
         Name: "cs:Base64"
         AssetReference {
-          Id: 1663581137477499093
+          Id: 12190492139935492206
         }
       }
       Overrides {
         Name: "cs:AllowLargeStacksizes"
-        Bool: false
+        Bool: true
       }
       Overrides {
         Name: "cs:AllowLargeStacksizes:tooltip"

@@ -256,8 +256,9 @@ local function TickProcessPathTaskQueue()
                         startTileX, startTileY, _ = navMeshGen.UnpackTileCoords(currentPathTask.startTileId)
                         if checkTileX == startTileX and checkTileY == startTileY then
                             -- If start position was on the same tile as what the start tile became, we can let it use its more accurate position
-                            result.path[1].x = currentPathTask.startWorldPos.x
-                            result.path[1].y = currentPathTask.startWorldPos.y
+                            -- Zac: Reduce granularity
+                            -- result.path[1].x = currentPathTask.startWorldPos.x
+                            -- result.path[1].y = currentPathTask.startWorldPos.y
                         end
                     end
                 end
@@ -269,8 +270,9 @@ local function TickProcessPathTaskQueue()
                         endTileX, endTileY, _ = navMeshGen.UnpackTileCoords(currentPathTask.endTileId)
                         if checkTileX == endTileX and checkTileY == endTileY then
                             -- If end position was on the same tile as what the end tile became, we can let it use its more accurate position
-                            result.path[#result.path].x = currentPathTask.endWorldPos.x
-                            result.path[#result.path].y = currentPathTask.endWorldPos.y
+                            -- Zac: Reduce granularity
+                            -- result.path[#result.path].x = currentPathTask.endWorldPos.x
+                            -- result.path[#result.path].y = currentPathTask.endWorldPos.y
                         end
                     end
                 end

@@ -1,5 +1,5 @@
 Assets {
-  Id: 10981802227644102210
+  Id: 5434844053083489330
   Name: "ITEM_Backpack_Sack"
   PlatformAssetType: 5
   TemplateAsset {

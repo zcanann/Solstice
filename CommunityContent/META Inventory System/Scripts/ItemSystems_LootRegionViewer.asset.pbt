@@ -1,5 +1,5 @@
 Assets {
-  Id: 6909538970960847181
+  Id: 2944825057979612206
   Name: "ItemSystems_LootRegionViewer"
   PlatformAssetType: 3
   TextAsset {
@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:Inventory_Regions"
         AssetReference {
-          Id: 6166800970442442637
+          Id: 5340670849124461034
         }
       }
       Overrides {

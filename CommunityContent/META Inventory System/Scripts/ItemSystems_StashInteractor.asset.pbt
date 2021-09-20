@@ -1,5 +1,5 @@
 Assets {
-  Id: 12662290023490008145
+  Id: 5859407926471892705
   Name: "ItemSystems_StashInteractor"
   PlatformAssetType: 3
   TextAsset {

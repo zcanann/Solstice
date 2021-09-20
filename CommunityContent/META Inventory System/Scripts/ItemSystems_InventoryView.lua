@@ -50,7 +50,7 @@ local currentLevel = nil
 
 -----------------------------------------------------------------------------------------------------------------
 PLAYER_NAME.text = LOCAL_PLAYER.name
-PLAYER_ICON:SetImage(LOCAL_PLAYER)
+PLAYER_ICON:SetPlayerProfile(LOCAL_PLAYER)
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -370,24 +370,6 @@ function view:InitItemHover()
     --     PANEL_ITEM_HOVER.clientUserData.statsRoot = panel:GetCustomProperty("StatsRoot"):WaitForObject()
     -- end
     self.itemHoverStatEntries = {}
-end
-
-function view:StopHighlightSlots()
-    for i,slot in ipairs(self.loadoutSlots) do
-        slot.clientUserData.gradient:SetColor(Color.New())
-    end
-    script.clientUserData.selectedSlot = nil
-end
-
-function view:HighlightSlot(control)
-    if not control and script.clientUserData.gradient then
-        script.clientUserData.gradient:SetColor(SLOT_HIGHLIGHT_COLOR)
-    end
-    control.clientUserData.gradient:SetColor(SLOT_HIGHLIGHT_COLOR)
-    if script.clientUserData.selectedSlot and control ~= script.clientUserData.selectedSlot then
-        script.clientUserData.selectedSlot.clientUserData.gradient:SetColor(Color.New())
-    end
-    script.clientUserData.selectedSlot = control
 end
 
 function view:ApplyLoadoutCooldowns()
@@ -902,8 +884,13 @@ function view:DrawHoverHighlight()
     for _,slot in ipairs(self.equippedSlots) do
         local toSlotIndex = slot.clientUserData.slotIndex
         slot.clientUserData.notAllowed.visibility = Visibility.FORCE_OFF
-        if self.isDragging and not inventory:CanMoveItem(self.fromSlotIndex, toSlotIndex) then
+        if (self.isDragging and not inventory:CanMoveItem(self.fromSlotIndex, toSlotIndex))  then
             slot.clientUserData.notAllowed.visibility = Visibility.INHERIT
+        elseif self.slotUnderCursor then
+            local slotIndexUnderCursor = self.slotUnderCursor.clientUserData.slotIndex
+            if slotIndexUnderCursor and not inventory:CanMoveItem(slotIndexUnderCursor, toSlotIndex) then
+                slot.clientUserData.notAllowed.visibility = Visibility.INHERIT
+            end
         end
     end
 end
@@ -1149,7 +1136,7 @@ function view:DrawHoverStatCompare()
                 if statDelta ~= 0 then
                     local compareColor = statDelta > 0 and Color.GREEN or Color.RED
                     local compareToken = statDelta > 0 and "+ " or "- "
-                    statElement.clientUserData.value.text = ItemThemes.GetPlayerStatFormattedValue(statName,statValue)
+                    --statElement.clientUserData.value.text = ItemThemes.GetPlayerStatFormattedValue(statName,statValue)
                     statElement.clientUserData.value:SetColor(compareColor)
                     statElement.clientUserData.previewDelta.text = compareToken .. ItemThemes.GetPlayerStatFormattedValue(statName, math.abs(statDelta))
                     statElement.clientUserData.previewDelta:SetColor(compareColor)

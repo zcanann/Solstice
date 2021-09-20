@@ -1,5 +1,5 @@
 Assets {
-  Id: 11009443926035600925
+  Id: 5556600189123919886
   Name: "Legendary_Indicator"
   PlatformAssetType: 5
   TemplateAsset {

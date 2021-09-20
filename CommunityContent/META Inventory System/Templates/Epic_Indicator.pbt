@@ -1,5 +1,5 @@
 Assets {
-  Id: 845318166162081072
+  Id: 10519971601520791272
   Name: "Epic_Indicator"
   PlatformAssetType: 5
   TemplateAsset {
@@ -10,20 +10,20 @@ Assets {
         Name: "Epic_Indicator"
         Transform {
           Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
+            X: 0.25
+            Y: 0.25
+            Z: 0.25
           }
         }
         ParentId: 4781671109827199097
         UnregisteredParameters {
           Overrides {
             Name: "bp:Life"
-            Float: 1.21345735
+            Float: 1.2
           }
           Overrides {
             Name: "bp:Upward Velocity"
-            Float: 3.57122231
+            Float: 0.5
           }
           Overrides {
             Name: "bp:Enable Beam"
@@ -48,6 +48,14 @@ Assets {
           Overrides {
             Name: "bp:Emissive Boost"
             Float: 6.36594391
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.97
+              B: 0.82867521
+              A: 1
+            }
           }
         }
         Collidable_v2 {

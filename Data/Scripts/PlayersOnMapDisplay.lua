@@ -80,7 +80,7 @@ function Tick(deltaTime)
             line:GetCustomProperty("OrderText"):WaitForObject().text = tostring(i)
             line:GetCustomProperty("Name"):WaitForObject().text = player.name
             line:GetCustomProperty("Name"):WaitForObject():SetColor(teamColor)
-            line:GetCustomProperty("Icon"):WaitForObject():SetImage(player)
+            line:GetCustomProperty("Icon"):WaitForObject():SetPlayerProfile(player)
             line:GetCustomProperty("ScoreText"):WaitForObject().text = tostring(playerResource)
         end
     else

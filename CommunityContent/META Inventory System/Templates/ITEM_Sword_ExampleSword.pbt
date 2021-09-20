@@ -1,5 +1,5 @@
 Assets {
-  Id: 7417281976004699550
+  Id: 13289165990393421679
   Name: "ITEM_Sword_ExampleSword"
   PlatformAssetType: 5
   TemplateAsset {
@@ -22,104 +22,6 @@ Assets {
         ChildIds: 3297314632271737610
         ChildIds: 17760304585295101073
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Name"
-            String: "Great Sword"
-          }
-          Overrides {
-            Name: "cs:Icon"
-            AssetReference {
-              Id: 5608061511287161293
-            }
-          }
-          Overrides {
-            Name: "cs:LevelRequirement"
-            Int: 10
-          }
-          Overrides {
-            Name: "cs:ItemType"
-            String: "Sword"
-          }
-          Overrides {
-            Name: "cs:Description"
-            String: "AWESOME SWORD!"
-          }
-          Overrides {
-            Name: "cs:Rarity"
-            String: "Epic"
-          }
-          Overrides {
-            Name: "cs:EquipmentStance"
-            String: "1hand_melee_stance"
-          }
-          Overrides {
-            Name: "cs:PickupSound"
-            AssetReference {
-              Id: 3848852969306349525
-            }
-          }
-          Overrides {
-            Name: "cs:SwingSound"
-            AssetReference {
-              Id: 11084584664868848822
-            }
-          }
-          Overrides {
-            Name: "cs:PlayerImpact"
-            AssetReference {
-              Id: 3550294207302777557
-            }
-          }
-          Overrides {
-            Name: "cs:DropRotation"
-            Vector {
-              X: 90
-            }
-          }
-          Overrides {
-            Name: "cs:EquipmentStance:tooltip"
-            String: "The stance animation when a player picks up the equipment."
-          }
-          Overrides {
-            Name: "cs:PlayerImpact:tooltip"
-            String: "Template that is spawned at the location where the hitbox hit the player."
-          }
-          Overrides {
-            Name: "cs:PickupSound:tooltip"
-            String: "Template that is spawned at the equipment owner location when being picked up."
-          }
-          Overrides {
-            Name: "cs:SwingSound:tooltip"
-            String: "Template that is spawned at the equipment owner location when a melee ability is executed."
-          }
-          Overrides {
-            Name: "cs:Name:tooltip"
-            String: "The name of the Item that will be displayed in the inventory, loot view, and referenced in the drops table."
-          }
-          Overrides {
-            Name: "cs:Icon:tooltip"
-            String: "he Icon that will be displayed"
-          }
-          Overrides {
-            Name: "cs:ItemType:tooltip"
-            String: "The type of Item this is. This must point to a type from ItemSystems_Item -> Item.TYPES."
-          }
-          Overrides {
-            Name: "cs:Rarity:tooltip"
-            String: "The theme of this item. This does not affect stats in anyways, but gives it a nice look in the inventory and loot view."
-          }
-          Overrides {
-            Name: "cs:Description:tooltip"
-            String: "The lore for this item when viewed from the Inventory"
-          }
-          Overrides {
-            Name: "cs:DropRotation:tooltip"
-            String: "The drop rotation that is applied to the object when dropped."
-          }
-          Overrides {
-            Name: "cs:LevelRequirement:tooltip"
-            String: "The required level that a player must be at to equip this item or use it."
-          }
         }
         WantsNetworking: true
         Collidable_v2 {
@@ -230,7 +132,7 @@ Assets {
           Overrides {
             Name: "cs:SwingEffect"
             AssetReference {
-              Id: 12673373602908038465
+              Id: 5983843615830211532
             }
           }
           Overrides {
@@ -345,7 +247,7 @@ Assets {
           Overrides {
             Name: "cs:SwingEffect"
             AssetReference {
-              Id: 12673373602908038465
+              Id: 5983843615830211532
             }
           }
           Overrides {
@@ -447,7 +349,6 @@ Assets {
           }
         }
         ParentId: 1550651346007304081
-        ChildIds: 4544348558019458745
         ChildIds: 12525221748800137288
         ChildIds: 2063908126451672360
         ChildIds: 6838057298232044558
@@ -463,44 +364,6 @@ Assets {
         }
         NetworkContext {
           Type: Server
-        }
-      }
-      Objects {
-        Id: 4544348558019458745
-        Name: "EquipmentPickupServer"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3297314632271737610
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Trigger"
-            ObjectReference {
-              SelfId: 6907903927183883021
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Script {
-          ScriptAsset {
-            Id: 6240565157926065754
-          }
         }
       }
       Objects {
@@ -529,7 +392,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 3558205562579207151
+            Id: 9884422306406286660
           }
         }
       }
@@ -552,13 +415,13 @@ Assets {
           Overrides {
             Name: "cs:ModuleManager"
             AssetReference {
-              Id: 14969321872064186441
+              Id: 15169710633840969471
             }
           }
           Overrides {
             Name: "cs:PlayerStats_Combat"
             AssetReference {
-              Id: 8708875040456791556
+              Id: 14165290961310606627
             }
           }
         }
@@ -573,7 +436,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 14899262565712491576
+            Id: 12015058902421350747
           }
         }
       }
@@ -615,7 +478,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 12651196536981043754
+            Id: 9768034574051022954
           }
         }
       }
@@ -941,7 +804,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 2487418935609210519
+            Id: 9432166585405884124
           }
         }
       }
@@ -973,18 +836,9 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 13014781628086243035
+            Id: 16241599643101031883
           }
         }
-      }
-    }
-    Assets {
-      Id: 5608061511287161293
-      Name: "Fantasy Sword 017"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Sword_017"
       }
     }
     Assets {

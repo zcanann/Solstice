@@ -1,5 +1,5 @@
 Assets {
-  Id: 6294239505937929855
+  Id: 11325337220915198834
   Name: "Epic_Indicator"
   PlatformAssetType: 5
   TemplateAsset {

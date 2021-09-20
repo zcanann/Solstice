@@ -1,5 +1,5 @@
 Assets {
-  Id: 11435329251424948365
+  Id: 14287991619096425237
   Name: "ItemSystems"
   PlatformAssetType: 5
   TemplateAsset {
@@ -24,6 +24,7 @@ Assets {
         ChildIds: 16326093544757547641
         ChildIds: 17249251225532039339
         ChildIds: 3150621797502439090
+        ChildIds: 352817020674487828
         ChildIds: 18035126098096782543
         ChildIds: 11310606153970228030
         ChildIds: 9556453454428673529
@@ -70,7 +71,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 5477038065570656988
+            Id: 8977182601765548008
           }
         }
       }
@@ -90,6 +91,7 @@ Assets {
         }
         ParentId: 12698535283932223295
         ChildIds: 11006943044317341319
+        ChildIds: 10892116107523557366
         ChildIds: 17010217697790982627
         ChildIds: 9628804448115820476
         ChildIds: 14972381572201902478
@@ -160,6 +162,7 @@ Assets {
         ParentId: 11006943044317341319
         ChildIds: 17009291759348360500
         ChildIds: 12176792338692175077
+        ChildIds: 5520731334080178305
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -238,7 +241,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Rarity"
-            String: "Common"
+            String: "Uncommon"
           }
           Overrides {
             Name: "cs:Description"
@@ -257,7 +260,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 7417281976004699550
+              Id: 13289165990393421679
             }
           }
           Overrides {
@@ -383,11 +386,11 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Min"
-            Int: 5
+            Int: 38
           }
           Overrides {
             Name: "cs:Max"
-            Int: 10
+            Int: 45
           }
           Overrides {
             Name: "cs:Likelihood"
@@ -618,7 +621,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Rarity"
-            String: "Legendary"
+            String: "Rare"
           }
           Overrides {
             Name: "cs:Description"
@@ -637,7 +640,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 14816776068505603726
+              Id: 18119235430559214117
             }
           }
           Overrides {
@@ -702,6 +705,8 @@ Assets {
         ParentId: 15345552024897236039
         ChildIds: 7141302826536458932
         ChildIds: 10835290204318106005
+        ChildIds: 9268712508524947263
+        ChildIds: 12110937372073154180
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -762,11 +767,11 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Min"
-            Int: 5
+            Int: 10
           }
           Overrides {
             Name: "cs:Max"
-            Int: 10
+            Int: 20
           }
           Overrides {
             Name: "cs:Likelihood"
@@ -845,11 +850,177 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Min"
-            Int: 10
+            Int: 50
           }
           Overrides {
             Name: "cs:Max"
-            Int: 30
+            Int: 60
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9268712508524947263
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1767438570056974444
+        ChildIds: 1219913967249302374
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1219913967249302374
+        Name: "Haste"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9268712508524947263
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12110937372073154180
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1767438570056974444
+        ChildIds: 13213297935221868230
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13213297935221868230
+        Name: "Haste"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12110937372073154180
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 10
           }
           Overrides {
             Name: "cs:Likelihood"
@@ -959,7 +1130,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 17383681664020133254
+              Id: 15483131566641097505
             }
           }
           Overrides {
@@ -1120,6 +1291,3345 @@ Assets {
         }
       }
       Objects {
+        Id: 5520731334080178305
+        Name: "* Dungeon Crawler *"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5877489991705851683
+        ChildIds: 756944085953941422
+        ChildIds: 6517696712140925214
+        ChildIds: 11373873314018378147
+        ChildIds: 11616240561300047038
+        ChildIds: 12709358503116614503
+        ChildIds: 8451538580632364356
+        ChildIds: 2243833151772064514
+        ChildIds: 6540739828737679848
+        ChildIds: 7231766156719254475
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "_ Dungeon Crawler _"
+        }
+      }
+      Objects {
+        Id: 756944085953941422
+        Name: "Basic Dagger"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 9681719030852548914
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Basic Dagger"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 16585617308340486587
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Dagger"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Common"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "Stab Stab Stab"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "1hand_melee_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 17698933465554698420
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9681719030852548914
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 756944085953941422
+        ChildIds: 7993439980729784612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 7993439980729784612
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9681719030852548914
+        ChildIds: 10311349457119687196
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10311349457119687196
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7993439980729784612
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6517696712140925214
+        Name: "Basic Blade"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 11901775964179712911
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Basic Blade"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 8561002758342286384
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Sword"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Common"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "This is quite sharp!"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "1hand_melee_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 11802906690348948093
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11901775964179712911
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6517696712140925214
+        ChildIds: 4454695573483349369
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 4454695573483349369
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11901775964179712911
+        ChildIds: 11471374784807107345
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11471374784807107345
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4454695573483349369
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 8
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 14
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11373873314018378147
+        Name: "Icy Blade"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 4828437600347564971
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Icy Blade"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 16491613473146445688
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Sword"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Common"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "This is really cold"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "1hand_melee_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 8104735113279601422
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4828437600347564971
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11373873314018378147
+        ChildIds: 2823600266903695878
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 2823600266903695878
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4828437600347564971
+        ChildIds: 9031035846715203526
+        ChildIds: 16483161436957228540
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9031035846715203526
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2823600266903695878
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 13
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 18
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16483161436957228540
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2823600266903695878
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 6
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11616240561300047038
+        Name: "Basic Sword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 11066849091412720436
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Basic Sword"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 13865201431802611350
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Sword"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Common"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "Time to chop some heads!"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "1hand_melee_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 6419737150342597238
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11066849091412720436
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11616240561300047038
+        ChildIds: 2130496566036352857
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 2130496566036352857
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11066849091412720436
+        ChildIds: 2223601392631295584
+        ChildIds: 13496475663476615118
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 2223601392631295584
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2130496566036352857
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 17
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 25
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13496475663476615118
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2130496566036352857
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 6
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12709358503116614503
+        Name: "Fiery Sword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 17308084027524660974
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Fiery Sword"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 5982043299559036472
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Sword"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Uncommon"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "Warm to the touch."
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "1hand_melee_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 4516613734911893563
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 17308084027524660974
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12709358503116614503
+        ChildIds: 5374464461163766041
+        ChildIds: 2897119493096187399
+        ChildIds: 14788533025555591065
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 5374464461163766041
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17308084027524660974
+        ChildIds: 14485152122881289965
+        ChildIds: 10327755501193078692
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14485152122881289965
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5374464461163766041
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 28
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10327755501193078692
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5374464461163766041
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 8
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 12
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 2897119493096187399
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17308084027524660974
+        ChildIds: 10597561605817694806
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10597561605817694806
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2897119493096187399
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14788533025555591065
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17308084027524660974
+        ChildIds: 16170926911870569207
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16170926911870569207
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14788533025555591065
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8451538580632364356
+        Name: "Basic Crossbow"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 5429852528799779641
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Basic Crossbow"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 10582278170124815413
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Crossbow"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Rare"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "Shoots very sharpened wooden pencils"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "2hand_rifle_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 4867789235960506495
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5429852528799779641
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8451538580632364356
+        ChildIds: 14884466080925117556
+        ChildIds: 12337832466652414901
+        ChildIds: 7969135662907055090
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 14884466080925117556
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5429852528799779641
+        ChildIds: 12661902198213967304
+        ChildIds: 10877543705242815467
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12661902198213967304
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14884466080925117556
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 35
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 45
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10877543705242815467
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14884466080925117556
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 12
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 18
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12337832466652414901
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5429852528799779641
+        ChildIds: 14820434517777436887
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14820434517777436887
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12337832466652414901
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7969135662907055090
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5429852528799779641
+        ChildIds: 6512799325582622395
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6512799325582622395
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7969135662907055090
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 2243833151772064514
+        Name: "Poison Crossbow"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 9708554866390789355
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Poison Crossbow"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 17064949339264044355
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Crossbow"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Epic"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "This one shoots poison sharpened pencils!"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "2hand_rifle_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 16440703920014104655
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9708554866390789355
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2243833151772064514
+        ChildIds: 15334138472384305930
+        ChildIds: 9570812556735746558
+        ChildIds: 18144569032985664518
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 15334138472384305930
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9708554866390789355
+        ChildIds: 9568535563457080304
+        ChildIds: 13683059052611359831
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9568535563457080304
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15334138472384305930
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 45
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 58
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13683059052611359831
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15334138472384305930
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 12
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 18
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9570812556735746558
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9708554866390789355
+        ChildIds: 17672065953086997540
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 17672065953086997540
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9570812556735746558
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 18144569032985664518
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9708554866390789355
+        ChildIds: 7728686466096817595
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7728686466096817595
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18144569032985664518
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6540739828737679848
+        Name: "Basic Staff"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 9120550755126100280
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Basic Staff"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 3757541434055141525
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Staff"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Epic"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "I thought magic wasn\'t real."
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "2hand_staff_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 13869118596444964242
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9120550755126100280
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6540739828737679848
+        ChildIds: 7403154521167383043
+        ChildIds: 17018904323731836116
+        ChildIds: 11212859960080282699
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 7403154521167383043
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9120550755126100280
+        ChildIds: 14064618987210255975
+        ChildIds: 5231564770407476454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14064618987210255975
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7403154521167383043
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 60
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 70
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5231564770407476454
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7403154521167383043
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 12
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 18
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 17018904323731836116
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9120550755126100280
+        ChildIds: 12477027933185362074
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 12477027933185362074
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17018904323731836116
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11212859960080282699
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9120550755126100280
+        ChildIds: 2091228745303797780
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 2091228745303797780
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11212859960080282699
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7231766156719254475
+        Name: "Poison Staff"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 5520731334080178305
+        ChildIds: 8271824752738843823
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Poison Staff"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 17096298722240170855
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Staff"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Legendary"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "Deadly poison magic? COOL!"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+              X: 90
+            }
+          }
+          Overrides {
+            Name: "cs:EquipmentStance"
+            String: "2hand_staff_stance"
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 4158988040885233417
+            }
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8271824752738843823
+        Name: "Stats"
+        Transform {
+          Location {
+            X: -165.030075
+            Y: 612.705872
+            Z: 2.28881836e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7231766156719254475
+        ChildIds: 7689112705886827477
+        ChildIds: 4569959281928645050
+        ChildIds: 3209952723163401040
+        ChildIds: 9969510817655537415
+        ChildIds: 6224106060855323728
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 7689112705886827477
+        Name: "Base"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8271824752738843823
+        ChildIds: 799607076833613285
+        ChildIds: 11019601597790668947
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 799607076833613285
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7689112705886827477
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 80
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11019601597790668947
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7689112705886827477
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 8
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 20
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4569959281928645050
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8271824752738843823
+        ChildIds: 10436153511992369398
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10436153511992369398
+        Name: "Defense"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4569959281928645050
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 3209952723163401040
+        Name: "Bonus1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8271824752738843823
+        ChildIds: 10373942369203568454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10373942369203568454
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3209952723163401040
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9969510817655537415
+        Name: "Bonus2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8271824752738843823
+        ChildIds: 5709056427303354776
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5709056427303354776
+        Name: "Attack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9969510817655537415
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6224106060855323728
+        Name: "Bonus2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8271824752738843823
+        ChildIds: 14525599580129901270
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14525599580129901270
+        Name: "Magic"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6224106060855323728
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Min"
+            Int: 2
+          }
+          Overrides {
+            Name: "cs:Max"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Int: 100
+          }
+          Overrides {
+            Name: "cs:Min:tooltip"
+            String: "Minimum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Max:tooltip"
+            String: "Maximum possible value we can roll for this stat"
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood that we can roll for this stat."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
         Id: 7514544036695577027
         Name: "-- Resources --"
         Transform {
@@ -1203,7 +4713,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 4735644935235106085
             }
           }
           Overrides {
@@ -1302,7 +4812,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12922769507074059615
+              Id: 5834803663390059673
             }
           }
           Overrides {
@@ -1379,7 +4889,7 @@ Assets {
           }
           Overrides {
             Name: "cs:MaxStackableSize"
-            Int: 50
+            Int: 999
           }
           Overrides {
             Name: "cs:ItemType"
@@ -1401,7 +4911,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 8211591749411237923
+              Id: 5121904537736053091
             }
           }
           Overrides {
@@ -1478,7 +4988,7 @@ Assets {
           }
           Overrides {
             Name: "cs:MaxStackableSize"
-            Int: 10
+            Int: 999
           }
           Overrides {
             Name: "cs:ItemType"
@@ -1500,7 +5010,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 8980676247076439742
+              Id: 4782477701772002043
             }
           }
           Overrides {
@@ -1597,17 +5107,17 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
-            String: "Gold Gem"
+            String: "Gold Coins"
           }
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 7531683756406433318
+              Id: 4552358607982218655
             }
           }
           Overrides {
             Name: "cs:MaxStackableSize"
-            Int: 500
+            Int: 9999
           }
           Overrides {
             Name: "cs:ItemType"
@@ -1615,7 +5125,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Rarity"
-            String: "Legendary"
+            String: "Uncommon"
           }
           Overrides {
             Name: "cs:Description"
@@ -1629,7 +5139,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 2776669223850962017
+              Id: 7344968240146991055
             }
           }
           Overrides {
@@ -1789,7 +5299,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 16651624036651554643
+              Id: 15677101595154085473
             }
           }
           Overrides {
@@ -2164,7 +5674,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 6038154788145225624
+              Id: 2835745648909222432
             }
           }
           Overrides {
@@ -2573,7 +6083,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12141666491653779619
+              Id: 14597401623409258547
             }
           }
           Overrides {
@@ -2811,7 +6321,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12679190637306082563
+              Id: 14199455666938010728
             }
           }
           Overrides {
@@ -3018,7 +6528,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 4209537178659199599
+              Id: 2003918813315947769
             }
           }
           Overrides {
@@ -3512,7 +7022,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 10178928442029619739
+              Id: 18220605926067262439
             }
           }
           Overrides {
@@ -3719,7 +7229,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 13600919694341978416
+              Id: 2916485383244798943
             }
           }
           Overrides {
@@ -4131,7 +7641,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 12612050526141992725
+              Id: 3920732306798391688
             }
           }
           Overrides {
@@ -4230,7 +7740,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 10981802227644102210
+              Id: 5434844053083489330
             }
           }
           Overrides {
@@ -4329,7 +7839,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 8924938014951453043
+              Id: 12230115968598246682
             }
           }
           Overrides {
@@ -4428,7 +7938,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 10373136923607516188
+              Id: 9875142436640456666
             }
           }
           Overrides {
@@ -4527,7 +8037,7 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 2242538174135913112
+              Id: 5821197239103446260
             }
           }
           Overrides {
@@ -4595,6 +8105,7 @@ Assets {
           }
         }
         ParentId: 11006943044317341319
+        ChildIds: 7949646782315999611
         ChildIds: 1151978310001200286
         ChildIds: 18137339600457839238
         ChildIds: 2858027313849160414
@@ -4610,6 +8121,107 @@ Assets {
         Folder {
           IsFilePartition: true
           FilePartitionName: "-- Consumables --"
+        }
+      }
+      Objects {
+        Id: 7949646782315999611
+        Name: "Health Potion"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13551268426752563336
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Name"
+            String: "Health Potion"
+          }
+          Overrides {
+            Name: "cs:Icon"
+            AssetReference {
+              Id: 7234622402371138215
+            }
+          }
+          Overrides {
+            Name: "cs:ItemType"
+            String: "Consumable"
+          }
+          Overrides {
+            Name: "cs:Rarity"
+            String: "Uncommon"
+          }
+          Overrides {
+            Name: "cs:Description"
+            String: "This will restore my health!"
+          }
+          Overrides {
+            Name: "cs:DropRotation"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "cs:Item"
+            AssetReference {
+              Id: 8882450415786791083
+            }
+          }
+          Overrides {
+            Name: "cs:ConsumptionEffect"
+            AssetReference {
+              Id: 6873428135034063720
+            }
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The Item to equip if it\'s a weapon or if not then it\'s the item\'s geometry. This is used for displaying the item on the ground when it spawns as a loot drop and this is also used for the loadout when assigned a weapon from project content. This is also used by the item database as the database can create your item by refering to the MUID of the asset you assigned to this property."
+          }
+          Overrides {
+            Name: "cs:Name:tooltip"
+            String: "Not only is this the name of the item, but it\'s also the name of the item in the item database. When you create items by name you must refer to this property\'s value. [ UNIQUE ]"
+          }
+          Overrides {
+            Name: "cs:Icon:tooltip"
+            String: "The item\'s icon that will be displayed."
+          }
+          Overrides {
+            Name: "cs:ItemType:tooltip"
+            String: "The type of item this is. This must be assigned an existing item type in the ItemTypes folder in the ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Rarity:tooltip"
+            String: "This is the rarity of the item. This is used for color coding the item in the inventory. This must be assigned an existing value from the ItemRarities folder inside ItemRegistry."
+          }
+          Overrides {
+            Name: "cs:Description:tooltip"
+            String: "This is the description of the item that will be displayed when hovering over it in the inventory."
+          }
+          Overrides {
+            Name: "cs:DropRotation:tooltip"
+            String: "This is the rotation that is applied when the item drops on the ground. This is useful for adjusting the way your item looks when it spawns as a loot drop."
+          }
+          Overrides {
+            Name: "cs:ConsumptionEffect:tooltip"
+            String: "This is the script that will excute when the item is consumed inside the inventory. If you want to create your own consumption scripts then make a copy of an existing consumption script and assign it here."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
         }
       }
       Objects {
@@ -4658,13 +8270,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 18159612897294848234
+              Id: 16622566320510268026
             }
           }
           Overrides {
             Name: "cs:ConsumptionEffect"
             AssetReference {
-              Id: 14723675713022995339
+              Id: 6873428135034063720
             }
           }
           Overrides {
@@ -4759,13 +8371,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 1411725899605232238
+              Id: 1272886005934058196
             }
           }
           Overrides {
             Name: "cs:ConsumptionEffect"
             AssetReference {
-              Id: 16965200954680440282
+              Id: 12244628571129667692
             }
           }
           Overrides {
@@ -4864,13 +8476,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 9872713451290030187
+              Id: 12537088901621824539
             }
           }
           Overrides {
             Name: "cs:ConsumptionEffect"
             AssetReference {
-              Id: 15332486750163313458
+              Id: 4461505671547416274
             }
           }
           Overrides {
@@ -4920,6 +8532,151 @@ Assets {
         }
       }
       Objects {
+        Id: 10892116107523557366
+        Name: "StarterItems"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14400948508677778830
+        ChildIds: 9724725709942447754
+        ChildIds: 6606735810749458693
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "StarterItems"
+        }
+      }
+      Objects {
+        Id: 9724725709942447754
+        Name: "GoldGems"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10892116107523557366
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 6697966002060352471
+            }
+          }
+          Overrides {
+            Name: "cs:Quantity"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:Slot"
+            Int: 9
+          }
+          Overrides {
+            Name: "cs:Slot:tooltip"
+            String: "The slot the item should be in. Zero will just add it to the next empty spot. Anything before 8 is for players equipment and anything past 8 is the inventory."
+          }
+          Overrides {
+            Name: "cs:Quantity:tooltip"
+            String: "The amount of the item to add."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item to add."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "GoldGems"
+        }
+      }
+      Objects {
+        Id: 6606735810749458693
+        Name: "StarterSword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10892116107523557366
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 14549268695127572384
+            }
+          }
+          Overrides {
+            Name: "cs:Slot"
+            Int: 1
+          }
+          Overrides {
+            Name: "cs:Slot:tooltip"
+            String: "The slot the item should be in. Zero will just add it to the next empty spot. Anything before 8 is for players equipment and anything past 8 is the inventory."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item to add."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
         Id: 17010217697790982627
         Name: "LootTables"
         Transform {
@@ -4939,6 +8696,9 @@ Assets {
         ChildIds: 15613394957440058112
         ChildIds: 4078650533363349390
         ChildIds: 15690597392787918716
+        ChildIds: 9932271681287814113
+        ChildIds: 13706257508866991581
+        ChildIds: 18440552284748495436
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5009,7 +8769,7 @@ Assets {
           }
           Overrides {
             Name: "cs:MinimumStackWhenDropped"
-            Int: 1
+            Int: 10
           }
           Overrides {
             Name: "cs:MaximumStackWhenDropped"
@@ -5846,6 +9606,7 @@ Assets {
         ChildIds: 9871971738129023805
         ChildIds: 16682611222377127565
         ChildIds: 14124082930156661935
+        ChildIds: 3870185188545772239
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6004,6 +9765,54 @@ Assets {
         }
       }
       Objects {
+        Id: 3870185188545772239
+        Name: "Health Potion"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4078650533363349390
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 7949646782315999611
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
         Id: 15690597392787918716
         Name: "Upgrades"
         Transform {
@@ -6061,7 +9870,7 @@ Assets {
           }
           Overrides {
             Name: "cs:MinimumStackWhenDropped"
-            Int: 1
+            Int: 5
           }
           Overrides {
             Name: "cs:MaximumStackWhenDropped"
@@ -6146,6 +9955,1004 @@ Assets {
         }
       }
       Objects {
+        Id: 9932271681287814113
+        Name: "Common"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17010217697790982627
+        ChildIds: 7076281880815198014
+        ChildIds: 10067850400358842521
+        ChildIds: 4193851880738765778
+        ChildIds: 16534386335311303291
+        ChildIds: 11351026757880382605
+        ChildIds: 16517105661952132273
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7076281880815198014
+        Name: "Coins"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9932271681287814113
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 6697966002060352471
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 300
+          }
+          Overrides {
+            Name: "cs:MinimumStackWhenDropped"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:MaximumStackWhenDropped"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10067850400358842521
+        Name: "Helm 1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9932271681287814113
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 2539643919677575432
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4193851880738765778
+        Name: "Boots 1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9932271681287814113
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 16327739726229731339
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16534386335311303291
+        Name: "Chest 1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9932271681287814113
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 6810094990740557074
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11351026757880382605
+        Name: "Sword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9932271681287814113
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 14549268695127572384
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16517105661952132273
+        Name: "Pouch"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9932271681287814113
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 12293121759951707649
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13706257508866991581
+        Name: "Uncommon"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17010217697790982627
+        ChildIds: 9809096245139605198
+        ChildIds: 8553913728827076409
+        ChildIds: 9709962847909509494
+        ChildIds: 7819542972251169941
+        ChildIds: 2075065838553288233
+        ChildIds: 5335679004975928589
+        ChildIds: 5063908520601917159
+        ChildIds: 9106913419882450762
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9809096245139605198
+        Name: "Coins"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 6697966002060352471
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 300
+          }
+          Overrides {
+            Name: "cs:MinimumStackWhenDropped"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:MaximumStackWhenDropped"
+            Int: 20
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8553913728827076409
+        Name: "Helm 2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 96843809350246262
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9709962847909509494
+        Name: "Boots 2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 1764329785023180446
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7819542972251169941
+        Name: "Chest 2"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 7791692226381381429
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 2075065838553288233
+        Name: "Accessory 1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 1009768513768649602
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5335679004975928589
+        Name: "Loot Crate"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 18137339600457839238
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5063908520601917159
+        Name: "Backpack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 12919888161189925708
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9106913419882450762
+        Name: "Shield"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13706257508866991581
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 1973813869659387247
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 18440552284748495436
+        Name: "Rare"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17010217697790982627
+        ChildIds: 8494257628172423955
+        ChildIds: 13113593473380983440
+        ChildIds: 1723526744789344482
+        ChildIds: 1029371560715185934
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8494257628172423955
+        Name: "Coins"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18440552284748495436
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 6697966002060352471
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 300
+          }
+          Overrides {
+            Name: "cs:MinimumStackWhenDropped"
+            Int: 30
+          }
+          Overrides {
+            Name: "cs:MaximumStackWhenDropped"
+            Int: 50
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13113593473380983440
+        Name: "Great Sword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18440552284748495436
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 15345552024897236039
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1723526744789344482
+        Name: "Backpack"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18440552284748495436
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 12919888161189925708
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1029371560715185934
+        Name: "MagicPearl"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18440552284748495436
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Item"
+            ObjectReference {
+              SubObjectId: 6821065397618123819
+            }
+          }
+          Overrides {
+            Name: "cs:Likelihood"
+            Float: 100
+          }
+          Overrides {
+            Name: "cs:MinimumStackWhenDropped"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:MaximumStackWhenDropped"
+            Int: 15
+          }
+          Overrides {
+            Name: "cs:Likelihood:tooltip"
+            String: "The likelihood this drop weight of the item. The higher this number the better the chance this will drop out of the rest of the items in the loot table."
+          }
+          Overrides {
+            Name: "cs:Item:tooltip"
+            String: "The item that we\'re refering to when we roll this item. You can an existing item from RegisteredItems to this property. This property can also be empty."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
         Id: 9628804448115820476
         Name: "Salvagables"
         Transform {
@@ -6170,6 +10977,15 @@ Assets {
         ChildIds: 11673023646583031731
         ChildIds: 14171834187598609793
         ChildIds: 10532093987737647114
+        ChildIds: 6632173886157683378
+        ChildIds: 13040258283809182657
+        ChildIds: 15975267261811479978
+        ChildIds: 17749220425193094604
+        ChildIds: 6022842055495700463
+        ChildIds: 15836551678903616396
+        ChildIds: 10143143698903202795
+        ChildIds: 13165990524346543690
+        ChildIds: 4031716802040701688
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6204,7 +11020,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 7417281976004699550
+              Id: 13289165990393421679
             }
           }
           Overrides {
@@ -6227,7 +11043,7 @@ Assets {
       }
       Objects {
         Id: 7061034520930396827
-        Name: "Material Metal"
+        Name: "Shard"
         Transform {
           Location {
           }
@@ -6244,16 +11060,12 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 4
-          }
-          Overrides {
-            Name: "cs:ItemProduct:tooltip"
-            String: "The item to give to the player when they salvage."
+            Int: 10
           }
           Overrides {
             Name: "cs:Amount:tooltip"
@@ -6294,7 +11106,7 @@ Assets {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 14816776068505603726
+              Id: 18119235430559214117
             }
           }
           Overrides {
@@ -6317,7 +11129,7 @@ Assets {
       }
       Objects {
         Id: 6821676712538993264
-        Name: "Material Metal"
+        Name: "Material Shard"
         Transform {
           Location {
           }
@@ -6334,12 +11146,12 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 8
+            Int: 40
           }
           Overrides {
             Name: "cs:ItemProduct:tooltip"
@@ -6382,7 +11194,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 2776669223850962017
+              Id: 7344968240146991055
             }
           }
           Overrides {
@@ -6426,18 +11238,67 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
+        ChildIds: 8974147947337462730
         ChildIds: 13088522007564267893
         ChildIds: 10251373599046369036
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 17383681664020133254
+              Id: 15483131566641097505
             }
           }
           Overrides {
             Name: "cs:ItemToSalvage:tooltip"
             String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 8974147947337462730
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8360275996094449156
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 8
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
           }
         }
         Collidable_v2 {
@@ -6472,7 +11333,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 4735644935235106085
             }
           }
           Overrides {
@@ -6520,7 +11381,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 12922769507074059615
+              Id: 5834803663390059673
             }
           }
           Overrides {
@@ -6564,17 +11425,66 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
+        ChildIds: 7930978083727486865
         ChildIds: 17126215756089662958
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 12141666491653779619
+              Id: 14597401623409258547
             }
           }
           Overrides {
             Name: "cs:ItemToSalvage:tooltip"
             String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 7930978083727486865
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1583153153497148279
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 15
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
           }
         }
         Collidable_v2 {
@@ -6609,7 +11519,7 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 2776669223850962017
+              Id: 7344968240146991055
             }
           }
           Overrides {
@@ -6653,12 +11563,12 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
-        ChildIds: 10115796875726996403
+        ChildIds: 8633924665620650742
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 16651624036651554643
+              Id: 15677101595154085473
             }
           }
           Overrides {
@@ -6680,8 +11590,8 @@ Assets {
         }
       }
       Objects {
-        Id: 10115796875726996403
-        Name: "Material Metal"
+        Id: 8633924665620650742
+        Name: "Material Shard"
         Transform {
           Location {
           }
@@ -6698,12 +11608,12 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 2
+            Int: 4
           }
           Overrides {
             Name: "cs:ItemProduct:tooltip"
@@ -6742,12 +11652,12 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
-        ChildIds: 1446697230589372242
+        ChildIds: 11415870736030540555
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 6038154788145225624
+              Id: 2835745648909222432
             }
           }
           Overrides {
@@ -6769,8 +11679,8 @@ Assets {
         }
       }
       Objects {
-        Id: 1446697230589372242
-        Name: "Material Metal"
+        Id: 11415870736030540555
+        Name: "Material Shard"
         Transform {
           Location {
           }
@@ -6787,12 +11697,12 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 5
+            Int: 8
           }
           Overrides {
             Name: "cs:ItemProduct:tooltip"
@@ -6831,12 +11741,12 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
-        ChildIds: 3328208632094641309
+        ChildIds: 9826147267009401345
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 10178928442029619739
+              Id: 18220605926067262439
             }
           }
           Overrides {
@@ -6858,8 +11768,8 @@ Assets {
         }
       }
       Objects {
-        Id: 3328208632094641309
-        Name: "Material Metal"
+        Id: 9826147267009401345
+        Name: "Material Shard"
         Transform {
           Location {
           }
@@ -6876,12 +11786,12 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 5
+            Int: 10
           }
           Overrides {
             Name: "cs:ItemProduct:tooltip"
@@ -6920,12 +11830,12 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
-        ChildIds: 12061495530396855723
+        ChildIds: 7200404093117837788
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 13600919694341978416
+              Id: 2916485383244798943
             }
           }
           Overrides {
@@ -6947,8 +11857,8 @@ Assets {
         }
       }
       Objects {
-        Id: 12061495530396855723
-        Name: "Material Metal"
+        Id: 7200404093117837788
+        Name: "Material Shard"
         Transform {
           Location {
           }
@@ -6965,12 +11875,12 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 10
+            Int: 30
           }
           Overrides {
             Name: "cs:ItemProduct:tooltip"
@@ -7009,12 +11919,12 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
-        ChildIds: 17545796733277907509
+        ChildIds: 13284494274717315519
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 12679190637306082563
+              Id: 14199455666938010728
             }
           }
           Overrides {
@@ -7036,8 +11946,8 @@ Assets {
         }
       }
       Objects {
-        Id: 17545796733277907509
-        Name: "Material Metal"
+        Id: 13284494274717315519
+        Name: "Material Shard"
         Transform {
           Location {
           }
@@ -7054,12 +11964,12 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 3
+            Int: 8
           }
           Overrides {
             Name: "cs:ItemProduct:tooltip"
@@ -7098,12 +12008,12 @@ Assets {
           }
         }
         ParentId: 9628804448115820476
-        ChildIds: 2283862777646691790
+        ChildIds: 10695034361272880751
         UnregisteredParameters {
           Overrides {
             Name: "cs:ItemToSalvage"
             AssetReference {
-              Id: 4209537178659199599
+              Id: 2003918813315947769
             }
           }
           Overrides {
@@ -7125,8 +12035,8 @@ Assets {
         }
       }
       Objects {
-        Id: 2283862777646691790
-        Name: "Material Metal"
+        Id: 10695034361272880751
+        Name: "Material Shard"
         Transform {
           Location {
           }
@@ -7143,12 +12053,813 @@ Assets {
           Overrides {
             Name: "cs:ItemProduct"
             AssetReference {
-              Id: 3446478770195017995
+              Id: 5121904537736053091
             }
           }
           Overrides {
             Name: "cs:Amount"
-            Int: 6
+            Int: 20
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6632173886157683378
+        Name: "IcyBlade"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 17246966121739809246
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 8104735113279601422
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 17246966121739809246
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6632173886157683378
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 3
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13040258283809182657
+        Name: "BasicBlade"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 13446677712307335735
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 6419737150342597238
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13446677712307335735
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13040258283809182657
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 5
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 15975267261811479978
+        Name: "FierySword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 6298638927612787478
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 4516613734911893563
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6298638927612787478
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15975267261811479978
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 7
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 17749220425193094604
+        Name: "ExampleSword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 4280316440043583199
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 13289165990393421679
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4280316440043583199
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17749220425193094604
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 10
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 6022842055495700463
+        Name: "ExampleSuperSword"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 9788164437884889552
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 18119235430559214117
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9788164437884889552
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6022842055495700463
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 12
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 15836551678903616396
+        Name: "BasicCrossbow"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 9554955341029299150
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 4867789235960506495
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9554955341029299150
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15836551678903616396
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 16
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 10143143698903202795
+        Name: "PoisonCrossbow"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 1742612000524084598
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 16440703920014104655
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1742612000524084598
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10143143698903202795
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 19
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 13165990524346543690
+        Name: "BasicStaff"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 967209724462619983
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 13869118596444964242
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 967209724462619983
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13165990524346543690
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 22
+          }
+          Overrides {
+            Name: "cs:ItemProduct:tooltip"
+            String: "The item to give to the player when they salvage."
+          }
+          Overrides {
+            Name: "cs:Amount:tooltip"
+            String: "The amount of this item they will receive when salvaging"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4031716802040701688
+        Name: "PoisonStaff"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9628804448115820476
+        ChildIds: 4448433449686699610
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemToSalvage"
+            AssetReference {
+              Id: 4158988040885233417
+            }
+          }
+          Overrides {
+            Name: "cs:ItemToSalvage:tooltip"
+            String: "The item that will be salvaged."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4448433449686699610
+        Name: "Material Shard"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4031716802040701688
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ItemProduct"
+            AssetReference {
+              Id: 5121904537736053091
+            }
+          }
+          Overrides {
+            Name: "cs:Amount"
+            Int: 30
           }
           Overrides {
             Name: "cs:ItemProduct:tooltip"
@@ -7192,6 +12903,8 @@ Assets {
         ChildIds: 8254355772070952048
         ChildIds: 11372330911191655899
         ChildIds: 15356056092254108224
+        ChildIds: 9082891198751827901
+        ChildIds: 16733529345484078554
         ChildIds: 4037806364177430510
         ChildIds: 1605582774928731862
         ChildIds: 12169378355719011837
@@ -7235,7 +12948,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 8750957584065286429
+              Id: 17210541087676612981
             }
           }
           Overrides {
@@ -7291,7 +13004,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 8750957584065286429
+              Id: 17210541087676612981
             }
           }
           Overrides {
@@ -7347,7 +13060,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 8750957584065286429
+              Id: 17210541087676612981
             }
           }
           Overrides {
@@ -7403,7 +13116,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 18361520714284585468
+              Id: 13824812548680745351
             }
           }
           Overrides {
@@ -7459,7 +13172,119 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 1204878944526301617
+              Id: 1878928400577957435
+            }
+          }
+          Overrides {
+            Name: "cs:EnhancementItem"
+            ObjectReference {
+              SubObjectId: 15522926469464567987
+            }
+          }
+          Overrides {
+            Name: "cs:LimitBreakingItem"
+            ObjectReference {
+              SubObjectId: 6821065397618123819
+            }
+          }
+          Overrides {
+            Name: "cs:EquipSlotType:tooltip"
+            String: "The slot that this item type can go into. This must match an existing slot in the UI. Right now the determined slots are inside of ItemSystems_InventoryReplicator this will change in a future update."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9082891198751827901
+        Name: "Crossbow"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14972381572201902478
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:EquipSlotType"
+            String: "MainHand"
+          }
+          Overrides {
+            Name: "cs:EquipSFX"
+            AssetReference {
+              Id: 1878928400577957435
+            }
+          }
+          Overrides {
+            Name: "cs:EnhancementItem"
+            ObjectReference {
+              SubObjectId: 15522926469464567987
+            }
+          }
+          Overrides {
+            Name: "cs:LimitBreakingItem"
+            ObjectReference {
+              SubObjectId: 6821065397618123819
+            }
+          }
+          Overrides {
+            Name: "cs:EquipSlotType:tooltip"
+            String: "The slot that this item type can go into. This must match an existing slot in the UI. Right now the determined slots are inside of ItemSystems_InventoryReplicator this will change in a future update."
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 16733529345484078554
+        Name: "Staff"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14972381572201902478
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:EquipSlotType"
+            String: "MainHand"
+          }
+          Overrides {
+            Name: "cs:EquipSFX"
+            AssetReference {
+              Id: 1878928400577957435
             }
           }
           Overrides {
@@ -7515,7 +13340,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 4642163321862890979
+              Id: 17317414036324407467
             }
           }
           Overrides {
@@ -7571,7 +13396,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 1204878944526301617
+              Id: 1878928400577957435
             }
           }
           Overrides {
@@ -7627,7 +13452,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 8750957584065286429
+              Id: 17210541087676612981
             }
           }
           Overrides {
@@ -7687,7 +13512,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 8665540083350823884
+              Id: 18015077707943688868
             }
           }
           Overrides {
@@ -7731,7 +13556,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 2800187104251203993
+              Id: 6719071085290106247
             }
           }
           Overrides {
@@ -7775,7 +13600,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 8665540083350823884
+              Id: 18015077707943688868
             }
           }
           Overrides {
@@ -7819,7 +13644,7 @@ Assets {
           Overrides {
             Name: "cs:EquipSFX"
             AssetReference {
-              Id: 5783622042138769687
+              Id: 10877624679454732565
             }
           }
           Overrides {
@@ -7901,7 +13726,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 9853019587517715785
+              Id: 12226908714340440702
             }
           }
           Overrides {
@@ -7953,7 +13778,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 7828466826247136470
+              Id: 9512216274958456040
             }
           }
           Overrides {
@@ -8005,7 +13830,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 16599428729469767303
+              Id: 2478880807354877486
             }
           }
           Overrides {
@@ -8057,7 +13882,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 845318166162081072
+              Id: 2366218283497866004
             }
           }
           Overrides {
@@ -8109,7 +13934,7 @@ Assets {
           Overrides {
             Name: "cs:LootRarityIndicator"
             AssetReference {
-              Id: 16319551883118936128
+              Id: 8804956506649404191
             }
           }
           Overrides {
@@ -8282,7 +14107,7 @@ Assets {
           Overrides {
             Name: "cs:ComponentTemplate"
             AssetReference {
-              Id: 3272934743298698443
+              Id: 17264864285479690535
             }
           }
         }
@@ -8297,7 +14122,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 8675145634350269521
+            Id: 3329858920115418854
           }
         }
       }
@@ -8348,13 +14173,13 @@ Assets {
           Overrides {
             Name: "cs:VFX_LocalPlayer"
             AssetReference {
-              Id: 936456508854840947
+              Id: 6611446516701847470
             }
           }
           Overrides {
             Name: "cs:VFX_OtherPlayer"
             AssetReference {
-              Id: 10668442333142764434
+              Id: 17416127309690925364
             }
           }
         }
@@ -8369,7 +14194,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15280788142873416016
+            Id: 17091959816921443624
           }
         }
       }
@@ -8399,7 +14224,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 8708875040456791556
+            Id: 14165290961310606627
           }
         }
       }
@@ -8460,7 +14285,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15553841169725722120
+            Id: 12511604479331431547
           }
         }
       }
@@ -8500,7 +14325,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 654373747159756687
+            Id: 662330312848356585
           }
         }
       }
@@ -8584,7 +14409,7 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
         }
@@ -8599,7 +14424,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15553841169725722120
+            Id: 12511604479331431547
           }
         }
       }
@@ -8641,7 +14466,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 6909538970960847181
+            Id: 2944825057979612206
           }
         }
       }
@@ -8668,7 +14493,7 @@ Assets {
           Overrides {
             Name: "cs:ReliableEvents"
             AssetReference {
-              Id: 3134039137318897930
+              Id: 16757881821046423614
             }
           }
           Overrides {
@@ -8699,7 +14524,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 12662290023490008145
+            Id: 5859407926471892705
           }
         }
       }
@@ -8870,13 +14695,13 @@ Assets {
           Overrides {
             Name: "cs:SFX_InventoryOpen"
             AssetReference {
-              Id: 1888034329729297242
+              Id: 597172562527800444
             }
           }
           Overrides {
             Name: "cs:SFX_InventoryClose"
             AssetReference {
-              Id: 2485025491013088690
+              Id: 4491206488401559504
             }
           }
         }
@@ -8891,7 +14716,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 6235997771963437370
+            Id: 15008520020416812219
           }
         }
       }
@@ -8914,13 +14739,13 @@ Assets {
           Overrides {
             Name: "cs:RollEntryUITemplate"
             AssetReference {
-              Id: 16422905905636061945
+              Id: 12666721572410366001
             }
           }
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
           Overrides {
@@ -8947,7 +14772,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 14230763798281945537
+            Id: 17448005985964530042
           }
         }
       }
@@ -8976,13 +14801,13 @@ Assets {
           Overrides {
             Name: "cs:RolledUITemplate"
             AssetReference {
-              Id: 12145331618155011371
+              Id: 14392515141739200704
             }
           }
           Overrides {
             Name: "cs:ItemDatabase"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
         }
@@ -8997,7 +14822,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 10775903433710721506
+            Id: 15931357396713936127
           }
         }
       }
@@ -9175,31 +15000,31 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
           Overrides {
             Name: "cs:ItemSystems_Inventory"
             AssetReference {
-              Id: 10836322075651648043
+              Id: 710440149114067611
             }
           }
           Overrides {
             Name: "cs:StashReplicator"
             AssetReference {
-              Id: 11607967220077598823
+              Id: 10970152297188873579
             }
           }
           Overrides {
             Name: "cs:ReliableEvents"
             AssetReference {
-              Id: 3134039137318897930
+              Id: 16757881821046423614
             }
           }
           Overrides {
             Name: "cs:ItemSystems_ItemThemes"
             AssetReference {
-              Id: 9147260011795785376
+              Id: 6327984228048049821
             }
           }
           Overrides {
@@ -9250,7 +15075,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 5386350024722718841
+            Id: 6786782939373611438
           }
         }
       }
@@ -21020,7 +26845,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 11257792591687430538
+              Id: 1160277192019619124
             }
           }
           Overrides {
@@ -22940,7 +28765,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 680493813074885420
+            Id: 6331779746433103149
           }
         }
       }
@@ -23188,19 +29013,19 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_ItemThemes"
             AssetReference {
-              Id: 9147260011795785376
+              Id: 6327984228048049821
             }
           }
           Overrides {
             Name: "cs:LootEntryTemplate"
             AssetReference {
-              Id: 4082055182347833174
+              Id: 17169533271916684895
             }
           }
           Overrides {
             Name: "cs:SFX_Claim"
             AssetReference {
-              Id: 13416650327196091557
+              Id: 7759289261269489381
             }
           }
         }
@@ -23215,7 +29040,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 188896489620404015
+            Id: 9931535832181249513
           }
         }
       }
@@ -23856,7 +29681,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 680493813074885420
+            Id: 6331779746433103149
           }
         }
       }
@@ -24074,19 +29899,19 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 6250667256569127442
+              Id: 8329504973258545688
             }
           }
           Overrides {
             Name: "cs:ItemThemes"
             AssetReference {
-              Id: 9147260011795785376
+              Id: 6327984228048049821
             }
           }
           Overrides {
             Name: "cs:UpgradesCostBasis"
             AssetReference {
-              Id: 4749021774023452241
+              Id: 1535367125056813283
             }
           }
           Overrides {
@@ -24140,31 +29965,31 @@ Assets {
           Overrides {
             Name: "cs:SFX_ItemSelected"
             AssetReference {
-              Id: 13918153045280268046
+              Id: 14298326600019105926
             }
           }
           Overrides {
             Name: "cs:SFX_UpgradeEnhanced"
             AssetReference {
-              Id: 7314500365855858059
+              Id: 16823039655291034759
             }
           }
           Overrides {
             Name: "cs:SFX_UpgradeLimitBroken"
             AssetReference {
-              Id: 9661952632303283768
+              Id: 4785735793071587153
             }
           }
           Overrides {
             Name: "cs:SFX_ButtonHover"
             AssetReference {
-              Id: 6428290758434047258
+              Id: 11802524718758594181
             }
           }
           Overrides {
             Name: "cs:SFX_ButtonClick"
             AssetReference {
-              Id: 15840912764131178564
+              Id: 6722305990691296915
             }
           }
         }
@@ -24179,7 +30004,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15093326188380751076
+            Id: 9505520257297720065
           }
         }
       }
@@ -24598,7 +30423,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 680493813074885420
+            Id: 6331779746433103149
           }
         }
       }
@@ -24940,7 +30765,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 11257792591687430538
+              Id: 1160277192019619124
             }
           }
           Overrides {
@@ -24967,7 +30792,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 10490864230721279421
+            Id: 3114408959649716442
           }
         }
       }
@@ -28787,7 +34612,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 11257792591687430538
+              Id: 1160277192019619124
             }
           }
           Overrides {
@@ -28814,7 +34639,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 10490864230721279421
+            Id: 3114408959649716442
           }
         }
       }
@@ -35573,13 +41398,13 @@ Assets {
           Overrides {
             Name: "cs:ItemSystems_ItemThemes"
             AssetReference {
-              Id: 9147260011795785376
+              Id: 6327984228048049821
             }
           }
           Overrides {
             Name: "cs:ItemSystems_Database"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
           Overrides {
@@ -35677,13 +41502,13 @@ Assets {
           Overrides {
             Name: "cs:TemplateSlotEquipped"
             AssetReference {
-              Id: 9445247780706608435
+              Id: 2037768941514324330
             }
           }
           Overrides {
             Name: "cs:TemplateSlotBackpack"
             AssetReference {
-              Id: 16699645107277931885
+              Id: 2156862806618638265
             }
           }
           Overrides {
@@ -35695,25 +41520,25 @@ Assets {
           Overrides {
             Name: "cs:SFX_Move"
             AssetReference {
-              Id: 13771435457249305751
+              Id: 4864347856526661920
             }
           }
           Overrides {
             Name: "cs:SFX_Discard"
             AssetReference {
-              Id: 5780560929413817642
+              Id: 12525248232178943349
             }
           }
           Overrides {
             Name: "cs:SFX_Denied"
             AssetReference {
-              Id: 2208427336650910650
+              Id: 1644159135680114967
             }
           }
           Overrides {
             Name: "cs:SFX_Salvage"
             AssetReference {
-              Id: 11069370553654276765
+              Id: 9068835453965227332
             }
           }
         }
@@ -35728,7 +41553,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 482816599143851066
+            Id: 9128725784969047707
           }
         }
       }
@@ -41685,7 +47510,7 @@ Assets {
           Overrides {
             Name: "cs:NotAllowed"
             ObjectReference {
-              SubObjectId: 4034284729057892500
+              SubObjectId: 1925608445721937782
             }
           }
           Overrides {
@@ -42015,12 +47840,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -42672,12 +48497,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -43329,12 +49154,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -43986,12 +49811,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -44643,12 +50468,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -45300,12 +51125,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -45957,12 +51782,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -46614,12 +52439,12 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 17712336256563670159
+              Id: 14919473863846089207
             }
             Color {
-              R: 1
-              G: 1
-              B: 1
+              R: 0.0990000069
+              G: 0.0990000069
+              B: 0.0990000069
               A: 1
             }
             TeamSettings {
@@ -63546,7 +69371,7 @@ Assets {
           Overrides {
             Name: "cs:ResourceEntry"
             AssetReference {
-              Id: 6288305055744230652
+              Id: 17057471197736308431
             }
           }
           Overrides {
@@ -64597,7 +70422,7 @@ Assets {
           Overrides {
             Name: "cs:TemplateItemHoverStat"
             AssetReference {
-              Id: 11257792591687430538
+              Id: 1160277192019619124
             }
           }
           Overrides {
@@ -66003,7 +71828,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 680493813074885420
+            Id: 6331779746433103149
           }
         }
       }
@@ -66956,6 +72781,7 @@ Assets {
         }
         ParentId: 7104868612573900891
         ChildIds: 8631909449341609763
+        ChildIds: 4008972281890002697
         ChildIds: 10601348234644373173
         ChildIds: 5890612034712396109
         ChildIds: 9573225919480071054
@@ -67027,7 +72853,38 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 5254416447173308041
+            Id: 1790221861816176048
+          }
+        }
+      }
+      Objects {
+        Id: 4008972281890002697
+        Name: "ItemSystems_StatsFeedback"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -6.83018879e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2833305342626302495
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5300856839946514756
           }
         }
       }
@@ -69930,7 +75787,7 @@ Assets {
           Overrides {
             Name: "cs:ComponentTemplate"
             AssetReference {
-              Id: 9073641025442457040
+              Id: 17488189108563934732
             }
           }
         }
@@ -69945,7 +75802,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 8675145634350269521
+            Id: 3329858920115418854
           }
         }
       }
@@ -69983,7 +75840,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 4309956100953676764
+            Id: 8533613764634598018
           }
         }
       }
@@ -70006,7 +75863,7 @@ Assets {
           Overrides {
             Name: "cs:ModuleManager"
             AssetReference {
-              Id: 14969321872064186441
+              Id: 15169710633840969471
             }
           }
         }
@@ -70021,7 +75878,37 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 3279912131816597961
+            Id: 13443905618605117733
+          }
+        }
+      }
+      Objects {
+        Id: 352817020674487828
+        Name: "ItemSystems_NPCEvents"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12698535283932223295
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Script {
+          ScriptAsset {
+            Id: 16963328499830509120
           }
         }
       }
@@ -70044,19 +75931,19 @@ Assets {
           Overrides {
             Name: "cs:RollEntryTemplate"
             AssetReference {
-              Id: 15632582830891046697
+              Id: 2478107124088838850
             }
           }
           Overrides {
             Name: "cs:RollerTemplate"
             AssetReference {
-              Id: 10085884940667418859
+              Id: 14624626639312425434
             }
           }
           Overrides {
             Name: "cs:ReliableEvents"
             AssetReference {
-              Id: 3134039137318897930
+              Id: 16757881821046423614
             }
           }
           Overrides {
@@ -70075,7 +75962,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 3529115502804528076
+            Id: 15618073250065161120
           }
         }
       }
@@ -70098,13 +75985,13 @@ Assets {
           Overrides {
             Name: "cs:Item"
             AssetReference {
-              Id: 6250667256569127442
+              Id: 8329504973258545688
             }
           }
           Overrides {
             Name: "cs:Database"
             AssetReference {
-              Id: 15198739990512235690
+              Id: 3542065191199654948
             }
           }
         }
@@ -70119,7 +76006,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 9622591467259105733
+            Id: 2110477342132454962
           }
         }
       }
@@ -70142,7 +76029,7 @@ Assets {
           Overrides {
             Name: "cs:StashToDrop"
             AssetReference {
-              Id: 11927947888241996914
+              Id: 2301674641881478514
             }
           }
           Overrides {
@@ -70165,7 +76052,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 4345867107613008664
+            Id: 4042267513444576460
           }
         }
       }
@@ -70188,13 +76075,13 @@ Assets {
           Overrides {
             Name: "cs:ModuleManager"
             AssetReference {
-              Id: 14287702263569026226
+              Id: 15060119639399154339
             }
           }
           Overrides {
             Name: "cs:PlayerStats_Combat"
             AssetReference {
-              Id: 8708875040456791556
+              Id: 14165290961310606627
             }
           }
         }
@@ -70209,7 +76096,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 13658889107719627694
+            Id: 2183850416537087432
           }
         }
       }
@@ -70239,6 +76126,87 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Weapon_Shield_005"
+      }
+    }
+    Assets {
+      Id: 16585617308340486587
+      Name: "Fantasy Dagger 007"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Dagger_007"
+      }
+    }
+    Assets {
+      Id: 8561002758342286384
+      Name: "Fantasy Sword 021"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Sword_021"
+      }
+    }
+    Assets {
+      Id: 16491613473146445688
+      Name: "Fantasy Sword 016"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Sword_016"
+      }
+    }
+    Assets {
+      Id: 13865201431802611350
+      Name: "Fantasy Sword 025"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Sword_025"
+      }
+    }
+    Assets {
+      Id: 5982043299559036472
+      Name: "Fantasy Sword 017"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Sword_017"
+      }
+    }
+    Assets {
+      Id: 10582278170124815413
+      Name: "Fantasy Crossbow 006"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Crossbow_006"
+      }
+    }
+    Assets {
+      Id: 17064949339264044355
+      Name: "Fantasy Crossbow 003"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Crossbow_003"
+      }
+    }
+    Assets {
+      Id: 3757541434055141525
+      Name: "Fantasy Staff 013"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Staff_013"
+      }
+    }
+    Assets {
+      Id: 17096298722240170855
+      Name: "Fantasy Staff 012"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Weapon_Staff_012"
       }
     }
     Assets {
@@ -70278,12 +76246,12 @@ Assets {
       }
     }
     Assets {
-      Id: 7531683756406433318
-      Name: "Fantasy Craft Gem 019"
+      Id: 4552358607982218655
+      Name: "Fantasy Coins 007"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Crafting_Gem_019"
+        AssetId: "UI_Fantasy_Equip_Coins_007"
       }
     }
     Assets {
@@ -70392,6 +76360,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "UI_Fantasy_Equip_Chest_004"
+      }
+    }
+    Assets {
+      Id: 7234622402371138215
+      Name: "Fantasy Spell Potion 002"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Potion_002"
       }
     }
     Assets {
@@ -70755,6 +76732,15 @@ Assets {
       }
     }
     Assets {
+      Id: 14919473863846089207
+      Name: "Sci-fi Frame 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Scifi_Frame_001"
+      }
+    }
+    Assets {
       Id: 2461529389641718171
       Name: "Center Circle 001 Outline"
       PlatformAssetType: 9
@@ -70823,7 +76809,7 @@ Assets {
     }
   }
   Marketplace {
-    Description: "ItemSystems is a framework for inventory and item management such that you\'d find in MMO games.\r\nIt contains a plethora of awesome features to help jump start your RPG-style game. \r\nIt also removes the hassle of creating an inventory system from scratch.\r\n\r\nMake sure to read the ItemSystems_README file for setup and configuration instructions. You can find the README inside of the ItemSystems template.\r\n\r\nMessage @Coderz or @Buckmonster  in Discord with feedback or feature requests - https://discord.com/invite/core-creators\r\n\r\nThanks to:\r\n* @structfoo - Creating the original inventory system.\r\n* @Coderz - Adaptation and Modification\r\n* @blaking707 -  Testing and Bug fixing.\r\n* @Morticai - Testing and Bug fixing.\r\n* @Waffle - Stash search progress circle. \r\n* @KonzZwodrei  - UI Indicators\r\n* @standardcombo - Review and Loot Factory adapter.\r\n* @Buckmonster - Lead of Team META, review and input.\r\n* @Mucusinator - Armor Sets.\r\n\342\200\242 @Aggripina - UI thumbnail design.\r\n* @Mirc - Testing and Reporting of bugs.\r\n* @RandomPhantom - Backpack bug fix.\r\n\r\nChangelog.\r\nv1.1.1\r\n* Fixed equipment bug\r\n* Fixed blank string passed into database which caused warnings.\r\n\r\nv1.1.0\r\n* Updated README with example code at the bottom.\r\n* Fixed a bug with item equipping.\r\n* Added additional credits.\r\n\r\nv1.0.8\r\n* Updated stash interactor so it supports camera zoom.\r\n\r\nv1.0.7\r\n* Larger stacks are now allowed. Refer to framework components details section of the README for more info.\r\n\r\nv1.0.6\r\n* Added item upgrading mechanic.\r\n\r\nv1.0.2\r\n* Fixed bug where having a shield and two handed weapon equipped at the same time completely nulls stats.\r\n\r\nv1.0.1\r\n* Added stats example for players dealing and receiving from NPCs. Refer to ItemSystems_NPCCombat."
+    Description: "ItemSystems is a framework for inventory and item management such that you\'d find in MMO games.\r\nIt contains a plethora of awesome features to help jump start your RPG-style game. \r\nIt also removes the hassle of creating an inventory system from scratch.\r\n\r\nMake sure to read the ItemSystems_README file for setup and configuration instructions. You can find the README inside of the ItemSystems template.\r\n\r\nMessage @Coderz or @Buckmonster  in Discord with feedback or feature requests - https://discord.com/invite/core-creators\r\n\r\nThanks to:\r\n* @structfoo - Creating the original inventory system.\r\n* @Coderz - Adaptation and Modification\r\n* @blaking707 -  Testing and Bug fixing.\r\n* @Morticai - Testing and Bug fixing.\r\n* @Waffle - Stash search progress circle. \r\n* @KonzZwodrei  - UI Indicators\r\n* @standardcombo - Review and Loot Factory adapter.\r\n* @Buckmonster - Lead of Team META, review and input.\r\n* @Mucusinator - Armor Sets.\r\n\342\200\242 @Aggripina - UI thumbnail design.\r\n* @Mirc - Testing and Reporting of bugs.\r\n* @RandomPhantom - Backpack bug fix.\r\n\r\nChangelog.\r\n\r\nv1.28.0\r\n* Multi-Looting support added to stashes\r\n* Personal looting added to stashes\r\n* Updated Itemsystems and searchable loot example with latest multi-looting and personal looting features.\r\n* Revised README\r\n\r\nv.1.29.0\r\n* Fixed issue with invalid UI asset being used. \r\n\r\nv.1.27.0\r\n* Updated readme as discord handle has changed.\r\n\r\nv.1.26.0\r\n* Fixed edge case with stat calculation.\r\n* Updated README of \"Accessing Player Stats\" section to be more readable.\r\n\r\nv.1.25.0\r\n* Fixed a bug with client side stat calculations\r\n\r\nv1.24.0\r\n* Added equipment support for items. Refer to the readme for more details.\r\n\r\nv1.23.0\r\n* Fixed a bug in public RemovItem() method inside the inventory.\r\n\r\nv1.22.0\r\n* Fixed a bug with shared storage compatiability.\r\n* Updated shared storage section of readme.\r\n\r\nv1.19.0\r\n* Refactored geometry equipper to allow equipment to use multiple sockets\r\n* Updated README with geometry equipper info.\r\n\r\nV1.1.3\r\n* Added cross game storage\r\n* Fixed bug where stats were doubled\r\n\r\nV1.1.2\r\n* Updated loot factory adapter for latest of A.I Kit from standardcombo.\r\n* Updated weapons to adapt to A.I kit update.\r\n* Gain XP from killing enemies now.\r\n\r\nv1.1.1\r\n* Fixed equipment bug\r\n* Fixed blank string passed into database which caused warnings.\r\n\r\nv1.1.0\r\n* Updated README with example code at the bottom.\r\n* Fixed a bug with item equipping.\r\n* Added additional credits.\r\n\r\nv1.0.8\r\n* Updated stash interactor so it supports camera zoom.\r\n\r\nv1.0.7\r\n* Larger stacks are now allowed. Refer to framework components details section of the README for more info.\r\n\r\nv1.0.6\r\n* Added item upgrading mechanic.\r\n\r\nv1.0.2\r\n* Fixed bug where having a shield and two handed weapon equipped at the same time completely nulls stats.\r\n\r\nv1.0.1\r\n* Added stats example for players dealing and receiving from NPCs. Refer to ItemSystems_NPCCombat."
   }
   SerializationVersion: 98
   DirectlyPublished: true
