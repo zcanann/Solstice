@@ -16,4 +16,10 @@ function ShowOptions()
     end
 
     print("Displaying " .. tostring(#interactionScripts) .. " interaction options")
+
+    Events.Broadcast("event_clear_interact_options")
+
+    for index = #interactionScripts, 1, -1 do
+        interactionScripts[index].context:ShowOption()
+    end
 end

@@ -1,18 +1,31 @@
 local localPlayer = Game.GetLocalPlayer()
-local bindingKey = "ability_secondary"
 
 -- Navigation
 local remainingWayPoints = nil
 local wayPointClearDistance = 16
+local goalRachedCallback = nil
 
 -- Visuals
 local goalPulse = nil
 local CLICK_VFX = script:GetCustomProperty("AnimPulse")
 
+function ClearWayPoints()
+	remainingWayPoints = nil
+	goalRachedCallback = nil
+end
+
 function DestroyIfValid(object)
 	if Object.IsValid(object) then
 		object:Destroy()
 	end
+end
+
+function OnReachedDestination()
+	if goalRachedCallback ~= nil then
+		goalRachedCallback()
+	end
+	ClearWayPoints()
+	DestroyIfValid(goalPulse)
 end
 
 function MoveToGoal(player, params)
@@ -37,34 +50,30 @@ function MoveToGoal(player, params)
 	end
 
 	if #remainingWayPoints <= 0 then
-		DestroyIfValid(goalPulse)
+		OnReachedDestination()
 	end
 end
 
-function OnBindingPressed(player, binding)
-	if binding ~= bindingKey then
-		return
+function OnMoveToLocation(goal, callback)
+	Events.Broadcast("event_clear_interact_options")
+	goalRachedCallback = callback
+	DestroyIfValid(goalPulse)
+	-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
+	-- local pulsePos = goal + Vector3.UP * 300
+	goalPulse = World.SpawnAsset(CLICK_VFX, {position = goal})
+
+	local playerPos = localPlayer:GetWorldPosition()
+	local wayPoints = _G.NavMesh.FindPath(playerPos, goal)
+	
+	-- Remove the starting waypoint, as the player is already there
+	if wayPoints ~= nil and #wayPoints >= 1 then
+		table.remove(wayPoints, 1)
 	end
 
-	local hitResult = UI.GetCursorHitResult()
+	remainingWayPoints = wayPoints
 
-	if hitResult then
-		DestroyIfValid(goalPulse)
-		local goalTransform = hitResult:GetTransform()
-		local goal = goalTransform:GetPosition()
-		-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
-		-- local pulsePos = goal + Vector3.UP * 300
-		goalPulse = World.SpawnAsset(CLICK_VFX, {position = goal})
-
-		local playerPos = player:GetWorldPosition()
-		local wayPoints = _G.NavMesh.FindPath(playerPos, goal)
-		
-		-- Remove the starting waypoint, as the player is already there
-		if wayPoints ~= nil and #wayPoints >= 1 then
-			table.remove(wayPoints, 1)
-		end
-
-		remainingWayPoints = wayPoints
+	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
+		OnReachedDestination()
 	end
 end
 
@@ -79,14 +88,10 @@ function Tick(dt)
 	end
 end
 
-function OnPlayerTeleported()
-	remainingWayPoints = nil
-end
-
 local movementHook = localPlayer.movementHook:Connect(MoveToGoal)
 movementHook.priority = 99
 
-Events.Connect("on_player_teleported", OnPlayerTeleported)
-localPlayer.bindingPressedEvent:Connect(OnBindingPressed)
+Events.Connect("event_player_teleported", ClearWayPoints)
+Events.Connect("event_move_to_location", OnMoveToLocation)
 
 InitMouseCursor()

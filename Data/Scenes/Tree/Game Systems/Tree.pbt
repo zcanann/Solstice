@@ -82,7 +82,7 @@ Objects {
 }
 Objects {
   Id: 767909694017194225
-  Name: "C_ClickToMove"
+  Name: "C_PlayerMovement"
   Transform {
     Location {
     }

@@ -13,24 +13,37 @@ function SetVisible(isVisible)
     end
 end
 
-function AddEntry(entryName)
+function AddEntry(entryName, callback)
+    if #entries <= 0 then
+        SetVisible(true)
+        propInteractMenu.x = UI.GetCursorPosition().x
+        propInteractMenu.y = UI.GetCursorPosition().y
+    end
+
     local entry = World.SpawnAsset(propInteractEntry, {parent = propEntryHost})
 
     entry.text = entryName
     entry.y = #entries * entry.height
 
+    if callback ~= nil then
+        entry.clickedEvent:Connect(function (entry)
+            callback()
+        end) 
+    end
+
     table.insert(entries, entry)
 end
 
-function RemoveAllChildren()
+function ClearMenu()
     for _, child in pairs(propEntryHost:GetChildren()) do
         child:Destroy()
     end
 
+    SetVisible(false)
     entries = { }
 end
 
-RemoveAllChildren()
-AddEntry("Search Wardrobe")
-AddEntry("Wear Support cape")
--- SetVisible(false)
+ClearMenu()
+
+Events.Connect("event_clear_interact_options", ClearMenu)
+Events.Connect("event_show_interact_option", AddEntry)

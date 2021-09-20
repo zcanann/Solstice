@@ -33,7 +33,7 @@ function OnPlayerTeleport(player, id, startPosition, endPosition)
 	end
 
 	if player == localPlayer then
-		Events.Broadcast("on_player_teleported")
+		Events.Broadcast("event_player_teleported")
 	end
 end
 

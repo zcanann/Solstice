@@ -10838,7 +10838,6 @@ Objects {
   Transform {
     Location {
       X: -3199.99902
-      Y: 0.00114440906
     }
     Rotation {
       Yaw: 179.999954

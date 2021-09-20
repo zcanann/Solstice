@@ -13,12 +13,28 @@ function OnBindingPressed(player, binding)
                 if interactScript ~= nil then
                     if primary then
                         interactScript.context:Interact()
+                        return
                     else
                         interactScript.context:ShowOptions()
+                        return
                     end
                 end
             end
+
+            local genericWalkHere = function ()
+                local goalTransform = hitResult:GetTransform()
+                local goal = goalTransform:GetPosition()
+                Events.Broadcast("event_move_to_location", goal)
+            end
+            
+            if primary then
+                genericWalkHere()
+            else
+                Events.Broadcast("event_clear_interact_options")
+                Events.Broadcast("event_show_interact_option", "Walk here", genericWalkHere)
+            end
         end
+
     end)
 
 	if binding == primaryBinding then

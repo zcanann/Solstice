@@ -62,15 +62,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4593055330877944043
-  Name: "Fantasy Shape 003"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Shape_003"
-  }
-}
-Assets {
   Id: 4552358607982218655
   Name: "Fantasy Coins 007"
   PlatformAssetType: 9
@@ -95,14 +86,5 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameSolid4px_020"
-  }
-}
-Assets {
-  Id: 1535835570629998324
-  Name: "BG Gradient 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundFlat_020"
   }
 }

@@ -153,7 +153,7 @@ Objects {
   Name: "SearchableWardrobe"
   Transform {
     Location {
-      X: -4260
+      X: -4300
       Y: -480
       Z: 30
     }
@@ -173,6 +173,10 @@ Objects {
       ObjectReference {
         SelfId: 15311939739111624228
       }
+    }
+    Overrides {
+      Name: "cs:Name"
+      String: "Wardrobe"
     }
     Overrides {
       Name: "cs:ID"
@@ -388,6 +392,12 @@ Objects {
   ChildIds: 16912448792530531918
   ChildIds: 15643139058935224249
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 3782668079791736470
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -412,6 +422,7 @@ Objects {
   Name: "C_Walkable"
   Transform {
     Location {
+      Y: 80
     }
     Rotation {
     }
@@ -422,6 +433,22 @@ Objects {
     }
   }
   ParentId: 15311939739111624228
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 3782668079791736470
+      }
+    }
+    Overrides {
+      Name: "cs:Object:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Object:ml"
+      Bool: false
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -455,6 +482,28 @@ Objects {
     }
   }
   ParentId: 15311939739111624228
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 3782668079791736470
+      }
+    }
+    Overrides {
+      Name: "cs:WalkableScript"
+      ObjectReference {
+        SelfId: 15643139058935224249
+      }
+    }
+    Overrides {
+      Name: "cs:Object:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Object:ml"
+      Bool: false
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
