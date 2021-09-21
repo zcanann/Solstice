@@ -51866,7 +51866,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -52325,6 +52325,7 @@ Objects {
   }
   Control {
     Width: 300
+    UIX: 121.5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -52333,19 +52334,23 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentHeight: true
     Text {
-      Label: "[F] STASH"
+      Label: "Placeholder"
       Color {
         R: 1
         G: 1
         B: 1
         A: 1
       }
-      Size: 15
+      Size: 20
       Justification {
-        Value: "mc:etextjustify:center"
+        Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
       Font {
+        Id: 6382792620031146827
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
       }
     }
     AnchorLayout {
@@ -52394,7 +52399,7 @@ Objects {
   }
   Control {
     Width: 300
-    UIX: 1.5
+    UIX: 123
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -52403,16 +52408,17 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentHeight: true
     Text {
-      Label: "[F] STASH"
+      Label: "Placeholder"
       Color {
         A: 1
       }
       Size: 15
       Justification {
-        Value: "mc:etextjustify:center"
+        Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
       Font {
+        Id: 6382792620031146827
       }
     }
     AnchorLayout {
@@ -52461,7 +52467,7 @@ Objects {
   }
   Control {
     Width: 300
-    UIX: -1.5
+    UIX: 120
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -52470,16 +52476,17 @@ Objects {
     AddSizeToParentIfUsingParentSize: true
     UseParentHeight: true
     Text {
-      Label: "[F] STASH"
+      Label: "Placeholder"
       Color {
         A: 1
       }
       Size: 15
       Justification {
-        Value: "mc:etextjustify:center"
+        Value: "mc:etextjustify:left"
       }
       AutoWrapText: true
       Font {
+        Id: 6382792620031146827
       }
     }
     AnchorLayout {
@@ -52529,10 +52536,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Control {
-    Width: 50
-    Height: 50
-    UIX: 7
-    UIY: -7
+    Width: 48
+    Height: 48
+    UIX: 20
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -52598,7 +52604,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 717023214322694559
+        Id: 8528114571815720137
       }
       Color {
         R: 1
@@ -52664,7 +52670,7 @@ Objects {
     UseParentHeight: true
     Image {
       Brush {
-        Id: 717023214322694559
+        Id: 8528114571815720137
       }
       Color {
         A: 1

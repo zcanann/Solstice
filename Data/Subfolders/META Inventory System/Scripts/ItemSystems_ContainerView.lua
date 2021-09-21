@@ -251,9 +251,9 @@ function view:InitStashContainer(stashID,stashHash)
     self.stashID = stashID
     LOCAL_PLAYER.clientUserData.containerInventory = containerInventory
 
-    CONTAINER_HEADER1.text = "[F] Stash"
-    CONTAINER_HEADER2.text = "[F] Stash"
-    CONTAINER_HEADER3.text = "[F] Stash"
+    CONTAINER_HEADER1.text = "Bank"
+    CONTAINER_HEADER2.text = "Bank"
+    CONTAINER_HEADER3.text = "Bank"
     local stashObject = LOCAL_PLAYER.clientUserData.stashObject
     if not Object.IsValid(stashObject) then
         stashObject = nil

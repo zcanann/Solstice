@@ -37,11 +37,11 @@ Objects {
 }
 Objects {
   Id: 17298821803215545407
-  Name: "Safe"
+  Name: "Vault"
   Transform {
     Location {
-      X: -4630
-      Y: -255
+      X: -4345
+      Y: -430
       Z: 25
     }
     Rotation {
@@ -53,6 +53,344 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
+  ChildIds: 14086855849380143964
+  ChildIds: 1554159627227229673
+  ChildIds: 3639970307842488502
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Interactable"
+      ObjectReference {
+        SelfId: 1554159627227229673
+      }
+    }
+    Overrides {
+      Name: "cs:Name"
+      String: "Vault"
+    }
+    Overrides {
+      Name: "cs:SecondsToSearch"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:IsStash"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:SFX_OpenSound"
+      AssetReference {
+        Id: 13511935298590761383
+      }
+    }
+    Overrides {
+      Name: "cs:SFX_ClosedSound"
+      AssetReference {
+        Id: 12423341515183421166
+      }
+    }
+    Overrides {
+      Name: "cs:NO_PERSONAL"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_MULTILOOTING"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ID"
+      String: "Bank"
+    }
+    Overrides {
+      Name: "cs:Interactable:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Interactable:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Name:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Name:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SecondsToSearch:tooltip"
+      String: "Time it takes (in seconds) to search the container."
+    }
+    Overrides {
+      Name: "cs:SecondsToSearch:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SecondsToSearch:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:IsStash:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:IsStash:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SFX_OpenSound:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SFX_OpenSound:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SFX_ClosedSound:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SFX_ClosedSound:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_PERSONAL:tooltip"
+      String: "Currently not supported at this time."
+    }
+    Overrides {
+      Name: "cs:NO_PERSONAL:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_PERSONAL:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_MULTILOOTING:tooltip"
+      String: "Currently not supported at this time."
+    }
+    Overrides {
+      Name: "cs:NO_MULTILOOTING:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_MULTILOOTING:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ID:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ID:ml"
+      Bool: false
+    }
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 3639970307842488502
+  Name: "ItemSystems_StashInstance"
+  Transform {
+    Location {
+      X: 1838.75818
+      Y: 3085.32471
+      Z: -35.7142448
+    }
+    Rotation {
+      Yaw: 178.762939
+    }
+    Scale {
+      X: 1.42857158
+      Y: 1.42857158
+      Z: 1.42857158
+    }
+  }
+  ParentId: 17298821803215545407
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4160105597995804842
+    }
+  }
+}
+Objects {
+  Id: 1554159627227229673
+  Name: "C_Interactable"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.4285717
+      Y: 1.4285717
+      Z: 1.4285717
+    }
+  }
+  ParentId: 17298821803215545407
+  ChildIds: 12056490609589331565
+  ChildIds: 2015510013727283136
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 17298821803215545407
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15316634444061490990
+    }
+  }
+}
+Objects {
+  Id: 2015510013727283136
+  Name: "C_Walkable"
+  Transform {
+    Location {
+      Y: 80
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1554159627227229673
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 17298821803215545407
+      }
+    }
+    Overrides {
+      Name: "cs:Object:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Object:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13256092117753200766
+    }
+  }
+}
+Objects {
+  Id: 12056490609589331565
+  Name: "C_Searchable"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1554159627227229673
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 17298821803215545407
+      }
+    }
+    Overrides {
+      Name: "cs:WalkableScript"
+      ObjectReference {
+        SelfId: 2015510013727283136
+      }
+    }
+    Overrides {
+      Name: "cs:Object:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Object:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 3760315661336668601
+    }
+  }
+}
+Objects {
+  Id: 14086855849380143964
+  Name: "Model"
+  Transform {
+    Location {
+      X: 10
+      Y: -70
+      Z: 95
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17298821803215545407
   ChildIds: 4068502161436271871
   ChildIds: 6707704143139697811
   ChildIds: 12677480390218830744
@@ -60,8 +398,17 @@ Objects {
   ChildIds: 9938707089100826186
   ChildIds: 7924065886461479379
   ChildIds: 11508997847537796452
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Folder {
     IsGroup: true
@@ -72,19 +419,19 @@ Objects {
   Name: "Cylinder - Polished"
   Transform {
     Location {
-      X: -65.0000076
-      Y: -35.0000038
-      Z: 300.000671
+      X: -75.0000076
+      Y: 35.0000038
+      Z: 205.000748
     }
     Rotation {
     }
     Scale {
-      X: 0.200000346
-      Y: 0.200000346
+      X: 0.200000405
+      Y: 0.200000405
       Z: 1.00000012
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 14086855849380143964
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -123,20 +470,20 @@ Objects {
   Name: "Door"
   Transform {
     Location {
-      X: 45
-      Y: -10
-      Z: 95
+      X: 35.0000038
+      Y: 60.0000076
+      Z: 1.08991362e-05
     }
     Rotation {
-      Yaw: -60
+      Yaw: -59.9999771
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.00000012
+      Y: 1.00000012
+      Z: 1.00000012
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 14086855849380143964
   ChildIds: 7478436298013950790
   ChildIds: 17804726040996872343
   Collidable_v2 {
@@ -478,21 +825,21 @@ Objects {
   Name: "Decal Spray Manticore 01"
   Transform {
     Location {
-      X: 42.8571472
-      Y: -14.2857161
-      Z: 321.428619
+      X: 32.8571472
+      Y: 55.7142906
+      Z: 226.428711
     }
     Rotation {
-      Yaw: -9.15527344e-05
-      Roll: 89.9999771
+      Yaw: -9.15527417e-05
+      Roll: 89.9999542
     }
     Scale {
-      X: 0.142857164
-      Y: 0.142857164
-      Z: 0.142857164
+      X: 0.142857209
+      Y: 0.142857209
+      Z: 0.142857209
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 14086855849380143964
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -523,20 +870,20 @@ Objects {
   Name: "Back"
   Transform {
     Location {
-      X: 37.0096283
-      Y: -221.428589
-      Z: 200.000015
+      X: 27.0096283
+      Y: -151.428589
+      Z: 105.000076
     }
     Rotation {
-      Yaw: -9.56226431e-05
+      Yaw: -9.56226213e-05
     }
     Scale {
       X: 2.00000024
-      Y: 0.200000644
-      Z: 3.80001044
+      Y: 0.200000703
+      Z: 3.8000114
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 14086855849380143964
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -575,19 +922,19 @@ Objects {
   Name: "LowerPanel"
   Transform {
     Location {
-      X: 35
-      Y: -135
-      Z: 95
+      X: 25.0000019
+      Y: -65.0000076
+      Z: 1.08991362e-05
     }
     Rotation {
     }
     Scale {
-      X: 1.6
-      Y: 1.60000014
-      Z: 0.1
+      X: 1.6000005
+      Y: 1.60000074
+      Z: 0.100000031
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 14086855849380143964
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -626,19 +973,19 @@ Objects {
   Name: "Cylinder - Polished"
   Transform {
     Location {
-      X: -65
-      Y: -35
-      Z: 95
+      X: -75.0000076
+      Y: 35.0000038
+      Z: 1.08991362e-05
     }
     Rotation {
     }
     Scale {
-      X: 0.2
-      Y: 0.2
+      X: 0.200000063
+      Y: 0.200000063
       Z: 1.00000012
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 14086855849380143964
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -677,19 +1024,19 @@ Objects {
   Name: "Body"
   Transform {
     Location {
-      X: 35
-      Y: -35
-      Z: 95
+      X: 25.0000019
+      Y: 35.0000038
+      Z: 1.08991362e-05
     }
     Rotation {
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.00000012
+      Y: 1.00000012
+      Z: 1.00000012
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 14086855849380143964
   ChildIds: 4337582040145897260
   ChildIds: 11851038896465603842
   Collidable_v2 {

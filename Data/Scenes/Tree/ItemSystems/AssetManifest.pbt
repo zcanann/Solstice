@@ -224,6 +224,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8528114571815720137
+  Name: "Fantasy Gold 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Gold_002"
+  }
+}
+Assets {
   Id: 8125907229295996063
   Name: "Ring"
   PlatformAssetType: 9
@@ -275,6 +284,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameOutline_019"
+  }
+}
+Assets {
+  Id: 6382792620031146827
+  Name: "Cabin"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "CabinRegular_ref"
   }
 }
 Assets {
