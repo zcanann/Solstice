@@ -26,12 +26,15 @@ end
 
 function OnBindingPressed(player, binding)
     local checkInteraction = (function(primary)
-        local hitResult = UI.GetCursorHitResult()
-        
-        if UI.CanCursorInteractWithUI() then
+        -- Highest priority - Check for UI hit test first as highest priority
+        _G.uiHitTest = false
+        Events.Broadcast("event_ui_mouse_down", UI.GetCursorPosition(), primary)
+        if _G.uiHitTest then
+            Events.Broadcast("event_clear_interact_options")
             return
         end
-        
+
+        local hitResult = UI.GetCursorHitResult()
         if hitResult ~= nil and hitResult.other ~= nil then
             -- Medium priority - Check for interactions
             if TryInteractRecursive(hitResult.other, primary) then
@@ -52,7 +55,19 @@ function OnBindingPressed(player, binding)
                 Events.Broadcast("event_show_interact_option", "Walk here", genericWalkHere)
             end
         end
+    end)
 
+	if binding == primaryBinding then
+        checkInteraction(true)
+	end
+	if binding == secondaryBinding then
+        checkInteraction(false)
+	end
+end
+
+function OnBindingReleased(player, binding)
+    local checkInteraction = (function(primary)
+        Events.Broadcast("event_ui_mouse_up", UI.GetCursorPosition(), primary)
     end)
 
 	if binding == primaryBinding then
@@ -65,7 +80,7 @@ end
 
 function InitMouseCursor()
 	UI.SetCursorVisible(true)
-	UI.SetCanCursorInteractWithUI(true)
+	UI.SetCanCursorInteractWithUI(false)
 end
 
 function Tick(dt)
@@ -76,3 +91,4 @@ end
 
 InitMouseCursor()
 localPlayer.bindingPressedEvent:Connect(OnBindingPressed)
+localPlayer.bindingReleasedEvent:Connect(OnBindingReleased)

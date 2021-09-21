@@ -676,17 +676,22 @@ function view:PerformDragDropAction()
 end
 
 -----------------------------------------------------------------------------------------------------------------
-function view:OnBindingPressed(binding)
+function view:OnMouseDown(cursorPosition, primary)
     if self.isClosed then return end
-    if binding == "ability_primary" then
+
+    if primary then
         if self.itemUnderCursor then
             self:SetClickState(self.slotUnderCursor)
         end
     end
+
+    if self.isCursorInBounds then
+        _G.uiHitTest = true
+    end
 end
 
-function view:OnBindingReleased(binding)
-    if binding == "ability_primary" then
+function view:OnMouseUp(cursorPosition, primary)
+    if primary then
         if self.isClick then
             self:PerformClickAction()
         elseif self.isDragging then
@@ -696,6 +701,9 @@ function view:OnBindingReleased(binding)
         self:ClearDragState()
     end
 end
+
+Events.Connect("event_ui_mouse_down", function(cursorPosition, primary) view:OnMouseDown(cursorPosition, primary) end)
+Events.Connect("event_ui_mouse_up", function(cursorPosition, primary) view:OnMouseUp(cursorPosition, primary) end)
 
 -----------------------------------------------------------------------------------------------------------------
 function view:Open()
@@ -1159,9 +1167,6 @@ function Tick(dt)
 end
 
 -----------------------------------------------------------------------------------------------------------------
-LOCAL_PLAYER.bindingPressedEvent:Connect(function(_, binding) view:OnBindingPressed(binding) end)
-LOCAL_PLAYER.bindingReleasedEvent:Connect(function(_, binding) view:OnBindingReleased(binding) end)
-
 Events.Connect("RegisterContainer",function(container) 
     Events.Broadcast("ForceOpenViewByName","InventoryView")
     Events.Broadcast("ForceCloseViewByName","LootView")

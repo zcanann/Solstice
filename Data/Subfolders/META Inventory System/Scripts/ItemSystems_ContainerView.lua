@@ -655,17 +655,22 @@ function view:PerformClickAction()
 end
 
 -----------------------------------------------------------------------------------------------------------------
-function view:OnBindingPressed(binding)
+function view:OnMouseDown(cursorPosition, primary)
     if self.isClosed then return end
-    if binding == "ability_primary" then
+
+    if self.isCursorInBounds then
+        _G.uiHitTest = true
+    end
+
+    if primary then
         if self.itemUnderCursor then
             self:SetClickState(self.slotUnderCursor)
         end
     end
 end
 
-function view:OnBindingReleased(binding)
-    if binding == "ability_primary" then
+function view:OnMouseUp(cursorPosition, primary)
+    if primary then
         if self.isClick then
             self:PerformClickAction()
         elseif self.isDragging then
@@ -675,6 +680,9 @@ function view:OnBindingReleased(binding)
         self:ClearDragState()
     end
 end
+
+Events.Connect("event_ui_mouse_down", function(cursorPosition, primary) view:OnMouseDown(cursorPosition, primary) end)
+Events.Connect("event_ui_mouse_up", function(cursorPosition, primary) view:OnMouseUp(cursorPosition, primary) end)
 
 -----------------------------------------------------------------------------------------------------------------
 function view:Open()
@@ -705,21 +713,21 @@ function view:UpdateCursorState()
     local cursorPosition = UI.GetCursorPosition()
     local screenSize = UI.GetScreenSize()
     self.isHoveringOnSalvage = nil
+    local xRef, yRef = GetTopLeftPositionInParent(INVENTORY_VIEW, screenSize.x, screenSize.y)
+    self.isCursorInBounds = IsInsideHitbox(INVENTORY_VIEW, cursorPosition, xRef, yRef)
+    for _,slot in ipairs(self.containerInventorySlots) do
+        if IsInsideHitbox(slot, cursorPosition, xRef, yRef) then
+            self.inventoryDropSlot = slot.clientUserData.containerSlotIndex
+            self:SetHoverState(slot)
+            break
+        end
+    end
     local xRef, yRef = GetTopLeftPositionInParent(CONTAINER_VIEW, screenSize.x, screenSize.y)
     self.isCursorInBounds = IsInsideHitbox(CONTAINER_VIEW, cursorPosition, xRef, yRef)
     self.isCursorInContainer = IsInsideHitbox(CONTAINER_VIEW, cursorPosition, xRef, yRef)
     for _,slot in ipairs(self.containerSlots) do
         if IsInsideHitbox(slot, cursorPosition, xRef, yRef) then
             self.inventoryDropSlot = nil
-            self:SetHoverState(slot)
-            break
-        end
-    end
-    local xRef, yRef = GetTopLeftPositionInParent(INVENTORY_VIEW, screenSize.x, screenSize.y)
-    self.isCursorInBounds = IsInsideHitbox(INVENTORY_VIEW, cursorPosition, xRef, yRef)
-    for _,slot in ipairs(self.containerInventorySlots) do
-        if IsInsideHitbox(slot, cursorPosition, xRef, yRef) then
-            self.inventoryDropSlot = slot.clientUserData.containerSlotIndex
             self:SetHoverState(slot)
             break
         end
@@ -1116,6 +1124,3 @@ Events.Connect("CC",function(stashID) -- Container Close
         Events.Broadcast("UnRegisterContainer")
     end
 end)
-
-LOCAL_PLAYER.bindingPressedEvent:Connect(function(_, binding) view:OnBindingPressed(binding) end)
-LOCAL_PLAYER.bindingReleasedEvent:Connect(function(_, binding) view:OnBindingReleased(binding) end)
