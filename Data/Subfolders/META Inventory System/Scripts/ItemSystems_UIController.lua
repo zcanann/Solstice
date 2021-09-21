@@ -33,30 +33,6 @@ local function PlaySound(sfx)
     World.SpawnAsset(sfx, { parent = script })
 end
 
--- Determines if the the mouse can be hidden by checking all existing windows to see if they're visible
--- @return bool
-local function CanChangeMouseVisiblity()
-    for key, view in pairs(LOCAL_PLAYER.clientUserData.connectedviews) do
-        if(view.clientUserData.isVisible == true) then
-            return false
-        end
-    end
-    return true
-end
-
--- Changes the mouse visibility and state
--- @param bool isVisible
-local function ChangeMouseVisiblity(isVisible)
-    UI.SetCursorVisible(isVisible)
-    UI.SetCursorLockedToViewport(not isVisible)
-    UI.SetCanCursorInteractWithUI(isVisible)
-    if(isVisible) then
-        LOCAL_PLAYER.lookSensitivity = 0
-    else
-        LOCAL_PLAYER.lookSensitivity = 1
-    end
-end
-
 -- Toggles the view of the provided view
 -- @param UIControl view
 local function ToggleView(view)
@@ -64,13 +40,9 @@ local function ToggleView(view)
     view.clientUserData.isVisible = not view.clientUserData.isVisible
     if view.clientUserData.isVisible then
         inventory:UpdateLockAbilities(false)
-        ChangeMouseVisiblity(true)
         PlaySound(SFX_OPEN)
     else
-        if CanChangeMouseVisiblity() then
-            inventory:UpdateLockAbilities(true)
-            ChangeMouseVisiblity(false)
-        end
+        inventory:UpdateLockAbilities(true)
         PlaySound(SFX_CLOSE)
     end
     isCooldown = true
@@ -102,10 +74,7 @@ end)
 Events.Connect("ForceCloseViewByName",function(viewName)
     if( LOCAL_PLAYER.clientUserData.connectedviews[viewName]) then
         LOCAL_PLAYER.clientUserData.connectedviews[viewName].clientUserData.isVisible = false
-        if CanChangeMouseVisiblity() then
-            inventory:UpdateLockAbilities(true)
-            ChangeMouseVisiblity(false)
-        end
+        inventory:UpdateLockAbilities(true)
     end
 end)
 
@@ -116,12 +85,11 @@ Events.Connect("ForceOpenViewByName",function(viewName)
         LOCAL_PLAYER.clientUserData.connectedviews[viewName].clientUserData.isVisible = true
         Task.Wait()
         inventory:UpdateLockAbilities(false)
-        ChangeMouseVisiblity(true)
     end
 end)
 
 RegisterViews()
-Events.Connect("InventoryView.EquippedItem", function() Task.Wait(.3) inventory:UpdateLockAbilities(CanChangeMouseVisiblity()) end)
+Events.Connect("InventoryView.EquippedItem", function() Task.Wait(.3) inventory:UpdateLockAbilities(true) end)
 ---------------------------------------------------------------------------------
 --Hide UI
 ---------------------------------------------------------------------------------

@@ -102,18 +102,3 @@ function OnPropertyChanged(object, propertyName)
 end
 ROOT.networkedPropertyChangedEvent:Connect(OnPropertyChanged)
 MESH.visibility = Visibility.FORCE_OFF
-
---[[
-function OnBindingPressed(player, action)
-	if action == "ability_primary" then
-		PlayAttack()
-		
-	elseif action == "ability_secondary" then
-		PlayDeath()
-	end
-end
-
-Game.playerJoinedEvent:Connect(function(player)
-	player.bindingPressedEvent:Connect(OnBindingPressed)
-end)
---]]

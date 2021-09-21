@@ -53,9 +53,15 @@ Objects {
   }
 }
 Objects {
-  Id: 4465551706381863116
+  Id: 295625169717492001
   Name: "Searchable Loots Examples"
   Transform {
+    Location {
+      X: -3680
+      Y: 1390
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
@@ -69,83 +75,19 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1521527601147161279
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Searchable Loots Examples"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -3680
-            Y: 1390
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 2911462703983371537
-      value {
-        Overrides {
-          Name: "cs:SecondsToSearch"
-          Int: 0
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3503602367941050222
-      value {
-        Overrides {
-          Name: "cs:SecondsToSearch"
-          Int: 0
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 60
-            Y: 518.118774
-            Z: 6.10351562e-05
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 4472895365055414163
-      value {
-        Overrides {
-          Name: "cs:SecondsToSearch"
-          Int: 0
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 5381397333263991362
-      value {
-        Overrides {
-          Name: "cs:SecondsToSearch"
-          Int: 0
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 6068354435771292263
-    }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Searchable Loots Examples"
+  }
+  InstanceHistory {
+    SelfId: 295625169717492001
+    SubobjectId: 1521527601147161279
+    InstanceId: 4465551706381863116
+    TemplateId: 6068354435771292263
+    WasRoot: true
   }
 }
 Objects {
@@ -167,6 +109,7 @@ Objects {
   }
   ParentId: 413991195585998862
   ChildIds: 15311939739111624228
+  ChildIds: 399108297736708598
   UnregisteredParameters {
     Overrides {
       Name: "cs:Interactable"
@@ -179,47 +122,17 @@ Objects {
       String: "Wardrobe"
     }
     Overrides {
-      Name: "cs:ID"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:LootTable"
-      String: "Currency"
-    }
-    Overrides {
-      Name: "cs:MinutesToResetLoot"
-      Int: 5
-    }
-    Overrides {
-      Name: "cs:ItemCountMin"
-      Int: 5
-    }
-    Overrides {
-      Name: "cs:ItemCountMax"
-      Int: 20
-    }
-    Overrides {
       Name: "cs:SecondsToSearch"
       Int: 0
     }
     Overrides {
-      Name: "cs:IsPersonal"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:AllowMultiLooting"
-      Bool: false
+      Name: "cs:IsStash"
+      Bool: true
     }
     Overrides {
       Name: "cs:SFX_OpenSound"
       AssetReference {
         Id: 13511935298590761383
-      }
-    }
-    Overrides {
-      Name: "cs:SFX_SearchingSound"
-      AssetReference {
-        Id: 9786813611511216309
       }
     }
     Overrides {
@@ -229,60 +142,16 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ID:isrep"
+      Name: "cs:NO_PERSONAL"
       Bool: false
     }
     Overrides {
-      Name: "cs:ID:ml"
+      Name: "cs:NO_MULTILOOTING"
       Bool: false
     }
     Overrides {
-      Name: "cs:LootTable:tooltip"
-      String: "The loot table to pull items from"
-    }
-    Overrides {
-      Name: "cs:LootTable:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:LootTable:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:MinutesToResetLoot:tooltip"
-      String: "The time in minutes it takes to reset the loot for this contianer."
-    }
-    Overrides {
-      Name: "cs:MinutesToResetLoot:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:MinutesToResetLoot:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ItemCountMin:tooltip"
-      String: "The min amount of items to generate into the container"
-    }
-    Overrides {
-      Name: "cs:ItemCountMin:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ItemCountMin:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ItemCountMax:tooltip"
-      String: "The max amount of items to generate into the container"
-    }
-    Overrides {
-      Name: "cs:ItemCountMax:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ItemCountMax:ml"
-      Bool: false
+      Name: "cs:ID"
+      String: "Bank"
     }
     Overrides {
       Name: "cs:SecondsToSearch:tooltip"
@@ -297,30 +166,6 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:IsPersonal:tooltip"
-      String: "When looted by a player the loot will personal for them. Players will have the chance to loot it and still find loot for themselves."
-    }
-    Overrides {
-      Name: "cs:IsPersonal:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:IsPersonal:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:AllowMultiLooting:tooltip"
-      String: "Highly experimental feature that allows players to use stashes all at the same time. It is highly recommened that you have the ID of the stash be a integer as sending a muid through broadcast causes this to fail. If your ID custom property is not an integer then make it an integer custom property"
-    }
-    Overrides {
-      Name: "cs:AllowMultiLooting:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:AllowMultiLooting:ml"
-      Bool: false
-    }
-    Overrides {
       Name: "cs:SFX_OpenSound:isrep"
       Bool: false
     }
@@ -329,19 +174,35 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:SFX_SearchingSound:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:SFX_SearchingSound:ml"
-      Bool: false
-    }
-    Overrides {
       Name: "cs:SFX_ClosedSound:isrep"
       Bool: false
     }
     Overrides {
       Name: "cs:SFX_ClosedSound:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_PERSONAL:tooltip"
+      String: "Currently not supported at this time."
+    }
+    Overrides {
+      Name: "cs:NO_PERSONAL:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_PERSONAL:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_MULTILOOTING:tooltip"
+      String: "Currently not supported at this time."
+    }
+    Overrides {
+      Name: "cs:NO_MULTILOOTING:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:NO_MULTILOOTING:ml"
       Bool: false
     }
   }
@@ -371,6 +232,40 @@ Objects {
         LinearDamping: 0.01
       }
       BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 399108297736708598
+  Name: "ItemSystems_StashInstance"
+  Transform {
+    Location {
+      X: 957.130615
+      Y: 2384.72705
+      Z: -29.9999695
+    }
+    Rotation {
+      Yaw: 178.762939
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3782668079791736470
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 4160105597995804842
     }
   }
 }

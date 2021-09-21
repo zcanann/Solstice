@@ -128,18 +128,3 @@ end
 
 ROOT.destroyEvent:Connect(OnDestroyed)
 ROOT.networkedPropertyChangedEvent:Connect(OnPropertyChanged)
-
---[[
-function OnBindingPressed(player, action)
-	if action == "ability_primary" then
-		PlayAttack()
-		
-	elseif action == "ability_secondary" then
-		PlayDeath()
-	end
-end
-
-Game.playerJoinedEvent:Connect(function(player)
-	player.bindingPressedEvent:Connect(OnBindingPressed)
-end)
---]]

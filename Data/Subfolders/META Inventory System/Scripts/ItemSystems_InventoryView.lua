@@ -1158,12 +1158,6 @@ function Tick(dt)
     view:Draw()
 end
 
-local function ChangeMouseVisiblity(isVisible)
-    UI.SetCursorVisible(isVisible)
-    UI.SetCursorLockedToViewport(not isVisible)
-    UI.SetCanCursorInteractWithUI(isVisible)
-end
-
 -----------------------------------------------------------------------------------------------------------------
 LOCAL_PLAYER.bindingPressedEvent:Connect(function(_, binding) view:OnBindingPressed(binding) end)
 LOCAL_PLAYER.bindingReleasedEvent:Connect(function(_, binding) view:OnBindingReleased(binding) end)
@@ -1171,7 +1165,6 @@ LOCAL_PLAYER.bindingReleasedEvent:Connect(function(_, binding) view:OnBindingRel
 Events.Connect("RegisterContainer",function(container) 
     Events.Broadcast("ForceOpenViewByName","InventoryView")
     Events.Broadcast("ForceCloseViewByName","LootView")
-    ChangeMouseVisiblity(true)
     view:UnInitContainerSlots()
     view:InitContainerSlots(container)
 end)

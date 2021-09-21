@@ -1,8 +1,32 @@
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propWalkableScript = script:GetCustomProperty("WalkableScript"):WaitForObject()
 
+local id = propObject:GetCustomProperty("ID")
+local name = propObject:GetCustomProperty("Name")
+local reliableEvents = require(script:GetCustomProperty("ReliableEvents"))
+local sfxOpenSound = propObject:GetCustomProperty("SFX_OpenSound")
+local sfxClosedSound = propObject:GetCustomProperty("SFX_ClosedSound")
+
+-- Easy function for playing sounds.
+-- @param AssetRef sfx
+local function PlaySound(sfx)
+    World.SpawnAsset(sfx, { parent = script })
+end
+
 function DoSearch()
-    Chat.LocalMessage("Searching " .. propObject:GetCustomProperty("Name") .. "...")
+    if sfxOpenSound then
+        PlaySound(sfxOpenSound)
+    end
+    
+    reliableEvents.BroadcastToServer("OnStashUse", id)
+
+    Chat.LocalMessage("Searching " .. name .. "...")
+end
+
+function EndSearch()
+    if sfxClosedSound then
+        PlaySound(sfxClosedSound)
+    end
 end
 
 function Interact()
@@ -23,5 +47,5 @@ function ShowOption()
         Interact()
     end
 
-    Events.Broadcast("event_show_interact_option", "Search " .. propObject:GetCustomProperty("Name"), callback)
+    Events.Broadcast("event_show_interact_option", "Search " .. name, callback)
 end

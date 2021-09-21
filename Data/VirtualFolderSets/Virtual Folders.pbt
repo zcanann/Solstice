@@ -65,5 +65,17 @@ Assets {
       VirtualFolderPath: "Items"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Jordan"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Jordans Materials "
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Engagement"
+      PlatformAssetType: 3
+    }
   }
 }

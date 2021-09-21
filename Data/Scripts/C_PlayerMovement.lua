@@ -77,21 +77,9 @@ function OnMoveToLocation(goal, callback)
 	end
 end
 
-function InitMouseCursor()
-	UI.SetCursorVisible(true)
-	UI.SetCanCursorInteractWithUI(true)
-end
-
-function Tick(dt)
-	if not UI.IsCursorVisible() then
-		InitMouseCursor()
-	end
-end
-
 local movementHook = localPlayer.movementHook:Connect(MoveToGoal)
 movementHook.priority = 99
 
 Events.Connect("event_player_teleported", ClearWayPoints)
 Events.Connect("event_move_to_location", OnMoveToLocation)
 
-InitMouseCursor()

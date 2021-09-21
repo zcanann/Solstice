@@ -117,6 +117,7 @@ end
 
 -- Shoots a ray from the camera forward to some distance and check to see if the object is a stash.
 function Tick()
+    --[[
     local cameraPos = LOCAL_PLAYER:GetViewWorldPosition()
 	local cameraTransform = Transform.New(LOCAL_PLAYER:GetViewWorldRotation(), LOCAL_PLAYER:GetViewWorldPosition(), Vector3.New(1,1,1))
 	local lookDirection = cameraTransform:GetForwardVector()
@@ -174,7 +175,7 @@ function Tick()
     else
         SearchIndicatorUI.visibility = Visibility.FORCE_OFF
         id = nil
-    end
+    end--]]
 end
 
 -- When the container UI closes.

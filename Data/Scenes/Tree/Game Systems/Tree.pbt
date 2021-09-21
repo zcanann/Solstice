@@ -41,6 +41,30 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 10644252391269866369
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 580
+            Y: -723.368286
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11206724309603317247
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 615
+            Y: -243.368286
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 11844619883856046321
       value {
         Overrides {
@@ -98,15 +122,32 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 18422992774913416475
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 340
+            Y: -1443.36829
+            Z: 1.52587891e-05
+          }
+        }
+      }
+    }
     TemplateAsset {
       Id: 158343807111201364
     }
   }
 }
 Objects {
-  Id: 16669426050102956743
+  Id: 2755587556721485203
   Name: "ItemSystems"
   Transform {
+    Location {
+    }
+    Rotation {
+    }
     Scale {
       X: 1
       Y: 1
@@ -114,35 +155,27 @@ Objects {
     }
   }
   ParentId: 16844910628275373465
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 12698535283932223295
-      value {
-        Overrides {
-          Name: "Name"
-          String: "ItemSystems"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 230646110503003734
-    }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "ItemSystems"
+  }
+  InstanceHistory {
+    SelfId: 2755587556721485203
+    SubobjectId: 12698535283932223295
+    InstanceId: 16669426050102956743
+    TemplateId: 230646110503003734
+    WasRoot: true
   }
 }
 Objects {

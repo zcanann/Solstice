@@ -1,6 +1,5 @@
-GameId: "99B8557742E2BCB04CD243AB9A531717"
-DisplayName: "SpellScape"
+GameId: "7CE92EA849433F46A3156BBFE4194203"
+DisplayName: "SoulScape"
 GameSerializationVersion: 98
 Framework: "Dungeon Crawler"
-SourceGameId: "0c1a589265cb46ab8f74f6e55d4e10b7"
 StorageVersion: 2
