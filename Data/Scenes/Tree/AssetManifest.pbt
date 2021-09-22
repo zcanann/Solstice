@@ -1,4 +1,13 @@
 Assets {
+  Id: 18220713326484918044
+  Name: "Ball - Basketball 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_ball_basketball_01_ref"
+  }
+}
+Assets {
   Id: 17447823781948565161
   Name: "Large Wooden Fortress Gate Door Shut Open Close 02 SFX"
   PlatformAssetType: 7

@@ -22,7 +22,6 @@ local PLAYER_TEMPLATE = script:GetCustomProperty("MinimapPlayer")
 local ROOT_PANEL = script:GetCustomProperty("RootPanel"):WaitForObject()
 local CONTENT_PANEL = script:GetCustomProperty("ContentPanel"):WaitForObject()
 local COMPASS = script:GetCustomProperty("Compass"):WaitForObject()
-local COMPASS_LOWER = script:GetCustomProperty("CompassLower"):WaitForObject()
 local ROTATION_ROOT = script:GetCustomProperty("RotationRoot"):WaitForObject()
 
 local minimapSize = ROOT_PANEL.width -- Assumed to have equal width and height
