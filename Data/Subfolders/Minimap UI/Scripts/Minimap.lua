@@ -20,7 +20,10 @@ local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
 local LABEL_TEMPLATE = script:GetCustomProperty("MinimapLabel")
 local PLAYER_TEMPLATE = script:GetCustomProperty("MinimapPlayer")
 local COMPASS = script:GetCustomProperty("Compass"):WaitForObject()
+local COMPASS_LOWER = script:GetCustomProperty("CompassLower"):WaitForObject()
 
+local miniMapSize = CONTENT_PANEL.width -- Assumed to have equal width and height
+local miniMapCullDistance = miniMapSize / 2.0 - 12.0
 local scaleMin = 0.02
 local scaleMax = 0.05
 local scale = scaleMin
@@ -29,12 +32,14 @@ local boundsLower = Vector3.New()
 local boundsUpper = Vector3.New()
 local boundsDelta = Vector3.New()
 
+local mapPeices = { }
+
 function ParseMap()
 	local worldTexts = ROOT:FindDescendantsByType("WorldText")
 
 	-- Search for all framework pieces and add them to the minimap.
 	-- When new Framework pieces are added, they will need to be concated here.
-	local worldShapes = World.FindObjectsByName("FrameworkFloor4Units")
+	local worldShapes = World.FindObjectsByName("FrameworkFloor8Units")
 	
 	-- Establish 3D bounds
 	for _,shape in ipairs(worldShapes) do
@@ -73,10 +78,12 @@ function ParseMap()
 		local mapPiece = AddShapeToMiniMap(shape)
 		local baseColor = shape:GetCustomProperty("MinimapColor") or Color.WHITE
 		mapPiece:SetColor(baseColor)
+
+		table.insert(mapPeices, mapPiece)
 	end
 
 	-- Labels
-	for _,text in ipairs(worldTexts) do
+	for _, text in ipairs(worldTexts) do
 		text.isEnabled = false
 		
 		local pos = text:GetWorldPosition()
@@ -129,15 +136,28 @@ function Tick()
 	end
 	
 	local pos = localPlayer:GetWorldPosition()
+	local posMapSpace = Vector2.New(pos.x * scale, pos.y * scale)
 	CONTENT_PANEL.x = -pos.x * scale + CONTENT_PANEL.width / 2.0
 	CONTENT_PANEL.y = -pos.y * scale + CONTENT_PANEL.height / 2.0
 
 	local rot = localPlayer:GetDefaultCamera():GetWorldRotation()
 	COMPASS.rotationAngle = rot.z
+	COMPASS_LOWER.rotationAngle = rot.z
 	COMPASS:GetCustomProperty("N"):WaitForObject().rotationAngle = -rot.z
 	COMPASS:GetCustomProperty("S"):WaitForObject().rotationAngle = -rot.z
 	COMPASS:GetCustomProperty("W"):WaitForObject().rotationAngle = -rot.z
 	COMPASS:GetCustomProperty("E"):WaitForObject().rotationAngle = -rot.z
+
+	for _, mapPeice in ipairs(mapPeices) do
+		local mapPiecePos = Vector2.New(mapPeice.x, mapPeice.y)
+		local distance = (mapPiecePos - posMapSpace).size
+		
+		if distance < miniMapCullDistance then
+			mapPeice.visibility = Visibility.INHERIT
+		else
+			mapPeice.visibility = Visibility.FORCE_OFF
+		end
+	end
 end
 
 function GetIndicatorForPlayer(player)
@@ -155,6 +175,7 @@ function GetIndicatorForPlayer(player)
 	end
 	-- Spawn new indicator for this player
 	local minimapPlayer = World.SpawnAsset(PLAYER_TEMPLATE, {parent = CONTENT_PANEL})
+	
 	player.clientUserData.minimap = minimapPlayer
 	return minimapPlayer
 end

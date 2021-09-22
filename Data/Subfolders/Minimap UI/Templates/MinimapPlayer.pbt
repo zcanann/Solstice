@@ -29,8 +29,8 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 17
-          Height: 17
+          Width: 12
+          Height: 12
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -42,12 +42,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -145,7 +145,6 @@ Assets {
               A: 1
             }
             TeamSettings {
-              UseTeamColor: true
             }
           }
           AnchorLayout {
@@ -211,7 +210,6 @@ Assets {
               A: 1
             }
             TeamSettings {
-              UseTeamColor: true
             }
           }
           AnchorLayout {
