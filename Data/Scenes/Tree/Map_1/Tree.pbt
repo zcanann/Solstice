@@ -1,6 +1,38 @@
 Name: "Map_1"
 RootId: 413991195585998862
 Objects {
+  Id: 15393860705899249997
+  Name: "Ground"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 413991195585998862
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Ground"
+  }
+}
+Objects {
   Id: 2322628983472884505
   Name: "Roll For Loot Example"
   Transform {
@@ -495,6 +527,8 @@ Objects {
   Name: "KillTrigger"
   Transform {
     Location {
+      X: -300
+      Y: -500
     }
     Rotation {
     }
@@ -524,35 +558,6 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
-  }
-}
-Objects {
-  Id: 12014395485368686659
-  Name: "Ground"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 413991195585998862
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Ground"
   }
 }
 Objects {

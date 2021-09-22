@@ -1,4 +1,13 @@
 Assets {
+  Id: 17476121550048471155
+  Name: "Center Circle 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterCircle_001"
+  }
+}
+Assets {
   Id: 16241833908851998054
   Name: "BG Flat 001"
   PlatformAssetType: 9
@@ -32,6 +41,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Profile"
+  }
+}
+Assets {
+  Id: 6820639820958017332
+  Name: "Crosshair 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Crosshair_002"
   }
 }
 Assets {

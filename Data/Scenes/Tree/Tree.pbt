@@ -78,13 +78,13 @@ Objects {
     Overrides {
       Name: "cs:SFX_OpenSound"
       AssetReference {
-        Id: 13511935298590761383
+        Id: 17447823781948565161
       }
     }
     Overrides {
       Name: "cs:SFX_ClosedSound"
       AssetReference {
-        Id: 12423341515183421166
+        Id: 3664521979752791860
       }
     }
     Overrides {
@@ -98,6 +98,10 @@ Objects {
     Overrides {
       Name: "cs:ID"
       String: "Bank"
+    }
+    Overrides {
+      Name: "cs:BackpackSlotCount"
+      Int: 44
     }
     Overrides {
       Name: "cs:Interactable:isrep"

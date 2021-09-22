@@ -1,4 +1,13 @@
 Assets {
+  Id: 17447823781948565161
+  Name: "Large Wooden Fortress Gate Door Shut Open Close 02 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_large_wooden_fortress_gate_door_shut_open_close_02_Cue_ref"
+  }
+}
+Assets {
   Id: 16964117855639857004
   Name: "Decal Spray Manticore 01"
   PlatformAssetType: 14
@@ -68,6 +77,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_basic_001"
+  }
+}
+Assets {
+  Id: 3664521979752791860
+  Name: "Large Wooden Door Shut Open Close Rattle 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_large_wooden_door_shut_open_close_rattle_01_Cue_ref"
   }
 }
 Assets {
