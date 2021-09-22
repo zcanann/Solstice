@@ -1,12 +1,12 @@
 Name: "Ground"
 RootId: 15393860705899249997
 Objects {
-  Id: 9091111879781634138
+  Id: 3958054654109287275
   Name: "FrameworkFloor4Units"
   Transform {
     Location {
-      X: -3200
-      Y: 3200
+      X: 4800
+      Y: 1600
     }
     Rotation {
     }
@@ -29,7 +29,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -64,8 +64,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -3200
-            Y: 4000
+            X: 4800
+            Y: 2400
           }
         }
         Overrides {
@@ -79,6 +79,56 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14123221507322918370
+    }
+  }
+}
+Objects {
+  Id: 9091111879781634138
+  Name: "FrameworkFloor4Units"
+  Transform {
+    Location {
+      X: -3200
+      Y: 3200
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15393860705899249997
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11131281975128439298
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkFloor8Units"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -3200
+            Y: 4000
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -117,7 +167,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -205,7 +255,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -293,7 +343,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -381,7 +431,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -469,7 +519,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -557,7 +607,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -645,7 +695,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -733,7 +783,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -821,7 +871,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -909,7 +959,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -997,7 +1047,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1085,7 +1135,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1173,7 +1223,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1261,7 +1311,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1349,7 +1399,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1437,7 +1487,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1525,7 +1575,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1613,7 +1663,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1700,7 +1750,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1787,7 +1837,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1875,7 +1925,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -1963,7 +2013,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2051,7 +2101,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2139,7 +2189,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2227,7 +2277,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2315,7 +2365,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2403,7 +2453,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2491,7 +2541,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2578,7 +2628,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2665,7 +2715,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2753,7 +2803,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2841,7 +2891,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -2929,7 +2979,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3017,7 +3067,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3105,7 +3155,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3193,7 +3243,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3281,7 +3331,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3369,7 +3419,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3456,7 +3506,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3543,7 +3593,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3631,7 +3681,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3719,7 +3769,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3807,7 +3857,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3895,7 +3945,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -3983,7 +4033,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4071,7 +4121,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4159,7 +4209,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4247,7 +4297,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4334,7 +4384,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4421,7 +4471,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4509,7 +4559,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4597,7 +4647,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4685,7 +4735,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4773,7 +4823,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4861,7 +4911,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -4949,7 +4999,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5037,7 +5087,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5125,7 +5175,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5213,7 +5263,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5301,7 +5351,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5389,7 +5439,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5477,7 +5527,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5565,7 +5615,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5653,7 +5703,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5741,7 +5791,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5829,7 +5879,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -5917,7 +5967,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6005,7 +6055,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6093,7 +6143,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6181,7 +6231,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6269,7 +6319,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6357,7 +6407,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6445,7 +6495,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6533,7 +6583,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6621,7 +6671,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6709,7 +6759,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6797,7 +6847,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6884,7 +6934,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -6971,7 +7021,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7059,7 +7109,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7147,7 +7197,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7235,7 +7285,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7323,7 +7373,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7411,7 +7461,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7499,7 +7549,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7586,7 +7636,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7673,7 +7723,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7760,7 +7810,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7847,7 +7897,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -7934,7 +7984,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8021,7 +8071,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8107,7 +8157,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8193,7 +8243,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8280,7 +8330,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8367,7 +8417,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8454,7 +8504,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8541,7 +8591,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8628,7 +8678,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8715,7 +8765,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8797,7 +8847,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "Position"
@@ -8847,7 +8897,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -8935,7 +8985,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9022,7 +9072,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9109,7 +9159,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9191,7 +9241,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "Position"
@@ -9241,7 +9291,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9323,7 +9373,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "Position"
@@ -9372,7 +9422,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9460,7 +9510,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9548,7 +9598,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9635,7 +9685,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9722,7 +9772,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9810,7 +9860,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9898,7 +9948,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -9985,7 +10035,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10072,7 +10122,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10160,7 +10210,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10248,7 +10298,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10335,7 +10385,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10422,7 +10472,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10510,7 +10560,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10598,7 +10648,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10685,7 +10735,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10771,7 +10821,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10858,7 +10908,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -10946,7 +10996,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11006,50 +11056,6 @@ Objects {
   }
 }
 Objects {
-  Id: 10909778406193503134
-  Name: "FrameworkFloor8Units"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15393860705899249997
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 11131281975128439298
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkFloor8Units"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 4800
-            Y: 2400
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 14123221507322918370
-    }
-  }
-}
-Objects {
   Id: 6401298522133986611
   Name: "FrameworkFloor4Units"
   Transform {
@@ -11077,7 +11083,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11164,7 +11170,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11252,7 +11258,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11340,7 +11346,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11428,7 +11434,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11516,7 +11522,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11603,7 +11609,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11691,7 +11697,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11779,7 +11785,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11866,7 +11872,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -11954,7 +11960,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12042,7 +12048,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12129,7 +12135,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12216,7 +12222,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12302,7 +12308,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12387,7 +12393,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12474,7 +12480,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12562,7 +12568,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12649,7 +12655,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12736,7 +12742,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12824,7 +12830,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12911,7 +12917,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -12997,7 +13003,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -13084,7 +13090,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -13170,7 +13176,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -13256,7 +13262,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -13341,7 +13347,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"
@@ -13422,7 +13428,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkFloor4Units"
+          String: "FrameworkFloor8Units"
         }
         Overrides {
           Name: "ma:Building_Ceiling:color"

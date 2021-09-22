@@ -15,15 +15,18 @@ Tips:
 --]]
 
 local ROOT = script.parent
-local CONTENT_PANEL = script:GetCustomProperty("ContentPanel"):WaitForObject()
 local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
 local LABEL_TEMPLATE = script:GetCustomProperty("MinimapLabel")
 local PLAYER_TEMPLATE = script:GetCustomProperty("MinimapPlayer")
+
+local ROOT_PANEL = script:GetCustomProperty("RootPanel"):WaitForObject()
+local CONTENT_PANEL = script:GetCustomProperty("ContentPanel"):WaitForObject()
 local COMPASS = script:GetCustomProperty("Compass"):WaitForObject()
 local COMPASS_LOWER = script:GetCustomProperty("CompassLower"):WaitForObject()
+local ROTATION_ROOT = script:GetCustomProperty("RotationRoot"):WaitForObject()
 
-local miniMapSize = CONTENT_PANEL.width -- Assumed to have equal width and height
-local miniMapCullDistance = miniMapSize / 2.0 - 12.0
+local minimapSize = ROOT_PANEL.width -- Assumed to have equal width and height
+local minimapCullDistance = minimapSize / 2.0 - 12.0
 local scaleMin = 0.02
 local scaleMax = 0.05
 local scale = scaleMin
@@ -131,28 +134,28 @@ function Tick()
 		indicator.visibility = Visibility.INHERIT
 		
 		local pos = player:GetWorldPosition()
-		indicator.x = pos.x * scale - CONTENT_PANEL.width / 2.0
-		indicator.y = pos.y * scale - CONTENT_PANEL.height / 2.0
+		indicator.x = pos.x * scale - minimapSize / 2.0
+		indicator.y = pos.y * scale - minimapSize / 2.0
 	end
 	
 	local pos = localPlayer:GetWorldPosition()
 	local posMapSpace = Vector2.New(pos.x * scale, pos.y * scale)
-	CONTENT_PANEL.x = -pos.x * scale + CONTENT_PANEL.width / 2.0
-	CONTENT_PANEL.y = -pos.y * scale + CONTENT_PANEL.height / 2.0
+	CONTENT_PANEL.x = -pos.x * scale + minimapSize / 2.0
+	CONTENT_PANEL.y = -pos.y * scale + minimapSize / 2.0
 
-	local rot = localPlayer:GetDefaultCamera():GetWorldRotation()
-	COMPASS.rotationAngle = rot.z
-	COMPASS_LOWER.rotationAngle = rot.z
-	COMPASS:GetCustomProperty("N"):WaitForObject().rotationAngle = -rot.z
-	COMPASS:GetCustomProperty("S"):WaitForObject().rotationAngle = -rot.z
-	COMPASS:GetCustomProperty("W"):WaitForObject().rotationAngle = -rot.z
-	COMPASS:GetCustomProperty("E"):WaitForObject().rotationAngle = -rot.z
+	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
+	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
+	ROTATION_ROOT.rotationAngle = minimapRotation
+	COMPASS:GetCustomProperty("N"):WaitForObject().rotationAngle = -minimapRotation
+	COMPASS:GetCustomProperty("S"):WaitForObject().rotationAngle = -minimapRotation
+	COMPASS:GetCustomProperty("W"):WaitForObject().rotationAngle = -minimapRotation
+	COMPASS:GetCustomProperty("E"):WaitForObject().rotationAngle = -minimapRotation
 
 	for _, mapPeice in ipairs(mapPeices) do
 		local mapPiecePos = Vector2.New(mapPeice.x, mapPeice.y)
 		local distance = (mapPiecePos - posMapSpace).size
 		
-		if distance < miniMapCullDistance then
+		if distance < minimapCullDistance then
 			mapPeice.visibility = Visibility.INHERIT
 		else
 			mapPeice.visibility = Visibility.FORCE_OFF
@@ -180,4 +183,37 @@ function GetIndicatorForPlayer(player)
 	return minimapPlayer
 end
 
+function OnMouseDown(cursorPosition, primary)
+    local screenSize = UI.GetScreenSize()
+
+	-- Just hard code top-left anchoring. Too much of a headache to deal with handling other minimap locations.
+    local minimapClickCoords = Vector2.New(
+		cursorPosition.x + minimapSize / 2.0 - screenSize.x - ROOT_PANEL.x,
+		-(cursorPosition.y - ROOT_PANEL.y - minimapSize / 2.0)
+	)
+	
+	if minimapClickCoords.size < minimapSize then
+		print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
+        _G.uiHitTest = true
+
+		local localPlayer = Game.GetLocalPlayer()
+		local pos = localPlayer:GetWorldPosition()
+		local rotation = math.rad(ROTATION_ROOT.rotationAngle + 90)
+		local unscaledCoords = Vector2.New(
+			minimapClickCoords.x / scale,
+			minimapClickCoords.y / scale
+		)
+		local worldCoords = Vector3.New(
+			(unscaledCoords.y * math.cos(rotation)) + (unscaledCoords.x * math.sin(rotation)) + pos.x,
+			(unscaledCoords.x * math.cos(rotation)) - (unscaledCoords.y * math.sin(rotation)) + pos.y,
+			pos.z
+		)
+		
+		print(worldCoords)
+		Events.Broadcast("event_move_to_location", worldCoords)
+	end
+end
+
 ParseMap()
+
+Events.Connect("event_ui_mouse_down", function(cursorPosition, primary) OnMouseDown(cursorPosition, primary) end)

@@ -1,6 +1,6 @@
 Assets {
   Id: 14123221507322918370
-  Name: "FrameworkFloor4Units"
+  Name: "FrameworkFloor8Units"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

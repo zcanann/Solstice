@@ -2927,10 +2927,7 @@ Objects {
     }
   }
   ParentId: 12805819321682271475
-  ChildIds: 10807253521289326865
-  ChildIds: 2587382974214932426
-  ChildIds: 15297214150030308949
-  ChildIds: 14420781218232388084
+  ChildIds: 4509565000008892036
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2968,6 +2965,64 @@ Objects {
   }
 }
 Objects {
+  Id: 4509565000008892036
+  Name: "RotationRoot"
+  Transform {
+    Location {
+      X: -3310.00195
+      Y: 12580.0078
+      Z: 2810
+    }
+    Rotation {
+      Yaw: 135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4275955334696048526
+  ChildIds: 14359060790454029745
+  ChildIds: 2587382974214932426
+  ChildIds: 15297214150030308949
+  ChildIds: 11651828992703455502
+  ChildIds: 14420781218232388084
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 265
+    Height: 265
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 14420781218232388084
   Name: "Compass"
   Transform {
@@ -2985,7 +3040,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4275955334696048526
+  ParentId: 4509565000008892036
+  ChildIds: 14812195600489537652
   ChildIds: 11112545050468167212
   ChildIds: 9852364252298057203
   ChildIds: 16736628780040224410
@@ -3032,8 +3088,6 @@ Objects {
   Control {
     Width: 100
     Height: 100
-    UIX: -7.5
-    UIY: -7.5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3047,12 +3101,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -3092,8 +3146,7 @@ Objects {
   Control {
     Width: 50
     Height: 60
-    UIX: 135.5
-    UIY: 7.5
+    UIX: 128
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3176,8 +3229,7 @@ Objects {
   Control {
     Width: 50
     Height: 60
-    UIX: -120.5
-    UIY: 7.5
+    UIX: -120
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3260,8 +3312,7 @@ Objects {
   Control {
     Width: 50
     Height: 60
-    UIX: 7.5
-    UIY: 135.5
+    UIY: 120
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3344,8 +3395,7 @@ Objects {
   Control {
     Width: 50
     Height: 60
-    UIX: 7.5
-    UIY: -120.5
+    UIY: -120
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3413,7 +3463,6 @@ Objects {
     }
   }
   ParentId: 14420781218232388084
-  ChildIds: 14812195600489537652
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -3431,8 +3480,6 @@ Objects {
   Control {
     Width: 280
     Height: 280
-    UIX: 7.5
-    UIY: 7.5
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3488,7 +3535,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11112545050468167212
+  ParentId: 14420781218232388084
   UnregisteredParameters {
     Overrides {
       Name: "cs:N"
@@ -3541,8 +3588,79 @@ Objects {
         Id: 6820639820958017332
       }
       Color {
-        R: 0.0299999714
-        G: 0.00953641534
+        R: 0.100000024
+        G: 0.0258278195
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11651828992703455502
+  Name: "Edges"
+  Transform {
+    Location {
+      X: 1344.06836
+      Y: 9864.89453
+      Z: -5620
+    }
+    Rotation {
+      Yaw: 90.0000229
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4509565000008892036
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 265
+    Height: 265
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 11844995175334125520
+      }
+      Color {
+        R: 0.180392161
+        G: 0.0862745121
         A: 1
       }
       TeamSettings {
@@ -3586,7 +3704,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4275955334696048526
+  ParentId: 4509565000008892036
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3639,7 +3757,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4275955334696048526
+  ParentId: 4509565000008892036
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3691,16 +3809,16 @@ Objects {
   }
 }
 Objects {
-  Id: 10807253521289326865
-  Name: "Edges"
+  Id: 14359060790454029745
+  Name: "CompassLower"
   Transform {
     Location {
-      X: 1344.06836
-      Y: 9864.88867
-      Z: -5620
+      X: -3310.00195
+      Y: 12580.0078
+      Z: 2810
     }
     Rotation {
-      Yaw: 90.0000153
+      Yaw: 135
     }
     Scale {
       X: 1
@@ -3708,7 +3826,61 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4275955334696048526
+  ParentId: 4509565000008892036
+  ChildIds: 7608315037081921336
+  ChildIds: 9235736774470972179
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 265
+    Height: 265
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 9235736774470972179
+  Name: "SouthArrow"
+  Transform {
+    Location {
+      X: 0.00586954039
+      Y: -0.00794114452
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14359060790454029745
+  ChildIds: 17469537887637859755
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3722,8 +3894,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 265
-    Height: 265
+    Width: 40
+    Height: 40
+    UIY: 140
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -3731,11 +3904,221 @@ Objects {
     }
     Image {
       Brush {
-        Id: 17476121550048471155
+        Id: 18056787318024051379
       }
       Color {
-        R: 0.180392161
-        G: 0.0862745121
+        G: 0.0392156877
+        B: 0.149019614
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      FlipVertical: true
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17469537887637859755
+  Name: "Inner"
+  Transform {
+    Location {
+      X: 0.00586954039
+      Y: -0.00794114452
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9235736774470972179
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 24
+    Height: 24
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 18056787318024051379
+      }
+      Color {
+        G: 0.00596025679
+        B: 0.0900000334
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      FlipVertical: true
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 7608315037081921336
+  Name: "NorthArrow"
+  Transform {
+    Location {
+      X: 0.005859375
+      Y: -0.0078125
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14359060790454029745
+  ChildIds: 16608473391053649066
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 48
+    Height: 48
+    UIY: -140
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 18056787318024051379
+      }
+      Color {
+        R: 0.330000043
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16608473391053649066
+  Name: "Inner"
+  Transform {
+    Location {
+      X: 0.00586954039
+      Y: -0.00794114452
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7608315037081921336
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 24
+    Height: 24
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 18056787318024051379
+      }
+      Color {
+        R: 0.25
+        G: 0.089403972
         A: 1
       }
       TeamSettings {
@@ -3824,9 +4207,27 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:RootPanel"
+      ObjectReference {
+        SelfId: 4275955334696048526
+      }
+    }
+    Overrides {
+      Name: "cs:RotationRoot"
+      ObjectReference {
+        SelfId: 4509565000008892036
+      }
+    }
+    Overrides {
       Name: "cs:Compass"
       ObjectReference {
         SelfId: 14420781218232388084
+      }
+    }
+    Overrides {
+      Name: "cs:CompassLower"
+      ObjectReference {
+        SelfId: 14359060790454029745
       }
     }
     Overrides {

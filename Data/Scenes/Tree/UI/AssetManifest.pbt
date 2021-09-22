@@ -1,4 +1,13 @@
 Assets {
+  Id: 18056787318024051379
+  Name: "Center Arrow 004 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_004Wedge"
+  }
+}
+Assets {
   Id: 17476121550048471155
   Name: "Center Circle 001"
   PlatformAssetType: 9
@@ -32,6 +41,15 @@ Assets {
   PrimaryAsset {
     AssetType: "FontAssetRef"
     AssetId: "CabinBold_ref"
+  }
+}
+Assets {
+  Id: 11844995175334125520
+  Name: "Frame Ring 1x 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameRing1x_003"
   }
 }
 Assets {
