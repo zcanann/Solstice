@@ -36,11 +36,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Anchor"
-            Vector {
-            }
-          }
-          Overrides {
             Name: "cs:MinimapColor:isrep"
             Bool: false
           }
@@ -54,14 +49,6 @@ Assets {
           }
           Overrides {
             Name: "cs:WorldSize:ml"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Anchor:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Anchor:ml"
             Bool: false
           }
         }
@@ -98,6 +85,38 @@ Assets {
           }
         }
         ParentId: 2806421928153611805
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Ceiling:id"
+            AssetReference {
+              Id: 14031147348977058477
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 14031147348977058477
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Ceiling:color"
+            Color {
+              R: 0.48627454
+              G: 0.694117665
+              B: 0.905882418
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.48627454
+              G: 0.694117665
+              B: 0.905882418
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -135,6 +154,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_ts_gen_whitebox_floor_001_8x8"
+      }
+    }
+    Assets {
+      Id: 14031147348977058477
+      Name: "Bricks Wall Flat 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_brick_wall_flat_001"
       }
     }
     PrimaryAssetId {

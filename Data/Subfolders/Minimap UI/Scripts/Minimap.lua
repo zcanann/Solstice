@@ -36,11 +36,11 @@ local COMPASS = script:GetCustomProperty("Compass"):WaitForObject()
 local ROTATION_ROOT = script:GetCustomProperty("RotationRoot"):WaitForObject()
 
 local minimapSize = ROOT_PANEL.width -- Assumed to have equal width and height
-local minimapCullDistance = minimapSize / 2.0 - 12.0
+local minimapCullDistance = minimapSize / 2.0 - 16.0
 local minimapMouseHitTestDistance = minimapSize / 2.0 - 24.0
 local scaleMin = 0.02
 local scaleMax = 0.05
-local scale = scaleMin
+local scale = 0.025
 
 local playerSize = Vector3.New(50.0, 50.0, 128.0)
 local waypointsSize = Vector3.New(24.0, 24.0, 24.0)
@@ -167,12 +167,12 @@ function Tick()
 
 	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
 	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
-	ROTATION_ROOT.rotationAngle = minimapRotation
-	minimapWaypoints.rotationAngle = -minimapRotation
-	COMPASS:GetCustomProperty("N"):WaitForObject().rotationAngle = -minimapRotation
-	COMPASS:GetCustomProperty("S"):WaitForObject().rotationAngle = -minimapRotation
-	COMPASS:GetCustomProperty("W"):WaitForObject().rotationAngle = -minimapRotation
-	COMPASS:GetCustomProperty("E"):WaitForObject().rotationAngle = -minimapRotation
+	ROTATION_ROOT.rotationAngle = -minimapRotation
+	minimapWaypoints.rotationAngle = minimapRotation
+	COMPASS:GetCustomProperty("N"):WaitForObject().rotationAngle = minimapRotation
+	COMPASS:GetCustomProperty("S"):WaitForObject().rotationAngle = minimapRotation
+	COMPASS:GetCustomProperty("W"):WaitForObject().rotationAngle = minimapRotation
+	COMPASS:GetCustomProperty("E"):WaitForObject().rotationAngle = minimapRotation
 
 	for _, mapPeice in ipairs(mapPeices) do
 		local mapPiecePos = Vector2.New(mapPeice.x, mapPeice.y)

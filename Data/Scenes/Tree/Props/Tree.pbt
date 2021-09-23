@@ -7676,35 +7676,6 @@ Objects {
   }
 }
 Objects {
-  Id: 16424921919641627131
-  Name: "Walls Example"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11128055803198055199
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Walls Example"
-  }
-}
-Objects {
   Id: 1033878217229401331
   Name: "Candle Sconce and Lights Props"
   Transform {

@@ -1169,38 +1169,6 @@ Objects {
   }
 }
 Objects {
-  Id: 15393860705899249997
-  Name: "Ground"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 413991195585998862
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Ground"
-  }
-}
-Objects {
   Id: 2322628983472884505
   Name: "Roll For Loot Example"
   Transform {
@@ -1230,6 +1198,7 @@ Objects {
           Vector {
             X: -4450
             Y: 850
+            Z: 25
           }
         }
         Overrides {
@@ -1259,6 +1228,7 @@ Objects {
     Location {
       X: -3680
       Y: 1390
+      Z: 25
     }
     Rotation {
     }
@@ -1297,7 +1267,7 @@ Objects {
     Location {
       X: -4300
       Y: -1185
-      Z: 30
+      Z: 55
     }
     Rotation {
     }
@@ -1618,7 +1588,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6269342187725287856
+  Id: 16792452335977354892
   Name: "Kill Zone"
   Transform {
     Location {
@@ -1634,8 +1604,8 @@ Objects {
     }
   }
   ParentId: 413991195585998862
-  ChildIds: 6202191793116170475
-  ChildIds: 4261340250641796324
+  ChildIds: 7828486389844232814
+  ChildIds: 9230677367560799450
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1652,7 +1622,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4261340250641796324
+  Id: 9230677367560799450
   Name: "KillZoneServer"
   Transform {
     Location {
@@ -1666,12 +1636,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6269342187725287856
+  ParentId: 16792452335977354892
   UnregisteredParameters {
     Overrides {
       Name: "cs:KillTrigger"
       ObjectReference {
-        SelfId: 6202191793116170475
+        SelfId: 7828486389844232814
       }
     }
   }
@@ -1691,12 +1661,10 @@ Objects {
   }
 }
 Objects {
-  Id: 6202191793116170475
+  Id: 7828486389844232814
   Name: "KillTrigger"
   Transform {
     Location {
-      X: -300
-      Y: -500
     }
     Rotation {
     }
@@ -1706,7 +1674,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6269342187725287856
+  ParentId: 16792452335977354892
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1733,6 +1701,7 @@ Objects {
   Name: "Walls"
   Transform {
     Location {
+      Z: 25
     }
     Rotation {
     }
@@ -1758,10 +1727,43 @@ Objects {
   }
 }
 Objects {
+  Id: 15393860705899249997
+  Name: "Floors"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 413991195585998862
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Floors"
+  }
+}
+Objects {
   Id: 14137583794138807727
   Name: "Dungeons"
   Transform {
     Location {
+      Z: 25
     }
     Rotation {
     }
@@ -1791,6 +1793,7 @@ Objects {
   Name: "Lobby"
   Transform {
     Location {
+      Z: 25
     }
     Rotation {
     }
@@ -1820,6 +1823,7 @@ Objects {
   Name: "Environment"
   Transform {
     Location {
+      Z: 25
     }
     Rotation {
     }

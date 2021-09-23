@@ -1,12 +1,12 @@
 Assets {
-  Id: 3834419092360705684
+  Id: 14757964095706494467
   Name: "FrameworkWallFantasy8Units"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5790252935561207272
+      RootId: 1682419990450115161
       Objects {
-        Id: 5790252935561207272
+        Id: 1682419990450115161
         Name: "FrameworkWallFantasy8Units"
         Transform {
           Scale {
@@ -16,6 +16,73 @@ Assets {
           }
         }
         ParentId: 4133531031245386448
+        ChildIds: 1491568207909370908
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:MinimapColor"
+            Color {
+              R: 0.100000024
+              G: 0.0456953757
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:WorldSize"
+            Vector {
+              X: 900
+              Y: 200
+              Z: 600
+            }
+          }
+          Overrides {
+            Name: "cs:MinimapColor:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MinimapColor:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:WorldSize:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:WorldSize:ml"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1491568207909370908
+        Name: "Wall"
+        Transform {
+          Location {
+            X: -400
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1682419990450115161
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"

@@ -4797,7 +4797,7 @@ Objects {
     Overrides {
       Name: "cs:MinimapPiece"
       AssetReference {
-        Id: 10153233922364320376
+        Id: 5932490240509755415
       }
     }
     Overrides {
