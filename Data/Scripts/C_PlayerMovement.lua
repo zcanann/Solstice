@@ -72,6 +72,8 @@ function OnMoveToLocation(goal, callback)
 
 	remainingWayPoints = wayPoints
 
+	Events.Broadcast("event_waypoints_set", remainingWayPoints, goal)
+
 	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
 		OnReachedDestination()
 	end

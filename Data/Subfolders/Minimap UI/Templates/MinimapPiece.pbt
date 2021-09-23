@@ -53,7 +53,7 @@ Assets {
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -65,5 +65,5 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 98
+  SerializationVersion: 100
 }

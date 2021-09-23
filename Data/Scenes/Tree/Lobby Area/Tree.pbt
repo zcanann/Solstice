@@ -1214,35 +1214,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8037784762316321770
-  Name: "Dungeon Teleporters"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3765684858975843531
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Dungeon Teleporters"
-  }
-}
-Objects {
   Id: 11128055803198055199
   Name: "Example Fantasy Props"
   Transform {

@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "An open safe"
   }
-  SerializationVersion: 98
+  SerializationVersion: 100
 }

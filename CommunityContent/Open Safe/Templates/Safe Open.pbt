@@ -642,6 +642,6 @@ Assets {
   Marketplace {
     Description: "An open safe"
   }
-  SerializationVersion: 98
+  SerializationVersion: 100
   DirectlyPublished: true
 }

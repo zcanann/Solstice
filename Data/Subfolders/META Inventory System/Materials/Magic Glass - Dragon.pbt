@@ -2,7 +2,7 @@ Assets {
   Id: 16004021301934768249
   Name: "Magic Glass - Dragon"
   PlatformAssetType: 13
-  SerializationVersion: 98
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 14065635217134112544
     ParameterOverrides {

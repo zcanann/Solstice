@@ -26,6 +26,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14675195575439506695
+  Name: "Kanji One"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Japan_Icon_034"
+  }
+}
+Assets {
   Id: 14263746284030313578
   Name: "Frame Outlined Thick 006"
   PlatformAssetType: 9
@@ -77,6 +86,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
+  }
+}
+Assets {
+  Id: 6383782300212002883
+  Name: "Crosshair 021"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Crosshair_021"
   }
 }
 Assets {

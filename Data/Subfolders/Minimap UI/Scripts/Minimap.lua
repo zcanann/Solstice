@@ -1,16 +1,26 @@
 --[[
-Minimap UI
+Circular Minimap
 v1.0
-by: standardcombo
+by: zcanann
 
-1. Place the Minimap UI template into your hierarchy.
-2. Edit the contents of the "3D" folder, to match the level design of your game.
-3. Use Plane 1m or World Text objects. For the Planes, only rotate them on Z or it will look incorrect.
+Setup:
+1. Place the Minimap UI template into your hierarchy. It is currently hard coded for Top-Right screen alignment.
+2. Update ParseMap() to search for objects that have a minimap representation.
+	a) Update these objects to have Width/Depth/Height custom properties
+
+Expert mode:
+- Some additional effort may be required if you intend to support mouse interaction. For example:
+	a) Create a MouseDispatcher.lua script that processes a mouse down event
+	b) Set _G.uiHitTest to false in this script
+	c) Broadcast "event_ui_mouse_down", passing in the mouse position, and a bool for left/right click.
+	d) The minimap will set _G.uiHitTest to true if it detects a click, and broadcast "event_move_to_location" with a Vector3
+		i) If click-to-move is supported, this event will need to be handled and passed to your Navmesh code
+	e) In MouseDispatcher.lua, check if _G.uiHitTest is false to determine whether to pass input through to the game
 
 Tips:
-- It's fast to get a rough minimap working, but fine tuning all the edges takes time and patience.
-- Change the color of the map elements by editing the "Tint" custom property on the 3D objects.
-- When not working on the minimap geometry, toggle its visibility and lock it in the hierarchy.
+- Avoid using large objects, as these could go outside of the minimap bounds before they can be culled
+- Avoid using more objects than necessary. A UI element is created for every one of them, so careful of performance
+- Use templates for everything that you want to be on the minimap, and assign these default Width/Depth/Height custom properties
 
 --]]
 
@@ -18,6 +28,7 @@ local ROOT = script.parent
 local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
 local LABEL_TEMPLATE = script:GetCustomProperty("MinimapLabel")
 local PLAYER_TEMPLATE = script:GetCustomProperty("MinimapPlayer")
+local WAYPOINTS_TEMPLATE = script:GetCustomProperty("MinimapWaypoints")
 
 local ROOT_PANEL = script:GetCustomProperty("RootPanel"):WaitForObject()
 local CONTENT_PANEL = script:GetCustomProperty("ContentPanel"):WaitForObject()
@@ -26,9 +37,13 @@ local ROTATION_ROOT = script:GetCustomProperty("RotationRoot"):WaitForObject()
 
 local minimapSize = ROOT_PANEL.width -- Assumed to have equal width and height
 local minimapCullDistance = minimapSize / 2.0 - 12.0
+local minimapMouseHitTestDistance = minimapSize / 2.0 - 24.0
 local scaleMin = 0.02
 local scaleMax = 0.05
 local scale = scaleMin
+
+local playerSize = Vector3.New(50.0, 50.0, 128.0)
+local waypointsSize = Vector3.New(24.0, 24.0, 24.0)
 
 local boundsLower = Vector3.New()
 local boundsUpper = Vector3.New()
@@ -36,115 +51,124 @@ local boundsDelta = Vector3.New()
 
 local mapPeices = { }
 
+local minimapWaypoints = nil
+
 function ParseMap()
 	local worldTexts = ROOT:FindDescendantsByType("WorldText")
 
 	-- Search for all framework pieces and add them to the minimap.
 	-- When new Framework pieces are added, they will need to be concated here.
-	local worldShapes = World.FindObjectsByName("FrameworkFloor8Units")
+	local worldShapeTable = {
+		World.FindObjectsByName("FrameworkFloor4Units"),
+		World.FindObjectsByName("FrameworkFloor8Units"),
+		World.FindObjectsByName("FrameworkWallFantasy8Units")
+	}
 	
 	-- Establish 3D bounds
-	for _,shape in ipairs(worldShapes) do
-		local pos = shape:GetWorldPosition()
-		local size = Vector3.New(
-			(shape:GetCustomProperty("Width") or 100) * shape:GetWorldScale().x,
-			(shape:GetCustomProperty("Height") or 100) * shape:GetWorldScale().y,
-			(shape:GetCustomProperty("Depth") or 100) * shape:GetWorldScale().z
-		)
-		local endPos = pos + size
-		
-		if (pos.x < boundsLower.x) then
-			boundsLower.x = pos.x
-		end
-		if (endPos.x > boundsUpper.x) then
-			boundsUpper.x = endPos.x
-		end
-		if (pos.y < boundsLower.y) then
-			boundsLower.y = pos.y
-		end
-		if (endPos.y > boundsUpper.y) then
-			boundsUpper.y = endPos.y
-		end
-		if (pos.z < boundsLower.z) then
-			boundsLower.z = pos.z
-		end
-		if (endPos.z > boundsUpper.z) then
-			boundsUpper.z = endPos.z
+	for _, worldShapes in ipairs(worldShapeTable) do
+		for _, shape in ipairs(worldShapes) do
+			local pos = shape:GetWorldPosition()
+			local size = shape:GetCustomProperty("WorldSize") or Vector3.New(100, 100, 100)
+			local endPos = pos + size
+			
+			if (pos.x < boundsLower.x) then
+				boundsLower.x = pos.x
+			end
+			if (endPos.x > boundsUpper.x) then
+				boundsUpper.x = endPos.x
+			end
+			if (pos.y < boundsLower.y) then
+				boundsLower.y = pos.y
+			end
+			if (endPos.y > boundsUpper.y) then
+				boundsUpper.y = endPos.y
+			end
+			if (pos.z < boundsLower.z) then
+				boundsLower.z = pos.z
+			end
+			if (endPos.z > boundsUpper.z) then
+				boundsUpper.z = endPos.z
+			end
 		end
 	end
 
 	boundsDelta = boundsUpper - boundsLower
 
 	-- Add 2D shapes to map
-	for _,shape in ipairs(worldShapes) do
-		local mapPiece = AddShapeToMiniMap(shape)
-		local baseColor = shape:GetCustomProperty("MinimapColor") or Color.WHITE
-		mapPiece:SetColor(baseColor)
-
-		table.insert(mapPeices, mapPiece)
+	for _, worldShapes in ipairs(worldShapeTable) do
+		for _,shape in ipairs(worldShapes) do
+			AddShapeToMiniMap(shape)
+		end
 	end
 
-	-- Labels
-	for _, text in ipairs(worldTexts) do
-		text.isEnabled = false
-		
-		local pos = text:GetWorldPosition()
-		local rot = text:GetWorldRotation()
-		local size = text:GetWorldScale() * 100
-		
-		local label = World.SpawnAsset(LABEL_TEMPLATE, {parent = CONTENT_PANEL})
-		
-		label.x = (pos.x - boundsLower.x) * scale
-		label.y = (pos.y - boundsUpper.y) * scale
-		
-		label.fontSize = size.z * scale * 0.15
-		
-		label.text = text.text
-		label:SetColor(text:GetColor())
-	end
+	-- Add waypoint manager to map
+	minimapWaypoints = World.SpawnAsset(WAYPOINTS_TEMPLATE, {parent = CONTENT_PANEL})
 end
 
 function AddShapeToMiniMap(shape)
+	local baseColor = shape:GetCustomProperty("MinimapColor") or Color.WHITE
 	local pos = shape:GetWorldPosition()
 	local rot = shape:GetWorldRotation()
-	local width = shape:GetCustomProperty("Width") * shape:GetWorldScale().x
-	local height = shape:GetCustomProperty("Height") * shape:GetWorldScale().y
+	local size = shape:GetCustomProperty("WorldSize") or Vector3.New(100, 100, 100)
+
+	local x = pos.x * scale
+	local y = pos.y * scale
+	local width = size.x * shape:GetWorldScale().x * scale
+	local height = size.y * shape:GetWorldScale().y * scale
 	
 	local mapPiece = World.SpawnAsset(MAP_PIECE_TEMPLATE, {parent = CONTENT_PANEL})
 	
-	mapPiece.x = pos.x * scale
-	mapPiece.y = pos.y * scale
-	local w = width * scale
-	local h = height * scale
-	mapPiece.width = CoreMath.Round(w)
-	mapPiece.height = CoreMath.Round(h)
+	mapPiece:SetColor(baseColor)
 	
-	mapPiece.rotationAngle = rot.z
+	PositionMapObject(mapPiece, x, y, width, height, rot.z, true)
 	
-	return mapPiece
+	table.insert(mapPeices, mapPiece)
+end
+
+function PositionMapObject(mapObject, x, y, width, height, rotation, updateSize)
+	mapObject.x = x
+	mapObject.y = y
+
+	if updateSize then
+		mapObject.width = CoreMath.Round(width)
+		mapObject.height = CoreMath.Round(height)
+	end
+
+	mapObject.rotationAngle = rotation
 end
 
 function Tick()
 	local localPlayer = Game.GetLocalPlayer()
 	local allPlayers = Game.GetPlayers()
-	
+	local localPlayerPosMapSpace = Vector2.New()
+
 	for _, player in ipairs(allPlayers) do
 		local indicator = GetIndicatorForPlayer(player)
 		indicator.visibility = Visibility.INHERIT
-		
+
 		local pos = player:GetWorldPosition()
-		indicator.x = pos.x * scale - minimapSize / 2.0
-		indicator.y = pos.y * scale - minimapSize / 2.0
+
+		local x = pos.x * scale
+		local y = pos.y * scale 
+		local width = playerSize.x * scale
+		local height = playerSize.y * scale
+
+		PositionMapObject(indicator, x, y, 0.0, 0.0, 0.0, false)
+
+		-- Scroll map to keep the local player centered
+		if (player == localPlayer) then 
+			CONTENT_PANEL.x = -pos.x * scale
+			CONTENT_PANEL.y = -pos.y * scale
+
+			localPlayerPosMapSpace.x = pos.x * scale
+			localPlayerPosMapSpace.y = pos.y * scale
+		end
 	end
-	
-	local pos = localPlayer:GetWorldPosition()
-	local posMapSpace = Vector2.New(pos.x * scale, pos.y * scale)
-	CONTENT_PANEL.x = -pos.x * scale + minimapSize / 2.0
-	CONTENT_PANEL.y = -pos.y * scale + minimapSize / 2.0
 
 	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
 	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
 	ROTATION_ROOT.rotationAngle = minimapRotation
+	minimapWaypoints.rotationAngle = -minimapRotation
 	COMPASS:GetCustomProperty("N"):WaitForObject().rotationAngle = -minimapRotation
 	COMPASS:GetCustomProperty("S"):WaitForObject().rotationAngle = -minimapRotation
 	COMPASS:GetCustomProperty("W"):WaitForObject().rotationAngle = -minimapRotation
@@ -152,7 +176,7 @@ function Tick()
 
 	for _, mapPeice in ipairs(mapPeices) do
 		local mapPiecePos = Vector2.New(mapPeice.x, mapPeice.y)
-		local distance = (mapPiecePos - posMapSpace).size
+		local distance = (mapPiecePos - localPlayerPosMapSpace).size
 		
 		if distance < minimapCullDistance then
 			mapPeice.visibility = Visibility.INHERIT
@@ -191,8 +215,8 @@ function OnMouseDown(cursorPosition, primary)
 		-(cursorPosition.y - ROOT_PANEL.y - minimapSize / 2.0)
 	)
 	
-	if minimapClickCoords.size < minimapSize then
-		print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
+	if minimapClickCoords.size < minimapMouseHitTestDistance then
+		-- print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
         _G.uiHitTest = true
 
 		local localPlayer = Game.GetLocalPlayer()
@@ -207,12 +231,18 @@ function OnMouseDown(cursorPosition, primary)
 			(unscaledCoords.x * math.cos(rotation)) - (unscaledCoords.y * math.sin(rotation)) + pos.y,
 			pos.z
 		)
-		
-		print(worldCoords)
+
 		Events.Broadcast("event_move_to_location", worldCoords)
 	end
 end
 
-ParseMap()
+function OnWaypointsSet(remainingWayPoints, goal)
+	local x = goal.x * scale
+	local y = goal.y * scale
 
-Events.Connect("event_ui_mouse_down", function(cursorPosition, primary) OnMouseDown(cursorPosition, primary) end)
+	PositionMapObject(minimapWaypoints, x, y, waypointsSize.x, waypointsSize.y, 0.0, false)
+end
+
+Events.Connect("event_waypoints_set", OnWaypointsSet)
+Events.Connect("event_ui_mouse_down", OnMouseDown)
+ParseMap()

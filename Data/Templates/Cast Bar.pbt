@@ -399,5 +399,5 @@ Assets {
       AssetId: "Cast_Bar"
     }
   }
-  SerializationVersion: 98
+  SerializationVersion: 100
 }

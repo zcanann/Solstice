@@ -2,7 +2,7 @@ Assets {
   Id: 11237267171393895703
   Name: "Virtual Folders"
   PlatformAssetType: 30
-  SerializationVersion: 98
+  SerializationVersion: 100
   VirtualFolderSetAsset {
     Folders {
       VirtualFolderPath: "Inventory"
@@ -75,6 +75,14 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Engagement"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Minimap"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Minimap"
       PlatformAssetType: 3
     }
   }

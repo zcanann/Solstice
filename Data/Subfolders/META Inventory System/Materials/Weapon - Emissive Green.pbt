@@ -2,7 +2,7 @@ Assets {
   Id: 12909708546458508838
   Name: "Weapon - Emissive Green"
   PlatformAssetType: 13
-  SerializationVersion: 98
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 18280303351516875622
     ParameterOverrides {

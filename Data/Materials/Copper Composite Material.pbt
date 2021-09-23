@@ -2,7 +2,7 @@ Assets {
   Id: 14041097035908655724
   Name: "Copper Composite Material"
   PlatformAssetType: 13
-  SerializationVersion: 98
+  SerializationVersion: 100
   VirtualFolderPath: "Jordans Materials "
   CustomMaterialAsset {
     BaseMaterialId: 17752943452224290169

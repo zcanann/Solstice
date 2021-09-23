@@ -2,7 +2,7 @@ Assets {
   Id: 12781634090319093917
   Name: "A Ice Door"
   PlatformAssetType: 13
-  SerializationVersion: 98
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 12632507981936281004
     ParameterOverrides {

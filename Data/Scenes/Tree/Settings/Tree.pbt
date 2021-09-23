@@ -935,7 +935,7 @@ Objects {
     }
     Rotation {
       Pitch: -65
-      Yaw: 45
+      Yaw: 270
     }
     Scale {
       X: 1
@@ -1143,6 +1143,9 @@ Objects {
       }
       PlayerInteractDistance: 500
       PlayerInteractAngleDeg: 50
+      PlayerStorageMode {
+        Value: "mc:eplayerstoragemode:none"
+      }
     }
   }
 }

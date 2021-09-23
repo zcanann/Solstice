@@ -18,7 +18,7 @@ Assets {
 }
 Assets {
   Id: 17712336256563670159
-  Name: "Frame SciFi Empty 001"
+  Name: "Frame Sci-Fi Empty 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"

@@ -9777,6 +9777,6 @@ Assets {
   Marketplace {
     Description: "A simple module of a prison cell.\r\n(you can open the door by rotanting the \"Door\" group)"
   }
-  SerializationVersion: 98
+  SerializationVersion: 100
   DirectlyPublished: true
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 10720196711171784801
   Name: "Kustom ArmourSet1 Coloured Metal Trim"
   PlatformAssetType: 13
-  SerializationVersion: 98
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 12610911751312903656
     ParameterOverrides {

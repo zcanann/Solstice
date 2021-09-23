@@ -2,7 +2,7 @@ Assets {
   Id: 11303206993466773028
   Name: "Custom Base Material from Skeleton Mob"
   PlatformAssetType: 13
-  SerializationVersion: 98
+  SerializationVersion: 100
   CustomMaterialAsset {
     BaseMaterialId: 12125245193133919026
     ParameterOverrides {
