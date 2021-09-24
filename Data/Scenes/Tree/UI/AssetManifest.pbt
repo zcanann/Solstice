@@ -17,12 +17,12 @@ Assets {
   }
 }
 Assets {
-  Id: 16241833908851998054
-  Name: "BG Flat 001"
+  Id: 16774145541072422876
+  Name: "Icon Globe"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_020"
+    AssetId: "Icon_Globe"
   }
 }
 Assets {
@@ -32,15 +32,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Japan_Icon_034"
-  }
-}
-Assets {
-  Id: 14263746284030313578
-  Name: "Frame Outlined Thick 006"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameFlat_015"
   }
 }
 Assets {
@@ -62,12 +53,30 @@ Assets {
   }
 }
 Assets {
-  Id: 11757390778361009318
-  Name: "Icon Profile"
+  Id: 10277004524862014404
+  Name: "Boot"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Profile"
+    AssetId: "UI_Fantasy_icon_Boot"
+  }
+}
+Assets {
+  Id: 8856516203570922083
+  Name: "4 Point Star"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_020"
+  }
+}
+Assets {
+  Id: 8318873398498523867
+  Name: "Center Arrow 009 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_009Wedge"
   }
 }
 Assets {
@@ -80,15 +89,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6724534832103276994
-  Name: "BG Flat 006"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_015"
-  }
-}
-Assets {
   Id: 6383782300212002883
   Name: "Crosshair 021"
   PlatformAssetType: 9
@@ -98,20 +98,11 @@ Assets {
   }
 }
 Assets {
-  Id: 4552358607982218655
-  Name: "Fantasy Coins 007"
+  Id: 1285653368607626957
+  Name: "Icon Health"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Equip_Coins_007"
-  }
-}
-Assets {
-  Id: 2764905514123890102
-  Name: "Frame Outlined 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameSolid4px_020"
+    AssetId: "Icon_Health"
   }
 }

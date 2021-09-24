@@ -166,6 +166,7 @@ function Tick()
 	local allPlayers = Game.GetPlayers()
 	local localPlayerPosMapSpace = Vector2.New()
 	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
+	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
 
 	for _, player in ipairs(allPlayers) do
 		local indicator = GetIndicatorForPlayer(player)
@@ -206,16 +207,16 @@ function Tick()
 		
 		if distance < minimapCullDistance then
 			mapObject.visibility = Visibility.INHERIT
+			mapObject.rotationAngle = minimapRotation
 		else
 			mapObject.visibility = Visibility.FORCE_OFF
 		end
 	end
 
-	UpdateCompassRotations(cameraRotation)
+	UpdateCompassRotations(minimapRotation)
 end
 
-function UpdateCompassRotations(cameraRotation)
-	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
+function UpdateCompassRotations(minimapRotation)
 
 	ROTATION_ROOT.rotationAngle = -minimapRotation
 	minimapWaypoints.rotationAngle = minimapRotation

@@ -48,11 +48,7 @@ Objects {
   ParentId: 9346513658995579516
   UnregisteredParameters {
     Overrides {
-      Name: "cs:BaseSpeed"
-      Float: 600
-    }
-    Overrides {
-      Name: "cs:SlowWalkModifier"
+      Name: "cs:CinematicWalkModifier"
       Float: 0.5
     }
     Overrides {
@@ -64,19 +60,11 @@ Objects {
       Float: 0.4
     }
     Overrides {
-      Name: "cs:BaseSpeed:isrep"
+      Name: "cs:CinematicWalkModifier:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:BaseSpeed:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:SlowWalkModifier:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:SlowWalkModifier:ml"
+      Name: "cs:CinematicWalkModifier:ml"
       Bool: false
     }
   }

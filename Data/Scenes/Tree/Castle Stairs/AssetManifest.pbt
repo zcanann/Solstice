@@ -35,15 +35,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16626931919023374994
-  Name: "Stair Bannister - Mid"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_bannister_001_stair_mid_ref"
-  }
-}
-Assets {
   Id: 15240646233324917545
   Name: "Fantasy Castle Stairs Spiral Trim 01 - Small"
   PlatformAssetType: 1
@@ -71,30 +62,12 @@ Assets {
   }
 }
 Assets {
-  Id: 13895290989889815401
-  Name: "Stair Bannister - Bottom"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_bannister_001_stair_bottom_ref"
-  }
-}
-Assets {
   Id: 13373836452886753359
   Name: "Fantasy Castle Stairs 01 - 150cm Corner 03"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_stairs_001_150cm_corner03"
-  }
-}
-Assets {
-  Id: 9842143421296066252
-  Name: "Fantasy Castle Stairs 01 - 150cm"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_stairs_001_150cm"
   }
 }
 Assets {
@@ -140,15 +113,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_fan_cas_bannister_001_spiral"
-  }
-}
-Assets {
-  Id: 5690610490455183775
-  Name: "Stair Bannister - Top"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_fan_cas_bannister_001_stair_top_ref"
   }
 }
 Assets {

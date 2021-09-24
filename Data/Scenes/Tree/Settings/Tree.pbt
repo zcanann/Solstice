@@ -935,7 +935,7 @@ Objects {
     }
     Rotation {
       Pitch: -65
-      Yaw: 270
+      Yaw: 90
     }
     Scale {
       X: 1
@@ -1005,7 +1005,7 @@ Objects {
   Settings {
     IsDefault: true
     PlayerMovementSettings {
-      WalkSpeed: 640
+      WalkSpeed: 450
       MaxAcceleration: 1800
       WalkableFloorAngle: 50
       GroundFriction: 8
