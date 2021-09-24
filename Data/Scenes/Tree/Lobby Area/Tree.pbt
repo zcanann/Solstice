@@ -1,38 +1,6 @@
 Name: "Lobby Area"
 RootId: 3765684858975843531
 Objects {
-  Id: 6007349840065099166
-  Name: "World Labels"
-  Transform {
-    Location {
-      X: -3500
-      Y: 200
-      Z: 550
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3765684858975843531
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "World Labels"
-  }
-}
-Objects {
   Id: 10148370315779191624
   Name: "Wall"
   Transform {

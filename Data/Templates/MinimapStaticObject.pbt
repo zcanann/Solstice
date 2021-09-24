@@ -1,6 +1,6 @@
 Assets {
   Id: 10153233922364320376
-  Name: "MinimapPiece"
+  Name: "MinimapStaticObject"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

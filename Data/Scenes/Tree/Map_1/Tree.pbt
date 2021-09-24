@@ -47,7 +47,7 @@ Objects {
 }
 Objects {
   Id: 17298821803215545407
-  Name: "Vault"
+  Name: "FrameworkVault"
   Transform {
     Location {
       X: -4345
@@ -64,7 +64,7 @@ Objects {
   }
   ParentId: 413991195585998862
   ChildIds: 14086855849380143964
-  ChildIds: 1554159627227229673
+  ChildIds: 7031095299202834795
   ChildIds: 3639970307842488502
   UnregisteredParameters {
     Overrides {
@@ -112,6 +112,12 @@ Objects {
     Overrides {
       Name: "cs:BackpackSlotCount"
       Int: 44
+    }
+    Overrides {
+      Name: "cs:MinimapIconTemplate"
+      AssetReference {
+        Id: 6468548784570621292
+      }
     }
     Overrides {
       Name: "cs:Interactable:isrep"
@@ -240,6 +246,37 @@ Objects {
   }
 }
 Objects {
+  Id: 7031095299202834795
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17298821803215545407
+  ChildIds: 1554159627227229673
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
   Id: 1554159627227229673
   Name: "C_Interactable"
   Transform {
@@ -253,7 +290,7 @@ Objects {
       Z: 1.4285717
     }
   }
-  ParentId: 17298821803215545407
+  ParentId: 7031095299202834795
   ChildIds: 12056490609589331565
   ChildIds: 2015510013727283136
   UnregisteredParameters {

@@ -75,7 +75,6 @@ Assets {
           Location {
             X: -200
             Y: 200
-            Z: 25
           }
           Rotation {
           }

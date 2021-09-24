@@ -3538,10 +3538,10 @@ Objects {
     }
   }
   ParentId: 4275955334696048526
-  ChildIds: 1191098332182554658
   ChildIds: 14359060790454029745
   ChildIds: 2587382974214932426
   ChildIds: 15297214150030308949
+  ChildIds: 1191098332182554658
   ChildIds: 11651828992703455502
   ChildIds: 14420781218232388084
   Collidable_v2 {
@@ -4243,6 +4243,78 @@ Objects {
   }
 }
 Objects {
+  Id: 1191098332182554658
+  Name: "Edges"
+  Transform {
+    Location {
+      X: 1344.06848
+      Y: 9864.89844
+      Z: -5620
+    }
+    Rotation {
+      Yaw: 90.0000153
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4509565000008892036
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 265
+    Height: 265
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 11844995175334125520
+      }
+      Color {
+        R: 0.125490203
+        G: 0.125490203
+        B: 0.125490203
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 15297214150030308949
   Name: "ContentPanel"
   Transform {
@@ -4675,78 +4747,6 @@ Objects {
       Color {
         R: 0.25
         G: 0.089403972
-        A: 1
-      }
-      TeamSettings {
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-      ScreenshotIndex: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 1191098332182554658
-  Name: "Edges"
-  Transform {
-    Location {
-      X: 1344.06848
-      Y: 9864.89844
-      Z: -5620
-    }
-    Rotation {
-      Yaw: 90.0000153
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4509565000008892036
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 265
-    Height: 265
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 11844995175334125520
-      }
-      Color {
-        R: 0.125490203
-        G: 0.125490203
-        B: 0.125490203
         A: 1
       }
       TeamSettings {

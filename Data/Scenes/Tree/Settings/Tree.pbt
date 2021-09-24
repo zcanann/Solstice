@@ -1005,7 +1005,7 @@ Objects {
   Settings {
     IsDefault: true
     PlayerMovementSettings {
-      WalkSpeed: 750
+      WalkSpeed: 640
       MaxAcceleration: 1800
       WalkableFloorAngle: 50
       GroundFriction: 8

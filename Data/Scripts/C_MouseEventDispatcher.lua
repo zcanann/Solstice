@@ -14,6 +14,10 @@ function TryInteractRecursive(target, primary)
 
     local interactScript = interaction:GetObject()
         if interactScript ~= nil then
+            if interactScript.context == nil then
+                warn("Interaction script not in client context")
+                return true
+            end
             if primary then
                 interactScript.context:Interact()
                 return true
