@@ -151,6 +151,9 @@ local function SetupControl(control, processSlot)
         if control:GetCustomProperty("Disabled") then
             control.clientUserData.disabled = control:GetCustomProperty("Disabled"):WaitForObject()
         end
+        if control:GetCustomProperty("Preview") then
+            control.clientUserData.preview = control:GetCustomProperty("Preview"):WaitForObject()
+        end
         if control:GetCustomProperty("CooldownBar") then
             control.clientUserData.cooldownBar = control:GetCustomProperty("CooldownBar"):WaitForObject()
         end
@@ -841,6 +844,13 @@ function view:DrawSlots()
             local rarityColor = ItemThemes.GetRarityColor(item:GetRarity())
             slot.clientUserData.item = item
             slot.clientUserData.icon.visibility = Visibility.INHERIT
+            if slot.clientUserData.preview then
+                if slot.clientUserData.icon:GetImage() == nil then
+                    slot.clientUserData.preview.visibility = Visibility.INHERIT
+                else
+                    slot.clientUserData.preview.visibility = Visibility.FORCE_OFF
+                end
+            end
             item:ApplyIconImageSettings(slot.clientUserData.icon)
             slot.clientUserData.gradient.visibility = Visibility.INHERIT
             slot.clientUserData.gradientColored:SetColor(rarityColor)
