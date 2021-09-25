@@ -11,7 +11,6 @@ local CONTAINER_VIEW = script:GetCustomProperty("ContainerView"):WaitForObject()
 local UPGRADES_VIEW = script:GetCustomProperty("UpgradesView"):WaitForObject() 
 local PLAYER_NAME = script:GetCustomProperty("PlayerName"):WaitForObject()
 local PLAYER_ICON = script:GetCustomProperty("PlayerIcon"):WaitForObject()
-local PLAYER_LEVEL = script:GetCustomProperty("PlayerLevel"):WaitForObject()
 local PLAYER_LEVEL_PROGRESS = script:GetCustomProperty("PlayerLevelProgress"):WaitForObject()
 local PANEL_STATS = script:GetCustomProperty("StatsPanel"):WaitForObject()
 local PANEL_EQUIPPED = script:GetCustomProperty("EquippedSlotsPanel"):WaitForObject()
@@ -47,10 +46,6 @@ local statSheet = LOCAL_PLAYER.clientUserData.statSheet
 
 -- Players current level
 local currentLevel = nil
-
------------------------------------------------------------------------------------------------------------------
-PLAYER_NAME.text = LOCAL_PLAYER.name
-PLAYER_ICON:SetPlayerProfile(LOCAL_PLAYER)
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -232,6 +227,11 @@ end
 -----------------------------------------------------------------------------------------------------------------
 function view:InitStats()
     self.statElements = {}
+    
+    if true then
+        return
+    end
+
     for _,statElement in ipairs(PANEL_STATS:GetChildren()) do
         local statName = statElement.name
         self.statElements[statName] = statElement
@@ -793,8 +793,6 @@ end
 function view:UpdatePlayerInfo()
     local playerLevel = statSheet:GetLevel()
     local playerLevelProgress = statSheet:GetLevelProgress()
-    PLAYER_LEVEL.text = tostring(playerLevel)
-    PLAYER_LEVEL_PROGRESS.progress = playerLevelProgress
 end
 
 function view:Draw()
@@ -1082,6 +1080,7 @@ function view:DrawHoverInfo()
 end
 
 function view:DrawHoverStatCompare()
+    if true then return end
     if self.isCursorInContainer then return end
     -- Lazy initialize a set of modifiers used to test out our hypothetical weapon swap.
     if not self.previewModifiers then

@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17363439490171859196
+  Name: "Tiled Moss 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_TiledBG_048"
+  }
+}
+Assets {
   Id: 16967025786036962869
   Name: "BG Highlighted 001"
   PlatformAssetType: 9
@@ -68,15 +77,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameFlat_024"
-  }
-}
-Assets {
-  Id: 16774145541072422876
-  Name: "Icon Globe"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Globe"
   }
 }
 Assets {
@@ -116,15 +116,6 @@ Assets {
   }
 }
 Assets {
-  Id: 16471580195087108593
-  Name: "Frame Outlined 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "FrameSolid4px_020"
-  }
-}
-Assets {
   Id: 14919473863846089207
   Name: "Sci-fi Frame 001"
   PlatformAssetType: 9
@@ -152,6 +143,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14627714922481044744
+  Name: "Icon Gear"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Gear"
+  }
+}
+Assets {
   Id: 13827917162168388463
   Name: "UI Basic Frame 001"
   PlatformAssetType: 9
@@ -167,6 +167,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
+  Id: 13699762962356292329
+  Name: "Good"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_037"
   }
 }
 Assets {
@@ -224,12 +233,21 @@ Assets {
   }
 }
 Assets {
-  Id: 11636672077374519341
-  Name: "BG Flat 006"
+  Id: 11212093527265089718
+  Name: "Award"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "BackgroundNoOutline_015"
+    AssetId: "UI_Military_Icon_036"
+  }
+}
+Assets {
+  Id: 10866901117178208043
+  Name: "Glove"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Glove"
   }
 }
 Assets {
@@ -257,6 +275,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Close"
+  }
+}
+Assets {
+  Id: 8856516203570922083
+  Name: "4 Point Star"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_020"
   }
 }
 Assets {
@@ -323,15 +350,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6484258332314574972
-  Name: "Icon Profile"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Profile"
-  }
-}
-Assets {
   Id: 6382792620031146827
   Name: "Cabin"
   PlatformAssetType: 28
@@ -347,6 +365,33 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "FrameFlat_019"
+  }
+}
+Assets {
+  Id: 5529463789140125893
+  Name: "Frame Beveled 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px_020"
+  }
+}
+Assets {
+  Id: 4997351924095112724
+  Name: "Pants"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Urban_Icon_049"
+  }
+}
+Assets {
+  Id: 3682859935535928976
+  Name: "Banner"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Banner"
   }
 }
 Assets {
@@ -422,12 +467,30 @@ Assets {
   }
 }
 Assets {
+  Id: 395466967205543460
+  Name: "Planet"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_017"
+  }
+}
+Assets {
   Id: 242686649107475491
   Name: "Fantasy Craft Bar 003"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Crafting_Bar_003"
+  }
+}
+Assets {
+  Id: 163434024459759144
+  Name: "Japanese Frame 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Japan_Frame_005"
   }
 }
 Assets {

@@ -2,7 +2,7 @@ Name: "Chat"
 RootId: 4016812153014197255
 Objects {
   Id: 5114926172174919196
-  Name: "UI Container"
+  Name: "ChatUIContainer"
   Transform {
     Location {
       X: -3700
