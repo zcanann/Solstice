@@ -1211,35 +1211,6 @@ Objects {
   }
 }
 Objects {
-  Id: 7784830314711773274
-  Name: "Gameplay Objects"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3765684858975843531
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Gameplay Objects"
-  }
-}
-Objects {
   Id: 9610952875632508300
   Name: "Spawn Pad Geo"
   Transform {

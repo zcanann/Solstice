@@ -535,9 +535,9 @@ Objects {
   Name: "Portcullis"
   Transform {
     Location {
-      X: -250
-      Y: -100
-      Z: -1225
+      X: -249.999863
+      Y: -99.9987183
+      Z: -824.999756
     }
     Rotation {
       Yaw: -179.999954

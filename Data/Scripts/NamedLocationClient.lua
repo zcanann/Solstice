@@ -45,7 +45,7 @@ end
 -- Fires the LocationExited event
 function OnEndOverlap(trigger, other)
     if other:IsA("Player") then
-        Events.Broadcast("LocationExited", other, LOCATION_PROPERTIES)
+        -- Events.Broadcast("LocationExited", other, LOCATION_PROPERTIES)
     end
 end
 

@@ -1,2 +1,2 @@
-function Tick()
-end
+-- Nothing yet
+-- Can potentially add other keybind support here

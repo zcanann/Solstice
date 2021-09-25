@@ -38,8 +38,7 @@ function AddStamina(player, amount)
 end
 
 function GetPlayerMovementState(player)
-	local playerData = Storage.GetPlayerData(player)
-	return playerData[storageKeyMovementState] or movementStateEnum.Run
+	return Storage.GetPlayerData(player)[storageKeyMovementState] or movementStateEnum.Run
 end
 
 function SetPlayerMovementState(player, movementState)
@@ -82,7 +81,7 @@ end
 
 function OnJoin(player)
 	baseMovementSpeed = player.maxWalkSpeed
-	RequestWalk(player)
+	UpdateWalkState(player, GetPlayerMovementState(player))
 	SendMovementState(player)
 end
 

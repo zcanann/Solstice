@@ -34,15 +34,18 @@ local popupTime = 0.0
 -- Handles the LocationEntered event and updates UI
 function OnLocationEntered(player, properties)
     if player == Game.GetLocalPlayer() then
-        POPUP_PANEL.visibility = Visibility.INHERIT
-        POPUP_TEXT.text = properties.name
-        POPUP_TEXT:SetColor(properties.textColor)
-        POPUP_BACKGROUND:SetColor(properties.backgroundColor)
+        -- Only show popup when receiving a new name
+        if POPUP_TEXT.text ~= properties.name then
+            POPUP_PANEL.visibility = Visibility.INHERIT
+            POPUP_TEXT.text = properties.name
+            POPUP_TEXT:SetColor(properties.textColor)
+            POPUP_BACKGROUND:SetColor(properties.backgroundColor)
+            popupTime = time()
+        end
         STATIC_PANEL.visibility = Visibility.INHERIT
         STATIC_TEXT.text = properties.name
         STATIC_TEXT:SetColor(properties.textColor)
         STATIC_BACKGROUND:SetColor(properties.backgroundColor)
-        popupTime = time()
     end
 end
 

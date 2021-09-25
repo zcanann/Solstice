@@ -1113,10 +1113,10 @@ Objects {
       }
       VoiceChatSettings {
         VoiceChatMode {
-          Value: "mc:evoicechatmode:none"
+          Value: "mc:evoicechatmode:all"
         }
         VoiceChannelType {
-          Value: "mc:evoicechanneltype:normal"
+          Value: "mc:evoicechanneltype:positional"
         }
         AudibleDistance: 6000
         ConversationalDistance: 1500
@@ -1125,11 +1125,11 @@ Objects {
         }
         AudioFadeIntensityByDistance: 1
         VoiceChatPosition {
-          X: -40
+          X: 40
           Y: 40
         }
         VoiceChatHorizontalAlignment {
-          Value: "mc:ecorehorizontalalign:right"
+          Value: "mc:ecorehorizontalalign:left"
         }
         VoiceChatVerticalAlignment {
           Value: "mc:ecoreverticalalign:top"

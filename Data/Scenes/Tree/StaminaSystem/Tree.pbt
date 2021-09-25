@@ -48,24 +48,8 @@ Objects {
   ParentId: 9346513658995579516
   UnregisteredParameters {
     Overrides {
-      Name: "cs:CinematicWalkModifier"
-      Float: 0.5
-    }
-    Overrides {
       Name: "cs:RunModifier"
       Float: 1.75
-    }
-    Overrides {
-      Name: "cs:CrouchModifier"
-      Float: 0.4
-    }
-    Overrides {
-      Name: "cs:CinematicWalkModifier:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:CinematicWalkModifier:ml"
-      Bool: false
     }
   }
   Collidable_v2 {

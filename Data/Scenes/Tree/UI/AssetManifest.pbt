@@ -53,24 +53,6 @@ Assets {
   }
 }
 Assets {
-  Id: 10277004524862014404
-  Name: "Boot"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_icon_Boot"
-  }
-}
-Assets {
-  Id: 8856516203570922083
-  Name: "4 Point Star"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Icon_020"
-  }
-}
-Assets {
   Id: 8318873398498523867
   Name: "Center Arrow 009 Wedge"
   PlatformAssetType: 9
@@ -95,14 +77,5 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Crosshair_021"
-  }
-}
-Assets {
-  Id: 1285653368607626957
-  Name: "Icon Health"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Health"
   }
 }

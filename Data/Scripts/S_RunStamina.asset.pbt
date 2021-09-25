@@ -1,6 +1,6 @@
 Assets {
   Id: 40802395755545229
-  Name: "S_MovementSpeed"
+  Name: "S_RunStamina"
   PlatformAssetType: 3
   TextAsset {
   }
