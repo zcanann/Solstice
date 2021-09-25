@@ -19,7 +19,6 @@ Objects {
   ChildIds: 16844910628275373465
   ChildIds: 1495303198340745656
   ChildIds: 413991195585998862
-  ChildIds: 4428202362462311638
   ChildIds: 14835597197122365881
   ChildIds: 13033932876208865719
   ChildIds: 6568100310357589514
@@ -226,48 +225,6 @@ Objects {
         LinearDamping: 0.01
       }
       BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 4428202362462311638
-  Name: "MinimapBank"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13851484905233708050
-      value {
-        Overrides {
-          Name: "Name"
-          String: "MinimapBank"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 6468548784570621292
     }
   }
 }

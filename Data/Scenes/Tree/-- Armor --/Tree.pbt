@@ -28,12 +28,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "-- Chest --"
   }
-  InstanceHistory {
-    SelfId: 8861914088214090298
-    SubobjectId: 17076599954397618326
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 10314627301542855688
@@ -62,12 +56,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "-- Boots --"
-  }
-  InstanceHistory {
-    SelfId: 10314627301542855688
-    SubobjectId: 1811423581017978532
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }
 Objects {
@@ -98,12 +86,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "-- Trinkets --"
   }
-  InstanceHistory {
-    SelfId: 9563254494727486548
-    SubobjectId: 1346597782910537464
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 7007862493069792551
@@ -132,11 +114,5 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "-- Helms --"
-  }
-  InstanceHistory {
-    SelfId: 7007862493069792551
-    SubobjectId: 17818350127369217931
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }

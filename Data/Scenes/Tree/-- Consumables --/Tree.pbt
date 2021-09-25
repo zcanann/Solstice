@@ -104,12 +104,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 12803261452974710898
-    SubobjectId: 2858027313849160414
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 7904754691253174314
@@ -210,12 +204,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 7904754691253174314
-    SubobjectId: 18137339600457839238
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }
 Objects {
@@ -318,12 +306,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 11095520297385082418
-    SubobjectId: 1151978310001200286
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 17894282803056477143
@@ -424,11 +406,5 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17894282803056477143
-    SubobjectId: 7949646782315999611
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }

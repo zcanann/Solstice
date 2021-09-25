@@ -91,12 +91,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 10954154912259785006
-    SubobjectId: 1009768513768649602
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 1011803337680288710
@@ -129,12 +123,6 @@ Objects {
   NetworkContext {
     Type: RuntimeStatic
   }
-  InstanceHistory {
-    SelfId: 1011803337680288710
-    SubobjectId: 10956473949045213546
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 10810507103102806354
@@ -163,12 +151,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 10810507103102806354
-    SubobjectId: 334427310922750
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }
 Objects {
@@ -223,11 +205,5 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 3047577373745872991
-    SubobjectId: 13568424004748948211
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }

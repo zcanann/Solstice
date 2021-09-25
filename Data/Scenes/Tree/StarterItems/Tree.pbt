@@ -51,12 +51,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "StarterSword"
   }
-  InstanceHistory {
-    SelfId: 14819171473704836009
-    SubobjectId: 6606735810749458693
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 1221241057617898534
@@ -116,11 +110,5 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "GoldGems"
-  }
-  InstanceHistory {
-    SelfId: 1221241057617898534
-    SubobjectId: 9724725709942447754
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }

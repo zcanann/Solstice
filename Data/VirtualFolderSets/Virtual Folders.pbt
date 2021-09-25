@@ -85,5 +85,13 @@ Assets {
       VirtualFolderPath: "Minimap"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Movement"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "NPCs"
+      PlatformAssetType: 5
+    }
   }
 }

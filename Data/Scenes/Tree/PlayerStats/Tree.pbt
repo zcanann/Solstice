@@ -29,12 +29,6 @@ Objects {
       Id: 13960119017282890687
     }
   }
-  InstanceHistory {
-    SelfId: 12456004539219940711
-    SubobjectId: 4240997655537133515
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 12405085781072359339
@@ -62,12 +56,6 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 12405085781072359339
-    SubobjectId: 4188388391660068103
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }
 Objects {
@@ -113,12 +101,6 @@ Objects {
       Id: 16534370939253226781
     }
   }
-  InstanceHistory {
-    SelfId: 17958518904753655630
-    SubobjectId: 8016102824858303970
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 2039231732555782647
@@ -157,12 +139,6 @@ Objects {
       Id: 1144358849606408591
     }
   }
-  InstanceHistory {
-    SelfId: 2039231732555782647
-    SubobjectId: 9965160525411429211
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 16279286217334230443
@@ -190,11 +166,5 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 16279286217334230443
-    SubobjectId: 8641341535835340551
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }

@@ -98,10 +98,4 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 14624426386063288699
-    SubobjectId: 6697966002060352471
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }

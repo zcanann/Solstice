@@ -1,6 +1,6 @@
 Assets {
   Id: 7620112251667052815
-  Name: "Level Up VFX"
+  Name: "MovementVFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -148,4 +148,5 @@ Assets {
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "Movement"
 }

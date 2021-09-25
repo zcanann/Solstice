@@ -1,6 +1,64 @@
 Name: "Floors"
 RootId: 15393860705899249997
 Objects {
+  Id: 8572161055393545208
+  Name: "FrameworkFloor8Units"
+  Transform {
+    Location {
+      X: -2800
+      Y: 400
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15393860705899249997
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2806421928153611805
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkFloor8Units"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -3600
+            Y: 400
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3731727043121398885
+    }
+  }
+}
+Objects {
   Id: 6588716007360281161
   Name: "FrameworkFloor8Units"
   Transform {
@@ -8584,63 +8642,6 @@ Objects {
             G: 0.694117665
             B: 0.905882418
             A: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3731727043121398885
-    }
-  }
-}
-Objects {
-  Id: 752317943696222611
-  Name: "FrameworkFloor8Units"
-  Transform {
-    Location {
-      X: -2400
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15393860705899249997
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 2806421928153611805
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkFloor8Units"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -3600
-            Y: 400
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }

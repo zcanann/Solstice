@@ -87,4 +87,5 @@ Assets {
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "NPCs"
 }

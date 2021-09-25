@@ -28,12 +28,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "-- Currency --"
   }
-  InstanceHistory {
-    SelfId: 4890889028967796763
-    SubobjectId: 15409206240843047607
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 14460733021225555591
@@ -132,12 +126,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 14460733021225555591
-    SubobjectId: 6821065397618123819
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }
 Objects {
@@ -238,12 +226,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 4713880842347479583
-    SubobjectId: 15522926469464567987
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 18119267010729825713
@@ -342,12 +324,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 18119267010729825713
-    SubobjectId: 7886651355003414301
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }
 Objects {
@@ -448,12 +424,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 9130865946549157140
-    SubobjectId: 16767122365490417592
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
-  }
 }
 Objects {
   Id: 2509962796249451361
@@ -552,11 +522,5 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 2509962796249451361
-    SubobjectId: 13029686792518941133
-    InstanceId: 16669426050102956743
-    TemplateId: 230646110503003734
   }
 }
