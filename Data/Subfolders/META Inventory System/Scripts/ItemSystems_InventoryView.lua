@@ -4,19 +4,17 @@
     Handles all the interactions between the player and the inventory.
 ]]
 
+local Framework = require(script:GetCustomProperty("Framework"))
+
 local ItemThemes = require(script:GetCustomProperty("ItemSystems_ItemThemes"))
 local ItemDatabase = require(script:GetCustomProperty("ItemSystems_Database"))
 local INVENTORY_VIEW = script:GetCustomProperty("InventoryView"):WaitForObject()
 local CONTAINER_VIEW = script:GetCustomProperty("ContainerView"):WaitForObject()
 local UPGRADES_VIEW = script:GetCustomProperty("UpgradesView"):WaitForObject() 
-local PLAYER_NAME = script:GetCustomProperty("PlayerName"):WaitForObject()
-local PLAYER_ICON = script:GetCustomProperty("PlayerIcon"):WaitForObject()
-local PLAYER_LEVEL_PROGRESS = script:GetCustomProperty("PlayerLevelProgress"):WaitForObject()
 local PANEL_STATS = script:GetCustomProperty("StatsPanel"):WaitForObject()
 local PANEL_EQUIPPED = script:GetCustomProperty("EquippedSlotsPanel"):WaitForObject()
 local PANEL_BACKPACK = script:GetCustomProperty("BackpackSlotsPanel"):WaitForObject()
 local PANEL_ITEM_HOVER = script:GetCustomProperty("ItemHoverPanel"):WaitForObject()
-local PANEL_SALVAGE = script:GetCustomProperty("SalvagePanel"):WaitForObject()
 local REQUIRES_LEVEL_ALERT = script:GetCustomProperty("RequiresLevelAlert"):WaitForObject()
 local REQUIRES_LEVEL_TEXT = REQUIRES_LEVEL_ALERT:GetCustomProperty("AlertText"):WaitForObject()
 local HOLDING_ICON = script:GetCustomProperty("HeldIcon"):WaitForObject()
@@ -27,7 +25,6 @@ local SFX_EQUIP = script:GetCustomProperty("SFX_Equip")
 local SFX_MOVE = script:GetCustomProperty("SFX_Move")
 local SFX_DISCARD = script:GetCustomProperty("SFX_Discard")
 local SFX_DENIED = script:GetCustomProperty("SFX_Denied")
-local SFX_SALVAGE = script:GetCustomProperty("SFX_Salvage")
 local SLOT_HIGHLIGHT_COLOR = script:GetCustomProperty("SlotHighlightColor")
 local LOADOUT_COOLDOWN_TIME = script:GetCustomProperty("LoadoutCooldownInSeconds")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -68,7 +65,7 @@ local function IsSlotControl(control)
 end
 
 -- Checks if the control is either part of the inventory, equip panel, backpack, 
--- loadout, or salvage panel.
+-- or loadout panel.
 -- @param UIControl control
 -- @return bool
 local function ShouldConsiderControl(control) -- UIControl control
@@ -76,7 +73,6 @@ local function ShouldConsiderControl(control) -- UIControl control
            control == UPGRADES_VIEW or
            control == PANEL_EQUIPPED or
            control == PANEL_BACKPACK or
-           control == PANEL_SALVAGE or
             IsSlotControl(control)
 end
 
@@ -194,6 +190,9 @@ end
 -- @param function processSlot
 -- @return function
 local function TraverseAndSetupSlots(root, processSlot)
+    if root == nil then
+        return
+    end
     root.parent.clientUserData.xAbsolute = 0
     root.parent.clientUserData.yAbsolute = 0
     return TraverseAndSetupSlots_R(root, processSlot)
@@ -206,6 +205,7 @@ end
 -- @param int yRef
 -- @return bool
 local function IsInsideHitbox(slot, position, xRef, yRef)
+    if not slot then return false end
     local xlo, ylo = xRef + slot.clientUserData.xAbsolute, yRef + slot.clientUserData.yAbsolute
     local xhi, yhi = xlo + slot.width, ylo + slot.height
     return xlo <= position.x and position.x <= xhi and ylo <= position.y and position.y <= yhi
@@ -223,7 +223,6 @@ function view:Init()
     self:InitBackpackSlots()
     self:InitUpgradeView()
     self:InitItemHover()
-    self:InitSalvageTray()
     self:Close()
 end
 
@@ -275,14 +274,6 @@ end
 -----------------------------------------------------------------------------------------------------------------
 -- Slot Setup
 -----------------------------------------------------------------------------------------------------------------
-
-function view:InitSalvageTray()
-    TraverseAndSetupSlots(PANEL_SALVAGE)
-    PANEL_SALVAGE.clientUserData.resourceHeader = PANEL_SALVAGE:GetCustomProperty("ResourceHeader"):GetObject()
-    PANEL_SALVAGE.clientUserData.resourceScrollPanel = PANEL_SALVAGE:GetCustomProperty("ResourceScrollPanel"):GetObject()
-    PANEL_SALVAGE.clientUserData.resourceEntry = PANEL_SALVAGE:GetCustomProperty("ResourceEntry")
-    PANEL_SALVAGE.clientUserData.resourceScrollPanel = PANEL_SALVAGE:GetCustomProperty("ResourceScrollPanel"):GetObject()
-end
 
 -- Initalizes equip slots
 function view:InitEquippedSlots()
@@ -412,16 +403,6 @@ function view:IsLoadoutOnCooldown()
 end
 
 -----------------------------------------------------------------------------------------------------------------
-function view:AttemptSalvage(fromSlotIndex)
-    local canSalvage = inventory:CanAddSalvageProducts(fromSlotIndex)
-    if canSalvage then
-        PlaySound(SFX_SALVAGE)
-        inventory:SalvageItem(fromSlotIndex)
-        return true
-    else
-        PlaySound(SFX_DENIED)
-    end
-end
 
 function view:AttemptMoveItem(fromSlotIndex, toSlotIndex)
     if inventory:CanMoveItem(fromSlotIndex, toSlotIndex) then
@@ -620,7 +601,7 @@ function view:PerformDragDropAction()
         return
     end
 
-    if self.slotUnderCursor or not self.isCursorInBounds and not self.isHoveringOnSalvage then
+    if self.slotUnderCursor or not self.isCursorInBounds then
         local toSlotIndex = self.containerSlot or self.slotUnderCursor and self.slotUnderCursor.clientUserData.slotIndex or nil
 
         -- If it's a container slot then move the item to the container.
@@ -673,8 +654,6 @@ function view:PerformDragDropAction()
                 Events.Broadcast("CloseMovedBackpack",self.fromSlotIndex)
             end
         end
-    elseif self.isHoveringOnSalvage and self.canSalvageItem then
-        local hasSalvaged = self:AttemptSalvage(self.fromSlotIndex)
     end
 end
 
@@ -705,8 +684,8 @@ function view:OnMouseUp(cursorPosition, primary)
     end
 end
 
-Events.Connect("event_ui_mouse_down", function(cursorPosition, primary) view:OnMouseDown(cursorPosition, primary) end)
-Events.Connect("event_ui_mouse_up", function(cursorPosition, primary) view:OnMouseUp(cursorPosition, primary) end)
+Events.Connect(Framework.Events.Input.EVENT_MOUSE_DOWN, function(cursorPosition, primary) view:OnMouseDown(cursorPosition, primary) end)
+Events.Connect(Framework.Events.Input.EVENT_MOUSE_UP, function(cursorPosition, primary) view:OnMouseUp(cursorPosition, primary) end)
 
 -----------------------------------------------------------------------------------------------------------------
 function view:Open()
@@ -739,7 +718,6 @@ function view:UpdateCursorState()
     local cursorPosition = UI.GetCursorPosition()
     local screenSize = UI.GetScreenSize()
     local xRef, yRef = GetTopLeftPositionInParent(INVENTORY_VIEW, screenSize.x, screenSize.y)
-    self.isHoveringOnSalvage = nil
     self.isCursorInBounds = IsInsideHitbox(INVENTORY_VIEW, cursorPosition, xRef, yRef)  
     self.isCursorInBounds = self.isCursorInBounds == false and IsInsideHitbox(PANEL_EQUIPPED, cursorPosition, xRef, yRef) or IsInsideHitbox(INVENTORY_VIEW, cursorPosition, xRef, yRef)
     self.isCursorInContainer = false
@@ -766,12 +744,6 @@ function view:UpdateCursorState()
         self.isHoveringOnUpgrades = true
     else
         self.isHoveringOnUpgrades = false
-    end
-
-
-    -- Are they hovering over the salvage tray?
-    if IsInsideHitbox(PANEL_SALVAGE, cursorPosition, xRef, yRef) then
-        self.isHoveringOnSalvage = true
     end
 
     -- Click logic.
@@ -815,7 +787,6 @@ function view:Draw()
         self:DrawStats()
         self:DrawHoverHighlight()
         self:DrawHoverInfo()
-        self:DrawSalvageComponents()
         self:DrawHoverStatCompare()
     end
 end
@@ -908,50 +879,6 @@ function view:DrawHoverHighlight()
                 slot.clientUserData.notAllowed.visibility = Visibility.INHERIT
             end
         end
-    end
-end
-
-function view:ClearSalvageComponents()
-    local components = PANEL_SALVAGE.clientUserData.resourceScrollPanel:GetChildren()
-    self.canSalvageItem = false
-    for _, item in pairs(components) do
-        if Object.IsValid(item) then
-            item:Destroy()
-        end
-    end
-end
-
--- Draws the salvage product when an item is hovering over the salvage window.
-function view:DrawSalvageComponents()
-    local VERTICAL_PADDING = 10
-    if self.isHoveringOnSalvage and self.isDragging then
-        local itemFromSlot = inventory:GetItem(self.fromSlotIndex)
-        local components = itemFromSlot:GetSalvageComponents()
-        if components and #PANEL_SALVAGE.clientUserData.resourceScrollPanel:GetChildren() == 0 then
-            self.canSalvageItem = true
-            PANEL_SALVAGE.clientUserData.resourceHeader.visibility = Visibility.FORCE_ON
-            for i, component in pairs(components) do
-                local newEntry = World.SpawnAsset(PANEL_SALVAGE.clientUserData.resourceEntry,{ parent = PANEL_SALVAGE.clientUserData.resourceScrollPanel })
-                local propGradient = newEntry:GetCustomProperty("Gradient"):WaitForObject()
-                local propIconImage = newEntry:GetCustomProperty("IconImage"):WaitForObject()
-                local propBorder = newEntry:GetCustomProperty("Border"):WaitForObject()
-                local propItemNameLabel = newEntry:GetCustomProperty("ItemNameLabel"):WaitForObject()
-                local propItemAmountLabel = newEntry:GetCustomProperty("ItemAmountLabel"):WaitForObject()
-                newEntry.y = (i-1) * newEntry.height + (i*VERTICAL_PADDING)
-                local item = ItemDatabase:GetItemFromMUID(component.item)
-                local rarityColor = ItemThemes.GetRarityColor(item:GetRarity())
-                propGradient:SetColor(rarityColor)
-                propBorder:SetColor(rarityColor)
-                propIconImage:SetImage(item:GetIcon())
-                propItemNameLabel.text = item:GetName()
-                propItemNameLabel:SetColor(rarityColor)
-                propItemAmountLabel.text = string.format("x%s",component.amount)
-                propItemAmountLabel:SetColor(rarityColor)
-            end
-        end
-    else
-        PANEL_SALVAGE.clientUserData.resourceHeader.visibility = Visibility.FORCE_OFF
-        self:ClearSalvageComponents()
     end
 end
 

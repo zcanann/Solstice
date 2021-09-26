@@ -59,35 +59,6 @@ Objects {
   }
 }
 Objects {
-  Id: 16026903133747995899
-  Name: "-- Armor --"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1064844740394505259
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "-- Armor --"
-  }
-}
-Objects {
   Id: 18324750214332719983
   Name: "-- Resources --"
   Transform {
@@ -117,8 +88,8 @@ Objects {
   }
 }
 Objects {
-  Id: 14381850437061952911
-  Name: "-- Equipment --"
+  Id: 16026903133747995899
+  Name: "-- Armor --"
   Transform {
     Location {
     }
@@ -142,6 +113,35 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "-- Equipment --"
+    FilePartitionName: "-- Armor --"
+  }
+}
+Objects {
+  Id: 14381850437061952911
+  Name: "-- Weapons --"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1064844740394505259
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "-- Weapons --"
   }
 }

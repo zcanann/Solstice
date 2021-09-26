@@ -1,4 +1,5 @@
--- Custom
+local Framework = require(script:GetCustomProperty("Framework"))
+
 local propInteractMenu = script:GetCustomProperty("InteractMenu"):WaitForObject()
 local propEntryHost = script:GetCustomProperty("EntryHost"):WaitForObject()
 local propInteractEntry = script:GetCustomProperty("InteractEntry")
@@ -45,5 +46,5 @@ end
 
 ClearMenu()
 
-Events.Connect("event_clear_interact_options", ClearMenu)
-Events.Connect("event_show_interact_option", AddEntry)
+Events.Connect(Framework.Events.Interaction.EVENT_CLEAR_INTERACT_OPTIONS, ClearMenu)
+Events.Connect(Framework.Events.Interaction.EVENT_SHOW_INTERACT_OPTION, AddEntry)

@@ -5,9 +5,9 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:ReliableEvents"
+        Name: "cs:Framework"
         AssetReference {
-          Id: 9913335482599357769
+          Id: 10511995982427952004
         }
       }
     }

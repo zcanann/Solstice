@@ -1,4 +1,6 @@
 -- IMPORTANT: The location of this script in world space is used as the move position
+
+local Framework = require(script:GetCustomProperty("Framework"))
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 
 function GetWalkableDestination()
@@ -7,7 +9,7 @@ end
 
 function Interact(callback)
     Chat.LocalMessage("Walking to " .. propObject:GetCustomProperty("Name") .. "...")
-    Events.Broadcast("event_move_to_location", GetWalkableDestination(), callback)
+    Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, GetWalkableDestination(), callback)
 end
 
 function ShowOption()
@@ -15,5 +17,5 @@ function ShowOption()
         Interact()
     end
 
-    Events.Broadcast("event_show_interact_option", "Walk here", callback)
+    Events.Broadcast(Framework.Events.Input.EVENT_SHOW_INTERACT_OPTION, "Walk here", callback)
 end

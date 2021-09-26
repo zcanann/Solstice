@@ -71,6 +71,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6080938791828755119
+  Name: "Gem - Round Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gem_round_polished_001"
+  }
+}
+Assets {
   Id: 5538741771925374081
   Name: "Craftsman Wardrobe"
   PlatformAssetType: 1
@@ -104,6 +113,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AudioAssetRef"
     AssetId: "sfx_large_wooden_door_shut_open_close_rattle_01_Cue_ref"
+  }
+}
+Assets {
+  Id: 2908916094041232994
+  Name: "Grass Basic"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_grass_001_uv"
   }
 }
 Assets {

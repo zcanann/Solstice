@@ -4,6 +4,7 @@
     Handles all the interactions between the inventory and the containers data.
 ]]
 
+local Framework = require(script:GetCustomProperty("Framework"))
 local ItemThemes = require(script:GetCustomProperty("ItemSystems_ItemThemes"))
 local ItemDatabase = require(script:GetCustomProperty("ItemSystems_Database"))
 local Inventory = require(script:GetCustomProperty("ItemSystems_Inventory"))
@@ -681,8 +682,8 @@ function view:OnMouseUp(cursorPosition, primary)
     end
 end
 
-Events.Connect("event_ui_mouse_down", function(cursorPosition, primary) view:OnMouseDown(cursorPosition, primary) end)
-Events.Connect("event_ui_mouse_up", function(cursorPosition, primary) view:OnMouseUp(cursorPosition, primary) end)
+Events.Connect(Framework.Events.Input.EVENT_MOUSE_DOWN, function(cursorPosition, primary) view:OnMouseDown(cursorPosition, primary) end)
+Events.Connect(Framework.Events.Input.EVENT_MOUSE_UP, function(cursorPosition, primary) view:OnMouseUp(cursorPosition, primary) end)
 
 -----------------------------------------------------------------------------------------------------------------
 function view:Open()

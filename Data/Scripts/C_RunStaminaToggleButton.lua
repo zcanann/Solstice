@@ -1,3 +1,5 @@
+local Framework = require(script:GetCustomProperty("Framework"))
+
 local propRunToggleButton = script:GetCustomProperty("RunToggleButton"):WaitForObject()
 local propRunEnergyText = script:GetCustomProperty("RunEnergyText"):WaitForObject()
 local propRunningUI = script:GetCustomProperty("RunningUI"):WaitForObject()
@@ -30,9 +32,9 @@ function OnClick()
     SetRunToggle(not runToggle)
 
     if runToggle then
-        Events.BroadcastToServer("event_player_movement_request_run")
+        Events.BroadcastToServer(Framework.Events.Movement.EVENT_REQUEST_RUN)
     else
-        Events.BroadcastToServer("event_player_movement_request_walk")
+        Events.BroadcastToServer(Framework.Events.Movement.EVENT_REQUEST_WALK)
     end
 end
 
@@ -43,5 +45,5 @@ end
 
 SetRunToggle(false)
 
-Events.Connect("event_player_movement_state_updated", OnMovementStateUpdated)
+Events.Connect(Framework.Events.Movement.EVENT_MOVEMENT_STATE_UPDATED, OnMovementStateUpdated)
 propRunToggleButton.clickedEvent:Connect(OnClick)

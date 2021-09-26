@@ -1,9 +1,10 @@
+local Framework = require(script:GetCustomProperty("Framework"))
+
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propWalkableScript = script:GetCustomProperty("WalkableScript"):WaitForObject()
 
 local id = propObject:GetCustomProperty("ID")
 local name = propObject:GetCustomProperty("Name")
-local reliableEvents = require(script:GetCustomProperty("ReliableEvents"))
 local sfxOpenSound = propObject:GetCustomProperty("SFX_OpenSound")
 local sfxClosedSound = propObject:GetCustomProperty("SFX_ClosedSound")
 
@@ -18,7 +19,7 @@ function DoSearch()
         PlaySound(sfxOpenSound)
     end
     
-    reliableEvents.BroadcastToServer("OnStashUse", id)
+    Framework.ReliableEvents.BroadcastToServer("OnStashUse", id)
 
     Chat.LocalMessage("Searching " .. name .. "...")
 end
@@ -36,9 +37,9 @@ function Interact()
 
     -- Otherwise attempt to walk to the object using the attached walkable script, if it exists
     if propWalkableScript ~= nil then
-        Events.Broadcast("event_move_to_location", propWalkableScript.context:GetWalkableDestination(), callback)
+        Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, propWalkableScript.context:GetWalkableDestination(), callback)
     else
-        Events.Broadcast("event_move_to_location", script:GetWorldPosition(), callback)
+        Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, script:GetWorldPosition(), callback)
     end
 end
 
@@ -47,5 +48,5 @@ function ShowOption()
         Interact()
     end
 
-    Events.Broadcast("event_show_interact_option", "Search " .. name, callback)
+    Events.Broadcast(Framework.Events.Interaction.EVENT_SHOW_INTERACT_OPTION, "Search " .. name, callback)
 end

@@ -12,6 +12,8 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER I
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
 -- Internal custom properties
+
+local Framework = require(script:GetCustomProperty("Framework"):WaitForObject())
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 
 -- User exposed properties
@@ -33,7 +35,7 @@ function OnPlayerTeleport(player, id, startPosition, endPosition)
 	end
 
 	if player == localPlayer then
-		Events.Broadcast("event_player_teleported")
+		Events.Broadcast(Framework.Events.Movement.EVENT_PLAYER_TELEPORTED)
 	end
 end
 

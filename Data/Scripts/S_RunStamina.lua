@@ -77,7 +77,7 @@ function OnJoin(player)
 end
 
 function SendMovementState(player)
-	Events.BroadcastToPlayer(player, "event_player_movement_state_updated", GetPlayerMovementState(player), GetStamina(player))
+	Events.BroadcastToPlayer(player, Framework.Events.Movement.EVENT_MOVEMENT_STATE_UPDATED, GetPlayerMovementState(player), GetStamina(player))
 end
 
 function Tick(deltaTime)
@@ -97,6 +97,6 @@ function Tick(deltaTime)
 	end
 end
 
-Events.ConnectForPlayer("event_player_movement_request_run", RequestRun)
-Events.ConnectForPlayer("event_player_movement_request_walk", RequestWalk)
+Events.ConnectForPlayer(Framework.Events.Movement.EVENT_REQUEST_RUN, RequestRun)
+Events.ConnectForPlayer(Framework.Events.Movement.EVENT_REQUEST_WALK, RequestWalk)
 Game.playerJoinedEvent:Connect(OnJoin)

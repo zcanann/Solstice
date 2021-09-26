@@ -118,6 +118,12 @@ Assets {
           SelfId: 10423558506210913775
         }
       }
+      Overrides {
+        Name: "cs:Framework"
+        AssetReference {
+          Id: 10511995982427952004
+        }
+      }
     }
     Assets {
       Id: 12017046880637070245

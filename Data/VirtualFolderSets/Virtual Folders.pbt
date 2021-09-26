@@ -9,10 +9,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Movement"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Combat"
       PlatformAssetType: 3
     }
@@ -96,6 +92,20 @@ Assets {
     Folders {
       VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "_TODO_Gameplay"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Items"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Items"
+      VirtualFolderPath: "Rune"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Movement"
       PlatformAssetType: 3
     }
   }

@@ -1,3 +1,5 @@
+local Framework = require(script:GetCustomProperty("Framework"))
+
 local localPlayer = Game.GetLocalPlayer()
 local primaryBinding = "ability_primary"
 local secondaryBinding = "ability_secondary"
@@ -32,9 +34,9 @@ function OnBindingPressed(player, binding)
     local checkInteraction = (function(primary)
         -- Highest priority - Check for UI hit test first as highest priority
         _G.uiHitTest = false
-        Events.Broadcast("event_ui_mouse_down", UI.GetCursorPosition(), primary)
+        Events.Broadcast(Framework.Events.Input.EVENT_MOUSE_DOWN, UI.GetCursorPosition(), primary)
         if _G.uiHitTest then
-            Events.Broadcast("event_clear_interact_options")
+            Events.Broadcast(Framework.Events.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
             return
         end
 
@@ -48,15 +50,15 @@ function OnBindingPressed(player, binding)
             local genericWalkHere = function ()
                 local goalTransform = hitResult:GetTransform()
                 local goal = goalTransform:GetPosition()
-                Events.Broadcast("event_move_to_location", goal)
+                Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, goal)
             end
             
             -- Lowest priority - default actions
             if primary then
                 genericWalkHere()
             else
-                Events.Broadcast("event_clear_interact_options")
-                Events.Broadcast("event_show_interact_option", "Walk here", genericWalkHere)
+                Events.Broadcast(Framework.Events.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
+                Events.Broadcast(Framework.Events.Interaction.EVENT_SHOW_INTERACT_OPTION, "Walk here", genericWalkHere)
             end
         end
     end)
@@ -71,7 +73,7 @@ end
 
 function OnBindingReleased(player, binding)
     local checkInteraction = (function(primary)
-        Events.Broadcast("event_ui_mouse_up", UI.GetCursorPosition(), primary)
+        Events.Broadcast(Framework.Events.Input.EVENT_MOUSE_UP, UI.GetCursorPosition(), primary)
     end)
 
 	if binding == primaryBinding then

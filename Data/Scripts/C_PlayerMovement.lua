@@ -1,3 +1,5 @@
+local Framework = require(script:GetCustomProperty("Framework"))
+
 local localPlayer = Game.GetLocalPlayer()
 
 -- Navigation
@@ -55,7 +57,7 @@ function MoveToGoal(player, params)
 end
 
 function OnMoveToLocation(goal, callback)
-	Events.Broadcast("event_clear_interact_options")
+	Events.Broadcast(Framework.Events.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 	goalRachedCallback = callback
 	DestroyIfValid(goalPulse)
 	-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
@@ -72,7 +74,7 @@ function OnMoveToLocation(goal, callback)
 
 	remainingWayPoints = wayPoints
 
-	Events.Broadcast("event_waypoints_set", remainingWayPoints, goal)
+	Events.Broadcast(Framework.Events.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, goal)
 
 	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
 		OnReachedDestination()
@@ -82,6 +84,6 @@ end
 local movementHook = localPlayer.movementHook:Connect(MoveToGoal)
 movementHook.priority = 99
 
-Events.Connect("event_player_teleported", ClearWayPoints)
-Events.Connect("event_move_to_location", OnMoveToLocation)
+Events.Connect(Framework.Events.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
+Events.Connect(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, OnMoveToLocation)
 

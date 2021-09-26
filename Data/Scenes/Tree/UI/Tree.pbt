@@ -37352,8 +37352,8 @@ Objects {
   Control {
     Width: 295
     Height: 185
-    UIX: 1530
-    UIY: 555
+    UIX: 2070
+    UIY: 590
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -54137,7 +54137,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -70505,7 +70505,6 @@ Objects {
     Overrides {
       Name: "cs:PlayerIcon"
       ObjectReference {
-        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -70516,7 +70515,6 @@ Objects {
     Overrides {
       Name: "cs:StatsPanel"
       ObjectReference {
-        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -70547,12 +70545,6 @@ Objects {
       Name: "cs:RequiresLevelAlert"
       ObjectReference {
         SelfId: 9734311525838410306
-      }
-    }
-    Overrides {
-      Name: "cs:SalvagePanel"
-      ObjectReference {
-        SelfId: 841534158063459245
       }
     }
     Overrides {
@@ -70609,12 +70601,6 @@ Objects {
       Name: "cs:SFX_Denied"
       AssetReference {
         Id: 16531586234658524984
-      }
-    }
-    Overrides {
-      Name: "cs:SFX_Salvage"
-      AssetReference {
-        Id: 11569507209624750746
       }
     }
   }

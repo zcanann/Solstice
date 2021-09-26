@@ -21,11 +21,11 @@ function OnHover(button)
     propSkillHoverMenu.visibility = Visibility.FORCE_ON
     isHovered = true
 
-    propSkillName.text = Framework.ExpTable:GetSkillName(propSkillKey)
+    propSkillName.text = Framework.ExpTable.GetSkillName(propSkillKey)
 
     local skillLevel = Framework.ResourceDatabase.GetCurrentSkillLevel(localPlayer, propSkillKey)
     local currentExp = Framework.ResourceDatabase.GetCurrentExp(localPlayer, propSkillKey)
-    local neededExp = Framework.ExpTable:GetExpRequiredForLevel(skillLevel + 1)
+    local neededExp = Framework.ExpTable.GetExpRequiredForLevel(skillLevel + 1)
 
     propSkillExp.text = expTextFormat:gsub("{0}", tostring(currentExp))
     propSkillExpRequired.text = expRequiredTextFormat:gsub("{0}", tostring(neededExp))

@@ -1,4 +1,4 @@
-
+local Framework = require(script:GetCustomProperty("Framework"))
 local interactionScripts = script:FindDescendantsByType("Script")
 
 function Interact()
@@ -17,7 +17,7 @@ function ShowOptions()
 
     print("Displaying " .. tostring(#interactionScripts) .. " interaction options")
 
-    Events.Broadcast("event_clear_interact_options")
+    Events.Broadcast(Framework.Events.interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 
     for index = #interactionScripts, 1, -1 do
         interactionScripts[index].context:ShowOption()
