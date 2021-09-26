@@ -22,6 +22,7 @@ Objects {
   ChildIds: 14835597197122365881
   ChildIds: 13033932876208865719
   ChildIds: 6568100310357589514
+  ChildIds: 16695708162741409276
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -34,6 +35,39 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 16695708162741409276
+  Name: "S_StatsTables"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1911446898924153423
+    }
   }
 }
 Objects {

@@ -27,6 +27,9 @@ local DEFAULT_EQUIPMENT = script:GetCustomProperty("DefaultEquipment")
 -- bool EquipToPlayer(Player)
 -- Equip the specified equipment
 function EquipToPlayer(player, equipmentAsset)
+    if not equipmentAsset then
+        return
+    end
     local instance = World.SpawnAsset(equipmentAsset)
     if Object.IsValid(player) then
         instance:Equip(player)

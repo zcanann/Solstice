@@ -37,21 +37,12 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Destructibles"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Input"
       PlatformAssetType: 3
     }
     Folders {
       VirtualFolderPath: "Interactables"
       PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "SortMe"
-      PlatformAssetType: 3
     }
     Folders {
       VirtualFolderPath: "Framework"
@@ -92,6 +83,20 @@ Assets {
     Folders {
       VirtualFolderPath: "NPCs"
       PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "_TODO"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Framework"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "_TODO_Gameplay"
+      PlatformAssetType: 3
     }
   }
 }

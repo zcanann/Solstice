@@ -21,5 +21,5 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Destructibles"
+  VirtualFolderPath: "_TODO"
 }
