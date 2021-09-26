@@ -1,6 +1,6 @@
 Assets {
   Id: 16495471231439243155
-  Name: "C_ReliableEvents"
+  Name: "A_ReliableEvents"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

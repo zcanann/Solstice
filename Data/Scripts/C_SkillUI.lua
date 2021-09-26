@@ -14,6 +14,7 @@ local propSkillExpRequired = propSkillHoverMenu:GetCustomProperty("SkillExpRequi
 local expTextFormat = propSkillExp.text
 local expRequiredTextFormat = propSkillExpRequired.text
 
+local localPlayer = Game.GetLocalPlayer()
 local isHovered = false
 
 function OnHover(button)
@@ -22,8 +23,8 @@ function OnHover(button)
 
     propSkillName.text = Framework.ExpTable:GetSkillName(propSkillKey)
 
-    local skillLevel = Framework.ExpTable:GetMaxSkillLevel(propSkillKey)
-    local currentExp = Framework.ExpTable:GetCurrentExp(propSkillKey)
+    local skillLevel = Framework.ResourceDatabase.GetCurrentSkillLevel(localPlayer, propSkillKey)
+    local currentExp = Framework.ResourceDatabase.GetCurrentExp(localPlayer, propSkillKey)
     local neededExp = Framework.ExpTable:GetExpRequiredForLevel(skillLevel + 1)
 
     propSkillExp.text = expTextFormat:gsub("{0}", tostring(currentExp))
@@ -45,8 +46,11 @@ end
 function Initialize()
     propSkillHoverMenu.visibility = Visibility.FORCE_OFF
 
-    propCurrentLevel.text = tostring(Framework.ExpTable:GetCurrentSkillLevel(propSkillKey))
-    propMaxLevel.text = tostring(Framework.ExpTable:GetMaxSkillLevel(propSkillKey))
+    local skillLevel = Framework.ResourceDatabase.GetCurrentSkillLevel(localPlayer, propSkillKey)
+    local maxSkillLevel = Framework.ResourceDatabase.GetCurrentSkillLevel(localPlayer, propSkillKey)
+
+    propCurrentLevel.text = tostring(skillLevel)
+    propMaxLevel.text = tostring(maxSkillLevel)
 end
 
 Initialize()

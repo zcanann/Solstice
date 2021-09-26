@@ -1,15 +1,9 @@
 Assets {
-  Id: 10511995982427952004
-  Name: "C_Framework"
+  Id: 1911446898924153423
+  Name: "A_SkillExpTable"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
-      Overrides {
-        Name: "cs:ExpTable"
-        AssetReference {
-          Id: 1911446898924153423
-        }
-      }
       Overrides {
         Name: "cs:ReliableEvents"
         AssetReference {

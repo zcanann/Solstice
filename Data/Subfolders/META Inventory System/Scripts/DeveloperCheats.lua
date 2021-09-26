@@ -5,6 +5,7 @@ if not Environment.IsPreview() then return end
 local CHEATDROPKEY = script:GetCustomProperty("CheatDropKey")
 local Database = require(script:GetCustomProperty("ItemSystems_Database"))
 
+--[[
 print([[
 ------------------------------------------------------------------------------------
 !!! ITEM SYSTEMS DEVELOPER CHEATS ENABLED !!! ( Preview Only )
@@ -60,7 +61,8 @@ PRINT STAT SHEET
 Prints a human-readable synopsis of the player's stat sheet to the console.
 
 ------------------------------------------------------------------------------------
-]])
+]] --)
+--]]
 
 local BINDING_DROP_LOOT         = "ability_extra_47"    -- [down-arrow]
 local BINDING_INVENTORY_CLEAR   = "ability_extra_66"    -- [delete]

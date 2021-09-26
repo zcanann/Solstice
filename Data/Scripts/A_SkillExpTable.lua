@@ -1,5 +1,32 @@
 local ExpTable = { }
 
+local skillMap = {
+    [ 1 ] = "attack",
+    [ 2 ] = "strength",
+    [ 3 ] = "defense",
+    [ 4 ] = "health",
+    [ 5 ] = "archery",
+    [ 6 ] = "magic",
+    [ 7 ] = "soul",
+    [ 8 ] = "slayer",
+    [ 9 ] = "alchemy",
+    [ 10 ] = "mining",
+    [ 11 ] = "blacksmithing",
+    [ 12 ] = "jewelcrafting",
+    [ 13 ] = "woodcutting",
+    [ 14 ] = "woodworking",
+    [ 15 ] = "cooking",
+    [ 16 ] = "tailoring",
+    [ 17 ] = "leatherworking",
+    [ 18 ] = "fishing",
+    [ 19 ] = "enchanting",
+    [ 20 ] = "adventuring",
+    [ 21 ] = "botany",
+    [ 22 ] = "theiving",
+    [ 23 ] = "agility",
+    [ 24 ] = "engineering",
+}
+
 local skillNameMap = {
     [ "attack" ] = "Attack",
     [ "strength" ] = "Strength",
@@ -27,7 +54,7 @@ local skillNameMap = {
     [ "engineering" ] = "Engineering",
 }
 
-function ExpTable:GetSkillName(skillKey)
+ExpTable.GetSkillName = function (skillKey)
     if skillNameMap[skillKey] then
         return skillNameMap[skillKey]
     end
@@ -35,19 +62,7 @@ function ExpTable:GetSkillName(skillKey)
     return "<Unknown Skill>"
 end
 
-function ExpTable:GetCurrentSkillLevel(skillKey)
-    return 1
-end
-
-function ExpTable:GetMaxSkillLevel(skillKey)
-    return 1
-end
-
-function ExpTable:GetCurrentExp(skillKey)
-    return 25
-end
-
-function ExpTable:GetExpRequiredForLevel(level)
+ExpTable.GetExpRequiredForLevel = function (level)
     local numerator = 2.0 ^ (level / 7.0) - 2.0 ^ (1.0 / 7.0)
     local denominator = 2.0 ^ (1.0 / 7.0) - 1.0
 

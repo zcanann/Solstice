@@ -5,15 +5,21 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:ReliableEvents"
+        Name: "cs:Database"
         AssetReference {
-          Id: 16495471231439243155
+          Id: 14949101436137413811
         }
       }
       Overrides {
         Name: "cs:ExpTable"
         AssetReference {
           Id: 1911446898924153423
+        }
+      }
+      Overrides {
+        Name: "cs:ReliableEvents"
+        AssetReference {
+          Id: 16495471231439243155
         }
       }
     }

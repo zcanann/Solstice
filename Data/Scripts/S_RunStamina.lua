@@ -1,7 +1,8 @@
+local Framework = require(script:GetCustomProperty("Framework"))
+
 -- Base speed comes from PlayerSettings object
 local propRunModifier = script:GetCustomProperty("RunModifier")
 local baseMovementSpeed = 0 -- Ideally this would be read off PlayerSettings, but API does not expose this
-local storageKeyStamina = "stamina"
 local storageKeyMovementState = "movement_state"
 local staminaServerTickRate = 2.5
 local staminaServerTick = 0.0
@@ -17,16 +18,11 @@ function CanRun(player)
 end
 
 function GetStamina(player)
-	return Storage.GetPlayerData(player)[storageKeyStamina] or 100
+	return Framework.Database.GetKey(player, Framework.Database.KEYS.STAMINA) or 100
 end
 
 function SetStamina(player, stamina)
-	local playerData = Storage.GetPlayerData(player)
-	playerData[storageKeyStamina] = CoreMath.Clamp(stamina, 0, 100)
-	local resultCode, errorMessage = Storage.SetPlayerData(player, playerData)
-	if resultCode ~= StorageResultCode.SUCCESS then
-		error(errorMessage)
-	end
+	Framework.Database.SetKey(player, Framework.Database.KEYS.STAMINA, CoreMath.Clamp(stamina, 0, 100))
 
 	if not CanRun(player) then
 		UpdateWalkState(player, movementStateEnum.Walk)
@@ -38,16 +34,11 @@ function AddStamina(player, amount)
 end
 
 function GetPlayerMovementState(player)
-	return Storage.GetPlayerData(player)[storageKeyMovementState] or movementStateEnum.Run
+	return Framework.Database.GetKey(player, storageKeyMovementState) or movementStateEnum.Run
 end
 
 function SetPlayerMovementState(player, movementState)
-	local playerData = Storage.GetPlayerData(player)
-	playerData[storageKeyMovementState] = movementState
-	local resultCode, errorMessage = Storage.SetPlayerData(player, playerData)
-	if resultCode ~= StorageResultCode.SUCCESS then
-		error(errorMessage)
-	end
+	Framework.Database.SetKey(player, storageKeyMovementState, movementState)
 end
 
 function UpdateWalkState(player, movementState)
