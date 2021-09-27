@@ -1,3 +1,5 @@
+local ExpTable = require(script:GetCustomProperty("ExpTable"))
+
 local Database = { }
 
 Database.KEYS = { }
@@ -120,6 +122,10 @@ Database.KEYS.SKILLS.ENGINEERING.KEY = "engineering"
 Database.KEYS.SKILLS.ENGINEERING.EXP = "exp_engineering"
 Database.KEYS.SKILLS.ENGINEERING.MAX = "max_engineering"
 
+-- Generic storage
+
+local errorInvalidSkill = "Invalid skill provided"
+
 Database.SetKey = function (player, key, value)
 	local playerData = Storage.GetPlayerData(player)
 	playerData[key] = value
@@ -137,16 +143,102 @@ Database.GetKey = function (player, key)
 	return playerData[key]
 end
 
+-- [Resource] Current skill level
+
 Database.GetCurrentSkillLevel = function(player, skillKey)
-    return player.GetResource(player, skillKey)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
+    local level = player.GetResource(player, skillKey)
+
+	if level <= 0 then
+		return 1
+	else
+		return level
+	end
 end
 
-Database.GetMaxSkillLevel = function(player, skillKey)
-    return player.GetResource(player, "max_" .. skillKey)
+Database.SetCurrentSkillLevel = function(player, skillKey, value)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
+    player.SetResource(player, skillKey, value)
 end
 
-Database.GetCurrentExp = function(player, skillKey)
+-- [Resource] Skill level
+
+Database.GetSkillLevel = function(player, skillKey)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
+    local level = player.GetResource(player, "max_" .. skillKey)
+
+	print("LVL")
+	print(level)
+
+	if level <= 0 then
+		return 1
+	else
+		return level
+	end
+end
+
+Database.SetSkillLevel = function(player, skillKey, value)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
+    player.SetResource(player, "max_" ..skillKey, value)
+end
+
+Database.AdvanceSkillLevel = function(player, skillKey)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
+	local newLevel = Database.GetSkillLevel(player, skillKey) + 1
+
+	if newLevel > 99 then
+		return
+	end
+
+	Database.SetSkillLevel(player, skillKey, newLevel)
+	Database.SetCurrentSkillLevel(player, skillKey, Database.GetSkillLevel(player, skillKey))
+
+	print(Database.GetSkillLevel(player, skillKey))
+end
+
+-- [Resource] Skill exp
+
+Database.GetSkillExp = function(player, skillKey)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
     return player.GetResource(player, "exp_" .. skillKey)
+end
+
+Database.SetSkillExp = function(player, skillKey, value)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
+	local skillLevel = Database.GetSkillLevel(player, skillKey)
+	local currentExp = Database.GetSkillExp(player, skillKey) + value
+	local expRequiredForNextLevel = ExpTable.GetExpRequiredForNextLevel(skillLevel)
+
+	print(skillLevel)
+	print(currentExp) -- 150
+	print(expRequiredForNextLevel) -- 83
+
+	-- Check for level up
+	if expRequiredForNextLevel ~= ExpTable.INFINITE and currentExp >= expRequiredForNextLevel then
+		local remainder = currentExp - expRequiredForNextLevel
+		Database.AdvanceSkillLevel(player, skillKey)
+
+		print(remainder)
+
+		-- Recurse with remaining exp
+		Database.SetSkillExp(player, skillKey, remainder)
+		return
+	end
+
+    return player.SetResource(player, "exp_" .. skillKey, value)
+end
+
+Database.AddCurrentExp = function(player, skillKey, value)
+	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+
+    return Database.SetSkillExp(player, skillKey, Database.GetSkillExp(player, skillKey) + value)
 end
 
 return Database

@@ -2,10 +2,10 @@
 
 local Framework = { }
 
+Framework.Database = require(script:GetCustomProperty("Database"))
 Framework.ExpTable = require(script:GetCustomProperty("ExpTable"))
 Framework.Events = require(script:GetCustomProperty("Events"))
 Framework.ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
-Framework.ResourceDatabase = require(script:GetCustomProperty("ResourceDatabase"))
 Framework.Strings = require(script:GetCustomProperty("Strings"))
 Framework.Utils = require(script:GetCustomProperty("Utils"))
 

@@ -28678,7 +28678,6 @@ Objects {
   ParentId: 4997543145864768418
   ChildIds: 6752694592225667389
   ChildIds: 14543029498500078760
-  ChildIds: 14427304767915630176
   ChildIds: 15728569170510903256
   ChildIds: 11430931709966214826
   ChildIds: 13419047081593664430
@@ -37452,6 +37451,84 @@ Objects {
   }
 }
 Objects {
+  Id: 14543029498500078760
+  Name: "TabSkills"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6286086887859152918
+  ChildIds: 12059537687077157359
+  ChildIds: 1337263423784839313
+  ChildIds: 6130224888949182266
+  ChildIds: 10648116292185769164
+  ChildIds: 13551489749620011305
+  ChildIds: 14015713322274410110
+  ChildIds: 14434751812784722554
+  ChildIds: 10589638429356916786
+  ChildIds: 9936682607432232116
+  ChildIds: 1509329116177955983
+  ChildIds: 11076709590401073076
+  ChildIds: 12014219917800015101
+  ChildIds: 17538001593933361180
+  ChildIds: 6540930628555503140
+  ChildIds: 14261828826769962972
+  ChildIds: 17704745400307482632
+  ChildIds: 16289346817392696825
+  ChildIds: 12820012472434758973
+  ChildIds: 13440297782482755897
+  ChildIds: 13796126905398318303
+  ChildIds: 17040719230940648898
+  ChildIds: 6444991544462333202
+  ChildIds: 12612429177475201939
+  ChildIds: 2504841975070580373
+  ChildIds: 16670790056861517983
+  ChildIds: 4508454867627273257
+  ChildIds: 14427304767915630176
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 356
+    Height: 560
+    UIX: -8
+    UIY: -84
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 14427304767915630176
   Name: "Skill Hover Menu"
   Transform {
@@ -37465,7 +37542,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6286086887859152918
+  ParentId: 14543029498500078760
   ChildIds: 11371234102616516822
   ChildIds: 11467041928565447640
   ChildIds: 1027480460990438219
@@ -37504,8 +37581,8 @@ Objects {
   Control {
     Width: 295
     Height: 185
-    UIX: 2070
-    UIY: 590
+    UIX: -330
+    UIY: -15
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -37517,12 +37594,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:topleft"
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -37927,83 +38004,6 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 14543029498500078760
-  Name: "TabSkills"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6286086887859152918
-  ChildIds: 12059537687077157359
-  ChildIds: 1337263423784839313
-  ChildIds: 6130224888949182266
-  ChildIds: 10648116292185769164
-  ChildIds: 13551489749620011305
-  ChildIds: 14015713322274410110
-  ChildIds: 14434751812784722554
-  ChildIds: 10589638429356916786
-  ChildIds: 9936682607432232116
-  ChildIds: 1509329116177955983
-  ChildIds: 11076709590401073076
-  ChildIds: 12014219917800015101
-  ChildIds: 17538001593933361180
-  ChildIds: 6540930628555503140
-  ChildIds: 14261828826769962972
-  ChildIds: 17704745400307482632
-  ChildIds: 16289346817392696825
-  ChildIds: 12820012472434758973
-  ChildIds: 13440297782482755897
-  ChildIds: 13796126905398318303
-  ChildIds: 17040719230940648898
-  ChildIds: 6444991544462333202
-  ChildIds: 12612429177475201939
-  ChildIds: 2504841975070580373
-  ChildIds: 16670790056861517983
-  ChildIds: 4508454867627273257
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Control {
-    Width: 356
-    Height: 560
-    UIX: -8
-    UIY: -84
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Panel {
-      Opacity: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomright"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomright"
         }
       }
     }

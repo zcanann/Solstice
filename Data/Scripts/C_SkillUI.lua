@@ -11,49 +11,54 @@ local propSkillName = propSkillHoverMenu:GetCustomProperty("SkillName"):WaitForO
 local propSkillExp = propSkillHoverMenu:GetCustomProperty("SkillExp"):WaitForObject()
 local propSkillExpRequired = propSkillHoverMenu:GetCustomProperty("SkillExpRequired"):WaitForObject()
 
+local skillKeyMax = "max_" .. propSkillKey
 local expTextFormat = propSkillExp.text
 local expRequiredTextFormat = propSkillExpRequired.text
 
 local localPlayer = Game.GetLocalPlayer()
-local isHovered = false
 
 function OnHover(button)
     propSkillHoverMenu.visibility = Visibility.FORCE_ON
-    isHovered = true
 
     propSkillName.text = Framework.ExpTable.GetSkillName(propSkillKey)
 
-    local skillLevel = Framework.ResourceDatabase.GetCurrentSkillLevel(localPlayer, propSkillKey)
-    local currentExp = Framework.ResourceDatabase.GetCurrentExp(localPlayer, propSkillKey)
+    local skillLevel = Framework.Database.GetSkillLevel(localPlayer, propSkillKey)
+    local currentExp = Framework.Database.GetSkillExp(localPlayer, propSkillKey)
     local neededExp = Framework.ExpTable.GetExpRequiredForLevel(skillLevel + 1)
 
     propSkillExp.text = expTextFormat:gsub("{0}", tostring(currentExp))
     propSkillExpRequired.text = expRequiredTextFormat:gsub("{0}", tostring(neededExp))
+
+    propSkillHoverMenu.x = button.parent.x - propSkillHoverMenu.width / 2.0
+    propSkillHoverMenu.y = button.parent.y - propSkillHoverMenu.height / 2.0
 end
 
 function OnUnhover(button)
     propSkillHoverMenu.visibility = Visibility.FORCE_OFF
-    isHovered = false
 end
 
-function Tick(deltaSeconds)
-    if isHovered then
-        propSkillHoverMenu.x = UI.GetCursorPosition().x - propSkillHoverMenu.width
-        propSkillHoverMenu.y = UI.GetCursorPosition().y - propSkillHoverMenu.height
+function UpdateSkillText()
+    local currentSkillLevel = Framework.Database.GetCurrentSkillLevel(localPlayer, propSkillKey)
+    local skillLevel = Framework.Database.GetSkillLevel(localPlayer, propSkillKey)
+
+    propCurrentLevel.text = tostring(currentSkillLevel)
+    propMaxLevel.text = tostring(skillLevel)
+end
+
+function OnResourceChanged(player, resource, value)
+    if resource == propSkillKey or resource == skillKeyMax then
+        UpdateSkillText()
     end
 end
 
 function Initialize()
+    UpdateSkillText()
     propSkillHoverMenu.visibility = Visibility.FORCE_OFF
-
-    local skillLevel = Framework.ResourceDatabase.GetCurrentSkillLevel(localPlayer, propSkillKey)
-    local maxSkillLevel = Framework.ResourceDatabase.GetCurrentSkillLevel(localPlayer, propSkillKey)
-
-    propCurrentLevel.text = tostring(skillLevel)
-    propMaxLevel.text = tostring(maxSkillLevel)
 end
 
 Initialize()
 
 propBorderButton.hoveredEvent:Connect(OnHover)
 propBorderButton.unhoveredEvent:Connect(OnUnhover)
+
+localPlayer.resourceChangedEvent:Connect(OnResourceChanged)

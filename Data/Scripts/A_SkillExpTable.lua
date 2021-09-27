@@ -54,6 +54,16 @@ local skillNameMap = {
     [ "engineering" ] = "Engineering",
 }
 
+ExpTable.INFINITE = -1
+
+ExpTable.IsValidSkill = function (skillKey)
+    if skillNameMap[skillKey] then
+        return true
+    end
+
+    return false
+end
+
 ExpTable.GetSkillName = function (skillKey)
     if skillNameMap[skillKey] then
         return skillNameMap[skillKey]
@@ -63,11 +73,19 @@ ExpTable.GetSkillName = function (skillKey)
 end
 
 ExpTable.GetExpRequiredForLevel = function (level)
+    if level >= 99 then
+        return ExpTable.INFINITE
+    end
+
     local numerator = 2.0 ^ (level / 7.0) - 2.0 ^ (1.0 / 7.0)
     local denominator = 2.0 ^ (1.0 / 7.0) - 1.0
 
     -- Taken from https://oldschool.runescape.wiki/w/Experience
     return CoreMath.Round(1.0 / 8.0 * (level ^ 2.0 - level + 600.0 * (numerator / denominator)))
+end
+
+ExpTable.GetExpRequiredForNextLevel = function (level)
+    return ExpTable.GetExpRequiredForLevel(level + 1)
 end
 
 return ExpTable

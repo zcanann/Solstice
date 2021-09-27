@@ -16,23 +16,23 @@ function ChatCommandHandler(params)
         if command == "/inventory" then
             Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_PRINT_INVENTORY)
         end
-        if command == "/item" then
+        if command == "/spawnitem" then
             if #args == 1 then
-                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_PRINT_INVENTORY, args[1])
+                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_SPAWN_ITEM, args[1])
             else
                 Chat:LocalMessage("Invalid argument")
             end
         end
         if command == "/exp" then
-            if #args == 1 then
-                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILL_EXP, args[1])
+            if #args == 2 then
+                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILL_EXP, args[1], tonumber(args[2]))
             else
                 Chat:LocalMessage("Invalid argument")
             end
         end
         if command == "/level" then
-            if #args == 1 then
-                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_SET_SKILL_LEVEL, args[1])
+            if #args == 2 then
+                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_SET_SKILL_LEVEL, args[1], tonumber(args[2]))
             else
                 Chat:LocalMessage("Invalid argument")
             end
