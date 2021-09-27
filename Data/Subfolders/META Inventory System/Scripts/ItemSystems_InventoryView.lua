@@ -76,60 +76,11 @@ local function ShouldConsiderControl(control) -- UIControl control
             IsSlotControl(control)
 end
 
--- Returns the anchor and dock position of the UI element. This is not a native method in Core yet.
--- @param UIControl control
--- @return string, string
-local function GetControlUIParameters(control) -- UIControl control
-    local anchor, dock = control:GetCustomProperty("Anchor"), control:GetCustomProperty("Dock")
-    assert(anchor and dock, "control must have anchor/dock custom properties")
-    return anchor, dock
-end
-
--- Gets the top left position of the parent considering the dock and anchor position
--- @param UIControl control
--- @param int parentWidth
--- @param int parentHeight
--- @return int, int
-local function GetTopLeftPositionInParent(control, parentWidth, parentHeight)
-    local anchor, dock = GetControlUIParameters(control)
-    local x, y = control.x, control.y
-    if anchor:find("Center") then
-        x = x - control.width / 2
-    elseif anchor:find("Right") then
-        x = x - control.width
-    end
-    if anchor:find("Middle") then
-        y = y - control.height / 2
-    elseif anchor:find("Bottom") then
-        y = y - control.height
-    end
-    
-    parentWidth = parentWidth or control.parent.width
-    parentHeight = parentHeight or control.parent.height
-    if control.parent.name == "Root" then
-        local screenSize = UI.GetScreenSize()
-        parentWidth = screenSize.x
-        parentHeight = screenSize.y
-    end
-    
-    if dock:find("Center") then
-        x = x + parentWidth / 2
-    elseif dock:find("Right") then
-        x = x + parentWidth
-    end
-    if dock:find("Middle") then
-        y = y + parentHeight / 2
-    elseif dock:find("Bottom") then
-        y = y + parentHeight
-    end
-    return x, y
-end
-
 -- Setup and processe a slot so that it may be considered as a slot for items.
 -- @param UIControl control
 -- @param function processSlot
 local function SetupControl(control, processSlot)
-    local x, y = GetTopLeftPositionInParent(control)
+    local x, y = Framework.Utils.UI.GetTopLeftPositionInParent(control)
     control.clientUserData.xAbsolute = control.parent.clientUserData.xAbsolute + x
     control.clientUserData.yAbsolute = control.parent.clientUserData.yAbsolute + y
     if IsSlotControl(control) then
@@ -388,7 +339,7 @@ function view:DisplayLevelAlert(itemLevel)
     REQUIRES_LEVEL_TEXT.text = string.format("Requires Level %s", itemLevel)
     local mousePos = UI.GetCursorPosition()
     local screenSize = UI.GetScreenSize()
-    local xRef, yRef = GetTopLeftPositionInParent(INVENTORY_VIEW, INVENTORY_VIEW.width, INVENTORY_VIEW.height)
+    local xRef, yRef = Framework.Utils.UI.GetTopLeftPositionInParent(INVENTORY_VIEW, INVENTORY_VIEW.width, INVENTORY_VIEW.height)
     REQUIRES_LEVEL_ALERT.x = mousePos.x - xRef
     REQUIRES_LEVEL_ALERT.y = mousePos.y - yRef
     REQUIRES_LEVEL_ALERT.clientUserData.existingAlert = Task.Spawn(function()
@@ -717,7 +668,7 @@ function view:UpdateCursorState()
     if not UI.IsCursorVisible() then return end
     local cursorPosition = UI.GetCursorPosition()
     local screenSize = UI.GetScreenSize()
-    local xRef, yRef = GetTopLeftPositionInParent(INVENTORY_VIEW, screenSize.x, screenSize.y)
+    local xRef, yRef = Framework.Utils.UI.GetTopLeftPositionInParent(INVENTORY_VIEW, screenSize.x, screenSize.y)
     self.isCursorInBounds = IsInsideHitbox(INVENTORY_VIEW, cursorPosition, xRef, yRef)  
     self.isCursorInBounds = self.isCursorInBounds == false and IsInsideHitbox(PANEL_EQUIPPED, cursorPosition, xRef, yRef) or IsInsideHitbox(INVENTORY_VIEW, cursorPosition, xRef, yRef)
     self.isCursorInContainer = false
@@ -730,7 +681,7 @@ function view:UpdateCursorState()
     end
 
     if self.containerSlots then
-        local xRef, yRef = GetTopLeftPositionInParent(CONTAINER_VIEW, screenSize.x, screenSize.y)
+        local xRef, yRef = Framework.Utils.UI.GetTopLeftPositionInParent(CONTAINER_VIEW, screenSize.x, screenSize.y)
         self.isCursorInContainer = IsInsideHitbox(CONTAINER_VIEW, cursorPosition, xRef, yRef)
         for _,slot in ipairs(self.containerSlots) do
             if slot and IsInsideHitbox(slot, cursorPosition, xRef, yRef) then
@@ -878,220 +829,6 @@ function view:DrawHoverHighlight()
             if slotIndexUnderCursor and not inventory:CanMoveItem(slotIndexUnderCursor, toSlotIndex) then
                 slot.clientUserData.notAllowed.visibility = Visibility.INHERIT
             end
-        end
-    end
-end
-
--- Draws the tooltip info for an item under the cursor.
-function view:DrawHoverInfo()
-    if not self.isCursorInContainer and self.itemUnderCursor and not self.isDragging then
-        -- UI properties.
-        PANEL_ITEM_HOVER.visibility = Visibility.INHERIT
-        PANEL_ITEM_HOVER.x = self.slotUnderCursor.clientUserData.xAbsolute
-        PANEL_ITEM_HOVER.y = self.slotUnderCursor.clientUserData.yAbsolute
-        -- Text
-        local item = self.itemUnderCursor
-        local playerLevel = LOCAL_PLAYER.clientUserData.statSheet:GetLevel()
-        local itemLevel = item:GetLevelRequirement()
-        PANEL_ITEM_HOVER.clientUserData.title.text = item:GetName()
-        PANEL_ITEM_HOVER.clientUserData.classification.text = string.format("%s %s", item:GetRarity(), item:GetType())
-        PANEL_ITEM_HOVER.clientUserData.description.text = item:GetDescription()
-        PANEL_ITEM_HOVER.clientUserData.requiredLevel.text =  string.format("Requires Level %i",itemLevel or 0)
-        PANEL_ITEM_HOVER.clientUserData.requiredLevel.visibility = itemLevel ~= nil and Visibility.FORCE_ON or Visibility.FORCE_OFF
-        PANEL_ITEM_HOVER.clientUserData.requiredLeveldivider.visibility = itemLevel ~= nil and Visibility.FORCE_ON or Visibility.FORCE_OFF
-        -- Sometimes the external client wants us to highlight changes from a comparison.
-        local ROOT = script.parent
-        local compareStats = ROOT.clientUserData.itemToCompare and ROOT.clientUserData.itemToCompare:GetStatsEnhanced()
-        local compareEnhancementLevel = ROOT.clientUserData.itemToCompare and ROOT.clientUserData.itemToCompare:GetEnhancementLevel()
-        local compareLimitBreakLevel = ROOT.clientUserData.itemToCompare and ROOT.clientUserData.itemToCompare:GetLimitBreakLevel()
-        -- If the player is not the required level then display the requirement as red.
-        if itemLevel then
-            PANEL_ITEM_HOVER.clientUserData.requiredLevel:SetColor(itemLevel <= playerLevel and Color.WHITE or Color.RED)
-        end
-        -- Attributes
-        local stats = item:GetStatsEnhanced() or {}
-        local statsBase = item:GetStatsBase()
-
-        self:EnsureSufficientHoverStatEntries(#stats)
-        
-        local offsetYBase = 30
-        local offsetYBonus = 30
-
-        -- If there is no stats then move the divider up.
-        if #stats == 0 then
-            PANEL_ITEM_HOVER.clientUserData.specialDivider.visibility = Visibility.FORCE_OFF
-            offsetYBase = -80
-            offsetYBonus = -80
-        else
-            PANEL_ITEM_HOVER.clientUserData.specialDivider.visibility = Visibility.FORCE_ON
-        end
-
-        for i,entry in ipairs(self.itemHoverStatEntries) do
-            -- It is expected that the comparison item has matching stat structure.
-            local compareStatInfo = compareStats and compareStats[i]
-            local statInfo = stats[i]
-            local statInfoBase = statsBase[i]
-            if statInfo then
-                entry.visibility = Visibility.INHERIT
-                entry.clientUserData.icon:SetImage(ItemThemes.GetStatIcon(statInfo.name))
-                entry.clientUserData.value.text = ItemThemes.GetItemStatFormattedValue(statInfo.name, statInfo.value)
-                if statInfo.isBase then
-                    entry.x = PANEL_ITEM_HOVER.clientUserData.statOffsetXBase
-                    entry.y = PANEL_ITEM_HOVER.clientUserData.statOffsetY + offsetYBase
-                    offsetYBase = offsetYBase + entry.height
-                else
-                    entry.x = PANEL_ITEM_HOVER.clientUserData.statOffsetXBonus
-                    entry.y = PANEL_ITEM_HOVER.clientUserData.statOffsetY + offsetYBonus
-                    offsetYBonus = offsetYBonus + entry.height
-                end
-
-                if item:CanUpgrade() then
-                    -- Show stat enhancement bonus if present.
-                    local enhancementBonus = statInfoBase and statInfo.value - statInfoBase.value or 0
-                    if enhancementBonus > 0 then
-                        entry.clientUserData.enhancementBonus.text = string.format("(%d)", statInfoBase.value)
-                    else
-                        entry.clientUserData.enhancementBonus.text = ""
-                    end
-                end
-
-                -- Show color based on comparison.
-                if compareStatInfo and compareStatInfo.value < statInfo.value then
-                    entry.clientUserData.value:SetColor(Color.GREEN)
-                    entry.clientUserData.icon:SetColor(Color.GREEN)
-                else
-                    entry.clientUserData.value:SetColor(entry.clientUserData.valueBaseColor)
-                    entry.clientUserData.icon:SetColor(entry.clientUserData.iconBaseColor)
-                end
-
-            else
-                entry.visibility = Visibility.FORCE_OFF
-            end
-        end
-        PANEL_ITEM_HOVER.clientUserData.inner.height = PANEL_ITEM_HOVER.clientUserData.innerBaseHeight + math.max(offsetYBase, offsetYBonus)
-        -- Colors.
-        local color = ItemThemes.GetRarityColor(item:GetRarity())
-        PANEL_ITEM_HOVER.clientUserData.pointer:SetColor(color)
-        PANEL_ITEM_HOVER.clientUserData.border:SetColor(color)
-        PANEL_ITEM_HOVER.clientUserData.classification:SetColor(color)
-
-
-        for _,control in ipairs(PANEL_ITEM_HOVER.clientUserData.border:FindDescendantsByType("UIImage")) do
-            control:SetColor(color)
-        end
-
-        -- Show enhancement level and stars if applicable.
-        if #stats > 0 then
-            local enhancementSuffix = item:IsFullyEnhanced() and " (MAX)" or ""
-            PANEL_ITEM_HOVER.clientUserData.enhancementLevel.text = "Enhancement Level " .. tostring(item:GetEnhancementLevel()) .. enhancementSuffix
-        else
-            PANEL_ITEM_HOVER.clientUserData.enhancementLevel.text = ""
-        end
-
-        local numStars = item:GetLimitBreakLevel()
-        local numStarsMax = item:GetMaxLimitBreakLevel()
-        local starsMidpoint = (numStarsMax + 1) / 2
-        -- If the star level has changed use special coloring.
-        local starFillColor = color
-        if compareLimitBreakLevel and compareLimitBreakLevel < numStars then starFillColor = Color.GREEN end
-        for i,star in ipairs(PANEL_ITEM_HOVER.clientUserData.limitBreakStars) do
-            if i <= numStarsMax and #stats ~= 0 then
-                star.visibility = Visibility.INHERIT
-                star.x = (i - starsMidpoint) * PANEL_ITEM_HOVER.clientUserData.starSpacing
-                star:SetColor(i <= numStars and starFillColor or PANEL_ITEM_HOVER.clientUserData.limitBreakStarBaseColor)
-            else
-                star.visibility = Visibility.FORCE_OFF
-            end
-        end
-        -- See if the enhancement level has changed.
-        if compareEnhancementLevel and compareEnhancementLevel < item:GetEnhancementLevel() then
-            PANEL_ITEM_HOVER.clientUserData.enhancementLevel:SetColor(Color.GREEN)
-        else
-            PANEL_ITEM_HOVER.clientUserData.enhancementLevel:SetColor(PANEL_ITEM_HOVER.clientUserData.enhancementLevelBaseColor)
-        end
-
-
-    else
-        PANEL_ITEM_HOVER.visibility = Visibility.FORCE_OFF
-    end
-end
-
-function view:DrawHoverStatCompare()
-    if true then return end
-    if self.isCursorInContainer then return end
-    -- Lazy initialize a set of modifiers used to test out our hypothetical weapon swap.
-    if not self.previewModifiers then
-        self.cachedStats = {}
-        self.previewModifiers = {}
-        for _,statName in ipairs(statSheet.STATS) do
-            self.previewModifiers[statName] = {
-                add = statSheet:NewStatModifierAdd(statName, 0, true),
-                mul = statSheet:NewStatModifierMul(statName, 1, true),
-            }
-        end
-    end
-    -- Default initialize modifier values.
-    for statName,modifiers in pairs(self.previewModifiers) do
-        modifiers.add.addend = 0
-        modifiers.mul.multiplier = 1
-        self.statElements[statName].clientUserData.previewDelta.text = ""
-    end
-    -- Conditionally apply hypothetical modifiers to preview stat changes.
-    if self.itemUnderCursor and not self.isDragging then
-        if inventory:IsBackpackSlot(self.slotUnderCursor.clientUserData.slotIndex) then
-            local previewItem = self.itemUnderCursor
-            if previewItem:IsBackpack() then return end -- Don't display stats for backpacks.
-            local targetEquipSlotIndex = inventory:ConvertEquipSlotIndex(previewItem:GetEquipSlotType())
-            local exchangeItem = inventory:GetItem(targetEquipSlotIndex)
-            -- First we're going to check to see if the item is an accessory. If so then we will get the weakest accessory to compare to.
-            if previewItem:GetEquipSlotType() == "Accessory" and inventory:HasAvaliableAccessorySlots() then
-                local weakestAccessory, slot = inventory:GetWeakestAccessory()
-                exchangeItem = weakestAccessory
-            end
-            -- Second the item we are hypothetically equipping.
-            for _,itemStatName in ipairs(previewItem.STATS) do
-                local statValue = previewItem:GetStatTotal(itemStatName)
-                if itemStatName == "HealthPercent" then
-                    self.previewModifiers.Health.mul.multiplier = 1 + statValue / 100
-                elseif itemStatName ~= "Value" then
-                    self.previewModifiers[itemStatName].add.addend = statValue
-                end
-            end
-            -- Then the item we are hypothetically unequipping. Here we are inverting the modifiers which we know it will have applied.
-            if exchangeItem then
-                for _,itemStatName in ipairs(exchangeItem.STATS) do
-                    local statValue = exchangeItem:GetStatTotal(itemStatName)
-                    if itemStatName == "HealthPercent" then
-                        self.previewModifiers.Health.mul.multiplier = self.previewModifiers.Health.mul.multiplier * (1 / (1 + statValue / 100))
-                    elseif itemStatName ~= "Value" then
-                        self.previewModifiers[itemStatName].add.addend = self.previewModifiers[itemStatName].add.addend - statValue
-                    end
-                end
-            end
-            -- Then the final stat calculation and drawing of appropriate graphics.
-            for _,statName in ipairs(statSheet.STATS) do
-                self.cachedStats[statName] = statSheet:GetStatTotalValue(statName)
-            end
-            statSheet:Update()
-            for _,statName in ipairs(statSheet.STATS) do
-                local statValue = statSheet:GetStatTotalValue(statName)
-                local statDelta = statValue - self.cachedStats[statName]
-                local statElement = self.statElements[statName]
-                if statDelta ~= 0 then
-                    local compareColor = statDelta > 0 and Color.GREEN or Color.RED
-                    local compareToken = statDelta > 0 and "+ " or "- "
-                    --statElement.clientUserData.value.text = ItemThemes.GetPlayerStatFormattedValue(statName,statValue)
-                    statElement.clientUserData.value:SetColor(compareColor)
-                    statElement.clientUserData.previewDelta.text = compareToken .. ItemThemes.GetPlayerStatFormattedValue(statName, math.abs(statDelta))
-                    statElement.clientUserData.previewDelta:SetColor(compareColor)
-                end
-            end
-            -- We got what we came for, restore the original stats.
-            for statName,modifiers in pairs(self.previewModifiers) do
-                modifiers.add.addend = 0
-                modifiers.mul.multiplier = 1
-            end
-            statSheet:Update()
         end
     end
 end

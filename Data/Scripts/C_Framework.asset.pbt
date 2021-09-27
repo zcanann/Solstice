@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Events"
+        AssetReference {
+          Id: 5338086385139468741
+        }
+      }
+      Overrides {
         Name: "cs:ReliableEvents"
         AssetReference {
           Id: 16495471231439243155
@@ -23,9 +29,15 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Events"
+        Name: "cs:Strings"
         AssetReference {
-          Id: 5338086385139468741
+          Id: 1312537665072127050
+        }
+      }
+      Overrides {
+        Name: "cs:Utils"
+        AssetReference {
+          Id: 2632154708327163058
         }
       }
     }

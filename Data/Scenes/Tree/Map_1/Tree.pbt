@@ -1381,7 +1381,7 @@ Objects {
           Name: "Position"
           Vector {
             X: -4450
-            Y: 850
+            Y: 1950
             Z: 25
           }
         }

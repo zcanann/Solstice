@@ -58,7 +58,7 @@ function OnBindingPressed(player, binding)
                 genericWalkHere()
             else
                 Events.Broadcast(Framework.Events.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
-                Events.Broadcast(Framework.Events.Interaction.EVENT_SHOW_INTERACT_OPTION, "Walk here", genericWalkHere)
+                Events.Broadcast(Framework.Events.Interaction.EVENT_ADD_INTERACT_OPTION, "Walk here", genericWalkHere)
             end
         end
     end)

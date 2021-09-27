@@ -79057,7 +79057,7 @@ Objects {
     Overrides {
       Name: "cs:MinimapPlayer"
       AssetReference {
-        Id: 10582446667200537077
+        Id: 841534158063459245
       }
     }
     Overrides {

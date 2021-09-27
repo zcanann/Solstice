@@ -1,0 +1,54 @@
+local Framework = require(script:GetCustomProperty("Framework"))
+
+function ChatCommandHandler(params)
+    local message = string.lower(params.message)
+
+    if string.sub(message, 1, 1) == "/" then
+        params.message = ""
+        local args = { CoreString.Split(message, " ") }
+
+        if not message or #message <= 0 then
+            return
+        end
+
+        local command = table.remove(args, 1)
+
+        if command == "/inventory" then
+            Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_PRINT_INVENTORY)
+        end
+        if command == "/item" then
+            if #args == 1 then
+                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_PRINT_INVENTORY, args[1])
+            else
+                Chat:LocalMessage("Invalid argument")
+            end
+        end
+        if command == "/exp" then
+            if #args == 1 then
+                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILL_EXP, args[1])
+            else
+                Chat:LocalMessage("Invalid argument")
+            end
+        end
+        if command == "/level" then
+            if #args == 1 then
+                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_SET_SKILL_LEVEL, args[1])
+            else
+                Chat:LocalMessage("Invalid argument")
+            end
+        end
+        if command == "/kill" then
+            if #args == 1 then
+                for _, targetPlayer in pairs(Game.GetPlayers()) do
+                    if targetPlayer.name == args[1] then
+                        Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_KILL, targetPlayer)
+                    end
+                end
+            end
+        end
+    end
+end
+
+-- Simple client-side functions can be handled in this class. Otherwise, commands are generally sent to the server.
+
+Chat.sendMessageHook:Connect(ChatCommandHandler)

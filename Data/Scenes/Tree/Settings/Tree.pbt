@@ -161,6 +161,7 @@ Objects {
   Settings {
     IsDefault: true
     GameSettings {
+      RagdollOnDeath: true
       EnablePlayerStorage: true
       ChatMode {
         Value: "mc:echatmode:allonly"

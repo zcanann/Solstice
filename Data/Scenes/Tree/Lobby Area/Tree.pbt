@@ -165,12 +165,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -225,12 +219,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -287,12 +275,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -347,12 +329,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -409,12 +385,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -470,12 +440,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -529,12 +493,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -591,12 +549,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -651,12 +603,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -713,12 +659,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -773,12 +713,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -835,12 +769,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -895,12 +823,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -957,12 +879,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -1017,12 +933,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -1079,12 +989,6 @@ Objects {
   ParentId: 4018840833991890518
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.0990000069
@@ -1139,12 +1043,6 @@ Objects {
   }
   ParentId: 4018840833991890518
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 16566045818191173944
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {

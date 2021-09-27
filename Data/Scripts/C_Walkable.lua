@@ -17,5 +17,5 @@ function ShowOption()
         Interact()
     end
 
-    Events.Broadcast(Framework.Events.Input.EVENT_SHOW_INTERACT_OPTION, "Walk here", callback)
+    Events.Broadcast(Framework.Events.Interaction.EVENT_ADD_INTERACT_OPTION, "Walk here", callback)
 end

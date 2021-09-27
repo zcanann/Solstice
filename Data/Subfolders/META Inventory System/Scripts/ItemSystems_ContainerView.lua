@@ -461,6 +461,7 @@ end
 
 -- TODO: Allow container items to stat compare to the inventory.
 function view:InitStats()
+    if not PANEL_STATS then return end
     self.statElements = {}
     for _,statElement in ipairs(PANEL_STATS:GetChildren()) do
         local statName = statElement.name

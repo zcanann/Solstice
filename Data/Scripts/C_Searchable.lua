@@ -48,5 +48,5 @@ function ShowOption()
         Interact()
     end
 
-    Events.Broadcast(Framework.Events.Interaction.EVENT_SHOW_INTERACT_OPTION, "Search " .. name, callback)
+    Events.Broadcast(Framework.Events.Interaction.EVENT_ADD_INTERACT_OPTION, "Search " .. name, callback)
 end

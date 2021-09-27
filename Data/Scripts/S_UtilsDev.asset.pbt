@@ -1,31 +1,31 @@
 Assets {
-  Id: 11639268906219382437
-  Name: "S_Events"
+  Id: 3693793738310101289
+  Name: "S_UtilsDev"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:ChatCommandEvents"
+        Name: "cs:ExpTable"
         AssetReference {
-          Id: 17612071643994816819
+          Id: 1911446898924153423
         }
       }
       Overrides {
-        Name: "cs:InteractionEvents"
+        Name: "cs:ReliableEvents"
         AssetReference {
-          Id: 9116214855069240359
+          Id: 16495471231439243155
         }
       }
       Overrides {
-        Name: "cs:MovementEvents"
+        Name: "cs:ResourceDatabase"
         AssetReference {
-          Id: 8468684145391850702
+          Id: 6861105163866882030
         }
       }
       Overrides {
-        Name: "cs:SkillEvents"
+        Name: "cs:Events"
         AssetReference {
-          Id: 9935215235775901043
+          Id: 5338086385139468741
         }
       }
     }

@@ -6,5 +6,7 @@ Framework.Database = require(script:GetCustomProperty("Database"))
 Framework.ExpTable = require(script:GetCustomProperty("ExpTable"))
 Framework.Events = require(script:GetCustomProperty("Events"))
 Framework.ReliableEvents = require(script:GetCustomProperty("ReliableEvents"))
+Framework.Strings = require(script:GetCustomProperty("Strings"))
+Framework.Utils = require(script:GetCustomProperty("Utils"))
 
 return Framework
