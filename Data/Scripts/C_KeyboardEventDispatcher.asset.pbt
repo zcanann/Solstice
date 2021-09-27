@@ -1,6 +1,6 @@
 Assets {
-  Id: 13256092117753200766
-  Name: "C_Walkable"
+  Id: 2903886657326780764
+  Name: "C_KeyboardEventDispatcher"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -13,5 +13,5 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
+  VirtualFolderPath: "Input"
 }

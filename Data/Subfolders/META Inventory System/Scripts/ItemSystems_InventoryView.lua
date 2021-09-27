@@ -700,8 +700,8 @@ end
 function view:Close()
     if self.isClosed then return end
     self.isClosed = true
-    INVENTORY_VIEW.visibility = Visibility.FORCE_OFF
-    CONTAINER_VIEW.visibility = Visibility.FORCE_OFF
+    -- INVENTORY_VIEW.visibility = Visibility.FORCE_OFF
+    -- CONTAINER_VIEW.visibility = Visibility.FORCE_OFF
     self:UnInitContainerSlots()
     self:ClearHoverState()
     self:ClearClickState()

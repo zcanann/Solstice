@@ -5,11 +5,8 @@
 ]]
 
 local LOOT_VIEW = script:GetCustomProperty("LootView"):WaitForObject()
-local LOOT_VIEW_HOTKEY = script:GetCustomProperty("LootViewHotkey")
 local INVENTORY_VIEW = script:GetCustomProperty("InventoryView"):WaitForObject()
-local INVENTORY_VIEW_HOTKEY = script:GetCustomProperty("InventoryViewHotkey")
 local UPGRADE_VIEW = script:GetCustomProperty("UpgradesView"):WaitForObject()
-local UPGRADE_VIEW_HOTKEY = script:GetCustomProperty("UpgradesHotKey")
 local SFX_OPEN = script:GetCustomProperty("SFX_InventoryOpen")
 local SFX_CLOSE = script:GetCustomProperty("SFX_InventoryClose")
 local LOCAL_PLAYER = Game.GetLocalPlayer()
@@ -49,17 +46,6 @@ local function ToggleView(view)
     Task.Wait(0.3)
     isCooldown = false
 end
-
--- Listens for inventory and loot window key presses
-LOCAL_PLAYER.bindingPressedEvent:Connect(function(_,binding)
-    if binding == LOOT_VIEW_HOTKEY then
-        ToggleView(LOOT_VIEW)
-    elseif binding == INVENTORY_VIEW_HOTKEY then
-        ToggleView(INVENTORY_VIEW)
-    elseif binding == UPGRADE_VIEW_HOTKEY then
-        ToggleView(UPGRADE_VIEW)
-    end
-end)
 
 -- Toggle a view by name
 -- @param string viewName

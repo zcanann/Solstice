@@ -22,6 +22,12 @@ Assets {
           Id: 16495471231439243155
         }
       }
+      Overrides {
+        Name: "cs:Events"
+        AssetReference {
+          Id: 11639268906219382437
+        }
+      }
     }
   }
   SerializationVersion: 100

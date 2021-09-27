@@ -125,7 +125,6 @@ Objects {
       }
       HeadVisibleToSelf: true
       IsSlideEnabled: true
-      IsCrouchEnabled: true
       AbilityAimMode {
         Value: "mc:eabilityaimmode:lookrelative"
       }

@@ -1,4 +1,4 @@
-Name: "ItemSystems"
+Name: "ItemSystem"
 RootId: 2755587556721485203
 Objects {
   Id: 5609959049128214806
@@ -2357,7 +2357,6 @@ Objects {
   }
   ParentId: 2755587556721485203
   ChildIds: 4488544371847216760
-  ChildIds: 1619404455514568031
   ChildIds: 12238186166092659053
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2398,46 +2397,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-}
-Objects {
-  Id: 1619404455514568031
-  Name: "DeveloperCheats"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10770890404501998547
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Enabled"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:CheatDropKey"
-      String: "Equipments"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 17820305579430282154
-    }
   }
 }
 Objects {
@@ -6043,35 +6002,5 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "RegisteredItems"
-  }
-}
-Objects {
-  Id: 6099021917501536316
-  Name: "ItemSystems_README"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2755587556721485203
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15718227380629059748
-    }
   }
 }

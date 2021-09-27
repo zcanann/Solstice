@@ -312,7 +312,7 @@ Objects {
 }
 Objects {
   Id: 2755587556721485203
-  Name: "ItemSystems"
+  Name: "ItemSystem"
   Transform {
     Location {
     }
@@ -338,7 +338,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "ItemSystems"
+    FilePartitionName: "ItemSystem"
   }
 }
 Objects {
@@ -357,6 +357,7 @@ Objects {
   }
   ParentId: 16844910628275373465
   ChildIds: 10639110573173986597
+  ChildIds: 5348816236042250609
   ChildIds: 16979616322488010798
   ChildIds: 767909694017194225
   Collidable_v2 {
@@ -452,6 +453,39 @@ Objects {
   Script {
     ScriptAsset {
       Id: 5793929070704032215
+    }
+  }
+}
+Objects {
+  Id: 5348816236042250609
+  Name: "C_KeyboardEventDispatcher"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17323502209317733254
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2903886657326780764
     }
   }
 }

@@ -108,5 +108,10 @@ Assets {
       VirtualFolderPath: "Movement"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "ChatCommands"
+      PlatformAssetType: 3
+    }
   }
 }

@@ -28589,28 +28589,16 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:LootViewHotkey"
-      String: "ability_extra_38"
-    }
-    Overrides {
       Name: "cs:InventoryView"
       ObjectReference {
         SelfId: 4193434068733847147
       }
     }
     Overrides {
-      Name: "cs:InventoryViewHotkey"
-      String: "ability_extra_27"
-    }
-    Overrides {
       Name: "cs:UpgradesView"
       ObjectReference {
         SelfId: 419899547279198409
       }
-    }
-    Overrides {
-      Name: "cs:UpgradesHotKey"
-      String: "ability_extra_26"
     }
     Overrides {
       Name: "cs:SFX_InventoryOpen"
@@ -28755,11 +28743,12 @@ Objects {
   ParentId: 6286086887859152918
   ChildIds: 16578637090350998927
   ChildIds: 1700351630510416647
+  ChildIds: 295136602919702362
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -28786,6 +28775,87 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 295136602919702362
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: -2440
+      Y: 1030
+      Z: 80
+    }
+    Rotation {
+      Yaw: 35.0000114
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13419047081593664430
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Combat Coming Soon"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 20
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11918000404206027739
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -37120,7 +37190,7 @@ Objects {
 }
 Objects {
   Id: 15728569170510903256
-  Name: "TabPrayer"
+  Name: "TabSoul"
   Transform {
     Location {
     }
@@ -37135,9 +37205,10 @@ Objects {
   ParentId: 6286086887859152918
   ChildIds: 12308415247691413315
   ChildIds: 16015586314296214091
+  ChildIds: 16612244232693829708
   UnregisteredParameters {
     Overrides {
-      Name: "cs:TabPrayer"
+      Name: "cs:TabSoul"
       ObjectReference {
         SelfId: 15728569170510903256
       }
@@ -37147,7 +37218,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37174,6 +37245,87 @@ Objects {
       TargetAnchor {
         Anchor {
           Value: "mc:euianchor:bottomright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 16612244232693829708
+  Name: "UI Text Box"
+  Transform {
+    Location {
+      X: -2440
+      Y: 1030
+      Z: 80
+    }
+    Rotation {
+      Yaw: 35.0000038
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15728569170510903256
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Coming Soon"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 20
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11918000404206027739
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
         }
       }
     }
@@ -71857,7 +72009,7 @@ Objects {
 }
 Objects {
   Id: 1654049477389391155
-  Name: "PrayerButton"
+  Name: "SoulButton"
   Transform {
     Location {
       X: 0.00100470986
@@ -75145,7 +75297,7 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:PrayerButton"
+      Name: "cs:SoulButton"
       ObjectReference {
         SelfId: 1654049477389391155
       }
@@ -75175,7 +75327,7 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:TabPrayer"
+      Name: "cs:TabSoul"
       ObjectReference {
         SelfId: 15728569170510903256
       }
