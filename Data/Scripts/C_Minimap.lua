@@ -24,6 +24,8 @@ Tips:
 
 --]]
 
+local Framework = require(script:GetCustomProperty("Framework"))
+
 local ROOT = script.parent
 local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
 local PLAYER_TEMPLATE = script:GetCustomProperty("MinimapPlayer")
@@ -271,7 +273,7 @@ function OnMouseDown(cursorPosition, primary)
 			pos.z
 		)
 
-		Events.Broadcast("event_move_to_location", worldCoords)
+		Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, worldCoords)
 	end
 end
 
@@ -282,6 +284,6 @@ function OnWaypointsSet(remainingWayPoints, goal)
 	PositionMapObject(minimapWaypoints, x, y, waypointsSize.x, waypointsSize.y, 0.0, false)
 end
 
-Events.Connect("event_waypoints_set", OnWaypointsSet)
-Events.Connect("event_ui_mouse_down", OnMouseDown)
+Events.Connect(Framework.Events.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
+Events.Connect(Framework.Events.Input.EVENT_MOUSE_DOWN, OnMouseDown)
 ParseMap()

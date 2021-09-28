@@ -32,6 +32,9 @@ function ChatCommandHandler(params)
                 Chat:LocalMessage("Invalid argument")
             end
         end
+        if command == "/wipeskills" or command == "/wipeexp" then
+            Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_WIPE_SKILLS)
+        end
         if command == "/level" then
             if #args == 2 then
                 Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_SET_SKILL_LEVEL, args[1], tonumber(args[2]))

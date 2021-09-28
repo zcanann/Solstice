@@ -237,7 +237,6 @@ Database.GetSkillKeys = function (skillId)
 	return skillIdMap[skillId]
 end
 
-
 -- [Resource] Effective skill level
 
 Database.GetEffectiveSkillLevel = function(player, skillId)
@@ -276,18 +275,7 @@ Database.SetSkillLevel = function(player, skillId, value)
     Database.SetKey(player, skillKeys.LEVEL, value)
 end
 
-Database.AdvanceSkillLevel = function(player, skillId)
-	local newLevel = Database.GetSkillLevel(player, skillId) + 1
-
-	if newLevel > 99 then
-		return
-	end
-
-	Database.SetSkillLevel(player, skillId, newLevel)
-	Database.SetEffectiveSkillLevel(player, skillId, Database.GetSkillLevel(player, skillId))
-end
-
--- [Resource] Skill exp
+-- Skill exp
 
 Database.GetSkillExp = function(player, skillId)
 	local skillKeys = Database.GetSkillKeys(skillId)
@@ -304,24 +292,29 @@ Database.SetSkillExp = function(player, skillId, value)
 	local skillKeys = Database.GetSkillKeys(skillId)
 
 	local skillLevel = Database.GetSkillLevel(player, skillId)
-	local currentExp = Database.GetSkillExp(player, skillId) + value
-	local expRequiredForNextLevel = ExpTable.GetExpRequiredForNextLevel(skillLevel)
+	local newExp = Database.GetSkillExp(player, skillId) + value
+    Database.SetKey(player, skillKeys.EXP, newExp)
+
+	local newSkillLevel = ExpTable.GetLevelForExp(newExp)
 
 	-- Check for level up
-	if expRequiredForNextLevel ~= ExpTable.INFINITE and currentExp >= expRequiredForNextLevel then
-		local remainder = currentExp - expRequiredForNextLevel
-		Database.AdvanceSkillLevel(player, skillId)
-
-		-- Recurse with remaining exp
-		Database.SetSkillExp(player, skillId, remainder)
-		return
+	if newSkillLevel > skillLevel then
+		Database.SetEffectiveSkillLevel(player, skillId, newSkillLevel)
+		Database.SetSkillLevel(player, skillId, newSkillLevel)
+		-- TODO: Event broadcast to client for FX
 	end
-
-    Database.SetKey(player, skillKeys.EXP, value)
 end
 
 Database.AddSkillExp = function(player, skillId, value)
     Database.SetSkillExp(player, skillId, Database.GetSkillExp(player, skillId) + value)
+end
+
+Database.ResetSkillExp = function(player, skillId, value)
+	local skillKeys = Database.GetSkillKeys(skillId)
+
+    Database.SetKey(player, skillKeys.LEVEL, 0)
+    Database.SetKey(player, skillKeys.EFFECTIVE_LEVEL, 0)
+    Database.SetKey(player, skillKeys.EXP, 0)
 end
 
 return Database

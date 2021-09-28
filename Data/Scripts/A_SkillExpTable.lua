@@ -55,6 +55,7 @@ local skillNameMap = {
 }
 
 ExpTable.INFINITE = -1
+ExpTable.MAX_LEVEL = 99
 
 ExpTable.GetSkillMap = function ()
     return skillMap
@@ -77,7 +78,7 @@ ExpTable.GetSkillName = function (skillKey)
 end
 
 ExpTable.GetExpRequiredForLevel = function (level)
-    if level >= 99 then
+    if level >= ExpTable.MAX_LEVEL then
         return ExpTable.INFINITE
     end
 
@@ -90,6 +91,27 @@ end
 
 ExpTable.GetExpRequiredForNextLevel = function (level)
     return ExpTable.GetExpRequiredForLevel(level + 1)
+end
+
+ExpTable.GetLevelForExp = function (exp)
+    -- It is not possible to find the roots of the exp equation, otherwise we would just invert it. Currently, we just
+    -- do a linear search. This may be fine since there are only 99 levels, but if it becomes an issue, we should switch to a binary search.
+    local level = 1
+    local nextLevel = 2
+
+    repeat
+        local expNeededForLevel = ExpTable.GetExpRequiredForLevel(level)
+        local expNeededForNextLevel = ExpTable.GetExpRequiredForLevel(nextLevel)
+
+        if exp >= expNeededForLevel and exp < expNeededForNextLevel then
+            return level
+        end
+
+        level = level + 1
+        nextLevel = nextLevel + 1
+    until nextLevel > ExpTable.MAX_LEVEL
+
+    return ExpTable.MAX_LEVEL
 end
 
 return ExpTable
