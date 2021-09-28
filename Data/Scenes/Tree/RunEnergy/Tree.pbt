@@ -1231,6 +1231,7 @@ Objects {
       OutlineColor {
         A: 1
       }
+      OutlineSize: 3
     }
     AnchorLayout {
       SelfAnchor {

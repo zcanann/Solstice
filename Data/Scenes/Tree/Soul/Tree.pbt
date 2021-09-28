@@ -1,4 +1,4 @@
-Name: "Prayer"
+Name: "Soul"
 RootId: 11597210509429751583
 Objects {
   Id: 17333976955470162701
@@ -535,7 +535,7 @@ Objects {
 }
 Objects {
   Id: 9454880307442132186
-  Name: "PrayerLevel"
+  Name: "SoulLevel"
   Transform {
     Location {
       X: -1722.73926
@@ -607,7 +607,7 @@ Objects {
 }
 Objects {
   Id: 14597210453587334089
-  Name: "UI Text Box"
+  Name: "SoulText"
   Transform {
     Location {
       X: -3700.7998
@@ -648,7 +648,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "12"
+      Label: "99"
       Color {
         R: 1
         G: 1
@@ -674,6 +674,7 @@ Objects {
       OutlineColor {
         A: 1
       }
+      OutlineSize: 3
     }
     AnchorLayout {
       SelfAnchor {
@@ -686,6 +687,50 @@ Objects {
           Value: "mc:euianchor:middlecenter"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 11906533266508184986
+  Name: "C_SoulDisplay"
+  Transform {
+    Location {
+      X: 0.0036103793
+      Y: 0.00462298188
+    }
+    Rotation {
+      Yaw: -1.70754738e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11597210509429751583
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SoulText"
+      ObjectReference {
+        SelfId: 14597210453587334089
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1593242138676027846
     }
   }
 }

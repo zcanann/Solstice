@@ -1,6 +1,6 @@
 Assets {
-  Id: 17133579673521530760
-  Name: "C_HealthDisplay"
+  Id: 1593242138676027846
+  Name: "C_SoulDisplay"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

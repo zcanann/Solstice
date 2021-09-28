@@ -431,7 +431,7 @@ Objects {
     UseParentWidth: true
     UseParentHeight: true
     Text {
-      Label: "27"
+      Label: "99"
       Color {
         R: 1
         G: 1
@@ -457,6 +457,7 @@ Objects {
       OutlineColor {
         A: 1
       }
+      OutlineSize: 3
     }
     AnchorLayout {
       SelfAnchor {
