@@ -75378,7 +75378,7 @@ Objects {
     }
   }
   ParentId: 5628166357863187692
-  ChildIds: 7240236631846304707
+  ChildIds: 17231288832128299088
   ChildIds: 12805819321682271475
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -79021,8 +79021,8 @@ Objects {
   }
 }
 Objects {
-  Id: 7240236631846304707
-  Name: "Minimap"
+  Id: 17231288832128299088
+  Name: "C_Minimap"
   Transform {
     Location {
     }
@@ -79049,15 +79049,9 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:MinimapLabel"
-      AssetReference {
-        Id: 10241363471756425391
-      }
-    }
-    Overrides {
       Name: "cs:MinimapPlayer"
       AssetReference {
-        Id: 841534158063459245
+        Id: 10582446667200537077
       }
     }
     Overrides {
@@ -79113,28 +79107,112 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:GradientHeight:tooltip"
-      String: "If true, the minimap pieces will be colored based on their Z position relative to the rest of the map."
+      Name: "cs:ContentPanel:isrep"
+      Bool: false
     }
     Overrides {
-      Name: "cs:MinimapPlayer:tooltip"
-      String: "The UI template that represents players."
-    }
-    Overrides {
-      Name: "cs:MinimapLabel:tooltip"
-      String: "The UI template that represents World Text objects."
+      Name: "cs:ContentPanel:ml"
+      Bool: false
     }
     Overrides {
       Name: "cs:MinimapPiece:tooltip"
       String: "The UI template that represents 3D geometry."
     }
     Overrides {
+      Name: "cs:MinimapPiece:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MinimapPiece:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MinimapPlayer:tooltip"
+      String: "The UI template that represents players."
+    }
+    Overrides {
+      Name: "cs:MinimapPlayer:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MinimapPlayer:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MinimapWaypoints:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MinimapWaypoints:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GradientHeight:tooltip"
+      String: "If true, the minimap pieces will be colored based on their Z position relative to the rest of the map."
+    }
+    Overrides {
+      Name: "cs:GradientHeight:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:GradientHeight:ml"
+      Bool: false
+    }
+    Overrides {
       Name: "cs:ColorLow:tooltip"
       String: "If GradientHeight is true, this is the color at the lowest Z, that multiplies against the geometry color."
     }
     Overrides {
+      Name: "cs:ColorLow:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ColorLow:ml"
+      Bool: false
+    }
+    Overrides {
       Name: "cs:ColorHigh:tooltip"
       String: "If GradientHeight is true, this is the color at the highest Z that multiplies against the geometry color."
+    }
+    Overrides {
+      Name: "cs:ColorHigh:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ColorHigh:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RootPanel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RootPanel:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RotationRoot:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RotationRoot:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Compass:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Compass:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CompassLower:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:CompassLower:ml"
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -79146,9 +79224,12 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
   Script {
     ScriptAsset {
-      Id: 17716888648857848079
+      Id: 11257204585549143565
     }
   }
 }

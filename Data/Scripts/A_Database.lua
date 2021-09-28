@@ -7,148 +7,242 @@ Database.KEYS.SKILLS = { }
 
 Database.KEYS.STAMINA = "stamina"
 
-Database.KEYS.SKILLS.ATTACK = { }
-Database.KEYS.SKILLS.ATTACK.KEY = "attack"
-Database.KEYS.SKILLS.ATTACK.EXP = "exp_attack"
-Database.KEYS.SKILLS.ATTACK.MAX = "max_attack"
+Database.KEYS.SKILLS.ATTACK =
+{
+	LEVEL 			= "lvl_attack",
+	EFFECTIVE_LEVEL = "eff_attack",
+	EXP 			= "exp_attack",
+}
+Database.KEYS.SKILLS.STRENGTH =
+{
+	LEVEL 			= "lvl_strength",
+	EFFECTIVE_LEVEL = "eff_strength",
+	EXP 			= "exp_strength",
+}
+Database.KEYS.SKILLS.DEFENSE =
+{
+	LEVEL 			= "lvl_defense",
+	EFFECTIVE_LEVEL = "eff_defense",
+	EXP 			= "exp_defense",
+}
+Database.KEYS.SKILLS.HEALTH =
+{
+	LEVEL 			= "lvl_health",
+	EFFECTIVE_LEVEL = "eff_health",
+	EXP 			= "exp_health",
+}
+Database.KEYS.SKILLS.ARCHERY =
+{
+	LEVEL 			= "lvl_archery",
+	EFFECTIVE_LEVEL = "eff_archery",
+	EXP 			= "exp_archery",
+}
+Database.KEYS.SKILLS.MAGIC =
+{
+	LEVEL 			= "lvl_magic",
+	EFFECTIVE_LEVEL = "eff_magic",
+	EXP 			= "exp_magic",
+}
+Database.KEYS.SKILLS.SOUL =
+{
+	LEVEL 			= "lvl_soul",
+	EFFECTIVE_LEVEL = "eff_soul",
+	EXP 			= "exp_soul",
+}
+Database.KEYS.SKILLS.SLAYER =
+{
+	LEVEL 			= "lvl_slayer",
+	EFFECTIVE_LEVEL = "eff_slayer",
+	EXP 			= "exp_slayer",
+}
+Database.KEYS.SKILLS.ALCHEMY =
+{
+	LEVEL 			= "lvl_alchemy",
+	EFFECTIVE_LEVEL = "eff_alchemy",
+	EXP 			= "exp_alchemy",
+}
+Database.KEYS.SKILLS.MINING =
+{
+	LEVEL 			= "lvl_mining",
+	EFFECTIVE_LEVEL = "eff_mining",
+	EXP 			= "exp_mining",
+}
+Database.KEYS.SKILLS.BLACKSMITHING =
+{
+	LEVEL 			= "lvl_blacksmithing",
+	EFFECTIVE_LEVEL = "eff_blacksmithing",
+	EXP 			= "exp_blacksmithing",
+}
+Database.KEYS.SKILLS.JEWELCRAFTING =
+{
+	LEVEL 			= "lvl_jewelcrafting",
+	EFFECTIVE_LEVEL = "eff_jewelcrafting",
+	EXP 			= "exp_jewelcrafting",
+}
+Database.KEYS.SKILLS.WOODCUTTING =
+{
+	LEVEL 			= "lvl_woodcutting",
+	EFFECTIVE_LEVEL = "eff_woodcutting",
+	EXP 			= "exp_woodcutting",
+}
+Database.KEYS.SKILLS.WOODWORKING =
+{
+	LEVEL 			= "lvl_woodworking",
+	EFFECTIVE_LEVEL = "eff_woodworking",
+	EXP 			= "exp_woodworking",
+}
+Database.KEYS.SKILLS.COOKING =
+{
+	LEVEL 			= "lvl_cooking",
+	EFFECTIVE_LEVEL = "eff_cooking",
+	EXP 			= "exp_cooking",
+}
+Database.KEYS.SKILLS.TAILORING =
+{
+	LEVEL 			= "lvl_tailoring",
+	EFFECTIVE_LEVEL = "eff_tailoring",
+	EXP 			= "exp_tailoring",
+}
+Database.KEYS.SKILLS.LEATHERWORKING =
+{
+	LEVEL 			= "lvl_leatherworking",
+	EFFECTIVE_LEVEL = "eff_leatherworking",
+	EXP 			= "exp_leatherworking",
+}
+Database.KEYS.SKILLS.FISHING =
+{
+	LEVEL 			= "lvl_fishing",
+	EFFECTIVE_LEVEL = "eff_fishing",
+	EXP 			= "exp_fishing",
+}
+Database.KEYS.SKILLS.ENCHANTING =
+{
+	LEVEL 			= "lvl_enchanting",
+	EFFECTIVE_LEVEL = "eff_enchanting",
+	EXP 			= "exp_enchanting",
+}
+Database.KEYS.SKILLS.ADVENTURING =
+{
+	LEVEL 			= "lvl_adventuring",
+	EFFECTIVE_LEVEL = "eff_adventuring",
+	EXP 			= "exp_adventuring",
+}
+Database.KEYS.SKILLS.BOTANY =
+{
+	LEVEL 			= "lvl_botany",
+	EFFECTIVE_LEVEL = "eff_botany",
+	EXP 			= "exp_botany",
+}
+Database.KEYS.SKILLS.THEIVING =
+{
+	LEVEL 			= "lvl_theiving",
+	EFFECTIVE_LEVEL = "eff_theiving",
+	EXP 			= "exp_theiving",
+}
+Database.KEYS.SKILLS.AGILITY =
+{
+	LEVEL 			= "lvl_agility",
+	EFFECTIVE_LEVEL = "eff_agility",
+	EXP 			= "exp_agility",
+}
+Database.KEYS.SKILLS.ENGINEERING =
+{
+	LEVEL 			= "lvl_engineering",
+	EFFECTIVE_LEVEL = "eff_engineering",
+	EXP 			= "exp_engineering",
+}
 
-Database.KEYS.SKILLS.STRENGTH = { }
-Database.KEYS.SKILLS.STRENGTH.KEY = "strength"
-Database.KEYS.SKILLS.STRENGTH.EXP = "exp_strength"
-Database.KEYS.SKILLS.STRENGTH.MAX = "max_strength"
-
-Database.KEYS.SKILLS.DEFENSE = { }
-Database.KEYS.SKILLS.DEFENSE.KEY = "defense"
-Database.KEYS.SKILLS.DEFENSE.EXP = "exp_defense"
-Database.KEYS.SKILLS.DEFENSE.MAX = "max_defense"
-
-Database.KEYS.SKILLS.HEALTH = { }
-Database.KEYS.SKILLS.HEALTH.KEY = "health"
-Database.KEYS.SKILLS.HEALTH.EXP = "exp_health"
-Database.KEYS.SKILLS.HEALTH.MAX = "max_health"
-
-Database.KEYS.SKILLS.ARCHERY = { }
-Database.KEYS.SKILLS.ARCHERY.KEY = "archery"
-Database.KEYS.SKILLS.ARCHERY.EXP = "exp_archery"
-Database.KEYS.SKILLS.ARCHERY.MAX = "max_archery"
-
-Database.KEYS.SKILLS.MAGIC = { }
-Database.KEYS.SKILLS.MAGIC.KEY = "magic"
-Database.KEYS.SKILLS.MAGIC.EXP = "exp_magic"
-Database.KEYS.SKILLS.MAGIC.MAX = "max_magic"
-
-Database.KEYS.SKILLS.SOUL = { }
-Database.KEYS.SKILLS.SOUL.KEY = "soul"
-Database.KEYS.SKILLS.SOUL.EXP = "exp_soul"
-Database.KEYS.SKILLS.SOUL.MAX = "max_soul"
-
-Database.KEYS.SKILLS.SLAYER = { }
-Database.KEYS.SKILLS.SLAYER.KEY = "slayer"
-Database.KEYS.SKILLS.SLAYER.EXP = "exp_slayer"
-Database.KEYS.SKILLS.SLAYER.MAX = "max_slayer"
-
-Database.KEYS.SKILLS.ALCHEMY = { }
-Database.KEYS.SKILLS.ALCHEMY.KEY = "alchemy"
-Database.KEYS.SKILLS.ALCHEMY.EXP = "exp_alchemy"
-Database.KEYS.SKILLS.ALCHEMY.MAX = "max_alchemy"
-
-Database.KEYS.SKILLS.MINING = { }
-Database.KEYS.SKILLS.MINING.KEY = "mining"
-Database.KEYS.SKILLS.MINING.EXP = "exp_mining"
-Database.KEYS.SKILLS.MINING.MAX = "max_mining"
-
-Database.KEYS.SKILLS.BLACKSMITHING = { }
-Database.KEYS.SKILLS.BLACKSMITHING.KEY = "blacksmithing"
-Database.KEYS.SKILLS.BLACKSMITHING.EXP = "exp_blacksmithing"
-Database.KEYS.SKILLS.BLACKSMITHING.MAX = "max_blacksmithing"
-
-Database.KEYS.SKILLS.JEWELCRAFTING = { }
-Database.KEYS.SKILLS.JEWELCRAFTING.KEY = "jewelcrafting"
-Database.KEYS.SKILLS.JEWELCRAFTING.EXP = "exp_jewelcrafting"
-Database.KEYS.SKILLS.JEWELCRAFTING.MAX = "max_jewelcrafting"
-
-Database.KEYS.SKILLS.WOODCUTTING = { }
-Database.KEYS.SKILLS.WOODCUTTING.KEY = "woodcutting"
-Database.KEYS.SKILLS.WOODCUTTING.EXP = "exp_woodcutting"
-Database.KEYS.SKILLS.WOODCUTTING.MAX = "max_woodcutting"
-
-Database.KEYS.SKILLS.WOODWORKING = { }
-Database.KEYS.SKILLS.WOODWORKING.KEY = "woodworking"
-Database.KEYS.SKILLS.WOODWORKING.EXP = "exp_woodworking"
-Database.KEYS.SKILLS.WOODWORKING.MAX = "max_woodworking"
-
-Database.KEYS.SKILLS.COOKING = { }
-Database.KEYS.SKILLS.COOKING.KEY = "cooking"
-Database.KEYS.SKILLS.COOKING.EXP = "exp_cooking"
-Database.KEYS.SKILLS.COOKING.MAX = "max_cooking"
-
-Database.KEYS.SKILLS.TAILORING = { }
-Database.KEYS.SKILLS.TAILORING.KEY = "tailoring"
-Database.KEYS.SKILLS.TAILORING.EXP = "exp_tailoring"
-Database.KEYS.SKILLS.TAILORING.MAX = "max_tailoring"
-
-Database.KEYS.SKILLS.LEARTHERWORKING = { }
-Database.KEYS.SKILLS.LEARTHERWORKING.KEY = "leatherworking"
-Database.KEYS.SKILLS.LEARTHERWORKING.EXP = "exp_leatherworking"
-Database.KEYS.SKILLS.LEARTHERWORKING.MAX = "max_leatherworking"
-
-Database.KEYS.SKILLS.FISHING = { }
-Database.KEYS.SKILLS.FISHING.KEY = "fishing"
-Database.KEYS.SKILLS.FISHING.EXP = "exp_fishing"
-Database.KEYS.SKILLS.FISHING.MAX = "max_fishing"
-
-Database.KEYS.SKILLS.ENCHANTING = { }
-Database.KEYS.SKILLS.ENCHANTING.KEY = "enchanting"
-Database.KEYS.SKILLS.ENCHANTING.EXP = "exp_enchanting"
-Database.KEYS.SKILLS.ENCHANTING.MAX = "max_enchanting"
-
-Database.KEYS.SKILLS.BOTANY = { }
-Database.KEYS.SKILLS.BOTANY.KEY = "botany"
-Database.KEYS.SKILLS.BOTANY.EXP = "exp_botany"
-Database.KEYS.SKILLS.BOTANY.MAX = "max_botany"
-
-Database.KEYS.SKILLS.THEIVING = { }
-Database.KEYS.SKILLS.THEIVING.KEY = "theiving"
-Database.KEYS.SKILLS.THEIVING.EXP = "exp_theiving"
-Database.KEYS.SKILLS.THEIVING.MAX = "max_theiving"
-
-Database.KEYS.SKILLS.AGILITY = { }
-Database.KEYS.SKILLS.AGILITY.KEY = "agility"
-Database.KEYS.SKILLS.AGILITY.EXP = "exp_agility"
-Database.KEYS.SKILLS.AGILITY.MAX = "max_agility"
-
-Database.KEYS.SKILLS.ENGINEERING = { }
-Database.KEYS.SKILLS.ENGINEERING.KEY = "engineering"
-Database.KEYS.SKILLS.ENGINEERING.EXP = "exp_engineering"
-Database.KEYS.SKILLS.ENGINEERING.MAX = "max_engineering"
+local skillIdMap =
+{
+	[ "attack" ] 			= Database.KEYS.SKILLS.ATTACK,
+	[ "strength" ] 			= Database.KEYS.SKILLS.STRENGTH,
+	[ "defense" ] 			= Database.KEYS.SKILLS.DEFENSE,
+	[ "health" ]			= Database.KEYS.SKILLS.HEALTH,
+	[ "archery" ] 			= Database.KEYS.SKILLS.ARCHERY,
+	[ "magic" ] 			= Database.KEYS.SKILLS.MAGIC,
+	[ "soul" ] 				= Database.KEYS.SKILLS.SOUL,
+	[ "slayer" ] 			= Database.KEYS.SKILLS.SLAYER,
+	[ "alchemy" ] 			= Database.KEYS.SKILLS.ALCHEMY,
+	[ "mining" ] 			= Database.KEYS.SKILLS.MINING,
+	[ "blacksmithing" ] 	= Database.KEYS.SKILLS.BLACKSMITHING,
+	[ "jewelcrafting" ] 	= Database.KEYS.SKILLS.JEWELCRAFTING,
+	[ "woodcutting" ] 		= Database.KEYS.SKILLS.WOODCUTTING,
+	[ "woodworking" ] 		= Database.KEYS.SKILLS.WOODWORKING,
+	[ "cooking" ] 			= Database.KEYS.SKILLS.COOKING,
+	[ "tailoring" ] 		= Database.KEYS.SKILLS.TAILORING,
+	[ "leatherworking" ] 	= Database.KEYS.SKILLS.LEATHERWORKING,
+	[ "fishing" ] 			= Database.KEYS.SKILLS.FISHING,
+	[ "enchanting" ] 		= Database.KEYS.SKILLS.ENCHANTING,
+	[ "adventuring" ] 		= Database.KEYS.SKILLS.ADVENTURING,
+	[ "botany" ] 			= Database.KEYS.SKILLS.BOTANY,
+	[ "theiving" ] 			= Database.KEYS.SKILLS.THEIVING,
+	[ "agility" ] 			= Database.KEYS.SKILLS.AGILITY,
+	[ "engineering" ] 		= Database.KEYS.SKILLS.ENGINEERING,
+}
 
 -- Generic storage
 
-local errorInvalidSkill = "Invalid skill provided"
-
-Database.SetKey = function (player, key, value)
-	local playerData = Storage.GetPlayerData(player)
-	playerData[key] = value
-	local resultCode, errorMessage = Storage.SetPlayerData(player, playerData)
-	if resultCode ~= StorageResultCode.SUCCESS then
-		error(errorMessage)
-        return false
+Database.GetKey = function (player, key)
+	if Environment.IsClient() then
+		return player:GetResource(key)
 	end
 
-    return true
-end
-
-Database.GetKey = function (player, key)
 	local playerData = Storage.GetPlayerData(player)
 	return playerData[key]
 end
 
--- [Resource] Current skill level
+Database.SetKey = function (player, key, value)
+	local playerData = Storage.GetPlayerData(player)
+	playerData[key] = value
 
-Database.GetCurrentSkillLevel = function(player, skillKey)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+	local retryCount = 3
+	local resultCode = nil
+	local errorMessage = nil
 
-    local level = player.GetResource(player, skillKey)
+	-- Retry a few times before giving up. This is dangerous, and should probably be offloaded to a reliable queue.
+	repeat
+		resultCode, errorMessage = Storage.SetPlayerData(player, playerData)
+		if resultCode == StorageResultCode.SUCCESS then
+			-- Replicate keys as player resources. This is a simple way for the client to be able to read back the results.
+			-- If we ever need replication for non-number values, we will need a more robust solution.
+			if type(value) == "number" then
+				player:SetResource(key, value)
+			end
+			return true
+		end
+		retryCount = retryCount - 1
+	until retryCount <= 0
+
+	error(errorMessage)
+	return false
+end
+
+-- Utils
+
+Database.IsValidSkill = function (skillId)
+	if not ExpTable.IsValidSkill(skillId) then
+		return false
+	end
+
+    if skillIdMap[skillId] then
+        return true
+    end
+
+    return false
+end
+
+Database.GetSkillKeys = function (skillId)
+	assert(Database.IsValidSkill(skillId), "Invalid skill provided " .. skillId)
+
+	return skillIdMap[skillId]
+end
+
+
+-- [Resource] Effective skill level
+
+Database.GetEffectiveSkillLevel = function(player, skillId)
+	local skillKeys = Database.GetSkillKeys(skillId)
+    local level = Database.GetKey(player, skillKeys.EFFECTIVE_LEVEL)
 
 	if level <= 0 then
 		return 1
@@ -157,21 +251,17 @@ Database.GetCurrentSkillLevel = function(player, skillKey)
 	end
 end
 
-Database.SetCurrentSkillLevel = function(player, skillKey, value)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+Database.SetEffectiveSkillLevel = function(player, skillId, value)
+	local skillKeys = Database.GetSkillKeys(skillId)
 
-    player.SetResource(player, skillKey, value)
+    Database.SetKey(player, skillKeys.EFFECTIVE_LEVEL, value)
 end
 
 -- [Resource] Skill level
 
-Database.GetSkillLevel = function(player, skillKey)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
-
-    local level = player.GetResource(player, "max_" .. skillKey)
-
-	print("LVL")
-	print(level)
+Database.GetSkillLevel = function(player, skillId)
+	local skillKeys = Database.GetSkillKeys(skillId)
+    local level = Database.GetKey(player, skillKeys.LEVEL) or 1
 
 	if level <= 0 then
 		return 1
@@ -180,65 +270,58 @@ Database.GetSkillLevel = function(player, skillKey)
 	end
 end
 
-Database.SetSkillLevel = function(player, skillKey, value)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+Database.SetSkillLevel = function(player, skillId, value)
+	local skillKeys = Database.GetSkillKeys(skillId)
 
-    player.SetResource(player, "max_" ..skillKey, value)
+    Database.SetKey(player, skillKeys.LEVEL, value)
 end
 
-Database.AdvanceSkillLevel = function(player, skillKey)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
-
-	local newLevel = Database.GetSkillLevel(player, skillKey) + 1
+Database.AdvanceSkillLevel = function(player, skillId)
+	local newLevel = Database.GetSkillLevel(player, skillId) + 1
 
 	if newLevel > 99 then
 		return
 	end
 
-	Database.SetSkillLevel(player, skillKey, newLevel)
-	Database.SetCurrentSkillLevel(player, skillKey, Database.GetSkillLevel(player, skillKey))
-
-	print(Database.GetSkillLevel(player, skillKey))
+	Database.SetSkillLevel(player, skillId, newLevel)
+	Database.SetEffectiveSkillLevel(player, skillId, Database.GetSkillLevel(player, skillId))
 end
 
 -- [Resource] Skill exp
 
-Database.GetSkillExp = function(player, skillKey)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+Database.GetSkillExp = function(player, skillId)
+	local skillKeys = Database.GetSkillKeys(skillId)
+    local exp = Database.GetKey(player, skillKeys.EXP) or 0
 
-    return player.GetResource(player, "exp_" .. skillKey)
+	if exp < 0 then
+		return 0
+	else
+		return exp
+	end
 end
 
-Database.SetSkillExp = function(player, skillKey, value)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
+Database.SetSkillExp = function(player, skillId, value)
+	local skillKeys = Database.GetSkillKeys(skillId)
 
-	local skillLevel = Database.GetSkillLevel(player, skillKey)
-	local currentExp = Database.GetSkillExp(player, skillKey) + value
+	local skillLevel = Database.GetSkillLevel(player, skillId)
+	local currentExp = Database.GetSkillExp(player, skillId) + value
 	local expRequiredForNextLevel = ExpTable.GetExpRequiredForNextLevel(skillLevel)
-
-	print(skillLevel)
-	print(currentExp) -- 150
-	print(expRequiredForNextLevel) -- 83
 
 	-- Check for level up
 	if expRequiredForNextLevel ~= ExpTable.INFINITE and currentExp >= expRequiredForNextLevel then
 		local remainder = currentExp - expRequiredForNextLevel
-		Database.AdvanceSkillLevel(player, skillKey)
-
-		print(remainder)
+		Database.AdvanceSkillLevel(player, skillId)
 
 		-- Recurse with remaining exp
-		Database.SetSkillExp(player, skillKey, remainder)
+		Database.SetSkillExp(player, skillId, remainder)
 		return
 	end
 
-    return player.SetResource(player, "exp_" .. skillKey, value)
+    Database.SetKey(player, skillKeys.EXP, value)
 end
 
-Database.AddCurrentExp = function(player, skillKey, value)
-	assert(ExpTable.IsValidSkill(skillKey), errorInvalidSkill)
-
-    return Database.SetSkillExp(player, skillKey, Database.GetSkillExp(player, skillKey) + value)
+Database.AddSkillExp = function(player, skillId, value)
+    Database.SetSkillExp(player, skillId, Database.GetSkillExp(player, skillId) + value)
 end
 
 return Database

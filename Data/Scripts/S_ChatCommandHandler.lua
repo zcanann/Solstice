@@ -9,10 +9,13 @@ end
 function OnGiveSkillExp(player, skillKey, value)
     if not Framework.Utils.Dev.IsAdmin(player) then return end
 
-    Framework.Database.AddCurrentExp(player, skillKey, value)
-    -- if player.serverUserData.statSheet then
-       --  player.serverUserData.statSheet:AddExperience(50)
-    -- end
+    Framework.Database.AddSkillExp(player, skillKey, value)
+end
+
+function OnGiveSkillsRandomExp(player, randomMin, randomMax)
+    for _, skillKey in ipairs(Framework.ExpTable.GetSkillMap()) do
+        OnGiveSkillExp(player, skillKey, math.random(randomMin, randomMax))
+    end
 end
 
 function OnSetSkillLevel(player, skillKey)
@@ -38,6 +41,7 @@ function OnKillPlayerCommand(player, targetPlayer)
 end
 
 Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILL_EXP, OnGiveSkillExp)
+Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILLS_RANDOM_EXP, OnGiveSkillsRandomExp)
 Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_SET_SKILL_LEVEL, OnSetSkillLevel)
 Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_PRINT_INVENTORY, OnPrintPlayerInventory)
 Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_SPAWN_ITEM, OnSpawnItem)

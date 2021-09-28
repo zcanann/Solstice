@@ -11,7 +11,7 @@ local propSkillName = propSkillHoverMenu:GetCustomProperty("SkillName"):WaitForO
 local propSkillExp = propSkillHoverMenu:GetCustomProperty("SkillExp"):WaitForObject()
 local propSkillExpRequired = propSkillHoverMenu:GetCustomProperty("SkillExpRequired"):WaitForObject()
 
-local skillKeyMax = "max_" .. propSkillKey
+local skillKeys = Framework.Database.GetSkillKeys(propSkillKey)
 local expTextFormat = propSkillExp.text
 local expRequiredTextFormat = propSkillExpRequired.text
 
@@ -38,7 +38,7 @@ function OnUnhover(button)
 end
 
 function UpdateSkillText()
-    local currentSkillLevel = Framework.Database.GetCurrentSkillLevel(localPlayer, propSkillKey)
+    local currentSkillLevel = Framework.Database.GetEffectiveSkillLevel(localPlayer, propSkillKey)
     local skillLevel = Framework.Database.GetSkillLevel(localPlayer, propSkillKey)
 
     propCurrentLevel.text = tostring(currentSkillLevel)
@@ -46,7 +46,7 @@ function UpdateSkillText()
 end
 
 function OnResourceChanged(player, resource, value)
-    if resource == propSkillKey or resource == skillKeyMax then
+    if resource == skillKeys.LEVEL or resource == skillKeys.EFFECTIVE_LEVEL then
         UpdateSkillText()
     end
 end

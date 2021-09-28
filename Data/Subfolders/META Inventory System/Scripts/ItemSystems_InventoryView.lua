@@ -737,8 +737,6 @@ function view:Draw()
         self:UpdateCursorState()
         self:DrawStats()
         self:DrawHoverHighlight()
-        self:DrawHoverInfo()
-        self:DrawHoverStatCompare()
     end
 end
 

@@ -26,6 +26,8 @@ function ChatCommandHandler(params)
         if command == "/exp" then
             if #args == 2 then
                 Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILL_EXP, args[1], tonumber(args[2]))
+            elseif #args == 3 and args[1] == "random" then
+                Framework.ReliableEvents.BroadcastToServer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILLS_RANDOM_EXP, tonumber(args[2]), tonumber(args[3]))
             else
                 Chat:LocalMessage("Invalid argument")
             end

@@ -85,7 +85,7 @@ function Tick(deltaTime)
 	if staminaServerTick < 0.0 then
 		staminaServerTick = staminaServerTickRate
 		for _, player in ipairs(Game.GetPlayers({ignoreDead = true})) do
-			-- TODO: Track the actual amount of time spent running vs idle, and decrease stamina "pro-rated". Ideally switch to floats.
+			-- TODO: Track the actual amount of time spent running vs idle, and decrease stamina "pro-rated". Ideally switch to floats, with rounding in the UI.
 			if GetPlayerMovementState(player) == movementStateEnum.Run and player:GetVelocity().size > 100.0 then
 				AddStamina(player, -1)
 			else

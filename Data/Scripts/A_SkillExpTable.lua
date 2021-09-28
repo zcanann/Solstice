@@ -56,6 +56,10 @@ local skillNameMap = {
 
 ExpTable.INFINITE = -1
 
+ExpTable.GetSkillMap = function ()
+    return skillMap
+end
+
 ExpTable.IsValidSkill = function (skillKey)
     if skillNameMap[skillKey] then
         return true
