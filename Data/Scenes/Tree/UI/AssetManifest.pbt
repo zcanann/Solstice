@@ -350,6 +350,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10803085399942501153
+  Name: "Navigation"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Navigation"
+  }
+}
+Assets {
   Id: 10394296829902465434
   Name: "Icon Treasure Map"
   PlatformAssetType: 9
@@ -482,6 +491,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Crosshair_002"
+  }
+}
+Assets {
+  Id: 6548052375800318323
+  Name: "Icon Settings"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Settings"
   }
 }
 Assets {
@@ -644,6 +662,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_icon_Sword"
+  }
+}
+Assets {
+  Id: 1558935087939907749
+  Name: "Book"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Book"
   }
 }
 Assets {

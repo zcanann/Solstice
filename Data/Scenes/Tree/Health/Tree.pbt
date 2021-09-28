@@ -390,7 +390,7 @@ Objects {
 }
 Objects {
   Id: 10172252821772559214
-  Name: "UI Text Box"
+  Name: "HealthText"
   Transform {
     Location {
       X: -3700.7998
@@ -469,6 +469,51 @@ Objects {
           Value: "mc:euianchor:middlecenter"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 5034227574293021083
+  Name: "C_HealthDisplay"
+  Transform {
+    Location {
+      X: -1722.74316
+      Y: 186.21106
+      Z: -200
+    }
+    Rotation {
+      Yaw: 125.000023
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2498817854093115509
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:HealthText"
+      ObjectReference {
+        SelfId: 10172252821772559214
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17133579673521530760
     }
   }
 }
