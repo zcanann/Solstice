@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14256649674182269152
+        ParentId: 5628166357863187692
         ChildIds: 12710326895889515650
         UnregisteredParameters {
           Overrides {
@@ -56,7 +56,7 @@ Assets {
           }
           Overrides {
             Name: "cs:ShowNumbers"
-            Bool: true
+            Bool: false
           }
           Overrides {
             Name: "cs:AnimateChanges"
@@ -77,8 +77,9 @@ Assets {
           Overrides {
             Name: "cs:FriendlyNameColor"
             Color {
-              G: 0.0762913
-              B: 0.72
+              R: 1
+              G: 1
+              B: 1
               A: 1
             }
           }
@@ -110,8 +111,8 @@ Assets {
           Overrides {
             Name: "cs:FriendlyHealthColor"
             Color {
-              G: 0.0762913
-              B: 0.72
+              R: 0.0781455636
+              G: 0.590000033
               A: 1
             }
           }
@@ -277,7 +278,7 @@ Assets {
       }
       Objects {
         Id: 3811588159513218146
-        Name: "NameplateControllerClient"
+        Name: "C_NameplateController"
         Transform {
           Location {
           }

@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4830307333936658455
+  Name: "Metal Basic 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_basic_001"
+  }
+}
+Assets {
   Id: 1137112816547272582
   Name: "Cylinder"
   PlatformAssetType: 1

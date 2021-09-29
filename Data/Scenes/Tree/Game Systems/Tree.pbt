@@ -524,7 +524,7 @@ Objects {
 }
 Objects {
   Id: 2961315606830123504
-  Name: "ChatCommands"
+  Name: "Chat"
   Transform {
     Location {
     }
@@ -551,7 +551,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "ChatCommands"
+    FilePartitionName: "Chat"
   }
 }
 Objects {

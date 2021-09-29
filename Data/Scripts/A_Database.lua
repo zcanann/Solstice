@@ -292,7 +292,7 @@ Database.SetSkillExp = function(player, skillId, value)
 	local skillKeys = Database.GetSkillKeys(skillId)
 
 	local skillLevel = Database.GetSkillLevel(player, skillId)
-	local newExp = Database.GetSkillExp(player, skillId) + value
+	local newExp = value
     Database.SetKey(player, skillKeys.EXP, newExp)
 
 	local newSkillLevel = ExpTable.GetLevelForExp(newExp)

@@ -26,38 +26,39 @@ Tips:
 
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local ROOT = script.parent
 local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
 local PLAYER_TEMPLATE = script:GetCustomProperty("MinimapPlayer")
 local WAYPOINTS_TEMPLATE = script:GetCustomProperty("MinimapWaypoints")
 
-local ROOT_PANEL = script:GetCustomProperty("RootPanel"):WaitForObject()
 local CONTENT_PANEL = script:GetCustomProperty("ContentPanel"):WaitForObject()
+local CONTENT_ROOT = script:GetCustomProperty("ContentRoot"):WaitForObject()
 local COMPASS = script:GetCustomProperty("Compass"):WaitForObject()
 local ROTATION_ROOT = script:GetCustomProperty("RotationRoot"):WaitForObject()
 
-local minimapSize = ROOT_PANEL.width -- Assumed to have equal width and height
+local propZoomInButton = script:GetCustomProperty("ZoomInButton"):WaitForObject()
+local propZoomOutButton = script:GetCustomProperty("ZoomOutButton"):WaitForObject()
+
+local minimapSize = CONTENT_PANEL.width -- Assumed to have equal width and height
 local minimapCullDistance = minimapSize / 2.0 - 12.0
 local minimapMouseHitTestDistance = minimapSize / 2.0 - 24.0
-local scaleMin = 0.02
-local scaleMax = 0.05
-local scale = 0.025
+local scaleMin 			= 2.0 / 100.0
+local scaleMax 			= 5.0 / 100.0
+local scaleIncrement 	= 0.5 / 100.0
+local scale 			= 2.5 / 100.0
+local unitSize = Vector3.New(100.0, 100.0, 100.0)
 
-local playerSize = Vector3.New(50.0, 50.0, 128.0)
 local waypointsSize = Vector3.New(24.0, 24.0, 24.0)
 
 local boundsLower = Vector3.New()
 local boundsUpper = Vector3.New()
-local boundsDelta = Vector3.New()
 
 local staticObjects = { }
 local dynamicObjects = { }
 
 local minimapWaypoints = nil
+local cachedGoal = nil
 
 function ParseMap()
-	local worldTexts = ROOT:FindDescendantsByType("WorldText")
-
 	-- Search for all framework pieces and add them to the minimap.
 	-- When new Framework pieces are added, they will need to be concated here.
 	local staticObjectsTable = {
@@ -73,7 +74,7 @@ function ParseMap()
 	for _, worldShapes in ipairs(staticObjectsTable) do
 		for _, shape in ipairs(worldShapes) do
 			local pos = shape:GetWorldPosition()
-			local size = shape:GetCustomProperty("WorldSize") or Vector3.New(100, 100, 100)
+			local size = shape:GetCustomProperty("WorldSize") or unitSize
 			local endPos = pos + size
 			
 			if (pos.x < boundsLower.x) then
@@ -97,8 +98,6 @@ function ParseMap()
 		end
 	end
 
-	boundsDelta = boundsUpper - boundsLower
-
 	-- Add 2D shapes to map
 	for _, staticObjectList in ipairs(staticObjectsTable) do
 		for _, staticObject in ipairs(staticObjectList) do
@@ -114,60 +113,49 @@ function ParseMap()
 
 	-- Add waypoint manager to map
 	minimapWaypoints = World.SpawnAsset(WAYPOINTS_TEMPLATE, {parent = CONTENT_PANEL})
+
+	OnScaleChanged()
 end
 
 function AddStaticObjectToMinimap(staticObject)
 	local baseColor = staticObject:GetCustomProperty("MinimapColor") or Color.WHITE
-	local pos = staticObject:GetWorldPosition()
-	local rot = staticObject:GetWorldRotation()
-	local size = staticObject:GetCustomProperty("WorldSize") or Vector3.New(100, 100, 100)
+	local size = staticObject:GetCustomProperty("WorldSize") or unitSize
 
-	local x = pos.x * scale
-	local y = pos.y * scale
-	local width = size.x * staticObject:GetWorldScale().x * scale
-	local height = size.y * staticObject:GetWorldScale().y * scale
-	
 	local mapObject = World.SpawnAsset(MAP_PIECE_TEMPLATE, {parent = CONTENT_PANEL})
-	
+
 	mapObject:SetColor(baseColor)
-	
-	PositionMapObject(mapObject, x, y, width, height, rot.z, true)
-	
-	table.insert(staticObjects, mapObject)
+
+	table.insert(staticObjects, { mapObject = mapObject, worldObject = staticObject })
 end
 
 function AddDynamicObjectToMinimap(dynamicObject)
 	local minimapIconTemplate = dynamicObject:GetCustomProperty("MinimapIconTemplate")
-	local pos = dynamicObject:GetWorldPosition()
-
-	local x = pos.x * scale
-	local y = pos.y * scale
-	
 	local mapObject = World.SpawnAsset(minimapIconTemplate, {parent = CONTENT_PANEL})
-	
-	PositionMapObject(mapObject, x, y, 0.0, 0.0, 0.0, false)
-	
+
 	table.insert(dynamicObjects, { mapObject = mapObject, worldObject = dynamicObject })
 end
 
-function PositionMapObject(mapObject, x, y, width, height, rotation, updateSize)
-	mapObject.x = x
-	mapObject.y = y
+function OnScaleChanged()
+	for _, staticObject in ipairs(staticObjects) do
+		local pos = staticObject.worldObject:GetWorldPosition()
+		local rot = staticObject.worldObject:GetWorldRotation()
+		local size = staticObject.worldObject:GetCustomProperty("WorldSize") or unitSize
 
-	if updateSize then
-		mapObject.width = CoreMath.Round(width)
-		mapObject.height = CoreMath.Round(height)
+		local x = pos.x * scale
+		local y = pos.y * scale
+		local width = size.x * staticObject.worldObject:GetWorldScale().x * scale
+		local height = size.y * staticObject.worldObject:GetWorldScale().y * scale
+
+		PositionMapObject(staticObject.mapObject, x, y, width, height, rot.z, true)
 	end
 
-	mapObject.rotationAngle = rotation
+	PositionDynamicObjects()
 end
 
-function Tick()
+function PositionDynamicObjects()
 	local localPlayer = Game.GetLocalPlayer()
 	local allPlayers = Game.GetPlayers()
 	local localPlayerPosMapSpace = Vector2.New()
-	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
-	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
 
 	for _, player in ipairs(allPlayers) do
 		local indicator = GetIndicatorForPlayer(player)
@@ -190,14 +178,18 @@ function Tick()
 		end
 	end
 
-	for _, mapObject in ipairs(staticObjects) do
-		local mapObjectPos = Vector2.New(mapObject.x, mapObject.y)
+	-- Distance culling
+	--[[
+	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
+	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
+	for _, staticObject in ipairs(staticObjects) do
+		local mapObjectPos = Vector2.New(staticObject.mapObject.x, staticObject.mapObject.y)
 		local distance = (mapObjectPos - localPlayerPosMapSpace).size
 		
 		if distance < minimapCullDistance then
-			mapObject.visibility = Visibility.INHERIT
+			staticObject.mapObject.visibility = Visibility.INHERIT
 		else
-			mapObject.visibility = Visibility.FORCE_OFF
+			staticObject.mapObject.visibility = Visibility.FORCE_OFF
 		end
 	end
 
@@ -205,15 +197,60 @@ function Tick()
 		local mapObject = dynamicObject.mapObject
 		local mapObjectPos = Vector2.New(mapObject.x, mapObject.y)
 		local distance = (mapObjectPos - localPlayerPosMapSpace).size
+		local pos = dynamicObject.worldObject:GetWorldPosition()
+		local x = pos.x * scale
+		local y = pos.y * scale
 		
 		if distance < minimapCullDistance then
 			mapObject.visibility = Visibility.INHERIT
 			mapObject.rotationAngle = minimapRotation
 		else
-			mapObject.visibility = Visibility.FORCE_OFF
+			-- mapObject.visibility = Visibility.FORCE_OFF
 		end
+
+		PositionMapObject(mapObject, x, y, 0.0, 0.0, 0.0, false)
+	end
+	--]]
+
+	for _, dynamicObject in ipairs(dynamicObjects) do
+		local mapObject = dynamicObject.mapObject
+		local pos = dynamicObject.worldObject:GetWorldPosition()
+		local x = pos.x * scale
+		local y = pos.y * scale
+
+		PositionMapObject(mapObject, x, y, 0.0, 0.0, 0.0, false)
 	end
 
+	PositionGoal()
+end
+
+function PositionGoal()
+	if cachedGoal then
+		local x = cachedGoal.x * scale
+		local y = cachedGoal.y * scale
+	
+		PositionMapObject(minimapWaypoints, x, y, waypointsSize.x, waypointsSize.y, 0.0, false)
+	end
+end
+
+function PositionMapObject(mapObject, x, y, width, height, rotation, updateSize)
+	mapObject.x = x
+	mapObject.y = y
+
+	if updateSize then
+		mapObject.width = CoreMath.Round(width)
+		mapObject.height = CoreMath.Round(height)
+	end
+
+	mapObject.rotationAngle = rotation
+end
+
+function Tick()
+	local localPlayer = Game.GetLocalPlayer()
+	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
+	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
+
+	PositionDynamicObjects()
 	UpdateCompassRotations(minimapRotation)
 end
 
@@ -250,14 +287,19 @@ end
 function OnMouseDown(cursorPosition, primary)
     local screenSize = UI.GetScreenSize()
 
+	local minimapPositionX, minimapPositionY = Framework.Utils.UI.GetControlScreenPosition(CONTENT_ROOT)
+	local minimapCenterPositionX = minimapPositionX + minimapSize / 2.0
+	local minimapCenterPositionY = minimapPositionY + minimapSize / 2.0
+
 	-- Just hard code top-left anchoring. Too much of a headache to deal with handling other minimap locations.
     local minimapClickCoords = Vector2.New(
-		cursorPosition.x + minimapSize / 2.0 - screenSize.x - ROOT_PANEL.x,
-		-(cursorPosition.y - ROOT_PANEL.y - minimapSize / 2.0)
+		cursorPosition.x - minimapCenterPositionX,
+		minimapCenterPositionY - cursorPosition.y
 	)
+
+	print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
 	
 	if minimapClickCoords.size < minimapMouseHitTestDistance then
-		-- print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
         _G.uiHitTest = true
 
 		local localPlayer = Game.GetLocalPlayer()
@@ -278,11 +320,26 @@ function OnMouseDown(cursorPosition, primary)
 end
 
 function OnWaypointsSet(remainingWayPoints, goal)
-	local x = goal.x * scale
-	local y = goal.y * scale
-
-	PositionMapObject(minimapWaypoints, x, y, waypointsSize.x, waypointsSize.y, 0.0, false)
+	cachedGoal = goal
+	PositionGoal()
 end
+
+function OnZoomIn()
+	scale = CoreMath.Clamp(scale + scaleIncrement, scaleMin, scaleMax)
+	propZoomInButton.isInteractable = scale ~= scaleMax
+	propZoomOutButton.isInteractable = scale ~= scaleMin
+	OnScaleChanged()
+end
+
+function OnZoomOut()
+	scale = CoreMath.Clamp(scale - scaleIncrement, scaleMin, scaleMax)
+	propZoomInButton.isInteractable = scale ~= scaleMax
+	propZoomOutButton.isInteractable = scale ~= scaleMin
+	OnScaleChanged()
+end
+
+propZoomInButton.clickedEvent:Connect(OnZoomIn)
+propZoomOutButton.clickedEvent:Connect(OnZoomOut)
 
 Events.Connect(Framework.Events.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
 Events.Connect(Framework.Events.Input.EVENT_MOUSE_DOWN, OnMouseDown)

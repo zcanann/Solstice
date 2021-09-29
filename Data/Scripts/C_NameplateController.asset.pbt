@@ -1,10 +1,9 @@
 Assets {
   Id: 14278482860986951316
-  Name: "NameplateControllerClient"
+  Name: "C_NameplateController"
   PlatformAssetType: 3
   TextAsset {
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "_TODO_Gameplay"
+  VirtualFolderPath: "UI"
 }

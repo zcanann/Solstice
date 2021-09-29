@@ -1,16 +1,12 @@
 Name: "Chat"
-RootId: 4016812153014197255
+RootId: 2961315606830123504
 Objects {
-  Id: 5114926172174919196
-  Name: "ChatUIContainer"
+  Id: 16919306580498450171
+  Name: "ServerContext"
   Transform {
     Location {
-      X: -3700
-      Y: -1600
-      Z: 450
     }
     Rotation {
-      Yaw: -44.9999962
     }
     Scale {
       X: 1
@@ -18,9 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4016812153014197255
-  ChildIds: 3835175923580734243
-  ChildIds: 3980072258683105746
+  ParentId: 2961315606830123504
+  ChildIds: 5895155150061473958
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -33,48 +28,50 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Control {
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
+  NetworkContext {
+    Type: Server
+  }
+}
+Objects {
+  Id: 5895155150061473958
+  Name: "S_ChatCommandHandler"
+  Transform {
+    Location {
     }
-    Canvas {
-      ContentType {
-        Value: "mc:ecanvascontenttype:dynamic"
-      }
-      Opacity: 1
-      IsHUD: true
-      CanvasWorldSize {
-        X: 1024
-        Y: 1024
-      }
-      RedrawTime: 30
+    Rotation {
     }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16919306580498450171
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 8320970396306146241
     }
   }
 }
 Objects {
-  Id: 3980072258683105746
-  Name: "Background"
+  Id: 12294452792822104590
+  Name: "ClientContext"
   Transform {
     Location {
-      X: -17.6776676
-      Y: 17.6776695
     }
     Rotation {
-      Yaw: 3.4150944e-06
     }
     Scale {
       X: 1
@@ -82,9 +79,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5114926172174919196
+  ParentId: 2961315606830123504
+  ChildIds: 4767372961603784113
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -95,52 +93,14 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Control {
-    Width: 824
-    Height: 55
-    UIX: 12
-    UIY: -22
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-      }
-      Color {
-        A: 0.4
-      }
-      TeamSettings {
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-      ScreenshotIndex: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-    }
+  NetworkContext {
   }
 }
 Objects {
-  Id: 3835175923580734243
-  Name: "Background"
+  Id: 4767372961603784113
+  Name: "C_ChatCommandHandler"
   Transform {
     Location {
-      X: -17.6776695
-      Y: 17.6776695
     }
     Rotation {
     }
@@ -150,7 +110,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 5114926172174919196
+  ParentId: 12294452792822104590
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -163,42 +123,9 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Control {
-    Width: 824
-    Height: 215
-    UIX: 12
-    UIY: -77
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-      }
-      Color {
-        A: 0.25
-      }
-      TeamSettings {
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-      ScreenshotIndex: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:bottomleft"
-        }
-      }
+  Script {
+    ScriptAsset {
+      Id: 11050849546976304799
     }
   }
 }

@@ -111,6 +111,7 @@ function OnPlayerJoined(player)
 	nameplates[player].changePiece = nameplateRoot:GetCustomProperty("ChangePiece"):WaitForObject()
 	nameplates[player].healthText = nameplateRoot:GetCustomProperty("HealthText"):WaitForObject()
 	nameplates[player].nameText = nameplateRoot:GetCustomProperty("NameText"):WaitForObject()
+	nameplates[player].chatText = nameplateRoot:GetCustomProperty("ChatText"):WaitForObject()
 
 	-- For animating changes. Each change clobbers the previous state.
 	nameplates[player].lastHealthFraction = 1.0
@@ -131,6 +132,7 @@ function OnPlayerJoined(player)
 	nameplates[player].healthText:SetPosition(Vector3.New(50.0 * NAMEPLATE_LAYER_THICKNESS, 0.0, 0.0))		-- Text must be 50 units ahead as it doesn't have thickness
 	nameplates[player].healthText:SetColor(HEALTH_NUMBER_COLOR)
 	nameplates[player].nameText.text = player.name
+	nameplates[player].chatText.text = ""
 
 	nameplates[player].borderPiece.visibility = Visibility.FORCE_OFF
 	nameplates[player].backgroundPiece.visibility = Visibility.FORCE_OFF
@@ -329,6 +331,29 @@ function Tick(deltaTime)
 		end
 	end
 end
+
+function PlayerChatHandler(player, params)
+	local nameplate = nameplates[player]
+	local chatCounter = nameplate.chatCounter or 0
+	local chatDuration = 5.0
+
+	if not nameplate or not nameplate.chatText then
+		return
+	end
+
+	chatCounter = chatCounter + 1
+
+	nameplate.chatText.text = params.message
+	nameplate.chatCounter = chatCounter
+
+	Task.Spawn(function ()
+		if nameplate.chatCounter == chatCounter then
+			nameplate.chatText.text = ""
+		end
+	end, chatDuration)
+end
+
+Chat.receiveMessageHook:Connect(PlayerChatHandler)
 
 -- Initialize
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

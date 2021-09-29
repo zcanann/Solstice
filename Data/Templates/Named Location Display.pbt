@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8159210145680231851
+        ParentId: 5628166357863187692
         ChildIds: 1294633080633199145
         UnregisteredParameters {
           Overrides {
@@ -126,7 +126,7 @@ Assets {
           Overrides {
             Name: "cs:StaticBackground"
             ObjectReference {
-              SubObjectId: 14644034031668970814
+              SelfId: 841534158063459245
             }
           }
         }
@@ -399,7 +399,6 @@ Assets {
           }
         }
         ParentId: 7370272654990377787
-        ChildIds: 14644034031668970814
         ChildIds: 18066008406391893384
         UnregisteredParameters {
         }
@@ -413,10 +412,10 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 200
+          Width: 304
           Height: 44
-          UIX: -30
-          UIY: 30
+          UIX: -25
+          UIY: 24
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -434,64 +433,6 @@ Assets {
             TargetAnchor {
               Anchor {
                 Value: "mc:euianchor:topright"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 14644034031668970814
-        Name: "StaticBackground"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13170181372698416189
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Control {
-          Width: 200
-          Height: 44
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 16241833908851998054
-            }
-            Color {
-              A: 0.7
-            }
-            TeamSettings {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -531,6 +472,8 @@ Assets {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          UseParentWidth: true
+          UseParentHeight: true
           Text {
             Label: "Location"
             Color {
@@ -539,23 +482,30 @@ Assets {
               B: 1
               A: 1
             }
-            Size: 20
+            Size: 18
             Justification {
               Value: "mc:etextjustify:center"
             }
             ClipTextToSize: true
             Font {
+              Id: 6382792620031146827
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+            OutlineColor {
+              A: 1
             }
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middlecenter"
+                Value: "mc:euianchor:topright"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middlecenter"
+                Value: "mc:euianchor:topright"
               }
             }
           }
@@ -569,6 +519,15 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "BackgroundNoOutline_020"
+      }
+    }
+    Assets {
+      Id: 6382792620031146827
+      Name: "Cabin"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "CabinRegular_ref"
       }
     }
     PrimaryAssetId {

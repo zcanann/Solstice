@@ -22,7 +22,6 @@ local POPUP_PANEL = script:GetCustomProperty("PopupPanel"):WaitForObject()
 local POPUP_BACKGROUND = script:GetCustomProperty("PopupBackground"):WaitForObject()
 local STATIC_TEXT = script:GetCustomProperty("StaticText"):WaitForObject()
 local STATIC_PANEL = script:GetCustomProperty("StaticPanel"):WaitForObject()
-local STATIC_BACKGROUND = script:GetCustomProperty("StaticBackground"):WaitForObject()
 
 -- User exposed properties
 local POPUP_TEXT_DURATION = COMPONENT_ROOT:GetCustomProperty("PopupTextDuration")
@@ -45,7 +44,6 @@ function OnLocationEntered(player, properties)
         STATIC_PANEL.visibility = Visibility.INHERIT
         STATIC_TEXT.text = properties.name
         STATIC_TEXT:SetColor(properties.textColor)
-        STATIC_BACKGROUND:SetColor(properties.backgroundColor)
     end
 end
 

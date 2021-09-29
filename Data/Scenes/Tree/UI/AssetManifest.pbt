@@ -341,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10986922035495984739
+  Name: "Tiled Generic 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_TiledBG_027"
+  }
+}
+Assets {
   Id: 10866901117178208043
   Name: "Glove"
   PlatformAssetType: 9
