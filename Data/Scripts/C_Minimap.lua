@@ -39,12 +39,12 @@ local propZoomInButton = script:GetCustomProperty("ZoomInButton"):WaitForObject(
 local propZoomOutButton = script:GetCustomProperty("ZoomOutButton"):WaitForObject()
 
 local minimapSize = CONTENT_PANEL.width -- Assumed to have equal width and height
-local minimapCullDistance = minimapSize / 2.0 - 12.0
+local minimapCullDistance = minimapSize / 2.0 + 12.0
 local minimapMouseHitTestDistance = minimapSize / 2.0 - 24.0
-local scaleMin 			= 2.0 / 100.0
+local scaleMin 			= 2.5 / 100.0
 local scaleMax 			= 5.0 / 100.0
 local scaleIncrement 	= 0.5 / 100.0
-local scale 			= 2.5 / 100.0
+local scale 			= scaleMin
 local unitSize = Vector3.New(100.0, 100.0, 100.0)
 
 local waypointsSize = Vector3.New(24.0, 24.0, 24.0)
@@ -178,8 +178,7 @@ function PositionDynamicObjects()
 		end
 	end
 
-	-- Distance culling
-	--[[
+	-- Distance culling (there is a bug with Core's culling that makes this necessary)
 	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
 	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
 	for _, staticObject in ipairs(staticObjects) do
@@ -205,12 +204,9 @@ function PositionDynamicObjects()
 			mapObject.visibility = Visibility.INHERIT
 			mapObject.rotationAngle = minimapRotation
 		else
-			-- mapObject.visibility = Visibility.FORCE_OFF
+			mapObject.visibility = Visibility.FORCE_OFF
 		end
-
-		PositionMapObject(mapObject, x, y, 0.0, 0.0, 0.0, false)
 	end
-	--]]
 
 	for _, dynamicObject in ipairs(dynamicObjects) do
 		local mapObject = dynamicObject.mapObject
@@ -285,8 +281,6 @@ function GetIndicatorForPlayer(player)
 end
 
 function OnMouseDown(cursorPosition, primary)
-    local screenSize = UI.GetScreenSize()
-
 	local minimapPositionX, minimapPositionY = Framework.Utils.UI.GetControlScreenPosition(CONTENT_ROOT)
 	local minimapCenterPositionX = minimapPositionX + minimapSize / 2.0
 	local minimapCenterPositionY = minimapPositionY + minimapSize / 2.0
@@ -297,9 +291,8 @@ function OnMouseDown(cursorPosition, primary)
 		minimapCenterPositionY - cursorPosition.y
 	)
 
-	print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
-	
 	if minimapClickCoords.size < minimapMouseHitTestDistance then
+		-- print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
         _G.uiHitTest = true
 
 		local localPlayer = Game.GetLocalPlayer()
@@ -324,17 +317,37 @@ function OnWaypointsSet(remainingWayPoints, goal)
 	PositionGoal()
 end
 
-function OnZoomIn()
-	scale = CoreMath.Clamp(scale + scaleIncrement, scaleMin, scaleMax)
+function OnZoomChanged()
+	scale = Framework.Utils.Math.RoundToIncrement(CoreMath.Clamp(scale, scaleMin, scaleMax), scaleIncrement)
 	propZoomInButton.isInteractable = scale ~= scaleMax
 	propZoomOutButton.isInteractable = scale ~= scaleMin
+
+	if propZoomInButton.isInteractable then
+		propZoomInButton:GetCustomProperty("ContentEnabled"):GetObject().visibility = Visibility.FORCE_ON
+		propZoomInButton:GetCustomProperty("ContentDisabled"):GetObject().visibility = Visibility.FORCE_OFF
+	else
+		propZoomInButton:GetCustomProperty("ContentEnabled"):GetObject().visibility = Visibility.FORCE_OFF
+		propZoomInButton:GetCustomProperty("ContentDisabled"):GetObject().visibility = Visibility.FORCE_ON
+	end
+
+	if propZoomOutButton.isInteractable then
+		propZoomOutButton:GetCustomProperty("ContentEnabled"):GetObject().visibility = Visibility.FORCE_ON
+		propZoomOutButton:GetCustomProperty("ContentDisabled"):GetObject().visibility = Visibility.FORCE_OFF
+	else
+		propZoomOutButton:GetCustomProperty("ContentEnabled"):GetObject().visibility = Visibility.FORCE_OFF
+		propZoomOutButton:GetCustomProperty("ContentDisabled"):GetObject().visibility = Visibility.FORCE_ON
+	end
+end
+
+function OnZoomIn()
+	scale = scale + scaleIncrement
+	OnZoomChanged()
 	OnScaleChanged()
 end
 
 function OnZoomOut()
-	scale = CoreMath.Clamp(scale - scaleIncrement, scaleMin, scaleMax)
-	propZoomInButton.isInteractable = scale ~= scaleMax
-	propZoomOutButton.isInteractable = scale ~= scaleMin
+	scale = scale - scaleIncrement
+	OnZoomChanged()
 	OnScaleChanged()
 end
 
@@ -344,3 +357,4 @@ propZoomOutButton.clickedEvent:Connect(OnZoomOut)
 Events.Connect(Framework.Events.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
 Events.Connect(Framework.Events.Input.EVENT_MOUSE_DOWN, OnMouseDown)
 ParseMap()
+OnZoomChanged()

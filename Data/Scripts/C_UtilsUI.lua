@@ -57,58 +57,6 @@ UtilsUI.GetTopLeftPositionInParent = function(uiControl, parentWidth, parentHeig
     return x, y
 end
 
--- Gets the top left position of the parent considering the dock and anchor position
--- @param UIControl control
--- @param int parentWidth
--- @param int parentHeight
--- @return int, int
-UtilsUI.GetCenterPositionInParent = function(uiControl, parentWidth, parentHeight)
-    local anchor = uiControl.anchor or UIPivot.TOP_LEFT
-    local dock = uiControl.dock or UIPivot.TOP_LEFT
-    local x = uiControl.x or 0
-    local y = uiControl.y or 0
-
-    -- Anchoring
-    if anchor == UIPivot.BOTTOM_RIGHT or anchor == UIPivot.MIDDLE_RIGHT or anchor == UIPivot.TOP_RIGHT then
-        x = x - uiControl.width / 2.0
-    elseif anchor == UIPivot.BOTTOM_LEFT or anchor == UIPivot.MIDDLE_LEFT or anchor == UIPivot.TOP_LEFT then
-        x = x + uiControl.width / 2.0
-    end
-
-    if anchor == UIPivot.TOP_CENTER or anchor == UIPivot.TOP_LEFT or anchor == UIPivot.TOP_RIGHT then
-        y = y + uiControl.height / 2.0
-    elseif anchor == UIPivot.BOTTOM_CENTER or anchor == UIPivot.BOTTOM_LEFT or anchor == UIPivot.BOTTOM_RIGHT then
-        y = y - uiControl.height / 2.0
-    end
-
-
-    if uiControl.parent == nil or uiControl.parent:IsA("UIContainer") then
-        local screenSize = UI.GetScreenSize()
-        parentWidth = screenSize.x
-        parentHeight = screenSize.y
-
-        print(Vector2.New(x, y))
-    else
-        parentWidth = parentWidth or uiControl.parent.width or 0
-        parentHeight = parentHeight or uiControl.parent.height or 0
-    end
-
-    -- Docking
-    if dock == UIPivot.BOTTOM_RIGHT or dock == UIPivot.MIDDLE_RIGHT or dock == UIPivot.TOP_RIGHT then
-        x = x + parentWidth / 2.0
-    elseif dock == UIPivot.BOTTOM_LEFT or dock == UIPivot.MIDDLE_LEFT or dock == UIPivot.TOP_LEFT then
-        x = x - parentWidth / 2.0
-    end
-
-    if dock == UIPivot.TOP_CENTER or dock == UIPivot.TOP_LEFT or dock == UIPivot.TOP_RIGHT then
-        y = y - parentHeight / 2.0
-    elseif dock == UIPivot.BOTTOM_CENTER or dock == UIPivot.BOTTOM_LEFT or dock == UIPivot.BOTTOM_RIGHT then
-        y = y + parentHeight / 2.0
-    end
-
-    return x, y
-end
-
 -- Gets the absolute screen coordinates of a control, as x, y
 UtilsUI.GetControlScreenPosition = function (uiControl)
     local x = 0

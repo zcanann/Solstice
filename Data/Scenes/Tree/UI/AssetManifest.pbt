@@ -341,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11057432468162000660
+  Name: "Trophy"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Racing_Icon_010"
+  }
+}
+Assets {
   Id: 10986922035495984739
   Name: "Tiled Generic 001"
   PlatformAssetType: 9
@@ -440,6 +449,15 @@ Assets {
   }
 }
 Assets {
+  Id: 8572630388023030525
+  Name: "UI Basic Shape Square"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_Square"
+  }
+}
+Assets {
   Id: 8541787376537175054
   Name: "Boar"
   PlatformAssetType: 9
@@ -482,6 +500,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_icon_ChestPiece"
+  }
+}
+Assets {
+  Id: 7523997631681167081
+  Name: "Wolf"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Wolf"
   }
 }
 Assets {
