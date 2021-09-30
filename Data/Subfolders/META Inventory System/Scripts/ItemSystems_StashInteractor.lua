@@ -105,7 +105,7 @@ local function OpenStash(_,keybind)
             return
         end
         
-        ReliableEvents.BroadcastToServer("OnStashUse",id)
+        ReliableEvents.BroadcastToServer("OnStashUse", id)
 
         -- Ensure we don't spam broadcasts.
         onUseCooldown = true

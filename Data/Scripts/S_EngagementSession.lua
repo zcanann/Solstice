@@ -16,9 +16,13 @@ function Connect(player)
         return
     end
 
-    player.serverUserData.engagementSession = script
+    if player.serverUserData.engagementSession ~= nil then
+        player.serverUserData.engagementSession.context.Disconnect(player)
+    end
 
+    player.serverUserData.engagementSession = script
     engagedPlayers[player] = true
+    print("ENGAGEMENT CONNECTED")
 end
 
 function IsPlayerConnected(player)
@@ -31,10 +35,8 @@ function Disconnect(player)
     end
 
     engagedPlayers[player] = nil
-
-    player.serverUserData.engagementSession = script
-
-    table.insert(engagedPlayers, player)
+    player.serverUserData.engagementSession = nil
+    print("ENGAGEMENT DISCONNECTED")
 end
 
 function OnPlayerLeft(player)
@@ -42,9 +44,9 @@ function OnPlayerLeft(player)
 end
 
 function Tick(deltaTime)
-    
+
 end
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
-Events.Connect(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)
+Events.ConnectForPlayer(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)

@@ -17,6 +17,8 @@ function BeginMine()
     if sfxOpenSound then
         PlaySound(sfxOpenSound)
     end
+
+    Framework.ReliableEvents.BroadcastToServer(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 end
 
 function StopMine()
