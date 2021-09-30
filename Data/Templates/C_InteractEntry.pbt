@@ -1,6 +1,6 @@
 Assets {
   Id: 16253752641672165608
-  Name: "InteractEntry"
+  Name: "C_InteractEntry"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

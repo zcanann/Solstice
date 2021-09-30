@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:EngagementEvents"
+        AssetReference {
+          Id: 11639268906219382437
+        }
+      }
+      Overrides {
         Name: "cs:InteractionEvents"
         AssetReference {
           Id: 9116214855069240359

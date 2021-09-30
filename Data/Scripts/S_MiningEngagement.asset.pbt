@@ -1,19 +1,18 @@
 Assets {
-  Id: 11268320084557931241
-  Name: "C_EngagementSession"
+  Id: 14285642204270262052
+  Name: "S_MiningEngagement"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
         Name: "cs:Framework"
         AssetReference {
-          Id: 10511995982427952004
+          Id: 8502744504357454803
         }
       }
       Overrides {
-        Name: "cs:Object"
-        ObjectReference {
-        }
+        Name: "cs:MaxEngagements"
+        Int: -1
       }
     }
   }

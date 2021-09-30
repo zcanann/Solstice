@@ -1,5 +1,6 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
+
 function OnPrintInventory(player)
     if not Framework.Utils.Dev.IsAdmin(player) then return end
 

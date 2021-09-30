@@ -2,7 +2,6 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 function ChatCommandHandler(params)
     local message = string.lower(params.message)
-
     if string.sub(message, 1, 1) == "/" then
         params.message = ""
         local args = { CoreString.Split(message, " ") }

@@ -2,7 +2,13 @@
 
 local Framework = require(script:GetCustomProperty("Framework"))
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
+local propExact = script:GetCustomProperty("Exact")
 
+function IsExact()
+    return propExact
+end
+
+-- TODO: Take a source and StopRadius param, which
 function GetWalkableDestination()
     return script:GetWorldPosition()
 end

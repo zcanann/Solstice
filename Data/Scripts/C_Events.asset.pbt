@@ -5,6 +5,12 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:EngagementEvents"
+        AssetReference {
+          Id: 7088824184409537343
+        }
+      }
+      Overrides {
         Name: "cs:InteractionEvents"
         AssetReference {
           Id: 9116214855069240359

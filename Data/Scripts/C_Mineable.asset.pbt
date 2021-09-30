@@ -1,18 +1,18 @@
 Assets {
-  Id: 2632154708327163058
-  Name: "C_Utils"
+  Id: 14198657364326515833
+  Name: "C_Mineable"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:UtilsUI"
+        Name: "cs:Framework"
         AssetReference {
-          Id: 3983122727560832209
+          Id: 10511995982427952004
         }
       }
     }
   }
   SerializationVersion: 100
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Interactions"
 }

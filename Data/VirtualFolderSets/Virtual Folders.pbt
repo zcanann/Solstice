@@ -53,16 +53,8 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Jordan"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Jordans Materials "
       PlatformAssetType: 13
-    }
-    Folders {
-      VirtualFolderPath: "Engagement"
-      PlatformAssetType: 3
     }
     Folders {
       VirtualFolderPath: "Minimap"
@@ -112,6 +104,20 @@ Assets {
       VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "ChatCommands"
       PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Interactions"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Engagement"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Animations"
+      PlatformAssetType: 5
     }
   }
 }

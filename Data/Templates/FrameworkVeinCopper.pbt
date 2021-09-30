@@ -1,13 +1,13 @@
 Assets {
   Id: 13401275499172607929
-  Name: "Copper Ore Node 1"
+  Name: "FrameworkVeinCopper"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 18361376657929626207
       Objects {
         Id: 18361376657929626207
-        Name: "Copper Ore Node 1"
+        Name: "FrameworkVeinCopper"
         Transform {
           Scale {
             X: 1
@@ -16,6 +16,383 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 14124416398978196639
+        ChildIds: 9283846334413927800
+        ChildIds: 14909532260286085420
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Interactable"
+            ObjectReference {
+              SubObjectId: 8775759031513830779
+            }
+          }
+          Overrides {
+            Name: "cs:Interactable:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Interactable:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Name"
+            String: "Copper Vein"
+          }
+          Overrides {
+            Name: "cs:Name:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Name:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SecondsToSearch"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:SecondsToSearch:tooltip"
+            String: "Time it takes (in seconds) to search the container."
+          }
+          Overrides {
+            Name: "cs:SecondsToSearch:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SecondsToSearch:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SFX_OpenSound"
+            AssetReference {
+              Id: 17447823781948565161
+            }
+          }
+          Overrides {
+            Name: "cs:SFX_OpenSound:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SFX_OpenSound:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SFX_ClosedSound"
+            AssetReference {
+              Id: 3664521979752791860
+            }
+          }
+          Overrides {
+            Name: "cs:SFX_ClosedSound:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SFX_ClosedSound:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MinimapIconTemplate"
+            AssetReference {
+              Id: 6468548784570621292
+            }
+          }
+          Overrides {
+            Name: "cs:MinimapIconTemplate:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MinimapIconTemplate:ml"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 14124416398978196639
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18361376657929626207
+        ChildIds: 8775759031513830779
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 8775759031513830779
+        Name: "C_Interactable"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14124416398978196639
+        ChildIds: 9849424123738372637
+        ChildIds: 17178747362843569272
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 18361376657929626207
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15316634444061490990
+          }
+        }
+      }
+      Objects {
+        Id: 9849424123738372637
+        Name: "C_Mineable"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8775759031513830779
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 18361376657929626207
+            }
+          }
+          Overrides {
+            Name: "cs:WalkableScript"
+            ObjectReference {
+              SubObjectId: 17178747362843569272
+            }
+          }
+          Overrides {
+            Name: "cs:StopRadius"
+            Float: 100
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14198657364326515833
+          }
+        }
+      }
+      Objects {
+        Id: 17178747362843569272
+        Name: "C_Walkable"
+        Transform {
+          Location {
+            Y: 80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8775759031513830779
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 18361376657929626207
+            }
+          }
+          Overrides {
+            Name: "cs:Exact"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:StopRadius"
+            Float: 0
+          }
+          Overrides {
+            Name: "cs:Object:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Object:ml"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13256092117753200766
+          }
+        }
+      }
+      Objects {
+        Id: 9283846334413927800
+        Name: "ServerContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18361376657929626207
+        ChildIds: 15363651039913677374
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          Type: Server
+        }
+      }
+      Objects {
+        Id: 15363651039913677374
+        Name: "S_EngagementSession"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9283846334413927800
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:MaxEngagements"
+            Int: 4
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15725608099489840980
+          }
+        }
+      }
+      Objects {
+        Id: 14909532260286085420
+        Name: "Model"
+        Transform {
+          Location {
+            X: 4
+            Y: 3
+            Z: -18
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18361376657929626207
         ChildIds: 15097492360178856282
         ChildIds: 9681263259382482792
         ChildIds: 5572030960236168231
@@ -47,9 +424,9 @@ Assets {
         Name: "Flare Billboard"
         Transform {
           Location {
-            X: 8.0703125
-            Y: 9.84277344
-            Z: -18.0722656
+            X: 2
+            Y: -2
+            Z: -0.072265625
           }
           Rotation {
           }
@@ -59,7 +436,7 @@ Assets {
             Z: 1.28652012
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "bp:Flare Shape"
@@ -140,7 +517,9 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
-            Z: 44.9709167
+            X: -6.0703125
+            Y: -11.8427734
+            Z: 62.9709167
           }
           Rotation {
           }
@@ -150,7 +529,7 @@ Assets {
             Z: 0.359318614
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -206,9 +585,9 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
-            X: 38.1640625
-            Y: 68.5234375
-            Z: 71.9363098
+            X: 32.09375
+            Y: 56.6806641
+            Z: 89.9363098
           }
           Rotation {
           }
@@ -218,7 +597,7 @@ Assets {
             Z: 0.787858486
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color"
@@ -319,14 +698,14 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
-            X: 35.6542969
-            Y: 58.7714844
-            Z: 71.1930847
+            X: 29.5839844
+            Y: 46.9287109
+            Z: 89.1930847
           }
           Rotation {
-            Pitch: -63.7444458
-            Yaw: 78.3739319
-            Roll: -9.36178589
+            Pitch: -63.7444229
+            Yaw: 78.3738937
+            Roll: -9.36179352
           }
           Scale {
             X: 0.190529183
@@ -334,7 +713,7 @@ Assets {
             Z: 0.155923471
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -390,14 +769,14 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
-            X: 40.2714844
-            Y: -28.9345703
-            Z: 71.1930847
+            X: 34.2011719
+            Y: -40.7773438
+            Z: 89.1930847
           }
           Rotation {
-            Pitch: -47.2133179
-            Yaw: 82.4576111
-            Roll: -14.2674561
+            Pitch: -47.2133102
+            Yaw: 82.4576
+            Roll: -14.2674799
           }
           Scale {
             X: 0.190529183
@@ -405,7 +784,7 @@ Assets {
             Z: 0.155923471
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -461,13 +840,13 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
-            X: -51.8125
-            Y: 18.9648438
-            Z: 56.4308167
+            X: -57.8828125
+            Y: 7.12207031
+            Z: 74.4308167
           }
           Rotation {
-            Pitch: 1.54861557
-            Yaw: 42.3490639
+            Pitch: 1.54860866
+            Yaw: 42.3490791
             Roll: 66.9151688
           }
           Scale {
@@ -476,7 +855,7 @@ Assets {
             Z: 0.155923471
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -532,9 +911,9 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
-            X: 31.2255859
-            Y: -51.4404297
-            Z: 73.3806763
+            X: 25.1552734
+            Y: -63.2832031
+            Z: 91.3806763
           }
           Rotation {
           }
@@ -544,7 +923,7 @@ Assets {
             Z: 0.72486794
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color"
@@ -645,9 +1024,9 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
-            X: -53.0996094
-            Y: 18.8212891
-            Z: 60.0384216
+            X: -59.1699219
+            Y: 6.97851562
+            Z: 78.0384216
           }
           Rotation {
           }
@@ -657,7 +1036,7 @@ Assets {
             Z: 0.883085907
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color"
@@ -758,9 +1137,9 @@ Assets {
         Name: "Flare Billboard"
         Transform {
           Location {
-            X: 8.0703125
-            Y: 9.84277344
-            Z: -18.0722656
+            X: 2
+            Y: -2
+            Z: -0.072265625
           }
           Rotation {
           }
@@ -770,7 +1149,7 @@ Assets {
             Z: 1.28652012
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "bp:Flare Shape"
@@ -863,9 +1242,9 @@ Assets {
         Name: "Flare Billboard"
         Transform {
           Location {
-            X: 8.0703125
-            Y: 9.84277344
-            Z: -18.0722656
+            X: 2
+            Y: -2
+            Z: -0.072265625
           }
           Rotation {
           }
@@ -875,7 +1254,7 @@ Assets {
             Z: 1.28652012
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 14909532260286085420
         UnregisteredParameters {
           Overrides {
             Name: "bp:Flare Shape"
@@ -965,6 +1344,24 @@ Assets {
       }
     }
     Assets {
+      Id: 17447823781948565161
+      Name: "Large Wooden Fortress Gate Door Shut Open Close 02 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_large_wooden_fortress_gate_door_shut_open_close_02_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 3664521979752791860
+      Name: "Large Wooden Door Shut Open Close Rattle 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_large_wooden_door_shut_open_close_rattle_01_Cue_ref"
+      }
+    }
+    Assets {
       Id: 6578593823313454603
       Name: "Flare Billboard"
       PlatformAssetType: 6
@@ -1006,5 +1403,5 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Jordan"
+  VirtualFolderPath: "Framework"
 }

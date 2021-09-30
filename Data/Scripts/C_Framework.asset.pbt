@@ -23,6 +23,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Math"
+        AssetReference {
+          Id: 1528081273876745962
+        }
+      }
+      Overrides {
         Name: "cs:ReliableEvents"
         AssetReference {
           Id: 16495471231439243155

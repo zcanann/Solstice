@@ -318,7 +318,7 @@ function OnWaypointsSet(remainingWayPoints, goal)
 end
 
 function OnZoomChanged()
-	scale = Framework.Utils.Math.RoundToIncrement(CoreMath.Clamp(scale, scaleMin, scaleMax), scaleIncrement)
+	scale = Framework.Math.RoundToIncrement(CoreMath.Clamp(scale, scaleMin, scaleMax), scaleIncrement)
 	propZoomInButton.isInteractable = scale ~= scaleMax
 	propZoomOutButton.isInteractable = scale ~= scaleMin
 

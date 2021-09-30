@@ -29,7 +29,7 @@ end
 
 function ReliableEvents.BroadcastToAllPlayers(...)
     txQueue:PushBack({ method = "BroadcastToAllPlayers", ... })
-    Retry()  
+    Retry()
 end
 
 local txTask = Task.Spawn(function() Retry() end)
