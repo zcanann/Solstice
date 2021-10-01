@@ -58,6 +58,10 @@ local dynamicObjects = { }
 local minimapWaypoints = nil
 local cachedGoal = nil
 
+-- Local variables. Allocated here to prevent stressing LUA GC.
+local localPlayerPosMapSpace = Vector2.New()
+local mapObjectPos = Vector2.New()
+
 function ParseMap()
 	-- Search for all framework pieces and add them to the minimap.
 	-- When new Framework pieces are added, they will need to be concated here.
@@ -69,14 +73,14 @@ function ParseMap()
 	local dynamicObjectsTable = {
 		World.FindObjectsByName("FrameworkVault")
 	}
-	
+
 	-- Establish 3D bounds
 	for _, worldShapes in ipairs(staticObjectsTable) do
 		for _, shape in ipairs(worldShapes) do
 			local pos = shape:GetWorldPosition()
 			local size = shape:GetCustomProperty("WorldSize") or unitSize
 			local endPos = pos + size
-			
+
 			if (pos.x < boundsLower.x) then
 				boundsLower.x = pos.x
 			end
@@ -113,6 +117,7 @@ function ParseMap()
 
 	-- Add waypoint manager to map
 	minimapWaypoints = World.SpawnAsset(WAYPOINTS_TEMPLATE, {parent = CONTENT_PANEL})
+	minimapWaypoints.visibility = Visibility.FORCE_OFF
 
 	OnScaleChanged()
 end
@@ -155,11 +160,9 @@ end
 function PositionDynamicObjects()
 	local localPlayer = Game.GetLocalPlayer()
 	local allPlayers = Game.GetPlayers()
-	local localPlayerPosMapSpace = Vector2.New()
 
 	for _, player in ipairs(allPlayers) do
 		local indicator = GetIndicatorForPlayer(player)
-		indicator.visibility = Visibility.INHERIT
 
 		local pos = player:GetWorldPosition()
 
@@ -175,6 +178,17 @@ function PositionDynamicObjects()
 
 			localPlayerPosMapSpace.x = pos.x * scale
 			localPlayerPosMapSpace.y = pos.y * scale
+		else
+			-- Cull far away players. Technically this can be off by a frame since localPlayerPosMapSpace is computed in same loop, but I don't care
+			mapObjectPos.x = x
+			mapObjectPos.y = y
+			local distance = (mapObjectPos - localPlayerPosMapSpace).size
+
+			if distance < minimapCullDistance then
+				indicator.visibility = Visibility.INHERIT
+			else
+				indicator.visibility = Visibility.FORCE_OFF
+			end
 		end
 	end
 
@@ -182,9 +196,10 @@ function PositionDynamicObjects()
 	local cameraRotation = localPlayer:GetDefaultCamera():GetWorldRotation()
 	local minimapRotation = cameraRotation.z + 90 -- Align with camera space
 	for _, staticObject in ipairs(staticObjects) do
-		local mapObjectPos = Vector2.New(staticObject.mapObject.x, staticObject.mapObject.y)
+		mapObjectPos.x = staticObject.mapObject.x
+		mapObjectPos.y = staticObject.mapObject.y
 		local distance = (mapObjectPos - localPlayerPosMapSpace).size
-		
+
 		if distance < minimapCullDistance then
 			staticObject.mapObject.visibility = Visibility.INHERIT
 		else
@@ -194,12 +209,10 @@ function PositionDynamicObjects()
 
 	for _, dynamicObject in ipairs(dynamicObjects) do
 		local mapObject = dynamicObject.mapObject
-		local mapObjectPos = Vector2.New(mapObject.x, mapObject.y)
+		mapObjectPos.x = dynamicObject.mapObject.x
+		mapObjectPos.y = dynamicObject.mapObject.y
 		local distance = (mapObjectPos - localPlayerPosMapSpace).size
-		local pos = dynamicObject.worldObject:GetWorldPosition()
-		local x = pos.x * scale
-		local y = pos.y * scale
-		
+
 		if distance < minimapCullDistance then
 			mapObject.visibility = Visibility.INHERIT
 			mapObject.rotationAngle = minimapRotation
@@ -224,7 +237,7 @@ function PositionGoal()
 	if cachedGoal then
 		local x = cachedGoal.x * scale
 		local y = cachedGoal.y * scale
-	
+
 		PositionMapObject(minimapWaypoints, x, y, waypointsSize.x, waypointsSize.y, 0.0, false)
 	end
 end
@@ -313,6 +326,11 @@ function OnMouseDown(cursorPosition, primary)
 end
 
 function OnWaypointsSet(remainingWayPoints, goal)
+	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
+		minimapWaypoints.visibility = Visibility.FORCE_OFF
+	else
+		minimapWaypoints.visibility = Visibility.FORCE_ON
+	end
 	cachedGoal = goal
 	PositionGoal()
 end

@@ -1363,98 +1363,6 @@ Objects {
   }
 }
 Objects {
-  Id: 2322628983472884505
-  Name: "Roll For Loot Example"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 413991195585998862
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 10874906539535955149
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Roll For Loot Example"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -4450
-            Y: 1950
-            Z: 25
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 2.07154322
-            Y: 2.07154322
-            Z: 2.07154322
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 18344237167455371839
-    }
-  }
-}
-Objects {
-  Id: 295625169717492001
-  Name: "Searchable Loots Examples"
-  Transform {
-    Location {
-      X: -3680
-      Y: 1390
-      Z: 25
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 413991195585998862
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Searchable Loots Examples"
-  }
-  InstanceHistory {
-    SelfId: 295625169717492001
-    SubobjectId: 1521527601147161279
-    InstanceId: 4465551706381863116
-    TemplateId: 6068354435771292263
-    WasRoot: true
-  }
-}
-Objects {
   Id: 3782668079791736470
   Name: "SearchableWardrobe"
   Transform {
@@ -1473,7 +1381,6 @@ Objects {
   }
   ParentId: 413991195585998862
   ChildIds: 15311939739111624228
-  ChildIds: 399108297736708598
   UnregisteredParameters {
     Overrides {
       Name: "cs:Interactable"
@@ -1596,40 +1503,6 @@ Objects {
         LinearDamping: 0.01
       }
       BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 399108297736708598
-  Name: "ItemSystems_StashInstance"
-  Transform {
-    Location {
-      X: 957.130615
-      Y: 2384.72705
-      Z: -29.9999695
-    }
-    Rotation {
-      Yaw: 178.762939
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3782668079791736470
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4160105597995804842
     }
   }
 }
@@ -1782,6 +1655,41 @@ Objects {
   }
 }
 Objects {
+  Id: 6682420712573397411
+  Name: "StaticMap"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 413991195585998862
+  ChildIds: 4133531031245386448
+  ChildIds: 15393860705899249997
+  ChildIds: 16792452335977354892
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    Model {
+    }
+  }
+}
+Objects {
   Id: 16792452335977354892
   Name: "Kill Zone"
   Transform {
@@ -1797,7 +1705,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 413991195585998862
+  ParentId: 6682420712573397411
   ChildIds: 7828486389844232814
   ChildIds: 9230677367560799450
   UnregisteredParameters {
@@ -1891,36 +1799,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4133531031245386448
-  Name: "Walls"
-  Transform {
-    Location {
-      Z: 25
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 413991195585998862
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Walls"
-  }
-}
-Objects {
   Id: 15393860705899249997
   Name: "Floors"
   Transform {
@@ -1934,7 +1812,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 413991195585998862
+  ParentId: 6682420712573397411
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1953,8 +1831,8 @@ Objects {
   }
 }
 Objects {
-  Id: 14137583794138807727
-  Name: "Dungeons"
+  Id: 4133531031245386448
+  Name: "Walls"
   Transform {
     Location {
       Z: 25
@@ -1967,7 +1845,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 413991195585998862
+  ParentId: 6682420712573397411
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1979,7 +1857,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Dungeons"
+    FilePartitionName: "Walls"
   }
 }
 Objects {

@@ -17,6 +17,10 @@ end
 
 local ReliableEvents = {}
 
+function ReliableEvents.Broadcast(...)
+    Events.Broadcast(...)
+end
+
 function ReliableEvents.BroadcastToServer(...)
     txQueue:PushBack({ method = "BroadcastToServer", ... })
     Retry()

@@ -1,35 +1,6 @@
 Name: "Lobby Area"
 RootId: 3765684858975843531
 Objects {
-  Id: 10148370315779191624
-  Name: "Wall"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3765684858975843531
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Wall_1"
-  }
-}
-Objects {
   Id: 141378530351477273
   Name: "Prison Cell"
   Transform {
@@ -1182,35 +1153,6 @@ Objects {
   }
 }
 Objects {
-  Id: 11128055803198055199
-  Name: "Example Fantasy Props"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3765684858975843531
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Props"
-  }
-}
-Objects {
   Id: 9610952875632508300
   Name: "Spawn Pad Geo"
   Transform {
@@ -1350,15 +1292,9 @@ Objects {
   }
 }
 Objects {
-  Id: 11082005108976383591
+  Id: 11968673528157845015
   Name: "Named Location"
   Transform {
-    Location {
-      X: -4010
-      Z: 30
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -1366,194 +1302,37 @@ Objects {
     }
   }
   ParentId: 3765684858975843531
-  ChildIds: 11401279874230664308
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Name"
-      String: "Castle Valgrind"
-    }
-    Overrides {
-      Name: "cs:TextColor"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "cs:BackgroundColor"
-      Color {
-        A: 0.7
-      }
-    }
-    Overrides {
-      Name: "cs:Name:tooltip"
-      String: "Name of this location"
-    }
-    Overrides {
-      Name: "cs:TextColor:tooltip"
-      String: "Color used for UI text"
-    }
-    Overrides {
-      Name: "cs:BackgroundColor:tooltip"
-      String: "Color used for UI background"
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 11082005108976383591
-    SubobjectId: 12084009895330886478
-    InstanceId: 11968673528157845015
-    TemplateId: 5984235938909643820
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 11401279874230664308
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11082005108976383591
-  ChildIds: 1890038870344563181
-  ChildIds: 7029138088954130018
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 11401279874230664308
-    SubobjectId: 11547596356089379165
-    InstanceId: 11968673528157845015
-    TemplateId: 5984235938909643820
-  }
-}
-Objects {
-  Id: 7029138088954130018
-  Name: "ZoneTrigger"
-  Transform {
-    Location {
-      Z: 170
-    }
-    Rotation {
-    }
-    Scale {
-      X: 30.9
-      Y: 47.3
-      Z: 2.99999976
-    }
-  }
-  ParentId: 11401279874230664308
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-  InstanceHistory {
-    SelfId: 7029138088954130018
-    SubobjectId: 6914351225150253899
-    InstanceId: 11968673528157845015
-    TemplateId: 5984235938909643820
-  }
-}
-Objects {
-  Id: 1890038870344563181
-  Name: "NamedLocationClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11401279874230664308
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:API"
-      AssetReference {
-        Id: 3875830725285389341
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12084009895330886478
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Named Location"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -4010
+            Z: 30
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
       }
     }
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 11082005108976383591
-      }
+    TemplateAsset {
+      Id: 5984235938909643820
     }
-    Overrides {
-      Name: "cs:ZoneTrigger"
-      ObjectReference {
-        SelfId: 7029138088954130018
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5136117059034551451
-    }
-  }
-  InstanceHistory {
-    SelfId: 1890038870344563181
-    SubobjectId: 2612917095092468932
-    InstanceId: 11968673528157845015
-    TemplateId: 5984235938909643820
   }
 }
 Objects {

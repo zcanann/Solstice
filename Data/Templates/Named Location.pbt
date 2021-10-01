@@ -15,29 +15,26 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8159210145680231851
+        ParentId: 3765684858975843531
         ChildIds: 11547596356089379165
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
-            String: "Asrath"
+            String: "Castle Valgrind"
           }
           Overrides {
             Name: "cs:TextColor"
             Color {
-              R: 0.955973685
-              G: 0.356400251
-              B: 0.010329823
+              R: 1
+              G: 1
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "cs:BackgroundColor"
             Color {
-              R: 0.205078766
-              G: 0.205078766
-              B: 0.205078766
-              A: 0.5
+              A: 0.7
             }
           }
           Overrides {
@@ -152,14 +149,14 @@ Assets {
         Name: "ZoneTrigger"
         Transform {
           Location {
-            Z: 25
+            Z: 170
           }
           Rotation {
           }
           Scale {
-            X: 10
-            Y: 10
-            Z: 5
+            X: 30.9
+            Y: 47.3
+            Z: 2.99999976
           }
         }
         ParentId: 11547596356089379165

@@ -1,6 +1,6 @@
 Assets {
   Id: 1470492465602713491
-  Name: "A_EquipmentManager"
+  Name: "C_EquipmentManager"
   PlatformAssetType: 3
   TextAsset {
   }

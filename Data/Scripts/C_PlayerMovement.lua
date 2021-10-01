@@ -14,6 +14,7 @@ local CLICK_VFX = script:GetCustomProperty("AnimPulse")
 function ClearWayPoints()
 	remainingWayPoints = nil
 	goalRachedCallback = nil
+	Events.Broadcast(Framework.Events.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, nil)
 end
 
 function DestroyIfValid(object)
@@ -75,7 +76,7 @@ function OnMoveToLocation(goal, callback)
 	remainingWayPoints = wayPoints
 
 	Events.Broadcast(Framework.Events.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, goal)
-	Framework.ReliableEvents.BroadcastToServer(Framework.Events.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT)
+	Framework.ReliableEvents.Broadcast(Framework.Events.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, localPlayer)
 
 	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
 		OnReachedDestination()

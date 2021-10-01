@@ -1,5 +1,5 @@
 
- -- Custom 
+ local Framework = require(script:GetCustomProperty("Framework"))
  local propDebugItemTemplate = script:GetCustomProperty("DebugItem")
 
 function OnPlayerJoined(player)

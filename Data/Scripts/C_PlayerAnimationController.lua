@@ -2,7 +2,6 @@ local Framework = require(script:GetCustomProperty("Framework"))
 local propPlayerAnimationSetTemplate = script:GetCustomProperty("PlayerAnimationSet")
 
 function OnPlayerJoined(player)
-    Framework.Print("DebugAnimset")
 	local animationSet = World.SpawnAsset(propPlayerAnimationSetTemplate)
 
     Framework.Print(animationSet)

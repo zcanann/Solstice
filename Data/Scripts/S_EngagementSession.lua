@@ -24,9 +24,8 @@ function Connect(player)
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    Framework.ReliableEvents.BroadcastToPlayer(player, Framework.Events.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, propObject.id, "MiningAnimation")
-
-    Framework.Print("ENGAGEMENT_CONNECTED")
+    Framework.ReliableEvents.BroadcastToAllPlayers(Framework.Events.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, player, propObject.id, "MiningAnimation")
+    -- Framework.Print("ENGAGEMENT_CONNECTED")
 end
 
 function IsPlayerConnected(player)
@@ -40,7 +39,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement.session = nil
-    print("ENGAGEMENT DISCONNECTED")
+    -- print("ENGAGEMENT DISCONNECTED")
 end
 
 function OnPlayerLeft(player)
@@ -51,8 +50,8 @@ function Tick(deltaTime)
 
 end
 
-Framework.Print("LISTENING...")
-Framework.Print(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+-- Framework.Print("LISTENING...")
+-- Framework.Print(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

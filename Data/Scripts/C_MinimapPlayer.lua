@@ -17,7 +17,11 @@ function SetPlayer(player)
 	if player == Game.GetLocalPlayer() then
 		CIRCLE:SetColor(Color.New(1.0, 1.0, 0.0))
 	else
-		CIRCLE:SetColor(Color.New(1.0, 0, 0))
+		CIRCLE:SetColor(Color.New(1.0, 1.0, 1.0))
+
+		-- Slightly smaller size for other players
+		ROOT.width = ROOT.width - 2
+		ROOT.height = ROOT.height - 2
 	end
 
 	UpdateContent()

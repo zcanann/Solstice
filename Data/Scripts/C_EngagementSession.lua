@@ -3,29 +3,35 @@
 --   - Many enemies can attack a player, but a player may only attack one.
 --   - Many players can mine the same copper vein, but a player can only mine one copper vein.
 local Framework = require(script:GetCustomProperty("Framework"))
-local localPlayer = Game.GetLocalPlayer()
 
-function OnEngagementSessionConnected(objectId, animationName)
+function OnEngagementSessionConnected(player, objectId, animationName)
     Framework.Print("CONNECTED")
-    local animation = localPlayer.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
-    localPlayer.clientUserData.engagement.activeAnim = animation
+    print(player)
+    local animation = player.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
+    player.clientUserData.engagement.activeAnim = animation
     animation:Activate()
-    localPlayer.clientUserData.engagement.activeAnimReadyEvent = animation.readyEvent:Connect(function (localAnim)
-        Framework.Print("CHAINING_ABILITY")
+    player.clientUserData.engagement.activeAnimReadyEvent = animation.readyEvent:Connect(function (localAnim)
+        -- Framework.Print("CHAINING_ABILITY")
         localAnim:Activate()
     end)
-    localPlayer.clientUserData.engagement.activeAnimInterruptedEvent = animation.interruptedEvent:Connect(function (localAnim)
-        Framework.Print("INTERRUPTED")
-        if localPlayer.clientUserData.engagement.activeAnimReadyEvent then
-            localPlayer.clientUserData.engagement.activeAnimReadyEvent:Disconnect()
+    player.clientUserData.engagement.activeAnimInterruptedEvent = animation.interruptedEvent:Connect(function (localAnim)
+        -- Framework.Print("INTERRUPTED")
+        if player.clientUserData.engagement.activeAnimReadyEvent then
+            player.clientUserData.engagement.activeAnimReadyEvent:Disconnect()
         end
-        if localPlayer.clientUserData.engagement.activeAnimInterruptedEvent then
-            localPlayer.clientUserData.engagement.activeAnimInterruptedEvent:Disconnect()
+        if player.clientUserData.engagement.activeAnimInterruptedEvent then
+            player.clientUserData.engagement.activeAnimInterruptedEvent:Disconnect()
         end
-        localPlayer.clientUserData.engagement.activeAnimReadyEvent = nil
-        localPlayer.clientUserData.engagement.activeAnimInterruptedEvent = nil
-        localPlayer.clientUserData.engagement.activeAnim = nil
+        player.clientUserData.engagement.activeAnimReadyEvent = nil
+        player.clientUserData.engagement.activeAnimInterruptedEvent = nil
+        player.clientUserData.engagement.activeAnim = nil
     end)
+end
+
+function InterruptPlayerEngagement(player)
+    if player.clientUserData.engagement.activeAnim then
+        player.clientUserData.engagement.activeAnim:Interrupt()
+    end
 end
 
 function OnPlayerJoined(player)
@@ -35,3 +41,4 @@ end
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 
 Events.Connect(Framework.Events.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)
+Events.Connect(Framework.Events.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, InterruptPlayerEngagement)

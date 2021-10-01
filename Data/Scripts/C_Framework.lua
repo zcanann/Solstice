@@ -3,6 +3,7 @@
 local Framework = { }
 
 Framework.Print = function (string)
+    print("CLIENT: " .. tostring(string))
     Chat.LocalMessage("CLIENT: " .. tostring(string))
 end
 

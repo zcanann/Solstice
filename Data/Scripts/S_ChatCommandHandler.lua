@@ -21,7 +21,6 @@ end
 
 function OnWipeSkills(player)
     if not Framework.Utils.Dev.IsAdmin(player) then return end
-
     for _, skillKey in ipairs(Framework.ExpTable.GetSkillMap()) do
         Framework.Database.ResetSkillExp(player, skillKey)
     end

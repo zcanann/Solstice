@@ -1,6 +1,6 @@
 Assets {
   Id: 10582446667200537077
-  Name: "MinimapPlayer"
+  Name: "C_MinimapPlayer"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
