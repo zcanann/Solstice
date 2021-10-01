@@ -35,30 +35,12 @@ Assets {
   }
 }
 Assets {
-  Id: 11703155121820248699
-  Name: "Callout Sparkle"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_sparkles_volume_vfx"
-  }
-}
-Assets {
   Id: 10246682155469033102
   Name: "Pipe - 4-Sided"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_4_sided_001"
-  }
-}
-Assets {
-  Id: 9686022029476961003
-  Name: "Rock 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_rock_generic_001"
   }
 }
 Assets {
@@ -77,15 +59,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_head_hammer_001"
-  }
-}
-Assets {
-  Id: 6578593823313454603
-  Name: "Flare Billboard"
-  PlatformAssetType: 6
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_flare_object"
   }
 }
 Assets {

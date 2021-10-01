@@ -1,8 +1,8 @@
 Name: "AnimationSystem"
 RootId: 7278630398078622535
 Objects {
-  Id: 13593801781401657893
-  Name: "ServerContext"
+  Id: 11925849198827180005
+  Name: "ClientContext"
   Transform {
     Location {
     }
@@ -17,7 +17,7 @@ Objects {
   ParentId: 7278630398078622535
   ChildIds: 15824729143189094321
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -29,12 +29,11 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
-    Type: Server
   }
 }
 Objects {
   Id: 15824729143189094321
-  Name: "S_PlayerAnimationController"
+  Name: "C_PlayerAnimationController"
   Transform {
     Location {
     }
@@ -46,7 +45,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13593801781401657893
+  ParentId: 11925849198827180005
   UnregisteredParameters {
     Overrides {
       Name: "cs:PlayerAnimationSet"

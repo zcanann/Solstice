@@ -75,6 +75,7 @@ function OnMoveToLocation(goal, callback)
 	remainingWayPoints = wayPoints
 
 	Events.Broadcast(Framework.Events.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, goal)
+	Framework.ReliableEvents.BroadcastToServer(Framework.Events.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT)
 
 	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
 		OnReachedDestination()

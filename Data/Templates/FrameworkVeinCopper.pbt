@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 413991195585998862
         ChildIds: 14124416398978196639
         ChildIds: 9283846334413927800
         ChildIds: 14909532260286085420
@@ -157,6 +157,7 @@ Assets {
         Name: "C_Interactable"
         Transform {
           Location {
+            X: -157
           }
           Rotation {
           }
@@ -320,6 +321,7 @@ Assets {
         }
         ParentId: 18361376657929626207
         ChildIds: 15363651039913677374
+        ChildIds: 13958486223661738711
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -356,6 +358,18 @@ Assets {
             Name: "cs:MaxEngagements"
             Int: 4
           }
+          Overrides {
+            Name: "cs:EngagementScript"
+            AssetReference {
+              Id: 14285642204270262052
+            }
+          }
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 18361376657929626207
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -372,6 +386,39 @@ Assets {
         Script {
           ScriptAsset {
             Id: 15725608099489840980
+          }
+        }
+      }
+      Objects {
+        Id: 13958486223661738711
+        Name: "S_MiningEngagement"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9283846334413927800
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14285642204270262052
           }
         }
       }

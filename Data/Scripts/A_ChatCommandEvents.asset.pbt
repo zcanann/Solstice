@@ -1,6 +1,6 @@
 Assets {
   Id: 17612071643994816819
-  Name: "S_ChatCommandEvents"
+  Name: "A_ChatCommandEvents"
   PlatformAssetType: 3
   TextAsset {
   }

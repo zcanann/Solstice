@@ -18,6 +18,8 @@ function BeginMine()
         PlaySound(sfxOpenSound)
     end
 
+    Framework.Print("Mining...")
+    Framework.Print(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
     Framework.ReliableEvents.BroadcastToServer(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 end
 

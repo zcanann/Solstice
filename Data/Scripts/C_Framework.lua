@@ -2,6 +2,10 @@
 
 local Framework = { }
 
+Framework.Print = function (string)
+    Chat.LocalMessage("CLIENT: " .. tostring(string))
+end
+
 Framework.Database = require(script:GetCustomProperty("Database"))
 Framework.ExpTable = require(script:GetCustomProperty("ExpTable"))
 Framework.Events = require(script:GetCustomProperty("Events"))

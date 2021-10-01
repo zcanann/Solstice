@@ -1,6 +1,6 @@
 Assets {
   Id: 17179260598034565930
-  Name: "C_InputEvents"
+  Name: "A_InputEvents"
   PlatformAssetType: 3
   TextAsset {
   }

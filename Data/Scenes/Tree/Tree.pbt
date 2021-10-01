@@ -20,6 +20,7 @@ Objects {
   ChildIds: 1495303198340745656
   ChildIds: 413991195585998862
   ChildIds: 8238406158449060190
+  ChildIds: 1231644408648387833
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -32,6 +33,39 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 1231644408648387833
+  Name: "ItemModel_Pickaxe"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 2364589823603314042
+      value {
+        Overrides {
+          Name: "Name"
+          String: "ItemModel_Pickaxe"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15059549690028216849
+    }
   }
 }
 Objects {

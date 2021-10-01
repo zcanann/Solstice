@@ -80,7 +80,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.15
+            Duration: 0.75
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -91,18 +91,17 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.1
+            Duration: 0.75
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_melee_rm_combo_closer_vertical_slash"
+          Animation: "2hand_melee_slash_vertical"
           KeyBinding_v2 {
             Value: "mc:egameaction:invalid"
           }

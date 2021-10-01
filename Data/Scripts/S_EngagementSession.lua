@@ -7,6 +7,7 @@ local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
 local engagedPlayers = { }
 
 function Connect(player)
+    Framework.Print("ENGAGEMENT_CONNECTED1")
     if not player then
         return
     end
@@ -16,13 +17,16 @@ function Connect(player)
         return
     end
 
-    if player.serverUserData.engagementSession ~= nil then
-        player.serverUserData.engagementSession.context.Disconnect(player)
+    if player.serverUserData.engagement.session ~= nil then
+        player.serverUserData.engagement.session.Disconnect(player)
     end
 
-    player.serverUserData.engagementSession = script
+    player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
-    print("ENGAGEMENT CONNECTED")
+
+    Framework.ReliableEvents.BroadcastToPlayer(player, Framework.Events.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, propObject.id, "MiningAnimation")
+
+    Framework.Print("ENGAGEMENT_CONNECTED")
 end
 
 function IsPlayerConnected(player)
@@ -35,7 +39,7 @@ function Disconnect(player)
     end
 
     engagedPlayers[player] = nil
-    player.serverUserData.engagementSession = nil
+    player.serverUserData.engagement.session = nil
     print("ENGAGEMENT DISCONNECTED")
 end
 
@@ -46,6 +50,9 @@ end
 function Tick(deltaTime)
 
 end
+
+Framework.Print("LISTENING...")
+Framework.Print(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

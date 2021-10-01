@@ -1,9 +1,15 @@
 Assets {
   Id: 5338086385139468741
-  Name: "C_Events"
+  Name: "A_Events"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
+      Overrides {
+        Name: "cs:ChatCommandEvents"
+        AssetReference {
+          Id: 17612071643994816819
+        }
+      }
       Overrides {
         Name: "cs:EngagementEvents"
         AssetReference {

@@ -2,17 +2,36 @@
 -- A client is expected to only have one engagement. Examples:
 --   - Many enemies can attack a player, but a player may only attack one.
 --   - Many players can mine the same copper vein, but a player can only mine one copper vein.
-
+local Framework = require(script:GetCustomProperty("Framework"))
 local localPlayer = Game.GetLocalPlayer()
 
+function OnEngagementSessionConnected(objectId, animationName)
+    Framework.Print("CONNECTED")
+    local animation = localPlayer.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
+    localPlayer.clientUserData.engagement.activeAnim = animation
+    animation:Activate()
+    localPlayer.clientUserData.engagement.activeAnimReadyEvent = animation.readyEvent:Connect(function (localAnim)
+        Framework.Print("CHAINING_ABILITY")
+        localAnim:Activate()
+    end)
+    localPlayer.clientUserData.engagement.activeAnimInterruptedEvent = animation.interruptedEvent:Connect(function (localAnim)
+        Framework.Print("INTERRUPTED")
+        if localPlayer.clientUserData.engagement.activeAnimReadyEvent then
+            localPlayer.clientUserData.engagement.activeAnimReadyEvent:Disconnect()
+        end
+        if localPlayer.clientUserData.engagement.activeAnimInterruptedEvent then
+            localPlayer.clientUserData.engagement.activeAnimInterruptedEvent:Disconnect()
+        end
+        localPlayer.clientUserData.engagement.activeAnimReadyEvent = nil
+        localPlayer.clientUserData.engagement.activeAnimInterruptedEvent = nil
+        localPlayer.clientUserData.engagement.activeAnim = nil
+    end)
+end
 
--- TODO: maybe nothing. Interact script dispatches an event to the corresponding server script
-    -- How to do this? Server needs to know how to find the right engagement script instance.
-    -- How about grab the MUID of the object root, and create an event off of this.
--- Then that server script has to decide some things.
+function OnPlayerJoined(player)
+    player.clientUserData.engagement = { }
+end
 
--- How are animations placed?
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
 
--- We have the animation set stored on the server
-
--- As a v1.0, just reach in from engagement script and play the mining anim
+Events.Connect(Framework.Events.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)
