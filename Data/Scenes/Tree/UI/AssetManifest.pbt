@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16241833908851998054
+  Name: "BG Flat 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_020"
+  }
+}
+Assets {
   Id: 15518488485667575839
   Name: "Fish"
   PlatformAssetType: 9

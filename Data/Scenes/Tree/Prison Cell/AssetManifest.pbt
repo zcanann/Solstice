@@ -53,15 +53,6 @@ Assets {
   }
 }
 Assets {
-  Id: 1104198953447072835
-  Name: "Object Domestic Doors & Creaks Set 01 SFX"
-  PlatformAssetType: 10
-  PrimaryAsset {
-    AssetType: "AudioBlueprintAssetRef"
-    AssetId: "sfxabp_object_domestic_door_ref"
-  }
-}
-Assets {
   Id: 217457727916744271
   Name: "Cube - Rounded"
   PlatformAssetType: 1

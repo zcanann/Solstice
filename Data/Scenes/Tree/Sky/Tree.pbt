@@ -1,5 +1,5 @@
-Name: "Environment"
-RootId: 15633254800893394293
+Name: "Sky"
+RootId: 8418417691332516035
 Objects {
   Id: 18191572704533771718
   Name: "Sky Sci-fi 01"
@@ -10,7 +10,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15633254800893394293
+  ParentId: 8418417691332516035
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -51,7 +51,6 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            Z: 700
           }
         }
         Overrides {
