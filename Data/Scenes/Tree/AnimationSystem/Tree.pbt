@@ -53,6 +53,12 @@ Objects {
         Id: 17377652318304072879
       }
     }
+    Overrides {
+      Name: "cs:Framework"
+      AssetReference {
+        Id: 10511995982427952004
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
