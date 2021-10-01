@@ -84,13 +84,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 3506130130456833092
-    SubobjectId: 10147635152912105743
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
-    WasRoot: true
-  }
 }
 Objects {
   Id: 18414372708865728013
@@ -123,12 +116,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 18414372708865728013
-    SubobjectId: 4897414754306192198
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
   }
 }
 Objects {
@@ -169,12 +156,6 @@ Objects {
       Value: "mc:etriggershape:box"
     }
   }
-  InstanceHistory {
-    SelfId: 12479819769468662686
-    SubobjectId: 1246049429361270485
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
-  }
 }
 Objects {
   Id: 4685049106215693820
@@ -206,12 +187,6 @@ Objects {
   }
   NetworkContext {
     Type: RuntimeStatic
-  }
-  InstanceHistory {
-    SelfId: 4685049106215693820
-    SubobjectId: 18266391154671272119
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
   }
 }
 Objects {
@@ -764,12 +739,6 @@ Objects {
   }
   NetworkContext {
   }
-  InstanceHistory {
-    SelfId: 3386529855223919514
-    SubobjectId: 10557770524490718929
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
-  }
 }
 Objects {
   Id: 1486777449777495566
@@ -819,12 +788,6 @@ Objects {
       IsSpatializationEnabled: true
       IsAttenuationEnabled: true
     }
-  }
-  InstanceHistory {
-    SelfId: 1486777449777495566
-    SubobjectId: 12167031406303105861
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
   }
 }
 Objects {
@@ -878,12 +841,6 @@ Objects {
       IsAttenuationEnabled: true
     }
   }
-  InstanceHistory {
-    SelfId: 4585107636047770735
-    SubobjectId: 9501031386802641188
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
-  }
 }
 Objects {
   Id: 1684233781538977050
@@ -934,12 +891,6 @@ Objects {
       Id: 321472518781775172
     }
   }
-  InstanceHistory {
-    SelfId: 1684233781538977050
-    SubobjectId: 12332117041429108817
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
-  }
 }
 Objects {
   Id: 2741213586947593556
@@ -971,12 +922,6 @@ Objects {
   }
   NetworkContext {
     Type: Server
-  }
-  InstanceHistory {
-    SelfId: 2741213586947593556
-    SubobjectId: 11128779048250505247
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
   }
 }
 Objects {
@@ -1015,12 +960,6 @@ Objects {
     TriggerShape_v2 {
       Value: "mc:etriggershape:box"
     }
-  }
-  InstanceHistory {
-    SelfId: 6041985626847707055
-    SubobjectId: 17267525847061779172
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
   }
 }
 Objects {
@@ -1078,12 +1017,6 @@ Objects {
       Id: 1031736639489708352
     }
   }
-  InstanceHistory {
-    SelfId: 17075635765519584973
-    SubobjectId: 5801545535109964678
-    InstanceId: 3871878845451461295
-    TemplateId: 16688398523305215819
-  }
 }
 Objects {
   Id: 3782668079791736470
@@ -1126,7 +1059,7 @@ Objects {
     Overrides {
       Name: "cs:SFX_OpenSound"
       AssetReference {
-        Id: 13511935298590761383
+        Id: 841534158063459245
       }
     }
     Overrides {

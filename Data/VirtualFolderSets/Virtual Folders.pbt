@@ -9,15 +9,7 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Combat"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Animations"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "NPCs"
       PlatformAssetType: 3
     }
     Folders {
@@ -53,10 +45,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Jordans Materials "
-      PlatformAssetType: 13
-    }
-    Folders {
       VirtualFolderPath: "Minimap"
       PlatformAssetType: 5
     }
@@ -73,17 +61,8 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "_TODO"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Framework"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "_TODO_Gameplay"
       PlatformAssetType: 3
     }
     Folders {
@@ -117,6 +96,15 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Animations"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Items"
+      VirtualFolderPath: "Equipment"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Triggers"
       PlatformAssetType: 5
     }
   }

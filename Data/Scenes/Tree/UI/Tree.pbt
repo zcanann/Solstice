@@ -1508,7 +1508,7 @@ Objects {
     Overrides {
       Name: "cs:API"
       AssetReference {
-        Id: 14633632985083390763
+        Id: 3875830725285389341
       }
     }
     Overrides {
@@ -19712,7 +19712,7 @@ Objects {
     Overrides {
       Name: "cs:TemplateItemHoverStat"
       AssetReference {
-        Id: 2410617516610157426
+        Id: 841534158063459245
       }
     }
     Overrides {
