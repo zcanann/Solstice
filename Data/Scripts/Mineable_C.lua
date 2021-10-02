@@ -19,8 +19,7 @@ function BeginMine()
     end
 
     Framework.Print("Mining...")
-    Framework.Print(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Engagement.EVENT_PLAYER_LOCAL_REQUEST_ENGAGEMENT, { propObject.id })
 end
 
 function StopMine()
