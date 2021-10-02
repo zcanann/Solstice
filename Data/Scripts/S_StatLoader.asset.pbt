@@ -13,4 +13,5 @@ Assets {
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "Stats"
 }

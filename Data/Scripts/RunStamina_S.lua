@@ -77,7 +77,7 @@ function OnJoin(player)
 end
 
 function SendMovementState(player)
-	Events.BroadcastToPlayer(player, Framework.Events.Keys.Movement.EVENT_MOVEMENT_STATE_UPDATED, GetPlayerMovementState(player), GetStamina(player))
+	Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.Movement.EVENT_MOVEMENT_STATE_UPDATED, player, GetPlayerMovementState(player), GetStamina(player))
 end
 
 function Tick(deltaTime)

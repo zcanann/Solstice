@@ -54,7 +54,7 @@ function Disconnect(player)
     engagedPlayers[player] = nil
     player.serverUserData.engagement.session = nil
     player.serverUserData.engagement.duration = 0.0
-    -- print("ENGAGEMENT DISCONNECTED")
+    -- Framework.Print("ENGAGEMENT DISCONNECTED")
 end
 
 function OnPlayerLeft(player)
@@ -76,8 +76,8 @@ function Tick(deltaTime)
     end
 end
 
-Framework.Print("LISTENING...")
-Framework.Print(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+-- Framework.Print("LISTENING...")
+-- Framework.Print(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

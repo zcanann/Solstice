@@ -96,7 +96,7 @@ Assets {
       }
       Objects {
         Id: 2612917095092468932
-        Name: "NamedLocationClient"
+        Name: "NamedLocation_C"
         Transform {
           Location {
           }

@@ -5,19 +5,29 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 function OnEngagementSessionConnected(player, objectId, animationName)
-    Framework.Print("ANIMATING")
-    Framework.Print(player)
     if not player then return end
-    Framework.Print("ANIMATING2")
-    local animation = player.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
-    player.clientUserData.engagement.activeAnim = animation
-    animation:Activate()
-    player.clientUserData.engagement.activeAnimReadyEvent = animation.readyEvent:Connect(function (localAnim)
-        Framework.Print("CHAINING_ABILITY")
+
+    local animationSet = player.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
+    local animationAbility = animationSet:GetCustomProperty("Ability"):GetObject()
+    local sfx1 = animationSet:GetCustomProperty("SFX1"):GetObject()
+    animationAbility.owner = player
+
+    player.clientUserData.engagement.activeAnimAbility = animationAbility
+    animationAbility:Activate()
+
+    player.clientUserData.engagement.executeEvent = animationAbility.executeEvent:Connect(function (localAnim)
+        if sfx1 then
+            sfx1:Play()
+        end
+    end)
+
+    player.clientUserData.engagement.activeAnimReadyEvent = animationAbility.readyEvent:Connect(function (localAnim)
+        -- Framework.Print("CHAINING_ABILITY")
         localAnim:Activate()
     end)
-    player.clientUserData.engagement.activeAnimInterruptedEvent = animation.interruptedEvent:Connect(function (localAnim)
-        Framework.Print("INTERRUPTED")
+
+    player.clientUserData.engagement.activeAnimInterruptedEvent = animationAbility.interruptedEvent:Connect(function (localAnim)
+        -- Framework.Print("INTERRUPTED")
         if player.clientUserData.engagement.activeAnimReadyEvent then
             player.clientUserData.engagement.activeAnimReadyEvent:Disconnect()
         end
@@ -31,8 +41,8 @@ function OnEngagementSessionConnected(player, objectId, animationName)
 end
 
 function InterruptPlayerEngagement(player)
-    if player.clientUserData.engagement.activeAnim then
-        player.clientUserData.engagement.activeAnim:Interrupt()
+    if player.clientUserData.engagement.activeAnimAbility then
+        player.clientUserData.engagement.activeAnimAbility:Interrupt()
     end
 end
 

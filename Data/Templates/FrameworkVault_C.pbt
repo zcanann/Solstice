@@ -977,7 +977,7 @@ Assets {
       }
       Objects {
         Id: 3654440386138804639
-        Name: "C_Interactable"
+        Name: "Interactable_C"
         Transform {
           Location {
           }
@@ -1020,7 +1020,7 @@ Assets {
       }
       Objects {
         Id: 4515638770218563128
-        Name: "C_Searchable"
+        Name: "Searchable_C"
         Transform {
           Location {
           }
@@ -1075,7 +1075,7 @@ Assets {
       }
       Objects {
         Id: 2179573772281131097
-        Name: "C_Walkable"
+        Name: "Walkable_C"
         Transform {
           Location {
             Y: 80

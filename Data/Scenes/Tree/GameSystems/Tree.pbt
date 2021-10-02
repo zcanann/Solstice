@@ -2,7 +2,7 @@ Name: "GameSystems"
 RootId: 16844910628275373465
 Objects {
   Id: 15140153797398253369
-  Name: "StatsSystem"
+  Name: "StatsAndSkillsSystem"
   Transform {
     Location {
     }
@@ -29,7 +29,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "StatsSystem"
+    FilePartitionName: "StatsAndSkillsSystem"
   }
 }
 Objects {
@@ -397,7 +397,7 @@ Objects {
 }
 Objects {
   Id: 767909694017194225
-  Name: "C_PlayerMovement"
+  Name: "PlayerMovement_C"
   Transform {
     Location {
     }
@@ -435,7 +435,7 @@ Objects {
 }
 Objects {
   Id: 16979616322488010798
-  Name: "C_CameraControls"
+  Name: "CameraControls_C"
   Transform {
     Location {
       X: -0.000244140625
@@ -481,7 +481,7 @@ Objects {
 }
 Objects {
   Id: 5348816236042250609
-  Name: "C_KeyboardEventDispatcher"
+  Name: "KeyboardEventDispatcher_C"
   Transform {
     Location {
     }
@@ -514,7 +514,7 @@ Objects {
 }
 Objects {
   Id: 10639110573173986597
-  Name: "C_MouseEventDispatcher"
+  Name: "MouseEventDispatcher_C"
   Transform {
     Location {
     }
@@ -689,6 +689,7 @@ Objects {
     }
     MinPitch: -89
     MaxPitch: 89
+    UseAsAudioListener: true
   }
 }
 Objects {

@@ -34,7 +34,7 @@ Objects {
 }
 Objects {
   Id: 5895155150061473958
-  Name: "S_ChatCommandHandler"
+  Name: "ChatCommandHandler_C"
   Transform {
     Location {
     }
@@ -98,7 +98,7 @@ Objects {
 }
 Objects {
   Id: 4767372961603784113
-  Name: "C_ChatCommandHandler"
+  Name: "ChatCommandHandler_C"
   Transform {
     Location {
     }

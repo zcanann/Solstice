@@ -3,6 +3,9 @@ local DataStructures = require(script:GetCustomProperty("DataStructures"))
 local Broadcast = { }
 local requestQueue = DataStructures.Deque.New()
 
+-- Default range for area broadcasts
+Broadcast.DefaultRange = 8192.0
+
 -- Parameters for controlling back-off rate limiting
 local minBackOffTime = 1.0
 local maxBackOffTime = 15.0
@@ -27,9 +30,13 @@ local function TryOrQueueRequest(requestLambda)
     end
 end
 
+-- CLIENT => SELF EVENT
+
 Broadcast.Local = function(eventName, ...)
     Events.Broadcast(eventName, ...)
 end
+
+-- CLIENT => SERVER BROADCAST
 
 Broadcast.ClientToServerReliable = function(eventName, ...)
     local args = {n = select("#", ...), ...}
@@ -38,23 +45,62 @@ Broadcast.ClientToServerReliable = function(eventName, ...)
     end)
 end
 
-Broadcast.ServerToPlayerReliable = function(eventName, ...)
+Broadcast.ClientToServerBestEffort = function(eventName, ...)
+    Events.BroadcastToServer(eventName, ...)
+end
+
+-- SERVER => CLIENT BROADCAST
+
+Broadcast.ServerToPlayerReliable = function(eventName, player, ...)
     local args = {n = select("#", ...), ...}
     TryOrQueueRequest(function ()
-        Events.BroadcastToPlayer(eventName, table.unpack(args, 1, args.n))
+        Events.BroadcastToPlayer(player, eventName, table.unpack(args, 1, args.n))
     end)
 end
+
+Broadcast.ServerToPlayerBestEffort = function(eventName, player, ...)
+    Events.BroadcastToPlayer(player, eventName, ...)
+end
+
+-- SERVER-WIDE BROADCAST
 
 Broadcast.ServerToAllPlayersReliable = function(eventName, ...)
     local args = {n = select("#", ...), ...}
     TryOrQueueRequest(function ()
-        print(eventName)
         Events.BroadcastToAllPlayers(eventName, table.unpack(args, 1, args.n))
     end)
 end
 
-Broadcast.ServerToPlayersInRangeReliable = function(eventName, ...)
-    -- Not implemented yet
+Broadcast.ServerToAllPlayersBestEffort = function(eventName, ...)
+    Events.BroadcastToAllPlayers(eventName, ...)
+end
+
+-- AREA BROADCAST
+
+function GetWorldPosition(source)
+    if source:IsA("Vector3") then
+        return source
+    end
+    if Object.IsValid(source) then
+        return source:GetWorldPosition()
+    end
+    return Vector3.New()
+end
+
+function GetRange(range)
+    return range or Broadcast.DefaultRange
+end
+
+Broadcast.ServerToAreaReliable = function(eventName, source, range, ...)
+    for _, player in ipairs(Game.FindPlayersInSphere(GetWorldPosition(source), GetRange(range))) do
+        Broadcast.ServerToPlayerReliable(eventName, player, ...)
+    end
+end
+
+Broadcast.ServerToAreaBestEffort = function(eventName, source, range, ...)
+    for _, player in ipairs(Game.FindPlayersInSphere(GetWorldPosition(source), GetRange(range))) do
+        Broadcast.ServerToPlayerBestEffort(eventName, player, ...)
+    end
 end
 
 function RequestLoop()

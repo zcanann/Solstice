@@ -46,7 +46,7 @@ Objects {
     }
   }
   ParentId: 12822347900341434811
-  ChildIds: 15815167385228264865
+  ChildIds: 9003273547936427968
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -92,7 +92,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15815167385228264865
+  Id: 9003273547936427968
   Name: "C_InputConsumer"
   Transform {
     Scale {
@@ -102,96 +102,35 @@ Objects {
     }
   }
   ParentId: 11073280761938320544
-  ChildIds: 8975147864075247213
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 350
-    Height: 8192
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Panel {
-      Opacity: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleright"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 17514830117370447926
+      value {
+        Overrides {
+          Name: "Name"
+          String: "C_InputConsumer"
         }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middleright"
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }
-  }
-  InstanceHistory {
-    SelfId: 15815167385228264865
-    SubobjectId: 17514830117370447926
-    InstanceId: 9003273547936427968
-    TemplateId: 5043154835731239303
-    WasRoot: true
-  }
-}
-Objects {
-  Id: 8975147864075247213
-  Name: "C_InputConsumer"
-  Transform {
-    Location {
+    TemplateAsset {
+      Id: 5043154835731239303
     }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15815167385228264865
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Bounds"
-      ObjectReference {
-        SelfId: 15815167385228264865
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 17597382582349471728
-    }
-  }
-  InstanceHistory {
-    SelfId: 8975147864075247213
-    SubobjectId: 6117522917321184250
-    InstanceId: 9003273547936427968
-    TemplateId: 5043154835731239303
   }
 }
 Objects {
@@ -651,7 +590,7 @@ Objects {
 }
 Objects {
   Id: 9408915828115846356
-  Name: "C_InteractMenu"
+  Name: "InteractMenu_C"
   Transform {
     Location {
       X: 2820
@@ -1142,7 +1081,7 @@ Objects {
 }
 Objects {
   Id: 9041623272877635952
-  Name: "NamedLocationDisplayClient"
+  Name: "NamedLocationDisplay_C"
   Transform {
     Location {
     }
@@ -1491,7 +1430,7 @@ Objects {
 }
 Objects {
   Id: 7733445296216891158
-  Name: "C_NameplateController"
+  Name: "NameplateController_C"
   Transform {
     Location {
     }
@@ -1880,7 +1819,7 @@ Objects {
 }
 Objects {
   Id: 18062362180012622342
-  Name: "SubBannerMessageClient"
+  Name: "SubBannerMessage_C"
   Transform {
     Location {
     }
@@ -2098,7 +2037,7 @@ Objects {
 }
 Objects {
   Id: 4701950679316473045
-  Name: "MessageBannerClient"
+  Name: "MessageBanner_C"
   Transform {
     Location {
     }
@@ -3922,7 +3861,7 @@ Objects {
 }
 Objects {
   Id: 18297430415530644716
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -4585,7 +4524,7 @@ Objects {
 }
 Objects {
   Id: 18026624864665468662
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -5250,7 +5189,7 @@ Objects {
 }
 Objects {
   Id: 17615867866055305705
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -5914,7 +5853,7 @@ Objects {
 }
 Objects {
   Id: 8423772341727823002
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -6578,7 +6517,7 @@ Objects {
 }
 Objects {
   Id: 15263928306360056375
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -7242,7 +7181,7 @@ Objects {
 }
 Objects {
   Id: 2298774711454531083
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -7906,7 +7845,7 @@ Objects {
 }
 Objects {
   Id: 8212044386008465062
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -8569,7 +8508,7 @@ Objects {
 }
 Objects {
   Id: 7584296748843187556
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -9234,7 +9173,7 @@ Objects {
 }
 Objects {
   Id: 15818319293833603053
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -9897,7 +9836,7 @@ Objects {
 }
 Objects {
   Id: 602164413422128682
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -10559,7 +10498,7 @@ Objects {
 }
 Objects {
   Id: 6205119998663078958
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -11223,7 +11162,7 @@ Objects {
 }
 Objects {
   Id: 16097268211595769101
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -11887,7 +11826,7 @@ Objects {
 }
 Objects {
   Id: 14516496321322982743
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -12551,7 +12490,7 @@ Objects {
 }
 Objects {
   Id: 3375255312261388544
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -13216,7 +13155,7 @@ Objects {
 }
 Objects {
   Id: 18001743705248957403
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -13880,7 +13819,7 @@ Objects {
 }
 Objects {
   Id: 15728017627446357349
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -14542,7 +14481,7 @@ Objects {
 }
 Objects {
   Id: 13302863715071556683
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -15207,7 +15146,7 @@ Objects {
 }
 Objects {
   Id: 4611060356220046016
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -15871,7 +15810,7 @@ Objects {
 }
 Objects {
   Id: 1656163739305058095
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -16534,7 +16473,7 @@ Objects {
 }
 Objects {
   Id: 14669404469218810755
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -17196,7 +17135,7 @@ Objects {
 }
 Objects {
   Id: 6718043479326782455
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -17860,7 +17799,7 @@ Objects {
 }
 Objects {
   Id: 8916719544534045127
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -18524,7 +18463,7 @@ Objects {
 }
 Objects {
   Id: 10222540334680830052
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -19333,7 +19272,7 @@ Objects {
 }
 Objects {
   Id: 7378227054456296324
-  Name: "C_SkillUI"
+  Name: "SkillUI_C"
   Transform {
     Location {
     }
@@ -51229,7 +51168,7 @@ Objects {
 }
 Objects {
   Id: 13296176000748170703
-  Name: "C_TabSwitcher"
+  Name: "TabSwitcher_C"
   Transform {
     Location {
       X: -5800.00098
@@ -54339,7 +54278,7 @@ Objects {
 }
 Objects {
   Id: 12854956073916787406
-  Name: "C_Compass"
+  Name: "Compass_C"
   Transform {
     Location {
       X: -9922.00684

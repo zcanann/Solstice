@@ -33,7 +33,7 @@ Objects {
 }
 Objects {
   Id: 2974427339171584903
-  Name: "C_EquipmentManager"
+  Name: "EquipmentManager_C"
   Transform {
     Location {
     }

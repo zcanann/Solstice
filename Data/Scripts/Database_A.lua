@@ -1,4 +1,5 @@
 local ExpTable = require(script:GetCustomProperty("ExpTable"))
+local Events = require(script:GetCustomProperty("Events"))
 
 local Database = { }
 
@@ -259,20 +260,9 @@ end
 -- [Resource] Skill level
 
 Database.GetSkillLevel = function(player, skillId)
-	local skillKeys = Database.GetSkillKeys(skillId)
-    local level = Database.GetKey(player, skillKeys.LEVEL) or 1
+    local exp = Database.GetSkillExp(player, skillId)
 
-	if level <= 0 then
-		return 1
-	else
-		return level
-	end
-end
-
-Database.SetSkillLevel = function(player, skillId, value)
-	local skillKeys = Database.GetSkillKeys(skillId)
-
-    Database.SetKey(player, skillKeys.LEVEL, value)
+	return ExpTable.GetLevelForExp(exp)
 end
 
 -- Skill exp
@@ -300,8 +290,7 @@ Database.SetSkillExp = function(player, skillId, value)
 	-- Check for level up
 	if newSkillLevel > skillLevel then
 		Database.SetEffectiveSkillLevel(player, skillId, newSkillLevel)
-		Database.SetSkillLevel(player, skillId, newSkillLevel)
-		-- TODO: Event broadcast to client for FX
+		Events.Broadcast.ServerToAreaBestEffort(Events.Keys.Skill.EVENT_PLAYER_LEVELED_UP, player, Events.Broadcast.DefaultRange, player, skillId)
 	end
 end
 

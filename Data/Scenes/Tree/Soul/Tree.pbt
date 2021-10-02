@@ -692,7 +692,7 @@ Objects {
 }
 Objects {
   Id: 11906533266508184986
-  Name: "C_SoulDisplay"
+  Name: "SoulDisplay_C"
   Transform {
     Location {
       X: 0.0036103793

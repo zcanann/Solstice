@@ -154,7 +154,7 @@ Assets {
       }
       Objects {
         Id: 8775759031513830779
-        Name: "C_Interactable"
+        Name: "Interactable_C"
         Transform {
           Location {
             X: -157
@@ -198,7 +198,7 @@ Assets {
       }
       Objects {
         Id: 9849424123738372637
-        Name: "C_Mineable"
+        Name: "Mineable_C"
         Transform {
           Location {
           }
@@ -249,7 +249,7 @@ Assets {
       }
       Objects {
         Id: 17178747362843569272
-        Name: "C_Walkable"
+        Name: "Walkable_C"
         Transform {
           Location {
             Y: 80
@@ -356,6 +356,36 @@ Assets {
           Overrides {
             Name: "cs:SkillId"
             String: "mining"
+          }
+          Overrides {
+            Name: "cs:Exp"
+            Int: 18
+          }
+          Overrides {
+            Name: "cs:MinResources"
+            Int: 4
+          }
+          Overrides {
+            Name: "cs:MaxResources"
+            Int: 6
+          }
+          Overrides {
+            Name: "cs:RequiredItemType"
+            String: "pickaxe"
+          }
+          Overrides {
+            Name: "cs:ResourceItem"
+            String: "copper_ore"
+          }
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 18361376657929626207
+            }
+          }
+          Overrides {
+            Name: "cs:BaseDuration"
+            Float: 3.2
           }
         }
         Collidable_v2 {

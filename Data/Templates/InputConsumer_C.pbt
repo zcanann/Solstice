@@ -7,7 +7,7 @@ Assets {
       RootId: 17514830117370447926
       Objects {
         Id: 17514830117370447926
-        Name: "InputConsumer"
+        Name: "C_InputConsumer"
         Transform {
           Scale {
             X: 1
@@ -30,8 +30,8 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 100
-          Height: 100
+          Width: 350
+          Height: 8192
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -43,12 +43,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middleright"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:middleright"
               }
             }
           }
@@ -56,7 +56,7 @@ Assets {
       }
       Objects {
         Id: 6117522917321184250
-        Name: "C_InputConsumer"
+        Name: "InputConsumer_C"
         Transform {
           Location {
           }

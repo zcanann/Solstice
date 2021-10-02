@@ -6,7 +6,7 @@ function Interact()
         return
     end
 
-    print("Interacting...")
+    Framework.Print("Interacting...")
     interactionScripts[#interactionScripts].context:Interact()
 end
 
@@ -15,7 +15,7 @@ function ShowOptions()
         return
     end
 
-    print("Displaying " .. tostring(#interactionScripts) .. " interaction options")
+    Framework.Print("Displaying " .. tostring(#interactionScripts) .. " interaction options")
 
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 

@@ -39,7 +39,6 @@ function SortedTable.New(optionalTable)
     local instance = { }
     setmetatable(instance, SortedTable)
     instance.sortedTable = optionalTable or { }
-    for k,v in pairs(instance) do print(k) print(v) end
     return instance
 end
 

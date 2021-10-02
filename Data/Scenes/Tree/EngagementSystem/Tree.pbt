@@ -34,7 +34,7 @@ Objects {
 }
 Objects {
   Id: 12842179600927695529
-  Name: "S_EngagementManager"
+  Name: "EngagementManager_S"
   Transform {
     Location {
     }
@@ -98,7 +98,7 @@ Objects {
 }
 Objects {
   Id: 9066510786933106258
-  Name: "C_EngagementSession"
+  Name: "EngagementSession_C"
   Transform {
     Location {
     }

@@ -475,7 +475,7 @@ Objects {
 }
 Objects {
   Id: 5034227574293021083
-  Name: "C_HealthDisplay"
+  Name: "HealthDisplay_C"
   Transform {
     Location {
       X: -1722.74316

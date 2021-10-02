@@ -1249,7 +1249,7 @@ Objects {
 }
 Objects {
   Id: 12459431920490575297
-  Name: "C_RunStaminaToggleButton"
+  Name: "RunStaminaToggleButton_C"
   Transform {
     Location {
       X: 0.00448805653

@@ -305,7 +305,7 @@ function OnMouseDown(cursorPosition, primary)
 	)
 
 	if minimapClickCoords.size < minimapMouseHitTestDistance then
-		-- print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
+		-- Framework.Print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
         _G.uiHitTest = true
 
 		local localPlayer = Game.GetLocalPlayer()

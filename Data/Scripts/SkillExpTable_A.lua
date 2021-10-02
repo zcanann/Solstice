@@ -1,68 +1,63 @@
 local ExpTable = { }
 
-local skillMap = {
-    [ 1 ] = "attack",
-    [ 2 ] = "strength",
-    [ 3 ] = "defense",
-    [ 4 ] = "health",
-    [ 5 ] = "archery",
-    [ 6 ] = "magic",
-    [ 7 ] = "soul",
-    [ 8 ] = "slayer",
-    [ 9 ] = "alchemy",
-    [ 10 ] = "mining",
-    [ 11 ] = "blacksmithing",
-    [ 12 ] = "jewelcrafting",
-    [ 13 ] = "woodcutting",
-    [ 14 ] = "woodworking",
-    [ 15 ] = "cooking",
-    [ 16 ] = "tailoring",
-    [ 17 ] = "leatherworking",
-    [ 18 ] = "fishing",
-    [ 19 ] = "enchanting",
-    [ 20 ] = "adventuring",
-    [ 21 ] = "botany",
-    [ 22 ] = "theiving",
-    [ 23 ] = "agility",
-    [ 24 ] = "engineering",
-}
+ExpTable.SkillMap = { }
+ExpTable.SkillMap.Attack = "attack"
+ExpTable.SkillMap.Strength = "strength"
+ExpTable.SkillMap.Defense = "defense"
+ExpTable.SkillMap.Health = "health"
+ExpTable.SkillMap.Archery = "archery"
+ExpTable.SkillMap.Magic = "magic"
+ExpTable.SkillMap.Soul = "soul"
+ExpTable.SkillMap.Slayer = "slayer"
+ExpTable.SkillMap.Alchemy = "alchemy"
+ExpTable.SkillMap.Mining = "mining"
+ExpTable.SkillMap.Blacksmithing = "blacksmithing"
+ExpTable.SkillMap.JewelCrafting = "jewelcrafting"
+ExpTable.SkillMap.WoodCutting = "woodcutting"
+ExpTable.SkillMap.WoodWorking = "woodworking"
+ExpTable.SkillMap.Cooking = "cooking"
+ExpTable.SkillMap.Tailoring = "tailoring"
+ExpTable.SkillMap.LeatherWorking = "leatherworking"
+ExpTable.SkillMap.Fishing = "fishing"
+ExpTable.SkillMap.Enchanting = "enchanting"
+ExpTable.SkillMap.Adventuring = "adventuring"
+ExpTable.SkillMap.Botany = "botany"
+ExpTable.SkillMap.Theiving = "theiving"
+ExpTable.SkillMap.Agility = "agility"
+ExpTable.SkillMap.Engineering = "engineering"
 
-local skillNameMap = {
-    [ "attack" ] = "Attack",
-    [ "strength" ] = "Strength",
-    [ "defense" ] = "Defense",
-    [ "health" ] = "Health",
-    [ "archery" ] = "Archery",
-    [ "magic" ] = "Magic",
-    [ "soul" ] = "Soul",
-    [ "slayer" ] = "Slayer",
-    [ "alchemy" ] = "Alchemy",
-    [ "mining" ] = "Mining",
-    [ "blacksmithing" ] = "Black Smithing",
-    [ "jewelcrafting" ] = "Jewel Crafting",
-    [ "woodcutting" ] = "Wood Cutting",
-    [ "woodworking" ] = "Wood Working",
-    [ "cooking" ] = "Cooking",
-    [ "tailoring" ] = "Tailoring",
-    [ "leatherworking" ] = "Leather Working",
-    [ "fishing" ] = "Fishing",
-    [ "enchanting" ] = "Enchanting",
-    [ "adventuring" ] = "Adventuring",
-    [ "botany" ] = "Botany",
-    [ "theiving" ] = "Theiving",
-    [ "agility" ] = "Agility",
-    [ "engineering" ] = "Engineering",
+ExpTable.SkillNames = {
+    [ ExpTable.SkillMap.Attack ] = "Attack",
+    [ ExpTable.SkillMap.Strength ] = "Strength",
+    [ ExpTable.SkillMap.Defense ] = "Defense",
+    [ ExpTable.SkillMap.Health ] = "Health",
+    [ ExpTable.SkillMap.Archery ] = "Archery",
+    [ ExpTable.SkillMap.Magic ] = "Magic",
+    [ ExpTable.SkillMap.Soul ] = "Soul",
+    [ ExpTable.SkillMap.Slayer ] = "Slayer",
+    [ ExpTable.SkillMap.Alchemy ] = "Alchemy",
+    [ ExpTable.SkillMap.Mining ] = "Mining",
+    [ ExpTable.SkillMap.Blacksmithing ] = "Black Smithing",
+    [ ExpTable.SkillMap.JewelCrafting ] = "Jewel Crafting",
+    [ ExpTable.SkillMap.WoodCutting ] = "Wood Cutting",
+    [ ExpTable.SkillMap.WoodWorking ] = "Wood Working",
+    [ ExpTable.SkillMap.Cooking ] = "Cooking",
+    [ ExpTable.SkillMap.Tailoring ] = "Tailoring",
+    [ ExpTable.SkillMap.LeatherWorking ] = "Leather Working",
+    [ ExpTable.SkillMap.Fishing ] = "Fishing",
+    [ ExpTable.SkillMap.Enchanting ] = "Enchanting",
+    [ ExpTable.SkillMap.Adventuring ] = "Adventuring",
+    [ ExpTable.SkillMap.Botany ] = "Botany",
+    [ ExpTable.SkillMap.Theiving ] = "Theiving",
+    [ ExpTable.SkillMap.Agility ] = "Agility",
+    [ ExpTable.SkillMap.Engineering ] = "Engineering",
 }
 
 ExpTable.INFINITE = -1
 ExpTable.MAX_LEVEL = 99
 
-ExpTable.GetSkillMap = function ()
-    return skillMap
-end
-
 ExpTable.IsValidSkill = function (skillKey)
-    if skillNameMap[skillKey] then
+    if ExpTable.SkillNames[skillKey] then
         return true
     end
 
@@ -70,8 +65,8 @@ ExpTable.IsValidSkill = function (skillKey)
 end
 
 ExpTable.GetSkillName = function (skillKey)
-    if skillNameMap[skillKey] then
-        return skillNameMap[skillKey]
+    if ExpTable.SkillNames[skillKey] then
+        return ExpTable.SkillNames[skillKey]
     end
 
     return "<Unknown Skill>"
@@ -82,11 +77,18 @@ ExpTable.GetExpRequiredForLevel = function (level)
         return ExpTable.INFINITE
     end
 
-    local numerator = 2.0 ^ (level / 7.0) - 2.0 ^ (1.0 / 7.0)
-    local denominator = 2.0 ^ (1.0 / 7.0) - 1.0
+    -- OSRS formula from https://oldschool.runescape.wiki/w/Experience
+    -- local numerator = 2.0 ^ (level / 7.0) - 2.0 ^ (1.0 / 7.0)
+    -- local denominator = 2.0 ^ (1.0 / 7.0) - 1.0
+    -- return CoreMath.Round(1.0 / 8.0 * (level ^ 2.0 - level + 600.0 * (numerator / denominator)))
 
-    -- Taken from https://oldschool.runescape.wiki/w/Experience
-    return CoreMath.Round(1.0 / 8.0 * (level ^ 2.0 - level + 600.0 * (numerator / denominator)))
+    -- This equation produces an exp chart similar to OSRS, but more balanced.
+    -- Level 1 and level 99 require almost the same exp, but our "half point" is level 79,
+    -- unlike OSRS which has a "half  point" of level 92.
+    local mainExpFunction = CoreMath.Round(14.0 * (level ^ 3.0))
+    local noobBenefits = CoreMath.Round(-72.0 * (level ^ 2.0) + 192.0 * level - 134.0)
+
+    return mainExpFunction + noobBenefits
 end
 
 ExpTable.GetExpRequiredForNextLevel = function (level)
@@ -94,6 +96,10 @@ ExpTable.GetExpRequiredForNextLevel = function (level)
 end
 
 ExpTable.GetLevelForExp = function (exp)
+    if (exp < ExpTable.GetExpRequiredForLevel(1)) then
+        return 1
+    end
+
     -- It is not possible to find the roots of the exp equation, otherwise we would just invert it. Currently, we just
     -- do a linear search. This may be fine since there are only 99 levels, but if it becomes an issue, we should switch to a binary search.
     local level = 1

@@ -13,14 +13,14 @@ function OnGiveSkillExp(player, skillKey, value)
 end
 
 function OnGiveSkillsRandomExp(player, randomMin, randomMax)
-    for _, skillKey in ipairs(Framework.ExpTable.GetSkillMap()) do
+    for _, skillKey in pairs(Framework.ExpTable.SkillMap) do
         OnGiveSkillExp(player, skillKey, math.random(randomMin, randomMax))
     end
 end
 
 function OnWipeSkills(player)
     if not Framework.Utils.Dev.IsAdmin(player) then return end
-    for _, skillKey in ipairs(Framework.ExpTable.GetSkillMap()) do
+    for _, skillKey in pairs(Framework.ExpTable.SkillMap) do
         Framework.Database.ResetSkillExp(player, skillKey)
     end
 end
