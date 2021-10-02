@@ -7434,7 +7434,6 @@ ObjectSettings {
   ObjectStates {
     key: 14543029498500078760
     value {
-      IsHidden: true
     }
   }
   ObjectStates {

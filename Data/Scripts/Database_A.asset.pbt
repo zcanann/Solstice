@@ -1,15 +1,9 @@
 Assets {
   Id: 14949101436137413811
-  Name: "atabase_A"
+  Name: "Database_A"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
-      Overrides {
-        Name: "cs:ReliableEvents"
-        AssetReference {
-          Id: 16495471231439243155
-        }
-      }
       Overrides {
         Name: "cs:ExpTable"
         AssetReference {
@@ -19,6 +13,5 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Storage"
 }

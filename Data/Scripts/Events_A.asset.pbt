@@ -5,6 +5,18 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:Broadcast"
+        AssetReference {
+          Id: 9015254966748010645
+        }
+      }
+      Overrides {
+        Name: "cs:DataStructures"
+        AssetReference {
+          Id: 10763479141974973317
+        }
+      }
+      Overrides {
         Name: "cs:ChatCommandEvents"
         AssetReference {
           Id: 17612071643994816819
@@ -43,6 +55,5 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Events"
 }

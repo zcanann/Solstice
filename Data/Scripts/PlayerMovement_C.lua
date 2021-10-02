@@ -14,7 +14,7 @@ local CLICK_VFX = script:GetCustomProperty("AnimPulse")
 function ClearWayPoints()
 	remainingWayPoints = nil
 	goalRachedCallback = nil
-	Events.Broadcast(Framework.Events.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, nil)
+	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, nil)
 end
 
 function DestroyIfValid(object)
@@ -58,7 +58,7 @@ function MoveToGoal(player, params)
 end
 
 function OnMoveToLocation(goal, callback)
-	Events.Broadcast(Framework.Events.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
+	Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 	goalRachedCallback = callback
 	DestroyIfValid(goalPulse)
 	-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
@@ -75,8 +75,8 @@ function OnMoveToLocation(goal, callback)
 
 	remainingWayPoints = wayPoints
 
-	Events.Broadcast(Framework.Events.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, goal)
-	Framework.ReliableEvents.Broadcast(Framework.Events.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, localPlayer)
+	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, goal)
+	Framework.Events.Broadcast.Local(Framework.Events.Keys.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, localPlayer)
 
 	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
 		OnReachedDestination()
@@ -86,6 +86,6 @@ end
 local movementHook = localPlayer.movementHook:Connect(MoveToGoal)
 movementHook.priority = 99
 
-Events.Connect(Framework.Events.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
-Events.Connect(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, OnMoveToLocation)
+Events.Connect(Framework.Events.Keys.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
+Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, OnMoveToLocation)
 

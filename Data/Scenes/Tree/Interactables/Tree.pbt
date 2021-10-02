@@ -1329,6 +1329,44 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 15792647630309582845
+      value {
+        Overrides {
+          Name: "cs:Exp"
+          Int: 18
+        }
+        Overrides {
+          Name: "cs:MinResources"
+          Int: 4
+        }
+        Overrides {
+          Name: "cs:MaxResources"
+          Int: 6
+        }
+        Overrides {
+          Name: "cs:RequiredItemType"
+          String: "pickaxe"
+        }
+        Overrides {
+          Name: "cs:ResourceItem"
+          String: "copper_ore"
+        }
+        Overrides {
+          Name: "cs:Object"
+          ObjectReference {
+            SelfId: 7404798247644256620
+            SubObjectId: 18361376657929626207
+            InstanceId: 9461564959932782095
+            TemplateId: 13401275499172607929
+          }
+        }
+        Overrides {
+          Name: "cs:BaseDuration"
+          Float: 3.2
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 18361376657929626207
       value {
         Overrides {
@@ -1345,14 +1383,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }

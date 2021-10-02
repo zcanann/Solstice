@@ -19,8 +19,8 @@ function BeginMine()
     end
 
     Framework.Print("Mining...")
-    Framework.Print(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
-    Framework.ReliableEvents.BroadcastToServer(Framework.Events.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+    Framework.Print(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 end
 
 function StopMine()
@@ -36,9 +36,9 @@ function Interact()
 
     -- Otherwise attempt to walk to the object using the attached walkable script, if it exists
     if propWalkableScript.context:IsExact() then
-        Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, propWalkableScript.context:GetWalkableDestination(), callback)
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, propWalkableScript.context:GetWalkableDestination(), callback)
     else
-        Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, script:GetWorldPosition(), callback)
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, script:GetWorldPosition(), callback)
     end
 end
 
@@ -47,5 +47,5 @@ function ShowOption()
         Interact()
     end
 
-    Events.Broadcast(Framework.Events.Interaction.EVENT_ADD_INTERACT_OPTION, "Mine " .. name, callback)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, "Mine " .. name, callback)
 end

@@ -449,6 +449,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6307521169272183388
+  Name: "UI Gradient Circular 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Basic_Shape_001"
+  }
+}
+Assets {
   Id: 5868275997044220508
   Name: "Icon Player Mount"
   PlatformAssetType: 9

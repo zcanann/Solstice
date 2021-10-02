@@ -13,6 +13,6 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
+  VirtualFolderPath: "Utils"
   VirtualFolderPath: "ChatCommands"
 }

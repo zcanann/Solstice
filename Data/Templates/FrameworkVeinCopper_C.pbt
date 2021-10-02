@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 413991195585998862
+        ParentId: 17246289419149383775
         ChildIds: 14124416398978196639
         ChildIds: 9283846334413927800
         ChildIds: 14909532260286085420
@@ -320,8 +320,7 @@ Assets {
           }
         }
         ParentId: 18361376657929626207
-        ChildIds: 15363651039913677374
-        ChildIds: 13958486223661738711
+        ChildIds: 15792647630309582845
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -339,8 +338,8 @@ Assets {
         }
       }
       Objects {
-        Id: 15363651039913677374
-        Name: "S_EngagementSession"
+        Id: 15792647630309582845
+        Name: "ResourceEngagementSession_S"
         Transform {
           Location {
           }
@@ -355,20 +354,8 @@ Assets {
         ParentId: 9283846334413927800
         UnregisteredParameters {
           Overrides {
-            Name: "cs:MaxEngagements"
-            Int: 4
-          }
-          Overrides {
-            Name: "cs:EngagementScript"
-            AssetReference {
-              Id: 14285642204270262052
-            }
-          }
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 18361376657929626207
-            }
+            Name: "cs:SkillId"
+            String: "mining"
           }
         }
         Collidable_v2 {
@@ -386,39 +373,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 15725608099489840980
-          }
-        }
-      }
-      Objects {
-        Id: 13958486223661738711
-        Name: "S_MiningEngagement"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9283846334413927800
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 14285642204270262052
           }
         }
       }
@@ -1451,4 +1405,5 @@ Assets {
   }
   SerializationVersion: 100
   VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Interactables"
 }

@@ -33,7 +33,7 @@ Objects {
 }
 Objects {
   Id: 11361303837045063537
-  Name: "S_MovementSpeed"
+  Name: "RunStamina_S"
   Transform {
     Location {
     }
@@ -102,7 +102,7 @@ Objects {
 }
 Objects {
   Id: 3732083120527857441
-  Name: "C_MovementSpeedClient"
+  Name: "RunStamina_C"
   Transform {
     Location {
     }

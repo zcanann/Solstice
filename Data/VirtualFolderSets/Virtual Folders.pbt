@@ -13,10 +13,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Gameplay"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "UI"
       PlatformAssetType: 3
     }
@@ -29,10 +25,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Interactables"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Framework"
       PlatformAssetType: 5
     }
@@ -49,21 +41,12 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Minimap"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Movement"
       PlatformAssetType: 5
     }
     Folders {
       VirtualFolderPath: "NPCs"
       PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Framework"
-      PlatformAssetType: 3
     }
     Folders {
       VirtualFolderPath: "Items"
@@ -73,26 +56,6 @@ Assets {
       VirtualFolderPath: "Items"
       VirtualFolderPath: "Rune"
       PlatformAssetType: 13
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Movement"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "ChatCommands"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Interactions"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Engagement"
-      PlatformAssetType: 3
     }
     Folders {
       VirtualFolderPath: "Animations"
@@ -105,6 +68,54 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Triggers"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Utils"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Engagement"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Events"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Storage"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Interactions"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Movement"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Stats"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "Minimap"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Utils"
+      VirtualFolderPath: "DataStructures"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Utils"
+      VirtualFolderPath: "ChatCommands"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Interactables"
       PlatformAssetType: 5
     }
   }

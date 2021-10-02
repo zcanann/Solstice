@@ -12,4 +12,4 @@ function OnMouseDown(cursorPosition, primary)
 	end
 end
 
-Events.Connect(Framework.Events.Input.EVENT_MOUSE_DOWN, OnMouseDown)
+Events.Connect(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, OnMouseDown)

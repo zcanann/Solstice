@@ -63,7 +63,7 @@ Objects {
 }
 Objects {
   Id: 16844910628275373465
-  Name: "Game Systems"
+  Name: "GameSystems"
   Transform {
     Location {
     }
@@ -90,7 +90,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Game Systems"
+    FilePartitionName: "GameSystems"
   }
 }
 Objects {

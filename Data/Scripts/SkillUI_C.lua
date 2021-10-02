@@ -19,7 +19,17 @@ local localPlayer = Game.GetLocalPlayer()
 
 function OnHover(button)
     propSkillHoverMenu.visibility = Visibility.FORCE_ON
+    propSkillHoverMenu.x = button.parent.x - propSkillHoverMenu.width / 2.0
+    propSkillHoverMenu.y = button.parent.y - propSkillHoverMenu.height / 2.0
 
+    UpdateHoverMenuText()
+end
+
+function OnUnhover(button)
+    propSkillHoverMenu.visibility = Visibility.FORCE_OFF
+end
+
+function UpdateHoverMenuText()
     propSkillName.text = Framework.ExpTable.GetSkillName(propSkillKey)
 
     local skillLevel = Framework.Database.GetSkillLevel(localPlayer, propSkillKey)
@@ -28,13 +38,6 @@ function OnHover(button)
 
     propSkillExp.text = expTextFormat:gsub("{0}", tostring(currentExp))
     propSkillExpRequired.text = expRequiredTextFormat:gsub("{0}", tostring(neededExp))
-
-    propSkillHoverMenu.x = button.parent.x - propSkillHoverMenu.width / 2.0
-    propSkillHoverMenu.y = button.parent.y - propSkillHoverMenu.height / 2.0
-end
-
-function OnUnhover(button)
-    propSkillHoverMenu.visibility = Visibility.FORCE_OFF
 end
 
 function UpdateSkillText()
@@ -46,8 +49,11 @@ function UpdateSkillText()
 end
 
 function OnResourceChanged(player, resource, value)
-    if resource == skillKeys.LEVEL or resource == skillKeys.EFFECTIVE_LEVEL then
+    if resource == skillKeys.LEVEL or resource == skillKeys.EFFECTIVE_LEVEL or resource == skillKeys.EXP then
         UpdateSkillText()
+        if propSkillHoverMenu.visibility ~= Visibility.FORCE_OFF then
+            UpdateHoverMenuText()
+        end
     end
 end
 

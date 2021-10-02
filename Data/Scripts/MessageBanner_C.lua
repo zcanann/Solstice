@@ -29,7 +29,6 @@ local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local CANVAS = script:GetCustomProperty("Canvas"):WaitForObject()
 local PANEL = script:GetCustomProperty("Panel"):WaitForObject()
 local TEXT_BOX = script:GetCustomProperty("TextBox"):WaitForObject()
-local HELPER = script:GetCustomProperty("Helper")
 
 -- User exposed properties
 local DEFAULT_DURATION = COMPONENT_ROOT:GetCustomProperty("DefaultDuration")

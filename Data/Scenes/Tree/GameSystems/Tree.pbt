@@ -1,5 +1,37 @@
-Name: "Game Systems"
+Name: "GameSystems"
 RootId: 16844910628275373465
+Objects {
+  Id: 15140153797398253369
+  Name: "StatsSystem"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 16844910628275373465
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "StatsSystem"
+  }
+}
 Objects {
   Id: 1495303198340745656
   Name: "Navmesh"
@@ -298,37 +330,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "DDNavMeshGenerator"
-  }
-}
-Objects {
-  Id: 9296633153856934578
-  Name: "StaminaSystem"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16844910628275373465
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "StaminaSystem"
   }
 }
 Objects {

@@ -5,16 +5,19 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 function OnEngagementSessionConnected(player, objectId, animationName)
+    Framework.Print("ANIMATING")
+    Framework.Print(player)
     if not player then return end
+    Framework.Print("ANIMATING2")
     local animation = player.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
     player.clientUserData.engagement.activeAnim = animation
     animation:Activate()
     player.clientUserData.engagement.activeAnimReadyEvent = animation.readyEvent:Connect(function (localAnim)
-        -- Framework.Print("CHAINING_ABILITY")
+        Framework.Print("CHAINING_ABILITY")
         localAnim:Activate()
     end)
     player.clientUserData.engagement.activeAnimInterruptedEvent = animation.interruptedEvent:Connect(function (localAnim)
-        -- Framework.Print("INTERRUPTED")
+        Framework.Print("INTERRUPTED")
         if player.clientUserData.engagement.activeAnimReadyEvent then
             player.clientUserData.engagement.activeAnimReadyEvent:Disconnect()
         end
@@ -39,5 +42,5 @@ end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 
-Events.Connect(Framework.Events.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)
-Events.Connect(Framework.Events.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, InterruptPlayerEngagement)
+Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)
+Events.Connect(Framework.Events.Keys.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, InterruptPlayerEngagement)

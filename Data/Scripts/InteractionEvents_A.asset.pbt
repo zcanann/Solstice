@@ -5,6 +5,5 @@ Assets {
   TextAsset {
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Interactions"
 }

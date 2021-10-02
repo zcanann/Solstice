@@ -2,7 +2,7 @@ Name: "Settings"
 RootId: 2654916338316290302
 Objects {
   Id: 3432427007554611280
-  Name: "Respawn Settings"
+  Name: "RespawnSettings"
   Transform {
     Location {
     }
@@ -38,7 +38,7 @@ Objects {
 }
 Objects {
   Id: 5990543115566140013
-  Name: "Team Settings"
+  Name: "TeamSettings"
   Transform {
     Location {
     }
@@ -72,7 +72,7 @@ Objects {
 }
 Objects {
   Id: 5575738881908676007
-  Name: "Player Settings"
+  Name: "PlayerSettings"
   Transform {
     Location {
     }
@@ -136,7 +136,7 @@ Objects {
 }
 Objects {
   Id: 7367735074338159388
-  Name: "Game Settings"
+  Name: "GameSettings"
   Transform {
     Location {
     }

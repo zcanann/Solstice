@@ -17,7 +17,7 @@ function ShowOptions()
 
     print("Displaying " .. tostring(#interactionScripts) .. " interaction options")
 
-    Events.Broadcast(Framework.Events.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 
     for index = #interactionScripts, 1, -1 do
         interactionScripts[index].context:ShowOption()

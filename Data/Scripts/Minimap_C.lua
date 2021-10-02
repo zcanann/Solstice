@@ -321,7 +321,7 @@ function OnMouseDown(cursorPosition, primary)
 			pos.z
 		)
 
-		Events.Broadcast(Framework.Events.Movement.EVENT_MOVE_TO_LOCATION, worldCoords)
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, worldCoords)
 	end
 end
 
@@ -372,7 +372,7 @@ end
 propZoomInButton.clickedEvent:Connect(OnZoomIn)
 propZoomOutButton.clickedEvent:Connect(OnZoomOut)
 
-Events.Connect(Framework.Events.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
-Events.Connect(Framework.Events.Input.EVENT_MOUSE_DOWN, OnMouseDown)
+Events.Connect(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
+Events.Connect(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, OnMouseDown)
 ParseMap()
 OnZoomChanged()

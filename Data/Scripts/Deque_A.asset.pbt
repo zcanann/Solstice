@@ -5,6 +5,6 @@ Assets {
   TextAsset {
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Utils"
+  VirtualFolderPath: "DataStructures"
 }

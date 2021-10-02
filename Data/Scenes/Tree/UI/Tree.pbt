@@ -1639,6 +1639,7 @@ Objects {
   }
   ParentId: 11298154546883981052
   ChildIds: 13426174996276652099
+  ChildIds: 8373277900251283206
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1682,6 +1683,240 @@ Objects {
   }
 }
 Objects {
+  Id: 8373277900251283206
+  Name: "Helper_SubMessageBanner"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12988599424123451995
+  ChildIds: 18062362180012622342
+  ChildIds: 14247787705307609902
+  ChildIds: 2221046296087280477
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:BannerText"
+      ObjectReference {
+        SelfId: 2221046296087280477
+      }
+    }
+    Overrides {
+      Name: "cs:Background"
+      ObjectReference {
+        SelfId: 14247787705307609902
+      }
+    }
+    Overrides {
+      Name: "cs:OffsetDistance"
+      Float: 150
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 480
+    Height: 60
+    UIY: -270
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 2221046296087280477
+  Name: "BannerText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8373277900251283206
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 600
+    Height: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Text {
+      Label: "Message Banner"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 25
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14247787705307609902
+  Name: "Background"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8373277900251283206
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: 10
+    Height: 10
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Image {
+      Brush {
+        Id: 6307521169272183388
+      }
+      Color {
+        A: 0.7
+      }
+      TeamSettings {
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 18062362180012622342
+  Name: "SubBannerMessageClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8373277900251283206
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ComponentRoot"
+      ObjectReference {
+        SelfId: 8373277900251283206
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2927386225211356535
+    }
+  }
+}
+Objects {
   Id: 13426174996276652099
   Name: "Panel"
   Transform {
@@ -1704,7 +1939,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1901,12 +2136,6 @@ Objects {
         SelfId: 2197645925255679344
       }
     }
-    Overrides {
-      Name: "cs:Helper"
-      AssetReference {
-        Id: 3237383946689991651
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1939,7 +2168,6 @@ Objects {
   }
   ParentId: 5628166357863187692
   ChildIds: 13296176000748170703
-  ChildIds: 9548512205028340285
   ChildIds: 6286086887859152918
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -1971,6 +2199,7 @@ Objects {
     }
   }
   ParentId: 4997543145864768418
+  ChildIds: 17280424472302331708
   ChildIds: 13419047081593664430
   ChildIds: 11430931709966214826
   ChildIds: 15728569170510903256
@@ -44540,70 +44769,6 @@ Objects {
   }
 }
 Objects {
-  Id: 9548512205028340285
-  Name: "TabSwitches"
-  Transform {
-    Location {
-      X: -5800.00098
-      Y: -449.99472
-      Z: 850
-    }
-    Rotation {
-      Yaw: -135
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4997543145864768418
-  ChildIds: 17280424472302331708
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Canvas {
-      ContentType {
-        Value: "mc:ecanvascontenttype:dynamic"
-      }
-      Opacity: 1
-      IsHUD: true
-      CanvasWorldSize {
-        X: 1024
-        Y: 1024
-      }
-      RedrawTime: 30
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topleft"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 17280424472302331708
   Name: "TabSwitches"
   Transform {
@@ -44621,7 +44786,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9548512205028340285
+  ParentId: 6286086887859152918
   ChildIds: 3783909242673223451
   ChildIds: 6730580945996564831
   ChildIds: 1654049477389391155
@@ -51211,7 +51376,7 @@ Objects {
 }
 Objects {
   Id: 17917626017835754387
-  Name: "Minimap UI"
+  Name: "MinimapUI"
   Transform {
     Location {
     }
@@ -56617,7 +56782,7 @@ Objects {
 }
 Objects {
   Id: 17231288832128299088
-  Name: "C_Minimap"
+  Name: "Minimap_C"
   Transform {
     Location {
     }

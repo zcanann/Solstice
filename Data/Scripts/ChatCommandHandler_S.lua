@@ -1,6 +1,5 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-
 function OnPrintInventory(player)
     if not Framework.Utils.Dev.IsAdmin(player) then return end
 
@@ -48,10 +47,10 @@ function OnKillPlayerCommand(player, targetPlayer)
     targetPlayer:Die()
 end
 
-Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILL_EXP, OnGiveSkillExp)
-Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_GIVE_SKILLS_RANDOM_EXP, OnGiveSkillsRandomExp)
-Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_WIPE_SKILLS, OnWipeSkills)
-Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_SET_SKILL_LEVEL, OnSetSkillLevel)
-Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_PRINT_INVENTORY, OnPrintPlayerInventory)
-Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_SPAWN_ITEM, OnSpawnItem)
-Events.ConnectForPlayer(Framework.Events.Chat.EVENT_DEVELOPER_KILL, OnKillPlayerCommand)
+Events.ConnectForPlayer(Framework.Events.Keys.Chat.EVENT_DEVELOPER_GIVE_SKILL_EXP, OnGiveSkillExp)
+Events.ConnectForPlayer(Framework.Events.Keys.Chat.EVENT_DEVELOPER_GIVE_SKILLS_RANDOM_EXP, OnGiveSkillsRandomExp)
+Events.ConnectForPlayer(Framework.Events.Keys.Chat.EVENT_DEVELOPER_WIPE_SKILLS, OnWipeSkills)
+Events.ConnectForPlayer(Framework.Events.Keys.Chat.EVENT_DEVELOPER_SET_SKILL_LEVEL, OnSetSkillLevel)
+Events.ConnectForPlayer(Framework.Events.Keys.Chat.EVENT_DEVELOPER_PRINT_INVENTORY, OnPrintPlayerInventory)
+Events.ConnectForPlayer(Framework.Events.Keys.Chat.EVENT_DEVELOPER_SPAWN_ITEM, OnSpawnItem)
+Events.ConnectForPlayer(Framework.Events.Keys.Chat.EVENT_DEVELOPER_KILL, OnKillPlayerCommand)

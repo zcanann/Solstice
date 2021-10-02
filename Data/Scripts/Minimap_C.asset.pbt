@@ -13,5 +13,6 @@ Assets {
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "UI"
   VirtualFolderPath: "Minimap"
 }

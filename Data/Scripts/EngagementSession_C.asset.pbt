@@ -18,6 +18,5 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Engagement"
 }

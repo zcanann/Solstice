@@ -32,9 +32,9 @@ function OnClick()
     SetRunToggle(not runToggle)
 
     if runToggle then
-        Events.BroadcastToServer(Framework.Events.Movement.EVENT_REQUEST_RUN)
+        Events.BroadcastToServer(Framework.Events.Keys.Movement.EVENT_REQUEST_RUN)
     else
-        Events.BroadcastToServer(Framework.Events.Movement.EVENT_REQUEST_WALK)
+        Events.BroadcastToServer(Framework.Events.Keys.Movement.EVENT_REQUEST_WALK)
     end
 end
 
@@ -45,5 +45,5 @@ end
 
 SetRunToggle(false)
 
-Events.Connect(Framework.Events.Movement.EVENT_MOVEMENT_STATE_UPDATED, OnMovementStateUpdated)
+Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVEMENT_STATE_UPDATED, OnMovementStateUpdated)
 propRunToggleButton.clickedEvent:Connect(OnClick)
