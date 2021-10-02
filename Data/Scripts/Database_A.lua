@@ -242,7 +242,7 @@ end
 
 Database.GetEffectiveSkillLevel = function(player, skillId)
 	local skillKeys = Database.GetSkillKeys(skillId)
-    local level = Database.GetKey(player, skillKeys.EFFECTIVE_LEVEL)
+    local level = Database.GetKey(player, skillKeys.EFFECTIVE_LEVEL) or 1
 
 	if level <= 0 then
 		return 1

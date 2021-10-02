@@ -21,6 +21,13 @@ local animationMap = {
     [ "net" ]           = "NetFishingAnimation",
 }
 
+function IsPlayerConnected(player)
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+        return
+    end
+    return engagedPlayers[player] ~= nil
+end
+
 function Connect(player)
     if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
         return
@@ -44,13 +51,6 @@ function Connect(player)
     Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, { player, propObject.id, animationMap[propRequiredItemType] })
 end
 
-function IsPlayerConnected(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
-        return
-    end
-    return engagedPlayers[player] ~= nil
-end
-
 function Disconnect(player)
     if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
         return
@@ -59,11 +59,7 @@ function Disconnect(player)
     engagedPlayers[player] = nil
     player.serverUserData.engagement.session = nil
     player.serverUserData.engagement.duration = 0.0
-    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, player, { player })
-end
-
-function OnPlayerLeft(player)
-    Disconnect(player)
+    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, { player })
 end
 
 function Tick(deltaTime)
@@ -114,8 +110,20 @@ function BroadcastResourceState()
     Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_RESOURCE_AMOUNT_CHANGED_PREFIX .. propObject.id, { remainingResources })
 end
 
+function BroadcastResourceStateToPlayer(player)
+    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.Engagement.EVENT_RESOURCE_AMOUNT_CHANGED_PREFIX .. propObject.id, player, { remainingResources })
+end
+
 function InitializeResources()
     remainingResources = math.random(propMinResources, propMaxResources)
+end
+
+function OnPlayerLeft(player)
+    Disconnect(player)
+end
+
+function OnPlayerJoined(player)
+    BroadcastResourceStateToPlayer(player)
 end
 
 -- Framework.Print("LISTENING...")
@@ -123,6 +131,7 @@ end
 
 InitializeResources()
 
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 Events.ConnectForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)

@@ -322,6 +322,62 @@ Assets {
           }
         }
         ParentId: 14124416398978196639
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Object"
+            ObjectReference {
+              SubObjectId: 18361376657929626207
+            }
+          }
+          Overrides {
+            Name: "cs:BaseHasResources"
+            ObjectReference {
+              SubObjectId: 732550294682356828
+            }
+          }
+          Overrides {
+            Name: "cs:BaseFullDepletion"
+            ObjectReference {
+              SubObjectId: 3414290294168690133
+            }
+          }
+          Overrides {
+            Name: "cs:DepletableResource1"
+            ObjectReference {
+              SubObjectId: 2923406219769570689
+            }
+          }
+          Overrides {
+            Name: "cs:DepletableResource2"
+            ObjectReference {
+              SubObjectId: 12349232413866453133
+            }
+          }
+          Overrides {
+            Name: "cs:DepletableResource3"
+            ObjectReference {
+              SubObjectId: 5459181690442352136
+            }
+          }
+          Overrides {
+            Name: "cs:DepletableResource4"
+            ObjectReference {
+              SubObjectId: 5663368955927463604
+            }
+          }
+          Overrides {
+            Name: "cs:DepletableResource5"
+            ObjectReference {
+              SubObjectId: 17812603002443832847
+            }
+          }
+          Overrides {
+            Name: "cs:DepletableResource6"
+            ObjectReference {
+              SubObjectId: 9173146783906193299
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -460,9 +516,7 @@ Assets {
         }
         ParentId: 18361376657929626207
         ChildIds: 8068096816496895139
-        ChildIds: 17799544314165691135
-        ChildIds: 16762382343666343478
-        ChildIds: 4190433676094983961
+        ChildIds: 12971064613990579146
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -580,26 +634,65 @@ Assets {
         }
       }
       Objects {
-        Id: 17799544314165691135
-        Name: "Depletion1"
+        Id: 12971064613990579146
+        Name: "ClientContext"
         Transform {
           Location {
-            X: 2
-            Y: -2
-            Z: -0.072265625
+            X: 5
+            Y: -5
+            Z: -10
           }
           Rotation {
           }
           Scale {
-            X: 1.28652012
-            Y: 1.28652012
-            Z: 1.28652012
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 14909532260286085420
-        ChildIds: 5572030960236168231
-        ChildIds: 6120462905454711383
-        ChildIds: 15097492360178856282
+        ChildIds: 732550294682356828
+        ChildIds: 3414290294168690133
+        ChildIds: 2923406219769570689
+        ChildIds: 12349232413866453133
+        ChildIds: 5459181690442352136
+        ChildIds: 5663368955927463604
+        ChildIds: 17812603002443832847
+        ChildIds: 9173146783906193299
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 732550294682356828
+        Name: "BaseHasResources"
+        Transform {
+          Location {
+            X: -10
+            Y: -8
+            Z: -2
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12971064613990579146
+        ChildIds: 5767286942157677749
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -613,848 +706,25 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Folder {
-          IsFilePartition: true
+          IsGroup: true
         }
       }
       Objects {
-        Id: 5572030960236168231
-        Name: "Callout Sparkle"
-        Transform {
-          Location {
-            X: 23.3915901
-            Y: 45.6119308
-            Z: 69.962822
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.411041677
-            Y: 0.398932546
-            Z: 0.612395048
-          }
-        }
-        ParentId: 17799544314165691135
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.380208343
-              G: 0.130018935
-              B: 0.0536168441
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 10
-          }
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 40
-          }
-          Overrides {
-            Name: "bp:Density"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Gravity"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Offset"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Speed"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Volume Type"
-            Enum {
-              Value: "mc:evfxvolumetype:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Variance"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Initial Velocity"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Particle Rotation Rate High"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Particle Rotation Rate Low"
-            Float: -0.1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 11703155121820248699
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 6120462905454711383
-        Name: "Rock 01"
-        Transform {
-          Location {
-            X: 21.440773
-            Y: 38.0318298
-            Z: 69.3851242
-          }
-          Rotation {
-            Pitch: -63.7444229
-            Yaw: 78.3738861
-            Roll: -9.36180592
-          }
-          Scale {
-            X: 0.148096547
-            Y: 0.183558673
-            Z: 0.121197857
-          }
-        }
-        ParentId: 17799544314165691135
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4289160600405295316
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.744791687
-              G: 0.30119437
-              B: 0.131890178
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9686022029476961003
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 15097492360178856282
+        Id: 5767286942157677749
         Name: "Flare Billboard"
         Transform {
           Location {
+            Y: 9.53674316e-06
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.5
+            Y: 1.49999988
+            Z: 1.49999988
           }
         }
-        ParentId: 17799544314165691135
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Flare Shape"
-            Int: 4
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.557291687
-              G: 0.135576025
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color B"
-            Color {
-              R: 0.625
-              G: 0.111713186
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color C"
-            Color {
-              R: 0.166666672
-              G: 0.051505141
-              B: 0.00951264333
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Height"
-            Float: 7.32176638
-          }
-          Overrides {
-            Name: "bp:Width"
-            Float: 3.69954419
-          }
-          Overrides {
-            Name: "bp:Rotate Texture"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Camera Fade Distance"
-            Float: 20
-          }
-          Overrides {
-            Name: "bp:Camera Fade Offset"
-            Float: 2
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 0
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 6578593823313454603
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
-        Id: 16762382343666343478
-        Name: "Depletion2"
-        Transform {
-          Location {
-            X: -60
-            Y: 5
-            Z: 75
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14909532260286085420
-        ChildIds: 9437473534312951497
-        ChildIds: 4959258198606841406
-        ChildIds: 6708312812770295676
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsFilePartition: true
-        }
-      }
-      Objects {
-        Id: 9437473534312951497
-        Name: "Rock 01"
-        Transform {
-          Location {
-            X: 2.1171875
-            Y: 2.12207031
-            Z: -0.56918335
-          }
-          Rotation {
-            Pitch: 1.54860187
-            Yaw: 42.3490906
-            Roll: 66.9151688
-          }
-          Scale {
-            X: 0.190529183
-            Y: 0.236151919
-            Z: 0.155923471
-          }
-        }
-        ParentId: 16762382343666343478
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4289160600405295316
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.744791687
-              G: 0.30119437
-              B: 0.131890178
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9686022029476961003
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 4959258198606841406
-        Name: "Callout Sparkle"
-        Transform {
-          Location {
-            X: 0.830078125
-            Y: 1.97851562
-            Z: 3.03842163
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.592730284
-            Y: 0.575268745
-            Z: 0.883085907
-          }
-        }
-        ParentId: 16762382343666343478
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.380208343
-              G: 0.130018935
-              B: 0.0536168441
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 10
-          }
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 40
-          }
-          Overrides {
-            Name: "bp:Density"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Gravity"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Offset"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Speed"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Volume Type"
-            Enum {
-              Value: "mc:evfxvolumetype:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Variance"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Initial Velocity"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Particle Rotation Rate High"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Particle Rotation Rate Low"
-            Float: -0.1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 11703155121820248699
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 6708312812770295676
-        Name: "Flare Billboard"
-        Transform {
-          Location {
-            X: 62
-            Y: -7
-            Z: -75.0722656
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.28652012
-            Y: 1.28652012
-            Z: 1.28652012
-          }
-        }
-        ParentId: 16762382343666343478
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Flare Shape"
-            Int: 1
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.557291687
-              G: 0.135576025
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color B"
-            Color {
-              R: 0.625
-              G: 0.111713186
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Color C"
-            Color {
-              R: 0.166666672
-              G: 0.051505141
-              B: 0.00951264333
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Height"
-            Float: 7.32176638
-          }
-          Overrides {
-            Name: "bp:Width"
-            Float: 3.69954419
-          }
-          Overrides {
-            Name: "bp:Rotate Texture"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Camera Fade Distance"
-            Float: 20
-          }
-          Overrides {
-            Name: "bp:Camera Fade Offset"
-            Float: 2
-          }
-          Overrides {
-            Name: "bp:Rotation"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Auto Rotate"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Rotation Rate"
-            Float: -5.04147339
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 6578593823313454603
-          }
-          TeamSettings {
-          }
-        }
-      }
-      Objects {
-        Id: 4190433676094983961
-        Name: "Depletion3"
-        Transform {
-          Location {
-            X: 30
-            Y: -50
-            Z: 90
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14909532260286085420
-        ChildIds: 1201030253163263792
-        ChildIds: 3372472816544748956
-        ChildIds: 14719045608155669283
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsFilePartition: true
-        }
-      }
-      Objects {
-        Id: 1201030253163263792
-        Name: "Rock 01"
-        Transform {
-          Location {
-            X: 4.20117188
-            Y: 9.22265625
-            Z: -0.806915283
-          }
-          Rotation {
-            Pitch: -47.2133102
-            Yaw: 82.4576
-            Roll: -14.2675028
-          }
-          Scale {
-            X: 0.190529183
-            Y: 0.236151919
-            Z: 0.155923471
-          }
-        }
-        ParentId: 4190433676094983961
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4289160600405295316
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.744791687
-              G: 0.30119437
-              B: 0.131890178
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9686022029476961003
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 3372472816544748956
-        Name: "Callout Sparkle"
-        Transform {
-          Location {
-            X: -4.84472656
-            Y: -13.2832031
-            Z: 1.38067627
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.48653388
-            Y: 0.472200781
-            Z: 0.72486794
-          }
-        }
-        ParentId: 4190433676094983961
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 0.380208343
-              G: 0.130018935
-              B: 0.0536168441
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Emissive Boost"
-            Float: 10
-          }
-          Overrides {
-            Name: "bp:Particle Scale Multiplier"
-            Float: 40
-          }
-          Overrides {
-            Name: "bp:Density"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Gravity"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Wind Speed"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Offset"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Speed"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Life"
-            Float: 1
-          }
-          Overrides {
-            Name: "bp:Volume Type"
-            Enum {
-              Value: "mc:evfxvolumetype:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Curl Variance"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Initial Velocity"
-            Vector {
-            }
-          }
-          Overrides {
-            Name: "bp:Particle Rotation Rate High"
-            Float: 0.1
-          }
-          Overrides {
-            Name: "bp:Particle Rotation Rate Low"
-            Float: -0.1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 11703155121820248699
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 14719045608155669283
-        Name: "Flare Billboard"
-        Transform {
-          Location {
-            X: -28
-            Y: 48
-            Z: -90.0722656
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.28652012
-            Y: 1.28652012
-            Z: 1.28652012
-          }
-        }
-        ParentId: 4190433676094983961
+        ParentId: 732550294682356828
         UnregisteredParameters {
           Overrides {
             Name: "bp:Flare Shape"
@@ -1542,6 +812,1334 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 3414290294168690133
+        Name: "BaseFullDepletion"
+        Transform {
+          Location {
+            X: -10
+            Y: -8
+            Z: -2
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12971064613990579146
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 2923406219769570689
+        Name: "DepletableResource1"
+        Transform {
+          Location {
+            X: 50
+            Y: -3
+            Z: 68
+          }
+          Rotation {
+            Yaw: -120.000008
+          }
+          Scale {
+            X: 1.28652012
+            Y: 1.28652012
+            Z: 1.28652012
+          }
+        }
+        ParentId: 12971064613990579146
+        ChildIds: 5572030960236168231
+        ChildIds: 6120462905454711383
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 5572030960236168231
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.411041677
+            Y: 0.398932546
+            Z: 0.612395048
+          }
+        }
+        ParentId: 2923406219769570689
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.380208343
+              G: 0.130018935
+              B: 0.0536168441
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 7.5
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 30
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Offset"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 1.25
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Variance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Initial Velocity"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate High"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate Low"
+            Float: -0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11703155121820248699
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 6120462905454711383
+        Name: "Rock 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -63.7444038
+            Yaw: 78.3738785
+            Roll: -9.36183262
+          }
+          Scale {
+            X: 0.100000009
+            Y: 0.100000009
+            Z: 0.100000009
+          }
+        }
+        ParentId: 2923406219769570689
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4289160600405295316
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.744791687
+              G: 0.30119437
+              B: 0.131890178
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9686022029476961003
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 12349232413866453133
+        Name: "DepletableResource2"
+        Transform {
+          Location {
+            X: -55
+            Y: -18
+            Z: 85
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12971064613990579146
+        ChildIds: 9437473534312951497
+        ChildIds: 4959258198606841406
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 9437473534312951497
+        Name: "Rock 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: 1.54860187
+            Yaw: 42.3491058
+            Roll: 66.9151764
+          }
+          Scale {
+            X: 0.1
+            Y: 0.2
+            Z: 0.1
+          }
+        }
+        ParentId: 12349232413866453133
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4289160600405295316
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.744791687
+              G: 0.30119437
+              B: 0.131890178
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9686022029476961003
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 4959258198606841406
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.592730284
+            Y: 0.575268745
+            Z: 0.883085907
+          }
+        }
+        ParentId: 12349232413866453133
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.380208343
+              G: 0.130018935
+              B: 0.0536168441
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 7.5
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 30
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Offset"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 1.25
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Variance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Initial Velocity"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate High"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate Low"
+            Float: -0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11703155121820248699
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 5459181690442352136
+        Name: "DepletableResource3"
+        Transform {
+          Location {
+            X: 30
+            Y: -53
+            Z: 73
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12971064613990579146
+        ChildIds: 1201030253163263792
+        ChildIds: 3372472816544748956
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 1201030253163263792
+        Name: "Rock 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -47.2133179
+            Yaw: 82.4576
+            Roll: -14.2675171
+          }
+          Scale {
+            X: 0.1
+            Y: 0.2
+            Z: 0.1
+          }
+        }
+        ParentId: 5459181690442352136
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4289160600405295316
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.744791687
+              G: 0.30119437
+              B: 0.131890178
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9686022029476961003
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 3372472816544748956
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.48653388
+            Y: 0.472200781
+            Z: 0.72486794
+          }
+        }
+        ParentId: 5459181690442352136
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.380208343
+              G: 0.130018935
+              B: 0.0536168441
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 7.5
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 30
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Offset"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 1.25
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Variance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Initial Velocity"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate High"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate Low"
+            Float: -0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11703155121820248699
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 5663368955927463604
+        Name: "DepletableResource4"
+        Transform {
+          Location {
+            X: -45
+            Y: 47
+            Z: 85
+          }
+          Rotation {
+            Yaw: -39.9999695
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12971064613990579146
+        ChildIds: 11371393059381043173
+        ChildIds: 18385269367558958277
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 11371393059381043173
+        Name: "Rock 01"
+        Transform {
+          Location {
+            X: 3.92326401e-05
+            Y: -4.67556456e-05
+          }
+          Rotation {
+            Pitch: 1.54860187
+            Yaw: 42.3491
+            Roll: 66.9151688
+          }
+          Scale {
+            X: 0.1
+            Y: 0.2
+            Z: 0.1
+          }
+        }
+        ParentId: 5663368955927463604
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4289160600405295316
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.744791687
+              G: 0.30119437
+              B: 0.131890178
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9686022029476961003
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 18385269367558958277
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+            X: 3.92326401e-05
+            Y: -4.67556456e-05
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.592730284
+            Y: 0.575268745
+            Z: 0.883085907
+          }
+        }
+        ParentId: 5663368955927463604
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.380208343
+              G: 0.130018935
+              B: 0.0536168441
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 7.5
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 30
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Offset"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 1.25
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Variance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Initial Velocity"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate High"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate Low"
+            Float: -0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11703155121820248699
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 17812603002443832847
+        Name: "DepletableResource5"
+        Transform {
+          Location {
+            X: 15
+            Y: 2
+            Z: 148
+          }
+          Rotation {
+            Yaw: 89.9999466
+            Roll: 30.0000057
+          }
+          Scale {
+            X: 0.7
+            Y: 0.7
+            Z: 0.7
+          }
+        }
+        ParentId: 12971064613990579146
+        ChildIds: 4274761284193652843
+        ChildIds: 14993358111984231272
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 4274761284193652843
+        Name: "Rock 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -47.2133102
+            Yaw: 82.4575882
+            Roll: -14.2675362
+          }
+          Scale {
+            X: 0.190529212
+            Y: 0.236151949
+            Z: 0.155923486
+          }
+        }
+        ParentId: 17812603002443832847
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4289160600405295316
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.744791687
+              G: 0.30119437
+              B: 0.131890178
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9686022029476961003
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 14993358111984231272
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.48653391
+            Y: 0.472200811
+            Z: 0.724868
+          }
+        }
+        ParentId: 17812603002443832847
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.380208343
+              G: 0.130018935
+              B: 0.0536168441
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 7.5
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 30
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Offset"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 1.25
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Variance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Initial Velocity"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate High"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate Low"
+            Float: -0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11703155121820248699
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 9173146783906193299
+        Name: "DepletableResource6"
+        Transform {
+          Location {
+            X: 20
+            Y: 57
+            Z: 88
+          }
+          Rotation {
+            Yaw: -5.00000238
+            Roll: 30.0000057
+          }
+          Scale {
+            X: 0.7
+            Y: 0.7
+            Z: 0.7
+          }
+        }
+        ParentId: 12971064613990579146
+        ChildIds: 18147621054486319859
+        ChildIds: 9101533933631841049
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+      }
+      Objects {
+        Id: 18147621054486319859
+        Name: "Rock 01"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -47.2133102
+            Yaw: 82.4575882
+            Roll: -14.2675362
+          }
+          Scale {
+            X: 0.190529212
+            Y: 0.236151949
+            Z: 0.155923486
+          }
+        }
+        ParentId: 9173146783906193299
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4289160600405295316
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.744791687
+              G: 0.30119437
+              B: 0.131890178
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9686022029476961003
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 9101533933631841049
+        Name: "Callout Sparkle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.48653391
+            Y: 0.472200811
+            Z: 0.724868
+          }
+        }
+        ParentId: 9173146783906193299
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.380208343
+              G: 0.130018935
+              B: 0.0536168441
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Emissive Boost"
+            Float: 7.5
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 30
+          }
+          Overrides {
+            Name: "bp:Density"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Wind Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Offset"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Speed"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 1.25
+          }
+          Overrides {
+            Name: "bp:Volume Type"
+            Enum {
+              Value: "mc:evfxvolumetype:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Curl Variance"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Initial Velocity"
+            Vector {
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate High"
+            Float: 0.1
+          }
+          Overrides {
+            Name: "bp:Particle Rotation Rate Low"
+            Float: -0.1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11703155121820248699
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
     }
     Assets {
       Id: 17447823781948565161
@@ -1571,6 +2169,15 @@ Assets {
       }
     }
     Assets {
+      Id: 6578593823313454603
+      Name: "Flare Billboard"
+      PlatformAssetType: 6
+      PrimaryAsset {
+        AssetType: "BlueprintAssetRef"
+        AssetId: "fxbp_flare_object"
+      }
+    }
+    Assets {
       Id: 11703155121820248699
       Name: "Callout Sparkle"
       PlatformAssetType: 8
@@ -1586,15 +2193,6 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_metal_basic_001"
-      }
-    }
-    Assets {
-      Id: 6578593823313454603
-      Name: "Flare Billboard"
-      PlatformAssetType: 6
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "fxbp_flare_object"
       }
     }
     PrimaryAssetId {
