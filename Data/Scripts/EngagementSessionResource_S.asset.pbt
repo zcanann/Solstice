@@ -1,6 +1,6 @@
 Assets {
   Id: 15725608099489840980
-  Name: "ResourceEngagementSession_S"
+  Name: "EngagementSessionResource_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
