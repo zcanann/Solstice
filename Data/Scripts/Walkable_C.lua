@@ -15,7 +15,7 @@ end
 
 function Interact(callback)
     Chat.LocalMessage("Walking to " .. propObject:GetCustomProperty("Name") .. "...")
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, GetWalkableDestination(), callback)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { GetWalkableDestination(), callback })
 end
 
 function ShowOption()
@@ -23,5 +23,5 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, "Walk here", callback)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", callback })
 end

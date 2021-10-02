@@ -14,7 +14,7 @@ local CLICK_VFX = script:GetCustomProperty("AnimPulse")
 function ClearWayPoints()
 	remainingWayPoints = nil
 	goalRachedCallback = nil
-	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, nil)
+	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, nil })
 end
 
 function DestroyIfValid(object)
@@ -67,7 +67,7 @@ function OnMoveToLocation(goal, callback)
 
 	local playerPos = localPlayer:GetWorldPosition()
 	local wayPoints = _G.NavMesh.FindPath(playerPos, goal)
-	
+
 	-- Remove the starting waypoint, as the player is already there
 	if wayPoints ~= nil and #wayPoints >= 1 then
 		table.remove(wayPoints, 1)
@@ -75,11 +75,12 @@ function OnMoveToLocation(goal, callback)
 
 	remainingWayPoints = wayPoints
 
-	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, remainingWayPoints, goal)
-	Framework.Events.Broadcast.Local(Framework.Events.Keys.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, localPlayer)
+	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, goal })
 
 	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
 		OnReachedDestination()
+	else
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, { localPlayer })
 	end
 end
 

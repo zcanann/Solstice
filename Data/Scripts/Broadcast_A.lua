@@ -30,49 +30,53 @@ local function TryOrQueueRequest(requestLambda)
     end
 end
 
--- CLIENT => SELF EVENT
+function UnpackArgs(args)
+    if not args then
+        return nil
+    end
+    return table.unpack(args, 1, #args)
+end
 
-Broadcast.Local = function(eventName, ...)
-    Events.Broadcast(eventName, ...)
+-- SELF => SELF EVENT
+
+Broadcast.Local = function(eventName, args)
+    Events.Broadcast(eventName, UnpackArgs(args))
 end
 
 -- CLIENT => SERVER BROADCAST
 
-Broadcast.ClientToServerReliable = function(eventName, ...)
-    local args = {n = select("#", ...), ...}
+Broadcast.ClientToServerReliable = function(eventName, args)
     TryOrQueueRequest(function ()
-        Events.BroadcastToServer(eventName, table.unpack(args, 1, args.n))
+        Events.BroadcastToServer(eventName, UnpackArgs(args))
     end)
 end
 
-Broadcast.ClientToServerBestEffort = function(eventName, ...)
-    Events.BroadcastToServer(eventName, ...)
+Broadcast.ClientToServerBestEffort = function(eventName, args)
+    Events.BroadcastToServer(eventName, UnpackArgs(args))
 end
 
 -- SERVER => CLIENT BROADCAST
 
-Broadcast.ServerToPlayerReliable = function(eventName, player, ...)
-    local args = {n = select("#", ...), ...}
+Broadcast.ServerToPlayerReliable = function(eventName, player, args)
     TryOrQueueRequest(function ()
-        Events.BroadcastToPlayer(player, eventName, table.unpack(args, 1, args.n))
+        Events.BroadcastToPlayer(player, eventName, UnpackArgs(args))
     end)
 end
 
-Broadcast.ServerToPlayerBestEffort = function(eventName, player, ...)
-    Events.BroadcastToPlayer(player, eventName, ...)
+Broadcast.ServerToPlayerBestEffort = function(eventName, player, args)
+    Events.BroadcastToPlayer(player, eventName, UnpackArgs(args))
 end
 
 -- SERVER-WIDE BROADCAST
 
-Broadcast.ServerToAllPlayersReliable = function(eventName, ...)
-    local args = {n = select("#", ...), ...}
+Broadcast.ServerToAllPlayersReliable = function(eventName, args)
     TryOrQueueRequest(function ()
-        Events.BroadcastToAllPlayers(eventName, table.unpack(args, 1, args.n))
+        Events.BroadcastToAllPlayers(eventName, UnpackArgs(args))
     end)
 end
 
-Broadcast.ServerToAllPlayersBestEffort = function(eventName, ...)
-    Events.BroadcastToAllPlayers(eventName, ...)
+Broadcast.ServerToAllPlayersBestEffort = function(eventName, args)
+    Events.BroadcastToAllPlayers(eventName, UnpackArgs(args))
 end
 
 -- AREA BROADCAST

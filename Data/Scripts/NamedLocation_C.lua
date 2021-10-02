@@ -39,7 +39,7 @@ LOCATION_PROPERTIES.backgroundColor = BACKGROUND_COLOR
 -- Fires the LocationEntered event
 function OnBeginOverlap(trigger, other)
     if other:IsA("Player") then
-        Framework.Events.Broadcast.Local("LocationEntered", other, LOCATION_PROPERTIES)
+        Framework.Events.Broadcast.Local("LocationEntered", { other, LOCATION_PROPERTIES })
     end
 end
 
@@ -47,7 +47,7 @@ end
 -- Fires the LocationExited event
 function OnEndOverlap(trigger, other)
     if other:IsA("Player") then
-        -- Framework.Events.Broadcast.Local("LocationExited", other, LOCATION_PROPERTIES)
+        -- Framework.Events.Broadcast.Local("LocationExited", { other, LOCATION_PROPERTIES })
     end
 end
 

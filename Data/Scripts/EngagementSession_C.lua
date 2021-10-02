@@ -40,7 +40,13 @@ function OnEngagementSessionConnected(player, objectId, animationName)
     end)
 end
 
-function InterruptPlayerEngagement(player)
+function OnEngagementSessionDisconnected(player)
+    if player.clientUserData.engagement.activeAnimAbility then
+        player.clientUserData.engagement.activeAnimAbility:Interrupt()
+    end
+end
+
+function OnEngagementSessionLocalInterrupt(player)
     if player.clientUserData.engagement.activeAnimAbility then
         player.clientUserData.engagement.activeAnimAbility:Interrupt()
     end
@@ -53,4 +59,5 @@ end
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 
 Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)
-Events.Connect(Framework.Events.Keys.Engagement.EVENT_INTERRUPT_PLAYER_ENGAGEMENT, InterruptPlayerEngagement)
+Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, OnEngagementSessionDisconnected)
+Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)

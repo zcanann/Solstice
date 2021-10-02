@@ -2221,7 +2221,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2475,7 +2475,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -2753,7 +2753,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -19479,7 +19479,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -35761,7 +35761,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -36023,7 +36023,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -36277,7 +36277,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -44483,7 +44483,7 @@ Objects {
   Control {
     Width: 350
     Height: 560
-    UIY: -70
+    UIY: -72
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -48334,7 +48334,7 @@ Objects {
   Control {
     Width: 72
     Height: 72
-    UIY: -628
+    UIY: -630
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -48793,7 +48793,7 @@ Objects {
     Width: 72
     Height: 72
     UIX: -70
-    UIY: -628
+    UIY: -630
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -49182,7 +49182,7 @@ Objects {
     Width: 72
     Height: 72
     UIX: -140
-    UIY: -628
+    UIY: -630
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -50210,7 +50210,7 @@ Objects {
     Width: 72
     Height: 72
     UIX: -210
-    UIY: -628
+    UIY: -630
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -50668,7 +50668,7 @@ Objects {
     Width: 72
     Height: 72
     UIX: -280
-    UIY: -628
+    UIY: -630
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"

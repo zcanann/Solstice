@@ -321,7 +321,7 @@ function OnMouseDown(cursorPosition, primary)
 			pos.z
 		)
 
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, worldCoords)
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { worldCoords })
 	end
 end
 

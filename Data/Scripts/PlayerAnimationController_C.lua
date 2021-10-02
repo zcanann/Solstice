@@ -4,8 +4,6 @@ local propPlayerAnimationSetTemplate = script:GetCustomProperty("PlayerAnimation
 function OnPlayerJoined(player)
 	local animationSet = World.SpawnAsset(propPlayerAnimationSetTemplate)
 
-    Framework.Print(animationSet)
-
 	-- Arbitrary attachment
 	animationSet:AttachToPlayer(player, "upper_spine")
 

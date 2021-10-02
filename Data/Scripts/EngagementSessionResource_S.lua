@@ -21,10 +21,11 @@ local animationMap = {
 }
 
 function Connect(player)
-    Framework.Print("ENGAGEMENT_CONNECTED1")
-    if not player then
+    if not Framework.ObjectAssert(player, "Player", "Invalid object passed to resource engagement session") then
         return
     end
+
+    player.serverUserData.engagement.startLocation = player:GetWorldPosition()
 
     -- Deny the request if at our engagement limit
     if propMaxEngagements >= 0 and #engagedPlayers >= propMaxEngagements then
@@ -38,8 +39,8 @@ function Connect(player)
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    Framework.Print(player)
-    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, player, propObject.id, animationMap[propRequiredItemType])
+    -- TODO: Area-wide, with some sort of way to retransmit this data to players that come into range
+    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, { player, propObject.id, animationMap[propRequiredItemType] })
 end
 
 function IsPlayerConnected(player)
@@ -54,7 +55,7 @@ function Disconnect(player)
     engagedPlayers[player] = nil
     player.serverUserData.engagement.session = nil
     player.serverUserData.engagement.duration = 0.0
-    -- Framework.Print("ENGAGEMENT DISCONNECTED")
+    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, player, { player })
 end
 
 function OnPlayerLeft(player)
@@ -63,16 +64,26 @@ end
 
 function Tick(deltaTime)
     for player, _ in pairs(engagedPlayers) do
-        local duration = player.serverUserData.engagement.duration or 0.0
-        duration = duration + deltaTime
+        CheckForInterruption(player)
+        CheckForExpGain(player, deltaTime)
+    end
+end
 
-        if duration > propBaseDuration then
-            -- TODO: Remainder
-            player.serverUserData.engagement.duration = 0.0
-            Framework.Database.AddSkillExp(player, propSkillId, propExp)
-        else
-            player.serverUserData.engagement.duration = duration
-        end
+function CheckForExpGain(player, deltaTime)
+    local duration = player.serverUserData.engagement.duration or 0.0
+    duration = duration + deltaTime
+
+    if duration > propBaseDuration then
+        player.serverUserData.engagement.duration = math.fmod(duration, propBaseDuration)
+        Framework.Database.AddSkillExp(player, propSkillId, propExp)
+    else
+        player.serverUserData.engagement.duration = duration
+    end
+end
+
+function CheckForInterruption(player)
+    if (player.serverUserData.engagement.startLocation - player:GetWorldPosition()).size > 48.0 then
+        Disconnect(player)
     end
 end
 

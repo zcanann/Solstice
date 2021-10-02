@@ -290,7 +290,7 @@ Database.SetSkillExp = function(player, skillId, value)
 	-- Check for level up
 	if newSkillLevel > skillLevel then
 		Database.SetEffectiveSkillLevel(player, skillId, newSkillLevel)
-		Events.Broadcast.ServerToAreaBestEffort(Events.Keys.Skill.EVENT_PLAYER_LEVELED_UP, player, Events.Broadcast.DefaultRange, player, skillId)
+		Events.Broadcast.ServerToAreaBestEffort(Events.Keys.Skill.EVENT_PLAYER_LEVELED_UP, player:GetWorldPosition(), Events.Broadcast.DefaultRange, { player, skillId })
 	end
 end
 

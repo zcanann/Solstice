@@ -19,7 +19,7 @@ function DoSearch()
         PlaySound(sfxOpenSound)
     end
     
-    Framework.Events.Broadcast.ClientToServerReliable("OnStashUse", id)
+    Framework.Events.Broadcast.ClientToServerReliable("OnStashUse", { id })
 
     Chat.LocalMessage("Searching " .. name .. "...")
 end
@@ -37,9 +37,9 @@ function Interact()
 
     -- Otherwise attempt to walk to the object using the attached walkable script, if it exists
     if propWalkableScript ~= nil then
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, propWalkableScript.context:GetWalkableDestination(), callback)
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { propWalkableScript.context:GetWalkableDestination(), callback })
     else
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, script:GetWorldPosition(), callback)
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { script:GetWorldPosition(), callback })
     end
 end
 
@@ -48,5 +48,5 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, "Search " .. name, callback)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Search " .. name, callback })
 end

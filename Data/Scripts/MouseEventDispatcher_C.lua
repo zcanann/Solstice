@@ -34,7 +34,7 @@ function OnBindingPressed(player, binding)
     local checkInteraction = (function(primary)
         -- Highest priority - Check for UI hit test first as highest priority
         _G.uiHitTest = false
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, UI.GetCursorPosition(), primary)
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, { UI.GetCursorPosition(), primary })
         if _G.uiHitTest then
             Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
             return
@@ -50,7 +50,7 @@ function OnBindingPressed(player, binding)
             local genericWalkHere = function ()
                 local goalTransform = hitResult:GetTransform()
                 local goal = goalTransform:GetPosition()
-                Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, goal)
+                Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { goal })
             end
             
             -- Lowest priority - default actions
@@ -58,7 +58,7 @@ function OnBindingPressed(player, binding)
                 genericWalkHere()
             else
                 Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
-                Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, "Walk here", genericWalkHere)
+                Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", genericWalkHere })
             end
         end
     end)
@@ -73,7 +73,7 @@ end
 
 function OnBindingReleased(player, binding)
     local checkInteraction = (function(primary)
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_MOUSE_UP, UI.GetCursorPosition(), primary)
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_MOUSE_UP, { UI.GetCursorPosition(), primary })
     end)
 
 	if binding == primaryBinding then
