@@ -12,6 +12,7 @@ local propMinResources = script:GetCustomProperty("MinResources")
 local propMaxResources = script:GetCustomProperty("MaxResources")
 
 local engagedPlayers = { }
+local remainingResources = 0
 
 local animationMap = {
     [ "pickaxe" ]       = "MiningAnimation",
@@ -21,7 +22,7 @@ local animationMap = {
 }
 
 function Connect(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid object passed to resource engagement session") then
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
@@ -44,11 +45,14 @@ function Connect(player)
 end
 
 function IsPlayerConnected(player)
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+        return
+    end
     return engagedPlayers[player] ~= nil
 end
 
 function Disconnect(player)
-    if not player then
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
@@ -65,15 +69,29 @@ end
 function Tick(deltaTime)
     for player, _ in pairs(engagedPlayers) do
         CheckForInterruption(player)
-        CheckForExpGain(player, deltaTime)
+        CheckForResourceExtracted(player, deltaTime)
     end
 end
 
-function CheckForExpGain(player, deltaTime)
+function CheckForResourceExtracted(player, deltaTime)
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+        return
+    end
+
     local duration = player.serverUserData.engagement.duration or 0.0
     duration = duration + deltaTime
 
+    if remainingResources <= 0 then
+        Disconnect(player)
+        return
+    end
+
     if duration > propBaseDuration then
+        -- Remove the resource that was extracted
+        remainingResources = CoreMath.Clamp(remainingResources - 1, 0, propMaxResources)
+        BroadcastResourceState()
+
+        -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, propBaseDuration)
         Framework.Database.AddSkillExp(player, propSkillId, propExp)
     else
@@ -82,13 +100,28 @@ function CheckForExpGain(player, deltaTime)
 end
 
 function CheckForInterruption(player)
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+        return
+    end
+
     if (player.serverUserData.engagement.startLocation - player:GetWorldPosition()).size > 48.0 then
         Disconnect(player)
     end
 end
 
+function BroadcastResourceState()
+    -- TODO AREA BROADCAST
+    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_RESOURCE_AMOUNT_CHANGED_PREFIX .. propObject.id, { remainingResources })
+end
+
+function InitializeResources()
+    remainingResources = math.random(propMinResources, propMaxResources)
+end
+
 -- Framework.Print("LISTENING...")
 -- Framework.Print(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+
+InitializeResources()
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

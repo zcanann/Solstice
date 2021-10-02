@@ -1,18 +1,14 @@
 Assets {
-  Id: 14285642204270262052
-  Name: "MiningEngagement_S"
+  Id: 11102507718474275295
+  Name: "ResourceDepletionVisuals_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
         Name: "cs:Framework"
         AssetReference {
-          Id: 8502744504357454803
+          Id: 10511995982427952004
         }
-      }
-      Overrides {
-        Name: "cs:MaxEngagements"
-        Int: -1
       }
     }
   }

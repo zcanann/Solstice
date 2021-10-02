@@ -5,6 +5,8 @@ local primaryBinding = "ability_primary"
 local secondaryBinding = "ability_secondary"
 
 function TryInteractRecursive(target, primary)
+
+    print(target)
     if target == nil then
         return false
     end
@@ -41,6 +43,7 @@ function OnBindingPressed(player, binding)
         end
 
         local hitResult = UI.GetCursorHitResult()
+        print(hitResult.other)
         if hitResult ~= nil and hitResult.other ~= nil then
             -- Medium priority - Check for interactions
             if TryInteractRecursive(hitResult.other, primary) then

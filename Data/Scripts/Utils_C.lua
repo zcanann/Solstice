@@ -1,6 +1,6 @@
 -- Utility client functions
 
-local Utils = { }
+local Utils = require(script:GetCustomProperty("UtilsCommon"))
 
 Utils.UI = require(script:GetCustomProperty("UtilsUI"))
 
