@@ -61,7 +61,6 @@ function OnEndOverlap(trigger, player)
         if trigger == propReplicationTrigger then
             playersInRange[player] = nil
         elseif trigger == propDiscardTrigger then
-            Framework.Print("CLEARING")
             ClearNetworkedProximityDataForPlayer(player)
         end
     end

@@ -10,9 +10,12 @@ local propExp = script:GetCustomProperty("Exp")
 local propBaseDuration = script:GetCustomProperty("BaseDuration")
 local propMinResources = script:GetCustomProperty("MinResources")
 local propMaxResources = script:GetCustomProperty("MaxResources")
+local propRespawnTimeMin = script:GetCustomProperty("RespawnTimeMin")
+local propRespawnTimeMax = script:GetCustomProperty("RespawnTimeMax")
 
 local engagedPlayers = { }
 local remainingResources = 0
+local respawnTimer = 0.0
 
 local animationMap = {
     [ "pickaxe" ]       = "MiningAnimation",
@@ -62,20 +65,21 @@ function Disconnect(player)
     Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, { player })
 end
 
-function Tick(deltaTime)
+function Tick(deltaSeconds)
     for player, _ in pairs(engagedPlayers) do
         CheckForInterruption(player)
-        CheckForResourceExtracted(player, deltaTime)
+        CheckForResourceExtracted(player, deltaSeconds)
     end
+    CheckForRespawn(deltaSeconds)
 end
 
-function CheckForResourceExtracted(player, deltaTime)
+function CheckForResourceExtracted(player, deltaSeconds)
     if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
     local duration = player.serverUserData.engagement.duration or 0.0
-    duration = duration + deltaTime
+    duration = duration + deltaSeconds
 
     if remainingResources <= 0 then
         Disconnect(player)
@@ -104,9 +108,22 @@ function CheckForInterruption(player)
     end
 end
 
+function CheckForRespawn(deltaSeconds)
+    if remainingResources == 0 then
+        respawnTimer = respawnTimer - deltaSeconds
+        if respawnTimer <= 0.0 then
+            SetRemainingResources(math.random(propMinResources, propMaxResources))
+        end
+    end
+end
+
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_REQUEST_SET_PROXIMITY_DATA_PREFIX .. propObject.id, { remainingResources })
+
+    if remainingResources == 0.0 then
+        respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
+    end
 end
 
 function OnPlayerLeft(player)
@@ -114,10 +131,6 @@ function OnPlayerLeft(player)
     Disconnect(player)
 end
 
--- Set initial resources next frame, so that other scripts have the opportunity to create listeners
-Task.Spawn(function ()
-    SetRemainingResources(math.random(propMinResources, propMaxResources))
-end)
 
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 

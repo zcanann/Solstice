@@ -83,8 +83,9 @@ ExpTable.GetExpRequiredForLevel = function (level)
     -- return CoreMath.Round(1.0 / 8.0 * (level ^ 2.0 - level + 600.0 * (numerator / denominator)))
 
     -- This equation produces an exp chart similar to OSRS, but more balanced.
-    -- Level 1 and level 99 require almost the same exp, but our "half point" is level 79,
+    -- Level 1 and level 99 require similar exp to OSRS, but our "half point" is level 79,
     -- unlike OSRS which has a "half  point" of level 92.
+    -- Punch this into the Windows graphing calculator to get a feel for it: 14𝑥^3−72𝑥^2+192𝑥−134
     local mainExpFunction = CoreMath.Round(14.0 * (level ^ 3.0))
     local noobBenefits = CoreMath.Round(-72.0 * (level ^ 2.0) + 192.0 * level - 134.0)
 

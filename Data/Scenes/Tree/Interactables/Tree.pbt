@@ -1234,10 +1234,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ID"
-      String: "Bank"
-    }
-    Overrides {
       Name: "cs:SFX_OpenSound:isrep"
       Bool: false
     }
@@ -1353,12 +1349,6 @@ Objects {
       Name: "cs:Object"
       ObjectReference {
         SelfId: 3782668079791736470
-      }
-    }
-    Overrides {
-      Name: "cs:WalkableScript"
-      ObjectReference {
-        SelfId: 15643139058935224249
       }
     }
     Overrides {

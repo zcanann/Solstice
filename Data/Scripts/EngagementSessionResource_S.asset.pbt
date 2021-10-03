@@ -47,6 +47,14 @@ Assets {
         Name: "cs:MaxResources"
         Int: 0
       }
+      Overrides {
+        Name: "cs:RespawnTimeMin"
+        Float: 25
+      }
+      Overrides {
+        Name: "cs:RespawnTimeMax"
+        Float: 25
+      }
     }
   }
   SerializationVersion: 100
