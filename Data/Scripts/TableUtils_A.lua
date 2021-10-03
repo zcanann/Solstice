@@ -333,6 +333,30 @@ local function TableDeserialize(string, maxsize)
 	return (expect_object(string, 1, {}))
 end
 
+local function TableCondenseStringConstantsRecurse(currentTable, keyIndexRef, prefix, renameMapping)
+	for varName, contents in SortedTable.New(currentTable):Pairs() do
+		if type(contents) == "string" then
+			currentTable[varName] = prefix .. tostring(keyIndexRef[1]) .. "_"
+			renameMapping[contents] = currentTable[varName]
+			keyIndexRef[1] = keyIndexRef[1] + 1
+		elseif type(contents) == "table" then
+			TableCondenseStringConstantsRecurse(contents, keyIndexRef, prefix, renameMapping)
+		end
+	end
+end
+
+-- Condenses a table's string values to be much smaller. Useful for things like networked keys where we want something human readable, but a smaller size at runtime.
+local function TableCondenseStringConstants(currentTable, prefix)
+	local renameMapping = { }
+
+	TableCondenseStringConstantsRecurse(currentTable, { 0 }, prefix, renameMapping)
+
+	return renameMapping
+end
+
+-------------------------------------------
+
+TableUtils.CondenseStringConstants = TableCondenseStringConstants
 TableUtils.Serialize = TableSerialize
 TableUtils.Deserialize = TableDeserialize
 TableUtils.Diff = TableDiff

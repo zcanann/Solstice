@@ -41,6 +41,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:RuntimeDataStore"
+        AssetReference {
+          Id: 17518510815681775488
+        }
+      }
+      Overrides {
         Name: "cs:Strings"
         AssetReference {
           Id: 1312537665072127050

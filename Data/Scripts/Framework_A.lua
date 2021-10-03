@@ -24,11 +24,14 @@ Framework.DataStructures = require(script:GetCustomProperty("DataStructures"))
 Framework.ExpTable = require(script:GetCustomProperty("ExpTable"))
 Framework.Events = require(script:GetCustomProperty("Events"))
 Framework.Math = require(script:GetCustomProperty("Math"))
+Framework.RuntimeDataStore = require(script:GetCustomProperty("RuntimeDataStore"))
 Framework.Strings = require(script:GetCustomProperty("Strings"))
 Framework.Utils = require(script:GetCustomProperty("Utils"))
 
 Framework.Dump = function (object)
     Framework.Print(Framework.Utils.Table.Serialize(object))
 end
+
+Framework.Dump(Framework.RuntimeDataStore.KeyNameMappings)
 
 return Framework

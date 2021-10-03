@@ -50,8 +50,8 @@ function Connect(player)
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    -- TODO: Area-wide, with some sort of way to retransmit this data to players that come into range
-    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, { player, propObject.id, animationMap[propRequiredItemType] })
+    -- Set the proximity data on the player
+    Framework.RuntimeDataStore.SetProximityDataByKey(Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION, player.id, { propObject.id, animationMap[propRequiredItemType] })
 end
 
 function Disconnect(player)
@@ -62,7 +62,7 @@ function Disconnect(player)
     engagedPlayers[player] = nil
     player.serverUserData.engagement.session = nil
     player.serverUserData.engagement.duration = 0.0
-    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, { player })
+    Framework.RuntimeDataStore.SetProximityDataByKey(Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION, player.id, nil)
 end
 
 function Tick(deltaSeconds)
@@ -119,7 +119,7 @@ end
 
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_REQUEST_SET_PROXIMITY_DATA_PREFIX .. propObject.id, { remainingResources })
+    Framework.RuntimeDataStore.SetProximityDataByKey(Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, propObject.id, remainingResources)
 
     if remainingResources == 0.0 then
         respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)

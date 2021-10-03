@@ -82,7 +82,8 @@ end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
 
+-- TODO: This data should be replicated via proximity data
 Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_LOCAL_REQUEST_ENGAGEMENT, OnEngagementSessionRequestLocal)
-Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)
-Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, OnEngagementSessionDisconnected)
+-- Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)
+-- Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, OnEngagementSessionDisconnected)
 Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)

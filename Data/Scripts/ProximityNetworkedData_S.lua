@@ -1,5 +1,5 @@
 --[[
-    This script manages a table that will networked to all players within range of the referenced trigger.
+    This script manages a key value store that will networked to all players within range.
 
     ProximityNetworkedData is assumed to be bound to a unique owning object.
     You should not bind multiple ProximityNetworkedData scripts to the same object.
@@ -17,8 +17,8 @@ local currentData = { }
 local playersInRange = { }
 local currentRevision = 0
 
-function OnServerSetProximityData(data)
-    currentData = data
+function OnServerSetProximityData(key, data)
+    currentData[key] = data
     currentRevision = currentRevision + 1
 end
 

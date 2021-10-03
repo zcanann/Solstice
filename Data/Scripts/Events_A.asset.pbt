@@ -11,12 +11,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:DataStructures"
-        AssetReference {
-          Id: 10763479141974973317
-        }
-      }
-      Overrides {
         Name: "cs:ChatCommandEvents"
         AssetReference {
           Id: 17612071643994816819
@@ -26,6 +20,12 @@ Assets {
         Name: "cs:EngagementEvents"
         AssetReference {
           Id: 7088824184409537343
+        }
+      }
+      Overrides {
+        Name: "cs:InputEvents"
+        AssetReference {
+          Id: 17179260598034565930
         }
       }
       Overrides {
@@ -53,9 +53,9 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:InputEvents"
+        Name: "cs:TableUtils"
         AssetReference {
-          Id: 17179260598034565930
+          Id: 11279245430205585369
         }
       }
     }

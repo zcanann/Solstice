@@ -1,4 +1,4 @@
-local DataStructures = require(script:GetCustomProperty("DataStructures"))
+local TableUtils = require(script:GetCustomProperty("TableUtils"))
 
 local Events = { }
 
@@ -13,16 +13,8 @@ Events.Keys.Movement = require(script:GetCustomProperty("MovementEvents"))
 Events.Keys.Networking = require(script:GetCustomProperty("NetworkingEvents"))
 Events.Keys.Skill = require(script:GetCustomProperty("SkillEvents"))
 
--- Map all events to shorter names, following the format of "r{i}"
+-- Map all events to shorter names, following the format of "e{i}_"
 -- This is done such that any event used in an RPC to/from the client and server is shortened as much as possible
-Events.EventNameMappings = { }
-local eventIndex = 0
-for _, contents in DataStructures.SortedTable.New(Events.Keys):Pairs() do
-    for k, v in DataStructures.SortedTable.New(contents):Pairs() do
-        Events.EventNameMappings[k] = v
-        contents[k] = "e" .. tostring(eventIndex) .. "_"
-        eventIndex = eventIndex + 1
-    end
-end
+Events.EventNameMappings = TableUtils.CondenseStringConstants(Events.Keys, "e")
 
 return Events

@@ -27,4 +27,4 @@ end
 -- Default to fully extracted until we get an update from the server
 OnResourceAmountChanged(0)
 
-Events.Connect(Framework.Events.Keys.Networking.EVENT_PROXIMITY_DATA_UPDATED_PREFIX .. propObject.id, OnResourceAmountChanged)
+Framework.RuntimeDataStore.ConnectToProximityKey(Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, propObject.id, OnResourceAmountChanged)
