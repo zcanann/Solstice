@@ -21,21 +21,17 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Interactable"
-            ObjectReference {
-              SubObjectId: 8775759031513830779
-            }
-          }
-          Overrides {
-            Name: "cs:Interactable:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Interactable:ml"
-            Bool: false
+            Bool: true
           }
           Overrides {
             Name: "cs:Name"
             String: "Copper Vein"
+          }
+          Overrides {
+            Name: "cs:MinimapIconTemplate"
+            AssetReference {
+              Id: 6468548784570621292
+            }
           }
           Overrides {
             Name: "cs:Name:isrep"
@@ -44,56 +40,6 @@ Assets {
           Overrides {
             Name: "cs:Name:ml"
             Bool: false
-          }
-          Overrides {
-            Name: "cs:SecondsToSearch"
-            Int: 0
-          }
-          Overrides {
-            Name: "cs:SecondsToSearch:tooltip"
-            String: "Time it takes (in seconds) to search the container."
-          }
-          Overrides {
-            Name: "cs:SecondsToSearch:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:SecondsToSearch:ml"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:SFX_OpenSound"
-            AssetReference {
-              Id: 17447823781948565161
-            }
-          }
-          Overrides {
-            Name: "cs:SFX_OpenSound:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:SFX_OpenSound:ml"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:SFX_ClosedSound"
-            AssetReference {
-              Id: 3664521979752791860
-            }
-          }
-          Overrides {
-            Name: "cs:SFX_ClosedSound:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:SFX_ClosedSound:ml"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:MinimapIconTemplate"
-            AssetReference {
-              Id: 6468548784570621292
-            }
           }
           Overrides {
             Name: "cs:MinimapIconTemplate:isrep"
@@ -1814,7 +1760,8 @@ Assets {
           }
         }
         ParentId: 3936958111886977860
-        ChildIds: 8775759031513830779
+        ChildIds: 9849424123738372637
+        ChildIds: 17178747362843569272
         ChildIds: 3247827138737285980
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1832,50 +1779,6 @@ Assets {
         }
       }
       Objects {
-        Id: 8775759031513830779
-        Name: "Interactable_C"
-        Transform {
-          Location {
-            X: -157
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14124416398978196639
-        ChildIds: 9849424123738372637
-        ChildIds: 17178747362843569272
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 18361376657929626207
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 15316634444061490990
-          }
-        }
-      }
-      Objects {
         Id: 9849424123738372637
         Name: "Mineable_C"
         Transform {
@@ -1889,23 +1792,13 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8775759031513830779
+        ParentId: 14124416398978196639
         UnregisteredParameters {
           Overrides {
             Name: "cs:Object"
             ObjectReference {
               SubObjectId: 18361376657929626207
             }
-          }
-          Overrides {
-            Name: "cs:WalkableScript"
-            ObjectReference {
-              SubObjectId: 17178747362843569272
-            }
-          }
-          Overrides {
-            Name: "cs:StopRadius"
-            Float: 100
           }
         }
         Collidable_v2 {
@@ -1931,7 +1824,6 @@ Assets {
         Name: "Walkable_C"
         Transform {
           Location {
-            Y: 80
           }
           Rotation {
           }
@@ -1941,7 +1833,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8775759031513830779
+        ParentId: 14124416398978196639
         UnregisteredParameters {
           Overrides {
             Name: "cs:Object"
@@ -1950,12 +1842,8 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Exact"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:StopRadius"
-            Float: 0
+            Float: 200
           }
           Overrides {
             Name: "cs:Object:isrep"
@@ -1989,7 +1877,6 @@ Assets {
         Name: "ResourceDepletionVisuals_C"
         Transform {
           Location {
-            X: -155
           }
           Rotation {
           }
@@ -2371,24 +2258,6 @@ Assets {
             Value: "mc:etriggershape:sphere"
           }
         }
-      }
-    }
-    Assets {
-      Id: 17447823781948565161
-      Name: "Large Wooden Fortress Gate Door Shut Open Close 02 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_large_wooden_fortress_gate_door_shut_open_close_02_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 3664521979752791860
-      Name: "Large Wooden Door Shut Open Close Rattle 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_large_wooden_door_shut_open_close_rattle_01_Cue_ref"
       }
     }
     Assets {
