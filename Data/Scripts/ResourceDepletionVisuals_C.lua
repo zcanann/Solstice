@@ -10,11 +10,7 @@ local propDepletableResource4 = script:GetCustomProperty("DepletableResource4"):
 local propDepletableResource5 = script:GetCustomProperty("DepletableResource5"):WaitForObject()
 local propDepletableResource6 = script:GetCustomProperty("DepletableResource6"):WaitForObject()
 
-function OnResourceAmountChanged(args)
-    if not assert(args) then return end
-
-    local resourceAmount = args.amt or 0
-
+function OnResourceAmountChanged(resourceAmount)
     propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(resourceAmount == 0)
     propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(resourceAmount > 0)
 
@@ -27,6 +23,6 @@ function OnResourceAmountChanged(args)
 end
 
 -- Default to fully extracted until we get an update from the server
-OnResourceAmountChanged({ ["amt"] = 0 })
+OnResourceAmountChanged(0)
 
 Events.Connect(Framework.Events.Keys.Networking.EVENT_PROXIMITY_DATA_UPDATED_PREFIX .. propObject.id, OnResourceAmountChanged)

@@ -34,6 +34,7 @@ function UnpackArgs(args)
     if not args then
         return nil
     end
+    assert(type(args) == "table")
     return table.unpack(args, 1, #args)
 end
 

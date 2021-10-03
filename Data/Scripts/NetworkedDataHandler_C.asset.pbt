@@ -1,6 +1,6 @@
 Assets {
-  Id: 32149845205756334
-  Name: "Teleporter_C"
+  Id: 9297472468919606062
+  Name: "NetworkedDataHandler_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -13,5 +13,6 @@ Assets {
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Movement"
+  VirtualFolderPath: "Infrastructure"
+  VirtualFolderPath: "Networking"
 }

@@ -20,10 +20,6 @@ Assets {
         ObjectReference {
         }
       }
-      Overrides {
-        Name: "cs:RevisionHistoryCount"
-        Int: 8
-      }
     }
   }
   SerializationVersion: 100

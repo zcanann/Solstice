@@ -26,4 +26,8 @@ Framework.Math = require(script:GetCustomProperty("Math"))
 Framework.Strings = require(script:GetCustomProperty("Strings"))
 Framework.Utils = require(script:GetCustomProperty("Utils"))
 
+Framework.Dump = function (object)
+    Framework.Print(Framework.Utils.Table.Serialize(object))
+end
+
 return Framework

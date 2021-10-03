@@ -106,7 +106,7 @@ end
 
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propObject.id, { { ["amt"] = remainingResources } })
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_REQUEST_SET_PROXIMITY_DATA_PREFIX .. propObject.id, { remainingResources })
 end
 
 function OnPlayerLeft(player)
@@ -114,9 +114,7 @@ function OnPlayerLeft(player)
     Disconnect(player)
 end
 
--- Framework.Print("LISTENING...")
--- Framework.Print(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
-
+-- Set initial resources next frame, so that other scripts have the opportunity to create listeners
 Task.Spawn(function ()
     SetRemainingResources(math.random(propMinResources, propMaxResources))
 end)

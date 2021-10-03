@@ -13,7 +13,6 @@ Assets {
       Overrides {
         Name: "cs:Object"
         ObjectReference {
-          SelfId: 7404798247644256620
         }
       }
     }
