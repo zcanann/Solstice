@@ -18,6 +18,10 @@ local expRequiredTextFormat = propSkillExpRequired.text
 local localPlayer = Game.GetLocalPlayer()
 local isHovering = false
 
+function OnClick(button)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUMED_MOUSE_INPUT_CANCEL_GAME_MENUS)
+end
+
 function OnHover(button)
     propSkillHoverMenu.visibility = Visibility.FORCE_ON
     propSkillHoverMenu.x = button.parent.x - propSkillHoverMenu.width / 2.0
@@ -67,6 +71,7 @@ end
 
 Initialize()
 
+propBorderButton.clickedEvent:Connect(OnClick)
 propBorderButton.hoveredEvent:Connect(OnHover)
 propBorderButton.unhoveredEvent:Connect(OnUnhover)
 

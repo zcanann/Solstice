@@ -9,7 +9,8 @@
 
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propTrigger = script:GetCustomProperty("Trigger"):WaitForObject()
+local propReplicationTrigger = script:GetCustomProperty("ReplicationTrigger"):WaitForObject()
+local propDiscardTrigger = script:GetCustomProperty("DiscardTrigger"):WaitForObject()
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 
 local currentData = { }
@@ -28,28 +29,46 @@ function Tick(deltaSeconds)
 end
 
 function UpdateProximityNetworkedDataForPlayer(player)
-    if not Framework.ObjectAssert(player, "Player", "Object must be a player") or (player.serverUserData.lastSentRevision or 0) == currentRevision then
+    if not player.serverUserData.proximityData then
+        player.serverUserData.proximityData = { }
+    end
+
+    if not Framework.ObjectAssert(player, "Player", "Object must be a player") or (player.serverUserData.proximityData[propObject.id] or 0) == currentRevision then
         return
     end
 
-    player.serverUserData.lastSentRevision = currentRevision
+    player.serverUserData.proximityData[propObject.id] = currentRevision
     player:SetPrivateNetworkedData(Framework.Events.Keys.Networking.EVENT_PROXIMITY_DATA_UPDATED_PREFIX .. propObject.id, { currentData })
+end
+
+function ClearNetworkedProximityDataForPlayer(player)
+    if player.serverUserData.proximityData then
+        player.serverUserData.proximityData[propObject.id] = nil
+        player:SetPrivateNetworkedData(Framework.Events.Keys.Networking.EVENT_PROXIMITY_DATA_UPDATED_PREFIX .. propObject.id, { nil })
+    end
 end
 
 function OnBeginOverlap(trigger, player)
     if player:IsA("Player") then
-        playersInRange[player] = true
-        -- TODO: Delete networked data for players that get too far out of range (NOT from the same trigger, to avoid thrashing)
+        if trigger == propReplicationTrigger then
+            playersInRange[player] = true
+        end
     end
 end
 
 function OnEndOverlap(trigger, player)
     if player:IsA("Player") then
-        playersInRange[player] = nil
+        if trigger == propReplicationTrigger then
+            playersInRange[player] = nil
+        elseif trigger == propDiscardTrigger then
+            Framework.Print("CLEARING")
+            ClearNetworkedProximityDataForPlayer(player)
+        end
     end
 end
 
-propTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
-propTrigger.endOverlapEvent:Connect(OnEndOverlap)
+propReplicationTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
+propReplicationTrigger.endOverlapEvent:Connect(OnEndOverlap)
+propDiscardTrigger.endOverlapEvent:Connect(OnEndOverlap)
 
 Events.Connect(Framework.Events.Keys.Networking.EVENT_REQUEST_SET_PROXIMITY_DATA_PREFIX .. propObject.id, OnServerSetProximityData)

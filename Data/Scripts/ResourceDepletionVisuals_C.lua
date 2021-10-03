@@ -11,6 +11,8 @@ local propDepletableResource5 = script:GetCustomProperty("DepletableResource5"):
 local propDepletableResource6 = script:GetCustomProperty("DepletableResource6"):WaitForObject()
 
 function OnResourceAmountChanged(resourceAmount)
+    resourceAmount = resourceAmount or 0
+
     propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(resourceAmount == 0)
     propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(resourceAmount > 0)
 

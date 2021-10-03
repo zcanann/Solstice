@@ -11,6 +11,7 @@ if Environment.IsClient() then
         print("CLIENT: " .. tostring(string))
         Chat.LocalMessage("CLIENT: " .. tostring(string))
     end
+    Framework.Audio = require(script:GetCustomProperty("Audio"))
 else
     Framework.Print = function (string)
         print("SERVER: " .. tostring(string))

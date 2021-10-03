@@ -66,9 +66,21 @@ function OnPlayerJoined(player)
     player.clientUserData.engagement = { }
 end
 
+function RotateToEngagedTarget()
+	if localPlayer.clientUserData.engagement.objectId then
+		local engagedObject = World.FindObjectById(localPlayer.clientUserData.engagement.objectId)
+
+		if engagedObject then
+			localPlayer.direction = Vector3.New(Framework.Math.Direction2D(localPlayer, engagedObject), 0.0)
+		end
+	end
+end
+
+function Tick(deltaSeconds)
+    -- RotateToEngagedTarget()
+end
+
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
-
-
 
 Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_LOCAL_REQUEST_ENGAGEMENT, OnEngagementSessionRequestLocal)
 Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, OnEngagementSessionConnected)

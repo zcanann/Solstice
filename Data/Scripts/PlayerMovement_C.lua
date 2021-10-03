@@ -4,8 +4,9 @@ local localPlayer = Game.GetLocalPlayer()
 
 -- Navigation
 local remainingWayPoints = nil
-local wayPointClearDistance = 16
+local defaultWayPointClearRadius = 16.0
 local goalRachedCallback = nil
+local waypointClearRadius = 0.0
 
 -- Visuals
 local goalPulse = nil
@@ -31,25 +32,25 @@ function OnReachedDestination()
 	DestroyIfValid(goalPulse)
 end
 
-function MoveToGoal(player, params)
+function MovementHook(player, params)
 	if remainingWayPoints == nil or remainingWayPoints[1] == nil then
 		return
 	end
 
-	local wayPoint = remainingWayPoints[1]
-	local playerPos = player:GetWorldPosition()
-
 	-- Convert to 2D space
-	local wayPoint2D = Vector2.New(wayPoint)
-	local playerPos2D = Vector2.New(playerPos)
-	local distance2D = (wayPoint2D - playerPos2D).size
+	local effectiveWaypointClearRadius = defaultWayPointClearRadius
+	local waypoint = remainingWayPoints[1]
 
-	if distance2D <= wayPointClearDistance then
+	if #remainingWayPoints == 1 then
+		effectiveWaypointClearRadius = math.max(waypointClearRadius, effectiveWaypointClearRadius)
+	end
+
+	if Framework.Math.Distance2D(player, waypoint) <= effectiveWaypointClearRadius then
 		table.remove(remainingWayPoints, 1)
 	else
 		-- Setting the direction from 2D avoids "wasting" part of the direction normal on an unused Z component
 		-- Without this, the player would slow down as they approach each waypoint
-		params.direction = Vector3.New((wayPoint2D - playerPos2D):GetNormalized(), 0.0)
+		params.direction = Vector3.New(Framework.Math.Direction2D(player, waypoint), 0.0)
 	end
 
 	if #remainingWayPoints <= 0 then
@@ -57,7 +58,7 @@ function MoveToGoal(player, params)
 	end
 end
 
-function OnMoveToLocation(goal, callback)
+function BeginMoveToGoal(goal, callback)
 	Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 	goalRachedCallback = callback
 	DestroyIfValid(goalPulse)
@@ -84,9 +85,19 @@ function OnMoveToLocation(goal, callback)
 	end
 end
 
-local movementHook = localPlayer.movementHook:Connect(MoveToGoal)
-movementHook.priority = 99
+function OnMoveToLocation(goal, callback)
+	waypointClearRadius = 0.0
+	BeginMoveToGoal(goal, callback)
+end
+
+function OnMoveNearLocation(goal, stopRadius, callback)
+	waypointClearRadius = stopRadius
+	BeginMoveToGoal(goal, callback)
+end
+
+localPlayer.movementHook:Connect(MovementHook)
 
 Events.Connect(Framework.Events.Keys.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
 Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, OnMoveToLocation)
+Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, OnMoveNearLocation)
 

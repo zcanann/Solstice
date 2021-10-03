@@ -132,22 +132,26 @@ Assets {
           IsEnabled: true
           CastPhaseSettings {
             Duration: 0.75
+            CanRotate: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           ExecutePhaseSettings {
+            CanRotate: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           RecoveryPhaseSettings {
             Duration: 0.75
+            CanRotate: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {
+            CanRotate: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
@@ -284,13 +288,13 @@ Assets {
           }
         }
         ParentId: 13935414811028160519
-        ChildIds: 12562995027325039457
+        ChildIds: 11496273261327367612
         ChildIds: 4722525898009921873
         UnregisteredParameters {
           Overrides {
             Name: "cs:Ability"
             ObjectReference {
-              SubObjectId: 12562995027325039457
+              SubObjectId: 11496273261327367612
             }
           }
           Overrides {
@@ -329,7 +333,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12562995027325039457
+        Id: 11496273261327367612
         Name: "Ability"
         Transform {
           Location {
@@ -358,39 +362,27 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.15
+            Duration: 0.75
+            CanRotate: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           ExecutePhaseSettings {
-            CanMove: true
-            CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
-              Value: "mc:eabilitysetfacing:aim"
+              Value: "mc:eabilitysetfacing:none"
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.1
-            CanMove: true
-            CanJump: true
+            Duration: 0.75
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }
           }
           CooldownPhaseSettings {
-            Duration: 3
-            CanMove: true
-            CanJump: true
             CanRotate: true
-            PreventOtherAbilities: true
-            IsTargetDataUpdated: true
             Facing_V2 {
               Value: "mc:eabilitysetfacing:none"
             }

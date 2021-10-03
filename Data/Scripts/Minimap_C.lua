@@ -306,7 +306,7 @@ function OnMouseDown(cursorPosition, primary)
 
 	if minimapClickCoords.size < minimapMouseHitTestDistance then
 		-- Framework.Print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
-        _G.uiHitTest = true
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
 
 		local localPlayer = Game.GetLocalPlayer()
 		local pos = localPlayer:GetWorldPosition()
@@ -373,6 +373,6 @@ propZoomInButton.clickedEvent:Connect(OnZoomIn)
 propZoomOutButton.clickedEvent:Connect(OnZoomOut)
 
 Events.Connect(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
-Events.Connect(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, OnMouseDown)
+Events.Connect(Framework.Events.Keys.Input.EVENT_UI_MOUSE_DOWN, OnMouseDown)
 ParseMap()
 OnZoomChanged()

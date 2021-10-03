@@ -10,6 +10,11 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:Object"
+        ObjectReference {
+        }
+      }
     }
   }
   SerializationVersion: 100

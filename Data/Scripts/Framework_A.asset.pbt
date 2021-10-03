@@ -5,6 +5,12 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:Audio"
+        AssetReference {
+          Id: 8583059812146172542
+        }
+      }
+      Overrides {
         Name: "cs:Database"
         AssetReference {
           Id: 14949101436137413811

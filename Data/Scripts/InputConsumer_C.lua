@@ -8,8 +8,9 @@ function OnMouseDown(cursorPosition, primary)
 		cursorPosition.x <= boundsX + propBounds.width and
 		cursorPosition.y >= boundsY and
 		cursorPosition.y <= boundsY + propBounds.height then
-		_G.uiHitTest = true
+
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
 	end
 end
 
-Events.Connect(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, OnMouseDown)
+Events.Connect(Framework.Events.Keys.Input.EVENT_UI_MOUSE_DOWN, OnMouseDown)

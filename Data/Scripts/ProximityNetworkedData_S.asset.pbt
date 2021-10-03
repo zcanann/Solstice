@@ -11,12 +11,17 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Trigger"
+        Name: "cs:Object"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:Object"
+        Name: "cs:ReplicationTrigger"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:DiscardTrigger"
         ObjectReference {
         }
       }

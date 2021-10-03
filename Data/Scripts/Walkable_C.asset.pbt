@@ -10,6 +10,15 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:Object"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:StopRadius"
+        Float: 100
+      }
     }
   }
   SerializationVersion: 100

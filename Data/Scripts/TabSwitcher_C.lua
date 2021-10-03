@@ -24,6 +24,10 @@ local propTabQuests = script:GetCustomProperty("TabQuests"):WaitForObject()
 -- local propTabPlaceholder2 = script:GetCustomProperty("propTabPlaceholder2"):WaitForObject()
 local propTabOptions = script:GetCustomProperty("TabOptions"):WaitForObject()
 
+function SetActiveTabFromButton(tab)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUMED_MOUSE_INPUT_CANCEL_GAME_MENUS)
+    SetActiveTab(tab)
+end
 
 function SetActiveTab(tab)
     propTabCombat.visibility = Visibility.FORCE_OFF
@@ -41,17 +45,17 @@ end
 
 SetActiveTab(propTabSkills)
 
-propCombatButton.clickedEvent:Connect(function (button) SetActiveTab(propTabCombat) end)
-propEquipmentButton.clickedEvent:Connect(function (button) SetActiveTab(propTabEquipment) end)
-propSoulButton.clickedEvent:Connect(function (button) SetActiveTab(propTabSoul) end)
-propSpellbookButton.clickedEvent:Connect(function (button) SetActiveTab(propTabSpellbook) end)
-propInventoryButton.clickedEvent:Connect(function (button) SetActiveTab(propTabInventory) end)
+propCombatButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabCombat) end)
+propEquipmentButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabEquipment) end)
+propSoulButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabSoul) end)
+propSpellbookButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabSpellbook) end)
+propInventoryButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabInventory) end)
 
-propSkillsButton.clickedEvent:Connect(function (button) SetActiveTab(propTabSkills) end)
-propQuestsButton.clickedEvent:Connect(function (button) SetActiveTab(propTabQuests) end)
--- propPlaceholderButton1.clickedEvent:Connect(function (button) SetActiveTab(propTabInventory) end)
--- propPlaceholderButton2.clickedEvent:Connect(function (button) SetActiveTab(propTabInventory) end)
-propOptionsButton.clickedEvent:Connect(function (button) SetActiveTab(propTabOptions) end)
+propSkillsButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabSkills) end)
+propQuestsButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabQuests) end)
+-- propPlaceholderButton1.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabInventory) end)
+-- propPlaceholderButton2.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabInventory) end)
+propOptionsButton.clickedEvent:Connect(function (button) SetActiveTabFromButton(propTabOptions) end)
 
 Events.Connect(Framework.Events.Keys.Input.EVENT_TOGGLE_COMBAT_TAB, function () SetActiveTab(propTabCombat) end)
 Events.Connect(Framework.Events.Keys.Input.EVENT_TOGGLE_EQUIPMENT_TAB, function () SetActiveTab(propTabEquipment) end)

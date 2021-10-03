@@ -3,4 +3,8 @@ local InteractionEvents = { }
 InteractionEvents.EVENT_CLEAR_INTERACT_OPTIONS = "event_interaction_clear_interact_options"
 InteractionEvents.EVENT_ADD_INTERACT_OPTION = "event_interaction_add_interact_option"
 
+InteractionEvents.EVENT_WALK_FOR_INTERACTION_PREFIX = "event_walk_to_object_"
+InteractionEvents.EVENT_DEFAULT_INTERACTION_PREFIX = "event_query_interact_options_"
+InteractionEvents.EVENT_QUERY_INTERACT_OPTIONS_PREFIX = "event_query_interact_options_"
+
 return InteractionEvents

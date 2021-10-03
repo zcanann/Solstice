@@ -1,6 +1,6 @@
 Assets {
-  Id: 15316634444061490990
-  Name: "Interactable_C"
+  Id: 983248690297318434
+  Name: "InteractionHandler_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

@@ -2196,7 +2196,6 @@ Assets {
           }
         }
         ParentId: 3936958111886977860
-        ChildIds: 690291372462393968
         ChildIds: 14257457631817745291
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2215,114 +2214,6 @@ Assets {
         }
       }
       Objects {
-        Id: 690291372462393968
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 2480027046218775
-        ChildIds: 16062553653591830627
-        ChildIds: 4857884477536662723
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
-        Id: 16062553653591830627
-        Name: "ProximityNetworkedData_C"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 690291372462393968
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 18361376657929626207
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 16354275404604984241
-          }
-        }
-      }
-      Objects {
-        Id: 4857884477536662723
-        Name: "DiscardRange"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 23.4999981
-            Y: 23.4999981
-            Z: 23.4999981
-          }
-        }
-        ParentId: 690291372462393968
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Trigger {
-          TeamSettings {
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:sphere"
-          }
-        }
-      }
-      Objects {
         Id: 14257457631817745291
         Name: "ServerContext"
         Transform {
@@ -2337,8 +2228,8 @@ Assets {
           }
         }
         ParentId: 2480027046218775
-        ChildIds: 6618064852117864268
         ChildIds: 17182861417840477833
+        ChildIds: 6618064852117864268
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2353,42 +2244,6 @@ Assets {
         }
         NetworkContext {
           Type: Server
-        }
-      }
-      Objects {
-        Id: 6618064852117864268
-        Name: "NetworkRange"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 18.3999977
-            Y: 18.3999977
-            Z: 18.3999977
-          }
-        }
-        ParentId: 14257457631817745291
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:sphere"
-          }
         }
       }
       Objects {
@@ -2414,9 +2269,15 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:Trigger"
+            Name: "cs:ReplicationTrigger"
             ObjectReference {
               SubObjectId: 6618064852117864268
+            }
+          }
+          Overrides {
+            Name: "cs:DiscardTrigger"
+            ObjectReference {
+              SubObjectId: 4857884477536662723
             }
           }
         }
@@ -2435,6 +2296,79 @@ Assets {
         Script {
           ScriptAsset {
             Id: 5474629016980680411
+          }
+        }
+      }
+      Objects {
+        Id: 6618064852117864268
+        Name: "ReplicationRangeTrigger"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 85
+            Y: 85
+            Z: 85
+          }
+        }
+        ParentId: 14257457631817745291
+        ChildIds: 4857884477536662723
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:sphere"
+          }
+        }
+      }
+      Objects {
+        Id: 4857884477536662723
+        Name: "DiscardRangeTrigger"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.25
+            Y: 1.25
+            Z: 1.25
+          }
+        }
+        ParentId: 6618064852117864268
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:sphere"
           }
         }
       }
