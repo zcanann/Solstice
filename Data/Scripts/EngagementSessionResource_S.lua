@@ -84,8 +84,7 @@ function CheckForResourceExtracted(player, deltaTime)
 
     if duration > propBaseDuration then
         -- Remove the resource that was extracted
-        remainingResources = CoreMath.Clamp(remainingResources - 1, 0, propMaxResources)
-        BroadcastResourceState()
+        SetRemainingResources(CoreMath.Clamp(remainingResources - 1, 0, propMaxResources))
 
         -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, propBaseDuration)
@@ -105,33 +104,23 @@ function CheckForInterruption(player)
     end
 end
 
-function BroadcastResourceState()
-    -- TODO AREA BROADCAST
-    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_RESOURCE_AMOUNT_CHANGED_PREFIX .. propObject.id, { remainingResources })
-end
-
-function BroadcastResourceStateToPlayer(player)
-    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.Engagement.EVENT_RESOURCE_AMOUNT_CHANGED_PREFIX .. propObject.id, player, { remainingResources })
-end
-
-function InitializeResources()
-    remainingResources = math.random(propMinResources, propMaxResources)
+function SetRemainingResources(newRemainingResources)
+    remainingResources = newRemainingResources
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propObject.id, { remainingResources })
 end
 
 function OnPlayerLeft(player)
+    -- TODO: something something n^2
     Disconnect(player)
-end
-
-function OnPlayerJoined(player)
-    BroadcastResourceStateToPlayer(player)
 end
 
 -- Framework.Print("LISTENING...")
 -- Framework.Print(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 
-InitializeResources()
+Task.Spawn(function ()
+    SetRemainingResources(math.random(propMinResources, propMaxResources))
+end)
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 Events.ConnectForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)

@@ -10,6 +10,7 @@ Events.Keys.Engagement = require(script:GetCustomProperty("EngagementEvents"))
 Events.Keys.Input = require(script:GetCustomProperty("InputEvents"))
 Events.Keys.Interaction = require(script:GetCustomProperty("InteractionEvents"))
 Events.Keys.Movement = require(script:GetCustomProperty("MovementEvents"))
+Events.Keys.Networking = require(script:GetCustomProperty("NetworkingEvents"))
 Events.Keys.Skill = require(script:GetCustomProperty("SkillEvents"))
 
 -- Map all events to shorter names, following the format of "r{i}"

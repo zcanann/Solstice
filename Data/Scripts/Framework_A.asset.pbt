@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:DataStructures"
+        AssetReference {
+          Id: 10763479141974973317
+        }
+      }
+      Overrides {
         Name: "cs:ExpTable"
         AssetReference {
           Id: 1911446898924153423
@@ -32,6 +38,12 @@ Assets {
         Name: "cs:Strings"
         AssetReference {
           Id: 1312537665072127050
+        }
+      }
+      Overrides {
+        Name: "cs:Utils"
+        AssetReference {
+          Id: 17949023853515129949
         }
       }
     }

@@ -14,15 +14,15 @@ function OnResourceAmountChanged(resourceAmount)
     propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(resourceAmount == 0)
     propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(resourceAmount > 0)
 
-    propDepletableResource1.visibility = Framework.Utils.BoolToVisibility(resourceAmount <= 1)
-    propDepletableResource2.visibility = Framework.Utils.BoolToVisibility(resourceAmount <= 2)
-    propDepletableResource3.visibility = Framework.Utils.BoolToVisibility(resourceAmount <= 3)
-    propDepletableResource4.visibility = Framework.Utils.BoolToVisibility(resourceAmount <= 4)
-    propDepletableResource5.visibility = Framework.Utils.BoolToVisibility(resourceAmount <= 5)
-    propDepletableResource6.visibility = Framework.Utils.BoolToVisibility(resourceAmount <= 6)
+    propDepletableResource1.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 1)
+    propDepletableResource2.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 2)
+    propDepletableResource3.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 3)
+    propDepletableResource4.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 4)
+    propDepletableResource5.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 5)
+    propDepletableResource6.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 6)
 end
 
 -- Default to fully extracted until we get an update from the server
 OnResourceAmountChanged(0)
 
-Events.Connect(Framework.Events.Keys.Engagement.EVENT_RESOURCE_AMOUNT_CHANGED_PREFIX .. propObject.id, OnResourceAmountChanged)
+Events.Connect(Framework.Events.Keys.Networking.EVENT_PROXIMITY_DATA_UPDATED_PREFIX .. propObject.id, OnResourceAmountChanged)

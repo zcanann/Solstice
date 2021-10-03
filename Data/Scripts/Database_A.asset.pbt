@@ -19,5 +19,6 @@ Assets {
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "Infrastructure"
   VirtualFolderPath: "Storage"
 }

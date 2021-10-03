@@ -1,0 +1,8 @@
+local NetworkingEvents = { }
+
+NetworkingEvents.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX = "event_server_set_proximity_data_"
+NetworkingEvents.EVENT_CLIENT_ACKNOWLEDGE_REVISION_PREFIX = "event_client_acknowledge_revision_"
+NetworkingEvents.EVENT_SERVER_SEND_PROXIMITY_DATA_PREFIX = "event_server_send_proximity_data_"
+NetworkingEvents.EVENT_PROXIMITY_DATA_UPDATED_PREFIX = "event_proximity_data_updated_"
+
+return NetworkingEvents

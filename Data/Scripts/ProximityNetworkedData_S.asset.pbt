@@ -1,6 +1,6 @@
 Assets {
-  Id: 11268320084557931241
-  Name: "EngagementSession_C"
+  Id: 5474629016980680411
+  Name: "ProximityNetworkedData_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,12 +11,22 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Trigger"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:Object"
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:RevisionHistoryCount"
+        Int: 8
+      }
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Engagement"
+  VirtualFolderPath: "Infrastructure"
+  VirtualFolderPath: "Networking"
 }

@@ -83,10 +83,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Storage"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Interactions"
       PlatformAssetType: 3
     }
@@ -117,6 +113,20 @@ Assets {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Interactables"
       PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Infrastructure"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Infrastructure"
+      VirtualFolderPath: "Storage"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Infrastructure"
+      VirtualFolderPath: "Networking"
+      PlatformAssetType: 3
     }
   }
 }

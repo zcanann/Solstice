@@ -1,22 +1,17 @@
 Assets {
-  Id: 10511995982427952004
-  Name: "Framework_C"
+  Id: 5588125570499917030
+  Name: "StatLoader_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:FrameworkCommon"
+        Name: "cs:Framework"
         AssetReference {
           Id: 14480759715348141780
-        }
-      }
-      Overrides {
-        Name: "cs:Utils"
-        AssetReference {
-          Id: 2632154708327163058
         }
       }
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "Stats"
 }

@@ -3,6 +3,26 @@ Assets {
   Name: "Utils_A"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+      Overrides {
+        Name: "cs:DevUtils"
+        AssetReference {
+          Id: 3693793738310101289
+        }
+      }
+      Overrides {
+        Name: "cs:TableUtils"
+        AssetReference {
+          Id: 11279245430205585369
+        }
+      }
+      Overrides {
+        Name: "cs:UIUtils"
+        AssetReference {
+          Id: 3983122727560832209
+        }
+      }
+    }
   }
   SerializationVersion: 100
   VirtualFolderPath: "Utils"

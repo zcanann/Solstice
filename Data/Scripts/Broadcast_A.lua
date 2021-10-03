@@ -4,7 +4,7 @@ local Broadcast = { }
 local requestQueue = DataStructures.Deque.New()
 
 -- Default range for area broadcasts
-Broadcast.DefaultRange = 8192.0
+Broadcast.DefaultRange = 8000.0
 
 -- Parameters for controlling back-off rate limiting
 local minBackOffTime = 1.0

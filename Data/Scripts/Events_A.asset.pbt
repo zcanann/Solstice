@@ -35,6 +35,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:NetworkingEvents"
+        AssetReference {
+          Id: 1725569184759797556
+        }
+      }
+      Overrides {
         Name: "cs:MovementEvents"
         AssetReference {
           Id: 8468684145391850702

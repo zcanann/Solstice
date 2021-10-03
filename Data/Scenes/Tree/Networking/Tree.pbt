@@ -1,8 +1,8 @@
-Name: "Equipment"
-RootId: 7509983156954433682
+Name: "Networking"
+RootId: 7009232678707602121
 Objects {
-  Id: 4407062972772890412
-  Name: "ClientContext"
+  Id: 14523766090776065618
+  Name: "ServerContext"
   Transform {
     Location {
     }
@@ -14,10 +14,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7509983156954433682
-  ChildIds: 2974427339171584903
+  ParentId: 7009232678707602121
+  ChildIds: 1850534174050189042
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -29,11 +29,12 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+    Type: Server
   }
 }
 Objects {
-  Id: 2974427339171584903
-  Name: "EquipmentManager_C"
+  Id: 1850534174050189042
+  Name: "ProximityNetworkedDataInitializer_S"
   Transform {
     Location {
     }
@@ -45,15 +46,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4407062972772890412
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:DebugItem"
-      AssetReference {
-        Id: 15059549690028216849
-      }
-    }
-  }
+  ParentId: 14523766090776065618
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -68,7 +61,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 1470492465602713491
+      Id: 5802987721985490948
     }
   }
 }
