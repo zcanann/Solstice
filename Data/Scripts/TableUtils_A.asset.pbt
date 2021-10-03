@@ -3,6 +3,14 @@ Assets {
   Name: "TableUtils_A"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+      Overrides {
+        Name: "cs:SortedTable"
+        AssetReference {
+          Id: 2362159610697716625
+        }
+      }
+    }
   }
   SerializationVersion: 100
   VirtualFolderPath: "Utils"

@@ -1,38 +1,6 @@
 Name: "GameSystems"
 RootId: 16844910628275373465
 Objects {
-  Id: 7009232678707602121
-  Name: "Networking"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16844910628275373465
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Networking"
-  }
-}
-Objects {
   Id: 15140153797398253369
   Name: "StatsAndSkillsSystem"
   Transform {

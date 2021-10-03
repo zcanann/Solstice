@@ -99,14 +99,14 @@ function CheckForInterruption(player)
         return
     end
 
-    if (player.serverUserData.engagement.startLocation - player:GetWorldPosition()).size > 48.0 then
+    if (player.serverUserData.engagement.startLocation - player:GetWorldPosition()).size > 100.0 then
         Disconnect(player)
     end
 end
 
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propObject.id, { remainingResources })
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propObject.id, { { ["amt"] = remainingResources } })
 end
 
 function OnPlayerLeft(player)

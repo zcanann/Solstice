@@ -1,11 +1,11 @@
 -- Utility functions for UI
 
-local UtilsUI = { }
+local UIUtils = { }
 
 -- Returns the anchor and dock position of the UI element. This is not a native method in Core yet.
 -- @param UIControl control
 -- @return string, string
-UtilsUI.GetControlUIParameters = function(uiControl) -- UIControl control
+UIUtils.GetControlUIParameters = function(uiControl) -- UIControl control
     local anchor = uiControl.anchor or UIPivot.TOP_LEFT
     local dock = uiControl.dock or UIPivot.TOP_LEFT
     return anchor, dock
@@ -16,8 +16,8 @@ end
 -- @param int parentWidth
 -- @param int parentHeight
 -- @return int, int
-UtilsUI.GetTopLeftPositionInParent = function(uiControl, parentWidth, parentHeight)
-    local anchor, dock = UtilsUI.GetControlUIParameters(uiControl)
+UIUtils.GetTopLeftPositionInParent = function(uiControl, parentWidth, parentHeight)
+    local anchor, dock = UIUtils.GetControlUIParameters(uiControl)
     local x = uiControl.x or 0
     local y = uiControl.y or 0
 
@@ -58,12 +58,12 @@ UtilsUI.GetTopLeftPositionInParent = function(uiControl, parentWidth, parentHeig
 end
 
 -- Gets the absolute screen coordinates of a control, as x, y
-UtilsUI.GetControlScreenPosition = function (uiControl)
+UIUtils.GetControlScreenPosition = function (uiControl)
     local x = 0
     local y = 0
 
     while uiControl and uiControl:IsA("UIControl") do
-        local localX, localY = UtilsUI.GetTopLeftPositionInParent(uiControl)
+        local localX, localY = UIUtils.GetTopLeftPositionInParent(uiControl)
 
         x = x + localX
         y = y + localY
@@ -75,11 +75,11 @@ UtilsUI.GetControlScreenPosition = function (uiControl)
 end
 
 -- Determines if the cursor is inside an arbitrary UI control. Does NOT take into account rotation.
-UtilsUI.IsCursorInControl = function (cursorPosition, uiControl)
+UIUtils.IsCursorInControl = function (cursorPosition, uiControl)
 
 end
 
-UtilsUI.IsVisible = function (uiControl)
+UIUtils.IsVisible = function (uiControl)
     local isVisible = true
 
     while isVisible and uiControl do
@@ -88,4 +88,4 @@ UtilsUI.IsVisible = function (uiControl)
     end
 end
 
-return UtilsUI
+return UIUtils

@@ -26,6 +26,10 @@ function Deque:Count()
     if not self:Empty() then return self.back - self.front + 1 else return 0 end
 end
 
+function Deque:Seek(index)
+    return self[self.front - index + 1]
+end
+
 function Deque:PushBack(value)
     self.back = self.back + 1
     self[self.back] = value
