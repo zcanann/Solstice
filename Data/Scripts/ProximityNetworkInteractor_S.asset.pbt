@@ -1,6 +1,6 @@
 Assets {
-  Id: 5474629016980680411
-  Name: "ProximityNetworkedData_S"
+  Id: 191529618608883271
+  Name: "ProximityNetworkInteractor_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,7 +11,17 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
+        Name: "cs:Interactor"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:ReplicationTrigger"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:DiscardTrigger"
         ObjectReference {
         }
       }

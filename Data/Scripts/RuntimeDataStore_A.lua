@@ -2,23 +2,43 @@ local FrameworkEvents = require(script:GetCustomProperty("Events"))
 local TableUtils = require(script:GetCustomProperty("TableUtils"))
 
 local RuntimeDataStore = { }
+local dataStore = { }
 
 RuntimeDataStore.Keys = { }
 RuntimeDataStore.Keys.Proximity = require(script:GetCustomProperty("ProximityKeys"))
 
-RuntimeDataStore.SetProximityDataByKey = function(key, objectId, data)
-    FrameworkEvents.Broadcast.Local(FrameworkEvents.Keys.Networking.EVENT_REQUEST_SET_PROXIMITY_DATA_PREFIX .. objectId, { key, data })
+RuntimeDataStore.ContainsObjectDataByKey = function(objectId, key)
+    return dataStore[objectId] and dataStore[objectId][key]
 end
 
-RuntimeDataStore.ConnectToProximityKey = function(key, objectId, OnKeyUpdated)
-    Events.Connect(FrameworkEvents.Keys.Networking.EVENT_PROXIMITY_DATA_UPDATED_PREFIX .. objectId, function (proximityData)
-        -- One drawback is that this will be called even if a different key was modified. Might need to shard the event.
-        if proximityData then
-            OnKeyUpdated(proximityData[key])
-        else
-            OnKeyUpdated(nil)
-        end
-    end)
+RuntimeDataStore.GetObjectData = function(objectId)
+    return dataStore[objectId]
+end
+
+RuntimeDataStore.GetObjectDataByKey = function(objectId, key)
+    if RuntimeDataStore.ContainsObjectProximityDataByKey(key, objectId) then
+        return dataStore[objectId][key]
+    end
+end
+
+RuntimeDataStore.SetObjectDataByKey = function(objectId, key, data)
+    if not dataStore[objectId] then
+        dataStore[objectId] = { }
+    end
+    local objectStore = dataStore[objectId]
+    if not objectStore[key] then
+        objectStore[key] = { }
+    end
+
+    -- Update data and revision. The revision can be used to track which versions we have already networked to the player, for instance.
+    local revision = objectStore[key].revision or 0
+    objectStore[key].revision = revision
+    objectStore[key].data = data
+end
+
+RuntimeDataStore.ClearObjectProximityData = function(objectId)
+    -- TODO: Call this if an object is destroyed
+    dataStore[objectId] = nil
 end
 
 -- Map all events to shorter names, following the format of "r{i}_"

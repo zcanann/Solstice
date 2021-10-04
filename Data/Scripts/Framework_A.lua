@@ -32,6 +32,4 @@ Framework.Dump = function (object)
     Framework.Print(Framework.Utils.Table.Serialize(object))
 end
 
-Framework.Dump(Framework.RuntimeDataStore.KeyNameMappings)
-
 return Framework

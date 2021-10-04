@@ -16,6 +16,11 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:ProximityNetworkedObject"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:MaxEngagements"
         Int: -1
       }

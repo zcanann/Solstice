@@ -132,5 +132,9 @@ Assets {
       VirtualFolderPath: "Audio"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Networking"
+      PlatformAssetType: 5
+    }
   }
 }

@@ -1,6 +1,6 @@
 Assets {
-  Id: 11268320084557931241
-  Name: "EngagementSession_C"
+  Id: 10622976373612751914
+  Name: "PlayerAnimationLoader_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,12 +11,13 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Object"
-        ObjectReference {
+        Name: "cs:PlayerAnimationController"
+        AssetReference {
+          Id: 11268320084557931241
         }
       }
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Engagement"
+  VirtualFolderPath: "Animations"
 }

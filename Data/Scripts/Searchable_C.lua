@@ -12,8 +12,7 @@ function DoSearch()
     end
 
     Framework.Chat.LocalMessage("Searching " .. name .. "...")
-
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Engagement.EVENT_PLAYER_LOCAL_REQUEST_ENGAGEMENT, { propObject.id })
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 end
 
 function EndSearch()

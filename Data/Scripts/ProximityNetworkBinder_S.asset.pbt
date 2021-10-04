@@ -1,6 +1,6 @@
 Assets {
-  Id: 5474629016980680411
-  Name: "ProximityNetworkedData_S"
+  Id: 13672869650105321002
+  Name: "ProximityNetworkBinder_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,8 +11,9 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
+        Name: "cs:ProximityNetworkInteractorTemplate"
+        AssetReference {
+          Id: 10476272091906714693
         }
       }
     }

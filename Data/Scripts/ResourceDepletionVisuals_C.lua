@@ -1,6 +1,6 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propObject = script:GetCustomProperty("Object"):WaitForObject()
+local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local propBaseHasResources = script:GetCustomProperty("BaseHasResources"):WaitForObject()
 local propBaseFullDepletion = script:GetCustomProperty("BaseFullDepletion"):WaitForObject()
 local propDepletableResource1 = script:GetCustomProperty("DepletableResource1"):WaitForObject()
@@ -11,7 +11,7 @@ local propDepletableResource5 = script:GetCustomProperty("DepletableResource5"):
 local propDepletableResource6 = script:GetCustomProperty("DepletableResource6"):WaitForObject()
 
 function OnResourceAmountChanged(resourceAmount)
-    resourceAmount = resourceAmount or 0
+    resourceAmount = resourceAmount[Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT] or 0
 
     propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(resourceAmount == 0)
     propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(resourceAmount > 0)
@@ -25,6 +25,7 @@ function OnResourceAmountChanged(resourceAmount)
 end
 
 -- Default to fully extracted until we get an update from the server
-OnResourceAmountChanged(0)
+OnResourceAmountChanged({ Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, 0 })
 
-Framework.RuntimeDataStore.ConnectToProximityKey(Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, propObject.id, OnResourceAmountChanged)
+-- Framework.Print("LISTENING: " .. Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT .. propProximityNetworkedObject.id)
+Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. propProximityNetworkedObject.id, OnResourceAmountChanged)

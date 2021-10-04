@@ -33,7 +33,7 @@ Objects {
 }
 Objects {
   Id: 15824729143189094321
-  Name: "PlayerAnimationController_C"
+  Name: "PlayerAnimationLoader_C"
   Transform {
     Location {
     }
