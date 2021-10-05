@@ -45,14 +45,21 @@ function Connect(player)
     end
 
     if player.serverUserData.engagement.session ~= nil then
-        player.serverUserData.engagement.session.Disconnect(player)
+        if player.serverUserData.engagement.session == script.context then
+            -- Early exit if already engaged to this object -- no need to reengage
+            return
+        else
+            -- Otherwise, we are trying to engage a new object. Disconnect from the current one.
+            player.serverUserData.engagement.session.Disconnect(player)
+        end
     end
 
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    -- TODO: Area-wide, with some sort of way to retransmit this data to players that come into range
-    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_CONNECTED, { player, propObject.id, animationMap[propRequiredItemType] })
+    -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. player.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION, { player.id, propProximityNetworkedObject.id, animationMap[propRequiredItemType] } })
 end
 
 function Disconnect(player)
@@ -63,7 +70,8 @@ function Disconnect(player)
     engagedPlayers[player] = nil
     player.serverUserData.engagement.session = nil
     player.serverUserData.engagement.duration = 0.0
-    Framework.Events.Broadcast.ServerToAllPlayersReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_DISCONNECTED, { player })
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. player.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION, { nil }})
 end
 
 function Tick(deltaSeconds)
@@ -120,9 +128,9 @@ end
 
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
-    Framework.Print("Dumb")
-    Framework.Print(remainingResources)
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id, { Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, remainingResources })
+
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, remainingResources })
 
     if remainingResources == 0.0 then
         respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)

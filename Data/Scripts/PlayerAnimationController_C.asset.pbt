@@ -11,9 +11,8 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:PlayerAnimationSetTemplate"
-        AssetReference {
-          Id: 17377652318304072879
+        Name: "cs:PlayerAnimationSet"
+        ObjectReference {
         }
       }
     }

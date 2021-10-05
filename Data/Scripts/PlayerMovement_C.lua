@@ -3,7 +3,7 @@ local Framework = require(script:GetCustomProperty("Framework"))
 local localPlayer = Game.GetLocalPlayer()
 
 -- Navigation
-local remainingWayPoints = nil
+local remainingWayPoints = { }
 local defaultWayPointClearRadius = 16.0
 local goalRachedCallback = nil
 local waypointClearRadius = 0.0
@@ -13,7 +13,7 @@ local goalPulse = nil
 local CLICK_VFX = script:GetCustomProperty("AnimPulse")
 
 function ClearWayPoints()
-	remainingWayPoints = nil
+	remainingWayPoints = { }
 	goalRachedCallback = nil
 	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, nil })
 end
@@ -33,28 +33,13 @@ function OnReachedDestination()
 end
 
 function MovementHook(player, params)
-	if remainingWayPoints == nil or remainingWayPoints[1] == nil then
-		return
-	end
+	UpdateWaypointProgress(player)
 
-	-- Convert to 2D space
-	local effectiveWaypointClearRadius = defaultWayPointClearRadius
 	local waypoint = remainingWayPoints[1]
-
-	if #remainingWayPoints == 1 then
-		effectiveWaypointClearRadius = math.max(waypointClearRadius, effectiveWaypointClearRadius)
-	end
-
-	if Framework.Math.Distance2D(player, waypoint) <= effectiveWaypointClearRadius then
-		table.remove(remainingWayPoints, 1)
-	else
+	if waypoint ~= nil then
 		-- Setting the direction from 2D avoids "wasting" part of the direction normal on an unused Z component
 		-- Without this, the player would slow down as they approach each waypoint
 		params.direction = Vector3.New(Framework.Math.Direction2D(player, waypoint), 0.0)
-	end
-
-	if #remainingWayPoints <= 0 then
-		OnReachedDestination()
 	end
 end
 
@@ -76,12 +61,33 @@ function BeginMoveToGoal(goal, callback)
 
 	remainingWayPoints = wayPoints
 
-	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, goal })
+	UpdateWaypointProgress(localPlayer)
 
-	if remainingWayPoints == nil or #remainingWayPoints <= 0 then
-		OnReachedDestination()
-	else
+	if #remainingWayPoints >= 1 then
 		Framework.Events.Broadcast.Local(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, { localPlayer })
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, goal })
+	end
+end
+
+function UpdateWaypointProgress(player)
+	if remainingWayPoints[1] == nil then
+		return
+	end
+
+	-- Convert to 2D space
+	local effectiveWaypointClearRadius = defaultWayPointClearRadius
+	local waypoint = remainingWayPoints[1]
+
+	if #remainingWayPoints == 1 then
+		effectiveWaypointClearRadius = math.max(waypointClearRadius, effectiveWaypointClearRadius)
+	end
+
+	if Framework.Math.Distance2D(player, waypoint) <= effectiveWaypointClearRadius then
+		table.remove(remainingWayPoints, 1)
+	end
+
+	if #remainingWayPoints <= 0 then
+		OnReachedDestination()
 	end
 end
 

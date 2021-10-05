@@ -11,7 +11,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkInteractorTemplate"
+        Name: "cs:PlayerProximityNetworkingTemplate"
         AssetReference {
           Id: 10476272091906714693
         }

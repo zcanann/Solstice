@@ -186,9 +186,10 @@ function dump_object(object, nmemo, memo, acc)
 	else
 		local t = type(object)
 		if not dump_type[t] then
-			error('cannot dump type ' .. t)
+			warn('cannot dump type ' .. t)
+		else
+			return dump_type[t](object, nmemo, memo, acc)
 		end
-		return dump_type[t](object, nmemo, memo, acc)
 	end
 	return nmemo
 end

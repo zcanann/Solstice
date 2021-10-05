@@ -33,7 +33,7 @@ Objects {
 }
 Objects {
   Id: 15824729143189094321
-  Name: "PlayerAnimationLoader_C"
+  Name: "PlayerAnimationsController_C"
   Transform {
     Location {
     }
@@ -47,12 +47,6 @@ Objects {
   }
   ParentId: 11925849198827180005
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:PlayerAnimationSet"
-      AssetReference {
-        Id: 17377652318304072879
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

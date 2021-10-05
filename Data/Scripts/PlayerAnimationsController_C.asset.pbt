@@ -1,6 +1,6 @@
 Assets {
   Id: 10622976373612751914
-  Name: "PlayerAnimationLoader_C"
+  Name: "PlayerAnimationsController_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,9 +11,9 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:PlayerAnimationController"
+        Name: "cs:PlayerAnimationsTemplate"
         AssetReference {
-          Id: 11268320084557931241
+          Id: 17377652318304072879
         }
       }
     }

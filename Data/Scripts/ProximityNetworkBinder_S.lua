@@ -1,16 +1,18 @@
 local Framework = require(script:GetCustomProperty("Framework"))
-local propProximityNetworkInteractor = script:GetCustomProperty("ProximityNetworkInteractorTemplate")
+local propPlayerProximityNetworkingTemplate = script:GetCustomProperty("PlayerProximityNetworkingTemplate")
 
--- Spawn a network interaction object for all players that join. Networking will become enabled for all objects within range.
+-- Spawn a proximity networking object for all players that join. Proximity networked objects within range will then automatically network to the player.
 function OnPlayerJoined(player)
-	local networkInteractor = World.SpawnAsset(propProximityNetworkInteractor)
-	local networkInteractorScript = networkInteractor:GetCustomProperty("ProximityNetworkInteractorScript"):WaitForObject()
+	local playerProximityNetworking = World.SpawnAsset(propPlayerProximityNetworkingTemplate)
+	local networkInteractorScript = playerProximityNetworking:GetCustomProperty("ProximityNetworkInteractorScript"):WaitForObject()
+	local proximityNetworkedDataScript = playerProximityNetworking:GetCustomProperty("ProximityNetworkedDataScript"):WaitForObject()
+
+	player.serverUserData.playerProximityNetworking = playerProximityNetworking
 
 	-- Player attachment
-	networkInteractor:AttachToPlayer(player, "upper_spine")
+	playerProximityNetworking:AttachToPlayer(player, "upper_spine")
 	networkInteractorScript.context.BindToPlayer(player)
-
-	player.serverUserData.networkInteractor = networkInteractor
+	proximityNetworkedDataScript.context.BindToPlayer(player)
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
