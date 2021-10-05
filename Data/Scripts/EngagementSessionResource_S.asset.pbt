@@ -37,6 +37,10 @@ Assets {
         String: ""
       }
       Overrides {
+        Name: "cs:RequiredSkillLevel"
+        Int: 0
+      }
+      Overrides {
         Name: "cs:Exp"
         Int: 0
       }

@@ -1,8 +1,9 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-function OnPlayerJoined(player)
-    player.serverUserData.engagement = { }
+function OnInterruptEngagement(player)
+    if player.serverUserData.engagement and player.serverUserData.engagement.session then
+        player.serverUserData.engagement.session.Disconnect(player)
+    end
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
-
+Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_INTERRUPT, OnInterruptEngagement)

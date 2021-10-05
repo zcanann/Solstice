@@ -1,16 +1,103 @@
 Name: "Interactables"
 RootId: 17246289419149383775
 Objects {
-  Id: 3506130130456833092
-  Name: "Basic Door"
+  Id: 3809273289145241491
+  Name: "FrameworkTreeBirch"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7766009470731821977
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkTreeBirch"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -545
+            Y: 235
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7175104089856678757
+    }
+  }
+}
+Objects {
+  Id: 3288477830155135731
+  Name: "FrameworkTreeOak"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7027701191938591506
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkTreeOak"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1165
+            Y: -905
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 981682030603069296
+    }
+  }
+}
+Objects {
+  Id: 16402430099153211686
+  Name: "FrameworkVeinCopper"
   Transform {
     Location {
-      X: 715
-      Y: -1340
-      Z: 30
+      X: -4430
+      Y: -370
+      Z: 25
     }
     Rotation {
-      Yaw: -89.9999924
     }
     Scale {
       X: 1
@@ -19,77 +106,55 @@ Objects {
     }
   }
   ParentId: 17246289419149383775
-  ChildIds: 2741213586947593556
-  ChildIds: 3386529855223919514
-  ChildIds: 18414372708865728013
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:AutoOpen"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:TimeOpen"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:OpenLabel"
-      String: "Open Door"
-    }
-    Overrides {
-      Name: "cs:CloseLabel"
-      String: "Close Door"
-    }
-    Overrides {
-      Name: "cs:Speed"
-      Float: 450
-    }
-    Overrides {
-      Name: "cs:ResetOnRoundStart"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:AutoOpen:tooltip"
-      String: "This door will open when a player gets close, and cannot be interact with"
-    }
-    Overrides {
-      Name: "cs:TimeOpen:tooltip"
-      String: "With AutoOpen, how long the day stays open with no player near."
-    }
-    Overrides {
-      Name: "cs:OpenLabel:tooltip"
-      String: "Use label to open the door (without AutoOpen)"
-    }
-    Overrides {
-      Name: "cs:CloseLabel:tooltip"
-      String: "Use label to close the door (without AutoOpen)"
-    }
-    Overrides {
-      Name: "cs:Speed:tooltip"
-      String: "How fast the door opens or closes, in degrees / second"
-    }
-    Overrides {
-      Name: "cs:ResetOnRoundStart:tooltip"
-      String: "Will reset (to be closed) at the start of a round"
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18361376657929626207
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkVeinCopper"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 400
+            Y: -175
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13401275499172607929
+    }
   }
 }
 Objects {
-  Id: 18414372708865728013
-  Name: "RotationRoot"
+  Id: 9126786032778866128
+  Name: "FrameworkVeinCopper"
   Transform {
     Location {
+      X: -4430
+      Y: 500
+      Z: 25
     }
     Rotation {
     }
@@ -99,924 +164,50 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3506130130456833092
-  ChildIds: 4685049106215693820
-  ChildIds: 12479819769468662686
-  UnregisteredParameters {
-  }
+  ParentId: 17246289419149383775
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12479819769468662686
-  Name: "RotatingTrigger"
-  Transform {
-    Location {
-      Y: 90
-      Z: 150
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18361376657929626207
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkVeinCopper"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -170
+            Y: -175
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
     }
-    Rotation {
-    }
-    Scale {
-      X: 1.5
-      Y: 1.8
-      Z: 3
-    }
-  }
-  ParentId: 18414372708865728013
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
+    TemplateAsset {
+      Id: 13401275499172607929
     }
   }
 }
 Objects {
-  Id: 4685049106215693820
-  Name: "Geo_StaticContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 18414372708865728013
-  ChildIds: 9413670233602293746
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-    Type: RuntimeStatic
-  }
-}
-Objects {
-  Id: 9413670233602293746
-  Name: "Door"
-  Transform {
-    Location {
-      Z: 40
-    }
-    Rotation {
-      Yaw: 89.9999771
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4685049106215693820
-  ChildIds: 18404284549581940679
-  ChildIds: 13220061268272467898
-  ChildIds: 9730445828714362854
-  ChildIds: 5142832253058909224
-  ChildIds: 18333527381013193280
-  ChildIds: 15451086181551442960
-  ChildIds: 2959697893731833122
-  ChildIds: 6052275910528739149
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6052275910528739149
-  Name: "Cylinder"
-  Transform {
-    Location {
-      X: 115
-      Z: 116
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.1
-      Y: 0.1
-      Z: 2.3
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1137112816547272582
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 2959697893731833122
-  Name: "Cylinder"
-  Transform {
-    Location {
-      X: 75
-      Z: 116
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.1
-      Y: 0.1
-      Z: 2.3
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1137112816547272582
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 15451086181551442960
-  Name: "Cylinder"
-  Transform {
-    Location {
-      X: 35
-      Z: 116
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.1
-      Y: 0.1
-      Z: 2.3
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1137112816547272582
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 18333527381013193280
-  Name: "Cube"
-  Transform {
-    Location {
-      X: 5
-      Z: 118
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.05
-      Y: 0.2
-      Z: 2.3
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 5142832253058909224
-  Name: "Cube"
-  Transform {
-    Location {
-      X: 139
-      Z: 118
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.05
-      Y: 0.2
-      Z: 2.3
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 9730445828714362854
-  Name: "Cube"
-  Transform {
-    Location {
-      X: 72
-      Z: 233
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.4
-      Y: 0.2
-      Z: 0.05
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 13220061268272467898
-  Name: "Cube"
-  Transform {
-    Location {
-      X: 72
-      Z: 2
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.4
-      Y: 0.2
-      Z: 0.05
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 18404284549581940679
-  Name: "Cube"
-  Transform {
-    Location {
-      X: 125
-      Z: 118
-    }
-    Rotation {
-    }
-    Scale {
-      X: 0.3
-      Y: 0.1
-      Z: 0.3
-    }
-  }
-  ParentId: 9413670233602293746
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        R: 0.0990000069
-        G: 0.0990000069
-        B: 0.0990000069
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 4830307333936658455
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 12095835209017042614
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    StaticMesh {
-      Physics {
-        Mass: 100
-        LinearDamping: 0.01
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 3386529855223919514
-  Name: "ClientContext"
-  Transform {
-    Location {
-      Z: 175
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3506130130456833092
-  ChildIds: 1684233781538977050
-  ChildIds: 4585107636047770735
-  ChildIds: 1486777449777495566
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 1486777449777495566
-  Name: "Helper_DoorCloseSound"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3386529855223919514
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Door Type"
-      Enum {
-        Value: "mc:esfx_domestic_doors_01:7"
-      }
-    }
-    Overrides {
-      Name: "bp:Creak Volume"
-      Float: 0
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 1104198953447072835
-    }
-    AudioBP {
-      Volume: 1
-      Falloff: 3600
-      Radius: 400
-      EnableOcclusion: true
-      IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
-    }
-  }
-}
-Objects {
-  Id: 4585107636047770735
-  Name: "Helper_DoorOpenSound"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3386529855223919514
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Door Type"
-      Enum {
-        Value: "mc:esfx_domestic_doors_01:4"
-      }
-    }
-    Overrides {
-      Name: "bp:Creak Type"
-      Enum {
-        Value: "mc:esfx_door_wood_creaks_01:2"
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 1104198953447072835
-    }
-    AudioBP {
-      Volume: 1
-      Falloff: 3600
-      Radius: 400
-      EnableOcclusion: true
-      IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
-    }
-  }
-}
-Objects {
-  Id: 1684233781538977050
-  Name: "BasicDoorControllerClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3386529855223919514
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:RotationRoot"
-      ObjectReference {
-        SelfId: 18414372708865728013
-      }
-    }
-    Overrides {
-      Name: "cs:OpenSound"
-      ObjectReference {
-        SelfId: 4585107636047770735
-      }
-    }
-    Overrides {
-      Name: "cs:CloseSound"
-      ObjectReference {
-        SelfId: 1486777449777495566
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 321472518781775172
-    }
-  }
-}
-Objects {
-  Id: 2741213586947593556
-  Name: "ServerContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3506130130456833092
-  ChildIds: 17075635765519584973
-  ChildIds: 6041985626847707055
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-    Type: Server
-  }
-}
-Objects {
-  Id: 6041985626847707055
-  Name: "StaticTrigger"
-  Transform {
-    Location {
-      Y: 90
-      Z: 150
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.5
-      Y: 1.8
-      Z: 3
-    }
-  }
-  ParentId: 2741213586947593556
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-}
-Objects {
-  Id: 17075635765519584973
-  Name: "BasicDoorControllerServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2741213586947593556
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 3506130130456833092
-      }
-    }
-    Overrides {
-      Name: "cs:RotationRoot"
-      ObjectReference {
-        SelfId: 18414372708865728013
-      }
-    }
-    Overrides {
-      Name: "cs:RotatingTrigger"
-      ObjectReference {
-        SelfId: 12479819769468662686
-      }
-    }
-    Overrides {
-      Name: "cs:StaticTrigger"
-      ObjectReference {
-        SelfId: 6041985626847707055
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 1031736639489708352
-    }
-  }
-}
-Objects {
-  Id: 9461564959932782095
+  Id: 9796128549201024034
   Name: "FrameworkVeinCopper"
   Transform {
     Scale {
@@ -1043,6 +234,50 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
+            X: -170
+            Y: 695
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13401275499172607929
+    }
+  }
+}
+Objects {
+  Id: 11788574141107045547
+  Name: "FrameworkTreeBirch"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7766009470731821977
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkTreeBirch"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
             X: 310
             Y: 235
           }
@@ -1055,7 +290,7 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 13401275499172607929
+      Id: 7175104089856678757
     }
   }
 }
@@ -2322,6 +1557,1021 @@ Objects {
   Script {
     ScriptAsset {
       Id: 3760315661336668601
+    }
+  }
+}
+Objects {
+  Id: 3506130130456833092
+  Name: "Basic Door"
+  Transform {
+    Location {
+      X: 715
+      Y: -1340
+      Z: 30
+    }
+    Rotation {
+      Yaw: -89.9999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  ChildIds: 2741213586947593556
+  ChildIds: 3386529855223919514
+  ChildIds: 18414372708865728013
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:AutoOpen"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:TimeOpen"
+      Float: 3
+    }
+    Overrides {
+      Name: "cs:OpenLabel"
+      String: "Open Door"
+    }
+    Overrides {
+      Name: "cs:CloseLabel"
+      String: "Close Door"
+    }
+    Overrides {
+      Name: "cs:Speed"
+      Float: 450
+    }
+    Overrides {
+      Name: "cs:ResetOnRoundStart"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:AutoOpen:tooltip"
+      String: "This door will open when a player gets close, and cannot be interact with"
+    }
+    Overrides {
+      Name: "cs:TimeOpen:tooltip"
+      String: "With AutoOpen, how long the day stays open with no player near."
+    }
+    Overrides {
+      Name: "cs:OpenLabel:tooltip"
+      String: "Use label to open the door (without AutoOpen)"
+    }
+    Overrides {
+      Name: "cs:CloseLabel:tooltip"
+      String: "Use label to close the door (without AutoOpen)"
+    }
+    Overrides {
+      Name: "cs:Speed:tooltip"
+      String: "How fast the door opens or closes, in degrees / second"
+    }
+    Overrides {
+      Name: "cs:ResetOnRoundStart:tooltip"
+      String: "Will reset (to be closed) at the start of a round"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 18414372708865728013
+  Name: "RotationRoot"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3506130130456833092
+  ChildIds: 4685049106215693820
+  ChildIds: 12479819769468662686
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12479819769468662686
+  Name: "RotatingTrigger"
+  Transform {
+    Location {
+      Y: 90
+      Z: 150
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.5
+      Y: 1.8
+      Z: 3
+    }
+  }
+  ParentId: 18414372708865728013
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 4685049106215693820
+  Name: "Geo_StaticContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 18414372708865728013
+  ChildIds: 9413670233602293746
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: RuntimeStatic
+  }
+}
+Objects {
+  Id: 9413670233602293746
+  Name: "Door"
+  Transform {
+    Location {
+      Z: 40
+    }
+    Rotation {
+      Yaw: 89.9999771
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4685049106215693820
+  ChildIds: 18404284549581940679
+  ChildIds: 13220061268272467898
+  ChildIds: 9730445828714362854
+  ChildIds: 5142832253058909224
+  ChildIds: 18333527381013193280
+  ChildIds: 15451086181551442960
+  ChildIds: 2959697893731833122
+  ChildIds: 6052275910528739149
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 6052275910528739149
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: 115
+      Z: 116
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.1
+      Y: 0.1
+      Z: 2.3
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1137112816547272582
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2959697893731833122
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: 75
+      Z: 116
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.1
+      Y: 0.1
+      Z: 2.3
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1137112816547272582
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15451086181551442960
+  Name: "Cylinder"
+  Transform {
+    Location {
+      X: 35
+      Z: 116
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.1
+      Y: 0.1
+      Z: 2.3
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1137112816547272582
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 18333527381013193280
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 5
+      Z: 118
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.05
+      Y: 0.2
+      Z: 2.3
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5142832253058909224
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 139
+      Z: 118
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.05
+      Y: 0.2
+      Z: 2.3
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9730445828714362854
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 72
+      Z: 233
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.4
+      Y: 0.2
+      Z: 0.05
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13220061268272467898
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 72
+      Z: 2
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.4
+      Y: 0.2
+      Z: 0.05
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 18404284549581940679
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 125
+      Z: 118
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.3
+      Y: 0.1
+      Z: 0.3
+    }
+  }
+  ParentId: 9413670233602293746
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.0990000069
+        G: 0.0990000069
+        B: 0.0990000069
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 4830307333936658455
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 3386529855223919514
+  Name: "ClientContext"
+  Transform {
+    Location {
+      Z: 175
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3506130130456833092
+  ChildIds: 1684233781538977050
+  ChildIds: 4585107636047770735
+  ChildIds: 1486777449777495566
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 1486777449777495566
+  Name: "Helper_DoorCloseSound"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3386529855223919514
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Door Type"
+      Enum {
+        Value: "mc:esfx_domestic_doors_01:7"
+      }
+    }
+    Overrides {
+      Name: "bp:Creak Volume"
+      Float: 0
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 1104198953447072835
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 4585107636047770735
+  Name: "Helper_DoorOpenSound"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3386529855223919514
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Door Type"
+      Enum {
+        Value: "mc:esfx_domestic_doors_01:4"
+      }
+    }
+    Overrides {
+      Name: "bp:Creak Type"
+      Enum {
+        Value: "mc:esfx_door_wood_creaks_01:2"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 1104198953447072835
+    }
+    AudioBP {
+      Volume: 1
+      Falloff: 3600
+      Radius: 400
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 1684233781538977050
+  Name: "BasicDoorControllerClient"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3386529855223919514
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:RotationRoot"
+      ObjectReference {
+        SelfId: 18414372708865728013
+      }
+    }
+    Overrides {
+      Name: "cs:OpenSound"
+      ObjectReference {
+        SelfId: 4585107636047770735
+      }
+    }
+    Overrides {
+      Name: "cs:CloseSound"
+      ObjectReference {
+        SelfId: 1486777449777495566
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 321472518781775172
+    }
+  }
+}
+Objects {
+  Id: 2741213586947593556
+  Name: "ServerContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3506130130456833092
+  ChildIds: 17075635765519584973
+  ChildIds: 6041985626847707055
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+    Type: Server
+  }
+}
+Objects {
+  Id: 6041985626847707055
+  Name: "StaticTrigger"
+  Transform {
+    Location {
+      Y: 90
+      Z: 150
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.5
+      Y: 1.8
+      Z: 3
+    }
+  }
+  ParentId: 2741213586947593556
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
+    }
+  }
+}
+Objects {
+  Id: 17075635765519584973
+  Name: "BasicDoorControllerServer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2741213586947593556
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ComponentRoot"
+      ObjectReference {
+        SelfId: 3506130130456833092
+      }
+    }
+    Overrides {
+      Name: "cs:RotationRoot"
+      ObjectReference {
+        SelfId: 18414372708865728013
+      }
+    }
+    Overrides {
+      Name: "cs:RotatingTrigger"
+      ObjectReference {
+        SelfId: 12479819769468662686
+      }
+    }
+    Overrides {
+      Name: "cs:StaticTrigger"
+      ObjectReference {
+        SelfId: 6041985626847707055
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 1031736639489708352
     }
   }
 }

@@ -21,6 +21,7 @@ local respawnTimer = 0.0
 local animationMap = {
     [ "pickaxe" ]       = "MiningAnimation",
     [ "shovel" ]        = "DiggingAnimation",
+    [ "hatchet" ]       = "WoodCuttingAnimation",
     [ "fishing_pole" ]  = "FishingAnimation",
     [ "net" ]           = "NetFishingAnimation",
 }
@@ -37,6 +38,10 @@ function Connect(player)
         return
     end
 
+    if not player.serverUserData.engagement then
+        player.serverUserData.engagement = { }
+    end
+
     player.serverUserData.engagement.startLocation = player:GetWorldPosition()
 
     -- Deny the request if at our engagement limit
@@ -44,7 +49,8 @@ function Connect(player)
         return
     end
 
-    if player.serverUserData.engagement.session ~= nil then
+    -- Disconnect from any existing sessions. This is important, as each object tracks the number of players engaged to it.
+    if player.serverUserData.engagement.session then
         if player.serverUserData.engagement.session == script.context then
             -- Early exit if already engaged to this object -- no need to reengage
             return
@@ -68,8 +74,7 @@ function Disconnect(player)
     end
 
     engagedPlayers[player] = nil
-    player.serverUserData.engagement.session = nil
-    player.serverUserData.engagement.duration = 0.0
+    player.serverUserData.engagement = nil
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. player.id,
         { Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION, { nil }})
 end
@@ -83,7 +88,7 @@ function Tick(deltaSeconds)
 end
 
 function CheckForResourceExtracted(player, deltaSeconds)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return
     end
 
@@ -108,7 +113,7 @@ function CheckForResourceExtracted(player, deltaSeconds)
 end
 
 function CheckForInterruption(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return
     end
 

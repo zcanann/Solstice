@@ -28,25 +28,11 @@ Assets {
             String: "Copper Vein"
           }
           Overrides {
-            Name: "cs:MinimapIconTemplate"
-            AssetReference {
-              Id: 6468548784570621292
-            }
-          }
-          Overrides {
             Name: "cs:Name:isrep"
             Bool: false
           }
           Overrides {
             Name: "cs:Name:ml"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:MinimapIconTemplate:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:MinimapIconTemplate:ml"
             Bool: false
           }
         }
@@ -140,9 +126,7 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
-            X: -6.0703125
-            Y: -11.8427734
-            Z: 62.9709167
+            Z: 62.971
           }
           Rotation {
           }
@@ -421,12 +405,12 @@ Assets {
         Name: "DepletableResource1"
         Transform {
           Location {
-            X: 50
-            Y: -3
-            Z: 68
+            X: 56
+            Y: 7
+            Z: 58
           }
           Rotation {
-            Yaw: -120.000008
+            Yaw: -120
           }
           Scale {
             X: 1.28652012
@@ -636,9 +620,9 @@ Assets {
         Name: "DepletableResource2"
         Transform {
           Location {
-            X: -55
-            Y: -18
-            Z: 85
+            X: -49
+            Y: -8
+            Z: 75
           }
           Rotation {
           }
@@ -850,9 +834,9 @@ Assets {
         Name: "DepletableResource3"
         Transform {
           Location {
-            X: 30
-            Y: -53
-            Z: 73
+            X: 36
+            Y: -43
+            Z: 63
           }
           Rotation {
           }
@@ -1064,9 +1048,9 @@ Assets {
         Name: "DepletableResource4"
         Transform {
           Location {
-            X: -45
-            Y: 47
-            Z: 85
+            X: -39
+            Y: 57
+            Z: 75
           }
           Rotation {
             Yaw: -39.9999695
@@ -1283,9 +1267,9 @@ Assets {
         Name: "DepletableResource5"
         Transform {
           Location {
-            X: 15
-            Y: 2
-            Z: 148
+            X: 21
+            Y: 12
+            Z: 138
           }
           Rotation {
             Yaw: 89.9999466
@@ -1499,12 +1483,12 @@ Assets {
         Name: "DepletableResource6"
         Transform {
           Location {
-            X: 20
-            Y: 57
-            Z: 88
+            X: 26
+            Y: 67
+            Z: 78
           }
           Rotation {
-            Yaw: -5.00000238
+            Yaw: -5
             Roll: 30.0000057
           }
           Scale {

@@ -2,7 +2,7 @@ local Framework = require(script:GetCustomProperty("Framework"))
 local propPlayerAnimationsTemplate = script:GetCustomProperty("PlayerAnimationsTemplate")
 
 function OnPlayerNetworkedDataChanged(player, data)
-	if not player then return end
+    if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
 
 	local engagementData = nil
 	if data and data[Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION] then
@@ -37,7 +37,6 @@ function OnEngagementSessionConnected(playerId, objectId, animationName)
 	end
 
     -- No need to animate if we're already doing this animation
-    print(player.clientUserData.animState.animationName)
     if player.clientUserData.animState.animationName == animationName then
         return
     end
@@ -51,7 +50,6 @@ function OnEngagementSessionConnected(playerId, objectId, animationName)
     player.clientUserData.animState.objectId = objectId
     player.clientUserData.animState.activeAnimAbility = animationAbility
     animationAbility:Activate()
-    print(player.clientUserData.animState.animationName)
 
     player.clientUserData.animState.executeEvent = animationAbility.executeEvent:Connect(function (localAnim)
 		-- Framework.Print("EXECUTING")
@@ -83,13 +81,14 @@ function OnEngagementSessionDisconnected(player)
     if player.clientUserData.animState and player.clientUserData.animState.activeAnimAbility then
         player.clientUserData.animState.activeAnimAbility:Interrupt()
     end
-    print("DISC")
     player.clientUserData.animState = nil
 end
 
 function OnEngagementSessionLocalInterrupt(player)
     if player.clientUserData.animState and player.clientUserData.animState.activeAnimAbility then
         player.clientUserData.animState.activeAnimAbility:Interrupt()
+        player.clientUserData.animState = nil
+		Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_INTERRUPT, { player })
     end
 end
 

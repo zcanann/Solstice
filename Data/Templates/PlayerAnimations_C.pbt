@@ -18,6 +18,7 @@ Assets {
         ParentId: 4781671109827199097
         ChildIds: 8839406639407707556
         ChildIds: 3096937362698812056
+        ChildIds: 10581584838822041464
         UnregisteredParameters {
           Overrides {
             Name: "cs:MiningAnimation"
@@ -29,6 +30,12 @@ Assets {
             Name: "cs:DiggingAnimation"
             ObjectReference {
               SubObjectId: 3096937362698812056
+            }
+          }
+          Overrides {
+            Name: "cs:WoodCuttingAnimation"
+            ObjectReference {
+              SubObjectId: 10581584838822041464
             }
           }
         }
@@ -544,6 +551,197 @@ Assets {
           IsAttenuationEnabled: true
         }
       }
+      Objects {
+        Id: 10581584838822041464
+        Name: "WoodCuttingAnimation"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13935414811028160519
+        ChildIds: 1353090216901739807
+        ChildIds: 17705506289859576850
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 1353090216901739807
+            }
+          }
+          Overrides {
+            Name: "cs:SFX1"
+            ObjectReference {
+              SubObjectId: 3787785440828830089
+            }
+          }
+          Overrides {
+            Name: "cs:SFX2"
+            ObjectReference {
+              SelfId: 841534158063459245
+            }
+          }
+          Overrides {
+            Name: "cs:SFX3"
+            ObjectReference {
+              SelfId: 841534158063459245
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 1353090216901739807
+        Name: "Ability"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10581584838822041464
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Ability {
+          IsEnabled: true
+          CastPhaseSettings {
+            Duration: 0.75
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          ExecutePhaseSettings {
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.75
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "1hand_melee_slash_right"
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
+        }
+      }
+      Objects {
+        Id: 17705506289859576850
+        Name: "SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10581584838822041464
+        ChildIds: 3787785440828830089
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 3787785440828830089
+        Name: "Axe Tree Wood Chop Hit Impact 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17705506289859576850
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 16276614057494287161
+          }
+          Volume: 1
+          Falloff: -1
+          Radius: -1
+          EnableOcclusion: true
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
     }
     Assets {
       Id: 3952687263757153161
@@ -588,6 +786,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_metal_shovel_dirt_dig_quick_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 16276614057494287161
+      Name: "Axe Tree Wood Chop Hit Impact 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_axe_tree_wood_chop_hit_impact_01a_Cue_ref"
       }
     }
     PrimaryAssetId {
