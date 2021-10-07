@@ -1,6 +1,6 @@
 Assets {
   Id: 15059549690028216849
-  Name: "ItemModel_Pickaxe_C"
+  Name: "ItemModel_Pickaxe"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

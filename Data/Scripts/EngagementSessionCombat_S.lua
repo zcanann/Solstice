@@ -1,29 +1,42 @@
 -- Defines the engagement session between the player and an object or enemy, such as during mining, cooking, or fighting
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
 local Framework = require(script:GetCustomProperty("Framework"))
+
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
-local propRequiredItemType = script:GetCustomProperty("RequiredItemType")
-local propResourceItem = script:GetCustomProperty("ResourceItem")
-local propSkillId = script:GetCustomProperty("SkillId")
-local propExp = script:GetCustomProperty("Exp")
-local propBaseDuration = script:GetCustomProperty("BaseDuration")
-local propMinResources = script:GetCustomProperty("MinResources")
-local propMaxResources = script:GetCustomProperty("MaxResources")
+local propHealth = script:GetCustomProperty("Health")
+local propAttackSpeed = script:GetCustomProperty("AttackSpeed")
+local propDropTable = script:GetCustomProperty("DropTable")
+local propRequiredSlayerLevel = script:GetCustomProperty("RequiredSlayerLevel")
 local propRespawnTimeMin = script:GetCustomProperty("RespawnTimeMin")
 local propRespawnTimeMax = script:GetCustomProperty("RespawnTimeMax")
 
 local engagedPlayers = { }
-local remainingResources = 0
+
+-- Respawn state
+local isAlive = false
 local respawnTimer = 0.0
+local health = 0
+
+-- Combat state
+local attackTimer = 0.0
 
 local animationMap = {
-    [ "pickaxe" ]       = "MiningAnimation",
-    [ "shovel" ]        = "DiggingAnimation",
-    [ "hatchet" ]       = "WoodCuttingAnimation",
-    [ "fishing_pole" ]  = "FishingAnimation",
-    [ "fishing_net" ]   = "NetFishingAnimation",
+    [ "dagger" ]            = "DaggerAnimations",
+    [ "sword_1h" ]          = "MiningAnimation",
+    [ "sword_2h" ]          = "DiggingAnimation",
+    [ "axe_1h" ]            = "Axe1hAnimations",
+    [ "axe_2h" ]            = "Axe2hAnimations",
+    [ "mace_1h" ]           = "Mace1hAnimations",
+    [ "mace_2h" ]           = "Mace2hAnimations",
+    [ "polearm" ]           = "PolearmAnimations",
+    [ "claw" ]              = "ClawAnimations",
+    [ "crossbow" ]          = "CrossBowAnimations",
+    [ "bow" ]               = "BowAnimations",
+    [ "wand" ]              = "WandAnimations",
+    [ "staff" ]             = "StaffAnimations",
+    [ "shield" ]            = "ShieldAnimations",
 }
 
 function IsPlayerConnected(player)
@@ -40,6 +53,11 @@ function Connect(player)
 
     -- Deny the request if at our engagement limit
     if propMaxEngagements >= 0 and #engagedPlayers >= propMaxEngagements then
+        return
+    end
+
+    -- Deny requests for attacking dead enemies
+    if not isAlive then
         return
     end
 
@@ -65,7 +83,7 @@ function Connect(player)
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. player.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { player.id, propProximityNetworkedObject.id, animationMap[propRequiredItemType] } })
+        { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { player.id, propProximityNetworkedObject.id, "MiningAnimation" } })
 end
 
 function Disconnect(player)
@@ -79,17 +97,26 @@ function Disconnect(player)
         { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil }})
 end
 
+function DisconnectAllPlayers()
+    for player, _ in pairs(engagedPlayers) do
+        Disconnect(player)
+    end
+end
+
 function Tick(deltaSeconds)
     Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
 
     for player, _ in pairs(engagedPlayers) do
         CheckForInterruption(player)
-        CheckForResourceExtracted(player, deltaSeconds)
+        CheckForPlayerAutoAttack(player, deltaSeconds)
     end
+
+    -- Check enemy attack after players, to give the player same-frame advantage
+    CheckForEnemyAutoAttack(deltaSeconds)
     CheckForRespawn(deltaSeconds)
 end
 
-function CheckForResourceExtracted(player, deltaSeconds)
+function CheckForPlayerAutoAttack(player, deltaSeconds)
     if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return
     end
@@ -97,20 +124,29 @@ function CheckForResourceExtracted(player, deltaSeconds)
     local duration = player.serverUserData.engagement.duration or 0.0
     duration = duration + deltaSeconds
 
-    if remainingResources <= 0 then
-        Disconnect(player)
-        return
-    end
+    local playerAttackSpeedBase = 3.0
+    local playerDamageBase = 2
+    local propWeaponSkill = "attack"
+    local exp = 50 -- TODO: Figure this out. Calc off of damage done * enemy combat level or stat sheet
 
-    if duration > propBaseDuration then
+    -- TODO: Adjust for weapon (it is important that we count up and not down, to avoid weapon hotswap timer abuse)
+    -- TODO: offhand timer as well (shouldn't tick if not equipped)
+
+    if duration > playerAttackSpeedBase then
         -- Remove the resource that was extracted
-        SetRemainingResources(CoreMath.Clamp(remainingResources - 1, 0, propMaxResources))
+        SetEnemyHealth(GetEnemyHealth() - playerDamageBase)
 
         -- Give the player exp, reset their engagement duration
-        player.serverUserData.engagement.duration = math.fmod(duration, propBaseDuration)
-        Framework.Database.AddSkillExp(player, propSkillId, propExp)
+        player.serverUserData.engagement.duration = math.fmod(duration, playerAttackSpeedBase)
+        Framework.Database.AddSkillExp(player, propWeaponSkill, exp)
     else
         player.serverUserData.engagement.duration = duration
+    end
+end
+
+function CheckForEnemyAutoAttack(deltaSeconds)
+    if not isAlive then
+        return
     end
 end
 
@@ -124,24 +160,47 @@ function CheckForInterruption(player)
     end
 end
 
+function SetEnemyHealth(newHealth)
+    if not isAlive then return end
+
+    health = CoreMath.Clamp(newHealth, 0, propHealth)
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Enemy.HEALTH, GetEnemyHealth() })
+
+    if health <= 0 then
+        isAlive = false
+        -- TODO: Death anim event or something idk
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Enemy.IS_ALIVE, isAlive })
+        DisconnectAllPlayers()
+    end
+end
+
+function GetEnemyHealth()
+    return health
+end
+
 function CheckForRespawn(deltaSeconds)
-    if remainingResources == 0 then
+    if not isAlive then
         respawnTimer = respawnTimer - deltaSeconds
         if respawnTimer <= 0.0 then
-            SetRemainingResources(math.random(propMinResources, propMaxResources))
+            Respawn()
         end
     end
 end
 
-function SetRemainingResources(newRemainingResources)
-    remainingResources = newRemainingResources
+function Respawn()
+    if isAlive then
+        return
+    end
+
+    isAlive = true
+    SetEnemyHealth(propHealth)
 
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, remainingResources })
+        { Framework.RuntimeDataStore.Keys.Proximity.Enemy.IS_ALIVE, isAlive })
 
-    if remainingResources == 0.0 then
-        respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
-    end
+    respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
 end
 
 Events.ConnectForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)

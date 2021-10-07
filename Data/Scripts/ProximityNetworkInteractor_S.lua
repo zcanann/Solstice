@@ -11,6 +11,7 @@ local propInteractor = script:GetCustomProperty("Interactor"):WaitForObject()
 local propReplicationTrigger = script:GetCustomProperty("ReplicationTrigger"):WaitForObject()
 local propDiscardTrigger = script:GetCustomProperty("DiscardTrigger"):WaitForObject()
 
+local triggerRadius = 50 * propReplicationTrigger:GetScale().x
 local owningPlayer = nil
 
 function BindToPlayer(player)
@@ -23,9 +24,6 @@ function BindToPlayer(player)
     propReplicationTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
     propReplicationTrigger.endOverlapEvent:Connect(OnEndOverlap)
     propDiscardTrigger.endOverlapEvent:Connect(OnEndOverlap)
-
-    -- Since the player proximity object spawns on the player, the trigger overlap event may not be called properly. Manually call it.
-    OnBeginOverlap(propReplicationTrigger, owningPlayer)
 end
 
 function OnBeginOverlap(trigger, object)
@@ -44,11 +42,19 @@ function OnEndOverlap(trigger, object)
     end
 end
 
--- Hacky way to ensure that the trigger collides with stuff nearby after spawn.
--- Shrink the size down to zero, then on the next frame restore the trigger size.
-local originalScale = propInteractor:GetScale()
-propInteractor:SetScale(Vector3.ZERO)
+-- This seems to be a limitation of Core, but the trigger does not pick up objects it spawns on top of
+-- So we manually call BeginOverlap on those. Needs to be done on the next frame due to timing issues.
 Task.Spawn(function ()
-    propInteractor:SetScale(originalScale)
+    local allObjects = World.FindObjectsOverlappingSphere(propInteractor:GetWorldPosition(), triggerRadius)
+    for _, object in ipairs(allObjects) do
+        OnBeginOverlap(propReplicationTrigger, object)
+    end
 end)
 
+function OnPlayerJoined(player)
+    if (player:GetWorldPosition() - propReplicationTrigger:GetWorldPosition()).size <= triggerRadius then
+        OnBeginOverlap(propReplicationTrigger, player)
+    end
+end
+
+ Game.playerJoinedEvent:Connect(OnPlayerJoined)

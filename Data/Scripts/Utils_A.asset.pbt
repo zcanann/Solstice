@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:ObjectsUtils"
+        AssetReference {
+          Id: 12711822042249602293
+        }
+      }
+      Overrides {
         Name: "cs:TableUtils"
         AssetReference {
           Id: 11279245430205585369

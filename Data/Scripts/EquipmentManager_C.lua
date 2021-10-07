@@ -8,8 +8,8 @@ function OnPlayerNetworkedDataChanged(player, data)
 
     --[[
 	local engagementData = nil
-	if data and data[Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION] then
-		engagementData = data[Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION]
+	if data and data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION] then
+		engagementData = data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION]
 	end
     --]]
 end

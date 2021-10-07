@@ -5,6 +5,12 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:EntityProximityKeys"
+        AssetReference {
+          Id: 15897259857987524540
+        }
+      }
+      Overrides {
         Name: "cs:PlayerProximityKeys"
         AssetReference {
           Id: 16499750549434650342

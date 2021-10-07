@@ -31,5 +31,5 @@ end
 -- Default to fully extracted until we get an update from the server
 OnResourceAmountChanged({ Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, 0 })
 
-Framework.Print("LISTENING: " .. Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT .. propProximityNetworkedObject.id)
+-- Framework.Print("LISTENING: " .. Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT .. propProximityNetworkedObject.id)
 Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. propProximityNetworkedObject.id, OnResourceAmountChanged)

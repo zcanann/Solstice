@@ -142,11 +142,11 @@ Objects {
     }
     Overrides {
       Name: "cs:Debug"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:VerboseDebug"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:SaveDataFile:isrep"

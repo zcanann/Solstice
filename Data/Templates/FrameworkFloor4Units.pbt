@@ -1,13 +1,13 @@
 Assets {
-  Id: 3731727043121398885
-  Name: "FrameworkFloor8Units_C"
+  Id: 267826811378660456
+  Name: "FrameworkFloor4Units"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 2806421928153611805
+      RootId: 16366425138657730607
       Objects {
-        Id: 2806421928153611805
-        Name: "FrameworkFloor8Units"
+        Id: 16366425138657730607
+        Name: "FrameworkFloor4Units"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,7 @@ Assets {
           }
         }
         ParentId: 15393860705899249997
-        ChildIds: 13324398373553912236
+        ChildIds: 9953809163684583487
         UnregisteredParameters {
           Overrides {
             Name: "cs:MinimapColor"
@@ -28,20 +28,20 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:WorldSize"
-            Vector {
-              X: 800
-              Y: 800
-              Z: 25
-            }
-          }
-          Overrides {
             Name: "cs:MinimapColor:isrep"
             Bool: false
           }
           Overrides {
             Name: "cs:MinimapColor:ml"
             Bool: false
+          }
+          Overrides {
+            Name: "cs:WorldSize"
+            Vector {
+              X: 400
+              Y: 400
+              Z: 25
+            }
           }
           Overrides {
             Name: "cs:WorldSize:isrep"
@@ -69,12 +69,12 @@ Assets {
         }
       }
       Objects {
-        Id: 13324398373553912236
-        Name: "Whitebox Floor 01 8m x 8m"
+        Id: 9953809163684583487
+        Name: "Floor"
         Transform {
           Location {
-            X: -400
-            Y: 400
+            X: -200
+            Y: 200
           }
           Rotation {
           }
@@ -84,16 +84,16 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 2806421928153611805
+        ParentId: 16366425138657730607
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Building_Ceiling:id"
+            Name: "ma:Building_Floor:id"
             AssetReference {
               Id: 14031147348977058477
             }
           }
           Overrides {
-            Name: "ma:Building_Floor:id"
+            Name: "ma:Building_Ceiling:id"
             AssetReference {
               Id: 14031147348977058477
             }
@@ -131,7 +131,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 17546982558755096284
+            Id: 12275331458048396755
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -148,12 +148,12 @@ Assets {
       }
     }
     Assets {
-      Id: 17546982558755096284
-      Name: "Whitebox Floor 01 8m x 8m"
+      Id: 12275331458048396755
+      Name: "Whitebox Floor 01 4m x 4m"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_gen_whitebox_floor_001_8x8"
+        AssetId: "sm_ts_gen_whitebox_floor_001_4x4"
       }
     }
     Assets {
@@ -172,4 +172,5 @@ Assets {
   }
   SerializationVersion: 100
   VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Floors"
 }

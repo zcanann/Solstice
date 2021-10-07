@@ -1,6 +1,6 @@
 Assets {
   Id: 16286238835124068270
-  Name: "FrameworkStairs_C"
+  Name: "FrameworkStairs"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -580,4 +580,5 @@ Assets {
   }
   SerializationVersion: 100
   VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Interior"
 }

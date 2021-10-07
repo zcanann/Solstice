@@ -8,14 +8,16 @@ end
 
 if Environment.IsClient() then
     Framework.Print = function (string)
-        print("CLIENT: " .. tostring(string))
-        Chat.LocalMessage("CLIENT: " .. tostring(string))
+        local prefix = "CLIENT (" .. Game.GetLocalPlayer().name .. "): "
+        print(prefix .. tostring(string))
+        Chat.LocalMessage(prefix .. tostring(string))
     end
     Framework.Audio = require(script:GetCustomProperty("Audio"))
 else
     Framework.Print = function (string)
-        print("SERVER: " .. tostring(string))
-        Chat.BroadcastMessage("SERVER: " .. tostring(string))
+        local prefix = "SERVER: "
+        print(prefix.. tostring(string))
+        Chat.BroadcastMessage(prefix .. tostring(string))
     end
 end
 

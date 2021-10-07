@@ -185,6 +185,14 @@ function dump_object(object, nmemo, memo, acc)
 		acc[#acc + 1] = 'i'
 	else
 		local t = type(object)
+
+		if Object.IsValid(object) then
+			if object:IsA("Player") then
+				dump_type.string(object.id, nmemo, memo, acc)
+				return object.id
+			end
+		end
+
 		if not dump_type[t] then
 			warn('cannot dump type ' .. t)
 		else

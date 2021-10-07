@@ -1,6 +1,6 @@
 Assets {
   Id: 13401275499172607929
-  Name: "FrameworkVeinCopper_C"
+  Name: "FrameworkVeinCopper"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

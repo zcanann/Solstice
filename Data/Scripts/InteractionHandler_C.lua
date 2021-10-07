@@ -22,6 +22,7 @@ end
 local function OnMouseDown(cursorPosition, primary)
     local hitResult = UI.GetCursorHitResult()
     if hitResult ~= nil and hitResult.other ~= nil then
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
         -- Check for interactions
         if TryInteractRecursive(hitResult.other, primary) then
             return
@@ -37,7 +38,6 @@ local function OnMouseDown(cursorPosition, primary)
         if primary then
             genericWalkHere()
         else
-            Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
             Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", genericWalkHere })
         end
     end

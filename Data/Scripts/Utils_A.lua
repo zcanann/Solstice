@@ -15,6 +15,7 @@ else
     Utils.Dev = require(script:GetCustomProperty("DevUtils"))
 end
 
+Utils.Objects = require(script:GetCustomProperty("ObjectsUtils"))
 Utils.Table = require(script:GetCustomProperty("TableUtils"))
 
 return Utils

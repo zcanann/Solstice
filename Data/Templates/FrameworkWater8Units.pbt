@@ -1,13 +1,13 @@
 Assets {
-  Id: 267826811378660456
-  Name: "FrameworkFloor4Units_C"
+  Id: 1478407355101215876
+  Name: "FrameworkWater8Units"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 16366425138657730607
+      RootId: 7397129992472010602
       Objects {
-        Id: 16366425138657730607
-        Name: "FrameworkFloor4Units"
+        Id: 7397129992472010602
+        Name: "FrameworkWater8Units"
         Transform {
           Scale {
             X: 1
@@ -16,15 +16,22 @@ Assets {
           }
         }
         ParentId: 15393860705899249997
-        ChildIds: 9953809163684583487
+        ChildIds: 236505525849178970
         UnregisteredParameters {
           Overrides {
             Name: "cs:MinimapColor"
             Color {
-              R: 0.25
-              G: 0.25
-              B: 0.25
+              G: 0.318940252
+              B: 0.429999948
               A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:WorldSize"
+            Vector {
+              X: 800
+              Y: 800
+              Z: 25
             }
           }
           Overrides {
@@ -34,14 +41,6 @@ Assets {
           Overrides {
             Name: "cs:MinimapColor:ml"
             Bool: false
-          }
-          Overrides {
-            Name: "cs:WorldSize"
-            Vector {
-              X: 400
-              Y: 400
-              Z: 25
-            }
           }
           Overrides {
             Name: "cs:WorldSize:isrep"
@@ -69,51 +68,25 @@ Assets {
         }
       }
       Objects {
-        Id: 9953809163684583487
-        Name: "Floor"
+        Id: 236505525849178970
+        Name: "Plane 4m - Two Sided"
         Transform {
           Location {
-            X: -200
-            Y: 200
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
+            X: 2
+            Y: 2
             Z: 1
           }
         }
-        ParentId: 16366425138657730607
+        ParentId: 7397129992472010602
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Building_Floor:id"
+            Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 14031147348977058477
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Ceiling:id"
-            AssetReference {
-              Id: 14031147348977058477
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Ceiling:color"
-            Color {
-              R: 0.48627454
-              G: 0.694117665
-              B: 0.905882418
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.48627454
-              G: 0.694117665
-              B: 0.905882418
-              A: 1
+              Id: 15472391135026288383
             }
           }
         }
@@ -131,12 +104,15 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12275331458048396755
+            Id: 8258963331590073154
           }
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -148,21 +124,21 @@ Assets {
       }
     }
     Assets {
-      Id: 12275331458048396755
-      Name: "Whitebox Floor 01 4m x 4m"
+      Id: 8258963331590073154
+      Name: "Plane 4m - Two Sided"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_gen_whitebox_floor_001_4x4"
+        AssetId: "sm_plane_4m_002"
       }
     }
     Assets {
-      Id: 14031147348977058477
-      Name: "Bricks Wall Flat 01"
+      Id: 15472391135026288383
+      Name: "Generic Water - No Distortion"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_brick_wall_flat_001"
+        AssetId: "fxma_parameter_driven_water_nodistortion"
       }
     }
     PrimaryAssetId {
@@ -172,4 +148,5 @@ Assets {
   }
   SerializationVersion: 100
   VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Water"
 }

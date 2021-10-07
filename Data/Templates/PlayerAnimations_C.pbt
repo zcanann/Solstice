@@ -19,6 +19,7 @@ Assets {
         ChildIds: 8839406639407707556
         ChildIds: 3096937362698812056
         ChildIds: 10581584838822041464
+        ChildIds: 1639223025883237009
         UnregisteredParameters {
           Overrides {
             Name: "cs:MiningAnimation"
@@ -36,6 +37,12 @@ Assets {
             Name: "cs:WoodCuttingAnimation"
             ObjectReference {
               SubObjectId: 10581584838822041464
+            }
+          }
+          Overrides {
+            Name: "cs:NetFishingAnimation"
+            ObjectReference {
+              SubObjectId: 1639223025883237009
             }
           }
         }
@@ -742,6 +749,202 @@ Assets {
           IsAttenuationEnabled: true
         }
       }
+      Objects {
+        Id: 1639223025883237009
+        Name: "NetFishingAnimation"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13935414811028160519
+        ChildIds: 8640581460529888212
+        ChildIds: 6705508566873894092
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Ability"
+            ObjectReference {
+              SubObjectId: 8640581460529888212
+            }
+          }
+          Overrides {
+            Name: "cs:SFX1"
+            ObjectReference {
+              SubObjectId: 2838435339832582732
+            }
+          }
+          Overrides {
+            Name: "cs:SFX2"
+            ObjectReference {
+              SelfId: 841534158063459245
+            }
+          }
+          Overrides {
+            Name: "cs:SFX3"
+            ObjectReference {
+              SelfId: 841534158063459245
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 8640581460529888212
+        Name: "Ability"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1639223025883237009
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Ability {
+          IsEnabled: true
+          CastPhaseSettings {
+            Duration: 0.75
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          ExecutePhaseSettings {
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          RecoveryPhaseSettings {
+            Duration: 0.75
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          CooldownPhaseSettings {
+            CanRotate: true
+            Facing_V2 {
+              Value: "mc:eabilitysetfacing:none"
+            }
+          }
+          Animation: "unarmed_watering_can"
+          KeyBinding_v2 {
+            Value: "mc:egameaction:invalid"
+          }
+        }
+      }
+      Objects {
+        Id: 6705508566873894092
+        Name: "SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 1639223025883237009
+        ChildIds: 2838435339832582732
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 2838435339832582732
+        Name: "Ambience Nature Water Shore Lake Bank Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6705508566873894092
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 3985868633225526889
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            Volume: 0.5
+            Falloff: 3600
+            Radius: 400
+            EnableOcclusion: true
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+            StopTime: 3
+          }
+        }
+      }
     }
     Assets {
       Id: 3952687263757153161
@@ -795,6 +998,15 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_axe_tree_wood_chop_hit_impact_01a_Cue_ref"
+      }
+    }
+    Assets {
+      Id: 3985868633225526889
+      Name: "Ambience Nature Water Shore Lake Bank Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_lake_ref"
       }
     }
     PrimaryAssetId {

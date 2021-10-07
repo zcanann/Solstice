@@ -1,6 +1,6 @@
 Assets {
   Id: 11219844824286828183
-  Name: "FrameworkVault_C"
+  Name: "FrameworkVault"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

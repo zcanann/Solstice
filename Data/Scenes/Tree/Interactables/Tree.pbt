@@ -1,6 +1,214 @@
 Name: "Interactables"
 RootId: 17246289419149383775
 Objects {
+  Id: 8851093897244460151
+  Name: "FrameworkNPC_Bandit"
+  Transform {
+    Location {
+      X: -1740
+      Y: 495
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  ChildIds: 5398863021248159492
+  ChildIds: 12873314425862655340
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Interactable"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:Name"
+      String: "Bandit"
+    }
+    Overrides {
+      Name: "cs:Name:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Name:ml"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 12873314425862655340
+  Name: "Behavior"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8851093897244460151
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Behavior"
+  }
+}
+Objects {
+  Id: 5398863021248159492
+  Name: "Model"
+  Transform {
+    Location {
+      X: 4
+      Y: 3
+      Z: -18
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8851093897244460151
+  ChildIds: 17001777464624071307
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 17001777464624071307
+  Name: "Base"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5398863021248159492
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Base"
+  }
+}
+Objects {
+  Id: 4643077484368103303
+  Name: "FrameworkShrimpSchool"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8227559236274747692
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkShrimpSchool"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 400
+            Y: 1135
+            Z: -325
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9563760324718142094
+      value {
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:id"
+          AssetReference {
+            Id: 5966347842877200161
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 2465263127880219465
+    }
+  }
+}
+Objects {
   Id: 3809273289145241491
   Name: "FrameworkTreeBirch"
   Transform {
@@ -30,6 +238,7 @@ Objects {
           Vector {
             X: -545
             Y: 235
+            Z: -25
           }
         }
         Overrides {
@@ -74,6 +283,7 @@ Objects {
           Vector {
             X: -1165
             Y: -905
+            Z: -25
           }
         }
         Overrides {
@@ -125,19 +335,12 @@ Objects {
           Vector {
             X: 400
             Y: -175
+            Z: -25
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -184,6 +387,7 @@ Objects {
           Vector {
             X: -170
             Y: -175
+            Z: -25
           }
         }
         Overrides {
@@ -236,6 +440,7 @@ Objects {
           Vector {
             X: -170
             Y: 695
+            Z: -25
           }
         }
         Overrides {
@@ -278,8 +483,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 310
+            X: 1560
             Y: 235
+            Z: -25
           }
         }
         Overrides {
@@ -301,6 +507,7 @@ Objects {
     Location {
       X: -85
       Y: -650
+      Z: -25
     }
     Rotation {
     }
@@ -1381,7 +1588,7 @@ Objects {
     Location {
       X: -40
       Y: -990
-      Z: 30
+      Z: 5
     }
     Rotation {
     }
@@ -1567,10 +1774,10 @@ Objects {
     Location {
       X: 715
       Y: -1340
-      Z: 30
+      Z: 5
     }
     Rotation {
-      Yaw: -89.9999924
+      Yaw: -90
     }
     Scale {
       X: 1
@@ -1579,7 +1786,6 @@ Objects {
     }
   }
   ParentId: 17246289419149383775
-  ChildIds: 2741213586947593556
   ChildIds: 3386529855223919514
   ChildIds: 18414372708865728013
   UnregisteredParameters {
@@ -2280,7 +2486,6 @@ Objects {
     }
   }
   ParentId: 3506130130456833092
-  ChildIds: 1684233781538977050
   ChildIds: 4585107636047770735
   ChildIds: 1486777449777495566
   UnregisteredParameters {
@@ -2396,182 +2601,6 @@ Objects {
       EnableOcclusion: true
       IsSpatializationEnabled: true
       IsAttenuationEnabled: true
-    }
-  }
-}
-Objects {
-  Id: 1684233781538977050
-  Name: "BasicDoorControllerClient"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3386529855223919514
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:RotationRoot"
-      ObjectReference {
-        SelfId: 18414372708865728013
-      }
-    }
-    Overrides {
-      Name: "cs:OpenSound"
-      ObjectReference {
-        SelfId: 4585107636047770735
-      }
-    }
-    Overrides {
-      Name: "cs:CloseSound"
-      ObjectReference {
-        SelfId: 1486777449777495566
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 321472518781775172
-    }
-  }
-}
-Objects {
-  Id: 2741213586947593556
-  Name: "ServerContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3506130130456833092
-  ChildIds: 17075635765519584973
-  ChildIds: 6041985626847707055
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-    Type: Server
-  }
-}
-Objects {
-  Id: 6041985626847707055
-  Name: "StaticTrigger"
-  Transform {
-    Location {
-      Y: 90
-      Z: 150
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.5
-      Y: 1.8
-      Z: 3
-    }
-  }
-  ParentId: 2741213586947593556
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Trigger {
-    TeamSettings {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    TriggerShape_v2 {
-      Value: "mc:etriggershape:box"
-    }
-  }
-}
-Objects {
-  Id: 17075635765519584973
-  Name: "BasicDoorControllerServer"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2741213586947593556
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 3506130130456833092
-      }
-    }
-    Overrides {
-      Name: "cs:RotationRoot"
-      ObjectReference {
-        SelfId: 18414372708865728013
-      }
-    }
-    Overrides {
-      Name: "cs:RotatingTrigger"
-      ObjectReference {
-        SelfId: 12479819769468662686
-      }
-    }
-    Overrides {
-      Name: "cs:StaticTrigger"
-      ObjectReference {
-        SelfId: 6041985626847707055
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 1031736639489708352
     }
   }
 }

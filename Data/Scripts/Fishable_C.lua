@@ -5,7 +5,7 @@ local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local name = propObject:GetCustomProperty("Name")
 
 function BeginMine()
-    Framework.Print("Attacking...")
+    Framework.Print("Fishing...")
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
 end
 
@@ -25,7 +25,7 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Attack " .. name, callback })
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Fish " .. name, callback })
 end
 
 Events.Connect(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. propObject.id, Interact)

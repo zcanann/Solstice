@@ -1,6 +1,6 @@
 Assets {
   Id: 14757964095706494467
-  Name: "FrameworkWallFantasy8Units_C"
+  Name: "FrameworkWallFantasy8Units"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -72,7 +72,8 @@ Assets {
         Name: "Wall"
         Transform {
           Location {
-            X: -400
+            X: -399.999512
+            Z: -25
           }
           Rotation {
           }
@@ -196,4 +197,5 @@ Assets {
   }
   SerializationVersion: 100
   VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Walls"
 }

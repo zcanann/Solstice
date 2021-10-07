@@ -43,7 +43,7 @@ function MovementHook(player, params)
 	end
 end
 
-function BeginMoveToGoal(goal, callback)
+function BeginMoveToGoal(goal, callback, enforceNavmeshGoal)
 	Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 	goalRachedCallback = callback
 	DestroyIfValid(goalPulse)
@@ -52,11 +52,16 @@ function BeginMoveToGoal(goal, callback)
 	goalPulse = World.SpawnAsset(CLICK_VFX, {position = goal})
 
 	local playerPos = localPlayer:GetWorldPosition()
-	local wayPoints = _G.NavMesh.FindPath(playerPos, goal)
+	local wayPoints = _G.NavMesh.FindPath(playerPos, goal) or { }
 
 	-- Remove the starting waypoint, as the player is already there
-	if wayPoints ~= nil and #wayPoints >= 1 then
+	if #wayPoints >= 1 then
 		table.remove(wayPoints, 1)
+	end
+
+	-- If the navmesh is not enforced, the last waypoint should exactly match the goal
+	if not enforceNavmeshGoal and #wayPoints >= 1 then
+		wayPoints[#wayPoints] = goal
 	end
 
 	remainingWayPoints = wayPoints
@@ -93,12 +98,12 @@ end
 
 function OnMoveToLocation(goal, callback)
 	waypointClearRadius = 0.0
-	BeginMoveToGoal(goal, callback)
+	BeginMoveToGoal(goal, callback, true)
 end
 
 function OnMoveNearLocation(goal, stopRadius, callback)
 	waypointClearRadius = stopRadius
-	BeginMoveToGoal(goal, callback)
+	BeginMoveToGoal(goal, callback, false)
 end
 
 localPlayer.movementHook:Connect(MovementHook)

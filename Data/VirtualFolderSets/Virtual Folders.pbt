@@ -136,5 +136,29 @@ Assets {
       VirtualFolderPath: "Networking"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Floors"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Walls"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Water"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Interior"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Terrain"
+      PlatformAssetType: 13
+    }
   }
 }

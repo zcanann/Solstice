@@ -68,6 +68,7 @@ function ParseMap()
 	local staticObjectsTable = {
 		World.FindObjectsByName("FrameworkFloor4Units"),
 		World.FindObjectsByName("FrameworkFloor8Units"),
+		World.FindObjectsByName("FrameworkWater8Units"),
 		World.FindObjectsByName("FrameworkWallFantasy8Units")
 	}
 	local dynamicObjectsTable = {

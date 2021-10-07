@@ -247,6 +247,8 @@ Assets {
         Name: "Tree Birch 01"
         Transform {
           Location {
+            X: -4
+            Y: 25
             Z: 38
           }
           Rotation {
@@ -305,7 +307,7 @@ Assets {
           }
         }
         ParentId: 15055210502351656642
-        ChildIds: 3335302623054688992
+        ChildIds: 8222903346266266950
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -323,18 +325,18 @@ Assets {
         }
       }
       Objects {
-        Id: 3335302623054688992
-        Name: "Tree Birch Bare 01"
+        Id: 8222903346266266950
+        Name: "Tree Oak Stump 01"
         Transform {
           Location {
-            Z: 38
+            Z: 20
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.3
+            Y: 0.3
+            Z: 0.3
           }
         }
         ParentId: 1165548352048504414
@@ -345,14 +347,14 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         CoreMesh {
           MeshAsset {
-            Id: 8581093684588883166
+            Id: 7498710859431192967
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1083,12 +1085,12 @@ Assets {
       }
     }
     Assets {
-      Id: 8581093684588883166
-      Name: "Tree Birch Bare 01"
+      Id: 7498710859431192967
+      Name: "Tree Oak Stump 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_tree_birch_002"
+        AssetId: "sm_tree_oak_stump_001"
       }
     }
     Assets {

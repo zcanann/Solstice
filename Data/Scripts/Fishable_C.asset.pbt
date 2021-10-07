@@ -1,6 +1,6 @@
 Assets {
-  Id: 2766422358801774681
-  Name: "Attackable_C"
+  Id: 4247377252212412615
+  Name: "Fishable_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

@@ -1,12 +1,13 @@
 local Framework = require(script:GetCustomProperty("Framework"))
+
 local propPlayerAnimationsTemplate = script:GetCustomProperty("PlayerAnimationsTemplate")
 
 function OnPlayerNetworkedDataChanged(player, data)
     if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
 
 	local engagementData = nil
-	if data and data[Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION] then
-		engagementData = data[Framework.RuntimeDataStore.Keys.Proximity.Player.ENGAGEMENT_SESSION]
+	if data and data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION] then
+		engagementData = data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION]
 	end
 
 	if not engagementData or #engagementData == 0 then

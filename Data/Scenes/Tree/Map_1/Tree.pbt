@@ -70,41 +70,6 @@ Objects {
   }
 }
 Objects {
-  Id: 6682420712573397411
-  Name: "StaticMap"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 413991195585998862
-  ChildIds: 4133531031245386448
-  ChildIds: 15393860705899249997
-  ChildIds: 15162611111499902024
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    Model {
-    }
-  }
-}
-Objects {
   Id: 15162611111499902024
   Name: "Decor"
   Transform {
@@ -120,7 +85,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6682420712573397411
+  ParentId: 413991195585998862
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -152,7 +117,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6682420712573397411
+  ParentId: 413991195585998862
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -185,7 +150,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6682420712573397411
+  ParentId: 413991195585998862
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
