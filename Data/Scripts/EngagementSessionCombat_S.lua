@@ -82,7 +82,7 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. player.id,
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. player.id,
         { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { player.id, propProximityNetworkedObject.id, "MiningAnimation" } })
 end
 
@@ -93,7 +93,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. player.id,
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. player.id,
         { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil }})
 end
 
@@ -164,14 +164,14 @@ function SetEnemyHealth(newHealth)
     if not isAlive then return end
 
     health = CoreMath.Clamp(newHealth, 0, propHealth)
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Enemy.HEALTH, GetEnemyHealth() })
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Entity.HEALTH, GetEnemyHealth() })
 
     if health <= 0 then
         isAlive = false
         -- TODO: Death anim event or something idk
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Enemy.IS_ALIVE, isAlive })
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Entity.IS_ALIVE, isAlive })
         DisconnectAllPlayers()
     end
 end
@@ -197,8 +197,8 @@ function Respawn()
     isAlive = true
     SetEnemyHealth(propHealth)
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Enemy.IS_ALIVE, isAlive })
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
+        { Framework.RuntimeDataStore.Keys.Proximity.Entity.IS_ALIVE, isAlive })
 
     respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
 end

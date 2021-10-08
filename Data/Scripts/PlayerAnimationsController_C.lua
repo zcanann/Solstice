@@ -10,23 +10,25 @@ function OnPlayerNetworkedDataChanged(player, data)
 		engagementData = data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION]
 	end
 
-	if not engagementData or #engagementData == 0 then
-		-- Destroy animations if there is no engagement data available for the specified player
-		-- TODO: You sure buddy? Maybe if data is nil (ie no networked data due to out of range)
-		if player.clientUserData.animationSet then
-			OnEngagementSessionDisconnected(player)
-			player.clientUserData.animationSet:Destroy()
-			player.clientUserData.animationSet = nil
-		end
-	else
-		if not player.clientUserData.animationSet then
-			-- Spawn client-side animaton sets (which are just several 'abilities' inside a template)
-			player.clientUserData.animationSet = World.SpawnAsset(propPlayerAnimationsTemplate)
-			player.clientUserData.animationSet:AttachToPlayer(player, "upper_spine")
-		end
-
+	if engagementData and #engagementData > 0 then
 		OnEngagementSessionConnected(table.unpack(engagementData, 1, #engagementData))
 	end
+end
+
+function OnPlayerEnteredRange(player)
+    if not player.clientUserData.animationSet then
+        -- Spawn client-side animaton sets (which are just several 'abilities' inside a template)
+        player.clientUserData.animationSet = World.SpawnAsset(propPlayerAnimationsTemplate)
+        player.clientUserData.animationSet:AttachToPlayer(player, "upper_spine")
+    end
+end
+
+function OnPlayerLeftRange(player)
+    OnEngagementSessionDisconnected(player)
+    if player.clientUserData.animationSet then
+        player.clientUserData.animationSet:Destroy()
+        player.clientUserData.animationSet = nil
+    end
 end
 
 function OnEngagementSessionConnected(playerId, objectId, animationName)
@@ -95,3 +97,5 @@ end
 
 Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
 Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, OnPlayerNetworkedDataChanged)
+Events.Connect(Framework.Events.Keys.Networking.EVENT_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
+Events.Connect(Framework.Events.Keys.Networking.EVENT_PLAYER_LEFT_RANGE, OnPlayerLeftRange)

@@ -14,11 +14,20 @@ function OnPlayerNetworkedDataChanged(player, data)
     --]]
 end
 
-function OnPlayerJoined(player)
-    local debugItem = World.SpawnAsset(propDebugItemTemplate, { parent = script })
-
-    debugItem:Equip(player)
+function OnPlayerEnteredRange(player)
+    if not player.clientUserData.equipmentWeapon then
+        player.clientUserData.equipmentWeapon = World.SpawnAsset(propDebugItemTemplate, { parent = script })
+        player.clientUserData.equipmentWeapon:Equip(player)
+    end
 end
 
- Game.playerJoinedEvent:Connect(OnPlayerJoined)
- Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, OnPlayerNetworkedDataChanged)
+function OnPlayerLeftRange(player)
+    if player.clientUserData.equipmentWeapon then
+        player.clientUserData.equipmentWeapon:Destroy()
+        player.clientUserData.equipmentWeapon = nil
+    end
+end
+
+Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, OnPlayerNetworkedDataChanged)
+Events.Connect(Framework.Events.Keys.Networking.EVENT_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
+Events.Connect(Framework.Events.Keys.Networking.EVENT_PLAYER_LEFT_RANGE, OnPlayerLeftRange)

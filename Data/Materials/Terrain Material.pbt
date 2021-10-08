@@ -23,12 +23,10 @@ Assets {
         }
       }
       Overrides {
-        Name: "material1_scale"
-        Float: 2
-      }
-      Overrides {
-        Name: "material1side_scale"
-        Float: 2
+        Name: "cmp:Material1_Sides"
+        AssetReference {
+          Id: 4954162477874652483
+        }
       }
     }
     Assets {
@@ -47,6 +45,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_grass_002_uv"
+      }
+    }
+    Assets {
+      Id: 4954162477874652483
+      Name: "Stone Basic"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "stone_001"
       }
     }
   }

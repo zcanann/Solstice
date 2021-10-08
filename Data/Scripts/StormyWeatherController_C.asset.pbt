@@ -1,6 +1,6 @@
 Assets {
   Id: 11968576244738891005
-  Name: "LightningController_C"
+  Name: "StormyWeatherController_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,6 +11,11 @@ Assets {
       }
       Overrides {
         Name: "cs:LightningVFX"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:RainVolume"
         ObjectReference {
         }
       }
