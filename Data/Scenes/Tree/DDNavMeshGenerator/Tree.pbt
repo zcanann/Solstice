@@ -1,21 +1,53 @@
 Name: "DDNavMeshGenerator"
 RootId: 16058411082915187710
 Objects {
-  Id: 5934024482557335840
-  Name: "NavMeshArea"
+  Id: 17933152444252763159
+  Name: "Group"
   Transform {
     Location {
-      X: 900
     }
     Rotation {
     }
     Scale {
-      X: 225.75
-      Y: 215.500137
-      Z: 35
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 16058411082915187710
+  ChildIds: 5934024482557335840
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 5934024482557335840
+  Name: "NavMeshArea"
+  Transform {
+    Location {
+      Z: 625
+    }
+    Rotation {
+    }
+    Scale {
+      X: 600
+      Y: 500
+      Z: 15
+    }
+  }
+  ParentId: 17933152444252763159
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceon"
   }
@@ -24,6 +56,9 @@ Objects {
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Trigger {
     TeamSettings {

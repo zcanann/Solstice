@@ -160,5 +160,14 @@ Assets {
       VirtualFolderPath: "Terrain"
       PlatformAssetType: 13
     }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Sky"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Environment"
+      PlatformAssetType: 3
+    }
   }
 }

@@ -1,13 +1,13 @@
 Assets {
   Id: 6649119402205580146
-  Name: "Sky Sci-fi 01"
+  Name: "FrameworkOverworldSky"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 12743596547252287504
       Objects {
         Id: 12743596547252287504
-        Name: "Sky SciFi 01"
+        Name: "OverworldSky"
         Transform {
           Scale {
             X: 1
@@ -15,15 +15,14 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 8418417691332516035
         ChildIds: 16595930964934683120
         ChildIds: 8090713207782208821
-        ChildIds: 5561478935585707371
+        ChildIds: 13563809447968731595
         ChildIds: 10944728540396908457
-        ChildIds: 6494906934722217843
-        ChildIds: 2174173908629966191
         ChildIds: 9026950365928682315
         ChildIds: 10290385445252436925
+        ChildIds: 9809684566433867486
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -60,12 +59,15 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "bp:Cloud Shape"
-            Int: 3
+            Enum {
+              Value: "mc:ecloudshapes:3"
+            }
           }
           Overrides {
             Name: "bp:Horizon Color"
             Color {
-              G: 0.0281456392
+              R: 0.0887536481
+              G: 0.142362833
               B: 0.169999957
               A: 0.378000021
             }
@@ -73,8 +75,9 @@ Assets {
           Overrides {
             Name: "bp:Zenith Color"
             Color {
-              R: 0.0188741647
-              B: 0.0299999714
+              R: 0.0117730061
+              G: 0.0387539864
+              B: 0.161458328
               A: 0.6
             }
           }
@@ -89,7 +92,8 @@ Assets {
           Overrides {
             Name: "bp:Cloud Wisp Color"
             Color {
-              R: 0.830000043
+              G: 0.5793944
+              B: 0.830000043
               A: 1
             }
           }
@@ -116,16 +120,17 @@ Assets {
           Overrides {
             Name: "bp:Haze Color"
             Color {
-              G: 0.120000005
-              B: 0.103311256
+              G: 0.340150744
+              B: 0.671875
               A: 0.708
             }
           }
           Overrides {
             Name: "bp:Cloud Ambient Color"
             Color {
-              R: 0.53125
-              B: 0.422185481
+              R: 0.0500000119
+              G: 0.188410223
+              B: 1
               A: 1
             }
           }
@@ -136,15 +141,41 @@ Assets {
           Overrides {
             Name: "bp:High Cloud Color"
             Color {
-              R: 1
-              G: 0.29967767
-              B: 0.565227509
+              R: 0.110000014
+              G: 0.487218499
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "bp:Brightness"
             Float: 2
+          }
+          Overrides {
+            Name: "bp:Cloud Wisp Opacity"
+            Float: 0.490168959
+          }
+          Overrides {
+            Name: "bp:High Cloud Index"
+            Enum {
+              Value: "mc:ehighaltitudecloudshapes:2"
+            }
+          }
+          Overrides {
+            Name: "bp:High Cloud Opacity"
+            Float: 0.0858036205
+          }
+          Overrides {
+            Name: "bp:High Cloud Noise Scale"
+            Float: 0.573257744
+          }
+          Overrides {
+            Name: "bp:High Cloud Noise Amount"
+            Float: 0.445854962
+          }
+          Overrides {
+            Name: "bp:High Cloud Speed"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -172,7 +203,7 @@ Assets {
           }
           Rotation {
             Pitch: -38.9736328
-            Yaw: 8.81244946
+            Yaw: 8.812
             Roll: 11.689105
           }
           Scale {
@@ -190,9 +221,8 @@ Assets {
           Overrides {
             Name: "bp:Light Color"
             Color {
-              R: 1
-              G: 0.36
-              B: 0.716026306
+              R: 0.820000052
+              G: 0.390993387
               A: 1
             }
           }
@@ -224,19 +254,20 @@ Assets {
           Overrides {
             Name: "bp:Sun Disc Color"
             Color {
-              R: 50
-              G: 1
-              B: 2.00000095
+              R: 0.99
+              G: 0.786754966
               A: 1
             }
           }
           Overrides {
             Name: "bp:Size"
-            Float: 3
+            Float: 4.5
           }
           Overrides {
             Name: "bp:Shape"
-            Int: 0
+            Enum {
+              Value: "mc:esundiscshapes:0"
+            }
           }
         }
         Collidable_v2 {
@@ -255,12 +286,12 @@ Assets {
         }
       }
       Objects {
-        Id: 5561478935585707371
-        Name: "Skylight"
+        Id: 13563809447968731595
+        Name: "NormalSky"
         Transform {
           Location {
-            X: 250
-            Y: 300
+            X: 249.999023
+            Y: 299.998047
           }
           Rotation {
           }
@@ -295,15 +326,15 @@ Assets {
           Overrides {
             Name: "bp:Tint Color"
             Color {
-              R: 0.600165844
-              G: 0.34375
+              R: 0.993653417
+              G: 0.989583313
               B: 1
               A: 1
             }
           }
           Overrides {
             Name: "bp:Intensity"
-            Float: 1.5
+            Float: 3.59443
           }
         }
         Collidable_v2 {
@@ -392,130 +423,6 @@ Assets {
         }
       }
       Objects {
-        Id: 6494906934722217843
-        Name: "Nebula"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Pitch: 64.9999237
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12743596547252287504
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Size"
-            Vector {
-              X: 10
-              Y: 10
-              Z: 10
-            }
-          }
-          Overrides {
-            Name: "bp:Nebula"
-            Int: 3
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 2617361319805279588
-          }
-        }
-      }
-      Objects {
-        Id: 2174173908629966191
-        Name: "Planet"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Pitch: -25.303009
-            Yaw: -62.5814514
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12743596547252287504
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Planet Appearance"
-            Enum {
-              Value: "mc:eplanetaryappearance:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Brightness"
-            Float: 6
-          }
-          Overrides {
-            Name: "bp:Cloud Appearance"
-            Enum {
-              Value: "mc:eplanetcloudappearance:1"
-            }
-          }
-          Overrides {
-            Name: "bp:Dark Side Lights"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Cloud Scale"
-            Vector {
-              X: 1
-              Y: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Cloud Color"
-            Color {
-              R: 1
-              G: 0.539205313
-              B: 0.51
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 18441810659176357459
-          }
-        }
-      }
-      Objects {
         Id: 9026950365928682315
         Name: "Moon"
         Transform {
@@ -581,14 +488,12 @@ Assets {
       }
       Objects {
         Id: 10290385445252436925
-        Name: "Moon"
+        Name: "MassiveMoon"
         Transform {
           Location {
           }
           Rotation {
-            Pitch: -33.9227905
-            Yaw: 143.455612
-            Roll: -14.8456116
+            Pitch: -90
           }
           Scale {
             X: 1
@@ -600,7 +505,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "bp:Brightness"
-            Float: 5
+            Float: 25
           }
           Overrides {
             Name: "bp:Moon Appearance"
@@ -626,6 +531,90 @@ Assets {
           Overrides {
             Name: "bp:Scale"
             Float: 3
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 0.909999967
+              B: 0.909999967
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Moon Rotation"
+            Vector {
+              Y: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Dark Side Lights Transition Offset"
+            Float: 0.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 1353607577508895962
+          }
+        }
+      }
+      Objects {
+        Id: 9809684566433867486
+        Name: "MagmaMoon"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -65
+            Roll: -45
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12743596547252287504
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Brightness"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "bp:Moon Appearance"
+            Int: 0
+          }
+          Overrides {
+            Name: "bp:Dark Side Lights Appearance"
+            Enum {
+              Value: "mc:edarksidelights:1"
+            }
+          }
+          Overrides {
+            Name: "bp:Dark Side Lights Tint"
+            Color {
+              R: 3
+              G: 2
+              B: 1.12634695
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Dark Side Lights"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Scale"
+            Float: 1.52513754
           }
           Overrides {
             Name: "bp:Color"
@@ -700,24 +689,6 @@ Assets {
       }
     }
     Assets {
-      Id: 2617361319805279588
-      Name: "Nebula"
-      PlatformAssetType: 6
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "CORESKY_Nebula"
-      }
-    }
-    Assets {
-      Id: 18441810659176357459
-      Name: "Planet"
-      PlatformAssetType: 6
-      PrimaryAsset {
-        AssetType: "BlueprintAssetRef"
-        AssetId: "CORESKY_Planet"
-      }
-    }
-    Assets {
       Id: 1353607577508895962
       Name: "Moon"
       PlatformAssetType: 6
@@ -732,4 +703,6 @@ Assets {
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Sky"
 }

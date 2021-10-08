@@ -249,18 +249,18 @@ Objects {
     Overrides {
       Name: "cs:TileSize"
       Vector {
-        X: 128
-        Y: 128
-        Z: 128
+        X: 300
+        Y: 300
+        Z: 300
       }
     }
     Overrides {
       Name: "cs:MaxAllowedSlope"
-      Float: 0.7
+      Float: 0.55
     }
     Overrides {
       Name: "cs:MaxUnitHeight"
-      Float: 128
+      Float: 200
     }
     Overrides {
       Name: "cs:MaxUnitSizeRadius"
