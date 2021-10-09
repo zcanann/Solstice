@@ -1,20 +1,41 @@
 local TableUtils = require(script:GetCustomProperty("TableUtils"))
 
-local Events = { }
+local EventsAPI = { }
 
-Events.Broadcast = require(script:GetCustomProperty("Broadcast"))
-Events.Keys = { }
+-- Custom connection functions that allow for us to reliably send local events (ie resending an event if there was no listener ready to hear it)
+-- See Broadcast_A for resending logic.
 
-Events.Keys.Chat = require(script:GetCustomProperty("ChatCommandEvents"))
-Events.Keys.Engagement = require(script:GetCustomProperty("EngagementEvents"))
-Events.Keys.Input = require(script:GetCustomProperty("InputEvents"))
-Events.Keys.Interaction = require(script:GetCustomProperty("InteractionEvents"))
-Events.Keys.Movement = require(script:GetCustomProperty("MovementEvents"))
-Events.Keys.Networking = require(script:GetCustomProperty("NetworkingEvents"))
-Events.Keys.Skill = require(script:GetCustomProperty("SkillEvents"))
+EventsAPI.Connect = function (key, callback)
+    if not _G.frameworkEventsAPI then
+        _G.frameworkEventsAPI = { }
+    end
 
--- Map all events to shorter names, following the format of "e{i}_"
--- This is done such that any event used in an RPC to/from the client and server is shortened as much as possible
-Events.EventNameMappings = TableUtils.CondenseStringConstants(Events.Keys, "e")
+    _G.frameworkEventsAPI[key] = Events.Connect(key, callback)
+    local wrapper = { }
 
-return Events
+    wrapper.Disconnect = function ()
+        if  _G.frameworkEventsAPI[key] then
+            _G.frameworkEventsAPI[key].Disconnect()
+            _G.frameworkEventsAPI[key] = nil
+        end
+    end
+
+    return wrapper
+end
+
+EventsAPI.ConnectForPlayer = function (key, callback, ...)
+    return Events.ConnectForPlayer(key, callback, ...)
+end
+
+EventsAPI.ConnectUnique = function (key, callback)
+    if assert(_G.frameworkEventsAPI[key] == nil) then
+        return EventsAPI.Connect(key, callback)
+    end
+
+    return nil
+end
+
+EventsAPI.Broadcast = require(script:GetCustomProperty("Broadcast"))
+EventsAPI.Keys = require(script:GetCustomProperty("EventKeys"))
+
+return EventsAPI

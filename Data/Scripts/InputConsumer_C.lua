@@ -13,4 +13,4 @@ function OnMouseDown(cursorPosition, primary)
 	end
 end
 
-Events.Connect(Framework.Events.Keys.Input.EVENT_UI_MOUSE_DOWN, OnMouseDown)
+Framework.Events.Connect(Framework.Events.Keys.Input.EVENT_UI_MOUSE_DOWN, OnMouseDown)

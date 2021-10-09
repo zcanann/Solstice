@@ -262,6 +262,6 @@ end
 
 Chat.receiveMessageHook:Connect(PlayerChatHandler)
 
-Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, OnPlayerNetworkedDataChanged)
-Events.Connect(Framework.Events.Keys.Networking.EVENT_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
-Events.Connect(Framework.Events.Keys.Networking.EVENT_PLAYER_LEFT_RANGE, OnPlayerLeftRange)
+Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, OnPlayerNetworkedDataChanged)
+Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
+Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)

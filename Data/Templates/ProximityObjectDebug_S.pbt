@@ -70,7 +70,7 @@ Assets {
         Name: "UIContainer"
         Transform {
           Location {
-            Z: 200
+            Z: 250
           }
           Rotation {
           }
@@ -208,7 +208,7 @@ Assets {
         Name: "UIContainer"
         Transform {
           Location {
-            Z: 300
+            Z: 200
           }
           Rotation {
             Yaw: 90
@@ -347,7 +347,7 @@ Assets {
         Name: "UIContainer"
         Transform {
           Location {
-            Z: 200
+            Z: 250
           }
           Rotation {
             Yaw: 180

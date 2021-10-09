@@ -45,5 +45,5 @@ end
 
 SetRunToggle(false)
 
-Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVEMENT_STATE_UPDATED, OnMovementStateUpdated)
+Framework.Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVEMENT_STATE_UPDATED, OnMovementStateUpdated)
 propRunToggleButton.clickedEvent:Connect(OnClick)

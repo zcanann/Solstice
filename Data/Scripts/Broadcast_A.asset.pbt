@@ -10,6 +10,18 @@ Assets {
           Id: 10763479141974973317
         }
       }
+      Overrides {
+        Name: "cs:EventKeys"
+        AssetReference {
+          Id: 13417662635723226159
+        }
+      }
+      Overrides {
+        Name: "cs:Logger"
+        AssetReference {
+          Id: 4739618440715284858
+        }
+      }
     }
   }
   SerializationVersion: 100

@@ -6,4 +6,4 @@ function OnInterruptEngagement(player)
     end
 end
 
-Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_INTERRUPT, OnInterruptEngagement)
+Framework.Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_INTERRUPT, OnInterruptEngagement)

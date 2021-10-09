@@ -346,7 +346,7 @@ local function TableCondenseStringConstantsRecurse(currentTable, keyIndexRef, pr
 	for varName, contents in SortedTable.New(currentTable):Pairs() do
 		if type(contents) == "string" then
 			currentTable[varName] = prefix .. tostring(keyIndexRef[1]) .. "_"
-			renameMapping[contents] = currentTable[varName]
+			renameMapping[currentTable[varName]] = contents
 			keyIndexRef[1] = keyIndexRef[1] + 1
 		elseif type(contents) == "table" then
 			TableCondenseStringConstantsRecurse(contents, keyIndexRef, prefix, renameMapping)

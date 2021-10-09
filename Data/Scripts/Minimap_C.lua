@@ -373,7 +373,7 @@ end
 propZoomInButton.clickedEvent:Connect(OnZoomIn)
 propZoomOutButton.clickedEvent:Connect(OnZoomOut)
 
-Events.Connect(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
-Events.Connect(Framework.Events.Keys.Input.EVENT_UI_MOUSE_DOWN, OnMouseDown)
+Framework.Events.Connect(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, OnWaypointsSet)
+Framework.Events.Connect(Framework.Events.Keys.Input.EVENT_UI_MOUSE_DOWN, OnMouseDown)
 ParseMap()
 OnZoomChanged()

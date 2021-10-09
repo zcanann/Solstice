@@ -24,6 +24,8 @@ SubBannerMessage(String message)
 SubBannerMessage(String message, float duration, Color)
 --]]
 
+local Framework = require(script:GetCustomProperty("Framework"))
+
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local CANVAS = script:GetCustomProperty("Canvas"):WaitForObject()
@@ -112,5 +114,5 @@ end
 
 -- Initialize
 PANEL.visibility = Visibility.FORCE_OFF
-Events.Connect("BannerMessage", OnBannerMessageEvent)
-Events.Connect("SubBannerMessage", OnSubBannerMessage)
+Framework.Events.Connect("BannerMessage", OnBannerMessageEvent)
+Framework.Events.Connect("SubBannerMessage", OnSubBannerMessage)

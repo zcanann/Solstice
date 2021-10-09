@@ -28,15 +28,13 @@ function BindToPlayer(player)
     propDiscardTrigger.endOverlapEvent:Connect(OnEndOverlap)
 end
 
-function OnBeginOverlap(trigger, object, broadcastInverse)
+function OnBeginOverlap(trigger, object)
     if trigger == propReplicationTrigger then
         if object:IsA("Player") or (object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider")) then
-            Framework.Print("SENDING... " .. object.id)
-            Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. object.id, { owningPlayer })
+            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. object.id, { owningPlayer })
 
             if object:IsA("Player") then
-                Framework.Print("SENDING... " .. owningPlayer.id)
-                Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. owningPlayer.id, { object })
+                Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. owningPlayer.id, { object })
             end
         end
     end
@@ -45,12 +43,15 @@ end
 function OnEndOverlap(trigger, object)
     if trigger == propDiscardTrigger then
         if object:IsA("Player") or (object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider")) then
-            Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. object.id, { owningPlayer })
+            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. object.id, { owningPlayer })
         end
     end
 end
 
 function OnPlayerJoinedExternal(player)
+    if (player:GetWorldPosition() - propInteractor:GetWorldPosition()).size <= triggerRadius then
+        OnBeginOverlap(propReplicationTrigger, player)
+    end
 end
 
 -- This seems to be a limitation of Core, but the trigger does not pick up objects it spawns on top of
@@ -58,7 +59,7 @@ end
 function InitializeObjectsInRange()
     local allObjects = World.FindObjectsOverlappingSphere(propInteractor:GetWorldPosition(), triggerRadius)
     for _, object in ipairs(allObjects) do
-        OnBeginOverlap(propReplicationTrigger, object, true)
+        OnBeginOverlap(propReplicationTrigger, object)
     end
 end
 

@@ -62,10 +62,9 @@ end
 
 function TryBindEvents()
     if propProximityNetworkedObject then
-        Framework.Print("LISTENING... " .. propProximityNetworkedObject.id)
-        Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id, OnServerSetProximityData)
-        Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerEnteredRange)
-        Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerLeftRange)
+        Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id, OnServerSetProximityData)
+        Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerEnteredRange)
+        Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerLeftRange)
         DrawDebugData()
     end
 end
@@ -88,7 +87,7 @@ function DrawDebugData()
         local propPlayersInRangeText4 = proximityObjectDebug:GetCustomProperty("PlayersInRangeText4"):WaitForObject()
 
         Task.Spawn(function()
-            while true do
+            while Object.IsValid(propProximityNetworkedObject) do
                 local pos = propProximityNetworkedObject:GetWorldPosition();
                 CoreDebug.DrawSphere(pos, 100, {
                     duration = 0.01,
@@ -96,6 +95,7 @@ function DrawDebugData()
                 })
     
                 local debugText = ""
+                Framework.Utils.Objects.RemoveInvalidEntriesFromSet(playersInRange)
                 for player, _ in pairs(playersInRange) do
                     debugText = debugText .. player.id .. "\n"
                 end

@@ -1,6 +1,6 @@
 Assets {
-  Id: 4328099993508977076
-  Name: "NamedLocationDisplay_C"
+  Id: 15922954283188355462
+  Name: "CombatPlaceholder_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -10,8 +10,13 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:ProximityNetworkedObject"
+        ObjectReference {
+        }
+      }
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Movement"
+  VirtualFolderPath: "Engagement"
 }

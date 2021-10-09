@@ -108,7 +108,7 @@ end
 
 localPlayer.movementHook:Connect(MovementHook)
 
-Events.Connect(Framework.Events.Keys.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
-Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, OnMoveToLocation)
-Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, OnMoveNearLocation)
+Framework.Events.Connect(Framework.Events.Keys.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
+Framework.Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, OnMoveToLocation)
+Framework.Events.Connect(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, OnMoveNearLocation)
 

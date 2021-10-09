@@ -41,6 +41,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Logger"
+        AssetReference {
+          Id: 4739618440715284858
+        }
+      }
+      Overrides {
         Name: "cs:Math"
         AssetReference {
           Id: 1528081273876745962

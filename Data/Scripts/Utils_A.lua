@@ -1,8 +1,8 @@
 -- Utility client functions
 
-local Utils = { }
+local UtilsAPI = { }
 
-Utils.BoolToVisibility = function (bool)
+UtilsAPI.BoolToVisibility = function (bool)
     if bool then
         return Visibility.INHERIT
     end
@@ -10,12 +10,12 @@ Utils.BoolToVisibility = function (bool)
 end
 
 if Environment.IsClient() then
-    Utils.UI = require(script:GetCustomProperty("UIUtils"))
+    UtilsAPI.UI = require(script:GetCustomProperty("UIUtils"))
 else
-    Utils.Dev = require(script:GetCustomProperty("DevUtils"))
+    UtilsAPI.Dev = require(script:GetCustomProperty("DevUtils"))
 end
 
-Utils.Objects = require(script:GetCustomProperty("ObjectsUtils"))
-Utils.Table = require(script:GetCustomProperty("TableUtils"))
+UtilsAPI.Objects = require(script:GetCustomProperty("ObjectsUtils"))
+UtilsAPI.Table = require(script:GetCustomProperty("TableUtils"))
 
-return Utils
+return UtilsAPI

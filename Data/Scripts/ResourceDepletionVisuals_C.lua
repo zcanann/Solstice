@@ -32,4 +32,4 @@ end
 OnResourceAmountChanged({ Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, 0 })
 
 -- Framework.Print("LISTENING: " .. Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT .. propProximityNetworkedObject.id)
-Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. propProximityNetworkedObject.id, OnResourceAmountChanged)
+Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. propProximityNetworkedObject.id, OnResourceAmountChanged)

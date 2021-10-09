@@ -1,7 +1,11 @@
 local DataStructures = require(script:GetCustomProperty("DataStructures"))
+local EventKeys = require(script:GetCustomProperty("EventKeys"))
+local Logger = require(script:GetCustomProperty("Logger"))
 
 local Broadcast = { }
 local requestQueue = DataStructures.Deque.New()
+
+local retriesUntilWarn = 256
 
 -- Default range for area broadcasts
 Broadcast.DefaultRange = 8000.0
@@ -42,6 +46,27 @@ end
 
 Broadcast.Local = function(eventName, args)
     Events.Broadcast(eventName, UnpackArgs(args))
+end
+
+Broadcast.LocalReliable = function(eventName, args)
+    -- See if we can just fire the event immediately
+    if _G.frameworkEventsAPI[eventName] then
+        Broadcast.Local(eventName, args)
+        return
+    end
+    -- Otherwise, spawn a task that retries
+    Task.Spawn(function ()
+        local retryCount = 0
+        while not _G.frameworkEventsAPI[eventName] do
+            retryCount = retryCount + 1
+            if retryCount == retriesUntilWarn then
+                Logger.Warn("Reliable event may be stuck in a long or infinite loop: " .. EventKeys.ResolveMappedName(eventName))
+            end
+            Task.Wait()
+        end
+        print("sent!")
+        Broadcast.Local(eventName, args)
+    end)
 end
 
 -- CLIENT => SERVER BROADCAST

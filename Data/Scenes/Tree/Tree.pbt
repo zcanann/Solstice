@@ -49,7 +49,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  ChildIds: 2246646324646948922
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -64,92 +63,6 @@ Objects {
   }
   NetworkContext {
     Type: Server
-  }
-}
-Objects {
-  Id: 2246646324646948922
-  Name: "ProximityObjectDebug_S"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6580996438623062460
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 822988238011075349
-      value {
-        Overrides {
-          Name: "Name"
-          String: "ProximityObjectDebug_S"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 1668234461396334422
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 200
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 2939962537656178487
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 200
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3489910825756026236
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 200
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10837158982842438162
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 200
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 8895404341119502081
-    }
   }
 }
 Objects {

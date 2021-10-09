@@ -15,6 +15,8 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER I
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 --]]
 
+local Framework = require(script:GetCustomProperty("Framework"))
+
 -- Internal custom properties
 local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
 local POPUP_TEXT = script:GetCustomProperty("PopupText"):WaitForObject()
@@ -68,5 +70,5 @@ end
 POPUP_PANEL.visibility = Visibility.FORCE_OFF
 STATIC_PANEL.visibility = Visibility.FORCE_OFF
 
-Events.Connect("LocationEntered", OnLocationEntered)
-Events.Connect("LocationExited", OnLocationExited)
+Framework.Events.Connect("LocationEntered", OnLocationEntered)
+Framework.Events.Connect("LocationExited", OnLocationExited)

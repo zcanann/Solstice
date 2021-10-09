@@ -57,4 +57,4 @@ InitMouseCursor()
 localPlayer.bindingPressedEvent:Connect(OnBindingPressed)
 localPlayer.bindingReleasedEvent:Connect(OnBindingReleased)
 
-Events.Connect(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT, function () uiHitTest = true end)
+Framework.Events.Connect(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT, function () uiHitTest = true end)
