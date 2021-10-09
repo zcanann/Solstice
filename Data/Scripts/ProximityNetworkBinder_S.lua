@@ -11,9 +11,9 @@ function OnPlayerJoined(player)
 
 	-- Player attachment
 	playerProximityNetworking:AttachToPlayer(player, "upper_spine")
-	networkInteractorScript.context.BindToPlayer(player)
 	proximityNetworkedDataScript.context.BindToPlayer(player)
+	networkInteractorScript.context.BindToPlayer(player)
+	networkInteractorScript.context.OnPlayerJoinedExternal(player)
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
-

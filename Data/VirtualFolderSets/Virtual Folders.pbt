@@ -169,5 +169,13 @@ Assets {
       VirtualFolderPath: "Environment"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Debug"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Debug"
+      PlatformAssetType: 5
+    }
   }
 }

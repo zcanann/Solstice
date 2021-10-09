@@ -5,7 +5,17 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:Skybox"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:LightningSkybox"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:LightningLight"
         ObjectReference {
         }
       }

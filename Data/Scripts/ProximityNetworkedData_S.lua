@@ -6,6 +6,7 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject")
+local propProximityObjectDebugTemplate = script:GetCustomProperty("ProximityObjectDebugTemplate")
 
 if propProximityNetworkedObject then
     propProximityNetworkedObject = propProximityNetworkedObject:WaitForObject()
@@ -54,14 +55,57 @@ function UpdateProximityNetworkedDataForPlayer(player)
 end
 
 function ClearNetworkedProximityDataForPlayer(player)
-    player:SetPrivateNetworkedData(propProximityNetworkedObject.id, nil)
+    if Object.IsValid(player) then
+        player:SetPrivateNetworkedData(propProximityNetworkedObject.id, nil)
+    end
 end
 
 function TryBindEvents()
     if propProximityNetworkedObject then
+        Framework.Print("LISTENING... " .. propProximityNetworkedObject.id)
         Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id, OnServerSetProximityData)
         Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerEnteredRange)
         Events.Connect(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerLeftRange)
+        DrawDebugData()
+    end
+end
+
+function DrawDebugData()
+    if Framework.Debug.GetFlag(Framework.Debug.Flags.SERVER_SHOW_PROXIMITY_OBJECTS) then
+        local proximityObjectDebug = nil
+        if propProximityNetworkedObject:IsA("Player") then
+            proximityObjectDebug = World.SpawnAsset(propProximityObjectDebugTemplate, { position = propProximityNetworkedObject:GetWorldPosition() })
+            proximityObjectDebug:AttachToPlayer(propProximityNetworkedObject, "nameplate")
+        else
+            local parentObject = propProximityNetworkedObject:GetCustomProperty("Object"):GetObject()
+            proximityObjectDebug = World.SpawnAsset(propProximityObjectDebugTemplate, { parent = parentObject })
+            proximityObjectDebug:SetWorldPosition(propProximityNetworkedObject:GetWorldPosition())
+        end
+        local propUIContainer = proximityObjectDebug:GetCustomProperty("UIContainer"):WaitForObject()
+        local propPlayersInRangeText = proximityObjectDebug:GetCustomProperty("PlayersInRangeText"):WaitForObject()
+        local propPlayersInRangeText2 = proximityObjectDebug:GetCustomProperty("PlayersInRangeText2"):WaitForObject()
+        local propPlayersInRangeText3 = proximityObjectDebug:GetCustomProperty("PlayersInRangeText3"):WaitForObject()
+        local propPlayersInRangeText4 = proximityObjectDebug:GetCustomProperty("PlayersInRangeText4"):WaitForObject()
+
+        Task.Spawn(function()
+            while true do
+                local pos = propProximityNetworkedObject:GetWorldPosition();
+                CoreDebug.DrawSphere(pos, 100, {
+                    duration = 0.01,
+                    color = Color.GREEN
+                })
+    
+                local debugText = ""
+                for player, _ in pairs(playersInRange) do
+                    debugText = debugText .. player.id .. "\n"
+                end
+                propPlayersInRangeText.text = debugText
+                propPlayersInRangeText2.text = debugText
+                propPlayersInRangeText3.text = debugText
+                propPlayersInRangeText4.text = debugText
+                Task.Wait()
+            end
+        end)
     end
 end
 

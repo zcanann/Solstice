@@ -15,6 +15,12 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:ProximityObjectDebugTemplate"
+        AssetReference {
+          Id: 8895404341119502081
+        }
+      }
     }
   }
   SerializationVersion: 100

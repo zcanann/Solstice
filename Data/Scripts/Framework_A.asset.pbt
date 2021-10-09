@@ -23,6 +23,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Debug"
+        AssetReference {
+          Id: 2040874793391612142
+        }
+      }
+      Overrides {
         Name: "cs:ExpTable"
         AssetReference {
           Id: 1911446898924153423

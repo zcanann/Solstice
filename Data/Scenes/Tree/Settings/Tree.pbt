@@ -1,6 +1,45 @@
 Name: "Settings"
 RootId: 2654916338316290302
 Objects {
+  Id: 5336517008004073883
+  Name: "DebugSettings_A"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2654916338316290302
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ServerShowProximityObjects"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11300382029977244970
+    }
+  }
+}
+Objects {
   Id: 3432427007554611280
   Name: "RespawnSettings"
   Transform {
