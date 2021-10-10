@@ -43,14 +43,8 @@ function Connect(player)
         return
     end
 
-    if not player.serverUserData.engagement then
-        player.serverUserData.engagement = { }
-    end
-
-    player.serverUserData.engagement.startLocation = player:GetWorldPosition()
-
     -- Disconnect from any existing sessions. This is important, as each object tracks the number of players engaged to it.
-    if player.serverUserData.engagement.session then
+    if player.serverUserData.engagement and player.serverUserData.engagement.session then
         if player.serverUserData.engagement.session == script.context then
             -- Early exit if already engaged to this object -- no need to reengage
             return
@@ -59,6 +53,12 @@ function Connect(player)
             player.serverUserData.engagement.session.Disconnect(player)
         end
     end
+
+    if not player.serverUserData.engagement then
+        player.serverUserData.engagement = { }
+    end
+
+    player.serverUserData.engagement.startLocation = player:GetWorldPosition()
 
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true

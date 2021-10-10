@@ -51,7 +51,20 @@ function UpdateProximityNetworkedDataForPlayer(player)
         return
     end
 
-    player:SetPrivateNetworkedData(propProximityNetworkedObject.id, currentData)
+    if player.serverUserData.readyToReceiveProximityData then
+        player:SetPrivateNetworkedData(propProximityNetworkedObject.id, currentData)
+    else
+        Task.Spawn(function ()
+            while true do
+                if player.serverUserData.readyToReceiveProximityData then
+                    player:SetPrivateNetworkedData(propProximityNetworkedObject.id, currentData)
+                    return
+                end
+
+                Task.Wait()
+            end
+        end)
+    end
 end
 
 function ClearNetworkedProximityDataForPlayer(player)

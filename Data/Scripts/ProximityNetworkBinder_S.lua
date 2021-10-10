@@ -16,4 +16,10 @@ function OnPlayerJoined(player)
 	networkInteractorScript.context.OnPlayerJoinedExternal(player)
 end
 
+function OnPlayerReadyToReceiveProximityData(player)
+    player.serverUserData.readyToReceiveProximityData = true
+	Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK)
+end
+
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Framework.Events.ConnectForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)
