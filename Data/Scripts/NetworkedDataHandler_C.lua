@@ -57,4 +57,8 @@ end
 
 localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
 Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK, Refresh)
-Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA)
+
+-- Needs a delay for preview mode, in order for the server to have a listener ready
+Task.Spawn(function ()
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA)
+end)

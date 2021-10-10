@@ -10,11 +10,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:LightningSkybox"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:LightningLight"
         ObjectReference {
         }

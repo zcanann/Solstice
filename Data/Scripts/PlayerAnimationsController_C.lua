@@ -12,6 +12,8 @@ function OnPlayerNetworkedDataChanged(player, data)
 
 	if engagementData and #engagementData > 0 then
 		OnEngagementSessionConnected(table.unpack(engagementData, 1, #engagementData))
+    else
+        OnEngagementSessionLocalInterrupt(player)
 	end
 end
 

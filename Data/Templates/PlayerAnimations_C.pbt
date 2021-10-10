@@ -240,9 +240,9 @@ Assets {
           AudioAsset {
             Id: 3952687263757153161
           }
-          Volume: 1
-          Falloff: -1
-          Radius: -1
+          Volume: 3
+          Falloff: 1000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -279,9 +279,9 @@ Assets {
           AudioAsset {
             Id: 14216839502706998225
           }
-          Volume: 1
-          Falloff: -1
-          Radius: -1
+          Volume: 3
+          Falloff: 1000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -472,9 +472,9 @@ Assets {
           AudioAsset {
             Id: 13420171001898733255
           }
-          Volume: 1
-          Falloff: -1
-          Radius: -1
+          Volume: 3
+          Falloff: 1000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -511,9 +511,9 @@ Assets {
           AudioAsset {
             Id: 8907307798523234362
           }
-          Volume: 1
-          Falloff: -1
-          Radius: -1
+          Volume: 3
+          Falloff: 1000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -550,9 +550,9 @@ Assets {
           AudioAsset {
             Id: 11843835494805160473
           }
-          Volume: 1
-          Falloff: -1
-          Radius: -1
+          Volume: 3
+          Falloff: 1000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -741,9 +741,9 @@ Assets {
           AudioAsset {
             Id: 16276614057494287161
           }
-          Volume: 1
-          Falloff: -1
-          Radius: -1
+          Volume: 3
+          Falloff: 1000
+          Radius: 1000
           EnableOcclusion: true
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true
@@ -935,9 +935,9 @@ Assets {
           TeamSettings {
           }
           AudioBP {
-            Volume: 0.5
-            Falloff: 3600
-            Radius: 400
+            Volume: 3
+            Falloff: 1000
+            Radius: 1000
             EnableOcclusion: true
             IsSpatializationEnabled: true
             IsAttenuationEnabled: true

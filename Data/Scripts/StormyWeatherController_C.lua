@@ -18,7 +18,7 @@ local rampUpMaxMultiplier = 2.0
 
 function Sign(x)
     return x >= 0.0 and 1.0 or -1.0
-  end
+end
 
 function Tick(deltaSeconds)
     timeUntilNextLightning = timeUntilNextLightning - deltaSeconds

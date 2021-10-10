@@ -16,7 +16,6 @@ Objects {
   }
   ParentId: 807049152915355110
   ChildIds: 5380701361309137641
-  ChildIds: 11054175886797448724
   ChildIds: 9693065228057676946
   ChildIds: 17499196329733308013
   ChildIds: 4055771339364956244
@@ -24,7 +23,7 @@ Objects {
   ChildIds: 15331560217976350971
   ChildIds: 7583698413176784183
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -841,9 +840,7 @@ Objects {
   Name: "LightningLight"
   Transform {
     Location {
-      X: -10200
-      Y: -900
-      Z: 800
+      Z: 1500
     }
     Rotation {
       Pitch: -90
@@ -859,7 +856,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -868,7 +865,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Light {
-    Intensity: 100
+    Intensity: 2000
     Color {
       R: 1
       G: 1
@@ -886,81 +883,12 @@ Objects {
         AreaLight {
           BarnDoorAngle: 90
           BarnDoorLength: 4000
-          SourceWidth: 4096
-          SourceHeight: 4096
+          SourceWidth: 5000
+          SourceHeight: 5000
         }
       }
       MaxDrawDistance: 5000
       MaxDistanceFadeRange: 1000
-    }
-  }
-}
-Objects {
-  Id: 11054175886797448724
-  Name: "LightningSky"
-  Transform {
-    Location {
-      X: 249.999
-      Y: 249.999
-    }
-    Rotation {
-      Yaw: -179.999985
-      Roll: -4.40707263e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3247381971845202712
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Index"
-      Int: 12
-    }
-    Overrides {
-      Name: "bp:Ambient Image"
-      Enum {
-        Value: "mc:eambientcubemapssmall:8"
-      }
-    }
-    Overrides {
-      Name: "bp:Blend Target Image"
-      Enum {
-        Value: "mc:eambientcubemapssmall:1"
-      }
-    }
-    Overrides {
-      Name: "bp:Blend Amount"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "bp:Tint Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Intensity"
-      Float: 5
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 11515840070784317904
     }
   }
 }
@@ -1011,15 +939,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:LightningSkybox"
-      ObjectReference {
-        SelfId: 11054175886797448724
-        SubObjectId: 5045482526579447017
-        InstanceId: 18191572704533771718
-        TemplateId: 6649119402205580146
-      }
-    }
-    Overrides {
       Name: "cs:LightningVFX"
       ObjectReference {
         SelfId: 17499196329733308013
@@ -1044,6 +963,11 @@ Objects {
       Name: "cs:LightningLight"
       ObjectReference {
         SelfId: 9693065228057676946
+      }
+    }
+    Overrides {
+      Name: "cs:LightningSkybox"
+      ObjectReference {
       }
     }
   }
@@ -1379,7 +1303,7 @@ Objects {
     }
     Overrides {
       Name: "bp:Intensity"
-      Float: 3.59443
+      Float: 7
     }
   }
   Collidable_v2 {
