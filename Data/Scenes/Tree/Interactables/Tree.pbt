@@ -1,6 +1,242 @@
 Name: "Interactables"
 RootId: 17246289419149383775
 Objects {
+  Id: 17756634481099136435
+  Name: "FrameworkTreeBirch"
+  Transform {
+    Location {
+      X: 11105
+      Y: -13343
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7766009470731821977
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkTreeBirch"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 15721
+            Y: -10866
+            Z: -25
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7175104089856678757
+    }
+  }
+}
+Objects {
+  Id: 2013287018684303770
+  Name: "FrameworkTreeBirch"
+  Transform {
+    Location {
+      X: 10632
+      Y: -11854
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7766009470731821977
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkTreeBirch"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 15365
+            Y: -13148
+            Z: -25
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7175104089856678757
+    }
+  }
+}
+Objects {
+  Id: 16754664220148089149
+  Name: "FrameworkTreeBirch"
+  Transform {
+    Location {
+      X: -7100
+      Y: -5400
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7766009470731821977
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkTreeBirch"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 16192
+            Y: -11997
+            Z: -25
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7175104089856678757
+    }
+  }
+}
+Objects {
+  Id: 10476531622735566764
+  Name: "FrameworkTreeBirch"
+  Transform {
+    Location {
+      X: -8400
+      Y: -5400
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7766009470731821977
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkTreeBirch"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 14736
+            Y: -11909
+            Z: -25
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7175104089856678757
+    }
+  }
+}
+Objects {
   Id: 7354222175367365053
   Name: "FrameworkSmelter"
   Transform {
@@ -668,8 +904,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 400
-            Y: 1495
+            X: 17583
+            Y: -14142
             Z: -400
           }
         }

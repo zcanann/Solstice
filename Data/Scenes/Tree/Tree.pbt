@@ -63,7 +63,7 @@ Objects {
     }
     Overrides {
       Name: "cs:Name"
-      String: "Bandit"
+      String: "Lianna"
     }
     Overrides {
       Name: "cs:Name:isrep"

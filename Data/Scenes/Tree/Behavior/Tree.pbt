@@ -15,7 +15,7 @@ Objects {
     }
   }
   ParentId: 2058956127506152909
-  ChildIds: 3804165019362878446
+  ChildIds: 4999244393636055979
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -33,8 +33,8 @@ Objects {
   }
 }
 Objects {
-  Id: 3804165019362878446
-  Name: "EngagementSessionCombat_S"
+  Id: 4999244393636055979
+  Name: "EngagementSessionDialog_S"
   Transform {
     Location {
     }
@@ -75,7 +75,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 15675711774597794884
+      Id: 8987297397785865558
     }
   }
 }
@@ -94,7 +94,7 @@ Objects {
     }
   }
   ParentId: 2058956127506152909
-  ChildIds: 17972626714771871119
+  ChildIds: 9287987596664656546
   ChildIds: 14589941801162997866
   ChildIds: 2992005490681078043
   Collidable_v2 {
@@ -207,8 +207,8 @@ Objects {
   }
 }
 Objects {
-  Id: 17972626714771871119
-  Name: "Attackable_C"
+  Id: 9287987596664656546
+  Name: "Talkable_C"
   Transform {
     Location {
     }
@@ -243,7 +243,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 2766422358801774681
+      Id: 15932647530187038661
     }
   }
 }

@@ -1,19 +1,19 @@
 Assets {
-  Id: 14688947873487781723
-  Name: "Trim Stone"
+  Id: 14388027584116885338
+  Name: "Custom Invisible"
   PlatformAssetType: 13
   SerializationVersion: 100
   CustomMaterialAsset {
-    BaseMaterialId: 3262437512209397059
+    BaseMaterialId: 5076884534317745590
     ParameterOverrides {
     }
     Assets {
-      Id: 3262437512209397059
-      Name: "Stone Trim 01 (default)"
+      Id: 5076884534317745590
+      Name: "Invisible"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_stone_trims_blend_001_uv"
+        AssetId: "mi_invisible_001"
       }
     }
   }
