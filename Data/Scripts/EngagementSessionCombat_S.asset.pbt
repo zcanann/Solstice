@@ -13,13 +13,13 @@ Assets {
       Overrides {
         Name: "cs:Object"
         ObjectReference {
-          SelfId: 8851093897244460151
+          SelfId: 6197921537724184668
         }
       }
       Overrides {
         Name: "cs:ProximityNetworkedObject"
         ObjectReference {
-          SelfId: 2303490571781545320
+          SelfId: 10950677861908347459
         }
       }
       Overrides {
@@ -49,6 +49,14 @@ Assets {
       Overrides {
         Name: "cs:RespawnTimeMax"
         Float: 85
+      }
+      Overrides {
+        Name: "cs:IsAgressive"
+        Bool: false
+      }
+      Overrides {
+        Name: "cs:AgroRadius"
+        Float: 1500
       }
     }
   }

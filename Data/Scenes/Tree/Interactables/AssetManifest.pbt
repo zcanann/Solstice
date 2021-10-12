@@ -62,15 +62,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5966347842877200161
-  Name: "Sand Waves 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_sand_waves_001_uv_ref"
-  }
-}
-Assets {
   Id: 5538741771925374081
   Name: "Craftsman Wardrobe"
   PlatformAssetType: 1

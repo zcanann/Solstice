@@ -1,7 +1,7 @@
 Name: "Behavior"
-RootId: 12873314425862655340
+RootId: 2058956127506152909
 Objects {
-  Id: 347631239007884112
+  Id: 15265514686607499560
   Name: "ServerContext"
   Transform {
     Location {
@@ -14,8 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12873314425862655340
-  ChildIds: 12299060525622978483
+  ParentId: 2058956127506152909
+  ChildIds: 3804165019362878446
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -33,7 +33,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12299060525622978483
+  Id: 3804165019362878446
   Name: "EngagementSessionCombat_S"
   Transform {
     Location {
@@ -46,18 +46,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 347631239007884112
+  ParentId: 15265514686607499560
   UnregisteredParameters {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 2303490571781545320
+        SelfId: 13343148381217680232
       }
     }
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 8851093897244460151
+        SelfId: 17351291876623604907
       }
     }
   }
@@ -80,7 +80,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4612196371827851959
+  Id: 12299963393686506760
   Name: "ClientContext"
   Transform {
     Location {
@@ -93,10 +93,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12873314425862655340
-  ChildIds: 18320018061907894779
-  ChildIds: 7665964931213232720
-  ChildIds: 14013499816332479403
+  ParentId: 2058956127506152909
+  ChildIds: 17972626714771871119
+  ChildIds: 14589941801162997866
+  ChildIds: 2992005490681078043
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -113,7 +113,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14013499816332479403
+  Id: 2992005490681078043
   Name: "CombatPlaceholder_C"
   Transform {
     Location {
@@ -126,12 +126,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4612196371827851959
+  ParentId: 12299963393686506760
   UnregisteredParameters {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 2303490571781545320
+        SelfId: 13343148381217680232
       }
     }
   }
@@ -154,7 +154,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7665964931213232720
+  Id: 14589941801162997866
   Name: "Walkable_C"
   Transform {
     Location {
@@ -167,12 +167,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4612196371827851959
+  ParentId: 12299963393686506760
   UnregisteredParameters {
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 8851093897244460151
+        SelfId: 17351291876623604907
       }
     }
     Overrides {
@@ -207,7 +207,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18320018061907894779
+  Id: 17972626714771871119
   Name: "Attackable_C"
   Transform {
     Location {
@@ -220,12 +220,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4612196371827851959
+  ParentId: 12299963393686506760
   UnregisteredParameters {
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 8851093897244460151
+        SelfId: 17351291876623604907
       }
     }
   }
@@ -248,7 +248,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2303490571781545320
+  Id: 13343148381217680232
   Name: "ProximityNetworkedObject"
   Transform {
     Location {
@@ -259,13 +259,13 @@ Objects {
     Scale {
     }
   }
-  ParentId: 12873314425862655340
-  ChildIds: 13744591688659081861
+  ParentId: 2058956127506152909
+  ChildIds: 11765038470458309184
   UnregisteredParameters {
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 8851093897244460151
+        SelfId: 17351291876623604907
       }
     }
     Overrides {
@@ -306,7 +306,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13744591688659081861
+  Id: 11765038470458309184
   Name: "ServerContext"
   Transform {
     Location {
@@ -316,8 +316,8 @@ Objects {
     Scale {
     }
   }
-  ParentId: 2303490571781545320
-  ChildIds: 10390112163824726151
+  ParentId: 13343148381217680232
+  ChildIds: 918561679083319262
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -335,7 +335,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10390112163824726151
+  Id: 918561679083319262
   Name: "ProximityNetworkedData_S"
   Transform {
     Location {
@@ -348,12 +348,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13744591688659081861
+  ParentId: 11765038470458309184
   UnregisteredParameters {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 2303490571781545320
+        SelfId: 13343148381217680232
       }
     }
   }

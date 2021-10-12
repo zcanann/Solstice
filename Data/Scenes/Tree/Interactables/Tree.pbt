@@ -1,6 +1,174 @@
 Name: "Interactables"
 RootId: 17246289419149383775
 Objects {
+  Id: 7354222175367365053
+  Name: "FrameworkSmelter"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9063372567969894117
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkSmelter"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 18835
+            Y: -9655
+            Z: -150
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -129.999969
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.89999986
+            Y: 1.89999986
+            Z: 1.89999986
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4288354741456242922
+    }
+  }
+}
+Objects {
+  Id: 2718567470028586944
+  Name: "FrameworkVeinCopper"
+  Transform {
+    Location {
+      X: 17350
+      Y: -6975
+      Z: 725
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18361376657929626207
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkVeinCopper"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 20085
+            Y: -7455
+            Z: 650
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13401275499172607929
+    }
+  }
+}
+Objects {
+  Id: 17890779113368131037
+  Name: "FrameworkVeinCopper"
+  Transform {
+    Location {
+      X: 16475
+      Y: -6975
+      Z: 675
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18361376657929626207
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkVeinCopper"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 21610
+            Y: -6780
+            Z: 700
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13401275499172607929
+    }
+  }
+}
+Objects {
   Id: 5386441115898064738
   Name: "FrameworkTreeBirch"
   Transform {
@@ -473,158 +641,6 @@ Objects {
   }
 }
 Objects {
-  Id: 8851093897244460151
-  Name: "FrameworkNPC_Bandit"
-  Transform {
-    Location {
-      X: -1740
-      Y: 495
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17246289419149383775
-  ChildIds: 5398863021248159492
-  ChildIds: 12873314425862655340
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Interactable"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Name"
-      String: "Bandit"
-    }
-    Overrides {
-      Name: "cs:Name:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Name:ml"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12873314425862655340
-  Name: "Behavior"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8851093897244460151
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Behavior"
-  }
-}
-Objects {
-  Id: 5398863021248159492
-  Name: "Model"
-  Transform {
-    Location {
-      X: 4
-      Y: 3
-      Z: -18
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8851093897244460151
-  ChildIds: 17001777464624071307
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17001777464624071307
-  Name: "Base"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5398863021248159492
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Base"
-  }
-}
-Objects {
   Id: 4643077484368103303
   Name: "FrameworkShrimpSchool"
   Transform {
@@ -653,24 +669,13 @@ Objects {
           Name: "Position"
           Vector {
             X: 400
-            Y: 1135
-            Z: -325
+            Y: 1495
+            Z: -400
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9563760324718142094
-      value {
-        Overrides {
-          Name: "ma:Shared_BaseMaterial:id"
-          AssetReference {
-            Id: 5966347842877200161
           }
         }
       }
@@ -816,9 +821,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 400
-            Y: -175
-            Z: -25
+            X: 20735
+            Y: -7455
+            Z: 650
           }
         }
         Overrides {
@@ -868,9 +873,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -170
-            Y: -175
-            Z: -25
+            X: 20735
+            Y: -8080
+            Z: 625
           }
         }
         Overrides {
@@ -921,9 +926,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -170
-            Y: 695
-            Z: -25
+            X: 20735
+            Y: -6780
+            Z: 650
           }
         }
         Overrides {
@@ -1184,7 +1189,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Behavior_1"
+    FilePartitionName: "Behavior_2"
   }
 }
 Objects {

@@ -18,6 +18,10 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ServerShowProximityObjects"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ShowCombatObjects"
       Bool: true
     }
   }
@@ -106,7 +110,7 @@ Objects {
     InitialDistance: 1500
     IsDistanceAdjustable: true
     MinDistance: 500
-    MaxDistance: 1500
+    MaxDistance: 3000
     PositionOffset {
     }
     RotationOffset {

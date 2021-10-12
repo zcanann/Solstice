@@ -14,6 +14,10 @@ Assets {
         Name: "cs:ServerShowProximityObjects"
         Bool: false
       }
+      Overrides {
+        Name: "cs:ShowCombatObjects"
+        Bool: false
+      }
     }
   }
   SerializationVersion: 100
