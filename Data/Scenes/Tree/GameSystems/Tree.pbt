@@ -475,12 +475,6 @@ Objects {
   }
   ParentId: 17323502209317733254
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:AnimPulse"
-      AssetReference {
-        Id: 7620112251667052815
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

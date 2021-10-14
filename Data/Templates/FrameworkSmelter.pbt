@@ -15,7 +15,7 @@ Assets {
             Z: 1.89999986
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 17246289419149383775
         ChildIds: 16083387272699882120
         ChildIds: 13592511557852978364
         ChildIds: 4696707200574029953
@@ -24,22 +24,22 @@ Assets {
         ChildIds: 8213850090128719631
         ChildIds: 14841411266984179636
         ChildIds: 3315260674654720870
+        ChildIds: 12209526961866454704
         ChildIds: 6105130572679923135
         ChildIds: 7923398021909038418
         ChildIds: 5995831526663372338
-        ChildIds: 12209526961866454704
         ChildIds: 8378062661288015549
         ChildIds: 13305476215617689366
         ChildIds: 17505633014158564141
         ChildIds: 7182790348612756776
+        ChildIds: 13017390260618453452
+        ChildIds: 17901021048191690840
+        ChildIds: 611821876048799103
+        ChildIds: 4624160229193378412
         ChildIds: 7864225867262252889
         ChildIds: 12523075017885313290
         ChildIds: 5517097185594482796
         ChildIds: 148690988177943771
-        ChildIds: 4624160229193378412
-        ChildIds: 611821876048799103
-        ChildIds: 17901021048191690840
-        ChildIds: 13017390260618453452
         ChildIds: 8417125093090268123
         ChildIds: 8016724751221686238
         ChildIds: 7806988112736698529
@@ -226,7 +226,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 841534158063459245
+              Id: 18341206823172413202
             }
           }
           Overrides {
@@ -351,12 +351,6 @@ Assets {
         ParentId: 9063372567969894117
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 0.63500005
@@ -364,6 +358,20 @@ Assets {
               B: 0.63500005
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -411,12 +419,6 @@ Assets {
         ParentId: 9063372567969894117
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 0.63500005
@@ -424,6 +426,20 @@ Assets {
               B: 0.63500005
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -456,27 +472,21 @@ Assets {
         Name: "Cube - Bottom-Aligned"
         Transform {
           Location {
-            X: -113
-            Y: 6.1171875
-            Z: 84.1129456
+            X: -116.946953
+            Y: 8.36366463
+            Z: 50.0001183
           }
           Rotation {
             Yaw: 89.9999542
           }
           Scale {
-            X: 1.46773648
-            Y: 0.199999794
-            Z: 1.55555177
+            X: 1.7
+            Y: 0.2
+            Z: 1.9
           }
         }
         ParentId: 9063372567969894117
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
@@ -485,6 +495,20 @@ Assets {
               B: 0.63500005
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -499,6 +523,80 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 14314259545381307747
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 12209526961866454704
+        Name: "Arch"
+        Transform {
+          Location {
+            X: 42.6411514
+            Y: 6.49839401
+            Z: 144.736938
+          }
+          Rotation {
+            Yaw: 89.9999695
+            Roll: 89.9999542
+          }
+          Scale {
+            X: 1.1
+            Y: 1.2
+            Z: 0.2
+          }
+        }
+        ParentId: 9063372567969894117
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.63500005
+              G: 0.63500005
+              B: 0.63500005
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17165822728415595302
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -710,68 +808,6 @@ Assets {
         }
       }
       Objects {
-        Id: 12209526961866454704
-        Name: "Arch"
-        Transform {
-          Location {
-            X: 41.8613281
-            Y: 5.84375
-            Z: 158.644836
-          }
-          Rotation {
-            Yaw: 89.9999695
-            Roll: 89.9999542
-          }
-          Scale {
-            X: 1.07948482
-            Y: 1.07900107
-            Z: 0.2
-          }
-        }
-        ParentId: 9063372567969894117
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.63500005
-              G: 0.63500005
-              B: 0.63500005
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17165822728415595302
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
         Id: 8378062661288015549
         Name: "Bottom Chimney"
         Transform {
@@ -791,12 +827,6 @@ Assets {
         ParentId: 9063372567969894117
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 841534158063459245
-            }
-          }
-          Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 0.63500005
@@ -804,6 +834,20 @@ Assets {
               B: 0.63500005
               A: 1
             }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -1022,26 +1066,290 @@ Assets {
         }
       }
       Objects {
+        Id: 13017390260618453452
+        Name: "Arch Fancy Peaked 6m"
+        Transform {
+          Location {
+            X: 46.5507584
+            Y: 83.7193527
+            Z: 55.2631874
+          }
+          Rotation {
+            Pitch: 90
+            Yaw: -13.2627563
+            Roll: 166.737457
+          }
+          Scale {
+            X: 0.263158
+            Y: 0.263158
+            Z: 0.263158
+          }
+        }
+        ParentId: 9063372567969894117
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7339770280588748186
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 17901021048191690840
+        Name: "Arch Fancy Peaked 6m"
+        Transform {
+          Location {
+            X: 46.5507584
+            Y: 83.7193527
+            Z: 71.052681
+          }
+          Rotation {
+            Pitch: 90
+            Yaw: -25.2394104
+            Roll: 154.760712
+          }
+          Scale {
+            X: 0.263158
+            Y: 0.263158
+            Z: 0.263158
+          }
+        }
+        ParentId: 9063372567969894117
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7339770280588748186
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 611821876048799103
+        Name: "Arch Fancy Peaked 6m"
+        Transform {
+          Location {
+            X: 46.5507584
+            Y: 83.7193527
+            Z: 86.8421478
+          }
+          Rotation {
+            Pitch: 90
+            Yaw: -13.2626953
+            Roll: 166.737381
+          }
+          Scale {
+            X: 0.263158
+            Y: 0.263158
+            Z: 0.263158
+          }
+        }
+        ParentId: 9063372567969894117
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1.25
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7339770280588748186
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 4624160229193378412
+        Name: "Arch Fancy Peaked 6m"
+        Transform {
+          Location {
+            X: 46.5507584
+            Y: 83.7193527
+            Z: 102.631615
+          }
+          Rotation {
+            Pitch: 90
+            Yaw: -25.2393799
+            Roll: 154.760651
+          }
+          Scale {
+            X: 0.263158
+            Y: 0.263158
+            Z: 0.263158
+          }
+        }
+        ParentId: 9063372567969894117
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.75
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7339770280588748186
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
         Id: 7864225867262252889
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 43.1676369
-            Y: 87.7511749
-            Z: 118.421074
+            X: 46.5507584
+            Y: 83.7193527
+            Z: 118.42112
           }
           Rotation {
             Pitch: 90
-            Yaw: -13.2626944
+            Yaw: -13.2626953
             Roll: 166.737305
           }
           Scale {
-            X: 0.263157934
-            Y: 0.263157934
-            Z: 0.263157934
+            X: 0.263158
+            Y: 0.263158
+            Z: 0.263158
           }
         }
         ParentId: 9063372567969894117
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18341206823172413202
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1228,206 +1536,6 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 12439200737195672152
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 4624160229193378412
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: 43.1676369
-            Y: 87.7511749
-            Z: 102.631592
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -25.2393837
-            Roll: 154.760651
-          }
-          Scale {
-            X: 0.263157934
-            Y: 0.263157934
-            Z: 0.263157934
-          }
-        }
-        ParentId: 9063372567969894117
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7339770280588748186
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 611821876048799103
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: 43.1676369
-            Y: 87.7511749
-            Z: 86.8421173
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -13.2626925
-            Roll: 166.737381
-          }
-          Scale {
-            X: 0.263157934
-            Y: 0.263157934
-            Z: 0.263157934
-          }
-        }
-        ParentId: 9063372567969894117
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7339770280588748186
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 17901021048191690840
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: 43.1676369
-            Y: 87.7511749
-            Z: 71.0526428
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -25.2394047
-            Roll: 154.760712
-          }
-          Scale {
-            X: 0.263157934
-            Y: 0.263157934
-            Z: 0.263157934
-          }
-        }
-        ParentId: 9063372567969894117
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7339770280588748186
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 13017390260618453452
-        Name: "Arch Fancy Peaked 6m"
-        Transform {
-          Location {
-            X: 43.1676369
-            Y: 87.7511749
-            Z: 55.2631645
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -13.2627439
-            Roll: 166.737457
-          }
-          Scale {
-            X: 0.263157934
-            Y: 0.263157934
-            Z: 0.263157934
-          }
-        }
-        ParentId: 9063372567969894117
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7339770280588748186
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -6377,6 +6485,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_arch_001"
+      }
+    }
+    Assets {
+      Id: 18341206823172413202
+      Name: "Bricks Chunky Stone 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_brick_stone_chunky_001"
       }
     }
     Assets {

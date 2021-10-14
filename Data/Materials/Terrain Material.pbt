@@ -28,6 +28,18 @@ Assets {
           Id: 4954162477874652483
         }
       }
+      Overrides {
+        Name: "cmp:Material2"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cmp:Material3"
+        AssetReference {
+          Id: 18152046462523842666
+        }
+      }
     }
     Assets {
       Id: 3169360956294553894
@@ -54,6 +66,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "stone_001"
+      }
+    }
+    Assets {
+      Id: 18152046462523842666
+      Name: "Sand Waves 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_sand_waves_001_uv_ref"
       }
     }
   }

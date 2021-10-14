@@ -46,40 +46,44 @@ function OnEngagementSessionConnected(playerId, objectId, animationName)
         return
     end
 
-    local animationSet = player.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
-    local animationAbility = animationSet:GetCustomProperty("Ability"):GetObject()
-    local sfx1 = animationSet:GetCustomProperty("SFX1"):GetObject()
-    animationAbility.owner = player
+    local animationSetProperty = player.clientUserData.animationSet:GetCustomProperty(animationName)
 
-    player.clientUserData.animState.animationName = animationName
-    player.clientUserData.animState.objectId = objectId
-    player.clientUserData.animState.activeAnimAbility = animationAbility
-    animationAbility:Activate()
+    if animationSetProperty then
+        local animationSet = player.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
+        local animationAbility = animationSet:GetCustomProperty("Ability"):GetObject()
+        local sfx1 = animationSet:GetCustomProperty("SFX1"):GetObject()
+        animationAbility.owner = player
 
-    player.clientUserData.animState.executeEvent = animationAbility.executeEvent:Connect(function (localAnim)
-		-- Framework.Print("EXECUTING")
-        if sfx1 then
-            sfx1:Play()
-        end
-    end)
+        player.clientUserData.animState.animationName = animationName
+        player.clientUserData.animState.objectId = objectId
+        player.clientUserData.animState.activeAnimAbility = animationAbility
+        animationAbility:Activate()
 
-    player.clientUserData.animState.activeAnimReadyEvent = animationAbility.readyEvent:Connect(function (localAnim)
-        -- Framework.Print("CHAINING_ABILITY")
-        localAnim:Activate()
-    end)
+        player.clientUserData.animState.executeEvent = animationAbility.executeEvent:Connect(function (localAnim)
+            -- Framework.Print("EXECUTING")
+            if sfx1 then
+                sfx1:Play()
+            end
+        end)
 
-    player.clientUserData.animState.activeAnimInterruptedEvent = animationAbility.interruptedEvent:Connect(function (localAnim)
-        -- Framework.Print("INTERRUPTED")
-        if player.clientUserData.animState.activeAnimReadyEvent then
-            player.clientUserData.animState.activeAnimReadyEvent:Disconnect()
-        end
-        if player.clientUserData.animState.activeAnimInterruptedEvent then
-            player.clientUserData.animState.activeAnimInterruptedEvent:Disconnect()
-        end
-        player.clientUserData.animState.activeAnimReadyEvent = nil
-        player.clientUserData.animState.activeAnimInterruptedEvent = nil
-        player.clientUserData.animState.activeAnim = nil
-    end)
+        player.clientUserData.animState.activeAnimReadyEvent = animationAbility.readyEvent:Connect(function (localAnim)
+            -- Framework.Print("CHAINING_ABILITY")
+            localAnim:Activate()
+        end)
+
+        player.clientUserData.animState.activeAnimInterruptedEvent = animationAbility.interruptedEvent:Connect(function (localAnim)
+            -- Framework.Print("INTERRUPTED")
+            if player.clientUserData.animState.activeAnimReadyEvent then
+                player.clientUserData.animState.activeAnimReadyEvent:Disconnect()
+            end
+            if player.clientUserData.animState.activeAnimInterruptedEvent then
+                player.clientUserData.animState.activeAnimInterruptedEvent:Disconnect()
+            end
+            player.clientUserData.animState.activeAnimReadyEvent = nil
+            player.clientUserData.animState.activeAnimInterruptedEvent = nil
+            player.clientUserData.animState.activeAnim = nil
+        end)
+    end
 end
 
 function OnEngagementSessionDisconnected(player)

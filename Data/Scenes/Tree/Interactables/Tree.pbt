@@ -247,6 +247,12 @@ Objects {
     }
   }
   ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 9063372567969894117
@@ -269,138 +275,10 @@ Objects {
             Yaw: -129.999969
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1.89999986
-            Y: 1.89999986
-            Z: 1.89999986
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 4288354741456242922
-    }
-  }
-}
-Objects {
-  Id: 2718567470028586944
-  Name: "FrameworkVeinCopper"
-  Transform {
-    Location {
-      X: 17350
-      Y: -6975
-      Z: 725
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17246289419149383775
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 18361376657929626207
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkVeinCopper"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 20085
-            Y: -7455
-            Z: 650
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13401275499172607929
-    }
-  }
-}
-Objects {
-  Id: 17890779113368131037
-  Name: "FrameworkVeinCopper"
-  Transform {
-    Location {
-      X: 16475
-      Y: -6975
-      Z: 675
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17246289419149383775
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 18361376657929626207
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkVeinCopper"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 21610
-            Y: -6780
-            Z: 700
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13401275499172607929
     }
   }
 }
@@ -1023,6 +901,126 @@ Objects {
   }
 }
 Objects {
+  Id: 17890779113368131037
+  Name: "FrameworkVeinCopper"
+  Transform {
+    Location {
+      X: 16475
+      Y: -6975
+      Z: 675
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18361376657929626207
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkVeinCopper"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 24603.4863
+            Y: -11224.7676
+            Z: 545
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13401275499172607929
+    }
+  }
+}
+Objects {
+  Id: 2718567470028586944
+  Name: "FrameworkVeinCopper"
+  Transform {
+    Location {
+      X: 17350
+      Y: -6975
+      Z: 725
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17246289419149383775
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18361376657929626207
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkVeinCopper"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 23184.4941
+            Y: -11440.1895
+            Z: 555
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13401275499172607929
+    }
+  }
+}
+Objects {
   Id: 16402430099153211686
   Name: "FrameworkVeinCopper"
   Transform {
@@ -1057,9 +1055,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 20735
-            Y: -7455
-            Z: 650
+            X: 23834.5742
+            Y: -11440.124
+            Z: 545
           }
         }
         Overrides {
@@ -1109,9 +1107,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 20735
-            Y: -8080
-            Z: 625
+            X: 23834.5352
+            Y: -12065.1621
+            Z: 545
           }
         }
         Overrides {
@@ -1162,9 +1160,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 20735
-            Y: -6780
-            Z: 650
+            X: 23834.5215
+            Y: -10765.1777
+            Z: 525
           }
         }
         Overrides {

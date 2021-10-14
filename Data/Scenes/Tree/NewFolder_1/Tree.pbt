@@ -389,8 +389,8 @@ Objects {
   Name: "Urban Plank Debris 01"
   Transform {
     Location {
-      X: -200
-      Y: -200
+      X: -200.830048
+      Y: -199.170044
       Z: 25
     }
     Rotation {

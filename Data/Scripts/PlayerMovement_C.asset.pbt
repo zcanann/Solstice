@@ -10,6 +10,12 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:MovementVFX"
+        AssetReference {
+          Id: 7620112251667052815
+        }
+      }
     }
   }
   SerializationVersion: 100

@@ -177,5 +177,9 @@ Assets {
       VirtualFolderPath: "Debug"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "WorldMap"
+      PlatformAssetType: 3
+    }
   }
 }
