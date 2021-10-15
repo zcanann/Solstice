@@ -78,9 +78,6 @@ Objects {
   Name: "Camera"
   Transform {
     Location {
-      X: -1558.94824
-      Y: 926.983
-      Z: 2052.87231
     }
     Rotation {
       Pitch: -65

@@ -147,8 +147,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 2370.89111
-            Y: -5575.88477
+            X: 2993.14526
+            Y: -5222.32959
             Z: 455
           }
         }
@@ -160,6 +160,14 @@ Objects {
         Overrides {
           Name: "cs:Name"
           String: "Town Name"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.33333337
+            Y: 1.33333337
+            Z: 1.33333337
+          }
         }
       }
     }
@@ -245,13 +253,15 @@ Objects {
   Name: "KillTrigger"
   Transform {
     Location {
+      X: 622.253967
+      Y: 353.553436
     }
     Rotation {
     }
     Scale {
-      X: 200
-      Y: 200
-      Z: 1
+      X: 266.666687
+      Y: 266.666687
+      Z: 1.33333337
     }
   }
   ParentId: 16792452335977354892
@@ -281,9 +291,9 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 15555
-      Y: -11700
-      Z: 575
+      X: 2332.354
+      Y: 2644.58301
+      Z: 640
     }
     Rotation {
     }

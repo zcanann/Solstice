@@ -1,0 +1,95 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "d207d96a31d64c7ba6a151aeb782d970"
+  OwnerAccountId: "48b31bd75eea402a84cde894c3cc12b6"
+  OwnerName: "demodisk"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 162151367198570398
+  value: 13600387714628225983
+}
+AssetIdsOriginalToNew {
+  key: 1101893096694723028
+  value: 1417071595432955088
+}
+AssetIdsOriginalToNew {
+  key: 1116760160694603255
+  value: 4038558458766008109
+}
+AssetIdsOriginalToNew {
+  key: 1883778736238546551
+  value: 15342789909520948110
+}
+AssetIdsOriginalToNew {
+  key: 2003752736780784297
+  value: 3063540685952058793
+}
+AssetIdsOriginalToNew {
+  key: 2038077216541919415
+  value: 954462215400146680
+}
+AssetIdsOriginalToNew {
+  key: 2267127818326520380
+  value: 8585653543666960579
+}
+AssetIdsOriginalToNew {
+  key: 5927220524009298293
+  value: 12702872052293554006
+}
+AssetIdsOriginalToNew {
+  key: 7174949565826006891
+  value: 13693888733718563653
+}
+AssetIdsOriginalToNew {
+  key: 7413726224480865410
+  value: 2822647925966063025
+}
+AssetIdsOriginalToNew {
+  key: 7577485333701035703
+  value: 10020502214391525095
+}
+AssetIdsOriginalToNew {
+  key: 9770511928359673738
+  value: 13098070177608335555
+}
+AssetIdsOriginalToNew {
+  key: 10862837515260375752
+  value: 4914066027746363464
+}
+AssetIdsOriginalToNew {
+  key: 11271269196469755384
+  value: 6996615455752805906
+}
+AssetIdsOriginalToNew {
+  key: 13645484765276120961
+  value: 5870960953539856336
+}
+AssetIdsOriginalToNew {
+  key: 14363941363690452509
+  value: 8095305506233960964
+}
+AssetIdsOriginalToNew {
+  key: 14373757464648078715
+  value: 14995271432600806473
+}
+AssetIdsOriginalToNew {
+  key: 14811352499366656932
+  value: 9909984881675610786
+}
+AssetIdsOriginalToNew {
+  key: 15345760362089961606
+  value: 1442765365159465221
+}
+AssetIdsOriginalToNew {
+  key: 15636749404113921442
+  value: 1100065238669440565
+}
+AssetIdsOriginalToNew {
+  key: 17367449922255341506
+  value: 9258174470086624849
+}
+AssetIdsOriginalToNew {
+  key: 17876034834621974685
+  value: 12521389286222898707
+}

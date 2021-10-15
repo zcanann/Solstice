@@ -142,11 +142,11 @@ Objects {
     }
     Overrides {
       Name: "cs:Debug"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:VerboseDebug"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:SaveDataFile:isrep"
@@ -249,14 +249,14 @@ Objects {
     Overrides {
       Name: "cs:TileSize"
       Vector {
-        X: 300
-        Y: 300
-        Z: 300
+        X: 100
+        Y: 100
+        Z: 100
       }
     }
     Overrides {
       Name: "cs:MaxAllowedSlope"
-      Float: 0.55
+      Float: 0.65
     }
     Overrides {
       Name: "cs:MaxUnitHeight"

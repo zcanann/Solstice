@@ -1,13 +1,95 @@
 Name: "Map"
 RootId: 9292959906759754007
 Objects {
+  Id: 13812881826426423788
+  Name: "Graveyard"
+  Transform {
+    Location {
+      X: -50
+      Y: 2640
+      Z: 130
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Graveyard"
+  }
+}
+Objects {
+  Id: 10241831147048844003
+  Name: "FrameworkPlayerShipDecor"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10833891579437064966
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkPlayerShipDecor"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 770
+            Y: -13520
+            Z: 260
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -89.9999847
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 3.5
+            Y: 3.5
+            Z: 3.5
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9388604537018251804
+    }
+  }
+}
+Objects {
   Id: 6624534854813149124
   Name: "Dock"
   Transform {
     Location {
       X: -750
-      Y: -9600
-      Z: 250
+      Y: -9370
+      Z: 270
     }
     Rotation {
     }
@@ -38,7 +120,7 @@ Objects {
   Transform {
     Location {
       X: 860
-      Y: -9220
+      Y: -9010
       Z: -70
     }
     Rotation {
@@ -78,6 +160,12 @@ Objects {
     }
   }
   ParentId: 9292959906759754007
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 10193260367702185647
@@ -91,20 +179,63 @@ Objects {
           Vector {
             X: 6425
             Y: 950
+            Z: -10
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -50.0000114
+            Yaw: -50
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11265394351310379948
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 496.418091
+            Y: -854.226685
+            Z: 847.5
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14147316284086718483
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 404.494629
+            Y: 236.166412
+            Z: 592.240417
           }
         }
         Overrides {
-          Name: "Scale"
+          Name: "Rotation"
+          Rotator {
+            Yaw: -89.9997559
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16304415376472559022
+      value {
+        Overrides {
+          Name: "Position"
           Vector {
-            X: 0.8
-            Y: 0.8
-            Z: 0.8
+            X: -4.99995422
+            Y: -4.99991703
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -90.0000305
           }
         }
       }
@@ -115,360 +246,20 @@ Objects {
   }
 }
 Objects {
-  Id: 9285387691563446790
-  Name: "FrameworkShip"
-  Transform {
-    Location {
-      X: -420
-      Y: -12720
-      Z: -100
-    }
-    Rotation {
-      Yaw: 89.9999924
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9292959906759754007
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "FrameworkShip"
-  }
-}
-Objects {
-  Id: 17351291876623604907
-  Name: "FrameworkNPC_Lianna"
-  Transform {
-    Location {
-      X: 18360.0293
-      Y: 2577.40308
-      Z: 25
-    }
-    Rotation {
-      Yaw: -90.0000076
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9292959906759754007
-  ChildIds: 7943374908416838857
-  ChildIds: 2058956127506152909
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Interactable"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Name"
-      String: "Lianna"
-    }
-    Overrides {
-      Name: "cs:Name:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Name:ml"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 2058956127506152909
-  Name: "Behavior"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17351291876623604907
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Behavior"
-  }
-}
-Objects {
-  Id: 7943374908416838857
-  Name: "Model"
-  Transform {
-    Location {
-      X: 4
-      Y: 3
-      Z: -18
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17351291876623604907
-  ChildIds: 15592529068169239875
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 15592529068169239875
-  Name: "Base"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7943374908416838857
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Base"
-  }
-}
-Objects {
-  Id: 6197921537724184668
-  Name: "FrameworkNPC_Bandit"
-  Transform {
-    Location {
-      X: 16659.4355
-      Y: 1873.83228
-      Z: 25
-    }
-    Rotation {
-      Yaw: 44.9999962
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9292959906759754007
-  ChildIds: 10170248809275807818
-  ChildIds: 18177965790835164133
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Interactable"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Name"
-      String: "Bandit"
-    }
-    Overrides {
-      Name: "cs:Name:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Name:ml"
-      Bool: false
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 18177965790835164133
-  Name: "Behavior"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6197921537724184668
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Behavior_1"
-  }
-}
-Objects {
-  Id: 10170248809275807818
-  Name: "Model"
-  Transform {
-    Location {
-      X: 4
-      Y: 3
-      Z: -18
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6197921537724184668
-  ChildIds: 7243987957729462729
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7243987957729462729
-  Name: "Base"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10170248809275807818
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Base_1"
-  }
-}
-Objects {
-  Id: 9967245142776750743
+  Id: 4463632000165143331
   Name: "Ocean"
   Transform {
     Location {
+      X: -45660
+      Y: 2540
       Z: -100
     }
     Rotation {
-      Yaw: 44.9999962
     }
     Scale {
-      X: 800
-      Y: 800
-      Z: 1
+      X: 533.333374
+      Y: 1066.66675
+      Z: 1.33333337
     }
   }
   ParentId: 9292959906759754007
@@ -476,7 +267,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 7018910827936509288
+        Id: 9727657217286684267
       }
     }
   }
@@ -487,10 +278,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   CoreMesh {
     MeshAsset {
@@ -500,10 +288,11 @@ Objects {
       IsTeamCollisionEnabled: true
       IsEnemyCollisionEnabled: true
     }
+    DisableDistanceFieldLighting: true
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
     StaticMesh {
       Physics {
-        Mass: 100
-        LinearDamping: 0.01
       }
       BoundsScale: 1
     }
@@ -679,6 +468,41 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Walls"
+  }
+}
+Objects {
+  Id: 11394908061270319408
+  Name: "NPCs"
+  Transform {
+    Location {
+      X: -1130
+      Y: 2880
+      Z: 100
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "NPCs"
   }
 }
 Objects {

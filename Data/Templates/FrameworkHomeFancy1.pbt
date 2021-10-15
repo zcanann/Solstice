@@ -15,7 +15,7 @@ Assets {
             Z: 0.8
           }
         }
-        ParentId: 4781671109827199097
+        ParentId: 9292959906759754007
         ChildIds: 10593117386948768209
         ChildIds: 5695778125440435204
         ChildIds: 9418320252529426939
@@ -125,6 +125,7 @@ Assets {
         ChildIds: 11863855128317664833
         ChildIds: 2769909975148138083
         ChildIds: 14932240520312534232
+        ChildIds: 6224098547600116175
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -5474,11 +5475,11 @@ Assets {
         Transform {
           Location {
             X: 1609.99878
-            Y: 811.956055
-            Z: 14.9999704
+            Y: 811.956177
+            Z: -12.5
           }
           Rotation {
-            Yaw: -90.0000229
+            Yaw: -90.0000305
           }
           Scale {
             X: 1
@@ -5629,19 +5630,19 @@ Assets {
         Name: "Craftsman Part - Doorway"
         Transform {
           Location {
-            X: -407.006226
+            X: -407.006165
             Y: -1206.14746
-            Z: 470
+            Z: 487.5
           }
           Rotation {
-            Pitch: -6.14717e-05
+            Pitch: -6.10351562e-05
             Yaw: -179.999802
             Roll: -179.999954
           }
           Scale {
-            X: 0.800000072
-            Y: 1.2
-            Z: 0.800000072
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 10593117386948768209
@@ -5685,17 +5686,17 @@ Assets {
           Location {
             X: -805
             Y: -810
-            Z: 469.999969
+            Z: 487.5
           }
           Rotation {
-            Pitch: -6.14717e-05
+            Pitch: -6.10351562e-05
             Yaw: 90.0000076
             Roll: -179.999954
           }
           Scale {
-            X: 0.800000072
-            Y: 1.2
-            Z: 0.800000072
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 10593117386948768209
@@ -8077,6 +8078,51 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 5678465638951614555
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 6224098547600116175
+        Name: "Wood 2x4 4m"
+        Transform {
+          Location {
+            X: 1607.23328
+            Y: 663.975525
+          }
+          Rotation {
+            Yaw: 89.9998856
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10593117386948768209
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5046386588038465824
           }
           Teams {
             IsTeamCollisionEnabled: true
