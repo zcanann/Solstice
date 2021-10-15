@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16721017574548411792
+  Name: "Ambient Nature Rain Big Drops 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ambience_nature_rain_big_drops_01_Cue_ref"
+  }
+}
+Assets {
   Id: 15497653794092712038
   Name: "Decal Moss Patch"
   PlatformAssetType: 14
@@ -107,12 +116,39 @@ Assets {
   }
 }
 Assets {
+  Id: 11515840070784317904
+  Name: "Skylight"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_Skylight"
+  }
+}
+Assets {
+  Id: 11386117978447059772
+  Name: "Nature Thunder Clap Boom Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_thunder_ref"
+  }
+}
+Assets {
   Id: 11111447611931661974
   Name: "Craftsman Stairs 01 Railing"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_sub_craftsman_stairs_001_rail"
+  }
+}
+Assets {
+  Id: 9875985295117749919
+  Name: "Ambience Nature Wind and Trees Set 01 SFX"
+  PlatformAssetType: 10
+  PrimaryAsset {
+    AssetType: "AudioBlueprintAssetRef"
+    AssetId: "sfxabp_windytrees_ref"
   }
 }
 Assets {
@@ -131,6 +167,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tooth_002"
+  }
+}
+Assets {
+  Id: 7887238662729938253
+  Name: "Sky Dome"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_Sky"
   }
 }
 Assets {
@@ -179,12 +224,39 @@ Assets {
   }
 }
 Assets {
+  Id: 4061523298365537124
+  Name: "Lightning VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_lightning"
+  }
+}
+Assets {
   Id: 3840781797089551487
   Name: "Wedge"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_wedge_001"
+  }
+}
+Assets {
+  Id: 3481943897843322681
+  Name: "Rain Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_rain_volume_vfx"
+  }
+}
+Assets {
+  Id: 2224571462023946700
+  Name: "Environment Fog Default VFX"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_env_fog_default"
   }
 }
 Assets {
@@ -203,5 +275,14 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cone_truncated_002"
+  }
+}
+Assets {
+  Id: 1353607577508895962
+  Name: "Moon"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "CORESKY_Moon"
   }
 }

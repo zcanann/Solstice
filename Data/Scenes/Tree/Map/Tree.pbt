@@ -1,6 +1,153 @@
 Name: "Map"
 RootId: 9292959906759754007
 Objects {
+  Id: 6624534854813149124
+  Name: "Dock"
+  Transform {
+    Location {
+      X: -750
+      Y: -9600
+      Z: 250
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Dock"
+  }
+}
+Objects {
+  Id: 11678724069612889
+  Name: "Fence"
+  Transform {
+    Location {
+      X: 860
+      Y: -9220
+      Z: -70
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Fence"
+  }
+}
+Objects {
+  Id: 6685588072482038600
+  Name: "FrameworkHomeFancy1"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 10193260367702185647
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkHomeFancy1"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 6425
+            Y: 950
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -50.0000114
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.8
+            Y: 0.8
+            Z: 0.8
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6011071057881920699
+    }
+  }
+}
+Objects {
+  Id: 9285387691563446790
+  Name: "FrameworkShip"
+  Transform {
+    Location {
+      X: -420
+      Y: -12720
+      Z: -100
+    }
+    Rotation {
+      Yaw: 89.9999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "FrameworkShip"
+  }
+}
+Objects {
   Id: 17351291876623604907
   Name: "FrameworkNPC_Lianna"
   Transform {

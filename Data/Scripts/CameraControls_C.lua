@@ -1,4 +1,6 @@
 local propCamera = script:GetCustomProperty("Camera"):WaitForObject()
+local propCameraZoomSpeed = script:GetCustomProperty("CameraZoomSpeed")
+
 local localPlayer = Game.GetLocalPlayer()
 
 local minRotation = -25.0
@@ -24,10 +26,10 @@ function Tick(deltaTime)
 
     -- Apply input zoom
     if localPlayer.IsBindingPressed(localPlayer, "ability_extra_46") or localPlayer.IsBindingPressed(localPlayer, "ability_extra_21") then -- UP/W
-        currentDistance = currentDistance + zoomSpeed * deltaTime
+        currentDistance = currentDistance + zoomSpeed * propCameraZoomSpeed * deltaTime
     end
     if localPlayer.IsBindingPressed(localPlayer, "ability_extra_47") or localPlayer.IsBindingPressed(localPlayer, "ability_extra_31") then -- DOWN/S
-        currentDistance = currentDistance + -zoomSpeed * deltaTime
+        currentDistance = currentDistance + -zoomSpeed * propCameraZoomSpeed * deltaTime
     end
 
     local distanceRatio = (currentDistance - minDistance) / (maxDistance - minDistance)

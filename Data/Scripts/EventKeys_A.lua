@@ -9,6 +9,7 @@ EventKeysAPI.Interaction = require(script:GetCustomProperty("InteractionEvents")
 EventKeysAPI.Movement = require(script:GetCustomProperty("MovementEvents"))
 EventKeysAPI.Networking = require(script:GetCustomProperty("NetworkingEvents"))
 EventKeysAPI.Skill = require(script:GetCustomProperty("SkillEvents"))
+EventKeysAPI.Zone = require(script:GetCustomProperty("ZoneEvents"))
 
 -- Map all events to shorter names, following the format of "e{i}_"
 -- This is done such that any event used in an RPC to/from the client and server is shortened as much as possible

@@ -87,10 +87,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Movement"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Stats"
       PlatformAssetType: 3
     }
@@ -180,6 +176,20 @@ Assets {
     Folders {
       VirtualFolderPath: "WorldMap"
       PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Movement"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Exterior"
+      PlatformAssetType: 5
     }
   }
 }

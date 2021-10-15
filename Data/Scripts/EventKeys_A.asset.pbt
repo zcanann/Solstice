@@ -52,6 +52,12 @@ Assets {
           Id: 9935215235775901043
         }
       }
+      Overrides {
+        Name: "cs:ZoneEvents"
+        AssetReference {
+          Id: 2983321934766811410
+        }
+      }
     }
   }
   SerializationVersion: 100

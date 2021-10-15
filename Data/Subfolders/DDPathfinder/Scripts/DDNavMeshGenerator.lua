@@ -1656,6 +1656,7 @@ local function CalculateNavGrid()
         TeleportPlayer(subArea.centerPos)
 
         for x = subArea.minX, subArea.maxX do
+            Task.Wait()
             for y = subArea.minY, subArea.maxY do
 
                 -- Optimization, find the last z that we need to check (raycast downwards from the top of the navmesh area)

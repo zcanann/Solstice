@@ -225,9 +225,8 @@ Objects {
   Settings {
     IsDefault: true
     PlayerMovementSettings {
-      WalkSpeed: 1200
+      WalkSpeed: 2400
       MaxAcceleration: 1800
-      WalkableFloorAngle: 50
       GroundFriction: 8
       GravityScale: 1.9
       MaxSwimSpeed: 420

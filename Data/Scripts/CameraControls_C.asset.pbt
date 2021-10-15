@@ -3,6 +3,17 @@ Assets {
   Name: "CameraControls_C"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+      Overrides {
+        Name: "cs:CameraZoomSpeed"
+        Float: 1
+      }
+      Overrides {
+        Name: "cs:Camera"
+        ObjectReference {
+        }
+      }
+    }
   }
   SerializationVersion: 100
   VirtualFolderPath: "Input"

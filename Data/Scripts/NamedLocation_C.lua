@@ -18,50 +18,45 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local Framework = require(script:GetCustomProperty("Framework"))
 
 -- Internal custom properties
-local ANL = require(script:GetCustomProperty("API"))
-local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
-local ZONE_TRIGGER = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
+local propAPI = require(script:GetCustomProperty("API"))
+local propComponentRoot = script:GetCustomProperty("ComponentRoot"):WaitForObject()
+local propZoneTrigger = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
 
 -- User exposed properties
-local NAME = COMPONENT_ROOT:GetCustomProperty("Name")
-local TEXT_COLOR = COMPONENT_ROOT:GetCustomProperty("TextColor")
-local BACKGROUND_COLOR = COMPONENT_ROOT:GetCustomProperty("BackgroundColor")
+local NAME = propComponentRoot:GetCustomProperty("Name")
+local TEXT_COLOR = propComponentRoot:GetCustomProperty("TextColor")
+local BACKGROUND_COLOR = propComponentRoot:GetCustomProperty("BackgroundColor")
 
 -- Constants
-local LOCAL_PLAYER = Game.GetLocalPlayer()
+local localPlayer = Game.GetLocalPlayer()
 
-local LOCATION_PROPERTIES = {}
-LOCATION_PROPERTIES.name = NAME
-LOCATION_PROPERTIES.textColor = TEXT_COLOR
-LOCATION_PROPERTIES.backgroundColor = BACKGROUND_COLOR
+local locationProperties = {}
+locationProperties.name = NAME
+locationProperties.textColor = TEXT_COLOR
+locationProperties.backgroundColor = BACKGROUND_COLOR
 
 -- nil OnBeginOverlap(Trigger, CoreObject)
 -- Fires the LocationEntered event
 function OnBeginOverlap(trigger, other)
-    if other:IsA("Player") then
-        Framework.Events.Broadcast.Local("LocationEntered", { other, LOCATION_PROPERTIES })
+    if other == localPlayer then
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Zone.EVENT_ENTERED_ZONE, { trigger.id, locationProperties })
     end
 end
 
 -- nil OnEndOverlap(Trigger, CoreObject)
 -- Fires the LocationExited event
 function OnEndOverlap(trigger, other)
-    if other:IsA("Player") then
-        -- Framework.Events.Broadcast.Local("LocationExited", { other, LOCATION_PROPERTIES })
+    if other == localPlayer then
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Zone.EVENT_LEFT_ZONE, { trigger.id, locationProperties })
     end
 end
 
--- nil OnPlayerJoined(Player)
--- Handles the case when a player spawns inside a trigger
-function OnPlayerJoined(player)
-    if ZONE_TRIGGER:IsOverlapping(player) then
-        OnBeginOverlap(ZONE_TRIGGER, player)
-    end
+if propZoneTrigger:IsOverlapping(localPlayer) then
+    OnBeginOverlap(propZoneTrigger, localPlayer)
 end
 
 -- Initialize
-ANL.RegisterLocation(LOCATION_PROPERTIES, ZONE_TRIGGER)
+propAPI.RegisterLocation(locationProperties, propZoneTrigger)
 
-ZONE_TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)
-ZONE_TRIGGER.endOverlapEvent:Connect(OnEndOverlap)
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+propZoneTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
+propZoneTrigger.endOverlapEvent:Connect(OnEndOverlap)

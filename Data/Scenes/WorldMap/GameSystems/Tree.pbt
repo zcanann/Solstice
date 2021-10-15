@@ -224,7 +224,7 @@ Objects {
     }
     Overrides {
       Name: "cs:MaxAllowedSlope"
-      Float: 0.55
+      Float: 0.01
     }
     Overrides {
       Name: "cs:MaxUnitHeight"
@@ -232,7 +232,7 @@ Objects {
     }
     Overrides {
       Name: "cs:MaxUnitSizeRadius"
-      Float: 50
+      Float: 100
     }
     Overrides {
       Name: "cs:EnableNavMesh"
@@ -454,6 +454,10 @@ Objects {
       ObjectReference {
         SelfId: 12406939908421407392
       }
+    }
+    Overrides {
+      Name: "cs:CameraZoomSpeed"
+      Float: 4
     }
   }
   Collidable_v2 {

@@ -1,63 +1,6 @@
 Name: "OutpostSmall"
 RootId: 6422850962766465532
 Objects {
-  Id: 5005817033950737108
-  Name: "Outpost"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6422850962766465532
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5392631942567428699
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Outpost"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -591.915527
-            Y: -339.723969
-            Z: 110.797089
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 32.8918915
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1.30000019
-            Y: 1.30000019
-            Z: 1.30000019
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13547659012518669605
-    }
-  }
-}
-Objects {
   Id: 6308956629963178743
   Name: "Collision"
   Transform {

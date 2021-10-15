@@ -18,57 +18,61 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 local Framework = require(script:GetCustomProperty("Framework"))
 
 -- Internal custom properties
-local COMPONENT_ROOT = script:GetCustomProperty("ComponentRoot"):WaitForObject()
-local POPUP_TEXT = script:GetCustomProperty("PopupText"):WaitForObject()
-local POPUP_PANEL = script:GetCustomProperty("PopupPanel"):WaitForObject()
-local POPUP_BACKGROUND = script:GetCustomProperty("PopupBackground"):WaitForObject()
-local STATIC_TEXT = script:GetCustomProperty("StaticText"):WaitForObject()
-local STATIC_PANEL = script:GetCustomProperty("StaticPanel"):WaitForObject()
+local propComponentRoot = script:GetCustomProperty("ComponentRoot"):WaitForObject()
+local propPopupText = script:GetCustomProperty("PopupText"):WaitForObject()
+local propPopupPanel = script:GetCustomProperty("PopupPanel"):WaitForObject()
+local propPopupBackground = script:GetCustomProperty("PopupBackground"):WaitForObject()
+local propStaticText = script:GetCustomProperty("StaticText"):WaitForObject()
+local propStaticPanel = script:GetCustomProperty("StaticPanel"):WaitForObject()
 
 -- User exposed properties
-local POPUP_TEXT_DURATION = COMPONENT_ROOT:GetCustomProperty("PopupTextDuration")
+local propPopupTextDuration = propComponentRoot:GetCustomProperty("PopupTextDuration")
 
 -- Variables
 local popupTime = 0.0
+local overlappedLocations = { }
 
--- nil OnLocationEntered(Player, table)
--- Handles the LocationEntered event and updates UI
-function OnLocationEntered(player, properties)
-    if player == Game.GetLocalPlayer() then
-        -- Only show popup when receiving a new name
-        if POPUP_TEXT.text ~= properties.name then
-            POPUP_PANEL.visibility = Visibility.INHERIT
-            POPUP_TEXT.text = properties.name
-            POPUP_TEXT:SetColor(properties.textColor)
-            POPUP_BACKGROUND:SetColor(properties.backgroundColor)
-            popupTime = time()
-        end
-        STATIC_PANEL.visibility = Visibility.INHERIT
-        STATIC_TEXT.text = properties.name
-        STATIC_TEXT:SetColor(properties.textColor)
+function OnLocationEntered(locationId, properties)
+    overlappedLocations[locationId] = properties
+    -- Only show popup when receiving a new name
+    if propPopupText.text ~= properties.name then
+        propPopupPanel.visibility = Visibility.INHERIT
+        propPopupText.text = properties.name
+        propPopupText:SetColor(properties.textColor)
+        propPopupBackground:SetColor(properties.backgroundColor)
+        popupTime = time()
     end
+    propStaticPanel.visibility = Visibility.INHERIT
+    propStaticText.text = properties.name
+    propStaticText:SetColor(properties.textColor)
 end
 
--- nil OnLocationEntered(Player, table)
--- Handles the LocationExited event and hides UI
-function OnLocationExited(player, properties)
-    if player == Game.GetLocalPlayer() then
-        POPUP_PANEL.visibility = Visibility.FORCE_OFF
-        STATIC_PANEL.visibility = Visibility.FORCE_OFF
+function OnLocationExited(locationId, properties)
+    overlappedLocations[locationId] = nil
+
+    -- Fall back on any other locations the player is already inside of
+    for k, v in pairs(overlappedLocations) do
+        if k and v then
+            OnLocationEntered(k, v)
+            return
+        end
     end
+
+    propPopupPanel.visibility = Visibility.FORCE_OFF
+    propStaticPanel.visibility = Visibility.FORCE_OFF
 end
 
 -- nil Tick(float)
 -- Handles popup text timing out
 function Tick(deltaTime)
-    if time() > popupTime + POPUP_TEXT_DURATION then
-        POPUP_PANEL.visibility = Visibility.FORCE_OFF
+    if time() > popupTime + propPopupTextDuration then
+        propPopupPanel.visibility = Visibility.FORCE_OFF
     end
 end
 
 -- Initialize
-POPUP_PANEL.visibility = Visibility.FORCE_OFF
-STATIC_PANEL.visibility = Visibility.FORCE_OFF
+propPopupPanel.visibility = Visibility.FORCE_OFF
+propStaticPanel.visibility = Visibility.FORCE_OFF
 
-Framework.Events.Connect("LocationEntered", OnLocationEntered)
-Framework.Events.Connect("LocationExited", OnLocationExited)
+Framework.Events.Connect(Framework.Events.Keys.Zone.EVENT_ENTERED_ZONE, OnLocationEntered)
+Framework.Events.Connect(Framework.Events.Keys.Zone.EVENT_LEFT_ZONE, OnLocationExited)

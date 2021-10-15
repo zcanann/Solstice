@@ -8,15 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15434877182000516094
-  Name: "Smoke Volume VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_smoke_volume_vfx"
-  }
-}
-Assets {
   Id: 14896948493337902517
   Name: "Decal Vines End 01"
   PlatformAssetType: 14
@@ -32,15 +23,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
-  }
-}
-Assets {
-  Id: 12618603961026701634
-  Name: "Lily Pads 001"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_flower_water_lily_001"
   }
 }
 Assets {
@@ -68,15 +50,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_001"
-  }
-}
-Assets {
-  Id: 8757068560497122517
-  Name: "Plane 4m - One Sided"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_plane_4m_001"
   }
 }
 Assets {
@@ -122,15 +95,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_001"
-  }
-}
-Assets {
-  Id: 5435252419915866004
-  Name: "Terrain 4-way Tropical"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_terrain_4way_alpha_tropical_001_wa"
   }
 }
 Assets {
@@ -221,5 +185,14 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_003"
+  }
+}
+Assets {
+  Id: 1413196292823476264
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
   }
 }
