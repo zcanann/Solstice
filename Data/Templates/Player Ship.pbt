@@ -21,13 +21,13 @@ Assets {
           Overrides {
             Name: "cs:UpgradeEffect"
             AssetReference {
-              Id: 1101493590359530603
+              Id: 841534158063459245
             }
           }
           Overrides {
             Name: "cs:ExplosionEffect"
             AssetReference {
-              Id: 14416435799863575136
+              Id: 841534158063459245
             }
           }
         }

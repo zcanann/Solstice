@@ -4484,9 +4484,9 @@ Objects {
   ChildIds: 13816292876783745708
   ChildIds: 6857379676434921929
   ChildIds: 6960250468551121664
-  ChildIds: 10643956840175366200
+  ChildIds: 12375773770847764023
   ChildIds: 10808094530287258735
-  ChildIds: 11095214797238983909
+  ChildIds: 906411486442082175
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -4503,18 +4503,18 @@ Objects {
   }
 }
 Objects {
-  Id: 11095214797238983909
+  Id: 906411486442082175
   Name: "SloopSunken"
   Transform {
     Location {
-      X: 6045.45654
-      Y: 10619.6357
-      Z: 178.47583
+      X: 11.9692383
+      Y: 1588.13281
+      Z: -43.7145691
     }
     Rotation {
-      Pitch: 50.0297928
-      Yaw: 92.659317
-      Roll: -178.937
+      Pitch: -37.6468544
+      Yaw: 54.138813
+      Roll: 47.3967934
     }
     Scale {
       X: 0.401614159
@@ -4523,6 +4523,44 @@ Objects {
     }
   }
   ParentId: 13690879713071030408
+  ChildIds: 16412941087694918942
+  ChildIds: 8520327271543377318
+  ChildIds: 185230773589465727
+  ChildIds: 11868398036333639548
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 11868398036333639548
+  Name: "Cannon"
+  Transform {
+    Location {
+      X: 162.80484
+      Y: -90.1179
+      Z: 26.265131
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 0.679294884
+      Y: 0.679294884
+      Z: 0.679294884
+    }
+  }
+  ParentId: 906411486442082175
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -4534,564 +4572,2514 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 540537719558994305
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cannon"
+  }
+}
+Objects {
+  Id: 185230773589465727
+  Name: "Cannon"
+  Transform {
+    Location {
+      X: -169.566147
+      Y: -90.1185913
+      Z: 26.265131
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.679294884
+      Y: 0.679294884
+      Z: 0.679294884
+    }
+  }
+  ParentId: 906411486442082175
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cannon_1"
+  }
+}
+Objects {
+  Id: 8520327271543377318
+  Name: "MastMain"
+  Transform {
+    Location {
+      X: 53.4256134
+      Y: -48.6303558
+      Z: 37.0885658
+    }
+    Rotation {
+      Pitch: -57.9207764
+      Yaw: 4.98866892
+      Roll: -0.971740723
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 906411486442082175
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "MastMain"
+  }
+}
+Objects {
+  Id: 16412941087694918942
+  Name: "Hull"
+  Transform {
+    Location {
+      X: 3.52197266
+      Y: 64.1929703
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 906411486442082175
+  ChildIds: 10893594341880821622
+  ChildIds: 14765503182260987296
+  ChildIds: 10673735376012577615
+  ChildIds: 6231953863373005261
+  ChildIds: 6998818740139601699
+  ChildIds: 8002346833022675744
+  ChildIds: 14454244379580606766
+  ChildIds: 9059055975989565107
+  ChildIds: 11015453436473702297
+  ChildIds: 16369711401710062388
+  ChildIds: 11438514102508231418
+  ChildIds: 12594118442017274586
+  ChildIds: 18021466624270709492
+  ChildIds: 5523855840802638034
+  ChildIds: 1554748940501395693
+  ChildIds: 18102274441476204400
+  ChildIds: 16243381804144300297
+  ChildIds: 4363404061137589336
+  ChildIds: 4357582037887502941
+  ChildIds: 321008988189111038
+  ChildIds: 7938303678957266174
+  ChildIds: 16746584771148411776
+  ChildIds: 6023203076604975075
+  ChildIds: 18239846513160862810
+  ChildIds: 10982291410387686110
+  ChildIds: 13828053303336357884
+  ChildIds: 14654356197216674346
+  ChildIds: 12386629133479258059
+  ChildIds: 4650100027940480890
+  ChildIds: 4028721051037975992
+  ChildIds: 7462798207573452797
+  ChildIds: 7655852373290029905
+  ChildIds: 10374799873481994910
+  ChildIds: 15113069597639110643
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 15113069597639110643
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: 39.3198967
+      Z: 2.57067037
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: -0.00247192383
+      Roll: -0.00247192383
+    }
+    Scale {
+      X: 0.285842091
+      Y: 1.00000131
+      Z: 1.10593522
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 572311000024207598
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 604384197891709361
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9311582331608318051
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10374799873481994910
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -494.914948
+      Z: 13.725544
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 0.00023393397
+      Roll: 0.000236732885
+    }
+    Scale {
+      X: 0.321877807
+      Y: 0.618854
+      Z: 2.36753607
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 725213487516743680
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 827177471900849718
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7655852373290029905
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: 67.4199219
+      Y: -441.542725
+      Z: -21.7446899
+    }
+    Rotation {
+      Pitch: 0.396540284
+      Yaw: 10.3413534
+      Roll: -154.326279
+    }
+    Scale {
+      X: -4.30636787
+      Y: 8.34414864
+      Z: 3.22501826
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 1150266834963673703
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 1436781821335648473
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.6
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7462798207573452797
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: -66.0316772
+      Y: -441.544067
+      Z: -21.744648
+    }
+    Rotation {
+      Pitch: -0.396575928
+      Yaw: -10.3413696
+      Roll: -154.326248
+    }
+    Scale {
+      X: 4.30602932
+      Y: 8.34414864
+      Z: 3.22501445
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 1644120741590377928
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 2341505927733136844
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.6
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4028721051037975992
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: 76.8171158
+      Y: -407.153351
+      Z: 13.8328352
+    }
+    Rotation {
+      Yaw: 178.429031
+      Roll: -179.999954
+    }
+    Scale {
+      X: 2.49164343
+      Y: 4.09566832
+      Z: 4.19941
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 2362309993721817227
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 2613306940220742430
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4650100027940480890
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: -62.8515701
+      Y: -407.153351
+      Z: 13.8328352
+    }
+    Rotation {
+      Yaw: 178.429031
+      Roll: -179.999954
+    }
+    Scale {
+      X: 2.49164343
+      Y: 4.09566832
+      Z: 4.19941
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 2786495743370102248
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 3185985713358902365
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 12386629133479258059
+  Name: "Pyramid = 4-Sided Truncated"
+  Transform {
+    Location {
+      X: 2.91852713
+      Y: -346.489288
+      Z: 69.6246872
+    }
+    Rotation {
+      Roll: -89.999939
+    }
+    Scale {
+      X: 0.158957928
+      Y: 0.158957914
+      Z: 0.213876203
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 3403470846264141924
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12905923173550510229
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14654356197216674346
+  Name: "Pyramid = 4-Sided Truncated"
+  Transform {
+    Location {
+      X: 2.91852713
+      Y: -346.701355
+      Z: 6.93586159
+    }
+    Rotation {
+      Roll: 6.83018834e-06
+    }
+    Scale {
+      X: 0.295781314
+      Y: 0.252800912
+      Z: 1.19626582
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 4029856770868604300
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15350790613760956533
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13828053303336357884
+  Name: "Prism - 8-Sided Half"
+  Transform {
+    Location {
+      X: -0.0009765625
+      Y: -140.300537
+      Z: -0.172424316
+    }
+    Rotation {
+      Yaw: -89.999939
+    }
+    Scale {
+      X: -7.53172302
+      Y: 3.75001478
+      Z: 0.152273297
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 4760094301978668518
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16883847150662538531
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10982291410387686110
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: 2.37304711
+      Y: -165.943451
+      Z: -40.858551
+    }
+    Rotation {
+      Pitch: 0.0814841539
+      Yaw: -179.186234
+      Roll: -85.7730103
+    }
+    Scale {
+      X: 6.23378038
+      Y: 4.17936039
+      Z: 9.27167225
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 4840927957988440162
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 4987366216569168712
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 18239846513160862810
+  Name: "Wedge"
+  Transform {
+    Location {
+      X: 176.371094
+      Y: -441.10498
+      Z: 14.4263916
+    }
+    Rotation {
+      Pitch: -90
+      Yaw: 170.537659
+      Roll: 0.772399902
+    }
+    Scale {
+      X: -0.30349654
+      Y: 3.64782119
+      Z: 0.999994874
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 5796571403498974354
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 6001390631072054194
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3840781797089551487
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6023203076604975075
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: -29.0742188
+      Y: -532.870117
+      Z: 37.8330078
+    }
+    Rotation {
+      Pitch: -57.3743896
+      Yaw: -128.543884
+      Roll: 25.9600658
+    }
+    Scale {
+      X: -2.96972656
+      Y: -3.9189527
+      Z: -10.6531496
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 6400807170217309029
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 6447546446138478107
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5847969640581468610
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16746584771148411776
+  Name: "Quarter hemisphere"
+  Transform {
+    Location {
+      X: 60.9477539
+      Y: -187.136475
+      Z: -93.1174927
+    }
+    Rotation {
+      Yaw: 5.75741603e-13
+      Roll: -89.999939
+    }
+    Scale {
+      X: -2
+      Y: 2.11999869
+      Z: 7.72944307
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 6573770220021552166
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14580885173560146840
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7938303678957266174
+  Name: "Wedge - Convex"
+  Transform {
+    Location {
+      X: 110.947754
+      Y: -187.13623
+      Z: -43.5879517
+    }
+    Rotation {
+      Pitch: -90
+      Yaw: -26.565033
+      Roll: -63.4344788
+    }
+    Scale {
+      X: 1
+      Y: -1
+      Z: 3.86472154
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 6722924256910726750
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1.43299818
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12733380910503144596
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 321008988189111038
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: 31.4946289
+      Y: -532.870117
+      Z: 37.8330078
+    }
+    Rotation {
+      Pitch: 57.3744202
+      Yaw: 128.543961
+      Roll: 25.9601269
+    }
+    Scale {
+      X: 2.96972656
+      Y: -3.9189527
+      Z: -10.6531496
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 7156017988077785430
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 7613955705215840481
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5847969640581468610
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4357582037887502941
+  Name: "Quarter hemisphere"
+  Transform {
+    Location {
+      X: -52.4504814
+      Y: -187.166595
+      Z: -92.9450836
+    }
+    Rotation {
+      Yaw: 5.75741386e-13
+      Roll: -89.999939
+    }
+    Scale {
+      X: 2
+      Y: 2.11999869
+      Z: 7.72944307
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8106926057211082300
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14580885173560146840
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4363404061137589336
+  Name: "Wedge - Convex"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -227.138702
+      Z: -144.266418
+    }
+    Rotation {
+      Pitch: 1.36603776e-05
+      Yaw: 4.82967698e-06
+      Roll: -89.999939
+    }
+    Scale {
+      X: 1.18924785
+      Y: 1.02310145
+      Z: 3.44913745
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8307144273550048568
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1.817
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12733380910503144596
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16243381804144300297
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 4.75725508
+      Y: -534.814331
+      Z: -29.4058704
+    }
+    Rotation {
+      Pitch: -76.3878784
+      Yaw: 89.9999695
+      Roll: 179.999634
+    }
+    Scale {
+      X: 0.897852898
+      Y: 1.20018053
+      Z: 1.11262488
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8430674783735839410
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.957122564
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 18102274441476204400
+  Name: "Wedge - Convex"
+  Transform {
+    Location {
+      X: -102.450485
+      Y: -187.166595
+      Z: -43.4154892
+    }
+    Rotation {
+      Pitch: -90
+      Roll: -89.999939
+    }
+    Scale {
+      X: 1
+      Y: 0.999999881
+      Z: 3.86472154
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8929890130793968274
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1.43299818
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12733380910503144596
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 1554748940501395693
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: -0.00048828125
+      Y: -195.53
+      Z: 19.4520111
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 14.0362635
+      Roll: -76.7829
+    }
+    Scale {
+      X: 2.51034307
+      Y: 4.17937374
+      Z: 7.87272549
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 9093863475623847815
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 9542952939414508879
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5523855840802638034
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.560059
+      Z: 19.6240234
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 90
+      Roll: 179.166901
+    }
+    Scale {
+      X: 2.51001167
+      Y: -4.17936659
+      Z: 9.93331337
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 9555424572239530826
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 10375933549981981354
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 18021466624270709492
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195
+      Z: 19.6244507
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 44.9999962
+      Roll: -45.8217468
+    }
+    Scale {
+      X: 2.51034307
+      Y: -4.17936897
+      Z: 7.87272549
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 10532308957863929422
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 10548797892526645304
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 12594118442017274586
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.56015
+      Z: 19.6240253
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: -87.8886719
+      Roll: 1.29177856
+    }
+    Scale {
+      X: 2.51001167
+      Y: 4.1793685
+      Z: 9.93331337
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 11226433132914785192
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664529
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 11593054874748365080
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11438514102508231418
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: 2.13867211
+      Y: 275.438446
+      Z: 15.6162825
+    }
+    Rotation {
+      Pitch: 0.790662646
+      Yaw: -179.787018
+      Roll: -74.93396
+    }
+    Scale {
+      X: 0.628030419
+      Y: 0.628032684
+      Z: 0.779821455
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2255233973468152781
       }
     }
-    ParameterOverrideMap {
-      key: 11600869461207139483
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17747486695592980290
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16369711401710062388
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -571.531494
+      Z: 13.725544
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 6.83018879e-06
+      Roll: 1.04524415e-05
+    }
+    Scale {
+      X: 0.321877778
+      Y: 1.00000083
+      Z: 2.93044543
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 12377705686302167556
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 12503627578302150655
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11015453436473702297
+  Name: "Wedge"
+  Transform {
+    Location {
+      X: -173.775131
+      Y: -441.10495
+      Z: 14.4256172
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 20.5560398
+      Roll: -168.13385
+    }
+    Scale {
+      X: 0.30349654
+      Y: 3.64782119
+      Z: 0.999994874
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 13007069262031671405
-      value {
-        Overrides {
-          Name: "Name"
-          String: "SloopSunken"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 11.9692383
-            Y: 1588.13281
-            Z: -43.7145691
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -37.6468544
-            Yaw: 54.138813
-            Roll: 47.3967934
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 0.401614159
-            Y: 0.401614159
-            Z: 0.401614159
-          }
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.05
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 13574464027630906860
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3840781797089551487
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9059055975989565107
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: -0.00048828125
+      Y: -195.53
+      Z: 24.0601654
+    }
+    Rotation {
+      Pitch: 89.4662323
+      Yaw: 90.81604
+      Roll: -0.00164794922
+    }
+    Scale {
+      X: 4.87825584
+      Y: 3.91894841
+      Z: 7.87272549
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 14244436523767744929
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14454244379580606766
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.560211
+      Z: 24.232605
+    }
+    Rotation {
+      Pitch: 89.4662323
+      Yaw: 90.8193665
+      Roll: 0.00183541479
+    }
+    Scale {
+      X: 4.87825584
+      Y: -3.91894412
+      Z: 7.87272549
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 14420906498746886046
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 8002346833022675744
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.560059
+      Z: 24.232605
+    }
+    Rotation {
+      Pitch: 89.4589539
+      Yaw: 90.7291489
+      Roll: 179.913025
+    }
+    Scale {
+      X: 4.87827921
+      Y: -3.91893744
+      Z: 9.6051178
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 15143725168610937923
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6998818740139601699
+  Name: "Cone - Truncated Narrow"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: 243.245346
+      Z: 4.0815959
+    }
+    Rotation {
+      Pitch: -0.121276855
+      Yaw: -179.190216
+      Roll: -71.980835
+    }
+    Scale {
+      X: 0.363389164
+      Y: 0.363382667
+      Z: 6.05270529
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 15437453069538212844
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664529
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 15499227101905810482
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1676588862012572719
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6231953863373005261
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -550.204468
+      Z: -81.8101349
+    }
+    Rotation {
+      Pitch: 73.1634903
+      Yaw: -89.9997559
+      Roll: -89.9997559
+    }
+    Scale {
+      X: 0.246645376
+      Y: 0.578129649
+      Z: 1.30783832
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 15651856389517881393
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 16106969636258216175
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10673735376012577615
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.56015
+      Z: 24.2326164
+    }
+    Rotation {
+      Pitch: 89.4575043
+      Yaw: 90.7980499
+      Roll: 179.99205
+    }
+    Scale {
+      X: 4.87827921
+      Y: 3.91893744
+      Z: 9.6051178
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 16830654673793704695
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14765503182260987296
+  Name: "Gear - generic large two-spoked"
+  Transform {
+    Location {
+      X: 2.91852713
+      Y: -362.001282
+      Z: 70.571991
+    }
+    Rotation {
+      Yaw: -179.181198
+    }
+    Scale {
+      X: 1.08449876
+      Y: 1.08449876
+      Z: 1.08449876
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 16967709455221188272
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16865816306072098181
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10893594341880821622
+  Name: "Prism - 8-Sided Half"
+  Transform {
+    Location {
+      Y: -140.331
+    }
+    Rotation {
+      Yaw: -89.999939
+    }
+    Scale {
+      X: 8.55975246
+      Y: 3.66791105
+      Z: 0.152273238
+    }
+  }
+  ParentId: 16412941087694918942
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 16969822522968000753
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
-    ParameterOverrideMap {
-      key: 17143909344832512870
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.5
     }
-    ParameterOverrideMap {
-      key: 17179550190923857631
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16883847150662538531
     }
-    ParameterOverrideMap {
-      key: 17523053909313790365
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
     }
-    ParameterOverrideMap {
-      key: 17635798702561433536
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
       }
-    }
-    ParameterOverrideMap {
-      key: 17914797818834794600
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 18226673670390235763
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15220723772233854756
+      BoundsScale: 1
     }
   }
 }
@@ -8279,16 +10267,64 @@ Objects {
   }
 }
 Objects {
-  Id: 10643956840175366200
+  Id: 12375773770847764023
   Name: "SloopSunken"
   Transform {
+    Location {
+      X: -1735.5918
+      Y: -2812.57324
+      Z: -35.5035095
+    }
+    Rotation {
+      Pitch: 50.0297928
+      Yaw: 92.6593246
+      Roll: -178.937
+    }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 0.401614159
+      Y: 0.401614159
+      Z: 0.401614159
     }
   }
   ParentId: 13690879713071030408
+  ChildIds: 4966861434453812310
+  ChildIds: 15066199228535962862
+  ChildIds: 11941785572471319351
+  ChildIds: 260832732438906420
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 260832732438906420
+  Name: "Cannon"
+  Transform {
+    Location {
+      X: 162.80484
+      Y: -90.1179
+      Z: 26.265131
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 0.679294884
+      Y: 0.679294884
+      Z: 0.679294884
+    }
+  }
+  ParentId: 12375773770847764023
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -8300,564 +10336,2514 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 540537719558994305
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cannon_2"
+  }
+}
+Objects {
+  Id: 11941785572471319351
+  Name: "Cannon"
+  Transform {
+    Location {
+      X: -169.566147
+      Y: -90.1185913
+      Z: 26.265131
+    }
+    Rotation {
+    }
+    Scale {
+      X: 0.679294884
+      Y: 0.679294884
+      Z: 0.679294884
+    }
+  }
+  ParentId: 12375773770847764023
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Cannon_3"
+  }
+}
+Objects {
+  Id: 15066199228535962862
+  Name: "MastMain"
+  Transform {
+    Location {
+      X: 53.4256134
+      Y: -48.6303558
+      Z: 37.0885658
+    }
+    Rotation {
+      Pitch: -57.9207764
+      Yaw: 4.98866892
+      Roll: -0.971740723
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12375773770847764023
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "MastMain_1"
+  }
+}
+Objects {
+  Id: 4966861434453812310
+  Name: "Hull"
+  Transform {
+    Location {
+      X: 3.52197266
+      Y: 64.1929703
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12375773770847764023
+  ChildIds: 3460592500644644414
+  ChildIds: 7764828307842667752
+  ChildIds: 3678056716782336519
+  ChildIds: 17390638794993324165
+  ChildIds: 14270605728603627115
+  ChildIds: 14422110226289597032
+  ChildIds: 8051422879681239142
+  ChildIds: 15750099124473571323
+  ChildIds: 4608708905115190993
+  ChildIds: 4901967083033328252
+  ChildIds: 4149626315198196658
+  ChildIds: 715200574360800146
+  ChildIds: 6715624284682339260
+  ChildIds: 16970409211757263258
+  ChildIds: 12878112616363121061
+  ChildIds: 6634820866039256632
+  ChildIds: 5064220186376953921
+  ChildIds: 11215722553183479056
+  ChildIds: 11192167572032502549
+  ChildIds: 11772373298241127350
+  ChildIds: 14483904047987316150
+  ChildIds: 5714081400241029832
+  ChildIds: 17635282038948406955
+  ChildIds: 6488384273913302290
+  ChildIds: 4558560935873586070
+  ChildIds: 1786998771055017652
+  ChildIds: 7815178621410612066
+  ChildIds: 922544461744297603
+  ChildIds: 16691419439175947826
+  ChildIds: 10431261075693188336
+  ChildIds: 13887557206487504565
+  ChildIds: 14777614358473368089
+  ChildIds: 2941164301230375894
+  ChildIds: 8545514764808494779
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 8545514764808494779
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: 39.3198967
+      Z: 2.57067037
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: -0.00247192383
+      Roll: -0.00247192383
+    }
+    Scale {
+      X: 0.285842091
+      Y: 1.00000131
+      Z: 1.10593522
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 572311000024207598
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 604384197891709361
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9311582331608318051
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2941164301230375894
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -494.914948
+      Z: 13.725544
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 0.00023393397
+      Roll: 0.000236732885
+    }
+    Scale {
+      X: 0.321877807
+      Y: 0.618854
+      Z: 2.36753607
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 725213487516743680
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 827177471900849718
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14777614358473368089
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: 67.4199219
+      Y: -441.542725
+      Z: -21.7446899
+    }
+    Rotation {
+      Pitch: 0.396540284
+      Yaw: 10.3413534
+      Roll: -154.326279
+    }
+    Scale {
+      X: -4.30636787
+      Y: 8.34414864
+      Z: 3.22501826
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 1150266834963673703
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 1436781821335648473
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.6
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13887557206487504565
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: -66.0316772
+      Y: -441.544067
+      Z: -21.744648
+    }
+    Rotation {
+      Pitch: -0.396575928
+      Yaw: -10.3413696
+      Roll: -154.326248
+    }
+    Scale {
+      X: 4.30602932
+      Y: 8.34414864
+      Z: 3.22501445
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 1644120741590377928
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 2341505927733136844
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.6
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10431261075693188336
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: 76.8171158
+      Y: -407.153351
+      Z: 13.8328352
+    }
+    Rotation {
+      Yaw: 178.429031
+      Roll: -179.999954
+    }
+    Scale {
+      X: 2.49164343
+      Y: 4.09566832
+      Z: 4.19941
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 2362309993721817227
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 2613306940220742430
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16691419439175947826
+  Name: "Sphere - Half Slice Thick"
+  Transform {
+    Location {
+      X: -62.8515701
+      Y: -407.153351
+      Z: 13.8328352
+    }
+    Rotation {
+      Yaw: 178.429031
+      Roll: -179.999954
+    }
+    Scale {
+      X: 2.49164343
+      Y: 4.09566832
+      Z: 4.19941
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 2786495743370102248
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 3185985713358902365
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 922544461744297603
+  Name: "Pyramid = 4-Sided Truncated"
+  Transform {
+    Location {
+      X: 2.91852713
+      Y: -346.489288
+      Z: 69.6246872
+    }
+    Rotation {
+      Roll: -89.999939
+    }
+    Scale {
+      X: 0.158957928
+      Y: 0.158957914
+      Z: 0.213876203
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 3403470846264141924
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12905923173550510229
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7815178621410612066
+  Name: "Pyramid = 4-Sided Truncated"
+  Transform {
+    Location {
+      X: 2.91852713
+      Y: -346.701355
+      Z: 6.93586159
+    }
+    Rotation {
+      Roll: 6.83018834e-06
+    }
+    Scale {
+      X: 0.295781314
+      Y: 0.252800912
+      Z: 1.19626582
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 4029856770868604300
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 15350790613760956533
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 1786998771055017652
+  Name: "Prism - 8-Sided Half"
+  Transform {
+    Location {
+      X: -0.0009765625
+      Y: -140.300537
+      Z: -0.172424316
+    }
+    Rotation {
+      Yaw: -89.999939
+    }
+    Scale {
+      X: -7.53172302
+      Y: 3.75001478
+      Z: 0.152273297
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 4760094301978668518
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16883847150662538531
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4558560935873586070
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: 2.37304711
+      Y: -165.943451
+      Z: -40.858551
+    }
+    Rotation {
+      Pitch: 0.0814841539
+      Yaw: -179.186234
+      Roll: -85.7730103
+    }
+    Scale {
+      X: 6.23378038
+      Y: 4.17936039
+      Z: 9.27167225
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 6253028042947364275
       }
     }
-    ParameterOverrideMap {
-      key: 4840927957988440162
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.229166672
+        G: 0.168441266
+        B: 0.083472088
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 4987366216569168712
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6488384273913302290
+  Name: "Wedge"
+  Transform {
+    Location {
+      X: 176.371094
+      Y: -441.10498
+      Z: 14.4263916
+    }
+    Rotation {
+      Pitch: -90
+      Yaw: 170.537659
+      Roll: 0.772399902
+    }
+    Scale {
+      X: -0.30349654
+      Y: 3.64782119
+      Z: 0.999994874
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 5796571403498974354
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 6001390631072054194
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3840781797089551487
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17635282038948406955
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: -29.0742188
+      Y: -532.870117
+      Z: 37.8330078
+    }
+    Rotation {
+      Pitch: -57.3743896
+      Yaw: -128.543884
+      Roll: 25.9600658
+    }
+    Scale {
+      X: -2.96972656
+      Y: -3.9189527
+      Z: -10.6531496
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 6400807170217309029
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 6447546446138478107
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5847969640581468610
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5714081400241029832
+  Name: "Quarter hemisphere"
+  Transform {
+    Location {
+      X: 60.9477539
+      Y: -187.136475
+      Z: -93.1174927
+    }
+    Rotation {
+      Yaw: 5.75741603e-13
+      Roll: -89.999939
+    }
+    Scale {
+      X: -2
+      Y: 2.11999869
+      Z: 7.72944307
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 6573770220021552166
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14580885173560146840
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14483904047987316150
+  Name: "Wedge - Convex"
+  Transform {
+    Location {
+      X: 110.947754
+      Y: -187.13623
+      Z: -43.5879517
+    }
+    Rotation {
+      Pitch: -90
+      Yaw: -26.565033
+      Roll: -63.4344788
+    }
+    Scale {
+      X: 1
+      Y: -1
+      Z: 3.86472154
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 6722924256910726750
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1.43299818
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12733380910503144596
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11772373298241127350
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: 31.4946289
+      Y: -532.870117
+      Z: 37.8330078
+    }
+    Rotation {
+      Pitch: 57.3744202
+      Yaw: 128.543961
+      Roll: 25.9601269
+    }
+    Scale {
+      X: 2.96972656
+      Y: -3.9189527
+      Z: -10.6531496
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 7156017988077785430
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 7613955705215840481
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 5847969640581468610
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11192167572032502549
+  Name: "Quarter hemisphere"
+  Transform {
+    Location {
+      X: -52.4504814
+      Y: -187.166595
+      Z: -92.9450836
+    }
+    Rotation {
+      Yaw: 5.75741386e-13
+      Roll: -89.999939
+    }
+    Scale {
+      X: 2
+      Y: 2.11999869
+      Z: 7.72944307
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8106926057211082300
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14580885173560146840
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11215722553183479056
+  Name: "Wedge - Convex"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -227.138702
+      Z: -144.266418
+    }
+    Rotation {
+      Pitch: 1.36603776e-05
+      Yaw: 4.82967698e-06
+      Roll: -89.999939
+    }
+    Scale {
+      X: 1.18924785
+      Y: 1.02310145
+      Z: 3.44913745
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8307144273550048568
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1.817
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12733380910503144596
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5064220186376953921
+  Name: "Cube"
+  Transform {
+    Location {
+      X: 4.75725508
+      Y: -534.814331
+      Z: -29.4058704
+    }
+    Rotation {
+      Pitch: -76.3878784
+      Yaw: 89.9999695
+      Roll: 179.999634
+    }
+    Scale {
+      X: 0.897852898
+      Y: 1.20018053
+      Z: 1.11262488
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8430674783735839410
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.957122564
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6634820866039256632
+  Name: "Wedge - Convex"
+  Transform {
+    Location {
+      X: -102.450485
+      Y: -187.166595
+      Z: -43.4154892
+    }
+    Rotation {
+      Pitch: -90
+      Roll: -89.999939
+    }
+    Scale {
+      X: 1
+      Y: 0.999999881
+      Z: 3.86472154
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 8929890130793968274
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1.43299818
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.25
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12733380910503144596
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 12878112616363121061
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: -0.00048828125
+      Y: -195.53
+      Z: 19.4520111
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 14.0362635
+      Roll: -76.7829
+    }
+    Scale {
+      X: 2.51034307
+      Y: 4.17937374
+      Z: 7.87272549
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 9093863475623847815
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 9542952939414508879
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16970409211757263258
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.560059
+      Z: 19.6240234
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 90
+      Roll: 179.166901
+    }
+    Scale {
+      X: 2.51001167
+      Y: -4.17936659
+      Z: 9.93331337
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 9555424572239530826
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 10375933549981981354
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6715624284682339260
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195
+      Z: 19.6244507
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 44.9999962
+      Roll: -45.8217468
+    }
+    Scale {
+      X: 2.51034307
+      Y: -4.17936897
+      Z: 7.87272549
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 10532308957863929422
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 10548797892526645304
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 715200574360800146
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.56015
+      Z: 19.6240253
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: -87.8886719
+      Roll: 1.29177856
+    }
+    Scale {
+      X: 2.51001167
+      Y: 4.1793685
+      Z: 9.93331337
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.7
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 11226433132914785192
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664529
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 11593054874748365080
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14816883275527395917
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4149626315198196658
+  Name: "Cube - Bottom-Aligned"
+  Transform {
+    Location {
+      X: 2.13867211
+      Y: 275.438446
+      Z: 15.6162825
+    }
+    Rotation {
+      Pitch: 0.790662646
+      Yaw: -179.787018
+      Roll: -74.93396
+    }
+    Scale {
+      X: 0.628030419
+      Y: 0.628032684
+      Z: 0.779821455
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 2255233973468152781
       }
     }
-    ParameterOverrideMap {
-      key: 11600869461207139483
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 0.1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 17747486695592980290
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4901967083033328252
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -571.531494
+      Z: 13.725544
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 6.83018879e-06
+      Roll: 1.04524415e-05
+    }
+    Scale {
+      X: 0.321877778
+      Y: 1.00000083
+      Z: 2.93044543
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 12377705686302167556
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 12503627578302150655
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4608708905115190993
+  Name: "Wedge"
+  Transform {
+    Location {
+      X: -173.775131
+      Y: -441.10495
+      Z: 14.4256172
+    }
+    Rotation {
+      Pitch: 90
+      Yaw: 20.5560398
+      Roll: -168.13385
+    }
+    Scale {
+      X: 0.30349654
+      Y: 3.64782119
+      Z: 0.999994874
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 13007069262031671405
-      value {
-        Overrides {
-          Name: "Name"
-          String: "SloopSunken"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -1735.5918
-            Y: -2812.57324
-            Z: -35.5035095
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 50.0297928
-            Yaw: 92.6593246
-            Roll: -178.937
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 0.401614159
-            Y: 0.401614159
-            Z: 0.401614159
-          }
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.05
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 13574464027630906860
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3840781797089551487
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15750099124473571323
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      X: -0.00048828125
+      Y: -195.53
+      Z: 24.0601654
+    }
+    Rotation {
+      Pitch: 89.4662323
+      Yaw: 90.81604
+      Roll: -0.00164794922
+    }
+    Scale {
+      X: 4.87825584
+      Y: 3.91894841
+      Z: 7.87272549
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 14244436523767744929
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 8051422879681239142
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.560211
+      Z: 24.232605
+    }
+    Rotation {
+      Pitch: 89.4662323
+      Yaw: 90.8193665
+      Roll: 0.00183541479
+    }
+    Scale {
+      X: 4.87825584
+      Y: -3.91894412
+      Z: 7.87272549
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 14420906498746886046
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14422110226289597032
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.560059
+      Z: 24.232605
+    }
+    Rotation {
+      Pitch: 89.4589539
+      Yaw: 90.7291489
+      Roll: 179.913025
+    }
+    Scale {
+      X: 4.87827921
+      Y: -3.91893744
+      Z: 9.6051178
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 15143725168610937923
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14270605728603627115
+  Name: "Cone - Truncated Narrow"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: 243.245346
+      Z: 4.0815959
+    }
+    Rotation {
+      Pitch: -0.121276855
+      Yaw: -179.190216
+      Roll: -71.980835
+    }
+    Scale {
+      X: 0.363389164
+      Y: 0.363382667
+      Z: 6.05270529
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 15437453069538212844
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664529
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 15499227101905810482
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1676588862012572719
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17390638794993324165
+  Name: "Wedge - Concave"
+  Transform {
+    Location {
+      X: 2.1379745
+      Y: -550.204468
+      Z: -81.8101349
+    }
+    Rotation {
+      Pitch: 73.1634903
+      Yaw: -89.9997559
+      Roll: -89.9997559
+    }
+    Scale {
+      X: 0.246645376
+      Y: 0.578129649
+      Z: 1.30783832
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 15651856389517881393
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        R: 0.421875
+        G: 0.310085058
+        B: 0.153664544
+        A: 1
       }
     }
-    ParameterOverrideMap {
-      key: 16106969636258216175
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 12095835209017042614
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 3678056716782336519
+  Name: "Sphere - Half Quarter Thin"
+  Transform {
+    Location {
+      Y: -195.56015
+      Z: 24.2326164
+    }
+    Rotation {
+      Pitch: 89.4575043
+      Yaw: 90.7980499
+      Roll: 179.99205
+    }
+    Scale {
+      X: 4.87827921
+      Y: 3.91893744
+      Z: 9.6051178
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 16830654673793704695
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 2.5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 6559251262023182599
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7764828307842667752
+  Name: "Gear - generic large two-spoked"
+  Transform {
+    Location {
+      X: 2.91852713
+      Y: -362.001282
+      Z: 70.571991
+    }
+    Rotation {
+      Yaw: -179.181198
+    }
+    Scale {
+      X: 1.08449876
+      Y: 1.08449876
+      Z: 1.08449876
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 8647178281910085098
       }
     }
-    ParameterOverrideMap {
-      key: 16967709455221188272
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 1
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16865816306072098181
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 3460592500644644414
+  Name: "Prism - 8-Sided Half"
+  Transform {
+    Location {
+      Y: -140.331
+    }
+    Rotation {
+      Yaw: -89.999939
+    }
+    Scale {
+      X: 8.55975246
+      Y: 3.66791105
+      Z: 0.152273238
+    }
+  }
+  ParentId: 4966861434453812310
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 9511224606688419874
       }
     }
-    ParameterOverrideMap {
-      key: 16969822522968000753
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
     }
-    ParameterOverrideMap {
-      key: 17143909344832512870
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 0.5
     }
-    ParameterOverrideMap {
-      key: 17179550190923857631
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16883847150662538531
     }
-    ParameterOverrideMap {
-      key: 17523053909313790365
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
     }
-    ParameterOverrideMap {
-      key: 17635798702561433536
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
       }
-    }
-    ParameterOverrideMap {
-      key: 17914797818834794600
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 18226673670390235763
-      value {
-        Overrides {
-          Name: "DisableReceiveDecals"
-          Bool: true
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15220723772233854756
+      BoundsScale: 1
     }
   }
 }

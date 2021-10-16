@@ -45,10 +45,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "NPCs"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Items"
       PlatformAssetType: 13
     }
@@ -189,6 +185,21 @@ Assets {
     Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Exterior"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "WorldMap"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "NPCs"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "Ithkuil"
       PlatformAssetType: 5
     }
   }

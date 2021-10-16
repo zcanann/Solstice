@@ -19,6 +19,8 @@ Objects {
   ChildIds: 5628166357863187692
   ChildIds: 9292959906759754007
   ChildIds: 8110563828106138299
+  ChildIds: 9029967772623192400
+  ChildIds: 5779941895382745253
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -31,6 +33,87 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 5779941895382745253
+  Name: "Sharks"
+  Transform {
+    Location {
+      X: -710
+      Y: -11810
+      Z: -220
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8508168070675064633
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Sharks"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 2920
+            Y: -11810
+            Z: -220
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -65
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14994156121394993613
+    }
+  }
+}
+Objects {
+  Id: 9029967772623192400
+  Name: "Sharks"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8508168070675064633
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Sharks"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -710
+            Y: -11810
+            Z: -220
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14994156121394993613
+    }
   }
 }
 Objects {

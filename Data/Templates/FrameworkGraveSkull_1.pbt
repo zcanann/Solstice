@@ -1156,4 +1156,6 @@ Assets {
     }
   }
   SerializationVersion: 100
+  VirtualFolderPath: "Framework"
+  VirtualFolderPath: "Exterior"
 }

@@ -34,7 +34,7 @@ Objects {
     Overrides {
       Name: "cs:DepositFx"
       AssetReference {
-        Id: 7083879178388030801
+        Id: 841534158063459245
       }
     }
   }

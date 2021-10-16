@@ -122,7 +122,7 @@ Assets {
           Overrides {
             Name: "cs:Helper"
             AssetReference {
-              Id: 3237383946689991651
+              Id: 841534158063459245
             }
           }
         }
