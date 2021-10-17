@@ -5,5 +5,4 @@ local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworke
 function OnNetworkDataChanged(key)
 end
 
--- Framework.Print("LISTENING: " .. Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT .. propProximityNetworkedObject.id)
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. propProximityNetworkedObject.id, OnNetworkDataChanged)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, "TODO_COMBAT", OnNetworkDataChanged)

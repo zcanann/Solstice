@@ -1,6 +1,6 @@
 Assets {
-  Id: 8987297397785865558
-  Name: "EngagementSessionDialog_S"
+  Id: 16935042615503571507
+  Name: "DialogVisuals_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,17 +11,22 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Object"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:ProximityNetworkedObject"
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:FaceRigTemplate"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cs:DefaultDialog"
+        String: ""
+      }
     }
   }
   SerializationVersion: 100
-  VirtualFolderPath: "Engagement"
+  VirtualFolderPath: "Dialog"
 }

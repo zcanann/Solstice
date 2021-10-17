@@ -203,4 +203,4 @@ function Respawn()
     respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
 end
 
-Framework.Events.ConnectForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)

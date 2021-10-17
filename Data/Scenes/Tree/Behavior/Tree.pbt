@@ -97,6 +97,7 @@ Objects {
   ChildIds: 9287987596664656546
   ChildIds: 14589941801162997866
   ChildIds: 2992005490681078043
+  ChildIds: 1955066204302977802
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -110,6 +111,40 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 1955066204302977802
+  Name: "DialogVisuals_C"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: 3.41509394e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12299963393686506760
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16935042615503571507
+    }
   }
 }
 Objects {

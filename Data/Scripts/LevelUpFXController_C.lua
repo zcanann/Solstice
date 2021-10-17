@@ -51,4 +51,4 @@ function OnPlayerLeveledUp(player, skillId)
     sfx:Play()
 end
 
-Framework.Events.Connect(Framework.Events.Keys.Skill.EVENT_PLAYER_LEVELED_UP, OnPlayerLeveledUp)
+Framework.Events.Listen(Framework.Events.Keys.Skill.EVENT_PLAYER_LEVELED_UP, OnPlayerLeveledUp)

@@ -46,5 +46,5 @@ end
 
 ClearMenu()
 
-Framework.Events.Connect(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS, ClearMenu)
-Framework.Events.Connect(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, AddEntry)
+Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS, ClearMenu)
+Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, AddEntry)

@@ -28,6 +28,9 @@ local function TableDiff (A, B)
 	-- del, mod, sub
 	local diff = { d = {}, m = {}, s = {} }
 
+	A = A or { }
+	B = B or { }
+
 	for k,v in pairs(A) do
 		if type(A[k]) == "function" or type(A[k]) == "userdata" then
 			error ("TableDiff only supports diffs of tables!")
@@ -75,26 +78,57 @@ local function TableDiff (A, B)
 	return diff
 end
 
-local function TablePatch (A, diff)
+local function TablePatch(A, diff)
+	-- ?? Sub?
 	if diff.s ~= nil then
-		for k,v in pairs(diff.s) do
-			A[k] = TablePatch (A[k], v)
+		for k, v in pairs(diff.s) do
+			A[k] = TablePatch(A[k], v)
 		end
 	end
 
+	-- Deleted
 	if diff.d ~= nil then
-		for k,v in pairs(diff.d) do
+		for k, v in pairs(diff.d) do
 			A[v] = nil
 		end
 	end
 
+	-- Modified
 	if diff.m ~= nil then
-		for k,v in pairs(diff.m) do
+		for k, v in pairs(diff.m) do
 			A[k] = v
 		end
 	end
 
 	return A
+end
+
+
+local function TableDiffKeys(diff)
+	local diffKeys = { }
+	-- ?? Sub?
+	if diff.s ~= nil then
+		for k, v in pairs(diff.s) do
+			diffKeys[k] = true
+		end
+	end
+
+	-- Deleted
+	if diff.d ~= nil then
+		for k, v in pairs(diff.d) do
+			-- Deleted are stored differently, index by v
+			diffKeys[v] = true
+		end
+	end
+
+	-- Modified
+	if diff.m ~= nil then
+		for k, v in pairs(diff.m) do
+			diffKeys[k] = true
+		end
+	end
+
+	return diffKeys
 end
 
 function Islist(t)
@@ -369,6 +403,7 @@ TableUtils.CondenseStringConstants = TableCondenseStringConstants
 TableUtils.Serialize = TableSerialize
 TableUtils.Deserialize = TableDeserialize
 TableUtils.Diff = TableDiff
+TableUtils.GetDiffKeys = TableDiffKeys
 TableUtils.Patch = TablePatch
 
 return TableUtils

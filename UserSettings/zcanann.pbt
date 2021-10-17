@@ -1,3 +1,5 @@
+DebuggerSettings {
+}
 ObjectSettings {
   ObjectStates {
     key: 3864600756154531

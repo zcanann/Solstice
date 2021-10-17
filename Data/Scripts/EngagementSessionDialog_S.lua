@@ -1,9 +1,8 @@
--- Defines the engagement session between the player and an object or enemy, such as during mining, cooking, or fighting
--- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
+-- Handles the dialog engagement session between a player and an NPC
 local Framework = require(script:GetCustomProperty("Framework"))
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
+local propRigTemplate = script:GetCustomProperty("RigTemplate")
 
 local engagedPlayers = { }
 
@@ -64,4 +63,4 @@ function Tick(deltaSeconds)
     Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
 end
 
-Framework.Events.ConnectForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)

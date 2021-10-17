@@ -1,7 +1,7 @@
 local NetworkingEvents = { }
 
 NetworkingEvents.EVENT_NETWORKED_KEY_CHANGED_PREFIX = "event_networked_key_changed_"
-NetworkingEvents.EVENT_NETWORKED_KEY_CHANGED_PLAYER = "event_networked_key_changed_player"
+NetworkingEvents.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX = "event_networked_key_changed_player_"
 NetworkingEvents.EVENT_OTHER_PLAYER_ENTERED_RANGE = "event_player_entered_range"
 NetworkingEvents.EVENT_OTHER_PLAYER_LEFT_RANGE = "event_player_left_range"
 

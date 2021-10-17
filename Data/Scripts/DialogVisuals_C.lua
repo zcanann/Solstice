@@ -1,3 +1,5 @@
+
+--[[
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
@@ -10,8 +12,12 @@ local propDepletableResource4 = script:GetCustomProperty("DepletableResource4"):
 local propDepletableResource5 = script:GetCustomProperty("DepletableResource5"):WaitForObject()
 local propDepletableResource6 = script:GetCustomProperty("DepletableResource6"):WaitForObject()
 
-function OnResourceAmountChanged(resourceAmount)
-    resourceAmount = resourceAmount or 0
+function OnDialogStateChanged(resourceAmount)
+    if resourceAmount then
+        resourceAmount = resourceAmount[Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT] or 0
+    else
+        resourceAmount = 0
+    end
 
     propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(resourceAmount == 0)
     propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(resourceAmount > 0)
@@ -24,7 +30,6 @@ function OnResourceAmountChanged(resourceAmount)
     propDepletableResource6.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 6)
 end
 
--- Default to fully extracted until we get an update from the server
-OnResourceAmountChanged(0)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, "TODO_DIALOG", OnNetworkDataChanged)
 
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, OnResourceAmountChanged)
+--]]

@@ -114,5 +114,5 @@ end
 
 -- Initialize
 PANEL.visibility = Visibility.FORCE_OFF
-Framework.Events.Connect("BannerMessage", OnBannerMessageEvent)
-Framework.Events.Connect("SubBannerMessage", OnSubBannerMessage)
+Framework.Events.Listen("BannerMessage", OnBannerMessageEvent)
+Framework.Events.Listen("SubBannerMessage", OnSubBannerMessage)

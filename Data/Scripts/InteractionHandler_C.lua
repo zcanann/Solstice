@@ -47,5 +47,5 @@ local function OnMouseInputConsumedByUI()
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 end
 
-Framework.Events.Connect(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, OnMouseDown)
-Framework.Events.Connect(Framework.Events.Keys.Input.EVENT_UI_CONSUMED_MOUSE_INPUT_CANCEL_GAME_MENUS, OnMouseInputConsumedByUI)
+Framework.Events.Listen(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, OnMouseDown)
+Framework.Events.Listen(Framework.Events.Keys.Input.EVENT_UI_CONSUMED_MOUSE_INPUT_CANCEL_GAME_MENUS, OnMouseInputConsumedByUI)

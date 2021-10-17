@@ -74,5 +74,5 @@ end
 propPopupPanel.visibility = Visibility.FORCE_OFF
 propStaticPanel.visibility = Visibility.FORCE_OFF
 
-Framework.Events.Connect(Framework.Events.Keys.Zone.EVENT_ENTERED_ZONE, OnLocationEntered)
-Framework.Events.Connect(Framework.Events.Keys.Zone.EVENT_LEFT_ZONE, OnLocationExited)
+Framework.Events.Listen(Framework.Events.Keys.Zone.EVENT_ENTERED_ZONE, OnLocationEntered)
+Framework.Events.Listen(Framework.Events.Keys.Zone.EVENT_LEFT_ZONE, OnLocationExited)

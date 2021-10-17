@@ -202,5 +202,9 @@ Assets {
       VirtualFolderPath: "Ithkuil"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Dialog"
+      PlatformAssetType: 3
+    }
   }
 }

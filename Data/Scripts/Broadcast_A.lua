@@ -5,7 +5,8 @@ local Logger = require(script:GetCustomProperty("Logger"))
 local Broadcast = { }
 local requestQueue = DataStructures.Deque.New()
 
-local retriesUntilWarn = 256
+local retriesUntilWarn = 128
+local retriesUntilGiveUp = 1024
 
 -- Default range for area broadcasts
 Broadcast.DefaultRange = 8000.0
@@ -61,10 +62,12 @@ Broadcast.LocalReliable = function(eventName, args)
             retryCount = retryCount + 1
             if retryCount == retriesUntilWarn then
                 Logger.Warn("Reliable event may be stuck in a long or infinite loop: " .. EventKeys.ResolveMappedName(eventName))
+            elseif retryCount >= retriesUntilGiveUp then
+                    Logger.Warn("Giving up on reliable event. Was a listener created for this event? Id: " .. EventKeys.ResolveMappedName(eventName))
+                    return
             end
             Task.Wait()
         end
-        print("sent!")
         Broadcast.Local(eventName, args)
     end)
 end

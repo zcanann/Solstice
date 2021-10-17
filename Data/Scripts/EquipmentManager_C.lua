@@ -3,7 +3,7 @@
  local propDebugItemTemplate = script:GetCustomProperty("DebugItem")
 
 -- TODO: listen for equipment changes, check it against a data store of id => template, spawn the appropriate template per-slot
-function OnPlayerNetworkedDataChanged(player, data)
+function OnPlayerEquipmentChanged(player, data)
     if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
 
     --[[
@@ -28,6 +28,6 @@ function OnPlayerLeftRange(player)
     end
 end
 
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, OnPlayerNetworkedDataChanged)
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)
+Framework.Events.ListenForPlayerProximityDataEvent("TODO_EQUIPMENT_KEY", OnPlayerEquipmentChanged)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)

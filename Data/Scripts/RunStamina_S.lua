@@ -97,6 +97,6 @@ function Tick(deltaTime)
 	end
 end
 
-Framework.Events.ConnectForPlayer(Framework.Events.Keys.Movement.EVENT_REQUEST_RUN, RequestRun)
-Framework.Events.ConnectForPlayer(Framework.Events.Keys.Movement.EVENT_REQUEST_WALK, RequestWalk)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Movement.EVENT_REQUEST_RUN, RequestRun)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Movement.EVENT_REQUEST_WALK, RequestWalk)
 Game.playerJoinedEvent:Connect(OnJoin)

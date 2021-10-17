@@ -3,19 +3,34 @@ local localPlayer = Game.GetLocalPlayer()
 
 local playersInRange = { }
 local retryCountMax = 1024
+local networkedDataCache = { }
 
 function OnPrivateNetworkedDataChanged(player, key)
-    local data = player:GetPrivateNetworkedData(key)
     local keyIsObject = string.match(key, '.+:.+') ~= nil
 
-    if keyIsObject then
-        ForwardDataToObject(key, data)
-    else
-        ForwardDataToPlayer(key, data)
+    -- Perform a diff on the new data vs the previous. We can then figure out which top-level subkeys changed, and fire events for them.
+    local data = player:GetPrivateNetworkedData(key)
+    local diff = Framework.Utils.Table.Diff(networkedDataCache[key], data)
+    local diffSubKeys = Framework.Utils.Table.GetDiffKeys(diff)
+
+    networkedDataCache[key] = data;
+
+    for subKey, _ in pairs(diffSubKeys) do
+        -- Only send data for this particular subkey
+        local subData = nil
+        if data then
+            subData = data[subKey]
+        end
+
+        if keyIsObject then
+            ForwardDataToObject(key, subKey, subData)
+        else
+            ForwardDataToPlayer(key, subKey, subData)
+        end
     end
 end
 
-function ForwardDataToPlayer(key, data, retryCount)
+function ForwardDataToPlayer(key, subKey, data, retryCount)
     retryCount = retryCount or 0
     if retryCount > retryCountMax then
         return
@@ -40,13 +55,13 @@ function ForwardDataToPlayer(key, data, retryCount)
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, { keyAsPlayer })
         playersInRange[key] = keyAsPlayer
     end
-    -- For keys that reference players, broadcast a generic event
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, { keyAsPlayer, data })
+
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX .. subKey, { keyAsPlayer, data })
 end
 
-function ForwardDataToObject(key, data)
+function ForwardDataToObject(key, subKey, data)
     -- For keys referncing a ProximityObject, forward the event. We forgo a client-side entered/left even, instead just sending nil
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. key, { data })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. key .. subKey, { data })
 end
 
 function Refresh()
@@ -56,7 +71,7 @@ function Refresh()
 end
 
 localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK, Refresh)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK, Refresh)
 
 -- Needs a delay for preview mode, in order for the server to have a listener ready
 Task.Spawn(function ()

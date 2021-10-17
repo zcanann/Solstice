@@ -22,4 +22,4 @@ function OnPlayerReadyToReceiveProximityData(player)
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
-Framework.Events.ConnectForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)

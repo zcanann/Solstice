@@ -2,13 +2,8 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local propPlayerAnimationsTemplate = script:GetCustomProperty("PlayerAnimationsTemplate")
 
-function OnPlayerNetworkedDataChanged(player, data)
+function OnPlayerNetworkedDataChanged(player, engagementData)
     if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
-
-	local engagementData = nil
-	if data and data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION] then
-		engagementData = data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION]
-	end
 
 	if engagementData and #engagementData > 0 then
 		OnEngagementSessionConnected(table.unpack(engagementData, 1, #engagementData))
@@ -101,7 +96,8 @@ function OnEngagementSessionLocalInterrupt(player)
     end
 end
 
-Framework.Events.Connect(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER, OnPlayerNetworkedDataChanged)
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
-Framework.Events.Connect(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)
+Framework.Events.Listen(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX
+    .. Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, OnPlayerNetworkedDataChanged)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)
