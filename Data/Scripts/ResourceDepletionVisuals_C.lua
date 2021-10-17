@@ -10,21 +10,21 @@ local propDepletableResource4 = script:GetCustomProperty("DepletableResource4"):
 local propDepletableResource5 = script:GetCustomProperty("DepletableResource5"):WaitForObject()
 local propDepletableResource6 = script:GetCustomProperty("DepletableResource6"):WaitForObject()
 
-function OnResourceAmountChanged(resourceAmount)
-    resourceAmount = resourceAmount or 0
+function OnResourceAmountChanged(data)
+    local remainingResources = data.remainingResources or 0
 
-    propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(resourceAmount == 0)
-    propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(resourceAmount > 0)
+    propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(remainingResources == 0)
+    propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(remainingResources > 0)
 
-    propDepletableResource1.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 1)
-    propDepletableResource2.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 2)
-    propDepletableResource3.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 3)
-    propDepletableResource4.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 4)
-    propDepletableResource5.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 5)
-    propDepletableResource6.visibility = Framework.Utils.BoolToVisibility(resourceAmount >= 6)
+    propDepletableResource1.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 1)
+    propDepletableResource2.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 2)
+    propDepletableResource3.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 3)
+    propDepletableResource4.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 4)
+    propDepletableResource5.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 5)
+    propDepletableResource6.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 6)
 end
 
 -- Default to fully extracted until we get an update from the server
-OnResourceAmountChanged(0)
+OnResourceAmountChanged({ remainingResources = 0 })
 
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, OnResourceAmountChanged)

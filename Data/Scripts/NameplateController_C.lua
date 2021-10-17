@@ -189,13 +189,10 @@ function PlayerChatHandler(player, params)
 	end, chatDuration)
 end
 
-function OnPlayerNetworkedDataChanged(player, data)
+function OnEntityHealthChanged(player, data)
     if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
 
-	local healthData = nil
-	if data and data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION] then
-		healthData = data[Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION]
-	end
+	-- TODO
 end
 
 function OnPlayerEnteredRange(player)
@@ -262,6 +259,6 @@ end
 
 Chat.receiveMessageHook:Connect(PlayerChatHandler)
 
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX .. "TODO_NAMEPLATE_DATA", OnPlayerNetworkedDataChanged)
+Framework.Events.ListenForPlayerProximityDataEvent("TODO_HEALTH_KEY", OnEntityHealthChanged)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)

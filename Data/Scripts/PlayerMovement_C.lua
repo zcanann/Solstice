@@ -44,6 +44,9 @@ function MovementHook(player, params)
 end
 
 function BeginMoveToGoal(goal, callback, enforceNavmeshGoal)
+	-- NavMesh can be nil on client start for a couple frames
+	if not _G.NavMesh then return end
+
 	Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 	goalRachedCallback = callback
 	DestroyIfValid(goalPulse)

@@ -15,6 +15,21 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:ProximityNetworkedObject"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:NPCModel"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cs:DefaultDialog"
+        String: ""
+      }
     }
   }
   SerializationVersion: 100

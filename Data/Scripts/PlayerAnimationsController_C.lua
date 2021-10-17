@@ -2,13 +2,13 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local propPlayerAnimationsTemplate = script:GetCustomProperty("PlayerAnimationsTemplate")
 
-function OnPlayerNetworkedDataChanged(player, engagementData)
+function OnEngagementDataChanged(player, engagementData)
     if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
 
-	if engagementData and #engagementData > 0 then
-		OnEngagementSessionConnected(table.unpack(engagementData, 1, #engagementData))
-    else
+	if not engagementData or not next(engagementData) then
         OnEngagementSessionLocalInterrupt(player)
+    else
+		OnEngagementSessionConnected(engagementData)
 	end
 end
 
@@ -28,8 +28,8 @@ function OnPlayerLeftRange(player)
     end
 end
 
-function OnEngagementSessionConnected(playerId, objectId, animationName)
-	local player = Game.FindPlayer(playerId)
+function OnEngagementSessionConnected(engagementData)
+	local player = Game.FindPlayer(engagementData.playerId)
     if not Framework.ObjectAssert(player, "Player", "Invalid playerId provided") then return end
 
 	if not player.clientUserData.animState then
@@ -37,20 +37,20 @@ function OnEngagementSessionConnected(playerId, objectId, animationName)
 	end
 
     -- No need to animate if we're already doing this animation
-    if player.clientUserData.animState.animationName == animationName then
+    if player.clientUserData.animState.animationName == engagementData.animationName then
         return
     end
 
-    local animationSetProperty = player.clientUserData.animationSet:GetCustomProperty(animationName)
+    local animationSetProperty = player.clientUserData.animationSet:GetCustomProperty(engagementData.animationName)
 
     if animationSetProperty then
-        local animationSet = player.clientUserData.animationSet:GetCustomProperty(animationName):GetObject()
+        local animationSet = player.clientUserData.animationSet:GetCustomProperty(engagementData.animationName):GetObject()
         local animationAbility = animationSet:GetCustomProperty("Ability"):GetObject()
         local sfx1 = animationSet:GetCustomProperty("SFX1"):GetObject()
         animationAbility.owner = player
 
-        player.clientUserData.animState.animationName = animationName
-        player.clientUserData.animState.objectId = objectId
+        player.clientUserData.animState.animationName = engagementData.animationName
+        player.clientUserData.animState.objectId = engagementData.objectId
         player.clientUserData.animState.activeAnimAbility = animationAbility
         animationAbility:Activate()
 
@@ -96,8 +96,7 @@ function OnEngagementSessionLocalInterrupt(player)
     end
 end
 
+Framework.Events.ListenForPlayerProximityDataEvent(Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX
-    .. Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, OnPlayerNetworkedDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)

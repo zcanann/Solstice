@@ -96,6 +96,10 @@ Broadcast.ServerToPlayerBestEffort = function(eventName, player, args)
     Events.BroadcastToPlayer(player, eventName, UnpackArgs(args))
 end
 
+Broadcast.ProximityData = function(id, key, data)
+    Broadcast.Local(EventKeys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. id, { key, data })
+end
+
 -- SERVER-WIDE BROADCAST
 
 Broadcast.ServerToAllPlayersReliable = function(eventName, args)

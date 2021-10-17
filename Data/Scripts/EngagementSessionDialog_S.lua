@@ -2,7 +2,6 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local propRigTemplate = script:GetCustomProperty("RigTemplate")
 
 local engagedPlayers = { }
 
@@ -15,11 +14,6 @@ end
 
 function Connect(player)
     if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
-        return
-    end
-
-    -- Deny the request if at our engagement limit
-    if propMaxEngagements >= 0 and #engagedPlayers >= propMaxEngagements then
         return
     end
 
@@ -44,8 +38,12 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. player.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { player.id, propProximityNetworkedObject.id, "" } })
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION,
+    {
+        playerId = player.id,
+        objectId = propProximityNetworkedObject.id,
+        animationName = ""
+    })
 end
 
 function Disconnect(player)
@@ -55,12 +53,12 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. player.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil }})
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function Tick(deltaSeconds)
     Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
 end
 
+-- TODO: Should probably move away from the standard engagement session for this, instead having a separate dialog session.
 Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)

@@ -115,7 +115,7 @@ Objects {
 }
 Objects {
   Id: 1955066204302977802
-  Name: "DialogVisuals_C"
+  Name: "DialogData_C"
   Transform {
     Location {
     }
@@ -129,6 +129,20 @@ Objects {
     }
   }
   ParentId: 12299963393686506760
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:NPCModel"
+      AssetReference {
+        Id: 14331216442300634809
+      }
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 13343148381217680232
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -261,6 +275,22 @@ Objects {
       Name: "cs:Object"
       ObjectReference {
         SelfId: 17351291876623604907
+      }
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 13343148381217680232
+      }
+    }
+    Overrides {
+      Name: "cs:DefaultDialog"
+      String: "XXXXXXXXX XXXXXXXXX XXXXXXXXX"
+    }
+    Overrides {
+      Name: "cs:NPCModel"
+      AssetReference {
+        Id: 14331216442300634809
       }
     }
   }

@@ -64,8 +64,12 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. player.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { player.id, propProximityNetworkedObject.id, animationMap[propRequiredItemType] } })
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION,
+    {
+        playerId = player.id,
+        objectId = propProximityNetworkedObject.id,
+        animationName = animationMap[propRequiredItemType]
+    })
 end
 
 function Disconnect(player)
@@ -75,8 +79,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. player.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil }})
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function Tick(deltaSeconds)
@@ -136,8 +139,8 @@ end
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. propProximityNetworkedObject.id,
-        { Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, remainingResources })
+    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT,
+        { remainingResources = remainingResources })
 
     if remainingResources == 0.0 then
         respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)

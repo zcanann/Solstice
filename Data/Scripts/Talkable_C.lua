@@ -6,7 +6,7 @@ local name = propObject:GetCustomProperty("Name")
 
 function BeginTalk()
     Framework.Print("Talking...")
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Dialog.EVENT_PLAYER_REQUESTS_DEFAULT_DIALOG_PREFIX .. propObject.id)
 end
 
 function StopTalk()
