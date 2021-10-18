@@ -7,7 +7,7 @@ Assets {
       RootId: 13004815537659078908
       Objects {
         Id: 13004815537659078908
-        Name: "Humanoid 1 Rig"
+        Name: "FrameworkNPCModel_Lianna"
         Transform {
           Scale {
             X: 1
@@ -67,7 +67,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
@@ -195,17 +195,18 @@ Assets {
         Name: "Decal Elven Symbols"
         Transform {
           Location {
-            X: 5.65685511
-            Y: 3.33786e-06
+            X: 7.29569149
+            Y: 1.25668573
+            Z: 1
           }
           Rotation {
-            Pitch: 1.36603776e-05
-            Yaw: 100.000076
-            Roll: 90.0000229
+            Pitch: 15
+            Yaw: 95
+            Roll: 90
           }
           Scale {
-            X: 0.1
-            Y: 0.1
+            X: 0.095
+            Y: 0.085
             Z: 0.075
           }
         }
@@ -218,9 +219,9 @@ Assets {
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.771854281
+              R: 1
               G: 1
-              B: 0.350000024
+              B: 1
               A: 1
             }
           }
@@ -236,6 +237,14 @@ Assets {
           Overrides {
             Name: "bp:Emissive Boost"
             Float: 2
+          }
+          Overrides {
+            Name: "bp:Fade Delay"
+            Float: 0
+          }
+          Overrides {
+            Name: "bp:Sort Order"
+            Int: 0
           }
         }
         Collidable_v2 {

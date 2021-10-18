@@ -46,6 +46,20 @@ Objects {
     }
   }
   ParentId: 17552823093307985495
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:DialogContainer"
+      ObjectReference {
+        SelfId: 16723662994945044553
+      }
+    }
+    Overrides {
+      Name: "cs:DialogContentPanel"
+      ObjectReference {
+        SelfId: 1957764865448918823
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }

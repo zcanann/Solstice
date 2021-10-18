@@ -21,7 +21,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:NPCModel"
+        Name: "cs:NPCModelTemplate"
         AssetReference {
           Id: 841534158063459245
         }
@@ -29,6 +29,10 @@ Assets {
       Overrides {
         Name: "cs:DefaultDialog"
         String: ""
+      }
+      Overrides {
+        Name: "cs:DialogRange"
+        Float: 200
       }
     }
   }

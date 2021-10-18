@@ -17,6 +17,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:ScreenObject"
+        AssetReference {
+          Id: 15194872122274012203
+        }
+      }
+      Overrides {
         Name: "cs:TableUtils"
         AssetReference {
           Id: 11279245430205585369
