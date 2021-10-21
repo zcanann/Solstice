@@ -14,6 +14,8 @@ function BeginTalk()
         object = propObject,
         range = propDialogRange,
         npcModelTemplate = propNPCModelTemplate,
+        dialog = propDefaultDialog,
+        seed = nil,
     }
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Dialog.EVENT_PLAYER_REQUESTS_DEFAULT_DIALOG, { data })
 end

@@ -236,7 +236,7 @@ Objects {
     }
     Overrides {
       Name: "cs:DefaultDialog"
-      String: "XXXXXXXXX XXXXXXXXX XXXXXXXXX"
+      String: "XXXXXXXXX XXXXXXXXX XXXXXXXXX?"
     }
     Overrides {
       Name: "cs:NPCModelTemplate"

@@ -296,6 +296,30 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:EmptyTemplate"
+        AssetReference {
+          Id: 11753392003197845693
+        }
+      }
+      Overrides {
+        Name: "cs:ExclaimationMark"
+        AssetReference {
+          Id: 423864871308684615
+        }
+      }
+      Overrides {
+        Name: "cs:Period"
+        AssetReference {
+          Id: 4909570000588012554
+        }
+      }
+      Overrides {
+        Name: "cs:QuestionMark"
+        AssetReference {
+          Id: 10315488790040496240
+        }
+      }
     }
   }
   SerializationVersion: 100
