@@ -1,30 +1,63 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local propQuestCompleteModel = script:GetCustomProperty("QuestCompleteModel"):WaitForObject()
-local propQuestInProgressModel = script:GetCustomProperty("QuestInProgressModel"):WaitForObject()
-local propQuestUnavailableModel = script:GetCustomProperty("QuestUnavailableModel"):WaitForObject()
-local propQuestAvailableModel = script:GetCustomProperty("QuestAvailableModel"):WaitForObject()
+local propQuestionMarkModel = script:GetCustomProperty("QuestionMarkModel"):WaitForObject()
+local propExclaimationMarkModel = script:GetCustomProperty("ExclaimationMarkModel"):WaitForObject()
+
+local propYellowMaterial = script:GetCustomProperty("YellowMaterial")
+local propYellowMaterialEdge = script:GetCustomProperty("YellowMaterialEdge")
+local propGrayMaterial = script:GetCustomProperty("GrayMaterial")
+local propGrayMaterialEdge = script:GetCustomProperty("GrayMaterialEdge")
+local propBlueMaterial = script:GetCustomProperty("BlueMaterial")
+local propBlueMaterialEdge = script:GetCustomProperty("BlueMaterialEdge")
+
+local questionMarkMaterials = { propQuestionMarkModel:GetMaterialSlots()[1], propQuestionMarkModel:GetMaterialSlots()[2] }
+local questionMarkEdgeMaterial = propQuestionMarkModel:GetMaterialSlots()[3]
+
+local exclaimationMarkMaterials = { propExclaimationMarkModel:GetMaterialSlots()[1], propExclaimationMarkModel:GetMaterialSlots()[2] }
+local exclaimationMarkEdgeMaterial = propExclaimationMarkModel:GetMaterialSlots()[3]
 
 function OnQuestStateChanged(data)
     local state = data and data.state
 
-    propQuestCompleteModel.visibility = Visibility.FORCE_OFF
-    propQuestInProgressModel.visibility = Visibility.FORCE_OFF
-    propQuestUnavailableModel.visibility = Visibility.FORCE_OFF
-    propQuestAvailableModel.visibility = Visibility.FORCE_OFF
+    propQuestionMarkModel.visibility = Visibility.FORCE_OFF
+    propExclaimationMarkModel.visibility = Visibility.FORCE_OFF
 
-    if (state == "in_progress") then
-        propQuestInProgressModel.visibility = Visibility.INHERIT
-    elseif (state == "complete") then
-        propQuestCompleteModel.visibility = Visibility.INHERIT
-    elseif (state == "unavailable") then
-        propQuestUnavailableModel.visibility = Visibility.INHERIT
-    elseif (state == "available") then
-        propQuestAvailableModel.visibility = Visibility.INHERIT
+    -- Exclaimation mark states
+    if (state == Framework.Quests.VisualState.AVAILABLE) then
+        propExclaimationMarkModel.visibility = Visibility.INHERIT
+        exclaimationMarkMaterials[1].materialAssetId = propYellowMaterial
+        exclaimationMarkMaterials[2].materialAssetId = propYellowMaterial
+        exclaimationMarkEdgeMaterial.materialAssetId = propYellowMaterialEdge
+    elseif (state == Framework.Quests.VisualState.UNAVAILABLE) then
+        propExclaimationMarkModel.visibility = Visibility.INHERIT
+        exclaimationMarkMaterials[1].materialAssetId = propGrayMaterial
+        exclaimationMarkMaterials[2].materialAssetId = propGrayMaterial
+        exclaimationMarkEdgeMaterial.materialAssetId = propGrayMaterialEdge
+    elseif (state == Framework.Quests.VisualState.REPEATABLE) then
+        propExclaimationMarkModel.visibility = Visibility.INHERIT
+        exclaimationMarkMaterials[1].materialAssetId = propBlueMaterial
+        exclaimationMarkMaterials[2].materialAssetId = propBlueMaterial
+        exclaimationMarkEdgeMaterial.materialAssetId = propBlueMaterialEdge
+    -- Question mark states
+    elseif (state == Framework.Quests.VisualState.COMPLETE) then
+        propQuestionMarkModel.visibility = Visibility.INHERIT
+        questionMarkMaterials[1].materialAssetId = propYellowMaterial
+        questionMarkMaterials[2].materialAssetId = propYellowMaterial
+        questionMarkEdgeMaterial.materialAssetId = propYellowMaterialEdge
+    elseif (state == Framework.Quests.VisualState.IN_PROGRESS) then
+        propQuestionMarkModel.visibility = Visibility.INHERIT
+        questionMarkMaterials[1].materialAssetId = propGrayMaterial
+        questionMarkMaterials[2].materialAssetId = propGrayMaterial
+        questionMarkEdgeMaterial.materialAssetId = propGrayMaterialEdge
+    elseif (state == Framework.Quests.VisualState.REPEATABLE_COMPLETE) then
+        propQuestionMarkModel.visibility = Visibility.INHERIT
+        questionMarkMaterials[1].materialAssetId = propBlueMaterial
+        questionMarkMaterials[2].materialAssetId = propBlueMaterial
+        questionMarkEdgeMaterial.materialAssetId = propBlueMaterialEdge
     end
 end
 
--- Default to fully extracted until we get an update from the server
+-- Default to no quest visuals until we explicitly receive an updated quest state
 OnQuestStateChanged({ state = nil })
 
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.RuntimeDataStore.Keys.Proximity.Quests.STATE, OnQuestStateChanged)

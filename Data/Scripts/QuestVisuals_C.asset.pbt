@@ -16,22 +16,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:QuestCompleteModel"
+        Name: "cs:QuestionMarkModel"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:QuestInProgressModel"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:QuestUnavailableModel"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:QuestAvailableModel"
+        Name: "cs:ExclaimationMarkModel"
         ObjectReference {
         }
       }

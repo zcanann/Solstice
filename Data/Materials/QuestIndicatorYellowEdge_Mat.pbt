@@ -1,6 +1,6 @@
 Assets {
-  Id: 15554806034067659962
-  Name: "QuestIndicatorInactive"
+  Id: 11240273590983766217
+  Name: "QuestIndicatorYellowEdge_Mat"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"
@@ -10,9 +10,8 @@ Assets {
       Overrides {
         Name: "color"
         Color {
-          R: 0.629
-          G: 0.629
-          B: 0.629
+          R: 1
+          G: 1
           A: 1
         }
       }

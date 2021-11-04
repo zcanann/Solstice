@@ -1,29 +1,32 @@
 Assets {
-  Id: 18422887504547829950
-  Name: "QuestIndicatorInactiveTrim"
+  Id: 2764909344384260025
+  Name: "QuestIndicatorYellow_Mat"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"
   CustomMaterialAsset {
-    BaseMaterialId: 6830522436942637887
+    BaseMaterialId: 3702191406046426907
     ParameterOverrides {
+      Overrides {
+        Name: "emissive_boost"
+        Float: 7.5
+      }
       Overrides {
         Name: "color"
         Color {
-          R: 0.315000027
-          G: 0.315000027
-          B: 0.315000027
+          R: 1
+          G: 1
           A: 1
         }
       }
     }
     Assets {
-      Id: 6830522436942637887
-      Name: "Clear Coat 01"
+      Id: 3702191406046426907
+      Name: "Emissive Glow Transparent"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_clear-coat_001"
+        AssetId: "mi_basic_emissive_001"
       }
     }
   }

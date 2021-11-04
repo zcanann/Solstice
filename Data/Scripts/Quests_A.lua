@@ -7,6 +7,15 @@ local QuestKeys = require(script:GetCustomProperty("QuestKeys"))
 local Quests = { }
 local ActiveEntry = nil
 
+Quests.VisualState = { }
+Quests.VisualState.AVAILABLE = "available"
+Quests.VisualState.UNAVAILABLE = "unavailable"
+Quests.VisualState.REPEATABLE = "repeatable"
+
+Quests.VisualState.COMPLETE = "complete"
+Quests.VisualState.IN_PROGRESS = "in_progress"
+Quests.VisualState.REPEATABLE_COMPLETE = "repeatable_complete"
+
 function StartsFrom(npcId)
     ActiveEntry.StartsFrom = npcId
 end
