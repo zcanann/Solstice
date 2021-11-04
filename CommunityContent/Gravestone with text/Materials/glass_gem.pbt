@@ -2,7 +2,7 @@ Assets {
   Id: 8289464085206749976
   Name: "glass_gem"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 12540040750405091072
     ParameterOverrides {

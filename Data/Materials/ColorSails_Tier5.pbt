@@ -2,7 +2,7 @@ Assets {
   Id: 14424089282945842502
   Name: "ColorSails_Tier5"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 10874324117450691185
     ParameterOverrides {

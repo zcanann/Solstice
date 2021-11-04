@@ -412,15 +412,15 @@ Objects {
       Bool: true
     }
     Overrides {
-      Name: "cs:Name"
-      String: "Lianna"
+      Name: "cs:Id"
+      String: "TUTORIAL_ISLAND_LIANNA"
     }
     Overrides {
-      Name: "cs:Name:isrep"
+      Name: "cs:Id:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:Name:ml"
+      Name: "cs:Id:ml"
       Bool: false
     }
   }

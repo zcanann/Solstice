@@ -702,7 +702,7 @@ Assets {
       AssetId: "Sky_SciFi_01"
     }
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Sky"
 }

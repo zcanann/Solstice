@@ -2,7 +2,7 @@ Assets {
   Id: 14056467972342655693
   Name: "Low_Poly Wood Raw"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 10123095712484140762
     ParameterOverrides {

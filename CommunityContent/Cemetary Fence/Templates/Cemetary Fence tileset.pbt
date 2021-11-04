@@ -5265,6 +5265,6 @@ Assets {
   Marketplace {
     Description: "modified Athylian\'s Steel and stone fence\r\n\r\ntwo pieces to easilt make a graveyard or any fenced in area"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

@@ -11,7 +11,7 @@ local propSkillName = propSkillHoverMenu:GetCustomProperty("SkillName"):WaitForO
 local propSkillExp = propSkillHoverMenu:GetCustomProperty("SkillExp"):WaitForObject()
 local propSkillExpRequired = propSkillHoverMenu:GetCustomProperty("SkillExpRequired"):WaitForObject()
 
-local skillKeys = Framework.Database.GetSkillKeys(propSkillKey)
+local skillKeys = Framework.DataBase.GetSkillKeys(propSkillKey)
 local expTextFormat = propSkillExp.text
 local expRequiredTextFormat = propSkillExpRequired.text
 
@@ -39,8 +39,8 @@ end
 function UpdateHoverMenuText()
     propSkillName.text = Framework.ExpTable.GetSkillName(propSkillKey)
 
-    local skillLevel = Framework.Database.GetSkillLevel(localPlayer, propSkillKey)
-    local currentExp = Framework.Database.GetSkillExp(localPlayer, propSkillKey)
+    local skillLevel = Framework.DataBase.GetSkillLevel(localPlayer, propSkillKey)
+    local currentExp = Framework.DataBase.GetSkillExp(localPlayer, propSkillKey)
     local neededExp = Framework.ExpTable.GetExpRequiredForNextLevel(skillLevel)
 
     propSkillExp.text = expTextFormat:gsub("{0}", tostring(currentExp))
@@ -48,8 +48,8 @@ function UpdateHoverMenuText()
 end
 
 function UpdateSkillText()
-    local currentSkillLevel = Framework.Database.GetEffectiveSkillLevel(localPlayer, propSkillKey)
-    local skillLevel = Framework.Database.GetSkillLevel(localPlayer, propSkillKey)
+    local currentSkillLevel = Framework.DataBase.GetEffectiveSkillLevel(localPlayer, propSkillKey)
+    local skillLevel = Framework.DataBase.GetSkillLevel(localPlayer, propSkillKey)
 
     propCurrentLevel.text = tostring(currentSkillLevel)
     propMaxLevel.text = tostring(skillLevel)

@@ -2,7 +2,7 @@ Assets {
   Id: 4172820059742071598
   Name: "A Burned Brick Wall"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 1705392285747954237
     ParameterOverrides {

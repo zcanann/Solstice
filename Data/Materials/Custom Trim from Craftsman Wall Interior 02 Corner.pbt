@@ -2,7 +2,7 @@ Assets {
   Id: 8454851435696330762
   Name: "Custom Trim from Craftsman Wall Interior 02 Corner"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 8064577106388903795
     ParameterOverrides {

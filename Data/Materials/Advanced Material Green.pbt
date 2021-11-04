@@ -2,7 +2,7 @@ Assets {
   Id: 16795970339357610331
   Name: "Advanced Material Green"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 3786559222004126605
     ParameterOverrides {

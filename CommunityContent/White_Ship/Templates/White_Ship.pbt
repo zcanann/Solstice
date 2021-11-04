@@ -12097,6 +12097,6 @@ Assets {
   Marketplace {
     Description: "White ship"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

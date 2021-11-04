@@ -1,11 +1,11 @@
 Assets {
   Id: 14949101436137413811
-  Name: "Database_A"
+  Name: "DataBase_A"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:DatabaseKeys"
+        Name: "cs:DataBaseKeys"
         AssetReference {
           Id: 12431212582313590712
         }
@@ -30,7 +30,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   VirtualFolderPath: "Infrastructure"
   VirtualFolderPath: "Storage"
 }

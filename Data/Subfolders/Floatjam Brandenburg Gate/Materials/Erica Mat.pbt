@@ -2,7 +2,7 @@ Assets {
   Id: 11515258534325935658
   Name: "Erica Mat"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 2058763563560862614
     ParameterOverrides {

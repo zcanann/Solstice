@@ -8651,6 +8651,6 @@ Assets {
   Marketplace {
     Description: "Two dock module optimised with custom collision, Wood SFX when moving on it (One Large Dock and one small Dock)\r\n+Fence\r\n+Torche"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

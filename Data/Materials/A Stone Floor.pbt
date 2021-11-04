@@ -2,7 +2,7 @@ Assets {
   Id: 8116732078193361126
   Name: "A Stone Floor"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 13827080947084456746
     ParameterOverrides {

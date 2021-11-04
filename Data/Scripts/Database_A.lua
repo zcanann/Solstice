@@ -1,13 +1,13 @@
 local ExpTable = require(script:GetCustomProperty("ExpTable"))
 local Events = require(script:GetCustomProperty("Events"))
 
-local Database = { }
+local DataBase = { }
 
-Database.KEYS = require(script:GetCustomProperty("DatabaseKeys"))
+DataBase.KEYS = require(script:GetCustomProperty("DataBaseKeys"))
 
 -- Generic storage
 
-Database.GetKey = function (player, key)
+DataBase.GetKey = function (player, key)
 	if Environment.IsClient() then
 		return player:GetResource(key)
 	end
@@ -16,7 +16,7 @@ Database.GetKey = function (player, key)
 	return playerData[key]
 end
 
-Database.SetKey = function (player, key, value)
+DataBase.SetKey = function (player, key, value)
 	local playerData = Storage.GetPlayerData(player)
 	playerData[key] = value
 
@@ -44,29 +44,29 @@ end
 
 -- Skills misc
 
-Database.IsValidSkill = function (skillId)
+DataBase.IsValidSkill = function (skillId)
 	if not ExpTable.IsValidSkill(skillId) then
 		return false
 	end
 
-    if Database.KEYS.SkillIdMap[skillId] then
+    if DataBase.KEYS.Skills.SkillIdMap[skillId] then
         return true
     end
 
     return false
 end
 
-Database.GetSkillKeys = function (skillId)
-	assert(Database.IsValidSkill(skillId), "Invalid skill provided " .. skillId)
+DataBase.GetSkillKeys = function (skillId)
+	assert(DataBase.IsValidSkill(skillId), "Invalid skill provided " .. skillId)
 
-	return Database.KEYS.SkillIdMap[skillId]
+	return DataBase.KEYS.Skills.SkillIdMap[skillId]
 end
 
 -- [Resource] Effective skill level
 
-Database.GetEffectiveSkillLevel = function(player, skillId)
-	local skillKeys = Database.GetSkillKeys(skillId)
-    local level = Database.GetKey(player, skillKeys.EFFECTIVE_LEVEL) or 1
+DataBase.GetEffectiveSkillLevel = function(player, skillId)
+	local skillKeys = DataBase.GetSkillKeys(skillId)
+    local level = DataBase.GetKey(player, skillKeys.EFFECTIVE_LEVEL) or 1
 
 	if level <= 0 then
 		return 1
@@ -75,25 +75,25 @@ Database.GetEffectiveSkillLevel = function(player, skillId)
 	end
 end
 
-Database.SetEffectiveSkillLevel = function(player, skillId, value)
-	local skillKeys = Database.GetSkillKeys(skillId)
+DataBase.SetEffectiveSkillLevel = function(player, skillId, value)
+	local skillKeys = DataBase.GetSkillKeys(skillId)
 
-    Database.SetKey(player, skillKeys.EFFECTIVE_LEVEL, value)
+    DataBase.SetKey(player, skillKeys.EFFECTIVE_LEVEL, value)
 end
 
 -- [Resource] Skill level
 
-Database.GetSkillLevel = function(player, skillId)
-    local exp = Database.GetSkillExp(player, skillId)
+DataBase.GetSkillLevel = function(player, skillId)
+    local exp = DataBase.GetSkillExp(player, skillId)
 
 	return ExpTable.GetLevelForExp(exp)
 end
 
 -- Skill exp
 
-Database.GetSkillExp = function(player, skillId)
-	local skillKeys = Database.GetSkillKeys(skillId)
-    local exp = Database.GetKey(player, skillKeys.EXP) or 0
+DataBase.GetSkillExp = function(player, skillId)
+	local skillKeys = DataBase.GetSkillKeys(skillId)
+    local exp = DataBase.GetKey(player, skillKeys.EXP) or 0
 
 	if exp < 0 then
 		return 0
@@ -102,32 +102,32 @@ Database.GetSkillExp = function(player, skillId)
 	end
 end
 
-Database.SetSkillExp = function(player, skillId, value)
-	local skillKeys = Database.GetSkillKeys(skillId)
+DataBase.SetSkillExp = function(player, skillId, value)
+	local skillKeys = DataBase.GetSkillKeys(skillId)
 
-	local skillLevel = Database.GetSkillLevel(player, skillId)
+	local skillLevel = DataBase.GetSkillLevel(player, skillId)
 	local newExp = value
-    Database.SetKey(player, skillKeys.EXP, newExp)
+    DataBase.SetKey(player, skillKeys.EXP, newExp)
 
 	local newSkillLevel = ExpTable.GetLevelForExp(newExp)
 
 	-- Check for level up
 	if newSkillLevel > skillLevel then
-		Database.SetEffectiveSkillLevel(player, skillId, newSkillLevel)
+		DataBase.SetEffectiveSkillLevel(player, skillId, newSkillLevel)
 		Events.Broadcast.ServerToAreaBestEffort(Events.Keys.Skill.EVENT_PLAYER_LEVELED_UP, player:GetWorldPosition(), Events.Broadcast.DefaultRange, { player, skillId })
 	end
 end
 
-Database.AddSkillExp = function(player, skillId, value)
-    Database.SetSkillExp(player, skillId, Database.GetSkillExp(player, skillId) + value)
+DataBase.AddSkillExp = function(player, skillId, value)
+    DataBase.SetSkillExp(player, skillId, DataBase.GetSkillExp(player, skillId) + value)
 end
 
-Database.ResetSkillExp = function(player, skillId, value)
-	local skillKeys = Database.GetSkillKeys(skillId)
+DataBase.ResetSkillExp = function(player, skillId, value)
+	local skillKeys = DataBase.GetSkillKeys(skillId)
 
-    Database.SetKey(player, skillKeys.LEVEL, 0)
-    Database.SetKey(player, skillKeys.EFFECTIVE_LEVEL, 0)
-    Database.SetKey(player, skillKeys.EXP, 0)
+    DataBase.SetKey(player, skillKeys.LEVEL, 0)
+    DataBase.SetKey(player, skillKeys.EFFECTIVE_LEVEL, 0)
+    DataBase.SetKey(player, skillKeys.EXP, 0)
 end
 
-return Database
+return DataBase

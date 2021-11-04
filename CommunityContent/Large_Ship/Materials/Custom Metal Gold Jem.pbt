@@ -2,7 +2,7 @@ Assets {
   Id: 8378064689264194876
   Name: "Custom Metal Gold Jem"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 1035958331583243821
     ParameterOverrides {

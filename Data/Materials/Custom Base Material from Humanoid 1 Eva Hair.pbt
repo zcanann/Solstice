@@ -2,7 +2,7 @@ Assets {
   Id: 9611715224730811518
   Name: "Custom Base Material from Humanoid 1 Eva Hair"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 17722151999259185969
     ParameterOverrides {

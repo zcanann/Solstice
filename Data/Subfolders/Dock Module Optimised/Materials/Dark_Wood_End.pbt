@@ -2,7 +2,7 @@ Assets {
   Id: 6879004365669222746
   Name: "Dark_Wood_End"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 2959515817801882882
     ParameterOverrides {

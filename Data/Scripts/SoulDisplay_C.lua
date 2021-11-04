@@ -3,12 +3,12 @@ local Framework = require(script:GetCustomProperty("Framework"))
 local propSoulText = script:GetCustomProperty("SoulText"):WaitForObject()
 
 local soulKey = "soul"
-local soulKeys = Framework.Database.GetSkillKeys(soulKey)
+local soulKeys = Framework.DataBase.GetSkillKeys(soulKey)
 
 local localPlayer = Game.GetLocalPlayer()
 
 function UpdateSoulText()
-    local effectiveSoul = Framework.Database.GetEffectiveSkillLevel(localPlayer, soulKey)
+    local effectiveSoul = Framework.DataBase.GetEffectiveSkillLevel(localPlayer, soulKey)
 
     propSoulText.text = tostring(effectiveSoul)
 end

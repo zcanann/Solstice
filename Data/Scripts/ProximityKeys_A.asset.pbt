@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:QuestProximityKeys"
+        AssetReference {
+          Id: 8658523841663182765
+        }
+      }
+      Overrides {
         Name: "cs:PlayerProximityKeys"
         AssetReference {
           Id: 16499750549434650342
@@ -24,7 +30,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   VirtualFolderPath: "Infrastructure"
   VirtualFolderPath: "Storage"
 }

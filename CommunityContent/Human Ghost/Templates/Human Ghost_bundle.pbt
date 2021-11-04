@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Ghost Character"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

@@ -111,7 +111,7 @@ function CheckForResourceExtracted(player, deltaSeconds)
 
         -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, propBaseDuration)
-        Framework.Database.AddSkillExp(player, propSkillId, propExp)
+        Framework.DataBase.AddSkillExp(player, propSkillId, propExp)
     else
         player.serverUserData.engagement.duration = duration
     end

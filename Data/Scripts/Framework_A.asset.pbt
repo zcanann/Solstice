@@ -11,7 +11,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Database"
+        Name: "cs:DataBase"
         AssetReference {
           Id: 14949101436137413811
         }
@@ -53,6 +53,18 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Npcs"
+        AssetReference {
+          Id: 15346792771177711810
+        }
+      }
+      Overrides {
+        Name: "cs:Quests"
+        AssetReference {
+          Id: 15393841025312082707
+        }
+      }
+      Overrides {
         Name: "cs:RuntimeDataStore"
         AssetReference {
           Id: 17518510815681775488
@@ -72,5 +84,5 @@ Assets {
       }
     }
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

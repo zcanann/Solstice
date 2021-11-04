@@ -2,7 +2,7 @@ Assets {
   Id: 4654913618579007694
   Name: "A Ice Brick Wall"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 12985279261036998163
     ParameterOverrides {

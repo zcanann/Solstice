@@ -2,7 +2,7 @@ Assets {
   Id: 14403082024944166035
   Name: "Fort Tower Shoot Indicator Hologram"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 8730727244455643238
     ParameterOverrides {

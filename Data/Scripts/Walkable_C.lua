@@ -4,13 +4,19 @@ local Framework = require(script:GetCustomProperty("Framework"))
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propStopRadius = script:GetCustomProperty("StopRadius")
 
+local npcId = propObject:GetCustomProperty("Id")
+local npcData = Framework.Npcs.GetNpcData(npcId)
+local npcName = (npcData and npcData.Name) or "unknown"
+
 -- TODO: Take a source and StopRadius param, which
 function GetWalkableDestination()
     return script:GetWorldPosition()
 end
 
 function Interact(callback)
-    Chat.LocalMessage("Walking to " .. propObject:GetCustomProperty("Name") .. "...")
+    if propObject then
+        Chat.LocalMessage("Walking to " .. npcName .. "...") 
+    end
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, { GetWalkableDestination(), propStopRadius, callback })
 end
 

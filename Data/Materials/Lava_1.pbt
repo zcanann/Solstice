@@ -2,7 +2,7 @@ Assets {
   Id: 8711203869274681577
   Name: "Lava_1"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 1082809058784319555
     ParameterOverrides {

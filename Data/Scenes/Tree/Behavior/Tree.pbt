@@ -16,6 +16,7 @@ Objects {
   }
   ParentId: 2058956127506152909
   ChildIds: 4999244393636055979
+  ChildIds: 14460312518976504560
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -30,6 +31,57 @@ Objects {
   }
   NetworkContext {
     Type: Server
+  }
+}
+Objects {
+  Id: 14460312518976504560
+  Name: "QuestGiver_S"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15265514686607499560
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 17351291876623604907
+      }
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 13343148381217680232
+      }
+    }
+    Overrides {
+      Name: "cs:QuestKey"
+      String: "TUTORIAL_MINE_COPPER"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7380580963784353904
+    }
   }
 }
 Objects {
@@ -97,6 +149,7 @@ Objects {
   ChildIds: 9287987596664656546
   ChildIds: 14589941801162997866
   ChildIds: 2992005490681078043
+  ChildIds: 15594024896408941852
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -110,6 +163,38 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 15594024896408941852
+  Name: "QuestVisuals"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12299963393686506760
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "QuestVisuals"
   }
 }
 Objects {

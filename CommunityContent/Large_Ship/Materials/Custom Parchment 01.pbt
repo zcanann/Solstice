@@ -2,7 +2,7 @@ Assets {
   Id: 1450207550609797853
   Name: "Custom Parchment 01"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 601586022676739423
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 2973283937750254550
   Name: "Armor_Rune_Grates"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   VirtualFolderPath: "Items"
   VirtualFolderPath: "Rune"
   CustomMaterialAsset {

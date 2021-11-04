@@ -6,7 +6,9 @@ local propNPCModelTemplate = script:GetCustomProperty("NPCModelTemplate")
 local propDefaultDialog = script:GetCustomProperty("DefaultDialog")
 local propDialogRange = script:GetCustomProperty("DialogRange")
 
-local name = propObject:GetCustomProperty("Name")
+local npcId = propObject:GetCustomProperty("Id")
+local npcData = Framework.Npcs.GetNpcData(npcId)
+local npcName = (npcData and npcData.Name) or "unknown"
 
 function BeginTalk()
     Framework.Print("Talking...")
@@ -36,7 +38,7 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Talk to " .. name, callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Talk to " .. npcName, callback })
 end
 
 Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. propObject.id, Interact)

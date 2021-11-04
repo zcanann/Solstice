@@ -2,26 +2,10 @@ Assets {
   Id: 11237267171393895703
   Name: "Virtual Folders"
   PlatformAssetType: 30
-  SerializationVersion: 100
+  SerializationVersion: 101
   VirtualFolderSetAsset {
     Folders {
-      VirtualFolderPath: "Inventory"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Animations"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "UI"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Equipment"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Input"
       PlatformAssetType: 3
     }
     Folders {
@@ -71,22 +55,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Engagement"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Events"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Interactions"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Stats"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "UI"
       VirtualFolderPath: "Minimap"
       PlatformAssetType: 3
@@ -118,10 +86,6 @@ Assets {
     Folders {
       VirtualFolderPath: "Infrastructure"
       VirtualFolderPath: "Networking"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Audio"
       PlatformAssetType: 3
     }
     Folders {
@@ -179,10 +143,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Movement"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Exterior"
       PlatformAssetType: 5
@@ -203,8 +163,77 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
+      VirtualFolderPath: "Gameplay"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Movement"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Quests"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Stats"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Interactions"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Infrastructure"
+      VirtualFolderPath: "Input"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Equipment"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Infrastructure"
+      VirtualFolderPath: "Audio"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Animations"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Engagement"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Infrastructure"
+      VirtualFolderPath: "Events"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Dialog"
       PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Npcs"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Inventory"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      PlatformAssetType: 13
     }
   }
 }

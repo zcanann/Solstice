@@ -2,7 +2,7 @@ Assets {
   Id: 12105767726742431789
   Name: "Custom Leaves from Fern 01_1"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 2361129965944390963
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 5305899403976208576
   Name: "Custom Bricks Stone Block 01"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 2170709924011066081
     ParameterOverrides {

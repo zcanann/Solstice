@@ -2,7 +2,7 @@ Assets {
   Id: 9727657217286684267
   Name: "Ocean - No Distortion"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 15472391135026288383
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 2482476105183336472
   Name: "Custom Bricks Concrete Cinder Block 01"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 11255191047941682267
     ParameterOverrides {

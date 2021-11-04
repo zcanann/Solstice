@@ -179,6 +179,7 @@ function SpawnLetters()
             letterInstance = World.SpawnAsset(randomLetterTemplate, { parent = propDialogContentPanel })
         -- Mining emoji
         elseif character == "M" then
+            -- TODO
             letterInstance = World.SpawnAsset(propPeriod, { parent = propDialogContentPanel })
         -- Punctuation - period
         elseif character == "." then

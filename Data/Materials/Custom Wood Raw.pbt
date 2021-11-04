@@ -2,7 +2,7 @@ Assets {
   Id: 8647178281910085098
   Name: "Custom Wood Raw"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 15799842230538849792
     ParameterOverrides {

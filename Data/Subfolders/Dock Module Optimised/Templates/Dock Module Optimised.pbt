@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Two dock module optimised with custom collision, Wood SFX when moving on it (One Large Dock and one small Dock)\r\n+Fence\r\n+Torche"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

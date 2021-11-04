@@ -8634,6 +8634,6 @@ Assets {
   Marketplace {
     Description: "Halloween is coming up next month and I really want to help out the Core community with creating a scary scene!\r\nIt is by FAR my favorite celeration and hope you get to spend it with your loved ones.\r\n\r\n\r\n- Many ways of customization\r\n- adjustable colors\r\n- Perfect for Halloween\r\n\r\nIf you use my template please let me know so I can see your creations!\r\n\r\n\r\nIf you come across a bug please contact me!\r\n"
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

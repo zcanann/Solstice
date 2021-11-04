@@ -40,5 +40,5 @@ Assets {
     Version: "1.0.0"
     Description: "My entry to the float jam. It displays the Brandenburg Gate in Berling/Germany."
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
 }

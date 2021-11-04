@@ -2,7 +2,7 @@ Assets {
   Id: 6754821248110610948
   Name: "Trim Stone"
   PlatformAssetType: 13
-  SerializationVersion: 100
+  SerializationVersion: 101
   CustomMaterialAsset {
     BaseMaterialId: 3262437512209397059
     ParameterOverrides {

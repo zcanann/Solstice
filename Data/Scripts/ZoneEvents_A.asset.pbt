@@ -4,6 +4,7 @@ Assets {
   PlatformAssetType: 3
   TextAsset {
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
+  VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Movement"
 }

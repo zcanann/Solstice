@@ -1231,6 +1231,6 @@ Assets {
   Marketplace {
     Description: "It is just simple tomb. "
   }
-  SerializationVersion: 100
+  SerializationVersion: 101
   DirectlyPublished: true
 }

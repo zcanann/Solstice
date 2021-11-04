@@ -141,7 +141,7 @@ function CheckForPlayerAutoAttack(player, deltaSeconds)
 
         -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, playerAttackSpeedBase)
-        Framework.Database.AddSkillExp(player, propWeaponSkill, exp)
+        Framework.DataBase.AddSkillExp(player, propWeaponSkill, exp)
     else
         player.serverUserData.engagement.duration = duration
     end
