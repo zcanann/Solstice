@@ -27,4 +27,4 @@ end
 -- Default to fully extracted until we get an update from the server
 OnResourceAmountChanged({ remainingResources = 0 })
 
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT, OnResourceAmountChanged)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Resources.AMOUNT, OnResourceAmountChanged)

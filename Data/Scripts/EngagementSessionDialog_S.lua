@@ -38,7 +38,7 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION,
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
         objectId = propProximityNetworkedObject.id,
@@ -53,7 +53,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil })
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function Tick(deltaSeconds)

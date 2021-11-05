@@ -235,5 +235,10 @@ Assets {
       VirtualFolderPath: "Models"
       PlatformAssetType: 13
     }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Skills"
+      PlatformAssetType: 3
+    }
   }
 }

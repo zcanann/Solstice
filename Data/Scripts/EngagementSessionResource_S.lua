@@ -64,7 +64,7 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION,
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
         objectId = propProximityNetworkedObject.id,
@@ -79,7 +79,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, { nil })
+    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function Tick(deltaSeconds)
@@ -111,7 +111,7 @@ function CheckForResourceExtracted(player, deltaSeconds)
 
         -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, propBaseDuration)
-        Framework.DataBase.AddSkillExp(player, propSkillId, propExp)
+        Framework.Skills.AddSkillExp(player, propSkillId, propExp)
     else
         player.serverUserData.engagement.duration = duration
     end
@@ -139,7 +139,7 @@ end
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
 
-    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.RuntimeDataStore.Keys.Proximity.Resources.AMOUNT,
+    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Resources.AMOUNT,
         { remainingResources = remainingResources })
 
     if remainingResources == 0.0 then

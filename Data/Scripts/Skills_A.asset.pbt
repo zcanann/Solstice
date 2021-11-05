@@ -1,6 +1,6 @@
 Assets {
-  Id: 15393841025312082707
-  Name: "Quests_A"
+  Id: 15240848421123345541
+  Name: "Skills_A"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,26 +11,20 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ItemKeys"
+        Name: "cs:Events"
         AssetReference {
-          Id: 12396101317449038121
+          Id: 5338086385139468741
         }
       }
       Overrides {
-        Name: "cs:NpcKeys"
+        Name: "cs:SkillExpTable"
         AssetReference {
-          Id: 17048636181121910746
-        }
-      }
-      Overrides {
-        Name: "cs:QuestKeys"
-        AssetReference {
-          Id: 5125885851861403031
+          Id: 1911446898924153423
         }
       }
     }
   }
   SerializationVersion: 101
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Quests"
+  VirtualFolderPath: "Skills"
 }

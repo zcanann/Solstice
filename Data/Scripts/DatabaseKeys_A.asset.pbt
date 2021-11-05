@@ -7,7 +7,7 @@ Assets {
       Overrides {
         Name: "cs:DataBaseKeysQuests"
         AssetReference {
-          Id: 5125885851861403031
+          Id: 4484857197466172211
         }
       }
       Overrides {

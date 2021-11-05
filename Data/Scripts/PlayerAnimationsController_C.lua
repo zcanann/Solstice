@@ -96,7 +96,7 @@ function OnEngagementSessionLocalInterrupt(player)
     end
 end
 
-Framework.Events.ListenForPlayerProximityDataEvent(Framework.RuntimeDataStore.Keys.Proximity.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
+Framework.Events.ListenForPlayerProximityDataEvent(Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)

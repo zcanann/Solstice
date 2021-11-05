@@ -29,12 +29,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ExpTable"
-        AssetReference {
-          Id: 1911446898924153423
-        }
-      }
-      Overrides {
         Name: "cs:Events"
         AssetReference {
           Id: 5338086385139468741
@@ -53,6 +47,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Networking"
+        AssetReference {
+          Id: 8086703094338473467
+        }
+      }
+      Overrides {
         Name: "cs:Npcs"
         AssetReference {
           Id: 15346792771177711810
@@ -68,6 +68,12 @@ Assets {
         Name: "cs:RuntimeDataStore"
         AssetReference {
           Id: 17518510815681775488
+        }
+      }
+      Overrides {
+        Name: "cs:Skills"
+        AssetReference {
+          Id: 15240848421123345541
         }
       }
       Overrides {

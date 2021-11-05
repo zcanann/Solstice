@@ -3,12 +3,12 @@ local Framework = require(script:GetCustomProperty("Framework"))
 local propHealthText = script:GetCustomProperty("HealthText"):WaitForObject()
 
 local healthKey = "health"
-local healthKeys = Framework.DataBase.GetSkillKeys(healthKey)
+local healthKeys = Framework.Skills.GetSkillKeys(healthKey)
 
 local localPlayer = Game.GetLocalPlayer()
 
 function UpdateHealthText()
-    local effectiveHealth = Framework.DataBase.GetEffectiveSkillLevel(localPlayer, healthKey)
+    local effectiveHealth = Framework.Skills.GetEffectiveSkillLevel(localPlayer, healthKey)
 
     propHealthText.text = tostring(effectiveHealth)
 end
