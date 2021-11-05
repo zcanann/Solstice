@@ -17,10 +17,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Items"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Minimap"
       PlatformAssetType: 5
     }
@@ -39,11 +35,6 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Animations"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Items"
-      VirtualFolderPath: "Equipment"
       PlatformAssetType: 5
     }
     Folders {
@@ -239,6 +230,15 @@ Assets {
       VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Skills"
       PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Items"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Items"
+      VirtualFolderPath: "Equipment"
+      PlatformAssetType: 5
     }
   }
 }
