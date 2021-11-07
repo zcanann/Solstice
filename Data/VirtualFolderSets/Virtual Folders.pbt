@@ -240,5 +240,18 @@ Assets {
       VirtualFolderPath: "Equipment"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Water"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "CharacterSelect"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "EmptyTemplates"
+      PlatformAssetType: 5
+    }
   }
 }

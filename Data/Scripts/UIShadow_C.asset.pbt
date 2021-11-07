@@ -16,6 +16,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:ShadowImageOverride"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
         Name: "cs:ShadowSize"
         Int: 2
       }

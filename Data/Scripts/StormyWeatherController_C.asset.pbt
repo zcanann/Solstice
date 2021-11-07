@@ -50,6 +50,14 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:RainFollowPlayer"
+        Bool: false
+      }
+      Overrides {
+        Name: "cs:LightningFollowPlayer"
+        Bool: false
+      }
+      Overrides {
         Name: "cs:SFXFar1:isrep"
         Bool: false
       }

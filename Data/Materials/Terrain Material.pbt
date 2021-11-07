@@ -40,6 +40,24 @@ Assets {
           Id: 18152046462523842666
         }
       }
+      Overrides {
+        Name: "cmp:Material3_Sides"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cmp:Material4"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
+        Name: "cmp:Material4_Sides"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
     }
     Assets {
       Id: 3169360956294553894

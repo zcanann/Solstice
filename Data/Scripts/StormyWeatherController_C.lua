@@ -6,6 +6,8 @@ local propSFXFar2 = script:GetCustomProperty("SFXFar2"):WaitForObject()
 local propSFXFar3 = script:GetCustomProperty("SFXFar3"):WaitForObject()
 local propSFXFar4 = script:GetCustomProperty("SFXFar4"):WaitForObject()
 local propSFXClose = script:GetCustomProperty("SFXClose"):WaitForObject()
+local propRainFollowPlayer = script:GetCustomProperty("RainFollowPlayer")
+local propLightningFollowPlayer = script:GetCustomProperty("LightningFollowPlayer")
 
 local localPlayer = Game.GetLocalPlayer()
 local timeUntilNextLightning = 0.0
@@ -56,10 +58,14 @@ function ResetTimer()
     timeUntilNextLightning = 3.0 + rampUp + math.random() * rampUp * rampUpMaxMultiplier
 end
 
-propRainVolume:AttachToPlayer(localPlayer, "nameplate")
+if propRainFollowPlayer then
+    propRainVolume:AttachToPlayer(localPlayer, "nameplate")
+end
+
 propLightningLight:AttachToPlayer(localPlayer, "nameplate")
 propLightningLight:SetPosition(Vector3.New(0.0, 0.0, 1500.0))
 propLightningLight:SetRotation(Rotation.New(0.0, -90.0, 0.0))
+
 propLightningLight.visibility = Visibility.FORCE_OFF
 
 ResetTimer()
