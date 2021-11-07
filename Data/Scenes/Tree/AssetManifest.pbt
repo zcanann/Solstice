@@ -1,22 +1,4 @@
 Assets {
-  Id: 17965145654146603042
-  Name: "Hill 05"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_005"
-  }
-}
-Assets {
-  Id: 17803366332466114312
-  Name: "Invisible"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_invisible_001"
-  }
-}
-Assets {
   Id: 16936267285868791913
   Name: "Flower Wild Lily 02"
   PlatformAssetType: 1
@@ -62,33 +44,6 @@ Assets {
   }
 }
 Assets {
-  Id: 14409382455391208442
-  Name: "Snow 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_snow_001_uv"
-  }
-}
-Assets {
-  Id: 14023144080669477239
-  Name: "Hill 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_002"
-  }
-}
-Assets {
-  Id: 13710340032352944241
-  Name: "Hill 02"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_002"
-  }
-}
-Assets {
   Id: 13288065078351181156
   Name: "Snow 01"
   PlatformAssetType: 2
@@ -116,30 +71,12 @@ Assets {
   }
 }
 Assets {
-  Id: 10824426293829047600
-  Name: "Skeleton Mob"
-  PlatformAssetType: 17
-  PrimaryAsset {
-    AssetType: "AnimatedMeshAssetRef"
-    AssetId: "npc_human_guy_skelington_001_ref"
-  }
-}
-Assets {
   Id: 10784797872050582948
   Name: "Text 01: S"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F1_Text_018"
-  }
-}
-Assets {
-  Id: 10671906628005922998
-  Name: "Hill 04"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_004"
   }
 }
 Assets {
@@ -224,15 +161,6 @@ Assets {
   }
 }
 Assets {
-  Id: 4008860429437282735
-  Name: "Hill 03"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_003"
-  }
-}
-Assets {
   Id: 3767062805503335953
   Name: "Text 01: O"
   PlatformAssetType: 1
@@ -266,14 +194,5 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_snow_volume"
-  }
-}
-Assets {
-  Id: 30436984597281659
-  Name: "Hill 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_001"
   }
 }

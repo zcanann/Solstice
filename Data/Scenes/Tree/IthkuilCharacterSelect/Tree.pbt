@@ -2670,9 +2670,9 @@ Objects {
   Name: "Rock 03"
   Transform {
     Location {
-      X: 5874.73438
-      Y: 6834.34
-      Z: 2589.43652
+      X: 6067.87061
+      Y: 7400.20703
+      Z: 2373.63965
     }
     Rotation {
       Yaw: -104.086853
@@ -2714,14 +2714,13 @@ Objects {
   Name: "Rock 02"
   Transform {
     Location {
-      X: 6382.63281
-      Y: 6721.13232
+      X: 6925.95
+      Y: 6902.35059
       Z: 3359.82861
     }
     Rotation {
-      Pitch: 71.1132
-      Yaw: 3.8753581
-      Roll: 0.000967321
+      Pitch: 71.1130753
+      Yaw: 105.125267
     }
     Scale {
       X: 4.75

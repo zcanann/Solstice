@@ -27,7 +27,7 @@ end
 
 Skills.GetEffectiveSkillLevel = function(player, skillId)
 	local skillKeys = Skills.GetSkillKeys(skillId)
-    local level = DataBase.GetKey(player, skillKeys.EFFECTIVE_LEVEL) or 1
+    local level = DataBase.GetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL) or 1
 
 	if level <= 0 then
 		return 1
@@ -39,7 +39,7 @@ end
 Skills.SetEffectiveSkillLevel = function(player, skillId, value)
 	local skillKeys = Skills.GetSkillKeys(skillId)
 
-    DataBase.SetKey(player, skillKeys.EFFECTIVE_LEVEL, value)
+    DataBase.SetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL, value)
 end
 
 -- [Resource] Skill level
@@ -54,7 +54,7 @@ end
 
 Skills.GetSkillExp = function(player, skillId)
 	local skillKeys = Skills.GetSkillKeys(skillId)
-    local exp = DataBase.GetKey(player, skillKeys.EXP) or 0
+    local exp = DataBase.GetCharacterKey(player, skillKeys.EXP) or 0
 
 	if exp < 0 then
 		return 0
@@ -68,7 +68,7 @@ Skills.SetSkillExp = function(player, skillId, value)
 
 	local skillLevel = Skills.GetSkillLevel(player, skillId)
 	local newExp = value
-    DataBase.SetKey(player, skillKeys.EXP, newExp)
+    DataBase.SetCharacterKey(player, skillKeys.EXP, newExp)
 
 	local newSkillLevel = Skills.ExpTable.GetLevelForExp(newExp)
 
@@ -86,9 +86,9 @@ end
 Skills.ResetSkillExp = function(player, skillId, value)
 	local skillKeys = Skills.GetSkillKeys(skillId)
 
-    DataBase.SetKey(player, skillKeys.LEVEL, 0)
-    DataBase.SetKey(player, skillKeys.EFFECTIVE_LEVEL, 0)
-    DataBase.SetKey(player, skillKeys.EXP, 0)
+    DataBase.SetCharacterKey(player, skillKeys.LEVEL, 0)
+    DataBase.SetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL, 0)
+    DataBase.SetCharacterKey(player, skillKeys.EXP, 0)
 end
 
 return Skills

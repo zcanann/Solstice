@@ -1,4 +1,13 @@
 Assets {
+  Id: 14151139357992157584
+  Name: "Fantasy Symbol 09"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Symbol_09"
+  }
+}
+Assets {
   Id: 13409475433922536892
   Name: "Japanese Frame 004"
   PlatformAssetType: 9
@@ -14,5 +23,23 @@ Assets {
   PrimaryAsset {
     AssetType: "FontAssetRef"
     AssetId: "CabinBold_ref"
+  }
+}
+Assets {
+  Id: 6382792620031146827
+  Name: "Cabin"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "CabinRegular_ref"
+  }
+}
+Assets {
+  Id: 1735542245241184245
+  Name: "Tech Symbol 1"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Icon_046"
   }
 }

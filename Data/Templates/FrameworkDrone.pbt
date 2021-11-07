@@ -383,10 +383,9 @@ Assets {
         ChildIds: 8370864324559110450
         ChildIds: 2332707769412253420
         ChildIds: 17189282888095162294
-        ChildIds: 5731302921436468948
         ChildIds: 14765994789790471015
-        ChildIds: 3009105981567413480
         ChildIds: 13893584342724915407
+        ChildIds: 9814955458340982282
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1001,7 +1000,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 2249794126015640337
+              Id: 3702191406046426907
             }
           }
           Overrides {
@@ -1029,6 +1028,14 @@ Assets {
             Name: "ma:Shared_Detail2:id"
             AssetReference {
               Id: 1905437186466357759
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              G: 0.392156899
+              B: 0.749019623
+              A: 1
             }
           }
         }
@@ -1432,58 +1439,6 @@ Assets {
         }
       }
       Objects {
-        Id: 5731302921436468948
-        Name: "Modern Weapon - Barrel Tip 02"
-        Transform {
-          Location {
-            X: -23.7922363
-            Y: 0.496337891
-            Z: 55.6498718
-          }
-          Rotation {
-            Pitch: 18.6096287
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8214431899095881376
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 6777447344140592468
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11860040597399652835
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
         Id: 14765994789790471015
         Name: "Military Tank Historic Container 02"
         Transform {
@@ -1529,58 +1484,6 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 11933945362074882928
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 3009105981567413480
-        Name: "Modern Weapon - Gas Cylinder 01"
-        Transform {
-          Location {
-            X: -48.4487305
-            Y: 0.770751953
-            Z: 47.4511414
-          }
-          Rotation {
-            Pitch: 18.6096287
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8214431899095881376
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2249794126015640337
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7024490427461832088
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1648,6 +1551,68 @@ Assets {
           InteractWithTriggers: true
           StaticMesh {
             Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 9814955458340982282
+        Name: "Pyramid - 3-Sided Hollow"
+        Transform {
+          Location {
+            X: -6.52793312
+            Y: 0.975128651
+            Z: 26
+          }
+          Rotation {
+            Yaw: 87.0000229
+          }
+          Scale {
+            X: 0.4
+            Y: 0.4
+            Z: 0.4
+          }
+        }
+        ParentId: 8214431899095881376
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3702191406046426907
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.392383754
+              B: 0.75
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6290451802215970992
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableCastShadows: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
             }
             BoundsScale: 1
           }
@@ -1940,9 +1905,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              G: 0.392156899
+              B: 0.749019623
               A: 1
             }
           }
@@ -3419,9 +3383,8 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 1
-              G: 1
-              B: 1
+              G: 0.392156899
+              B: 0.749019623
               A: 1
             }
           }
@@ -5793,15 +5756,6 @@ Assets {
       }
     }
     Assets {
-      Id: 11860040597399652835
-      Name: "Modern Weapon Barrel 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_barrel_001"
-      }
-    }
-    Assets {
       Id: 11933945362074882928
       Name: "Military Tank Historic Container 03"
       PlatformAssetType: 1
@@ -5811,12 +5765,12 @@ Assets {
       }
     }
     Assets {
-      Id: 7024490427461832088
-      Name: "Modern Weapon - Gas Cylinder 01"
+      Id: 6290451802215970992
+      Name: "Pyramid - 3-Sided Hollow"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_weap_modern_gas_cylinder_001"
+        AssetId: "sm_pyramid_3_sided_hollw_001"
       }
     }
     Assets {

@@ -29,22 +29,22 @@ Quests.Progress.DROPPED = nil
 
 Quests.SaveQuestProgress = function(player, questKey, progress)
     if not questKey then return end
-    DataBase.SetKey(player, DataBase.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey, progress)
+    DataBase.SetCharacterKey(player, DataBase.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey, progress)
 end
 
 Quests.GetQuestProgress = function(player, questKey)
     if not questKey then return nil end
-    return DataBase.GetKey(player, DataBase.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey)
+    return DataBase.GetCharacterKey(player, DataBase.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey)
 end
 
 Quests.SaveQuestTaskProgress = function(player, questKey, taskId, progress)
     if not questKey or not taskId then return end
-    DataBase.SetKey(player, DataBase.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId, progress)
+    DataBase.SetCharacterKey(player, DataBase.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId, progress)
 end
 
 Quests.GetQuestTaskProgress = function(player, questKey, taskId)
     if not questKey or not taskId then return nil end
-    return DataBase.GetKey(player, DataBase.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId)
+    return DataBase.GetCharacterKey(player, DataBase.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId)
 end
 
 --[[
