@@ -177,7 +177,7 @@ Objects {
 }
 Objects {
   Id: 2033215230845879164
-  Name: "Spawn Point"
+  Name: "SpawnPointIthkia"
   Transform {
     Location {
       X: -12575
@@ -217,7 +217,7 @@ Objects {
 }
 Objects {
   Id: 14024615332737507217
-  Name: "Spawn Point"
+  Name: "SpawnPointKotava"
   Transform {
     Location {
       X: -24650

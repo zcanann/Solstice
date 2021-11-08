@@ -1,6 +1,8 @@
 local CharacterSelectEvents = { }
 
-CharacterSelectEvents.EVENT_SEND_CHARACTER_LIST = "event_send_character_list"
+CharacterSelectEvents.EVENT_SEND_LAST_LOGGED_IN_CHARACTER = "event_send_last_logged_in_character"
 CharacterSelectEvents.EVENT_REQUEST_CREATE_NEW_CHARACTER = "event_request_create_new_character"
+CharacterSelectEvents.EVENT_REQUEST_LOG_IN_TO_CHARACTER = "event_request_log_in_to_character"
+CharacterSelectEvents.EVENT_REQUEST_DELETE_CHARACTER = "event_request_delete_character"
 
 return CharacterSelectEvents

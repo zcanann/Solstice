@@ -26,15 +26,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6382792620031146827
-  Name: "Cabin"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "CabinRegular_ref"
-  }
-}
-Assets {
   Id: 1735542245241184245
   Name: "Tech Symbol 1"
   PlatformAssetType: 9

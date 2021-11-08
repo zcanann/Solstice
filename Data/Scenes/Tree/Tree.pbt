@@ -28,7 +28,6 @@ Objects {
   ChildIds: 16791932538532292240
   ChildIds: 4676613650505503258
   ChildIds: 9113528439266820683
-  ChildIds: 9868594649841206190
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -41,54 +40,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 9868594649841206190
-  Name: "Ambience Nature Wind and Trees Set 01 SFX"
-  Transform {
-    Location {
-      X: -24602
-      Y: -26879
-      Z: 1801
-    }
-    Rotation {
-      Yaw: 44.9999924
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 0.99999994
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 9875985295117749919
-    }
-    TeamSettings {
-    }
-    AudioBP {
-      AutoPlay: true
-      Volume: 1
-      Falloff: 3200
-      Radius: 3200
-      EnableOcclusion: true
-      IsSpatializationEnabled: true
-      IsAttenuationEnabled: true
-    }
   }
 }
 Objects {
@@ -290,11 +241,11 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      AutoPlay: true
       Volume: 4
       Falloff: 3600
       Radius: 400
       EnableOcclusion: true
+      IsSpatializationEnabled: true
       IsAttenuationEnabled: true
     }
   }

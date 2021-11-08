@@ -289,7 +289,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15720126600342376554
+  Id: 1074741471842529722
   Name: "CharacterSelect"
   Transform {
     Location {

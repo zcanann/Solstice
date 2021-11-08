@@ -5,6 +5,12 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:DataBaseKeysCharacter"
+        AssetReference {
+          Id: 14204359675537671903
+        }
+      }
+      Overrides {
         Name: "cs:DataBaseKeysQuests"
         AssetReference {
           Id: 4484857197466172211

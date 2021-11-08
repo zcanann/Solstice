@@ -14,5 +14,5 @@ Assets {
   }
   SerializationVersion: 101
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Stats"
+  VirtualFolderPath: "Skills"
 }

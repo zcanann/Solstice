@@ -1,10 +1,9 @@
 Assets {
   Id: 948373845369640216
-  Name: "SkillEvents_A - Copy"
+  Name: "CharacterSelectEvents_A"
   PlatformAssetType: 3
   TextAsset {
   }
   SerializationVersion: 101
-  VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Skills"
+  VirtualFolderPath: "CharacterSelect"
 }

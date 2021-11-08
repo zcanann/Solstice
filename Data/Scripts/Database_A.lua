@@ -1,12 +1,18 @@
 local DataBase = { }
 
--- TODO: This is incomplete. This class attempts to make data available as read-only for clients, but currently this is using Resources for the replication.
--- A more robust solution will require using playerNetworkedData. Also, care will be needed to avoid replicating the entire player data store to the client.
+-- We can't access the full Framework, but we can expose the Framework.Dump() function for debugging
+local Framework = { }
+Framework.TableUtils = require(script:GetCustomProperty("TableUtils"))
+Framework.Logger = require(script:GetCustomProperty("Logger"))
+Framework.Dump = function (object)
+    Framework.Logger.Print(Framework.TableUtils.Serialize(object))
+end
 
 DataBase.CharacterLimit = 3
 DataBase.Keys = require(script:GetCustomProperty("DataBaseKeys"))
 DataBase.CharacterDataKey = "characters"
 DataBase.GlobalDataKey = "global"
+DataBase.KeyLastSelectedCharacterId = "last_selected_character_id"
 
 function GenerateCharacterId()
 	-- The character format is an 8 letter random string. This only needs to be unique for a Core account, not globally.
@@ -18,7 +24,13 @@ end
 
 -- Wrapper function over Storage.GetPlayerData that ensures that character/global data sections exist
 function GetPlayerData(player)
-	local playerData = Storage.GetPlayerData(player)
+	local playerData = { }
+	if Environment.IsClient() then
+		playerData[DataBase.CharacterDataKey] = player:GetPrivateNetworkedData(DataBase.CharacterDataKey)
+		playerData[DataBase.GlobalDataKey] = player:GetPrivateNetworkedData(DataBase.GlobalDataKey)
+	else
+		playerData = Storage.GetPlayerData(player)
+	end
 
 	if not playerData[DataBase.CharacterDataKey] then
 		playerData[DataBase.CharacterDataKey] = { }
@@ -47,6 +59,7 @@ function SetPlayerData(player, playerData)
 	repeat
 		resultCode, errorMessage = Storage.SetPlayerData(player, playerData)
 		if resultCode == StorageResultCode.SUCCESS then
+			DataBase.ReplicateReadOnlyData(player)
 			return true, errorMessage
 		end
 		retryCount = retryCount - 1
@@ -54,6 +67,21 @@ function SetPlayerData(player, playerData)
 
 	error(errorMessage)
 	return false, errorMessage
+end
+
+DataBase.WipePlayerData = function (player)
+	SetPlayerData(player, {
+		[ DataBase.CharacterDataKey ] = { },
+		[ DataBase.GlobalDataKey ] = { },
+	})
+end
+
+DataBase.ReplicateReadOnlyData = function(player)
+	local playerData = GetPlayerData(player)
+
+	-- Replicate all stored data to the client. If this has perf issues in the future, we may need to limit what we send here.
+	player:SetPrivateNetworkedData(DataBase.CharacterDataKey, playerData[DataBase.CharacterDataKey])
+	player:SetPrivateNetworkedData(DataBase.GlobalDataKey, playerData[DataBase.GlobalDataKey])
 end
 
 DataBase.GetActiveCharacterId = function ()
@@ -71,8 +99,9 @@ DataBase.SetActiveCharacterId = function (player, characterId)
 	end
 
 	-- Clear replicated database data
-	player:ClearResources()
 	_G.ActiveCharacterId = characterId
+
+	DataBase.SetGlobalKey(player, DataBase.KeyLastSelectedCharacterId, characterId)
 end
 
 DataBase.GetCharacterCount = function (player)
@@ -100,11 +129,10 @@ DataBase.CreateNewCharacter = function (player, initialData)
 		return nil
 	end
 
-	playerData[DataBase.CharacterDataKey][characterId] = { }
-	initialData = initialData or { }
+	playerData[DataBase.CharacterDataKey][characterId] = initialData or { }
+	SetPlayerData(player, playerData)
 
-	table.insert(playerData[DataBase.CharacterDataKey][characterId], initialData)
-	Storage.SetPlayerData(player, playerData)
+	Framework.Dump(playerData[DataBase.CharacterDataKey])
 
 	return characterId
 end
@@ -116,7 +144,7 @@ DataBase.DeleteCharacter = function (player, characterId)
 
 	if playerData[DataBase.CharacterDataKey][characterId] then
 		playerData[DataBase.CharacterDataKey][characterId] = nil
-		Storage.SetPlayerData(player, playerData)
+		SetPlayerData(player, playerData)
 	else
 		warn("Unable to delete character data, id not found: " .. characterId)
 	end
@@ -126,19 +154,14 @@ DataBase.GetCharacterList = function (player)
 	local characterList = { }
 	local playerData = GetPlayerData(player)
 
-	for k, _ in pairs(playerData[DataBase.CharacterDataKey]) do
-		characterList[k] = true
+	for characterId, characterData in pairs(playerData[DataBase.CharacterDataKey]) do
+		characterList[characterId] = characterData
 	end
 
 	return characterList
 end
 
 DataBase.GetCharacterKey = function (player, key)
-	-- Database data is fundamentally server side, but the client may access replicated data.
-	if Environment.IsClient() then
-		return player:GetResource(key)
-	end
-
 	local characterId = DataBase.GetActiveCharacterId()
 
 	if not characterId then
@@ -178,6 +201,25 @@ DataBase.SetCharacterKey = function (player, key, value)
 	end
 
 	return success, errorMessage
+end
+
+
+DataBase.GetGlobalKey = function (player, key)
+	if Environment.IsClient() then
+		return nil
+	end
+
+	local playerData = GetPlayerData(player)
+
+	return playerData[DataBase.GlobalDataKey][key]
+end
+
+DataBase.SetGlobalKey = function (player, key, value)
+	local playerData = GetPlayerData(player)
+
+	playerData[DataBase.GlobalDataKey][key] = value
+
+	return Storage.SetPlayerData(player, playerData)
 end
 
 return DataBase

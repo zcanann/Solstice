@@ -19,6 +19,12 @@ end
 function OnPlayerReadyToReceiveProximityData(player)
     player.serverUserData.readyToReceiveProximityData = true
 	Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK)
+
+	-- Debugging
+	-- Framework.DataBase.WipePlayerData(player)
+
+	-- This may belong elsewhere, but this initializes server => client player database replication
+	Framework.DataBase.ReplicateReadOnlyData(player)
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)

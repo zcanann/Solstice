@@ -9,6 +9,7 @@ end
 Framework.DataBase = require(script:GetCustomProperty("DataBase"))
 Framework.DataStructures = require(script:GetCustomProperty("DataStructures"))
 Framework.Debug = require(script:GetCustomProperty("Debug"))
+Framework.Entities = require(script:GetCustomProperty("Entities"))
 Framework.Events = require(script:GetCustomProperty("Events"))
 Framework.Math = require(script:GetCustomProperty("Math"))
 Framework.Networking = require(script:GetCustomProperty("Networking"))

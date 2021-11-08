@@ -169,11 +169,6 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Stats"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Interactions"
       PlatformAssetType: 3
     }
@@ -252,6 +247,15 @@ Assets {
       VirtualFolderPath: "UI"
       VirtualFolderPath: "EmptyTemplates"
       PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "CharacterSelect"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Entities"
+      PlatformAssetType: 3
     }
   }
 }

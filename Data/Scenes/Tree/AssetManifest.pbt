@@ -80,15 +80,6 @@ Assets {
   }
 }
 Assets {
-  Id: 9875985295117749919
-  Name: "Ambience Nature Wind and Trees Set 01 SFX"
-  PlatformAssetType: 10
-  PrimaryAsset {
-    AssetType: "AudioBlueprintAssetRef"
-    AssetId: "sfxabp_windytrees_ref"
-  }
-}
-Assets {
   Id: 9746462277941952888
   Name: "Text 01: C"
   PlatformAssetType: 1

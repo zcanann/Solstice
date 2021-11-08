@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:CharacterSelectEvents"
+        AssetReference {
+          Id: 948373845369640216
+        }
+      }
+      Overrides {
         Name: "cs:ChatCommandEvents"
         AssetReference {
           Id: 17612071643994816819

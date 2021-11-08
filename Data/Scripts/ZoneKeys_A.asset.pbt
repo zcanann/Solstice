@@ -1,10 +1,10 @@
 Assets {
-  Id: 9935215235775901043
-  Name: "SkillEvents_A"
+  Id: 2466061147446724387
+  Name: "ZoneKeys_A"
   PlatformAssetType: 3
   TextAsset {
   }
   SerializationVersion: 101
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Skills"
+  VirtualFolderPath: "Entities"
 }

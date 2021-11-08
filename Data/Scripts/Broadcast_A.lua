@@ -1,6 +1,7 @@
 local DataStructures = require(script:GetCustomProperty("DataStructures"))
 local EventKeys = require(script:GetCustomProperty("EventKeys"))
 local Logger = require(script:GetCustomProperty("Logger"))
+local TableUtils = require(script:GetCustomProperty("TableUtils"))
 
 local Broadcast = { }
 local requestQueue = DataStructures.Deque.New()
@@ -40,6 +41,9 @@ function UnpackArgs(args)
         return nil
     end
     assert(type(args) == "table")
+    if #args == 0 then
+        return args
+    end
     return table.unpack(args, 1, #args)
 end
 

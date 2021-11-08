@@ -5,6 +5,6 @@ Assets {
   TextAsset {
   }
   SerializationVersion: 101
-  VirtualFolderPath: "Infrastructure"
-  VirtualFolderPath: "Storage"
+  VirtualFolderPath: "Gameplay"
+  VirtualFolderPath: "Skills"
 }

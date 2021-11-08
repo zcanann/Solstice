@@ -397,6 +397,19 @@ local function TableCondenseStringConstants(currentTable, prefix)
 	return renameMapping
 end
 
+local function Count(inTable)
+	if not inTable then return 0 end
+	if #inTable ~= 0 then return #inTable end
+
+	local count = 0
+
+	for k, v in pairs(inTable) do
+		count = count + 1
+	end
+
+	return count
+end
+
 -------------------------------------------
 
 TableUtils.CondenseStringConstants = TableCondenseStringConstants
@@ -405,5 +418,6 @@ TableUtils.Deserialize = TableDeserialize
 TableUtils.Diff = TableDiff
 TableUtils.GetDiffKeys = TableDiffKeys
 TableUtils.Patch = TablePatch
+TableUtils.Count = Count
 
 return TableUtils

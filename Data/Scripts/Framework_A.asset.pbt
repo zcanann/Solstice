@@ -29,6 +29,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Entities"
+        AssetReference {
+          Id: 5096365601930900246
+        }
+      }
+      Overrides {
         Name: "cs:Events"
         AssetReference {
           Id: 5338086385139468741

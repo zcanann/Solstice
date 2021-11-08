@@ -10,6 +10,18 @@ Assets {
           Id: 12431212582313590712
         }
       }
+      Overrides {
+        Name: "cs:Logger"
+        AssetReference {
+          Id: 4739618440715284858
+        }
+      }
+      Overrides {
+        Name: "cs:TableUtils"
+        AssetReference {
+          Id: 11279245430205585369
+        }
+      }
     }
   }
   SerializationVersion: 101
