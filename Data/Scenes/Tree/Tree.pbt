@@ -241,11 +241,11 @@ Objects {
     TeamSettings {
     }
     AudioBP {
+      AutoPlay: true
       Volume: 4
       Falloff: 3600
       Radius: 400
       EnableOcclusion: true
-      IsSpatializationEnabled: true
       IsAttenuationEnabled: true
     }
   }

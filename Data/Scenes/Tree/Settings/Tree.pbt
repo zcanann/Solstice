@@ -44,41 +44,13 @@ Objects {
   }
 }
 Objects {
-  Id: 7927719428287702832
-  Name: "Camera"
+  Id: 6574011873009460602
+  Name: "CameraKotava"
   Transform {
     Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2654916338316290302
-  ChildIds: 3785637843159838533
-  ChildIds: 4649182018534403668
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 4649182018534403668
-  Name: "CameraColonist"
-  Transform {
-    Location {
+      X: -24646
+      Y: -26835
+      Z: 1954
     }
     Rotation {
       Pitch: -20
@@ -90,7 +62,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7927719428287702832
+  ParentId: 2654916338316290302
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -103,12 +75,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Camera {
-    UseAsDefault: true
-    AttachToLocalPlayer: true
     InitialDistance: 600
-    IsDistanceAdjustable: true
-    MinDistance: 500
-    MaxDistance: 3000
+    MinDistance: 600
+    MaxDistance: 600
     PositionOffset {
     }
     RotationOffset {
@@ -126,14 +95,16 @@ Objects {
 }
 Objects {
   Id: 3785637843159838533
-  Name: "CameraIthkuil"
+  Name: "CameraIthkia"
   Transform {
     Location {
+      X: -12580.6191
+      Y: -3621.92896
+      Z: 670
     }
     Rotation {
-      Pitch: -19.9999752
-      Yaw: 54.9999619
-      Roll: -9.99423446e-06
+      Pitch: -20
+      Yaw: 58.749855
     }
     Scale {
       X: 1
@@ -141,7 +112,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7927719428287702832
+  ParentId: 2654916338316290302
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -155,11 +126,9 @@ Objects {
   }
   Camera {
     UseAsDefault: true
-    AttachToLocalPlayer: true
     InitialDistance: 600
-    IsDistanceAdjustable: true
-    MinDistance: 500
-    MaxDistance: 3000
+    MinDistance: 600
+    MaxDistance: 600
     PositionOffset {
     }
     RotationOffset {
@@ -176,16 +145,16 @@ Objects {
   }
 }
 Objects {
-  Id: 2033215230845879164
-  Name: "SpawnPointIthkia"
+  Id: 14024615332737507217
+  Name: "SpawnPointKotava"
   Transform {
     Location {
-      X: -12575
-      Y: -3620
-      Z: 630
+      X: -24650
+      Y: -26840
+      Z: 1900
     }
     Rotation {
-      Yaw: -129.999985
+      Yaw: 136.249924
     }
     Scale {
       X: 1
@@ -216,16 +185,16 @@ Objects {
   }
 }
 Objects {
-  Id: 14024615332737507217
-  Name: "SpawnPointKotava"
+  Id: 2033215230845879164
+  Name: "SpawnPointIthkia"
   Transform {
     Location {
-      X: -24650
-      Y: -26840
-      Z: 1900
+      X: -12574.7539
+      Y: -3624.49854
+      Z: 620
     }
     Rotation {
-      Yaw: 125
+      Yaw: -108.749832
     }
     Scale {
       X: 1

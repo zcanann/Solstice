@@ -47,6 +47,11 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:FinalizeNewCharacterButton"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:ChangeFactionIthkiaButton"
         ObjectReference {
         }
@@ -62,12 +67,17 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:SpawnPointIthkia"
+        Name: "cs:CameraIthkia"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:SpawnPointKotava"
+        Name: "cs:CameraKotava"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:Sunlight"
         ObjectReference {
         }
       }

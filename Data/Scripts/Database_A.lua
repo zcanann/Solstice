@@ -132,8 +132,6 @@ DataBase.CreateNewCharacter = function (player, initialData)
 	playerData[DataBase.CharacterDataKey][characterId] = initialData or { }
 	SetPlayerData(player, playerData)
 
-	Framework.Dump(playerData[DataBase.CharacterDataKey])
-
 	return characterId
 end
 

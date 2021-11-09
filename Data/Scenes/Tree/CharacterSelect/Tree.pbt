@@ -34,7 +34,7 @@ Objects {
 }
 Objects {
   Id: 12435319547406062601
-  Name: "CharacterLoader_S"
+  Name: "CharacterSelect_S"
   Transform {
     Location {
     }
@@ -47,6 +47,20 @@ Objects {
     }
   }
   ParentId: 4738139620739167810
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SpawnPointIthkia"
+      ObjectReference {
+        SelfId: 2033215230845879164
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPointKotava"
+      ObjectReference {
+        SelfId: 14024615332737507217
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -155,18 +169,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:SpawnPointKotava"
-      ObjectReference {
-        SelfId: 14024615332737507217
-      }
-    }
-    Overrides {
-      Name: "cs:SpawnPointIthkia"
-      ObjectReference {
-        SelfId: 2033215230845879164
-      }
-    }
-    Overrides {
       Name: "cs:NewCharacterScreenIthkia"
       ObjectReference {
         SelfId: 9236217334296286072
@@ -176,6 +178,30 @@ Objects {
       Name: "cs:NewCharacterScreenKotava"
       ObjectReference {
         SelfId: 18055793306275902885
+      }
+    }
+    Overrides {
+      Name: "cs:CameraIthkia"
+      ObjectReference {
+        SelfId: 3785637843159838533
+      }
+    }
+    Overrides {
+      Name: "cs:CameraKotava"
+      ObjectReference {
+        SelfId: 6574011873009460602
+      }
+    }
+    Overrides {
+      Name: "cs:FinalizeNewCharacterButton"
+      ObjectReference {
+        SelfId: 1636713729405553466
+      }
+    }
+    Overrides {
+      Name: "cs:Sunlight"
+      ObjectReference {
+        SelfId: 15044655550122715030
       }
     }
   }

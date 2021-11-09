@@ -1,6 +1,6 @@
 Assets {
   Id: 13756222967175580782
-  Name: "CharacterLoader_S"
+  Name: "CharacterSelect_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -8,6 +8,16 @@ Assets {
         Name: "cs:Framework"
         AssetReference {
           Id: 14480759715348141780
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointIthkia"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointKotava"
+        ObjectReference {
         }
       }
     }

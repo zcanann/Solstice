@@ -17,7 +17,7 @@ Objects {
   ParentId: 807049152915355110
   ChildIds: 5809946603708933414
   ChildIds: 8913929504766650218
-  ChildIds: 15044655550122715030
+  ChildIds: 5107954988233850101
   ChildIds: 16630678985579289313
   ChildIds: 16740128619716418957
   Collidable_v2 {
@@ -185,26 +185,58 @@ Objects {
   }
 }
 Objects {
+  Id: 5107954988233850101
+  Name: "ClientContext"
+  Transform {
+    Location {
+      X: -36950
+      Y: -6780
+      Z: 1195
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17667724210395317465
+  ChildIds: 15044655550122715030
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
   Id: 15044655550122715030
   Name: "Sun Light"
   Transform {
     Location {
-      X: -36950.582
-      Y: -6777.75879
-      Z: 1197.26978
+      X: -0.582810879
+      Y: 2.24009228
+      Z: 2.26977539
     }
     Rotation {
-      Pitch: -51.1062927
-      Yaw: -67.6300812
-      Roll: -7.33213329
+      Pitch: -49.9999924
     }
     Scale {
-      X: 0.99999994
+      X: 1
       Y: 0.99999994
       Z: 0.99999994
     }
   }
-  ParentId: 17667724210395317465
+  ParentId: 5107954988233850101
   UnregisteredParameters {
     Overrides {
       Name: "bp:Intensity"
@@ -311,7 +343,9 @@ Objects {
       Z: 997.269775
     }
     Rotation {
-      Yaw: -95.0000076
+      Pitch: -74.9999
+      Yaw: 2.49526111e-05
+      Roll: 179.999969
     }
     Scale {
       X: 0.99999994
@@ -467,8 +501,8 @@ Objects {
   Name: "Environment Fog Default VFX"
   Transform {
     Location {
-      X: -36954.9453
-      Y: -6827.57129
+      X: -36954.9492
+      Y: -6827.56934
       Z: 7565.63379
     }
     Rotation {

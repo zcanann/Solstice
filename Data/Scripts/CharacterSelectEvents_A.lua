@@ -2,7 +2,11 @@ local CharacterSelectEvents = { }
 
 CharacterSelectEvents.EVENT_SEND_LAST_LOGGED_IN_CHARACTER = "event_send_last_logged_in_character"
 CharacterSelectEvents.EVENT_REQUEST_CREATE_NEW_CHARACTER = "event_request_create_new_character"
+CharacterSelectEvents.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS = "event_request_create_new_character_success"
+CharacterSelectEvents.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED = "event_request_create_new_character_failed"
 CharacterSelectEvents.EVENT_REQUEST_LOG_IN_TO_CHARACTER = "event_request_log_in_to_character"
 CharacterSelectEvents.EVENT_REQUEST_DELETE_CHARACTER = "event_request_delete_character"
+CharacterSelectEvents.EVENT_REQUEST_SET_ACTIVE_FACTION = "event_request_set_active_faction"
+CharacterSelectEvents.EVENT_SET_ACTIVE_FACTION_SUCCESS = "event_request_set_active_faction_success"
 
 return CharacterSelectEvents

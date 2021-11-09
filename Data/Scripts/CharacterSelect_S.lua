@@ -1,5 +1,8 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
+local propSpawnPointIthkia = script:GetCustomProperty("SpawnPointIthkia"):WaitForObject()
+local propSpawnPointKotava = script:GetCustomProperty("SpawnPointKotava"):WaitForObject()
+
 function LoadCharacters(player)
     local lastLoggedInCharacterId = Framework.DataBase.GetGlobalKey(player, Framework.DataBase.KeyLastSelectedCharacterId)
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, player, { lastLoggedInCharacterId })
@@ -18,11 +21,14 @@ function OnCreateNewCharacterRequested(player, initialData)
         initialData[Framework.Entities.Keys.ZONE] = Framework.Entities.Zones.HIBERNA
     else
         error("Invalid faction supplied to character creation")
+        Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED, player)
         return
     end
 
     Framework.DataBase.CreateNewCharacter(player, initialData)
     LoadCharacters(player)
+
+    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, player)
 end
 
 function OnRequestLogIntoCharacter(player, characterId)
@@ -41,6 +47,16 @@ function OnRequestDeleteCharacter(player, characterId)
     LoadCharacters(player)
 end
 
+function OnRequestSetActiveFaction(player, newActiveFaction)
+    if newActiveFaction == Framework.Entities.Factions.ITHKIA then
+        player:Spawn({position = propSpawnPointIthkia:GetWorldPosition(), rotation = propSpawnPointIthkia:GetRotation()})
+    else
+        player:Spawn({position = propSpawnPointKotava:GetWorldPosition(), rotation = propSpawnPointKotava:GetRotation()})
+    end
+
+    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_FACTION_SUCCESS, player)
+end
+
 function OnPlayerJoined(player)
     LoadCharacters(player)
 end
@@ -50,3 +66,4 @@ Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, OnCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, OnRequestDeleteCharacter)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_FACTION, OnRequestSetActiveFaction)

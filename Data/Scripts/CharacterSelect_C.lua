@@ -9,12 +9,15 @@ local propNewCharacterScreenIthkia = script:GetCustomProperty("NewCharacterScree
 local propNewCharacterScreenKotava = script:GetCustomProperty("NewCharacterScreenKotava"):WaitForObject()
 
 local propCreateNewCharacterButton = script:GetCustomProperty("CreateNewCharacterButton"):WaitForObject()
+local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewCharacterButton"):WaitForObject()
 local propChangeFactionIthkiaButton = script:GetCustomProperty("ChangeFactionIthkiaButton"):WaitForObject()
 local propChangeFactionKotavaButton = script:GetCustomProperty("ChangeFactionKotavaButton"):WaitForObject()
 local propDeleteCharacterButton = script:GetCustomProperty("DeleteCharacterButton"):WaitForObject()
 
-local propSpawnPointIthkia = script:GetCustomProperty("SpawnPointIthkia"):WaitForObject()
-local propSpawnPointKotava = script:GetCustomProperty("SpawnPointKotava"):WaitForObject()
+local propCameraIthkia = script:GetCustomProperty("CameraIthkia"):WaitForObject()
+local propCameraKotava = script:GetCustomProperty("CameraKotava"):WaitForObject()
+
+local propSunlight = script:GetCustomProperty("Sunlight"):WaitForObject()
 
 local CharacterSelectState = { }
 CharacterSelectState.CHARACTER_SELECT = "character_select"
@@ -31,12 +34,6 @@ local lastLoggedInCharacterId = nil
 local currentState = nil
 local activeFaction = nil
 local selectedEntry = nil
-
-if math.random() >= 0.5 then
-    activeFaction = Framework.Entities.Factions.ITHKIA
-else
-    activeFaction = Framework.Entities.Factions.KOTAVA
-end
 
 function SetCharacterSelectState(newState)
     currentState = newState
@@ -60,12 +57,14 @@ function SetCharacterSelectState(newState)
             propBorderIthkiaSelected.visibility = Visibility.INHERIT
             propBorderKotava.visibility = Visibility.INHERIT
             propBorderKotavaSelected.visibility = Visibility.FORCE_OFF
+            SetActiveFaction(Framework.Entities.Factions.ITHKIA)
         else
             propNewCharacterScreenKotava.visibility = Visibility.INHERIT
             propBorderIthkia.visibility = Visibility.INHERIT
             propBorderIthkiaSelected.visibility = Visibility.FORCE_OFF
             propBorderKotava.visibility = Visibility.FORCE_OFF
             propBorderKotavaSelected.visibility = Visibility.INHERIT
+            SetActiveFaction(Framework.Entities.Factions.KOTAVA)
         end
     elseif currentState == CharacterSelectState.NEW_CHARACTER_KOTAVA then
         propNewCharacterScreen.visibility = Visibility.INHERIT
@@ -73,6 +72,23 @@ function SetCharacterSelectState(newState)
         propCharacterSelectScreen.visibility = Visibility.INHERIT
         -- TODO modal
     elseif currentState == CharacterSelectState.CHARACTER_CREATE_PENDING then
+    end
+end
+
+function SetActiveFaction(newActiveFaction)
+    if activeFaction ~= newActiveFaction then
+        activeFaction = newActiveFaction
+        Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_FACTION, { activeFaction })
+    end
+end
+
+function OnSetActiveFactionGranted()
+    if activeFaction == Framework.Entities.Factions.ITHKIA then
+        localPlayer:SetOverrideCamera(propCameraIthkia)
+        propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
+    else
+        localPlayer:SetOverrideCamera(propCameraKotava)
+        propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
     end
 end
 
@@ -96,12 +112,14 @@ function UpdateEntryVisuals(characterId)
 
     if characterData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.ITHKIA then
         if characterEntry == selectedEntry then
+            SetActiveFaction(Framework.Entities.Factions.ITHKIA)
             propIthkiaBorderSelected.visibility = Visibility.INHERIT
         else
             propIthkiaBorder.visibility = Visibility.INHERIT
         end
     else
         if characterEntry == selectedEntry then
+            SetActiveFaction(Framework.Entities.Factions.KOTAVA)
             propKotavaBorderSelected.visibility = Visibility.INHERIT
         else
             propKotavaBorder.visibility = Visibility.INHERIT
@@ -161,6 +179,14 @@ function OnLastLoggedInCharacterReceived(loadedLastLoggedInCharacterId)
     OnCharactersLoaded()
 end
 
+function OnCharacterCreateSuccess()
+    SetCharacterSelectState(CharacterSelectState.CHARACTER_SELECT)
+end
+
+function OnCharacterCreateFailed()
+    SetCharacterSelectState(CharacterSelectState.CHARACTER_SELECT)
+end
+
 function OnCreateNewCharacterPressed()
     if math.random() >= 0.5 then
         SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKIA)
@@ -169,7 +195,7 @@ function OnCreateNewCharacterPressed()
     end
 end
 
-function OnFinalizeCreateNewCharacterPressed()
+function OnFinalizeNewCharacterPressed()
     selectedEntry = nil
     lastLoggedInCharacterId = nil
     local name = "Christofori"
@@ -181,17 +207,15 @@ function OnFinalizeCreateNewCharacterPressed()
         [ Framework.Entities.Keys.FACTION ] = activeFaction,
         [ Framework.Entities.Keys.CLASS ] = class,
     }
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, initialData)
     SetCharacterSelectState(CharacterSelectState.CHARACTER_CREATE_PENDING)
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, initialData)
 end
 
 function OnSetFactionIthkiaPressed()
-    activeFaction = Framework.Entities.Factions.ITHKIA
     SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKIA)
 end
 
 function OnSetFactionKotavaPressed()
-    activeFaction = Framework.Entities.Factions.KOTAVA
     SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_KOTAVA)
 end
 
@@ -228,17 +252,21 @@ end
 
 function OnPrivateNetworkedDataChanged(player, key)
     if key == Framework.DataBase.CharacterDataKey then
+        OnCharactersLoaded()
     end
-    OnCharactersLoaded()
 end
 
 OnCharactersLoaded()
 SetCharacterSelectState(CharacterSelectState.CHARACTER_SELECT)
 
 propCreateNewCharacterButton.clickedEvent:Connect(OnCreateNewCharacterPressed)
+propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPressed)
 propChangeFactionIthkiaButton.clickedEvent:Connect(OnSetFactionIthkiaPressed)
 propChangeFactionKotavaButton.clickedEvent:Connect(OnSetFactionKotavaPressed)
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
 
 localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, OnLastLoggedInCharacterReceived)
+Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, OnCharacterCreateSuccess)
+Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED, OnCharacterCreateFailed)
+Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_FACTION_SUCCESS, OnSetActiveFactionGranted)
