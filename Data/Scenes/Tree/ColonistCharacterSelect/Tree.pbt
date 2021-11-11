@@ -1,6 +1,58 @@
 Name: "ColonistCharacterSelect"
 RootId: 5250854901689189847
 Objects {
+  Id: 6511774059072504288
+  Name: "Hill 02"
+  Transform {
+    Location {
+      X: -111
+      Y: -2890
+      Z: 1785
+    }
+    Rotation {
+      Yaw: -85
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.6
+    }
+  }
+  ParentId: 5250854901689189847
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 14409382455391208442
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 13710340032352944241
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 9110823973702386638
   Name: "OKAMI Robot Swordsman"
   Transform {
@@ -3347,7 +3399,7 @@ Objects {
   Transform {
     Location {
       X: -666
-      Y: 3260
+      Y: 3230
       Z: 2094
     }
     Rotation {
@@ -3500,11 +3552,12 @@ Objects {
   Name: "SolsticeText"
   Transform {
     Location {
-      X: -1471
-      Y: 3500
-      Z: 2400
+      X: -1236
+      Y: 3605
+      Z: 2420
     }
     Rotation {
+      Yaw: 35
     }
     Scale {
       X: 1
@@ -3573,8 +3626,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -3658,8 +3711,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -3743,8 +3796,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -3828,8 +3881,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -3913,8 +3966,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -3998,8 +4051,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -4083,8 +4136,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -4168,8 +4221,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:color"
       Color {
-        R: 0.64
-        G: 0.203443706
+        G: 0.0437084846
+        B: 0.299999952
         A: 1
       }
     }
@@ -4236,6 +4289,25 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1036993932664735430
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 31.7469788
+            Y: -4.01699829
+            Z: 17.0801697
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -15.6143188
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 9814955458340982282
       value {
         Overrides {
@@ -4258,9 +4330,9 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -525
-            Y: 3301
-            Z: 2262
+            X: -651
+            Y: 3310
+            Z: 2235
           }
         }
         Overrides {
@@ -11660,7 +11732,7 @@ Objects {
     Location {
       X: -2450.47705
       Y: 3312.94409
-      Z: 421.478607
+      Z: 406.916473
     }
     Rotation {
       Pitch: -1.22869873
@@ -11734,9 +11806,9 @@ Objects {
   Name: "Rock 01"
   Transform {
     Location {
-      X: -3221.64185
-      Y: 3956.28516
-      Z: 944.56604
+      X: -3221.64111
+      Y: 3956.2793
+      Z: 944.900635
     }
     Rotation {
       Pitch: -1.22869873
@@ -13179,15 +13251,15 @@ Objects {
   Name: "Torch Fire VFX"
   Transform {
     Location {
-      X: 638.760315
-      Y: 376.640564
-      Z: 414.222321
+      X: 638.759949
+      Y: 376.640472
+      Z: 413.264648
     }
     Rotation {
     }
     Scale {
-      X: 2.77194
-      Y: 2.77194
+      X: 2.77193952
+      Y: 2.77193952
       Z: 5.78118944
     }
   }
@@ -17049,16 +17121,16 @@ Objects {
   Name: "Cube"
   Transform {
     Location {
-      X: 1983.04126
-      Y: -305.894806
-      Z: 613.632812
+      X: 1983.75598
+      Y: -306.086914
+      Z: 613.632874
     }
     Rotation {
     }
     Scale {
       X: 1.01789939
       Y: 1.56439424
-      Z: 12.0123358
+      Z: 12.0123367
     }
   }
   ParentId: 7729331741603834980

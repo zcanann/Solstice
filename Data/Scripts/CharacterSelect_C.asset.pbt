@@ -32,12 +32,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:NewCharacterScreenIthkia"
+        Name: "cs:NewCharacterScreenIthkuil"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:NewCharacterScreenKotava"
+        Name: "cs:NewCharacterScreenColonist"
         ObjectReference {
         }
       }
@@ -52,12 +52,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ChangeFactionIthkiaButton"
+        Name: "cs:ChangeFactionIthkuilButton"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:ChangeFactionKotavaButton"
+        Name: "cs:ChangeFactionColonistButton"
         ObjectReference {
         }
       }
@@ -67,12 +67,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:CameraIthkia"
+        Name: "cs:CameraIthkuil"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:CameraKotava"
+        Name: "cs:CameraColonist"
         ObjectReference {
         }
       }

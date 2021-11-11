@@ -49,13 +49,13 @@ Objects {
   ParentId: 4738139620739167810
   UnregisteredParameters {
     Overrides {
-      Name: "cs:SpawnPointIthkia"
+      Name: "cs:SpawnPointIthkuil"
       ObjectReference {
         SelfId: 2033215230845879164
       }
     }
     Overrides {
-      Name: "cs:SpawnPointKotava"
+      Name: "cs:SpawnPointColonist"
       ObjectReference {
         SelfId: 14024615332737507217
       }
@@ -133,18 +133,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ChangeFactionIthkiaButton"
-      ObjectReference {
-        SelfId: 12421013910225517787
-      }
-    }
-    Overrides {
-      Name: "cs:ChangeFactionKotavaButton"
-      ObjectReference {
-        SelfId: 1381945759818713307
-      }
-    }
-    Overrides {
       Name: "cs:CharacterSelectScreen"
       ObjectReference {
         SelfId: 4164393759716768404
@@ -169,30 +157,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:NewCharacterScreenIthkia"
-      ObjectReference {
-        SelfId: 9236217334296286072
-      }
-    }
-    Overrides {
-      Name: "cs:NewCharacterScreenKotava"
-      ObjectReference {
-        SelfId: 18055793306275902885
-      }
-    }
-    Overrides {
-      Name: "cs:CameraIthkia"
-      ObjectReference {
-        SelfId: 3785637843159838533
-      }
-    }
-    Overrides {
-      Name: "cs:CameraKotava"
-      ObjectReference {
-        SelfId: 6574011873009460602
-      }
-    }
-    Overrides {
       Name: "cs:FinalizeNewCharacterButton"
       ObjectReference {
         SelfId: 1636713729405553466
@@ -202,6 +166,42 @@ Objects {
       Name: "cs:Sunlight"
       ObjectReference {
         SelfId: 15044655550122715030
+      }
+    }
+    Overrides {
+      Name: "cs:ChangeFactionIthkuilButton"
+      ObjectReference {
+        SelfId: 12421013910225517787
+      }
+    }
+    Overrides {
+      Name: "cs:ChangeFactionColonistButton"
+      ObjectReference {
+        SelfId: 1381945759818713307
+      }
+    }
+    Overrides {
+      Name: "cs:CameraIthkuil"
+      ObjectReference {
+        SelfId: 3785637843159838533
+      }
+    }
+    Overrides {
+      Name: "cs:CameraColonist"
+      ObjectReference {
+        SelfId: 6574011873009460602
+      }
+    }
+    Overrides {
+      Name: "cs:NewCharacterScreenIthkuil"
+      ObjectReference {
+        SelfId: 9236217334296286072
+      }
+    }
+    Overrides {
+      Name: "cs:NewCharacterScreenColonist"
+      ObjectReference {
+        SelfId: 18055793306275902885
       }
     }
   }

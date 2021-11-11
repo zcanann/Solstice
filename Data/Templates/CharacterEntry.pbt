@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7541412349701524784
+        ParentId: 2654916338316290302
         ChildIds: 10861226459403223824
         UnregisteredParameters {
           Overrides {
@@ -37,25 +37,25 @@ Assets {
             }
           }
           Overrides {
-            Name: "cs:IthkiaBorder"
+            Name: "cs:IthkuilBorder"
             ObjectReference {
               SubObjectId: 7368918606803558559
             }
           }
           Overrides {
-            Name: "cs:IthkiaBorderSelected"
+            Name: "cs:IthkuilBorderSelected"
             ObjectReference {
               SubObjectId: 3088983087380024301
             }
           }
           Overrides {
-            Name: "cs:KotavaBorder"
+            Name: "cs:ColonistBorder"
             ObjectReference {
               SubObjectId: 10926126374557102258
             }
           }
           Overrides {
-            Name: "cs:KotavaBorderSelected"
+            Name: "cs:ColonistBorderSelected"
             ObjectReference {
               SubObjectId: 16726081488395232142
             }
@@ -299,7 +299,7 @@ Assets {
       }
       Objects {
         Id: 7368918606803558559
-        Name: "IthkiaBorder"
+        Name: "IthkuilBorder"
         Transform {
           Location {
           }
@@ -596,7 +596,7 @@ Assets {
       }
       Objects {
         Id: 3088983087380024301
-        Name: "IthkiaBorderSelected"
+        Name: "IthkuilBorderSelected"
         Transform {
           Location {
           }
@@ -896,7 +896,7 @@ Assets {
       }
       Objects {
         Id: 10926126374557102258
-        Name: "KotavaBorder"
+        Name: "ColonistBorder"
         Transform {
           Location {
           }
@@ -1194,7 +1194,7 @@ Assets {
       }
       Objects {
         Id: 16726081488395232142
-        Name: "KotavaBorderSelected"
+        Name: "ColonistBorderSelected"
         Transform {
           Location {
           }

@@ -1,6 +1,6 @@
 local FactionKeys = { }
 
-FactionKeys.ITHKIA = "Ithkia"
-FactionKeys.KOTAVA = "Kotava"
+FactionKeys.ITHKUIL = "Ithkuil"
+FactionKeys.COLONIST = "Colonist"
 
 return FactionKeys

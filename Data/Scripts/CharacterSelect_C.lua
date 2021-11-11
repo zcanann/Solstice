@@ -5,24 +5,24 @@ local propCharacterEntriesRoot = script:GetCustomProperty("CharacterEntriesRoot"
 
 local propCharacterSelectScreen = script:GetCustomProperty("CharacterSelectScreen"):WaitForObject()
 local propNewCharacterScreen = script:GetCustomProperty("NewCharacterScreen"):WaitForObject()
-local propNewCharacterScreenIthkia = script:GetCustomProperty("NewCharacterScreenIthkia"):WaitForObject()
-local propNewCharacterScreenKotava = script:GetCustomProperty("NewCharacterScreenKotava"):WaitForObject()
+local propNewCharacterScreenIthkuil = script:GetCustomProperty("NewCharacterScreenIthkuil"):WaitForObject()
+local propNewCharacterScreenColonist = script:GetCustomProperty("NewCharacterScreenColonist"):WaitForObject()
 
 local propCreateNewCharacterButton = script:GetCustomProperty("CreateNewCharacterButton"):WaitForObject()
 local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewCharacterButton"):WaitForObject()
-local propChangeFactionIthkiaButton = script:GetCustomProperty("ChangeFactionIthkiaButton"):WaitForObject()
-local propChangeFactionKotavaButton = script:GetCustomProperty("ChangeFactionKotavaButton"):WaitForObject()
+local propChangeFactionIthkuilButton = script:GetCustomProperty("ChangeFactionIthkuilButton"):WaitForObject()
+local propChangeFactionColonistButton = script:GetCustomProperty("ChangeFactionColonistButton"):WaitForObject()
 local propDeleteCharacterButton = script:GetCustomProperty("DeleteCharacterButton"):WaitForObject()
 
-local propCameraIthkia = script:GetCustomProperty("CameraIthkia"):WaitForObject()
-local propCameraKotava = script:GetCustomProperty("CameraKotava"):WaitForObject()
+local propCameraIthkuil = script:GetCustomProperty("CameraIthkuil"):WaitForObject()
+local propCameraColonist = script:GetCustomProperty("CameraColonist"):WaitForObject()
 
 local propSunlight = script:GetCustomProperty("Sunlight"):WaitForObject()
 
 local CharacterSelectState = { }
 CharacterSelectState.CHARACTER_SELECT = "character_select"
-CharacterSelectState.NEW_CHARACTER_ITHKIA = "new_character_ithkia"
-CharacterSelectState.NEW_CHARACTER_KOTAVA = "new_character_kotava"
+CharacterSelectState.NEW_CHARACTER_ITHKUIL = "new_character_ithkia"
+CharacterSelectState.NEW_CHARACTER_COLONIST = "new_character_kotava"
 CharacterSelectState.DELETE_SELECTED_CHARACTER = "delete_character"
 CharacterSelectState.CHARACTER_CREATE_PENDING = "character_create_pending"
 
@@ -40,33 +40,33 @@ function SetCharacterSelectState(newState)
 
     propCharacterSelectScreen.visibility = Visibility.FORCE_OFF
     propNewCharacterScreen.visibility = Visibility.FORCE_OFF
-    propNewCharacterScreenIthkia.visibility = Visibility.FORCE_OFF
-    propNewCharacterScreenKotava.visibility = Visibility.FORCE_OFF
+    propNewCharacterScreenIthkuil.visibility = Visibility.FORCE_OFF
+    propNewCharacterScreenColonist.visibility = Visibility.FORCE_OFF
 
     if currentState == CharacterSelectState.CHARACTER_SELECT then
         propCharacterSelectScreen.visibility = Visibility.INHERIT
-    elseif currentState == CharacterSelectState.NEW_CHARACTER_ITHKIA or currentState == CharacterSelectState.NEW_CHARACTER_KOTAVA then
+    elseif currentState == CharacterSelectState.NEW_CHARACTER_ITHKUIL or currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
         propNewCharacterScreen.visibility = Visibility.INHERIT
-        local propBorderIthkia = propChangeFactionIthkiaButton:GetCustomProperty("Border"):WaitForObject()
-        local propBorderIthkiaSelected = propChangeFactionIthkiaButton:GetCustomProperty("BorderSelected"):WaitForObject()
-        local propBorderKotava = propChangeFactionKotavaButton:GetCustomProperty("Border"):WaitForObject()
-        local propBorderKotavaSelected = propChangeFactionKotavaButton:GetCustomProperty("BorderSelected"):WaitForObject()
-        if currentState == CharacterSelectState.NEW_CHARACTER_ITHKIA then
-            propNewCharacterScreenIthkia.visibility = Visibility.INHERIT
-            propBorderIthkia.visibility = Visibility.FORCE_OFF
-            propBorderIthkiaSelected.visibility = Visibility.INHERIT
-            propBorderKotava.visibility = Visibility.INHERIT
-            propBorderKotavaSelected.visibility = Visibility.FORCE_OFF
-            SetActiveFaction(Framework.Entities.Factions.ITHKIA)
+        local propBorderIthkuil = propChangeFactionIthkuilButton:GetCustomProperty("Border"):WaitForObject()
+        local propBorderIthkuilSelected = propChangeFactionIthkuilButton:GetCustomProperty("BorderSelected"):WaitForObject()
+        local propBorderColonist = propChangeFactionColonistButton:GetCustomProperty("Border"):WaitForObject()
+        local propBorderColonistSelected = propChangeFactionColonistButton:GetCustomProperty("BorderSelected"):WaitForObject()
+        if currentState == CharacterSelectState.NEW_CHARACTER_ITHKUIL then
+            propNewCharacterScreenIthkuil.visibility = Visibility.INHERIT
+            propBorderIthkuil.visibility = Visibility.FORCE_OFF
+            propBorderIthkuilSelected.visibility = Visibility.INHERIT
+            propBorderColonist.visibility = Visibility.INHERIT
+            propBorderColonistSelected.visibility = Visibility.FORCE_OFF
+            SetActiveFaction(Framework.Entities.Factions.ITHKUIL)
         else
-            propNewCharacterScreenKotava.visibility = Visibility.INHERIT
-            propBorderIthkia.visibility = Visibility.INHERIT
-            propBorderIthkiaSelected.visibility = Visibility.FORCE_OFF
-            propBorderKotava.visibility = Visibility.FORCE_OFF
-            propBorderKotavaSelected.visibility = Visibility.INHERIT
-            SetActiveFaction(Framework.Entities.Factions.KOTAVA)
+            propNewCharacterScreenColonist.visibility = Visibility.INHERIT
+            propBorderIthkuil.visibility = Visibility.INHERIT
+            propBorderIthkuilSelected.visibility = Visibility.FORCE_OFF
+            propBorderColonist.visibility = Visibility.FORCE_OFF
+            propBorderColonistSelected.visibility = Visibility.INHERIT
+            SetActiveFaction(Framework.Entities.Factions.COLONIST)
         end
-    elseif currentState == CharacterSelectState.NEW_CHARACTER_KOTAVA then
+    elseif currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
         propNewCharacterScreen.visibility = Visibility.INHERIT
     elseif currentState == CharacterSelectState.DELETE_SELECTED_CHARACTER then
         propCharacterSelectScreen.visibility = Visibility.INHERIT
@@ -83,11 +83,11 @@ function SetActiveFaction(newActiveFaction)
 end
 
 function OnSetActiveFactionGranted()
-    if activeFaction == Framework.Entities.Factions.ITHKIA then
-        localPlayer:SetOverrideCamera(propCameraIthkia)
+    if activeFaction == Framework.Entities.Factions.ITHKUIL then
+        localPlayer:SetOverrideCamera(propCameraIthkuil)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
     else
-        localPlayer:SetOverrideCamera(propCameraKotava)
+        localPlayer:SetOverrideCamera(propCameraColonist)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
     end
 end
@@ -100,29 +100,29 @@ function UpdateEntryVisuals(characterId)
         return
     end
 
-    local propIthkiaBorder = characterEntry:GetCustomProperty("IthkiaBorder"):WaitForObject()
-    local propIthkiaBorderSelected = characterEntry:GetCustomProperty("IthkiaBorderSelected"):WaitForObject()
-    local propKotavaBorder = characterEntry:GetCustomProperty("KotavaBorder"):WaitForObject()
-    local propKotavaBorderSelected = characterEntry:GetCustomProperty("KotavaBorderSelected"):WaitForObject()
+    local propIthkuilBorder = characterEntry:GetCustomProperty("IthkuilBorder"):WaitForObject()
+    local propIthkuilBorderSelected = characterEntry:GetCustomProperty("IthkuilBorderSelected"):WaitForObject()
+    local propColonistBorder = characterEntry:GetCustomProperty("ColonistBorder"):WaitForObject()
+    local propColonistBorderSelected = characterEntry:GetCustomProperty("ColonistBorderSelected"):WaitForObject()
 
-    propIthkiaBorder.visibility = Visibility.FORCE_OFF
-    propIthkiaBorderSelected.visibility = Visibility.FORCE_OFF
-    propKotavaBorder.visibility = Visibility.FORCE_OFF
-    propKotavaBorderSelected.visibility = Visibility.FORCE_OFF
+    propIthkuilBorder.visibility = Visibility.FORCE_OFF
+    propIthkuilBorderSelected.visibility = Visibility.FORCE_OFF
+    propColonistBorder.visibility = Visibility.FORCE_OFF
+    propColonistBorderSelected.visibility = Visibility.FORCE_OFF
 
-    if characterData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.ITHKIA then
+    if characterData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.ITHKUIL then
         if characterEntry == selectedEntry then
-            SetActiveFaction(Framework.Entities.Factions.ITHKIA)
-            propIthkiaBorderSelected.visibility = Visibility.INHERIT
+            SetActiveFaction(Framework.Entities.Factions.ITHKUIL)
+            propIthkuilBorderSelected.visibility = Visibility.INHERIT
         else
-            propIthkiaBorder.visibility = Visibility.INHERIT
+            propIthkuilBorder.visibility = Visibility.INHERIT
         end
     else
         if characterEntry == selectedEntry then
-            SetActiveFaction(Framework.Entities.Factions.KOTAVA)
-            propKotavaBorderSelected.visibility = Visibility.INHERIT
+            SetActiveFaction(Framework.Entities.Factions.COLONIST)
+            propColonistBorderSelected.visibility = Visibility.INHERIT
         else
-            propKotavaBorder.visibility = Visibility.INHERIT
+            propColonistBorder.visibility = Visibility.INHERIT
         end
     end
 end
@@ -189,9 +189,9 @@ end
 
 function OnCreateNewCharacterPressed()
     if math.random() >= 0.5 then
-        SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKIA)
+        SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKUIL)
     else
-        SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_KOTAVA)
+        SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_COLONIST)
     end
 end
 
@@ -211,12 +211,12 @@ function OnFinalizeNewCharacterPressed()
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, initialData)
 end
 
-function OnSetFactionIthkiaPressed()
-    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKIA)
+function OnSetFactionIthkuilPressed()
+    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKUIL)
 end
 
-function OnSetFactionKotavaPressed()
-    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_KOTAVA)
+function OnSetFactionColonistPressed()
+    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_COLONIST)
 end
 
 function OnDeleteSelectedCharacterButtonPressed()
@@ -261,8 +261,8 @@ SetCharacterSelectState(CharacterSelectState.CHARACTER_SELECT)
 
 propCreateNewCharacterButton.clickedEvent:Connect(OnCreateNewCharacterPressed)
 propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPressed)
-propChangeFactionIthkiaButton.clickedEvent:Connect(OnSetFactionIthkiaPressed)
-propChangeFactionKotavaButton.clickedEvent:Connect(OnSetFactionKotavaPressed)
+propChangeFactionIthkuilButton.clickedEvent:Connect(OnSetFactionIthkuilPressed)
+propChangeFactionColonistButton.clickedEvent:Connect(OnSetFactionColonistPressed)
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
 
 localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)

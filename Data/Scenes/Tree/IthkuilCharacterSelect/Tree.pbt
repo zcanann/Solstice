@@ -18590,7 +18590,7 @@ Objects {
     Overrides {
       Name: "ma:Building_Floor:id"
       AssetReference {
-        Id: 6889857363993128864
+        Id: 7977457313222069235
       }
     }
     Overrides {
@@ -21270,7 +21270,7 @@ Objects {
     Overrides {
       Name: "ma:Building_Floor:id"
       AssetReference {
-        Id: 6889857363993128864
+        Id: 7977457313222069235
       }
     }
     Overrides {
@@ -30890,7 +30890,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 6889857363993128864
+        Id: 7977457313222069235
       }
     }
     Overrides {
@@ -33473,7 +33473,7 @@ Objects {
     Overrides {
       Name: "ma:Building_Floor:id"
       AssetReference {
-        Id: 6889857363993128864
+        Id: 7977457313222069235
       }
     }
     Overrides {
@@ -34554,7 +34554,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17392037394327131985
+        Id: 12861633764301884441
       }
     }
   }
@@ -34605,7 +34605,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17392037394327131985
+        Id: 12861633764301884441
       }
     }
   }
@@ -34656,7 +34656,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17392037394327131985
+        Id: 12861633764301884441
       }
     }
   }
@@ -35257,6 +35257,8 @@ Objects {
     }
   }
   ParentId: 13914077908643798031
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -35442,7 +35444,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17392037394327131985
+        Id: 12861633764301884441
       }
     }
   }
@@ -35493,7 +35495,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 17392037394327131985
+        Id: 12861633764301884441
       }
     }
   }

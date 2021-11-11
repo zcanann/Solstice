@@ -257,5 +257,9 @@ Assets {
       VirtualFolderPath: "Entities"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Floors"
+      PlatformAssetType: 13
+    }
   }
 }

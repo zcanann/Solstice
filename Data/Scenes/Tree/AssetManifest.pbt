@@ -17,6 +17,24 @@ Assets {
   }
 }
 Assets {
+  Id: 16248465704105362888
+  Name: "Rock Obsidian 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_fresnel_rock_obsidian_001_uv"
+  }
+}
+Assets {
+  Id: 15596870760343554385
+  Name: "Additive Edgeline Top Fade"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_add_edgeline_sharpline_topfade"
+  }
+}
+Assets {
   Id: 15582506287555989570
   Name: "Bush Leafy Low 01"
   PlatformAssetType: 1
@@ -98,15 +116,6 @@ Assets {
   }
 }
 Assets {
-  Id: 8601819018764791109
-  Name: "Metal Iron 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_metal_iron_001"
-  }
-}
-Assets {
   Id: 6794626085357663090
   Name: "Text 01: I"
   PlatformAssetType: 1
@@ -176,6 +185,24 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_basic_emissive_001"
+  }
+}
+Assets {
+  Id: 3253892348827217649
+  Name: "Main Street Railing 01 - Post"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_railing_001_post_ref"
+  }
+}
+Assets {
+  Id: 1629521079702819678
+  Name: "Long Banner Manticore"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_001"
   }
 }
 Assets {

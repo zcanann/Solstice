@@ -28,6 +28,16 @@ Objects {
   ChildIds: 16791932538532292240
   ChildIds: 4676613650505503258
   ChildIds: 9113528439266820683
+  ChildIds: 8178235284616477815
+  ChildIds: 6619650346244921381
+  ChildIds: 14615736056869697253
+  ChildIds: 7009983083834584231
+  ChildIds: 12062026922892669227
+  ChildIds: 2234250764329984082
+  ChildIds: 17905046862212306370
+  ChildIds: 14044389538977049360
+  ChildIds: 12790105480493895503
+  ChildIds: 5081948174700936444
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -40,6 +50,590 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 5081948174700936444
+  Name: "Military Fence - End Pole Template"
+  Transform {
+    Location {
+      X: -23020
+      Y: -30780
+      Z: 1510
+    }
+    Rotation {
+      Yaw: -70
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1248060139724767480
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Post"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23820
+            Y: -32095
+            Z: 1510
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -100
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3881305476441143906
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -160
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 18306537597948337740
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12931028630842529862
+    }
+  }
+}
+Objects {
+  Id: 12790105480493895503
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: -23822.3086
+      Y: -32005.3
+      Z: 2180
+    }
+    Rotation {
+      Yaw: -175
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Prop_Cloth:color"
+      Color {
+        R: 0.0470588282
+        G: 0.188235313
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14044389538977049360
+  Name: "Military Fence - End Pole Template"
+  Transform {
+    Location {
+      X: -24153.9434
+      Y: -27127.7715
+      Z: 1800
+    }
+    Rotation {
+      Yaw: -59.9999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1248060139724767480
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Post"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -22368.1523
+            Y: -31536.5273
+            Z: 1510
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -70
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3881305476441143906
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -160
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 18306537597948337740
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12931028630842529862
+    }
+  }
+}
+Objects {
+  Id: 17905046862212306370
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: -22415
+      Y: -31460
+      Z: 2180
+    }
+    Rotation {
+      Yaw: -145
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Prop_Cloth:color"
+      Color {
+        R: 0.0470588282
+        G: 0.188235313
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2234250764329984082
+  Name: "Main Street Railing 01 - Post"
+  Transform {
+    Location {
+      X: -12625
+      Y: -2465
+      Z: 460
+    }
+    Rotation {
+      Yaw: 25
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 4.79999971
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3253892348827217649
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 12062026922892669227
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: -12627.4199
+      Y: -2471.64648
+      Z: 1155
+    }
+    Rotation {
+      Yaw: 175
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7009983083834584231
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: -23950
+      Y: -26825
+      Z: 2470
+    }
+    Rotation {
+      Yaw: -105
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Prop_Cloth:color"
+      Color {
+        R: 0.0470588282
+        G: 0.188235313
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14615736056869697253
+  Name: "Military Fence - End Pole Template"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1248060139724767480
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Post"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -23852.748
+            Y: -26841.334
+            Z: 1800
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -30
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3881305476441143906
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -160
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 18306537597948337740
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12931028630842529862
+    }
+  }
+}
+Objects {
+  Id: 6619650346244921381
+  Name: "Main Street Railing 01 - Post"
+  Transform {
+    Location {
+      X: -11415
+      Y: -3100
+      Z: 460
+    }
+    Rotation {
+      Yaw: -15
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 4.79999971
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3253892348827217649
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 8178235284616477815
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: -11421.125
+      Y: -3103.5354
+      Z: 1155
+    }
+    Rotation {
+      Yaw: 135
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
   }
 }
 Objects {
@@ -209,8 +803,8 @@ Objects {
   Name: "Classical Music Score Set 01"
   Transform {
     Location {
-      X: -24984
-      Y: -27323
+      X: -21245
+      Y: -15310
       Z: 2084
     }
     Rotation {
@@ -241,12 +835,9 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      AutoPlay: true
       Volume: 4
       Falloff: 3600
       Radius: 400
-      EnableOcclusion: true
-      IsAttenuationEnabled: true
     }
   }
 }
@@ -255,9 +846,9 @@ Objects {
   Name: "SolsticeText"
   Transform {
     Location {
-      X: -12760
-      Y: -3765
-      Z: 820
+      X: -12785
+      Y: -3865
+      Z: 790
     }
     Rotation {
       Yaw: 155
@@ -316,7 +907,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -339,16 +930,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -356,11 +939,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -416,7 +1007,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -439,16 +1030,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -456,11 +1039,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -516,7 +1107,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -539,16 +1130,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -556,11 +1139,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -616,7 +1207,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -639,16 +1230,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -656,11 +1239,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -716,7 +1307,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -739,16 +1330,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -756,11 +1339,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -816,7 +1407,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -839,16 +1430,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -856,11 +1439,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -916,7 +1507,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -939,16 +1530,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -956,11 +1539,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {
@@ -1016,7 +1607,7 @@ Objects {
     Overrides {
       Name: "ma:Font.Faces:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 15596870760343554385
       }
     }
     Overrides {
@@ -1039,16 +1630,8 @@ Objects {
     Overrides {
       Name: "ma:Font.Sides:id"
       AssetReference {
-        Id: 8601819018764791109
+        Id: 16248465704105362888
       }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:utile"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "ma:Font.Faces:vtile"
-      Float: 0.5
     }
     Overrides {
       Name: "ma:Font.Sides:smart"
@@ -1056,11 +1639,19 @@ Objects {
     }
     Overrides {
       Name: "ma:Font.Sides:utile"
-      Float: 0.5
+      Float: 0.125
     }
     Overrides {
       Name: "ma:Font.Sides:vtile"
-      Float: 0.5
+      Float: 0.125
+    }
+    Overrides {
+      Name: "ma:Font.Faces:color"
+      Color {
+        R: 0.450000048
+        G: 0.232450366
+        A: 1
+      }
     }
   }
   Collidable_v2 {

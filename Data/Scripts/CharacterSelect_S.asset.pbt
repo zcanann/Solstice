@@ -11,12 +11,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:SpawnPointIthkia"
+        Name: "cs:SpawnPointIthkuil"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:SpawnPointKotava"
+        Name: "cs:SpawnPointColonist"
         ObjectReference {
         }
       }

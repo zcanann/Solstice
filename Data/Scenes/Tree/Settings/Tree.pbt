@@ -45,7 +45,7 @@ Objects {
 }
 Objects {
   Id: 6574011873009460602
-  Name: "CameraKotava"
+  Name: "CameraColonist"
   Transform {
     Location {
       X: -24646
@@ -95,7 +95,7 @@ Objects {
 }
 Objects {
   Id: 3785637843159838533
-  Name: "CameraIthkia"
+  Name: "CameraIthkuil"
   Transform {
     Location {
       X: -12580.6191
@@ -146,7 +146,7 @@ Objects {
 }
 Objects {
   Id: 14024615332737507217
-  Name: "SpawnPointKotava"
+  Name: "SpawnPointColonist"
   Transform {
     Location {
       X: -24650
@@ -186,7 +186,7 @@ Objects {
 }
 Objects {
   Id: 2033215230845879164
-  Name: "SpawnPointIthkia"
+  Name: "SpawnPointIthkuil"
   Transform {
     Location {
       X: -12574.7539

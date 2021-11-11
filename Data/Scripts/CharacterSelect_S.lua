@@ -1,7 +1,7 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propSpawnPointIthkia = script:GetCustomProperty("SpawnPointIthkia"):WaitForObject()
-local propSpawnPointKotava = script:GetCustomProperty("SpawnPointKotava"):WaitForObject()
+local propSpawnPointIthkuil = script:GetCustomProperty("SpawnPointIthkuil"):WaitForObject()
+local propSpawnPointColonist = script:GetCustomProperty("SpawnPointColonist"):WaitForObject()
 
 function LoadCharacters(player)
     local lastLoggedInCharacterId = Framework.DataBase.GetGlobalKey(player, Framework.DataBase.KeyLastSelectedCharacterId)
@@ -15,9 +15,9 @@ function OnCreateNewCharacterRequested(player, initialData)
 
     initialData[Framework.Entities.Keys.ZONE] = Framework.Entities.Zones.UNKNOWN
 
-    if initialData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.ITHKIA then
+    if initialData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.ITHKUIL then
         initialData[Framework.Entities.Keys.ZONE] = Framework.Entities.Zones.VERNAL
-    elseif initialData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.KOTAVA then
+    elseif initialData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.COLONIST then
         initialData[Framework.Entities.Keys.ZONE] = Framework.Entities.Zones.HIBERNA
     else
         error("Invalid faction supplied to character creation")
@@ -48,10 +48,10 @@ function OnRequestDeleteCharacter(player, characterId)
 end
 
 function OnRequestSetActiveFaction(player, newActiveFaction)
-    if newActiveFaction == Framework.Entities.Factions.ITHKIA then
-        player:Spawn({position = propSpawnPointIthkia:GetWorldPosition(), rotation = propSpawnPointIthkia:GetRotation()})
+    if newActiveFaction == Framework.Entities.Factions.ITHKUIL then
+        player:Spawn({position = propSpawnPointIthkuil:GetWorldPosition(), rotation = propSpawnPointIthkuil:GetRotation()})
     else
-        player:Spawn({position = propSpawnPointKotava:GetWorldPosition(), rotation = propSpawnPointKotava:GetRotation()})
+        player:Spawn({position = propSpawnPointColonist:GetWorldPosition(), rotation = propSpawnPointColonist:GetRotation()})
     end
 
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_FACTION_SUCCESS, player)
