@@ -6,23 +6,22 @@ local soulKey = "soul"
 local soulKeys = Framework.Skills.GetSkillKeys(soulKey)
 
 local localPlayer = Game.GetLocalPlayer()
+local playerDataLoaded = false
 
 function UpdateSoulText()
+    if not playerDataLoaded then return end
     local effectiveSoul = Framework.Skills.GetEffectiveSkillLevel(localPlayer, soulKey)
 
     propSoulText.text = tostring(effectiveSoul)
 end
 
-function OnResourceChanged(player, resource, value)
-    if resource == soulKeys.EFFECTIVE_LEVEL then
-        UpdateSoulText()
-    end
-end
-
-function Initialize()
+function OnSoulChanged(value)
     UpdateSoulText()
 end
 
-Initialize()
+function OnPlayerDataLoaded()
+    playerDataLoaded = true
+end
 
-localPlayer.resourceChangedEvent:Connect(OnResourceChanged)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_INITIAL_PLAYER_DATA_LOADED, OnPlayerDataLoaded)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. soulKeys.EFFECTIVE_LEVEL, OnSoulChanged)

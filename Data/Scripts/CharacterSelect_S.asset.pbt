@@ -20,6 +20,12 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:CharacterNameValidator"
+        AssetReference {
+          Id: 1440846473950342765
+        }
+      }
     }
   }
   SerializationVersion: 101

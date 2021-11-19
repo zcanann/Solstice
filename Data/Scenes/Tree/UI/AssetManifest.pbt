@@ -34,3 +34,12 @@ Assets {
     AssetId: "UI_Scifi_Icon_046"
   }
 }
+Assets {
+  Id: 163434024459759144
+  Name: "Japanese Frame 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Japan_Frame_005"
+  }
+}

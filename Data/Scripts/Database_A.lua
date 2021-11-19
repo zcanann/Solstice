@@ -84,8 +84,8 @@ DataBase.ReplicateReadOnlyData = function(player)
 	player:SetPrivateNetworkedData(DataBase.GlobalDataKey, playerData[DataBase.GlobalDataKey])
 end
 
-DataBase.GetActiveCharacterId = function ()
-	return _G.ActiveCharacterId
+DataBase.GetActiveCharacterId = function (player)
+	return DataBase.GetGlobalKey(player, DataBase.KeyLastSelectedCharacterId)
 end
 
 DataBase.SetActiveCharacterId = function (player, characterId)
@@ -95,13 +95,14 @@ DataBase.SetActiveCharacterId = function (player, characterId)
 
 	if not playerData[DataBase.CharacterDataKey][characterId] then
 		warn("Character id not found: " .. characterId)
-		return
+		return false
 	end
 
 	-- Clear replicated database data
 	_G.ActiveCharacterId = characterId
 
 	DataBase.SetGlobalKey(player, DataBase.KeyLastSelectedCharacterId, characterId)
+	return true
 end
 
 DataBase.GetCharacterCount = function (player)
@@ -160,20 +161,29 @@ DataBase.GetCharacterList = function (player)
 end
 
 DataBase.GetCharacterKey = function (player, key)
-	local characterId = DataBase.GetActiveCharacterId()
+	local characterId = DataBase.GetActiveCharacterId(player)
 
 	if not characterId then
 		warn("No active character set!")
-		return
+		return nil
 	end
 
 	local playerData = GetPlayerData(player)
+
+	if not playerData[DataBase.CharacterDataKey][characterId] then
+		playerData[DataBase.CharacterDataKey][characterId] = { }
+	end
 
 	return playerData[DataBase.CharacterDataKey][characterId][key]
 end
 
 DataBase.SetCharacterKey = function (player, key, value)
-	local characterId = DataBase.GetActiveCharacterId()
+	if Environment.IsClient() then
+		warn("Server only function SetCharacterKey() called on client")
+		return
+	end
+
+	local characterId = DataBase.GetActiveCharacterId(player)
 
 	if not characterId then
 		warn("No active character set!")
@@ -183,41 +193,32 @@ DataBase.SetCharacterKey = function (player, key, value)
 	local playerData = GetPlayerData(player)
 
 	if not playerData[DataBase.CharacterDataKey][characterId] then
-		return
+		playerData[DataBase.CharacterDataKey][characterId] = { }
 	end
 
-	playerData[characterId][key] = value
+	playerData[DataBase.CharacterDataKey][characterId][key] = value
 
-	local success, errorMessage = Storage.SetPlayerData(player, playerData)
-
-	if success then
-		-- Replicate keys as player resources. This is a simple way for the client to be able to read back the results.
-		-- If we ever need replication for non-number values, we will need a more robust solution.
-		if type(value) == "number" then
-			player:SetResource(key, value)
-		end
-	end
-
-	return success, errorMessage
+	return SetPlayerData(player, playerData)
 end
 
 
 DataBase.GetGlobalKey = function (player, key)
-	if Environment.IsClient() then
-		return nil
-	end
-
 	local playerData = GetPlayerData(player)
 
 	return playerData[DataBase.GlobalDataKey][key]
 end
 
 DataBase.SetGlobalKey = function (player, key, value)
+	if Environment.IsClient() then
+		warn("Server only function SetGlobalKey() called on client")
+		return
+	end
+
 	local playerData = GetPlayerData(player)
 
 	playerData[DataBase.GlobalDataKey][key] = value
 
-	return Storage.SetPlayerData(player, playerData)
+	return SetPlayerData(player, playerData)
 end
 
 return DataBase

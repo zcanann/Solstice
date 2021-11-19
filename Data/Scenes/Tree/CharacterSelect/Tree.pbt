@@ -204,6 +204,18 @@ Objects {
         SelfId: 18055793306275902885
       }
     }
+    Overrides {
+      Name: "cs:CharacterNameTextBox"
+      ObjectReference {
+        SelfId: 2204542871266170372
+      }
+    }
+    Overrides {
+      Name: "cs:EnterWorldButton"
+      ObjectReference {
+        SelfId: 10213111332676198809
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

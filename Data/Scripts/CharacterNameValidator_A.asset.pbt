@@ -1,6 +1,6 @@
 Assets {
-  Id: 511068482442534182
-  Name: "CharacterSelect_C"
+  Id: 1440846473950342765
+  Name: "CharacterNameValidator_A"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -67,11 +67,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:EnterWorldButton"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:CameraIthkuil"
         ObjectReference {
         }
@@ -89,12 +84,6 @@ Assets {
       Overrides {
         Name: "cs:Sunlight"
         ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:CharacterNameValidator"
-        AssetReference {
-          Id: 1440846473950342765
         }
       }
     }

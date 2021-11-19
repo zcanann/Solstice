@@ -22,11 +22,25 @@ function OnPrivateNetworkedDataChanged(player, key)
             subData = data[subKey]
         end
 
+        -- Broadcast character data changes
+        if key == Framework.DataBase.CharacterDataKey then
+            if subKey and subKey == Framework.DataBase.GetActiveCharacterId(player) then
+                ForwardDatabaseChangesToPlayer(subData)
+            end
+        end
+
         if keyIsObject then
             ForwardDataToObject(key, subKey, subData)
         else
             ForwardDataToPlayer(key, subKey, subData)
         end
+    end
+end
+
+-- TODO: This seems to fire too often for too many keys. Diff problem?
+function ForwardDatabaseChangesToPlayer(subData)
+    for characterDataKey, _ in pairs(subData) do
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
     end
 end
 
@@ -40,6 +54,7 @@ function ForwardDataToPlayer(key, subKey, data, retryCount)
 
     -- There is a possible timing info where we have a stale player list, but have recieved a private networked event about another player
     -- In this case, we just have to wait until this player becomes available. If they never do (ie a disconnect), eventually we stop trying
+    -- TODO: What if a key is set several times? Data may arrive out of order?
     if keyAsPlayer == nil then
         Task.Spawn(function ()
             ForwardDataToPlayer(key, data, retryCount + 1)

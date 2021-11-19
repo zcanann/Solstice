@@ -13,11 +13,16 @@ local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewChar
 local propChangeFactionIthkuilButton = script:GetCustomProperty("ChangeFactionIthkuilButton"):WaitForObject()
 local propChangeFactionColonistButton = script:GetCustomProperty("ChangeFactionColonistButton"):WaitForObject()
 local propDeleteCharacterButton = script:GetCustomProperty("DeleteCharacterButton"):WaitForObject()
+local propEnterWorldButton = script:GetCustomProperty("EnterWorldButton"):WaitForObject()
 
 local propCameraIthkuil = script:GetCustomProperty("CameraIthkuil"):WaitForObject()
 local propCameraColonist = script:GetCustomProperty("CameraColonist"):WaitForObject()
 
+local propCharacterNameTextBox = script:GetCustomProperty("CharacterNameTextBox"):WaitForObject()
+
 local propSunlight = script:GetCustomProperty("Sunlight"):WaitForObject()
+
+local CharacterNameValidator = require(script:GetCustomProperty("CharacterNameValidator"))
 
 local CharacterSelectState = { }
 CharacterSelectState.CHARACTER_SELECT = "character_select"
@@ -35,6 +40,8 @@ local currentState = nil
 local activeFaction = nil
 local selectedEntry = nil
 
+local defaultNameText = propCharacterNameTextBox.text
+
 function SetCharacterSelectState(newState)
     currentState = newState
 
@@ -51,6 +58,8 @@ function SetCharacterSelectState(newState)
         local propBorderIthkuilSelected = propChangeFactionIthkuilButton:GetCustomProperty("BorderSelected"):WaitForObject()
         local propBorderColonist = propChangeFactionColonistButton:GetCustomProperty("Border"):WaitForObject()
         local propBorderColonistSelected = propChangeFactionColonistButton:GetCustomProperty("BorderSelected"):WaitForObject()
+        propFinalizeNewCharacterButton.isInteractable = false
+        propCharacterNameTextBox.text = defaultNameText
         if currentState == CharacterSelectState.NEW_CHARACTER_ITHKUIL then
             propNewCharacterScreenIthkuil.visibility = Visibility.INHERIT
             propBorderIthkuil.visibility = Visibility.FORCE_OFF
@@ -198,7 +207,7 @@ end
 function OnFinalizeNewCharacterPressed()
     selectedEntry = nil
     lastLoggedInCharacterId = nil
-    local name = "Christofori"
+    local name = propCharacterNameTextBox.text
     local class = "Druid"
 
     local initialData = {
@@ -233,6 +242,17 @@ function OnDeleteSelectedCharacterButtonPressed()
     end
 end
 
+function OnEnterWorldButtonPressed()
+    for _, characterId in ipairs(characterIndices) do
+        local characterEntry = characterEntries[characterId]
+
+        if characterEntry == selectedEntry then
+            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, { characterId })
+            return
+        end
+    end
+end
+
 function OnEntryClicked(characterEntry)
     selectedEntry = characterEntry
 
@@ -250,9 +270,19 @@ function ClearEntries()
     characterIndices = { }
 end
 
-function OnPrivateNetworkedDataChanged(player, key)
-    if key == Framework.DataBase.CharacterDataKey then
-        OnCharactersLoaded()
+function SetCharacterNameText(nameText)
+    -- No validation here. Validation is done by the server and by the client when entering a new name in chat.
+    propCharacterNameTextBox.text = nameText
+end
+
+function ChatCommandHandler(params)
+    if currentState == CharacterSelectState.NEW_CHARACTER_ITHKUIL or currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
+        -- Enforce lowercase with first character capitalization
+        local name = CharacterNameValidator.SanitizeName(params.message)
+        if CharacterNameValidator.IsNameValid(name) then
+            SetCharacterNameText(name)
+            propFinalizeNewCharacterButton.isInteractable = true
+        end
     end
 end
 
@@ -264,8 +294,10 @@ propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPresse
 propChangeFactionIthkuilButton.clickedEvent:Connect(OnSetFactionIthkuilPressed)
 propChangeFactionColonistButton.clickedEvent:Connect(OnSetFactionColonistPressed)
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
+propEnterWorldButton.clickedEvent:Connect(OnEnterWorldButtonPressed)
 
-localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
+Chat.sendMessageHook:Connect(ChatCommandHandler)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_INITIAL_PLAYER_DATA_LOADED, OnCharactersLoaded)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, OnLastLoggedInCharacterReceived)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, OnCharacterCreateSuccess)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED, OnCharacterCreateFailed)

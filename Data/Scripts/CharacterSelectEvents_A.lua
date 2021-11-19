@@ -8,5 +8,6 @@ CharacterSelectEvents.EVENT_REQUEST_LOG_IN_TO_CHARACTER = "event_request_log_in_
 CharacterSelectEvents.EVENT_REQUEST_DELETE_CHARACTER = "event_request_delete_character"
 CharacterSelectEvents.EVENT_REQUEST_SET_ACTIVE_FACTION = "event_request_set_active_faction"
 CharacterSelectEvents.EVENT_SET_ACTIVE_FACTION_SUCCESS = "event_request_set_active_faction_success"
+CharacterSelectEvents.EVENT_REQUEST_ENTER_WORLD = "event_request_enter_world"
 
 return CharacterSelectEvents

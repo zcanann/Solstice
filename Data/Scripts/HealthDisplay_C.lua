@@ -6,23 +6,22 @@ local healthKey = "health"
 local healthKeys = Framework.Skills.GetSkillKeys(healthKey)
 
 local localPlayer = Game.GetLocalPlayer()
+local playerDataLoaded = false
 
 function UpdateHealthText()
+    if not playerDataLoaded then return end
     local effectiveHealth = Framework.Skills.GetEffectiveSkillLevel(localPlayer, healthKey)
 
     propHealthText.text = tostring(effectiveHealth)
 end
 
-function OnResourceChanged(player, resource, value)
-    if resource == healthKeys.EFFECTIVE_LEVEL then
-        UpdateHealthText()
-    end
-end
-
-function Initialize()
+function OnHealthChanged(value)
     UpdateHealthText()
 end
 
-Initialize()
+function OnPlayerDataLoaded()
+    playerDataLoaded = true
+end
 
-localPlayer.resourceChangedEvent:Connect(OnResourceChanged)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_INITIAL_PLAYER_DATA_LOADED, OnPlayerDataLoaded)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. healthKeys.EFFECTIVE_LEVEL, OnHealthChanged)

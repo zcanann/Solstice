@@ -17,6 +17,7 @@ local expRequiredTextFormat = propSkillExpRequired.text
 
 local localPlayer = Game.GetLocalPlayer()
 local isHovering = false
+local playerDataLoaded = false
 
 function OnClick(button)
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUMED_MOUSE_INPUT_CANCEL_GAME_MENUS)
@@ -37,6 +38,7 @@ function OnUnhover(button)
 end
 
 function UpdateHoverMenuText()
+    if not playerDataLoaded then return end
     propSkillName.text = Framework.Skills.ExpTable.GetSkillName(propSkillKey)
 
     local skillLevel = Framework.Skills.GetSkillLevel(localPlayer, propSkillKey)
@@ -48,31 +50,39 @@ function UpdateHoverMenuText()
 end
 
 function UpdateSkillText()
-    local currentSkillLevel = Framework.Skills.GetEffectiveSkillLevel(localPlayer, propSkillKey)
-    local skillLevel = Framework.Skills.GetSkillLevel(localPlayer, propSkillKey)
+    if playerDataLoaded then
+        local currentSkillLevel = Framework.Skills.GetEffectiveSkillLevel(localPlayer, propSkillKey)
+        local skillLevel = Framework.Skills.GetSkillLevel(localPlayer, propSkillKey)
 
-    propCurrentLevel.text = tostring(currentSkillLevel)
-    propMaxLevel.text = tostring(skillLevel)
-end
-
-function OnResourceChanged(player, resource, value)
-    if resource == skillKeys.LEVEL or resource == skillKeys.EFFECTIVE_LEVEL or resource == skillKeys.EXP then
-        UpdateSkillText()
-        if isHovering then
-            UpdateHoverMenuText()
-        end
+        propCurrentLevel.text = tostring(currentSkillLevel)
+        propMaxLevel.text = tostring(skillLevel)
+    else
+        propCurrentLevel.text = tostring(1)
+        propMaxLevel.text = tostring(1)
     end
 end
 
-function Initialize()
+function OnSkillChanged(value)
     UpdateSkillText()
-    propSkillHoverMenu.visibility = Visibility.FORCE_OFF
+
+    if isHovering then
+        UpdateHoverMenuText()
+    end
 end
 
-Initialize()
+function OnPlayerDataLoaded()
+    playerDataLoaded = true
+end
+
+UpdateSkillText()
+
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_INITIAL_PLAYER_DATA_LOADED, OnPlayerDataLoaded)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.LEVEL, OnSkillChanged)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.EXP, OnSkillChanged)
+Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.EFFECTIVE_LEVEL, OnSkillChanged)
+
+propSkillHoverMenu.visibility = Visibility.FORCE_OFF
 
 propBorderButton.clickedEvent:Connect(OnClick)
 propBorderButton.hoveredEvent:Connect(OnHover)
 propBorderButton.unhoveredEvent:Connect(OnUnhover)
-
-localPlayer.resourceChangedEvent:Connect(OnResourceChanged)

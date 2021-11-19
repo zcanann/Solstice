@@ -57,6 +57,12 @@ function OnRequestSetActiveFaction(player, newActiveFaction)
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_FACTION_SUCCESS, player)
 end
 
+function OnEnterWorldRequested(player, characterId)
+    if Framework.DataBase.SetActiveCharacterId(player, characterId) then
+        player:TransferToScene("TutorialIsland")
+    end
+end
+
 function OnPlayerJoined(player)
     LoadCharacters(player)
 end
@@ -67,3 +73,4 @@ Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQ
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, OnRequestDeleteCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_FACTION, OnRequestSetActiveFaction)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, OnEnterWorldRequested)
