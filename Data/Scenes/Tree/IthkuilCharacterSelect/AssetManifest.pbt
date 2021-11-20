@@ -485,6 +485,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3253892348827217649
+  Name: "Main Street Railing 01 - Post"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ts_urb_dtn_mst_railing_001_post_ref"
+  }
+}
+Assets {
   Id: 2819717477027926411
   Name: "Metal Basic Steel"
   PlatformAssetType: 2
@@ -545,6 +554,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_guard_sword_001"
+  }
+}
+Assets {
+  Id: 1629521079702819678
+  Name: "Long Banner Manticore"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_001"
   }
 }
 Assets {

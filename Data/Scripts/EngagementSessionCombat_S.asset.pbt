@@ -13,13 +13,11 @@ Assets {
       Overrides {
         Name: "cs:Object"
         ObjectReference {
-          SelfId: 6197921537724184668
         }
       }
       Overrides {
         Name: "cs:ProximityNetworkedObject"
         ObjectReference {
-          SelfId: 10950677861908347459
         }
       }
       Overrides {
@@ -37,10 +35,6 @@ Assets {
       Overrides {
         Name: "cs:DropTable"
         String: ""
-      }
-      Overrides {
-        Name: "cs:RequiredSlayerLevel"
-        Int: 0
       }
       Overrides {
         Name: "cs:RespawnTimeMin"

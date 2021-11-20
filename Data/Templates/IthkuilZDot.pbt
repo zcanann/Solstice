@@ -7,7 +7,7 @@ Assets {
       RootId: 18313047511276405457
       Objects {
         Id: 18313047511276405457
-        Name: "IthkuilC"
+        Name: "IthkuilZDot"
         Transform {
           Scale {
             X: 1
@@ -82,6 +82,10 @@ Assets {
             ObjectReference {
               SubObjectId: 18313047511276405457
             }
+          }
+          Overrides {
+            Name: "cs:ShadowSize"
+            Int: 4
           }
         }
         Collidable_v2 {

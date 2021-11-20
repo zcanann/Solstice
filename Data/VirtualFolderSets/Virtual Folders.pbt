@@ -209,11 +209,6 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Npcs"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Inventory"
       PlatformAssetType: 3
     }
@@ -264,6 +259,16 @@ Assets {
     Folders {
       VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Camera"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Rendering"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Entities"
+      VirtualFolderPath: "Npcs"
       PlatformAssetType: 3
     }
   }

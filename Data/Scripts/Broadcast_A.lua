@@ -65,9 +65,9 @@ Broadcast.LocalReliable = function(eventName, args)
         while not _G.frameworkEventsAPI[eventName] do
             retryCount = retryCount + 1
             if retryCount == retriesUntilWarn then
-                Logger.Warn("Reliable event may be stuck in a long or infinite loop: " .. EventKeys.ResolveMappedName(eventName))
+                Logger.Warn("Reliable local event listener not found after " .. tostring(retriesUntilWarn) .. " ticks: " .. EventKeys.ResolveMappedName(eventName))
             elseif retryCount >= retriesUntilGiveUp then
-                    Logger.Warn("Giving up on reliable event. Was a listener created for this event? Id: " .. EventKeys.ResolveMappedName(eventName))
+                    Logger.Warn("Giving up on reliable event after " .. tostring(retriesUntilGiveUp) .." ticks. Was a listener created for this event? Id: " .. EventKeys.ResolveMappedName(eventName))
                     return
             end
             Task.Wait()

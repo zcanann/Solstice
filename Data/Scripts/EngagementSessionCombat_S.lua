@@ -8,7 +8,6 @@ local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
 local propHealth = script:GetCustomProperty("Health")
 local propAttackSpeed = script:GetCustomProperty("AttackSpeed")
 local propDropTable = script:GetCustomProperty("DropTable")
-local propRequiredSlayerLevel = script:GetCustomProperty("RequiredSlayerLevel")
 local propRespawnTimeMin = script:GetCustomProperty("RespawnTimeMin")
 local propRespawnTimeMax = script:GetCustomProperty("RespawnTimeMax")
 
@@ -81,7 +80,7 @@ function Connect(player)
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
+    -- Set the engagement session on the PLAYERS proximity networked data -- not the npc
     Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,

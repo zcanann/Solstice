@@ -278,6 +278,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11184743765548718904
+  Name: "Rain Splash Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_rainsplash_volume"
+  }
+}
+Assets {
   Id: 11094331042828635919
   Name: "Pipe - 6-Sided"
   PlatformAssetType: 1
@@ -584,6 +593,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3704876582486151245
+  Name: "Hill 04"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hill_004"
+  }
+}
+Assets {
   Id: 3702191406046426907
   Name: "Emissive Glow Transparent"
   PlatformAssetType: 2
@@ -656,6 +674,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1629521079702819678
+  Name: "Long Banner Manticore"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_banner_001"
+  }
+}
+Assets {
   Id: 1166787965693692855
   Name: "Candle Group 01"
   PlatformAssetType: 1
@@ -671,6 +698,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_torch_fire"
+  }
+}
+Assets {
+  Id: 780714091443489219
+  Name: "Snow Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_snow_volume"
   }
 }
 Assets {

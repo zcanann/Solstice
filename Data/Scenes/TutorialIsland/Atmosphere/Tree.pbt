@@ -970,6 +970,14 @@ Objects {
       ObjectReference {
       }
     }
+    Overrides {
+      Name: "cs:RainFollowPlayer"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:LightningFollowPlayer"
+      Bool: true
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

@@ -1,6 +1,568 @@
 Name: "ColonistCharacterSelect"
 RootId: 5250854901689189847
 Objects {
+  Id: 5081948174700936444
+  Name: "Military Fence - End Pole Template"
+  Transform {
+    Location {
+      X: -23020
+      Y: -30780
+      Z: 1510
+    }
+    Rotation {
+      Yaw: -70
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5250854901689189847
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1248060139724767480
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Post"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -346
+            Y: -1815
+            Z: 1800
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -100.000008
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3881305476441143906
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -160
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 18306537597948337740
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12931028630842529862
+    }
+  }
+}
+Objects {
+  Id: 12790105480493895503
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: -348.308594
+      Y: -1725.30078
+      Z: 2470
+    }
+    Rotation {
+      Yaw: -174.999985
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5250854901689189847
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Prop_Cloth:color"
+      Color {
+        R: 0.0470588282
+        G: 0.188235313
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14044389538977049360
+  Name: "Military Fence - End Pole Template"
+  Transform {
+    Location {
+      X: -24153.9434
+      Y: -27127.7715
+      Z: 1800
+    }
+    Rotation {
+      Yaw: -59.9999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5250854901689189847
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1248060139724767480
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Post"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1105.84766
+            Y: -1256.52734
+            Z: 1800
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -70
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3881305476441143906
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -160
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 18306537597948337740
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12931028630842529862
+    }
+  }
+}
+Objects {
+  Id: 17905046862212306370
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: 1059
+      Y: -1180
+      Z: 2470
+    }
+    Rotation {
+      Yaw: -144.999985
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5250854901689189847
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Prop_Cloth:color"
+      Color {
+        R: 0.0470588282
+        G: 0.188235313
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7009983083834584231
+  Name: "Long Banner Manticore"
+  Transform {
+    Location {
+      X: -476
+      Y: 3455
+      Z: 2760
+    }
+    Rotation {
+      Yaw: -105.000015
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5250854901689189847
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Prop_Cloth:color"
+      Color {
+        R: 0.0470588282
+        G: 0.188235313
+        B: 1
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1629521079702819678
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14615736056869697253
+  Name: "Military Fence - End Pole Template"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5250854901689189847
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1248060139724767480
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Post"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -378.748047
+            Y: 3438.66602
+            Z: 2090
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -30.0000057
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 3881305476441143906
+      value {
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -160
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 18306537597948337740
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12931028630842529862
+    }
+  }
+}
+Objects {
+  Id: 4676613650505503258
+  Name: "Snow Volume VFX"
+  Transform {
+    Location {
+      X: -1050
+      Y: 3301
+      Z: 2685
+    }
+    Rotation {
+    }
+    Scale {
+      X: 14.4000006
+      Y: 14.4000006
+      Z: 14.4000006
+    }
+  }
+  ParentId: 5250854901689189847
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Particle Scale Multiplier"
+      Float: 0.5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 128
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 780714091443489219
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:medium"
+  }
+}
+Objects {
+  Id: 16791932538532292240
+  Name: "Hill 04"
+  Transform {
+    Location {
+      X: -1495
+      Y: 3075
+      Z: 2230
+    }
+    Rotation {
+      Yaw: 47.2499847
+    }
+    Scale {
+      X: 0.7
+      Y: 0.4
+      Z: 0.4
+    }
+  }
+  ParentId: 5250854901689189847
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13288065078351181156
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3704876582486151245
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9113528439266820683
+  Name: "Rain Splash Volume VFX"
+  Transform {
+    Location {
+      X: -1134
+      Y: 3359
+      Z: 2099
+    }
+    Rotation {
+    }
+    Scale {
+      X: 15
+      Y: 15
+      Z: 0.2
+    }
+  }
+  ParentId: 5250854901689189847
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Volume Type"
+      Enum {
+        Value: "mc:evfxvolumetype:3"
+      }
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 5
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11184743765548718904
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:medium"
+  }
+}
+Objects {
   Id: 6511774059072504288
   Name: "Hill 02"
   Transform {

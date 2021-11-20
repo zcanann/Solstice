@@ -83,6 +83,10 @@ Assets {
               SubObjectId: 11643890983463919648
             }
           }
+          Overrides {
+            Name: "cs:ShadowSize"
+            Int: 4
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

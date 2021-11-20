@@ -1,6 +1,108 @@
 Name: "Map"
 RootId: 9292959906759754007
 Objects {
+  Id: 9029967772623192400
+  Name: "Sharks"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8508168070675064633
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Sharks"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -710
+            Y: -11810
+            Z: -220
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14994156121394993613
+    }
+  }
+}
+Objects {
+  Id: 5779941895382745253
+  Name: "Sharks"
+  Transform {
+    Location {
+      X: -710
+      Y: -11810
+      Z: -220
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9292959906759754007
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 8508168070675064633
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Sharks"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 2920
+            Y: -11810
+            Z: -220
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -65.0000229
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 14994156121394993613
+    }
+  }
+}
+Objects {
   Id: 13812881826426423788
   Name: "Graveyard"
   Transform {

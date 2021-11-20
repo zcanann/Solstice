@@ -62,30 +62,12 @@ Assets {
   }
 }
 Assets {
-  Id: 13288065078351181156
-  Name: "Snow 01"
-  PlatformAssetType: 2
-  PrimaryAsset {
-    AssetType: "MaterialAssetRef"
-    AssetId: "mi_snow_001_uv"
-  }
-}
-Assets {
   Id: 11365603433795168021
   Name: "Text 01: E"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F1_Text_004"
-  }
-}
-Assets {
-  Id: 11184743765548718904
-  Name: "Rain Splash Volume VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_rainsplash_volume"
   }
 }
 Assets {
@@ -134,15 +116,6 @@ Assets {
   }
 }
 Assets {
-  Id: 5769497048988614934
-  Name: "Simple Sketch Line Post Process"
-  PlatformAssetType: 20
-  PrimaryAsset {
-    AssetType: "BlueprintAssetRef"
-    AssetId: "fxbp_ppm_sketchline_simple"
-  }
-}
-Assets {
   Id: 5246192216759043755
   Name: "Text 01: L"
   PlatformAssetType: 1
@@ -170,47 +143,11 @@ Assets {
   }
 }
 Assets {
-  Id: 3704876582486151245
-  Name: "Hill 04"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_hill_004"
-  }
-}
-Assets {
   Id: 3702191406046426907
   Name: "Emissive Glow Transparent"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_basic_emissive_001"
-  }
-}
-Assets {
-  Id: 3253892348827217649
-  Name: "Main Street Railing 01 - Post"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_ts_urb_dtn_mst_railing_001_post_ref"
-  }
-}
-Assets {
-  Id: 1629521079702819678
-  Name: "Long Banner Manticore"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_banner_001"
-  }
-}
-Assets {
-  Id: 780714091443489219
-  Name: "Snow Volume VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_snow_volume"
   }
 }
