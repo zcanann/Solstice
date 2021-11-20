@@ -261,5 +261,10 @@ Assets {
       VirtualFolderPath: "Floors"
       PlatformAssetType: 13
     }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Camera"
+      PlatformAssetType: 3
+    }
   }
 }
