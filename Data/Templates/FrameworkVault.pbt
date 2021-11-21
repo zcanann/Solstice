@@ -15,14 +15,14 @@ Assets {
             Z: 0.7
           }
         }
-        ParentId: 413991195585998862
+        ParentId: 17246289419149383775
         ChildIds: 16782290041448022303
-        ChildIds: 7574950682651609072
+        ChildIds: 10199391056636129730
         UnregisteredParameters {
           Overrides {
             Name: "cs:Interactable"
             ObjectReference {
-              SubObjectId: 3654440386138804639
+              SelfId: 841534158063459245
             }
           }
           Overrides {
@@ -945,8 +945,8 @@ Assets {
         }
       }
       Objects {
-        Id: 7574950682651609072
-        Name: "ClientContext"
+        Id: 10199391056636129730
+        Name: "Behavior"
         Transform {
           Location {
           }
@@ -959,7 +959,41 @@ Assets {
           }
         }
         ParentId: 11683714269302681208
-        ChildIds: 3654440386138804639
+        ChildIds: 7574950682651609072
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+          FilePartitionName: "Behavior_2"
+        }
+      }
+      Objects {
+        Id: 7574950682651609072
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.00000012
+            Y: 1.00000012
+            Z: 1.00000012
+          }
+        }
+        ParentId: 10199391056636129730
+        ChildIds: 4515638770218563128
+        ChildIds: 2179573772281131097
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -976,8 +1010,8 @@ Assets {
         }
       }
       Objects {
-        Id: 3654440386138804639
-        Name: "Interactable_C"
+        Id: 4515638770218563128
+        Name: "Searchable_C"
         Transform {
           Location {
           }
@@ -990,60 +1024,11 @@ Assets {
           }
         }
         ParentId: 7574950682651609072
-        ChildIds: 4515638770218563128
-        ChildIds: 2179573772281131097
         UnregisteredParameters {
           Overrides {
             Name: "cs:Object"
             ObjectReference {
               SubObjectId: 11683714269302681208
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 15316634444061490990
-          }
-        }
-      }
-      Objects {
-        Id: 4515638770218563128
-        Name: "Searchable_C"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3654440386138804639
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 11683714269302681208
-            }
-          }
-          Overrides {
-            Name: "cs:WalkableScript"
-            ObjectReference {
-              SubObjectId: 2179573772281131097
             }
           }
           Overrides {
@@ -1078,17 +1063,17 @@ Assets {
         Name: "Walkable_C"
         Transform {
           Location {
-            Y: 80
+            Y: 114.285706
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.4285717
+            Y: 1.4285717
+            Z: 1.4285717
           }
         }
-        ParentId: 3654440386138804639
+        ParentId: 7574950682651609072
         UnregisteredParameters {
           Overrides {
             Name: "cs:Object"

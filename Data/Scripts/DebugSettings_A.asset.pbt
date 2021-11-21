@@ -15,7 +15,7 @@ Assets {
         Bool: false
       }
       Overrides {
-        Name: "cs:ShowCombatObjects"
+        Name: "cs:ShowAgroRadius"
         Bool: false
       }
     }

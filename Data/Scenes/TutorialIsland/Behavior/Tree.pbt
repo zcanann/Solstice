@@ -15,6 +15,7 @@ Objects {
     }
   }
   ParentId: 2058956127506152909
+  ChildIds: 2862309105971316705
   ChildIds: 4999244393636055979
   ChildIds: 14460312518976504560
   Collidable_v2 {
@@ -132,6 +133,42 @@ Objects {
   }
 }
 Objects {
+  Id: 2862309105971316705
+  Name: "NpcData"
+  Transform {
+    Location {
+      X: 1167.40234
+      Y: -6175.02832
+      Z: 100
+    }
+    Rotation {
+      Yaw: 6.83018834e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15265514686607499560
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "NpcData_1"
+  }
+}
+Objects {
   Id: 12299963393686506760
   Name: "ClientContext"
   Transform {
@@ -148,8 +185,8 @@ Objects {
   ParentId: 2058956127506152909
   ChildIds: 9287987596664656546
   ChildIds: 14589941801162997866
-  ChildIds: 2992005490681078043
   ChildIds: 15594024896408941852
+  ChildIds: 1711748866163091919
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -166,44 +203,13 @@ Objects {
   }
 }
 Objects {
-  Id: 15594024896408941852
-  Name: "QuestVisuals"
+  Id: 1711748866163091919
+  Name: "EntityVisuals_C"
   Transform {
     Location {
     }
     Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12299963393686506760
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "QuestVisuals"
-  }
-}
-Objects {
-  Id: 2992005490681078043
-  Name: "CombatPlaceholder_C"
-  Transform {
-    Location {
-    }
-    Rotation {
+      Yaw: 6.83018834e-06
     }
     Scale {
       X: 1
@@ -239,6 +245,38 @@ Objects {
   }
 }
 Objects {
+  Id: 15594024896408941852
+  Name: "QuestVisuals"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12299963393686506760
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "QuestVisuals"
+  }
+}
+Objects {
   Id: 14589941801162997866
   Name: "Walkable_C"
   Transform {
@@ -271,6 +309,12 @@ Objects {
     Overrides {
       Name: "cs:Object:ml"
       Bool: false
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 13343148381217680232
+      }
     }
   }
   Collidable_v2 {

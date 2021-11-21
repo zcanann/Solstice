@@ -2,11 +2,7 @@ local DataBase = { }
 
 -- We can't access the full Framework, but we can expose the Framework.Dump() function for debugging
 local Framework = { }
-Framework.TableUtils = require(script:GetCustomProperty("TableUtils"))
-Framework.Logger = require(script:GetCustomProperty("Logger"))
-Framework.Dump = function (object)
-    Framework.Logger.Print(Framework.TableUtils.Serialize(object))
-end
+Framework.Dump = require(script:GetCustomProperty("Dump")).Dump
 
 DataBase.CharacterLimit = 3
 DataBase.Keys = require(script:GetCustomProperty("DataBaseKeys"))

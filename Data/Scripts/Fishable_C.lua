@@ -1,6 +1,7 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
+local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 
 local name = propObject:GetCustomProperty("Name")
 

@@ -1,12 +1,12 @@
 -- IMPORTANT: The location of this script in world space is used as the move position
 
 local Framework = require(script:GetCustomProperty("Framework"))
+
 local propObject = script:GetCustomProperty("Object"):WaitForObject()
+local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local propStopRadius = script:GetCustomProperty("StopRadius")
 
-local npcId = propObject:GetCustomProperty("Id")
-local npcData = Framework.Npcs.GetNpcData(npcId)
-local npcName = (npcData and npcData.Name) or "unknown"
+local name = "unknown"
 
 -- TODO: Take a source and StopRadius param, which
 function GetWalkableDestination()
@@ -15,7 +15,7 @@ end
 
 function Interact(callback)
     if propObject then
-        Chat.LocalMessage("Walking to " .. npcName .. "...") 
+        Chat.LocalMessage("Walking to " .. name .. "...") 
     end
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, { GetWalkableDestination(), propStopRadius, callback })
 end
@@ -32,5 +32,10 @@ function ShowOption()
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", callback })
 end
 
+function OnNameChanged(newName)
+    name = newName or "unknown"
+end
+
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.NAME, OnNameChanged)
 Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. propObject.id, WalkForInteraction)
 Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. propObject.id, ShowOption)

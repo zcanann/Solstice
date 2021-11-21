@@ -1,8 +1,8 @@
-Name: "NpcData"
-RootId: 4260030699368645840
+Name: "DebugSettings"
+RootId: 6129140458494625219
 Objects {
-  Id: 8632773822538849860
-  Name: "NpcOffensiveStats_S"
+  Id: 13598552187394565023
+  Name: "ServerContext"
   Transform {
     Location {
     }
@@ -14,19 +14,47 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4260030699368645840
+  ParentId: 6129140458494625219
+  ChildIds: 12501507145438915986
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+    Type: Server
+  }
+}
+Objects {
+  Id: 12501507145438915986
+  Name: "DebugSettings_A"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13598552187394565023
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 2391379352691100431
-      }
+      Name: "cs:ServerShowProximityObjects"
+      Bool: true
     }
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 6436537466240953329
-      }
+      Name: "cs:ShowAgroRadius"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -43,13 +71,13 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 11874967471006849858
+      Id: 11300382029977244970
     }
   }
 }
 Objects {
-  Id: 2765694007078261578
-  Name: "NpcDefensiveStats_S"
+  Id: 3574302725514614241
+  Name: "Client"
   Transform {
     Location {
     }
@@ -61,42 +89,26 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4260030699368645840
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 2391379352691100431
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 6436537466240953329
-      }
-    }
-  }
+  ParentId: 6129140458494625219
+  ChildIds: 5336517008004073883
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Script {
-    ScriptAsset {
-      Id: 9212125225912631800
-    }
+  NetworkContext {
   }
 }
 Objects {
-  Id: 12190441551376010463
-  Name: "NpcStats_S"
+  Id: 5336517008004073883
+  Name: "DebugSettings_A"
   Transform {
     Location {
     }
@@ -108,19 +120,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4260030699368645840
+  ParentId: 3574302725514614241
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 2391379352691100431
-      }
+      Name: "cs:ServerShowProximityObjects"
+      Bool: true
     }
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 6436537466240953329
-      }
+      Name: "cs:ShowAgroRadius"
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -137,62 +145,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 7867712670032685259
-    }
-  }
-}
-Objects {
-  Id: 17298820655211147562
-  Name: "NpcNameFaction_S"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4260030699368645840
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Name"
-      String: "Frail Skeleton"
-    }
-    Overrides {
-      Name: "cs:Race"
-      String: "Undead"
-    }
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 2391379352691100431
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 6436537466240953329
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4891227166975548473
+      Id: 11300382029977244970
     }
   }
 }

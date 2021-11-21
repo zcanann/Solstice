@@ -23,18 +23,6 @@ Assets {
             Name: "cs:Interactable"
             Bool: true
           }
-          Overrides {
-            Name: "cs:Name"
-            String: "Copper Vein"
-          }
-          Overrides {
-            Name: "cs:Name:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Name:ml"
-            Bool: false
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1912,6 +1900,12 @@ Assets {
               SubObjectId: 18361376657929626207
             }
           }
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 11237173423235480384
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1964,6 +1958,12 @@ Assets {
           Overrides {
             Name: "cs:Object:ml"
             Bool: false
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 11237173423235480384
+            }
           }
         }
         Collidable_v2 {

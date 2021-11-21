@@ -11,15 +11,9 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Logger"
+        Name: "cs:Dump"
         AssetReference {
-          Id: 4739618440715284858
-        }
-      }
-      Overrides {
-        Name: "cs:TableUtils"
-        AssetReference {
-          Id: 11279245430205585369
+          Id: 10375159350874936932
         }
       }
     }

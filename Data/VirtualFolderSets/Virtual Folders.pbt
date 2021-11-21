@@ -271,5 +271,14 @@ Assets {
       VirtualFolderPath: "Npcs"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Combat"
+      PlatformAssetType: 5
+    }
   }
 }

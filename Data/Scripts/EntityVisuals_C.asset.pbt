@@ -1,6 +1,6 @@
 Assets {
   Id: 15922954283188355462
-  Name: "CombatPlaceholder_C"
+  Name: "EntityVisuals_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -15,9 +15,15 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:RadiusDecalTemplate"
+        AssetReference {
+          Id: 9352932352998584318
+        }
+      }
     }
   }
   SerializationVersion: 101
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Engagement"
+  VirtualFolderPath: "Entities"
 }

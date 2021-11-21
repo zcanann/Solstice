@@ -22,11 +22,19 @@ Assets {
       }
       Overrides {
         Name: "cs:Health"
-        Int: 0
+        Int: 100
       }
       Overrides {
         Name: "cs:Mana"
-        Int: 0
+        Int: 100
+      }
+      Overrides {
+        Name: "cs:Rage"
+        Int: 100
+      }
+      Overrides {
+        Name: "cs:Stamina"
+        Float: 100
       }
       Overrides {
         Name: "cs:Experience"
@@ -38,7 +46,7 @@ Assets {
       }
       Overrides {
         Name: "cs:MeleeRadius"
-        Float: 300
+        Float: 200
       }
     }
   }

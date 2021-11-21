@@ -14,6 +14,12 @@ Assets {
         Name: "cs:ServerShowProximityObjects"
         Bool: false
       }
+      Overrides {
+        Name: "cs:Dump"
+        AssetReference {
+          Id: 10375159350874936932
+        }
+      }
     }
   }
   SerializationVersion: 101

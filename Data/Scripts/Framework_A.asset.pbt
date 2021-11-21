@@ -59,12 +59,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Npcs"
-        AssetReference {
-          Id: 15346792771177711810
-        }
-      }
-      Overrides {
         Name: "cs:Quests"
         AssetReference {
           Id: 15393841025312082707

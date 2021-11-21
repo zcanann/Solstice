@@ -797,6 +797,12 @@ Assets {
               SubObjectId: 7766009470731821977
             }
           }
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 14339239779283366160
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -849,6 +855,12 @@ Assets {
           Overrides {
             Name: "cs:Object:ml"
             Bool: false
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 14339239779283366160
+            }
           }
         }
         Collidable_v2 {

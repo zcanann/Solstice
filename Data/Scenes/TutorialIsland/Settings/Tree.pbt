@@ -1,8 +1,8 @@
 Name: "Settings"
 RootId: 2654916338316290302
 Objects {
-  Id: 5336517008004073883
-  Name: "DebugSettings_A"
+  Id: 6129140458494625219
+  Name: "DebugSettings"
   Transform {
     Location {
     }
@@ -15,16 +15,6 @@ Objects {
     }
   }
   ParentId: 2654916338316290302
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ServerShowProximityObjects"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ShowCombatObjects"
-      Bool: true
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -37,10 +27,9 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Script {
-    ScriptAsset {
-      Id: 11300382029977244970
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "DebugSettings"
   }
 }
 Objects {

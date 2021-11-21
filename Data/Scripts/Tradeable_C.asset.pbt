@@ -9,6 +9,11 @@ Assets {
         ObjectReference {
         }
       }
+      Overrides {
+        Name: "cs:ProximityNetworkedObject"
+        ObjectReference {
+        }
+      }
     }
   }
   SerializationVersion: 101

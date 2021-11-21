@@ -1,17 +1,9 @@
 Name: "NPCs"
 RootId: 11394908061270319408
 Objects {
-  Id: 2391379352691100431
-  Name: "FrameworkNPC_FrailSkeleton"
+  Id: 14678979447342944233
+  Name: "FrameworkNPC_LostSoul"
   Transform {
-    Location {
-      X: 13315
-      Y: -1470
-      Z: 25
-    }
-    Rotation {
-      Yaw: -90
-    }
     Scale {
       X: 1
       Y: 1
@@ -19,164 +11,85 @@ Objects {
     }
   }
   ParentId: 11394908061270319408
-  ChildIds: 1605629393520568911
-  ChildIds: 10078158766584452083
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Interactable"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Name"
-      String: "Frail Skeleton"
-    }
-    Overrides {
-      Name: "cs:Name:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Name:ml"
-      Bool: false
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 2391379352691100431
-    SubobjectId: 12010013605090414695
-    InstanceId: 2260414936239030628
-    TemplateId: 10306104113743518505
-    WasRoot: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11348517016719245190
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkNPC_LostSoul"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 16145
+            Y: -1325
+            Z: -85
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -84.9999695
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 17256152977790581857
+    }
   }
 }
 Objects {
-  Id: 10078158766584452083
-  Name: "Behavior"
+  Id: 2260414936239030628
+  Name: "FrameworkNPC_FrailSkeleton"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 2391379352691100431
+  ParentId: 11394908061270319408
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Behavior_1"
-  }
-  InstanceHistory {
-    SelfId: 10078158766584452083
-    SubobjectId: 891450374167185563
-    InstanceId: 2260414936239030628
-    TemplateId: 10306104113743518505
-  }
-}
-Objects {
-  Id: 1605629393520568911
-  Name: "Model"
-  Transform {
-    Location {
-      X: 4
-      Y: 3
-      Z: -18
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12010013605090414695
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkNPC_FrailSkeleton"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 13315
+            Y: -1470
+            Z: -105
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -90
+          }
+        }
+      }
     }
-    Rotation {
+    TemplateAsset {
+      Id: 10306104113743518505
     }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2391379352691100431
-  ChildIds: 16414371528892611426
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 1605629393520568911
-    SubobjectId: 10505655522091774247
-    InstanceId: 2260414936239030628
-    TemplateId: 10306104113743518505
-  }
-}
-Objects {
-  Id: 16414371528892611426
-  Name: "Base"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1605629393520568911
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Base_1"
-  }
-  InstanceHistory {
-    SelfId: 16414371528892611426
-    SubobjectId: 7226112000243490826
-    InstanceId: 2260414936239030628
-    TemplateId: 10306104113743518505
   }
 }
 Objects {
@@ -571,10 +484,10 @@ Objects {
     Location {
       X: 19490.0293
       Y: -302.596924
-      Z: -75
+      Z: -90
     }
     Rotation {
-      Yaw: -90.0000076
+      Yaw: -90
     }
     Scale {
       X: 1
@@ -656,9 +569,6 @@ Objects {
   Name: "Model"
   Transform {
     Location {
-      X: 4
-      Y: 3
-      Z: -18
     }
     Rotation {
     }
@@ -722,14 +632,6 @@ Objects {
   Id: 9248156909213147020
   Name: "FrameworkNPC_LostSoul"
   Transform {
-    Location {
-      X: -1670
-      Y: 3750
-      Z: 50
-    }
-    Rotation {
-      Yaw: 44.9999924
-    }
     Scale {
       X: 1
       Y: 1
@@ -737,6 +639,12 @@ Objects {
     }
   }
   ParentId: 11394908061270319408
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 11348517016719245190
@@ -756,14 +664,6 @@ Objects {
           Name: "Rotation"
           Rotator {
             Yaw: -84.9999847
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
