@@ -229,7 +229,9 @@ function OnPlayerEnteredRange(player)
 	nameplates[player].backgroundPiece:SetColor(BACKGROUND_COLOR)
 	nameplates[player].healthText:SetPosition(Vector3.New(50.0 * NAMEPLATE_LAYER_THICKNESS, 0.0, 0.0))		-- Text must be 50 units ahead as it doesn't have thickness
 	nameplates[player].healthText:SetColor(HEALTH_NUMBER_COLOR)
-	nameplates[player].nameText.text = player.name
+	nameplates[player].nameText.text = Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.NAME)
+	-- TODO: Maybe list their Core name as a sub-name, or something?
+	-- nameplates[player].nameText.text = player.name
 	nameplates[player].chatText.text = ""
 
 	nameplates[player].borderPiece.visibility = Visibility.FORCE_OFF

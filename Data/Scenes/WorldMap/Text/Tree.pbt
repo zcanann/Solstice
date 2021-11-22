@@ -84,7 +84,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Deadman\'s<br>Pass"
+    Text: "Deadman\'s<br>Pass<br>(Closed)"
     FontAsset {
     }
     Color {
@@ -136,7 +136,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Verdan"
+    Text: "Name<br>Me"
     FontAsset {
     }
     Color {
@@ -157,7 +157,7 @@ Objects {
 }
 Objects {
   Id: 12285242112478581070
-  Name: "TutorialIsland"
+  Name: "Vernal Forest"
   Transform {
     Location {
       X: -61944.9688
@@ -188,7 +188,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Text {
-    Text: "Tutorial<br>Island"
+    Text: "Vernal<br>Forest"
     FontAsset {
     }
     Color {

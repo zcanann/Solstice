@@ -21,6 +21,12 @@ Assets {
           Id: 9352932352998584318
         }
       }
+      Overrides {
+        Name: "cs:NameplateTemplate"
+        AssetReference {
+          Id: 5049470299132475441
+        }
+      }
     }
   }
   SerializationVersion: 101

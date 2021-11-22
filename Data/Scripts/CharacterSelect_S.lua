@@ -59,7 +59,7 @@ end
 
 function OnEnterWorldRequested(player, characterId)
     if Framework.DataBase.SetActiveCharacterId(player, characterId) then
-        player:TransferToScene("TutorialIsland")
+        player:TransferToScene("Vernal")
     end
 end
 

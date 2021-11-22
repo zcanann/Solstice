@@ -2,7 +2,7 @@ local EntityKeys = { }
 
 EntityKeys.NAME = "name"
 EntityKeys.FACTION = "faction"
-EntityKeys.CLASS = "class"
+EntityKeys.ATTUNEMENT = "attunement"
 EntityKeys.RACE = "race"
 EntityKeys.ZONE = "zone"
 

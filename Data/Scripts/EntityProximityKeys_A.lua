@@ -2,7 +2,7 @@ local EntityProximityKeys = { }
 
 -- Move to player?
 EntityProximityKeys.GUILD = "guild"
-EntityProximityKeys.CLASS = "class"
+EntityProximityKeys.ATTUNEMENT = "attunement"
 
 -- Faction
 EntityProximityKeys.NAME = "name"

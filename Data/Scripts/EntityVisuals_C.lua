@@ -2,8 +2,11 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local propRadiusDecalTemplate = script:GetCustomProperty("RadiusDecalTemplate")
+local propNameplateTemplate = script:GetCustomProperty("NameplateTemplate")
+
 local defaultDecalSize = 256.0
 
+local nameplate = nil
 local meleeRangeDecal = nil
 local debugAgroRangeDecal = nil
 
@@ -28,6 +31,14 @@ function OnAgroRadiusChanged(value)
     end
 end
 
+function OnNameplateDataChanged(value)
+    if value then
+        CreateNameplate()
+    else
+        DestroyNameplate()
+    end
+end
+
 function DestroyRadiusDecal(decal)
     if Object.IsValid(decal) then
         decal:Destroy()
@@ -35,22 +46,32 @@ function DestroyRadiusDecal(decal)
 end
 
 function CreateRadiusDecal(scale)
-    local decal = World.SpawnAsset(propRadiusDecalTemplate, { parent = script })
+    nameplate = World.SpawnAsset(propNameplateTemplate, { parent = script })
+
+    return nameplate
+end
+
+function CreateNameplate()
+    if Object.IsValid(nameplate) then
+        return
+    end
+
+    local nameplate = World.SpawnAsset(propRadiusDecalTemplate, { parent = script })
     decal:SetScale(Vector3.New(scale, scale, decal:GetScale().z))
 
     decal:SetSmartProperty("Stroke Width", decal:GetSmartProperty("Stroke Width") / scale)
     decal:SetSmartProperty("Color", Color.New(1.0, 0.0, 0.0, 0.0))
     decal:SetSmartProperty("Stroke Color", Color.New(1.0, 0.0, 0.0))
-
-    return decal
 end
 
--- Runtime combat (move these?)
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, OnNetworkDataChanged)
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)
+function DestroyNameplate()
+    if Object.IsValid(nameplate) then
+        nameplate:Destroy()
+    end
+end
 
 -- For nameplates
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.NAME, OnNetworkDataChanged)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.NAME, OnNameplateDataChanged)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.FACTION, OnNetworkDataChanged)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.RACE, OnNetworkDataChanged)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.TITLE, OnNetworkDataChanged)

@@ -135,12 +135,12 @@ function CheckForPlayerAutoAttack(player, deltaSeconds)
     -- TODO: offhand timer as well (shouldn't tick if not equipped)
 
     if duration > playerAttackSpeedBase then
-        -- Remove the resource that was extracted
-        SetEnemyHealth(GetEnemyHealth() - playerDamageBase)
-
         -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, playerAttackSpeedBase)
         Framework.Skills.AddSkillExp(player, propWeaponSkill, exp)
+
+        -- Apply damage
+        SetEnemyHealth(GetEnemyHealth() - playerDamageBase)
     else
         player.serverUserData.engagement.duration = duration
     end
@@ -166,13 +166,11 @@ function SetEnemyHealth(newHealth)
     if not isAlive then return end
 
     health = CoreMath.Clamp(newHealth, 0, propHealth)
-    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, { GetEnemyHealth() })
+    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, GetEnemyHealth())
 
     if health <= 0 then
         isAlive = false
-        -- TODO: Death anim event or something idk
-        Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE,
-            { isAlive = isAlive })
+        Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, isAlive)
         DisconnectAllPlayers()
     end
 end

@@ -164,7 +164,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           AnimatedMesh {
-            AnimationStance: "unarmed_idle_relaxed"
+            AnimationStance: "unarmed_death"
             AnimationStancePlaybackRate: 1
             AnimationStanceShouldLoop: true
             AnimationPlaybackRateMultiplier: 1
@@ -366,6 +366,7 @@ Assets {
         ParentId: 9377427379436174445
         ChildIds: 10159321667435830933
         ChildIds: 1191209439160521628
+        ChildIds: 4454967224019093893
         ChildIds: 8564753907370798047
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -485,6 +486,53 @@ Assets {
         Script {
           ScriptAsset {
             Id: 13256092117753200766
+          }
+        }
+      }
+      Objects {
+        Id: 4454967224019093893
+        Name: "NpcHumanoidAnimations_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4848759869157782196
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 7023974313349407438
+            }
+          }
+          Overrides {
+            Name: "cs:HumanoidRig"
+            ObjectReference {
+              SubObjectId: 10655239108442292697
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 16576816505681894369
           }
         }
       }
@@ -621,7 +669,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
-            String: "Frail Skeleton"
+            String: "Lost Soul"
           }
           Overrides {
             Name: "cs:Race"

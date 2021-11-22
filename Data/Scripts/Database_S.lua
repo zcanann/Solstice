@@ -2,10 +2,11 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 function CreateTestingCharacter(player)
     local initialData = {
+		-- TODO: Reference the appropriate keys
         [ Framework.Entities.Keys.NAME ] = "Generated",
         [ Framework.Entities.Keys.RACE ] = "Ithkuil",
         [ Framework.Entities.Keys.FACTION ] = "Ithkuil",
-        [ Framework.Entities.Keys.CLASS ] = "Druid",
+        [ Framework.Entities.Keys.ATTUNEMENT ] = "Mage",
     }
     local characterId = Framework.DataBase.CreateNewCharacter(player, initialData)
 	Framework.DataBase.SetActiveCharacterId(player, characterId)
