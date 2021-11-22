@@ -13,6 +13,10 @@ function OnEngagementDataChanged(player, engagementData)
 end
 
 function OnPlayerEnteredRange(player)
+    if not Framework.IsAPlayer(player) then
+        return
+    end
+
     if not player.clientUserData.animationSet then
         -- Spawn client-side animaton sets (which are just several 'abilities' inside a template)
         player.clientUserData.animationSet = World.SpawnAsset(propPlayerAnimationsTemplate)
@@ -21,6 +25,10 @@ function OnPlayerEnteredRange(player)
 end
 
 function OnPlayerLeftRange(player)
+    if not Framework.IsAPlayer(player) then
+        return
+    end
+
     OnEngagementSessionDisconnected(player)
     if player.clientUserData.animationSet then
         player.clientUserData.animationSet:Destroy()
@@ -98,5 +106,5 @@ end
 
 Framework.Events.ListenForPlayerProximityDataEvent(Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnPlayerEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, OnPlayerLeftRange)

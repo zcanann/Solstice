@@ -307,7 +307,7 @@ function OnMouseDown(cursorPosition, primary)
 
 	if minimapClickCoords.size < minimapMouseHitTestDistance then
 		-- Framework.Print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
 
 		local localPlayer = Game.GetLocalPlayer()
 		local pos = localPlayer:GetWorldPosition()
@@ -322,7 +322,7 @@ function OnMouseDown(cursorPosition, primary)
 			pos.z
 		)
 
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { worldCoords })
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { worldCoords })
 	end
 end
 

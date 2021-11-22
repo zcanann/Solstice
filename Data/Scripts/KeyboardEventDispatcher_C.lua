@@ -11,19 +11,19 @@ local skillsTabBinding = "ability_extra_33"
 
 function OnBindingPressed(player, binding)
     if binding == inventoryTabBinding or binding == inventoryTabBindingAlt then
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_TOGGLE_INVENTORY_TAB)
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_INVENTORY_TAB)
     end
     if binding == soulTabBinding then
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_TOGGLE_SOUL_TAB)
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_SOUL_TAB)
     end
     if binding == skillsTabBinding then
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_TOGGLE_SKILLS_TAB)
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_SKILLS_TAB)
     end
     if binding == combatTabBinding then
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_TOGGLE_COMBAT_TAB)
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_COMBAT_TAB)
     end
     if binding == equipmentTabBinding then
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_TOGGLE_EQUIPMENT_TAB)
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_EQUIPMENT_TAB)
     end
 end
 

@@ -12,6 +12,11 @@ EventsAPI.Listen = function (key, callback)
         _G.frameworkEventsAPI = { }
     end
 
+    if key == nil or callback == nil then
+        warn(CoreDebug.GetStackTrace())
+        return
+    end
+
     _G.frameworkEventsAPI[key] = Events.Connect(key, callback)
     local wrapper = { }
 

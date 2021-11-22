@@ -15,7 +15,7 @@ local CLICK_VFX = script:GetCustomProperty("MovementVFX")
 function ClearWayPoints()
 	remainingWayPoints = { }
 	goalRachedCallback = nil
-	Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, nil })
+	Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, nil })
 end
 
 function DestroyIfValid(object)
@@ -47,7 +47,7 @@ function BeginMoveToGoal(goal, callback, enforceNavmeshGoal)
 	-- NavMesh can be nil on client start for a couple frames
 	if not _G.NavMesh then return end
 
-	Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
+	Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 	goalRachedCallback = callback
 	DestroyIfValid(goalPulse)
 	-- local pulseRot = goalTransform:GetRotation() + Rotation.New(0, -90, 0)
@@ -72,8 +72,8 @@ function BeginMoveToGoal(goal, callback, enforceNavmeshGoal)
 	UpdateWaypointProgress(localPlayer)
 
 	if #remainingWayPoints >= 1 then
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, { localPlayer })
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, goal })
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, { localPlayer })
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_WAYPOINTS_SET, { remainingWayPoints, goal })
 	end
 end
 

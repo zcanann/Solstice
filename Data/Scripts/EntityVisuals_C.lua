@@ -31,14 +31,6 @@ function OnAgroRadiusChanged(value)
     end
 end
 
-function OnNameplateDataChanged(value)
-    if value then
-        CreateNameplate()
-    else
-        DestroyNameplate()
-    end
-end
-
 function DestroyRadiusDecal(decal)
     if Object.IsValid(decal) then
         decal:Destroy()
@@ -51,27 +43,8 @@ function CreateRadiusDecal(scale)
     return nameplate
 end
 
-function CreateNameplate()
-    if Object.IsValid(nameplate) then
-        return
-    end
-
-    local nameplate = World.SpawnAsset(propRadiusDecalTemplate, { parent = script })
-    decal:SetScale(Vector3.New(scale, scale, decal:GetScale().z))
-
-    decal:SetSmartProperty("Stroke Width", decal:GetSmartProperty("Stroke Width") / scale)
-    decal:SetSmartProperty("Color", Color.New(1.0, 0.0, 0.0, 0.0))
-    decal:SetSmartProperty("Stroke Color", Color.New(1.0, 0.0, 0.0))
-end
-
-function DestroyNameplate()
-    if Object.IsValid(nameplate) then
-        nameplate:Destroy()
-    end
-end
-
 -- For nameplates
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.NAME, OnNameplateDataChanged)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.NAME, OnNetworkDataChanged)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.FACTION, OnNetworkDataChanged)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.RACE, OnNetworkDataChanged)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.TITLE, OnNetworkDataChanged)

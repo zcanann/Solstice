@@ -18,7 +18,7 @@ function Interact()
         BeginMine()
     end
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. propObject.id, { callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. propObject.id, { callback })
 end
 
 function ShowOption()
@@ -26,7 +26,7 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Chop " .. name, callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Chop " .. name, callback })
 end
 
 Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. propObject.id, Interact)

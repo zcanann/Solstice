@@ -208,13 +208,13 @@ function OnFinalizeNewCharacterPressed()
     selectedEntry = nil
     lastLoggedInCharacterId = nil
     local name = propCharacterNameTextBox.text
-    local attunement = "Mage"
+    local class = "Mage"
 
     local initialData = {
         [ Framework.Entities.Keys.NAME ] = name,
         [ Framework.Entities.Keys.RACE ] = activeFaction,
         [ Framework.Entities.Keys.FACTION ] = activeFaction,
-        [ Framework.Entities.Keys.ATTUNEMENT ] = attunement,
+        [ Framework.Entities.Keys.CLASS ] = class,
     }
     SetCharacterSelectState(CharacterSelectState.CHARACTER_CREATE_PENDING)
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, initialData)

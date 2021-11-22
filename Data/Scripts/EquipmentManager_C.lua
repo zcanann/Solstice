@@ -15,6 +15,10 @@ function OnPlayerEquipmentChanged(player, data)
 end
 
 function OnPlayerEnteredRange(player)
+    if not Framework.IsAPlayer(player) then
+        return
+    end
+
     if not player.clientUserData.equipmentWeapon then
         player.clientUserData.equipmentWeapon = World.SpawnAsset(propDebugItemTemplate, { parent = script })
         player.clientUserData.equipmentWeapon:Equip(player)
@@ -22,6 +26,10 @@ function OnPlayerEnteredRange(player)
 end
 
 function OnPlayerLeftRange(player)
+    if not Framework.IsAPlayer(player) then
+        return
+    end
+
     if player.clientUserData.equipmentWeapon then
         player.clientUserData.equipmentWeapon:Destroy()
         player.clientUserData.equipmentWeapon = nil
@@ -29,5 +37,5 @@ function OnPlayerLeftRange(player)
 end
 
 Framework.Events.ListenForPlayerProximityDataEvent("TODO_EQUIPMENT_KEY", OnPlayerEquipmentChanged)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnPlayerEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, OnPlayerLeftRange)

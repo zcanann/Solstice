@@ -20,7 +20,7 @@ local isHovering = false
 local playerDataLoaded = false
 
 function OnClick(button)
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUMED_MOUSE_INPUT_CANCEL_GAME_MENUS)
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_UI_CONSUMED_MOUSE_INPUT_CANCEL_GAME_MENUS)
 end
 
 function OnHover(button)

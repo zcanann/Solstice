@@ -9,7 +9,7 @@ function OnMouseDown(cursorPosition, primary)
 		cursorPosition.y >= boundsY and
 		cursorPosition.y <= boundsY + propBounds.height then
 
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
 	end
 end
 

@@ -2,8 +2,8 @@ local NetworkingEvents = { }
 
 NetworkingEvents.EVENT_NETWORKED_KEY_CHANGED_PREFIX = "event_networked_key_changed_"
 NetworkingEvents.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX = "event_networked_key_changed_player_"
-NetworkingEvents.EVENT_OTHER_PLAYER_ENTERED_RANGE = "event_player_entered_range"
-NetworkingEvents.EVENT_OTHER_PLAYER_LEFT_RANGE = "event_player_left_range"
+NetworkingEvents.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE = "event_proximity_object_entered_range"
+NetworkingEvents.EVENT_PROXIMITY_OBJECT_LEFT_RANGE = "event_proximity_object_left_range"
 
 NetworkingEvents.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA = "event_client_ready_to_receive_proximity_data"
 NetworkingEvents.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK = "event_client_ready_to_receive_proximity_data_ack"

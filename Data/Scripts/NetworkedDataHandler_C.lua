@@ -1,9 +1,19 @@
-local Framework = require(script:GetCustomProperty("Framework"))
-local localPlayer = Game.GetLocalPlayer()
 
+-- This class is responsible for forwarding important networking events to the correct place.
+-- This includes tracking proximity networked objects that have entered/left the player's range,
+-- and updates to a particular peice of data on a proximity networked object.
+
+-- Note: This assumes that if the data is nil, the object has left the player's range, and if the data is set (if previously nil), it has entered.
+-- This is not necessarily true, and can cause issues if we are trying to detect whether an object with no data enters/exits range.
+-- This is potentially a point for future improvement, but the workaround is to always make sure that there is some networked data on the object.
+
+local Framework = require(script:GetCustomProperty("Framework"))
+
+local objectsInRange = { }
 local playersInRange = { }
 local retryCountMax = 1024
 local networkedDataCache = { }
+local localPlayer = Game.GetLocalPlayer()
 
 function OnPrivateNetworkedDataChanged(player, key)
     local keyIsObject = string.match(key, '.+:.+') ~= nil
@@ -62,31 +72,45 @@ function ForwardDataToPlayer(key, subKey, data, retryCount)
         return
     end
 
-    -- Broadcast entered/left proximity networking range events for players
+    -- Broadcast entered/left proximity networking range events
     if data == nil and playersInRange[key] then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, { keyAsPlayer })
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, { keyAsPlayer })
         playersInRange[key] = nil
     elseif data ~= nil and not playersInRange[key] then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, { keyAsPlayer })
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { keyAsPlayer })
         playersInRange[key] = keyAsPlayer
     end
 
+    -- Forward the player data changed event
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX .. subKey, { keyAsPlayer, data })
 end
 
 function ForwardDataToObject(key, subKey, data)
-    -- For keys referncing a ProximityObject, forward the event. We forgo a client-side entered/left even, instead just sending nil
+    -- Broadcast entered/left proximity networking range events
+    if data == nil and objectsInRange[key] then
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, { key })
+        objectsInRange[key] = nil
+    elseif data ~= nil and not objectsInRange[key] then
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { key })
+        objectsInRange[key] = key
+    end
+
+    -- Forward the object data changed event
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. key .. subKey, { data })
 end
 
-function Refresh()
+function OnReadyToReceiveProximityData()
     for _, key in ipairs(localPlayer:GetPrivateNetworkedDataKeys()) do
         OnPrivateNetworkedDataChanged(localPlayer, key)
     end
 end
 
 localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK, Refresh)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK, OnReadyToReceiveProximityData)
+
+-- We are always in range of ourselves
+playersInRange[localPlayer.id] = localPlayer
+Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { localPlayer })
 
 -- Needs a delay for preview mode, in order for the server to have a listener ready
 Task.Spawn(function ()

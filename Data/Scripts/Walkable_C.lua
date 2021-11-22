@@ -17,7 +17,7 @@ function Interact(callback)
     if propObject then
         Chat.LocalMessage("Walking to " .. name .. "...") 
     end
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, { GetWalkableDestination(), propStopRadius, callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, { GetWalkableDestination(), propStopRadius, callback })
 end
 
 function WalkForInteraction(callback)
@@ -29,7 +29,7 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", callback })
 end
 
 function OnNameChanged(newName)

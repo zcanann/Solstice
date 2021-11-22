@@ -262,5 +262,3 @@ end
 Chat.receiveMessageHook:Connect(PlayerChatHandler)
 
 Framework.Events.ListenForPlayerProximityDataEvent("TODO_HEALTH_KEY", OnEntityHealthChanged)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_ENTERED_RANGE, OnPlayerEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_OTHER_PLAYER_LEFT_RANGE, OnPlayerLeftRange)
