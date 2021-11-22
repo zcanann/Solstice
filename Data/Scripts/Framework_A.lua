@@ -28,7 +28,7 @@ Framework.Dump = function (object)
     Framework.Print(Framework.Utils.Table.Serialize(object))
 end
 
-Framework.IsAPlayer = function (object)
+Framework.IsPlayer = function (object)
     return object and type(object) == "userdata"
 end
 

@@ -15,7 +15,7 @@ function OnPlayerEquipmentChanged(player, data)
 end
 
 function OnPlayerEnteredRange(player)
-    if not Framework.IsAPlayer(player) then
+    if not Framework.IsPlayer(player) then
         return
     end
 
@@ -26,7 +26,7 @@ function OnPlayerEnteredRange(player)
 end
 
 function OnPlayerLeftRange(player)
-    if not Framework.IsAPlayer(player) then
+    if not Framework.IsPlayer(player) then
         return
     end
 

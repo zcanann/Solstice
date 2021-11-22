@@ -325,7 +325,6 @@ Objects {
   }
   ParentId: 9400124050863984403
   ChildIds: 2614600652986832283
-  ChildIds: 7733445296216891158
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -338,62 +337,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
-  }
-}
-Objects {
-  Id: 7733445296216891158
-  Name: "NameplateController_C"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17281413761246435318
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:API"
-      AssetReference {
-        Id: 3875830725285389341
-      }
-    }
-    Overrides {
-      Name: "cs:ComponentRoot"
-      ObjectReference {
-        SelfId: 9400124050863984403
-      }
-    }
-    Overrides {
-      Name: "cs:NameplateTemplate"
-      AssetReference {
-        Id: 5049470299132475441
-      }
-    }
-    Overrides {
-      Name: "cs:SegmentSeparatorTemplate"
-      AssetReference {
-        Id: 621782261612844046
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 14278482860986951316
-    }
   }
 }
 Objects {

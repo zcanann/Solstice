@@ -4,10 +4,10 @@ Assets {
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 822988238011075349
+      RootId: 12990140617349640697
       Objects {
-        Id: 822988238011075349
-        Name: "C_Nameplate"
+        Id: 12990140617349640697
+        Name: "Nameplate_C"
         Transform {
           Scale {
             X: 1
@@ -16,10 +16,10 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 16242324609952581552
         ChildIds: 666315683374029523
         ChildIds: 18018371900924901114
         ChildIds: 6811297547396028375
-        ChildIds: 12659138779276424675
         ChildIds: 4907862976858644602
         ChildIds: 3489910825756026236
         ChildIds: 2946694147826181439
@@ -45,7 +45,7 @@ Assets {
           Overrides {
             Name: "cs:ChangePiece"
             ObjectReference {
-              SubObjectId: 12659138779276424675
+              SelfId: 841534158063459245
             }
           }
           Overrides {
@@ -66,18 +66,118 @@ Assets {
               SubObjectId: 13486828417783845428
             }
           }
+          Overrides {
+            Name: "cs:BorderPiece:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:BorderPiece:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:BackgroundPiece:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:BackgroundPiece:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:HealthPiece:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:HealthPiece:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ChangePiece:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ChangePiece:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:HealthText:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:HealthText:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:NameText:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:NameText:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ChatText:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ChatText:ml"
+            Bool: false
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Folder {
           IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 16242324609952581552
+        Name: "NameplateController_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12990140617349640697
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Nameplate"
+            ObjectReference {
+              SubObjectId: 12990140617349640697
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 14278482860986951316
+          }
         }
       }
       Objects {
@@ -94,7 +194,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 822988238011075349
+        ParentId: 12990140617349640697
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -152,7 +252,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 822988238011075349
+        ParentId: 12990140617349640697
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -210,65 +310,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 822988238011075349
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5351428073291024820
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5109129970559468393
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableCastShadows: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 12659138779276424675
-        Name: "ChangePiece"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 822988238011075349
+        ParentId: 12990140617349640697
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -327,7 +369,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 822988238011075349
+        ParentId: 12990140617349640697
         ChildIds: 13486828417783845428
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -464,7 +506,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 822988238011075349
+        ParentId: 12990140617349640697
         ChildIds: 9037971833558607173
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -601,7 +643,7 @@ Assets {
             Z: 0.3
           }
         }
-        ParentId: 822988238011075349
+        ParentId: 12990140617349640697
         UnregisteredParameters {
         }
         Collidable_v2 {

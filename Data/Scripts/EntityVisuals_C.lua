@@ -2,11 +2,9 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local propRadiusDecalTemplate = script:GetCustomProperty("RadiusDecalTemplate")
-local propNameplateTemplate = script:GetCustomProperty("NameplateTemplate")
 
 local defaultDecalSize = 256.0
 
-local nameplate = nil
 local meleeRangeDecal = nil
 local debugAgroRangeDecal = nil
 
@@ -38,9 +36,15 @@ function DestroyRadiusDecal(decal)
 end
 
 function CreateRadiusDecal(scale)
-    nameplate = World.SpawnAsset(propNameplateTemplate, { parent = script })
+    local decal = World.SpawnAsset(propRadiusDecalTemplate, { parent = script })
 
-    return nameplate
+    decal:SetScale(Vector3.New(scale, scale, decal:GetScale().z))
+
+    decal:SetSmartProperty("Stroke Width", decal:GetSmartProperty("Stroke Width") / scale)
+    decal:SetSmartProperty("Color", Color.New(1.0, 0.0, 0.0, 0.0))
+    decal:SetSmartProperty("Stroke Color", Color.New(1.0, 0.0, 0.0))
+
+    return decal
 end
 
 -- For nameplates

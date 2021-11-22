@@ -2,42 +2,44 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local propNameplateTemplate = script:GetCustomProperty("NameplateTemplate")
 
-local localPlayer = Game.GetLocalPlayer()
-
 -- Variables
 local nameplates = { }
 
 function OnEntityEnteredRange(proximityObject)
+    CreateNameplate(proximityObject)
 end
 
-function OnEntityLeftRange(player)
+function OnEntityLeftRange(proximityObject)
+    DestroyNameplate(proximityObject)
 end
 
+function CreateNameplate(proximityObject)
+    local objectInstance, objectId = Framework.Networking.GetProximityInstance(proximityObject)
 
-function OnNameplateDataChanged(value)
-    if value then
-        CreateNameplate()
-    else
-        DestroyNameplate()
-    end
-end
-
-function CreateNameplate()
-    --[[
-    if Object.IsValid(nameplate) then
+    if not objectInstance or Object.IsValid(nameplates[objectId]) then
         return
     end
 
-    local nameplate = World.SpawnAsset(propRadiusDecalTemplate, { parent = script })
-    ]]--
+    local nameplate = nil
+
+    if objectInstance:IsA("Player") then
+        nameplate = World.SpawnAsset(propNameplateTemplate)
+        nameplate:AttachToPlayer(objectInstance, "upper_spine")
+    else
+        nameplate = World.SpawnAsset(propNameplateTemplate, { parent = objectInstance })
+        print(objectInstance)
+    end
+
+    nameplates[objectId] = nameplate
 end
 
-function DestroyNameplate()
-    --[[
-    if Object.IsValid(nameplate) then
-        nameplate:Destroy()
+function DestroyNameplate(proximityObject)
+    local _, objectId = Framework.Networking.GetProximityInstance(proximityObject)
+
+    if Object.IsValid(nameplates[objectId]) then
+        nameplates[objectId]:Destroy()
     end
-    ]]--
+    nameplates[objectId] = nil
 end
 
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnEntityEnteredRange)
