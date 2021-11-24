@@ -619,7 +619,6 @@ Assets {
         Name: "ProximityNetworkedObject"
         Transform {
           Location {
-            Z: 435
           }
           Rotation {
           }

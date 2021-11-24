@@ -8,7 +8,7 @@ local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworke
 local startPosition = propNpc:GetWorldPosition()
 local returnPosition = startPosition
 
-function OnEngagementDataChanged(data)
+function OnEngagementDataChanged(proximityDataId, data)
     -- If engagement ends, return to last position
     -- If engagement starts, save the current position to be returned to if the combat ends
 end

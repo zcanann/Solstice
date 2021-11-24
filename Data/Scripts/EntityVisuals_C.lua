@@ -8,10 +8,10 @@ local defaultDecalSize = 256.0
 local meleeRangeDecal = nil
 local debugAgroRangeDecal = nil
 
-function OnNetworkDataChanged(key)
+function OnNetworkDataChanged(proximityDataId, key)
 end
 
-function OnMeleeRadiusChanged(value)
+function OnMeleeRadiusChanged(proximityDataId, value)
     if value == nil then
         DestroyRadiusDecal(meleeRangeDecal)
     elseif not Object.IsValid(meleeRangeDecal) then
@@ -19,7 +19,7 @@ function OnMeleeRadiusChanged(value)
     end
 end
 
-function OnAgroRadiusChanged(value)
+function OnAgroRadiusChanged(proximityDataId, value)
     if Framework.Debug.GetFlag(Framework.Debug.Flags.SHOW_AGRO_RADIUS) then
         if value == nil then
             DestroyRadiusDecal(debugAgroRangeDecal)

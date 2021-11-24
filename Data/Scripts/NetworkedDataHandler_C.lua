@@ -28,49 +28,54 @@ function OnPrivateNetworkedDataChanged(player, key)
             subData = data[subKey]
         end
 
-        -- Broadcast character data changes
-        if key == Framework.DataBase.CharacterDataKey then
-            if subKey and subKey == Framework.DataBase.GetActiveCharacterId(player) then
-                ForwardDatabaseChangesToPlayer(subData)
+        -- In this Framework, it is assumed that only 3 types of data are networked over private player data: character, global, and proximity data
+        if key == Framework.DataBase.CharacterDataKey and subData then
+            -- Broadcast character data changes
+            -- TODO: This seems to fire too often for too many keys. Diff problem?
+            for characterDataKey, _ in pairs(subData) do
+                Framework.Events.Broadcast.Local(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
             end
+        elseif key == Framework.DataBase.GlobalDataKey then
+            -- Nothing
+        else
+            SendProximityDataEvents(key, subKey, subData)
         end
 
-        ForwardDataToObject(key, subKey, subData)
     end
 end
 
--- TODO: This seems to fire too often for too many keys. Diff problem?
-function ForwardDatabaseChangesToPlayer(subData)
-    for characterDataKey, _ in pairs(subData) do
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
-    end
-end
+function SendProximityDataEvents(proximityObjectId, dataKey, data)
+    local keyIsObject = string.match(proximityObjectId, '.+:.+') ~= nil
+    local keyAsPlayer = Game.FindPlayer(proximityObjectId)
 
-function ForwardDataToObject(key, subKey, data)
+    if not keyIsObject and not keyAsPlayer then
+        print("Not a proxy object: " .. proximityObjectId)
+        return
+    end
     --[[
-    local keyIsObject = string.match(key, '.+:.+') ~= nil
     local retryCountMax = 1024
-    local keyAsPlayer = Game.FindPlayer(key)
 
     if keyAsPlayer == nil then
         Task.Spawn(function ()
-            ForwardDataToPlayer(key, data, retryCount + 1)
+            SendProximityDataEvents(proximityObjectId, dataKey, retryCount + 1)
         end, 0.1)
         return
     end
     --]]
-    -- Broadcast entered/left proximity networking range events
-    if data == nil and proximityObjectIdsInRange[key] then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, { proximityObjectIdsInRange[key] })
-        proximityObjectIdsInRange[key] = nil
-    elseif data ~= nil and not proximityObjectIdsInRange[key] then
-        proximityObjectIdsInRange[key] = key
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { proximityObjectIdsInRange[key] })
-    end
+
+    -- Note: These events are intentionally not reliable because there is no guarantee that a listener will be created for all networked pieces of data
 
     -- Forward the object data changed event.
-    -- Note: deliberately unreliable (ie not using LocalReliable), as not all data updates need to be handled by a listener.
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. key .. subKey, { data })
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. dataKey, { proximityObjectId, data })
+
+    -- Broadcast entered/left proximity networking range events
+    if data == nil and proximityObjectIdsInRange[proximityObjectId] then
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, { proximityObjectId })
+        proximityObjectIdsInRange[proximityObjectId] = nil
+    elseif data ~= nil and not proximityObjectIdsInRange[proximityObjectId] then
+        proximityObjectIdsInRange[proximityObjectId] = true
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, { proximityObjectId })
+    end
 end
 
 function OnReadyToReceiveProximityData()

@@ -105,11 +105,15 @@ function PlayerChatHandler(player, params)
 	end, chatDuration)
 end
 
-function OnEntityHealthChanged(health)
+function OnEntityHealthChanged(proximityDataId, health)
 	-- TODO
 end
 
-function OnEntityHeightChanged(height)
+function OnEntityHeightChanged(proximityDataId, height)
+	if not Object.IsValid(propNameplate) then
+		return
+	end
+
 	if height then
 		-- Player nameplates are attached differently, so these use a different height adjustment
 		if Object.IsValid(proximityObject) and proximityObject:IsA("Player") then
@@ -122,7 +126,11 @@ function OnEntityHeightChanged(height)
 	end
 end
 
-function OnEntityNameChanged(name)
+function OnEntityNameChanged(proximityDataId, name)
+	if not Object.IsValid(nameplate.nameText) then
+		return
+	end
+
 	if name then
 		nameplate.nameText.text = name
 	else
@@ -130,15 +138,15 @@ function OnEntityNameChanged(name)
 	end
 end
 
-function OnEntityClassChanged(class)
+function OnEntityClassChanged(proximityDataId, class)
 	-- Unused
 end
 
-function OnEntityFactionChanged(faction)
+function OnEntityFactionChanged(proximityDataId, faction)
 	-- Unused
 end
 
-function OnEntityRaceChanged(faction)
+function OnEntityRaceChanged(proximityDataId, faction)
 	-- Unused
 end
 

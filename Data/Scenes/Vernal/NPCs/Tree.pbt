@@ -482,7 +482,7 @@ Objects {
   Name: "FrameworkNPC_Lianna"
   Transform {
     Location {
-      X: 19490.0293
+      X: 19360
       Y: -302.596924
       Z: -90
     }

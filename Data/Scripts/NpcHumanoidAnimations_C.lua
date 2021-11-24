@@ -8,13 +8,7 @@ local isAlive = nil
 function OnNetworkDataChanged(key)
 end
 
-function OnAnimationChanged(animatedMesh, eventName, animationName)
-    print(animatedMesh)
-    print(eventName)
-    print(animationName)
-end
-
-function OnIsAliveChanged(isAliveNew)
+function OnIsAliveChanged(proximityDataId, isAliveNew)
     local wasAlive = isAlive
     isAlive = isAliveNew
 
@@ -54,5 +48,3 @@ end
 -- Runtime combat (move these?)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, OnIsAliveChanged)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)
-
-propHumanoidRig.animationEvent:Connect(OnAnimationChanged)

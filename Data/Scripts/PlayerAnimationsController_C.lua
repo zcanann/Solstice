@@ -2,20 +2,17 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local propPlayerAnimationsTemplate = script:GetCustomProperty("PlayerAnimationsTemplate")
 
-function OnEngagementDataChanged(player, engagementData)
-    if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
+local engagementListeners = { }
 
-	if not engagementData or not next(engagementData) then
-        OnEngagementSessionLocalInterrupt(player)
-    else
-		OnEngagementSessionConnected(engagementData)
-	end
-end
+function OnProximityObjectEnteredRange(proximityObjectId)
+    local player = Game.FindPlayer(proximityObjectId)
 
-function OnPlayerEnteredRange(player)
-    if not Framework.IsPlayer(player) then
+    if not player then
         return
     end
+
+    engagementListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId,
+        Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
 
     if not player.clientUserData.animationSet then
         -- Spawn client-side animaton sets (which are just several 'abilities' inside a template)
@@ -24,22 +21,40 @@ function OnPlayerEnteredRange(player)
     end
 end
 
-function OnPlayerLeftRange(player)
-    if not Framework.IsPlayer(player) then
-        return
+function OnProximityObjectLeftRange(proximityObjectId)
+
+    if engagementListeners[proximityObjectId] then
+        engagementListeners[proximityObjectId].Disconnect()
+        engagementListeners[proximityObjectId] = nil
     end
 
-    OnEngagementSessionDisconnected(player)
-    if player.clientUserData.animationSet then
-        player.clientUserData.animationSet:Destroy()
-        player.clientUserData.animationSet = nil
+    local player = Game.FindPlayer(proximityObjectId)
+
+    if player then
+        OnEngagementSessionDisconnected(player)
+
+        if player.clientUserData.animationSet then
+            player.clientUserData.animationSet:Destroy()
+            player.clientUserData.animationSet = nil
+        end
     end
 end
 
-function OnEngagementSessionConnected(engagementData)
-	local player = Game.FindPlayer(engagementData.playerId)
-    if not Framework.ObjectAssert(player, "Player", "Invalid playerId provided") then return end
+function OnEngagementDataChanged(playerId, engagementData)
+    local player = Game.FindPlayer(playerId)
 
+    if not player then
+        return
+    end
+
+	if not engagementData or not next(engagementData) then
+        OnEngagementSessionLocalInterrupt(player)
+    else
+		OnEngagementSessionConnected(player, engagementData)
+	end
+end
+
+function OnEngagementSessionConnected(player, engagementData)
 	if not player.clientUserData.animState then
 		player.clientUserData.animState = { }
 	end
@@ -104,7 +119,6 @@ function OnEngagementSessionLocalInterrupt(player)
     end
 end
 
--- Framework.Events.ListenForPlayerProximityDataEvent(Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnPlayerEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, OnPlayerLeftRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnProximityObjectEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnProximityObjectLeftRange)

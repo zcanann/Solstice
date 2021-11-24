@@ -2,10 +2,6 @@
 
 local Framework = { }
 
-Framework.ObjectAssert = function (object, name, message)
-    return assert(object and object:IsA(name), message)
-end
-
 Framework.DataBase = require(script:GetCustomProperty("DataBase"))
 Framework.DataStructures = require(script:GetCustomProperty("DataStructures"))
 Framework.Debug = require(script:GetCustomProperty("Debug"))
@@ -26,6 +22,17 @@ Framework.Warn = Framework.Logger.Warn
 Framework.Error = Framework.Logger.Error
 Framework.Dump = function (object)
     Framework.Print(Framework.Utils.Table.Serialize(object))
+end
+
+Framework.ObjectAssert = function (object, name, message)
+    local result = object and Object.IsValid(object) and object:IsA(name)
+
+    if not result then
+        Framework.Warn(message)
+        Framework.Warn(CoreDebug.GetStackTrace())
+    end
+
+    return result
 end
 
 Framework.IsPlayer = function (object)

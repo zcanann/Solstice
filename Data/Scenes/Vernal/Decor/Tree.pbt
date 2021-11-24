@@ -19,6 +19,123 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1251213168760147939
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2866363216811685411
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 5963715459529764130
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 7383173665600909402
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8591155617695948713
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8929307687513746696
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11679353384227193660
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11758286885166279079
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12351736660597716665
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 14002015088869052532
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15233286757149631317
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16017912017697680312
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16302380016593067587
+      value {
+        Overrides {
+          Name: "Mesh.InteractWithTriggers"
+          Bool: false
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 17204967818249899865
       value {
         Overrides {
@@ -37,27 +154,6 @@ Objects {
           Name: "Rotation"
           Rotator {
             Yaw: -135
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 17367193895636810101
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 357.389313
-            Y: -1322.8595
-            Z: 235
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 24.2681732
-            Yaw: 28.570919
-            Roll: -5.57232666
           }
         }
       }

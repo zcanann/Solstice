@@ -16,7 +16,7 @@ local questionMarkEdgeMaterial = propQuestionMarkModel:GetMaterialSlots()[3]
 local exclaimationMarkMaterials = { propExclaimationMarkModel:GetMaterialSlots()[1], propExclaimationMarkModel:GetMaterialSlots()[2] }
 local exclaimationMarkEdgeMaterial = propExclaimationMarkModel:GetMaterialSlots()[3]
 
-function OnQuestStateChanged(data)
+function OnQuestStateChanged(proximityDataId, data)
     local state = data and data.state
 
     propQuestionMarkModel.visibility = Visibility.FORCE_OFF

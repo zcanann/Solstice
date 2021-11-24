@@ -29,7 +29,7 @@ function ShowOption()
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Mine " .. name, callback })
 end
 
-function OnNameChanged(newName)
+function OnNameChanged(proximityDataId, newName)
     name = newName or "unknown"
 end
 

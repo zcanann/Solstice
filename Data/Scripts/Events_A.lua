@@ -23,7 +23,7 @@ EventsAPI.Listen = function (key, callback)
 
     wrapper.Disconnect = function ()
         if  _G.frameworkEventsAPI[key] then
-            _G.frameworkEventsAPI[key].Disconnect()
+            _G.frameworkEventsAPI[key]:Disconnect()
             _G.frameworkEventsAPI[key] = nil
         end
     end
@@ -53,25 +53,7 @@ EventsAPI.ListenForProximityEvent = function (proximityObjectId, key, callback)
         return
     end
     -- Framework.Print("LISTENING: " .. key .. proximityObjectId)
-    local proximityEvent = EventsAPI.Listen(EventsAPI.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. key, callback)
-
-    if not storedProximityEvents[proximityObjectId] then
-        storedProximityEvents[proximityObjectId] = { }
-    end
-    table.insert(storedProximityEvents[proximityObjectId], proximityEvent)
-
-    return proximityEvent
-
-end
-
-EventsAPI.RemoveProximityEvents = function (proximityObjectId)
-    if storedProximityEvents[proximityObjectId] then
-        for _, event in pairs(storedProximityEvents[proximityObjectId]) do
-            event.Disconnect()
-        end
-    end
-
-    storedProximityEvents[proximityObjectId] = { }
+    return EventsAPI.Listen(EventsAPI.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. key, callback)
 end
 
 EventsAPI.ListenForPlayer = function (key, callback, ...)

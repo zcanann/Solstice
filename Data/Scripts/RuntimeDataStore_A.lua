@@ -9,7 +9,13 @@ end
 
 RuntimeDataStore.Keys = { }
 
--- TODO: Not implemented. This class was thought to be needed, but maybe not.
+RuntimeDataStore.SetKey = function (key, value)
+   _G.DataStore[key] = value
+end
+
+RuntimeDataStore.GetKey = function (key)
+   return _G.DataStore[key]
+end
 
 -- Map all events to shorter names, following the format of "r{i}_"
 -- This is done such that any event used in an RPC to/from the client and server is shortened as much as possible

@@ -26,9 +26,9 @@ function OnPlayerEnteredRange(player)
 end
 
 function OnPlayerLeftRange(player)
-    playersInRange[player] = nil
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID,
         { propProximityNetworkedObject.id, function (proximityNetworkedObjectId) ClearProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId) end })
+    playersInRange[player] = nil
 end
 
 function DrawDebugData()
