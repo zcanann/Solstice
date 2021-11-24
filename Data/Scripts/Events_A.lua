@@ -1,6 +1,7 @@
 local TableUtils = require(script:GetCustomProperty("TableUtils"))
 
 local EventsAPI = { }
+local storedProximityEvents = { }
 
 EventsAPI.Broadcast = require(script:GetCustomProperty("Broadcast"))
 EventsAPI.Keys = require(script:GetCustomProperty("EventKeys"))
@@ -38,14 +39,39 @@ EventsAPI.ListenUnique = function (key, callback)
     return nil
 end
 
-EventsAPI.ListenForProximityEvent = function (proximityObject, key, callback)
-    -- Framework.Print("LISTENING: " .. key .. proximityObject.id)
-    return EventsAPI.Listen(EventsAPI.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObject.id .. key, callback)
+EventsAPI.ListenForProximityEvent = function (proximityObjectId, key, callback)
+    if not proximityObjectId then
+        warn("Invalid proximity object provided:")
+        warn(CoreDebug.GetStackTrace())
+        warn("====================================")
+        return
+    end
+    if not key then
+        warn("Invalid proximity key provided:")
+        warn(CoreDebug.GetStackTrace())
+        warn("====================================")
+        return
+    end
+    -- Framework.Print("LISTENING: " .. key .. proximityObjectId)
+    local proximityEvent = EventsAPI.Listen(EventsAPI.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. key, callback)
+
+    if not storedProximityEvents[proximityObjectId] then
+        storedProximityEvents[proximityObjectId] = { }
+    end
+    table.insert(storedProximityEvents[proximityObjectId], proximityEvent)
+
+    return proximityEvent
+
 end
 
-EventsAPI.ListenForPlayerProximityDataEvent = function (key, callback)
-    -- Framework.Print("LISTENING: " .. key .. proximityObject.id)
-    return EventsAPI.Listen(EventsAPI.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX .. key, callback)
+EventsAPI.RemoveProximityEvents = function (proximityObjectId)
+    if storedProximityEvents[proximityObjectId] then
+        for _, event in pairs(storedProximityEvents[proximityObjectId]) do
+            event.Disconnect()
+        end
+    end
+
+    storedProximityEvents[proximityObjectId] = { }
 end
 
 EventsAPI.ListenForPlayer = function (key, callback, ...)

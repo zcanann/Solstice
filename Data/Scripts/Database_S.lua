@@ -38,6 +38,7 @@ function OnPlayerJoined(player)
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.RACE))
 	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.TITLE,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.TITLE))
+	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, 100.0)
 
 	-- This initializes server => client player database replication
 	Framework.DataBase.ReplicateReadOnlyData(player)

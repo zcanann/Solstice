@@ -957,12 +957,6 @@ Objects {
   Id: 16754664220148089149
   Name: "FrameworkTreeBirch"
   Transform {
-    Location {
-      X: -7100
-      Y: -5400
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -995,14 +989,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }

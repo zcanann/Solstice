@@ -25,7 +25,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 13343148381217680232
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -72,7 +72,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 13343148381217680232
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -117,14 +117,14 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13343148381217680232
-      }
-    }
-    Overrides {
       Name: "cs:MeleeRadius"
       Float: 200
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
+      }
     }
   }
   Collidable_v2 {
@@ -176,14 +176,14 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13343148381217680232
-      }
-    }
-    Overrides {
       Name: "cs:Faction"
       String: "Ithkuil"
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
+      }
     }
   }
   Collidable_v2 {

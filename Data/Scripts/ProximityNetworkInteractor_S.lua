@@ -26,23 +26,21 @@ function BindToPlayer(player)
     propReplicationTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
     propReplicationTrigger.endOverlapEvent:Connect(OnEndOverlap)
     propDiscardTrigger.endOverlapEvent:Connect(OnEndOverlap)
+
+    OnPlayerJoinedExternal(player)
 end
 
 function OnBeginOverlap(trigger, object)
     if trigger == propReplicationTrigger then
-        if object:IsA("Player") or (object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider")) then
+        if object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider") then
             Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. object.id, { owningPlayer })
-
-            if object:IsA("Player") then
-                Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. owningPlayer.id, { object })
-            end
         end
     end
 end
 
 function OnEndOverlap(trigger, object)
     if trigger == propDiscardTrigger then
-        if object:IsA("Player") or (object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider")) then
+        if object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider") then
             Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. object.id, { owningPlayer })
         end
     end

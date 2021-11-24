@@ -1143,8 +1143,8 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
-            X: 3.92326401e-05
-            Y: -4.67556456e-05
+            X: 1.14017594
+            Y: -0.0997530296
           }
           Rotation {
           }
@@ -1722,11 +1722,14 @@ Assets {
         Name: "ProximityNetworkedObject"
         Transform {
           Location {
-            Z: 75
+            Z: 55
           }
           Rotation {
           }
           Scale {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 3936958111886977860
@@ -1746,12 +1749,18 @@ Assets {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceon"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:forceoff"
@@ -2224,6 +2233,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {

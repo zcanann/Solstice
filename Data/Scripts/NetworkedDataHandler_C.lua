@@ -9,15 +9,11 @@
 
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local objectsInRange = { }
-local playersInRange = { }
-local retryCountMax = 1024
+local proximityObjectIdsInRange = { }
 local networkedDataCache = { }
 local localPlayer = Game.GetLocalPlayer()
 
 function OnPrivateNetworkedDataChanged(player, key)
-    local keyIsObject = string.match(key, '.+:.+') ~= nil
-
     -- Perform a diff on the new data vs the previous. We can then figure out which top-level subkeys changed, and fire events for them.
     local data = player:GetPrivateNetworkedData(key)
     local diff = Framework.Utils.Table.Diff(networkedDataCache[key], data)
@@ -39,11 +35,7 @@ function OnPrivateNetworkedDataChanged(player, key)
             end
         end
 
-        if keyIsObject then
-            ForwardDataToObject(key, subKey, subData)
-        else
-            ForwardDataToPlayer(key, subKey, subData)
-        end
+        ForwardDataToObject(key, subKey, subData)
     end
 end
 
@@ -54,49 +46,31 @@ function ForwardDatabaseChangesToPlayer(subData)
     end
 end
 
-function ForwardDataToPlayer(key, subKey, data, retryCount)
-    retryCount = retryCount or 0
-    if retryCount > retryCountMax then
-        return
-    end
-
+function ForwardDataToObject(key, subKey, data)
+    --[[
+    local keyIsObject = string.match(key, '.+:.+') ~= nil
+    local retryCountMax = 1024
     local keyAsPlayer = Game.FindPlayer(key)
 
-    -- There is a possible timing info where we have a stale player list, but have recieved a private networked event about another player
-    -- In this case, we just have to wait until this player becomes available. If they never do (ie a disconnect), eventually we stop trying
-    -- TODO: What if a key is set several times? Data may arrive out of order?
     if keyAsPlayer == nil then
         Task.Spawn(function ()
             ForwardDataToPlayer(key, data, retryCount + 1)
         end, 0.1)
         return
     end
-
+    --]]
     -- Broadcast entered/left proximity networking range events
-    if data == nil and playersInRange[key] then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, { keyAsPlayer })
-        playersInRange[key] = nil
-    elseif data ~= nil and not playersInRange[key] then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { keyAsPlayer })
-        playersInRange[key] = keyAsPlayer
+    if data == nil and proximityObjectIdsInRange[key] then
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, { proximityObjectIdsInRange[key] })
+        proximityObjectIdsInRange[key] = nil
+    elseif data ~= nil and not proximityObjectIdsInRange[key] then
+        proximityObjectIdsInRange[key] = key
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { proximityObjectIdsInRange[key] })
     end
 
-    -- Forward the player data changed event
-    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PLAYER_PREFIX .. subKey, { keyAsPlayer, data })
-end
-
-function ForwardDataToObject(key, subKey, data)
-    -- Broadcast entered/left proximity networking range events
-    if data == nil and objectsInRange[key] then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, { key })
-        objectsInRange[key] = nil
-    elseif data ~= nil and not objectsInRange[key] then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { key })
-        objectsInRange[key] = key
-    end
-
-    -- Forward the object data changed event
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. key .. subKey, { data })
+    -- Forward the object data changed event.
+    -- Note: deliberately unreliable (ie not using LocalReliable), as not all data updates need to be handled by a listener.
+    Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. key .. subKey, { data })
 end
 
 function OnReadyToReceiveProximityData()
@@ -108,11 +82,11 @@ end
 localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK, OnReadyToReceiveProximityData)
 
--- We are always in range of ourselves
-playersInRange[localPlayer.id] = localPlayer
-Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, { localPlayer })
-
--- Needs a delay for preview mode, in order for the server to have a listener ready
-Task.Spawn(function ()
+if Environment.IsPreview() then
+    -- Needs a delay for preview mode, in order for the server to have a listener ready
+    Task.Spawn(function ()
+        Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA)
+    end)
+else
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA)
-end)
+end

@@ -4,9 +4,9 @@ Assets {
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12990140617349640697
+      RootId: 12411621271059381585
       Objects {
-        Id: 12990140617349640697
+        Id: 12411621271059381585
         Name: "Nameplate_C"
         Transform {
           Scale {
@@ -25,6 +25,12 @@ Assets {
         ChildIds: 2946694147826181439
         UnregisteredParameters {
           Overrides {
+            Name: "cs:NameplateControllerScript"
+            ObjectReference {
+              SubObjectId: 16242324609952581552
+            }
+          }
+          Overrides {
             Name: "cs:BorderPiece"
             ObjectReference {
               SubObjectId: 666315683374029523
@@ -40,12 +46,6 @@ Assets {
             Name: "cs:HealthPiece"
             ObjectReference {
               SubObjectId: 6811297547396028375
-            }
-          }
-          Overrides {
-            Name: "cs:ChangePiece"
-            ObjectReference {
-              SelfId: 841534158063459245
             }
           }
           Overrides {
@@ -91,14 +91,6 @@ Assets {
             Bool: false
           }
           Overrides {
-            Name: "cs:ChangePiece:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:ChangePiece:ml"
-            Bool: false
-          }
-          Overrides {
             Name: "cs:HealthText:isrep"
             Bool: false
           }
@@ -124,19 +116,18 @@ Assets {
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
-        Folder {
-          IsFilePartition: true
+        NetworkContext {
         }
       }
       Objects {
@@ -153,12 +144,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12990140617349640697
+        ParentId: 12411621271059381585
         UnregisteredParameters {
           Overrides {
             Name: "cs:Nameplate"
             ObjectReference {
-              SubObjectId: 12990140617349640697
+              SubObjectId: 12411621271059381585
             }
           }
         }
@@ -194,7 +185,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12990140617349640697
+        ParentId: 12411621271059381585
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -252,7 +243,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12990140617349640697
+        ParentId: 12411621271059381585
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -310,7 +301,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12990140617349640697
+        ParentId: 12411621271059381585
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -369,7 +360,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12990140617349640697
+        ParentId: 12411621271059381585
         ChildIds: 13486828417783845428
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -506,7 +497,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12990140617349640697
+        ParentId: 12411621271059381585
         ChildIds: 9037971833558607173
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -643,7 +634,7 @@ Assets {
             Z: 0.3
           }
         }
-        ParentId: 12990140617349640697
+        ParentId: 12411621271059381585
         UnregisteredParameters {
         }
         Collidable_v2 {

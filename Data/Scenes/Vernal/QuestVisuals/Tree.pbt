@@ -117,12 +117,6 @@ Objects {
   ParentId: 15594024896408941852
   UnregisteredParameters {
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13343148381217680232
-      }
-    }
-    Overrides {
       Name: "cs:QuestionMarkModel"
       ObjectReference {
         SelfId: 3198728269196773478
@@ -217,6 +211,12 @@ Objects {
     Overrides {
       Name: "cs:BlueMaterialEdge:ml"
       Bool: false
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
+      }
     }
   }
   Collidable_v2 {

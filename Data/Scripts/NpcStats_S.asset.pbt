@@ -48,6 +48,10 @@ Assets {
         Name: "cs:MeleeRadius"
         Float: 200
       }
+      Overrides {
+        Name: "cs:Height"
+        Float: 200
+      }
     }
   }
   SerializationVersion: 101

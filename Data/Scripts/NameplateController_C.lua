@@ -1,3 +1,5 @@
+local NamePlateController = { }
+
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local propNameplate = script:GetCustomProperty("Nameplate"):WaitForObject()
@@ -18,9 +20,9 @@ local NameplateLayerThickness = 0.01 -- To force draw order
 local HealthBarWidth = 1.5
 local HealthBarHeight = 0.08
 
+local proximityObject = nil
 local localPlayer = Game.GetLocalPlayer()
 
--- Variables
 local nameplate = { }
 
 nameplate.templateRoot = propNameplate
@@ -103,12 +105,56 @@ function PlayerChatHandler(player, params)
 	end, chatDuration)
 end
 
-function OnEntityHealthChanged(player, data)
-    if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
-
+function OnEntityHealthChanged(health)
 	-- TODO
 end
 
-Chat.receiveMessageHook:Connect(PlayerChatHandler)
+function OnEntityHeightChanged(height)
+	if height then
+		-- Player nameplates are attached differently, so these use a different height adjustment
+		if Object.IsValid(proximityObject) and proximityObject:IsA("Player") then
+			propNameplate:SetPosition(Vector3.New(0.0, 0.0, 48.0))
+		else
+			propNameplate:SetPosition(Vector3.New(0.0, 0.0, height / 2.0 + 64.0))
+		end
+	else
+		propNameplate:SetPosition(Vector3.ZERO)
+	end
+end
 
-Framework.Events.ListenForPlayerProximityDataEvent("TODO_HEALTH_KEY", OnEntityHealthChanged)
+function OnEntityNameChanged(name)
+	if name then
+		nameplate.nameText.text = name
+	else
+		nameplate.nameText.text = "Unknown"
+	end
+end
+
+function OnEntityClassChanged(class)
+	-- Unused
+end
+
+function OnEntityFactionChanged(faction)
+	-- Unused
+end
+
+function OnEntityRaceChanged(faction)
+	-- Unused
+end
+
+function SetProximityObject(newProximityObject)
+	proximityObject = newProximityObject
+
+	if Object.IsValid(proximityObject) then
+		-- TODO: This needs to run off of replicated data, not a command hook. The reasoning is that messages should work for NPCs as well.
+		-- Chat.receiveMessageHook:Connect(PlayerChatHandler)
+		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
+		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
+		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.NAME, OnEntityNameChanged)
+		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.CLASS, OnEntityClassChanged)
+		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.FACTION, OnEntityFactionChanged)
+		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
+	end
+end
+
+return NamePlateController

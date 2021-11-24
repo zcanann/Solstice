@@ -57,14 +57,14 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13343148381217680232
-      }
-    }
-    Overrides {
       Name: "cs:QuestKey"
       String: "TUTORIAL_MINE_COPPER"
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
+      }
     }
   }
   Collidable_v2 {
@@ -102,15 +102,15 @@ Objects {
   ParentId: 15265514686607499560
   UnregisteredParameters {
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13343148381217680232
-      }
-    }
-    Overrides {
       Name: "cs:Object"
       ObjectReference {
         SelfId: 17351291876623604907
+      }
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -222,7 +222,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 13343148381217680232
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -313,7 +313,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 13343148381217680232
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -358,12 +358,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13343148381217680232
-      }
-    }
-    Overrides {
       Name: "cs:DefaultDialog"
       String: "XXXXXXXXX XXXXXXXXX XXXXXXXXX?"
     }
@@ -371,6 +365,12 @@ Objects {
       Name: "cs:NPCModelTemplate"
       AssetReference {
         Id: 14331216442300634809
+      }
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -393,15 +393,19 @@ Objects {
   }
 }
 Objects {
-  Id: 13343148381217680232
+  Id: 9348038341760866652
   Name: "ProximityNetworkedObject"
   Transform {
     Location {
-      Z: 75
+      Z: 95
     }
     Rotation {
+      Yaw: 1.02452814e-05
     }
     Scale {
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 2058956127506152909
@@ -418,18 +422,36 @@ Objects {
       Bool: true
     }
     Overrides {
-      Name: "ma:Shared_BaseMaterial:smart"
+      Name: "cs:Object:isrep"
       Bool: false
+    }
+    Overrides {
+      Name: "cs:Object:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:IsProximityNetworkCollider:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:IsProximityNetworkCollider:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 17803366332466114312
+      }
     }
   }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
@@ -439,8 +461,9 @@ Objects {
       Id: 12095835209017042614
     }
     Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
     }
-    InteractWithTriggers: true
     StaticMesh {
       Physics {
         Mass: 100
@@ -455,13 +478,18 @@ Objects {
   Name: "ServerContext"
   Transform {
     Location {
+      Z: -25
     }
     Rotation {
+      Yaw: -6.83018789e-06
     }
     Scale {
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
-  ParentId: 13343148381217680232
+  ParentId: 9348038341760866652
   ChildIds: 918561679083319262
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -498,7 +526,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 13343148381217680232
+        SelfId: 9348038341760866652
       }
     }
   }

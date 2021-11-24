@@ -2,21 +2,14 @@ local Networking = { }
 
 Networking.ProximityKeys = require(script:GetCustomProperty("ProximityKeys"))
 
-Networking.GetProximityInstance = function (proximityObject)
-    local objectInstance = nil
-    local objectId = nil
-    if proximityObject and type(proximityObject) == "userdata" then
-        objectInstance = proximityObject
-        objectId = objectInstance.id
-    elseif type(proximityObject) == "string" then
-        if string.match(proximityObject, '.+:.+') ~= nil then
-            -- proximityObject = CoreString.Split(proximityObject, ":")[1]
-        end
-        objectInstance = World.FindObjectById(proximityObject)
-        objectId = proximityObject
-    end
+Networking.GetProximityInstance = function (proximityObjectId)
+    local player = Game.FindPlayer(proximityObjectId)
 
-    return objectInstance, objectId
+    if player then
+        return player
+    elseif string.match(proximityObjectId, '.+:.+') then
+        return World.FindObjectById(proximityObjectId)
+    end
 end
 
 return Networking

@@ -20,7 +20,7 @@ function OnPlayerEnteredRange(player)
     if not player.clientUserData.animationSet then
         -- Spawn client-side animaton sets (which are just several 'abilities' inside a template)
         player.clientUserData.animationSet = World.SpawnAsset(propPlayerAnimationsTemplate)
-        player.clientUserData.animationSet:AttachToPlayer(player, "upper_spine")
+        player.clientUserData.animationSet:AttachToPlayer(player, "nameplate")
     end
 end
 
@@ -104,7 +104,7 @@ function OnEngagementSessionLocalInterrupt(player)
     end
 end
 
-Framework.Events.ListenForPlayerProximityDataEvent(Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
+-- Framework.Events.ListenForPlayerProximityDataEvent(Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnEngagementDataChanged)
 Framework.Events.Listen(Framework.Events.Keys.Engagement.EVENT_PLAYER_ENGAGEMENT_LOCAL_INTERRUPT, OnEngagementSessionLocalInterrupt)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnPlayerEnteredRange)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, OnPlayerLeftRange)

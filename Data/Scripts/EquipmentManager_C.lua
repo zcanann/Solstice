@@ -14,10 +14,14 @@ function OnPlayerEquipmentChanged(player, data)
     --]]
 end
 
-function OnPlayerEnteredRange(player)
-    if not Framework.IsPlayer(player) then
+function OnProximityObjectEnteredRange(proximityObjectId)
+    local player = Game.FindPlayer(proximityObjectId)
+
+    if not player then
         return
     end
+
+    Framework.Events.ListenForProximityEvent(proximityObjectId, "TODO_EQUIPMENT_KEY", OnPlayerEquipmentChanged)
 
     if not player.clientUserData.equipmentWeapon then
         player.clientUserData.equipmentWeapon = World.SpawnAsset(propDebugItemTemplate, { parent = script })
@@ -25,10 +29,14 @@ function OnPlayerEnteredRange(player)
     end
 end
 
-function OnPlayerLeftRange(player)
-    if not Framework.IsPlayer(player) then
+function OnProximityObjectLeftRange(proximityObjectId)
+    local player = Game.FindPlayer(proximityObjectId)
+
+    if not player then
         return
     end
+
+    Framework.Events.RemoveProximityEvents(proximityObjectId)
 
     if player.clientUserData.equipmentWeapon then
         player.clientUserData.equipmentWeapon:Destroy()
@@ -36,6 +44,5 @@ function OnPlayerLeftRange(player)
     end
 end
 
-Framework.Events.ListenForPlayerProximityDataEvent("TODO_EQUIPMENT_KEY", OnPlayerEquipmentChanged)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnPlayerEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, OnPlayerLeftRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnProximityObjectEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_RANGE, OnProximityObjectLeftRange)

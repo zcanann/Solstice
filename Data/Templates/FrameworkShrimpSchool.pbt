@@ -126,14 +126,14 @@ Assets {
         Name: "HitTestCollision"
         Transform {
           Location {
-            Z: 18
+            Z: 108
           }
           Rotation {
           }
           Scale {
-            X: 4
-            Y: 4
-            Z: 5
+            X: 5.9
+            Y: 5.9
+            Z: 8
           }
         }
         ParentId: 11550214333717859617
@@ -142,12 +142,18 @@ Assets {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:forceoff"
@@ -157,7 +163,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1266200099515413851
+            Id: 1137112816547272582
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -22200,11 +22206,14 @@ Assets {
         Name: "ProximityNetworkedObject"
         Transform {
           Location {
-            Z: 75
+            Z: 40
           }
           Rotation {
           }
           Scale {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 12956713755740695849
@@ -22224,12 +22233,18 @@ Assets {
             Name: "ma:Shared_BaseMaterial:smart"
             Bool: false
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceon"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:forceoff"
@@ -22660,12 +22675,21 @@ Assets {
       }
     }
     Assets {
-      Id: 1266200099515413851
-      Name: "Cube - Bottom-Aligned"
+      Id: 1137112816547272582
+      Name: "Cylinder"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {

@@ -60,4 +60,4 @@ end
 -- Default to no quest visuals until we explicitly receive an updated quest state
 OnQuestStateChanged({ state = nil })
 
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Quests.STATE, OnQuestStateChanged)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Quests.STATE, OnQuestStateChanged)

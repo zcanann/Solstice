@@ -16,6 +16,7 @@ EntityProximityKeys.MANA = "mana"
 EntityProximityKeys.EXPERIENCE = "experience"
 EntityProximityKeys.AGRO_RADIUS = "agro_radius"
 EntityProximityKeys.MELEE_RADIUS = "melee_radius"
+EntityProximityKeys.HEIGHT = "height"
 
 -- Defensive
 EntityProximityKeys.FROST_RESISTANCE = "frost_resistance"

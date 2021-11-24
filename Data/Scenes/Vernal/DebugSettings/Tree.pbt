@@ -50,7 +50,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ServerShowProximityObjects"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ShowAgroRadius"
@@ -124,7 +124,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ServerShowProximityObjects"
-      Bool: false
+      Bool: true
     }
     Overrides {
       Name: "cs:ShowAgroRadius"

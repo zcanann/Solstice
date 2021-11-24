@@ -5,18 +5,18 @@ local propNameplateTemplate = script:GetCustomProperty("NameplateTemplate")
 -- Variables
 local nameplates = { }
 
-function OnEntityEnteredRange(proximityObject)
-    CreateNameplate(proximityObject)
+function OnEntityEnteredRange(proximityObjectId)
+    CreateNameplate(proximityObjectId)
 end
 
-function OnEntityLeftRange(proximityObject)
-    DestroyNameplate(proximityObject)
+function OnEntityLeftRange(proximityObjectId)
+    DestroyNameplate(proximityObjectId)
 end
 
-function CreateNameplate(proximityObject)
-    local objectInstance, objectId = Framework.Networking.GetProximityInstance(proximityObject)
+function CreateNameplate(proximityObjectId)
+    local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
 
-    if not objectInstance or Object.IsValid(nameplates[objectId]) then
+    if not objectInstance or Object.IsValid(nameplates[proximityObjectId]) then
         return
     end
 
@@ -24,22 +24,20 @@ function CreateNameplate(proximityObject)
 
     if objectInstance:IsA("Player") then
         nameplate = World.SpawnAsset(propNameplateTemplate)
-        nameplate:AttachToPlayer(objectInstance, "upper_spine")
+        nameplate:AttachToPlayer(objectInstance, "nameplate")
     else
         nameplate = World.SpawnAsset(propNameplateTemplate, { parent = objectInstance })
-        print(objectInstance)
     end
 
-    nameplates[objectId] = nameplate
+    nameplate:GetCustomProperty("NameplateControllerScript"):WaitForObject().context.SetProximityObject(objectInstance)
+    nameplates[proximityObjectId] = nameplate
 end
 
-function DestroyNameplate(proximityObject)
-    local _, objectId = Framework.Networking.GetProximityInstance(proximityObject)
-
-    if Object.IsValid(nameplates[objectId]) then
-        nameplates[objectId]:Destroy()
+function DestroyNameplate(proximityObjectId)
+    if Object.IsValid(nameplates[proximityObjectId]) then
+        nameplates[proximityObjectId]:Destroy()
     end
-    nameplates[objectId] = nil
+    nameplates[proximityObjectId] = nil
 end
 
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_RANGE, OnEntityEnteredRange)

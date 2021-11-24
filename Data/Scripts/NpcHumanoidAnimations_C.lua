@@ -52,7 +52,7 @@ function PlayDeathAnimation()
 end
 
 -- Runtime combat (move these?)
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, OnIsAliveChanged)
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, OnIsAliveChanged)
+Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)
 
 propHumanoidRig.animationEvent:Connect(OnAnimationChanged)
