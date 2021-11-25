@@ -4,6 +4,7 @@ Assets {
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"
+  VirtualFolderPath: "QuestIndicators"
   CustomMaterialAsset {
     BaseMaterialId: 6830522436942637887
     ParameterOverrides {

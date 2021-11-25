@@ -546,7 +546,7 @@ Objects {
 }
 Objects {
   Id: 5155743626609140842
-  Name: "ShipSetup"
+  Name: "ShipEquipment"
   Transform {
     Location {
       X: -531.636414
@@ -575,7 +575,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "ShipSetup"
+    FilePartitionName: "ShipEquipment"
   }
 }
 Objects {

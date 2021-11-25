@@ -35,6 +35,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17473964321528003291
+  Name: "Roof Asphalt 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_roof_asphalt_002_uv"
+  }
+}
+Assets {
   Id: 17457212742554981748
   Name: "Fantasy Shield 03"
   PlatformAssetType: 1

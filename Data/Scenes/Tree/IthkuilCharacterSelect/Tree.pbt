@@ -2088,18 +2088,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2154,18 +2142,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2214,21 +2190,9 @@ Objects {
   ParentId: 1206110450384419138
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -2278,18 +2242,6 @@ Objects {
   }
   ParentId: 1206110450384419138
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -3058,18 +3010,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3124,18 +3064,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3184,21 +3112,9 @@ Objects {
   ParentId: 2512667042523972002
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -3248,18 +3164,6 @@ Objects {
   }
   ParentId: 2512667042523972002
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -11091,18 +10995,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11157,18 +11049,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -11217,21 +11097,9 @@ Objects {
   ParentId: 10446311020122247003
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -11281,18 +11149,6 @@ Objects {
   }
   ParentId: 10446311020122247003
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -12062,18 +11918,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -12128,18 +11972,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -12188,21 +12020,9 @@ Objects {
   ParentId: 14780369163924988410
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -12252,18 +12072,6 @@ Objects {
   }
   ParentId: 14780369163924988410
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -21889,18 +21697,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -21955,18 +21751,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -22015,21 +21799,9 @@ Objects {
   ParentId: 14180613162449965047
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -22079,18 +21851,6 @@ Objects {
   }
   ParentId: 14180613162449965047
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -23061,18 +22821,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -23127,18 +22875,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -23187,21 +22923,9 @@ Objects {
   ParentId: 10464919355586281095
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -23251,18 +22975,6 @@ Objects {
   }
   ParentId: 10464919355586281095
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -23804,18 +23516,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -23870,18 +23570,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -23930,21 +23618,9 @@ Objects {
   ParentId: 7070988410184636720
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -23994,18 +23670,6 @@ Objects {
   }
   ParentId: 7070988410184636720
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -24104,18 +23768,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -24170,18 +23822,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -24230,21 +23870,9 @@ Objects {
   ParentId: 8033929574806899836
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -24294,18 +23922,6 @@ Objects {
   }
   ParentId: 8033929574806899836
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -26703,18 +26319,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -26769,18 +26373,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -26829,21 +26421,9 @@ Objects {
   ParentId: 5815570089142199269
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -26893,18 +26473,6 @@ Objects {
   }
   ParentId: 5815570089142199269
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -33978,18 +33546,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -34044,18 +33600,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -34104,21 +33648,9 @@ Objects {
   ParentId: 2820530167131887780
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -34168,18 +33700,6 @@ Objects {
   }
   ParentId: 2820530167131887780
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -35884,18 +35404,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -35950,18 +35458,6 @@ Objects {
         Id: 17273442372396686502
       }
     }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -36010,21 +35506,9 @@ Objects {
   ParentId: 17406811492233879239
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
         Id: 17273442372396686502
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
       }
     }
   }
@@ -36074,18 +35558,6 @@ Objects {
   }
   ParentId: 17406811492233879239
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Font.Sides:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
-    Overrides {
-      Name: "ma:Font.Faces:id"
-      AssetReference {
-        Id: 15647241187833379471
-      }
-    }
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
@@ -36923,12 +36395,6 @@ Objects {
   }
   ParentId: 15355557793168884535
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11595185737799982824
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -36971,12 +36437,6 @@ Objects {
   }
   ParentId: 15355557793168884535
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11595185737799982824
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37025,12 +36485,6 @@ Objects {
       Name: "ma:Shared_Trim:id"
       AssetReference {
         Id: 11595185737799982824
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13569635900256001730
       }
     }
     Overrides {
@@ -37229,12 +36683,6 @@ Objects {
   }
   ParentId: 5611365033761794004
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11595185737799982824
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37277,12 +36725,6 @@ Objects {
   }
   ParentId: 5611365033761794004
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 11595185737799982824
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37331,12 +36773,6 @@ Objects {
       Name: "ma:Shared_Trim:id"
       AssetReference {
         Id: 11595185737799982824
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13569635900256001730
       }
     }
     Overrides {
@@ -39759,12 +39195,6 @@ Objects {
   ParentId: 9433090211688080922
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 15260709612341013554
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
       Bool: false
     }
@@ -39825,12 +39255,6 @@ Objects {
   ParentId: 9433090211688080922
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 15260709612341013554
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 1
@@ -39846,6 +39270,12 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
       Float: 3
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 17473964321528003291
+      }
     }
   }
   Collidable_v2 {
@@ -39930,7 +39360,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 15260709612341013554
+        Id: 17473964321528003291
       }
     }
     Overrides {
@@ -39994,18 +39424,18 @@ Objects {
   ParentId: 16018953531371965958
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 15260709612341013554
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
       Float: 1
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
       Float: 3
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 17473964321528003291
+      }
     }
   }
   Collidable_v2 {

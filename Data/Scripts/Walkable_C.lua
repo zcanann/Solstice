@@ -28,7 +28,7 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk to " .. name, callback })
 end
 
 function OnNameChanged(proximityDataId, newName)

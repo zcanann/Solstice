@@ -25,15 +25,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Items"
-      PlatformAssetType: 13
-    }
-    Folders {
-      VirtualFolderPath: "Items"
-      VirtualFolderPath: "Rune"
-      PlatformAssetType: 13
-    }
-    Folders {
       VirtualFolderPath: "Animations"
       PlatformAssetType: 5
     }
@@ -294,6 +285,15 @@ Assets {
       VirtualFolderPath: "UI"
       VirtualFolderPath: "HUD"
       PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Npcs"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "QuestIndicators"
+      PlatformAssetType: 13
     }
   }
 }

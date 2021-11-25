@@ -22,6 +22,9 @@ Objects {
   ChildIds: 17076391056267575974
   ChildIds: 3913274247154626659
   ChildIds: 15687273565326506224
+  ChildIds: 9436467008346192030
+  ChildIds: 11077136462719129013
+  ChildIds: 9014724721584374887
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -34,6 +37,132 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 9014724721584374887
+  Name: "FrameworkWorldMapGalleonSunken1_C"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14777171684539100595
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkWorldMapGalleonSunken1_C"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -63590
+            Y: 46430
+            Z: -210
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: 47.9365463
+            Yaw: -50.8894348
+            Roll: -58.8864136
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3305240709693057534
+    }
+  }
+}
+Objects {
+  Id: 11077136462719129013
+  Name: "FrameworkWorldMapGalleonSunken2_C"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9319393237763394461
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkWorldMapGalleonSunken2_C"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -63730
+            Y: 47360
+            Z: -140
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -31.7720337
+            Yaw: 42.4290237
+            Roll: -25.7008972
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16218441343377481981
+    }
+  }
+}
+Objects {
+  Id: 9436467008346192030
+  Name: "FrameworkWorldMapGalleonSunken3_C"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6028263417679839493
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkWorldMapGalleonSunken3_C"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -62700
+            Y: 47250
+            Z: -160
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Pitch: -26.0645752
+            Yaw: -155.768112
+            Roll: 44.3104439
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15271756606391451219
+    }
   }
 }
 Objects {

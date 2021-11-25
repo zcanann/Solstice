@@ -48,17 +48,19 @@ function SendProximityDataEvents(proximityObjectId, dataKey, data)
     local keyAsPlayer = Game.FindPlayer(proximityObjectId)
 
     if not keyIsObject and not keyAsPlayer then
-        print("Not a proxy object: " .. proximityObjectId)
+        Framework.Warn("Not a proxy object: " .. proximityObjectId)
         return
     end
-    --[[
-    local retryCountMax = 1024
 
-    if keyAsPlayer == nil then
-        Task.Spawn(function ()
-            SendProximityDataEvents(proximityObjectId, dataKey, retryCount + 1)
-        end, 0.1)
-        return
+    --[[
+    if not keyIsObject and retryCount < 256 then
+        -- local retryCountMax = 1024
+        if keyAsPlayer == nil then
+            Task.Spawn(function ()
+                SendProximityDataEvents(proximityObjectId, dataKey, data, retryCount + 1)
+            end, 0.1)
+            return
+        end
     end
     --]]
 

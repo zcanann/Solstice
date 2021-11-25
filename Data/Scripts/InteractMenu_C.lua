@@ -29,7 +29,7 @@ function AddEntry(entryName, callback)
     if callback ~= nil then
         entry.clickedEvent:Connect(function (entry)
             callback()
-        end) 
+        end)
     end
 
     table.insert(entries, entry)

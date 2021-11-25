@@ -17,6 +17,8 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 322541977663113600
+        ChildIds: 12452689430554011454
+        ChildIds: 2530052342653636063
         UnregisteredParameters {
           Overrides {
             Name: "cs:ProximityNetworkInteractorScript"
@@ -68,7 +70,6 @@ Assets {
           }
         }
         ParentId: 12585083632406728903
-        ChildIds: 2530052342653636063
         UnregisteredParameters {
           Overrides {
             Name: "cs:IsProximityNetworkCollider"
@@ -99,6 +100,7 @@ Assets {
             }
           }
         }
+        WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -119,6 +121,7 @@ Assets {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -129,13 +132,89 @@ Assets {
         }
       }
       Objects {
+        Id: 12452689430554011454
+        Name: "ReplicationRangeTrigger"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -6.83018607e-06
+          }
+          Scale {
+            X: 115
+            Y: 115
+            Z: 115
+          }
+        }
+        ParentId: 12585083632406728903
+        ChildIds: 14900818997121001386
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:sphere"
+          }
+        }
+      }
+      Objects {
+        Id: 14900818997121001386
+        Name: "DiscardRangeTrigger"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
+          }
+        }
+        ParentId: 12452689430554011454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:sphere"
+          }
+        }
+      }
+      Objects {
         Id: 2530052342653636063
         Name: "ServerContext"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: -6.83018789e-06
+            Yaw: -6.83018652e-06
           }
           Scale {
             X: 1
@@ -143,10 +222,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 322541977663113600
+        ParentId: 12585083632406728903
         ChildIds: 12087399381689548456
         ChildIds: 2333158013707885829
-        ChildIds: 12452689430554011454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -254,79 +332,6 @@ Assets {
         Script {
           ScriptAsset {
             Id: 191529618608883271
-          }
-        }
-      }
-      Objects {
-        Id: 12452689430554011454
-        Name: "ReplicationRangeTrigger"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 25
-            Y: 25
-            Z: 25
-          }
-        }
-        ParentId: 2530052342653636063
-        ChildIds: 14900818997121001386
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:sphere"
-          }
-        }
-      }
-      Objects {
-        Id: 14900818997121001386
-        Name: "DiscardRangeTrigger"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1.5
-            Y: 1.5
-            Z: 1.5
-          }
-        }
-        ParentId: 12452689430554011454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:sphere"
           }
         }
       }

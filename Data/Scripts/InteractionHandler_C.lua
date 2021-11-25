@@ -1,5 +1,7 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
+local doubleClickTimer = 0.0
+
 function TryInteractRecursive(target, primary)
     if target == nil then
         return false
@@ -15,15 +17,22 @@ function TryInteractRecursive(target, primary)
     if primary then
         -- Update target selection
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, { proximityNetworkedObject.id })
-
-        -- Try to perform the default action for the target object (ie auto-attack, mine, etc)
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. proximityNetworkedObject.id)
+        if doubleClickTimer >= 0.0 then
+            -- Try to perform the default action for the target object (ie auto-attack, mine, etc)
+            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. proximityNetworkedObject.id)
+        else
+            doubleClickTimer = 0.5
+        end
         return true
     else
         -- Display option list on right-click
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. proximityNetworkedObject.id)
         return true
     end
+end
+
+function Tick(deltaTime)
+    doubleClickTimer = doubleClickTimer - deltaTime
 end
 
 local function OnMouseDown(cursorPosition, primary)

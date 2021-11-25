@@ -1,6 +1,46 @@
 Name: "Oceans"
 RootId: 13700530625918812234
 Objects {
+  Id: 7939474946825347838
+  Name: "FrameworkWorldMapBrigantine_C"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13700530625918812234
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12036413200326296165
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkWorldMapBrigantine_C"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -33910
+            Y: 56920
+            Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 129.441956
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5175177042247091831
+    }
+  }
+}
+Objects {
   Id: 2946152223578484285
   Name: "Water"
   Transform {

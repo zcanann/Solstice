@@ -115,6 +115,11 @@ Task.Spawn(function ()
 Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID,
 { propProximityNetworkedObject.id,
     function (proximityNetworkedObjectId)
+        -- It's easier to just listen for both the resolved and unresolved ids for players
+        if propProximityNetworkedObject.id ~= proximityNetworkedObjectId then
+            Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerEnteredRange)
+            Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. propProximityNetworkedObject.id, OnPlayerLeftRange)
+        end
         Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. proximityNetworkedObjectId, OnPlayerEnteredRange)
         Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. proximityNetworkedObjectId, OnPlayerLeftRange)
     end

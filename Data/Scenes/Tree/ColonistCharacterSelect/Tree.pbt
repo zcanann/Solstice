@@ -615,17 +615,9 @@ Objects {
   }
 }
 Objects {
-  Id: 9110823973702386638
-  Name: "OKAMI Robot Swordsman"
+  Id: 2221277896217730617
+  Name: "FrameworkNpcOkamiBot"
   Transform {
-    Location {
-      X: 391
-      Y: -2116
-      Z: 1814
-    }
-    Rotation {
-      Yaw: -56.2499161
-    }
     Scale {
       X: 1
       Y: 1
@@ -633,1605 +625,39 @@ Objects {
     }
   }
   ParentId: 5250854901689189847
-  ChildIds: 1995509600649822457
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ObjectId"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:Team"
-      Int: 99
-    }
-    Overrides {
-      Name: "cs:CurrentState"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:CurrentHealth"
-      Float: 300
-    }
-    Overrides {
-      Name: "cs:MoveSpeed"
-      Float: 400
-    }
-    Overrides {
-      Name: "cs:TurnSpeed"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:LogicalPeriod"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "cs:ReturnToSpawn"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:VisionHalfAngle"
-      Float: 85
-    }
-    Overrides {
-      Name: "cs:VisionRadius"
-      Float: 2500
-    }
-    Overrides {
-      Name: "cs:HearingRadius"
-      Float: 1000
-    }
-    Overrides {
-      Name: "cs:SearchBonusVision"
-      Float: 5000
-    }
-    Overrides {
-      Name: "cs:SearchDuration"
-      Float: 6
-    }
-    Overrides {
-      Name: "cs:PossibilityRadius"
-      Float: 800
-    }
-    Overrides {
-      Name: "cs:ChaseRadius"
-      Float: 4000
-    }
-    Overrides {
-      Name: "cs:AttackRange"
-      Float: 200
-    }
-    Overrides {
-      Name: "cs:AttackCast"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "cs:AttackRecovery"
-      Float: 1
-    }
-    Overrides {
-      Name: "cs:AttackCooldown"
-      Float: 1.5
-    }
-    Overrides {
-      Name: "cs:IsPushable"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:RewardResourceType"
-      String: "XP"
-    }
-    Overrides {
-      Name: "cs:RewardResourceAmount"
-      Int: 1
-    }
-    Overrides {
-      Name: "cs:LootId"
-      String: "Common"
-    }
-    Overrides {
-      Name: "cs:CurrentState:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:CurrentHealth:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:ObjectId:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Team:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:LootId:tooltip"
-      String: "The ID of the group of loot from the Loot Factory. E.g. \"Common\" will drop a common loot when the NPC is killed. To drop nothing remove this property."
-    }
-    Overrides {
-      Name: "cs:ObjectId:tooltip"
-      String: "Set at runtime. The NPC Manager dynamically assigns an ID to each NPC so they can know if a networked event pertains to them or to another NPC."
-    }
-    Overrides {
-      Name: "cs:Team:tooltip"
-      String: "Like players, NPCs can have a team. They will fight players and NPCs from other teams and will not fight characters from the same team as them. When spawned from a spawn camp, the NPC\'s team is dynamically set to that of the camp."
-    }
-    Overrides {
-      Name: "cs:CurrentState:tooltip"
-      String: "Set dynamically at runtime. This is the internal state of the NPC, such as sleeping, engaging, attacking, etc. This networked property coordinates the server and client parts of the NPC."
-    }
-    Overrides {
-      Name: "cs:CurrentHealth:tooltip"
-      String: "The NPC\'s health/hitpoints. When editing it represents their max and initial health. During runtime it\'s their current health."
-    }
-    Overrides {
-      Name: "cs:MoveSpeed:tooltip"
-      String: "The NPC\'s top movement speed in cm/s. Set to zero for an NPC that doesn\'t move (e.g. Tower or other building)."
-    }
-    Overrides {
-      Name: "cs:TurnSpeed:tooltip"
-      String: "How quickly the NPC rotates to face their target or when searching for the origin of an attack."
-    }
-    Overrides {
-      Name: "cs:LogicalPeriod:tooltip"
-      String: "To avoid overusing the server\'s CPU the NPC\'s only make decisions periodically. The LogicalPeriod is the length of that interval, in seconds."
-    }
-    Overrides {
-      Name: "cs:ReturnToSpawn:tooltip"
-      String: "If true, the NPC will try to return to their spawn point after they have nothing to do."
-    }
-    Overrides {
-      Name: "cs:VisionHalfAngle:tooltip"
-      String: "This is half the vision cone\'s angle. Enemies outside the angle will not be seen. If set to 0 or greater than 360 then the NPC has full vision all around it. A value of 90 degrees would result in a half-sphere of peripheral vision. The smaller the value, the worse is the NPC\'s vision."
-    }
-    Overrides {
-      Name: "cs:VisionRadius:tooltip"
-      String: "The max range of the vision (in centimeters). Enemies at a distance greater than this value will not be seen."
-    }
-    Overrides {
-      Name: "cs:HearingRadius:tooltip"
-      String: "If an ally is hit by an attack, the point of impact is compared against the HearingRadius. If closer than this distance, then the NPC will begin a search to find the source of the attack."
-    }
-    Overrides {
-      Name: "cs:SearchBonusVision:tooltip"
-      String: "While searching for an enemy that recently attacked, the NPC can be given a bonus vision range."
-    }
-    Overrides {
-      Name: "cs:SearchDuration:tooltip"
-      String: "Duration, in seconds, if the search pattern."
-    }
-    Overrides {
-      Name: "cs:PossibilityRadius:tooltip"
-      String: "When searching for an enemy that attacked recently, the NPC will scan an area starting at itself then moving in the direction where the attack came from. The PossibilityRadius is the search volume that moves in that direction. A larger value means the NPC has an easier time spotting enemies."
-    }
-    Overrides {
-      Name: "cs:ChaseRadius:tooltip"
-      String: "If engaging an enemy that is outside of attack range, the NPC will give up the chase if the enemy goes further than their ChaseRadius."
-    }
-    Overrides {
-      Name: "cs:AttackRange:tooltip"
-      String: "The NPC engages and moves towards a target until that target is within the AttackRange. That\'s when it changes to an Attack state and produces the projectile that is the combat interaction. A smaller attack range means the NPC must get closer before executing an attack."
-    }
-    Overrides {
-      Name: "cs:AttackCast:tooltip"
-      String: "While executing an attack, the AttackCast is the amount of \"windup\" time, in seconds, before the projectile is produced."
-    }
-    Overrides {
-      Name: "cs:AttackRecovery:tooltip"
-      String: "During an attack, the AttackRecovery time is an amount in seconds after the projectile is created, during which the NPC winds down their attack and essentially does nothing."
-    }
-    Overrides {
-      Name: "cs:AttackCooldown:tooltip"
-      String: "The AttackCooldown is the minimum amount of time, in seconds, between NPC attacks. If the attack is on cooldown and the target continues within attack range, the NPC will essentially do nothing until the attack cooldown time completes."
-    }
-    Overrides {
-      Name: "cs:IsPushable:tooltip"
-      String: "If true, then the NPC can be pushed aside by allied characters if they are trying to occupy the same space."
-    }
-    Overrides {
-      Name: "cs:RewardResourceType:tooltip"
-      String: "Some NPCs can grant resources to players that kill them. The RewardResourceType is the Type of resource to grant to players."
-    }
-    Overrides {
-      Name: "cs:RewardResourceAmount:tooltip"
-      String: "Some NPCs can grant resources to players that kill them. The RewardResourceAmount is the Amount of the resource to grant to players"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 1995509600649822457
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9110823973702386638
-  ChildIds: 6050111822217067806
-  ChildIds: 8533855420749620769
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 8533855420749620769
-  Name: "GeoRoot"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1995509600649822457
-  ChildIds: 3246394254655126170
-  ChildIds: 3247525752521548385
-  ChildIds: 3339915284418697139
-  ChildIds: 269041202820625019
-  ChildIds: 16670353852713193282
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 16670353852713193282
-  Name: "Bulwark Enemy"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8533855420749620769
-  ChildIds: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 13940533586880500706
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -179.999969
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 16670353852713193282
-  ChildIds: 6197693244458532475
-  ChildIds: 4615257538233274046
-  ChildIds: 12523597362566516494
-  ChildIds: 8346087370532927634
-  ChildIds: 16948133514467049481
-  ChildIds: 8382467148864176620
-  ChildIds: 3292351869679018753
-  ChildIds: 8205253546630964676
-  ChildIds: 9263283369559567929
-  ChildIds: 14238679110213892639
-  ChildIds: 3567219828132101062
-  ChildIds: 10841751209576583707
-  ChildIds: 7752176402741194326
-  ChildIds: 9559840402600935353
-  ChildIds: 12703374574233841195
-  ChildIds: 5018257031648574870
-  ChildIds: 13530159228587890674
-  ChildIds: 10892695386583588098
-  ChildIds: 7399028900173585902
-  ChildIds: 13416485933133089180
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 13416485933133089180
-  Name: "AnimatedMeshCostume"
-  Transform {
-    Location {
-      Z: 3.05175781e-05
-    }
-    Rotation {
-      Yaw: -6.14716628e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7066117055503624470
-    }
-  }
-}
-Objects {
-  Id: 7399028900173585902
-  Name: "Skeleton Mob"
-  Transform {
-    Location {
-      Z: 104.998901
-    }
-    Rotation {
-      Yaw: -6.83018734e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 17803366332466114312
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3534261496688628660
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkNpcOkamiBot"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 391
+            Y: -2116
+            Z: 1814
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -56.2498817
+          }
+        }
       }
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 10824426293829047600
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    InteractWithTriggers: true
-    AnimatedMesh {
-      AnimationStance: "unarmed_bind_pose"
-      AnimationStancePlaybackRate: 1
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        PlaybackRate: 1
-      }
-      SkinnedMeshes {
-      }
-      SkinnedMeshes {
-      }
-      SkinnedMeshes {
-      }
-      SkinnedMeshes {
-      }
+    TemplateAsset {
+      Id: 11609164602334197849
     }
   }
 }
 Objects {
-  Id: 10892695386583588098
-  Name: "right_prop"
+  Id: 11661409388867259367
+  Name: "FrameworkNpcMechaBot"
   Transform {
-    Location {
-      X: 7.66802597
-      Y: 53.3281174
-      Z: 107.507202
-    }
-    Rotation {
-      Pitch: 74.4261322
-      Yaw: -133.846039
-      Roll: 46.8662491
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 13530159228587890674
-  Name: "head"
-  Transform {
-    Location {
-      X: -5
-      Z: 190
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "head"
-  }
-}
-Objects {
-  Id: 5018257031648574870
-  Name: "neck"
-  Transform {
-    Location {
-      X: -5
-      Z: 180
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "neck"
-  }
-}
-Objects {
-  Id: 12703374574233841195
-  Name: "left_shoulder"
-  Transform {
-    Location {
-      X: -4.99999094
-      Y: -19.9999943
-      Z: 170
-    }
-    Rotation {
-      Roll: -15
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_shoulder"
-  }
-}
-Objects {
-  Id: 9559840402600935353
-  Name: "left_elbow"
-  Transform {
-    Location {
-      X: -10.0000019
-      Y: -29.9999886
-      Z: 140
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_elbow"
-  }
-}
-Objects {
-  Id: 7752176402741194326
-  Name: "left_wrist"
-  Transform {
-    Location {
-      X: 2.34842337e-05
-      Y: -35
-      Z: 120
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_wrist"
-  }
-}
-Objects {
-  Id: 10841751209576583707
-  Name: "right_shoulder"
-  Transform {
-    Location {
-      X: -5.00000906
-      Y: 20.0000057
-      Z: 170
-    }
-    Rotation {
-      Roll: 10
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_shoulder"
-  }
-}
-Objects {
-  Id: 3567219828132101062
-  Name: "right_elbow"
-  Transform {
-    Location {
-      X: -9.99999809
-      Y: 30.0000114
-      Z: 140
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_elbow"
-  }
-}
-Objects {
-  Id: 14238679110213892639
-  Name: "right_wrist"
-  Transform {
-    Location {
-      X: -1.27553976e-05
-      Y: 45
-      Z: 120
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_wrist"
-  }
-}
-Objects {
-  Id: 9263283369559567929
-  Name: "upper_spine"
-  Transform {
-    Location {
-      Z: 160
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "upper_spine"
-  }
-}
-Objects {
-  Id: 8205253546630964676
-  Name: "lower_spine"
-  Transform {
-    Location {
-      Z: 135
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "lower_spine"
-  }
-}
-Objects {
-  Id: 3292351869679018753
-  Name: "pelvis"
-  Transform {
-    Location {
-      Z: 120
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "pelvis"
-  }
-}
-Objects {
-  Id: 8382467148864176620
-  Name: "left_hip"
-  Transform {
-    Location {
-      Y: -10
-      Z: 110
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_hip"
-  }
-}
-Objects {
-  Id: 16948133514467049481
-  Name: "left_knee"
-  Transform {
-    Location {
-      Y: -15
-      Z: 60
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_knee"
-  }
-}
-Objects {
-  Id: 8346087370532927634
-  Name: "left_ankle"
-  Transform {
-    Location {
-      X: -10
-      Y: -25
-      Z: 10
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_ankle"
-  }
-}
-Objects {
-  Id: 12523597362566516494
-  Name: "right_hip"
-  Transform {
-    Location {
-      Y: 10
-      Z: 110
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_hip"
-  }
-}
-Objects {
-  Id: 4615257538233274046
-  Name: "right_knee"
-  Transform {
-    Location {
-      Y: 15
-      Z: 60
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_knee"
-  }
-}
-Objects {
-  Id: 6197693244458532475
-  Name: "right_ankle"
-  Transform {
-    Location {
-      X: -10
-      Y: 25
-      Z: 10
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 13940533586880500706
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_ankle"
-  }
-}
-Objects {
-  Id: 269041202820625019
-  Name: "head"
-  Transform {
-    Location {
-      X: -0.34375
-      Y: -0.044921875
-      Z: 145.818359
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8533855420749620769
-  ChildIds: 12580697994876995371
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12580697994876995371
-  Name: "Eye Patch"
-  Transform {
-    Location {
-      X: 1.65234375
-      Y: -2.29003906
-      Z: 50.5424805
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 269041202820625019
-  ChildIds: 12765031634812819386
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 12765031634812819386
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-      X: 8.84375
-      Y: -5.66894531
-      Z: -34.2834473
-    }
-    Rotation {
-      Roll: 1.19528268e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12580697994876995371
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ChanceToDestroy"
-      Float: 0.85
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 3339915284418697139
-  Name: "upper_spine"
-  Transform {
-    Location {
-      X: -0.34375
-      Y: -0.044921875
-      Z: 145.818359
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8533855420749620769
-  ChildIds: 1453052163952974192
-  ChildIds: 4068607709714313693
-  ChildIds: 11901430444520517352
-  ChildIds: 9607498426621322790
-  ChildIds: 1161954102068343922
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 1161954102068343922
-  Name: "Moss Chest"
-  Transform {
-    Location {
-      X: 10.4960938
-      Y: -7.95898438
-      Z: 16.2590332
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3339915284418697139
-  ChildIds: 9305969588855329729
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 9305969588855329729
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 1.19528295e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1161954102068343922
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 9607498426621322790
-  Name: "Grass Rib"
-  Transform {
-    Location {
-      X: 2.05078125
-      Y: 14.3808594
-      Z: -1.82763672
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3339915284418697139
-  ChildIds: 17246810770198490222
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17246810770198490222
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: -5.97641474e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9607498426621322790
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 11901430444520517352
-  Name: "Heart"
-  Transform {
-    Location {
-      X: -0.998046875
-      Y: -7.67089844
-      Z: 14.0097656
-    }
-    Rotation {
-      Roll: -12.2631531
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3339915284418697139
-  ChildIds: 804197244700607803
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 804197244700607803
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 12.2631292
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11901430444520517352
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 4068607709714313693
-  Name: "Guts"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3339915284418697139
-  ChildIds: 9009480876651892418
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 9009480876651892418
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 3.84198102e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4068607709714313693
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 1453052163952974192
-  Name: "Lung"
-  Transform {
-    Location {
-      X: -2.09570312
-      Y: 6.68359375
-      Z: 17.6203613
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3339915284418697139
-  ChildIds: 8814336170958568145
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 8814336170958568145
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 3.84198102e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1453052163952974192
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 3247525752521548385
-  Name: "AnimControllerSkeletonSwordsman"
-  Transform {
-    Location {
-      Z: 3.05175781e-05
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8533855420749620769
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:AnimatedMesh"
-      ObjectReference {
-        SelfId: 7399028900173585902
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 9110823973702386638
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5406335316845091310
-    }
-  }
-}
-Objects {
-  Id: 3246394254655126170
-  Name: "NPCHealthBarDataProviderClient"
-  Transform {
-    Location {
-      Z: 313.559082
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 8533855420749620769
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 9110823973702386638
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 5654639260356653992
-    }
-  }
-}
-Objects {
-  Id: 6050111822217067806
-  Name: "ForwardNode"
-  Transform {
-    Location {
-      X: 100
-      Z: 100
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1995509600649822457
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7198450776543303234
-  Name: "Mecha Robot"
-  Transform {
-    Location {
-      X: 1097
-      Y: -2114
-      Z: 1782
-    }
-    Rotation {
-      Yaw: -123.750031
-    }
     Scale {
       X: 1
       Y: 1
@@ -2239,1512 +665,33 @@ Objects {
     }
   }
   ParentId: 5250854901689189847
-  ChildIds: 11502514731107992463
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ObjectId"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:Team"
-      Int: 99
-    }
-    Overrides {
-      Name: "cs:CurrentState"
-      Int: 0
-    }
-    Overrides {
-      Name: "cs:CurrentHealth"
-      Float: 100
-    }
-    Overrides {
-      Name: "cs:MoveSpeed"
-      Float: 400
-    }
-    Overrides {
-      Name: "cs:TurnSpeed"
-      Float: 3
-    }
-    Overrides {
-      Name: "cs:LogicalPeriod"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "cs:ReturnToSpawn"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:VisionHalfAngle"
-      Float: 85
-    }
-    Overrides {
-      Name: "cs:VisionRadius"
-      Float: 2500
-    }
-    Overrides {
-      Name: "cs:HearingRadius"
-      Float: 1000
-    }
-    Overrides {
-      Name: "cs:SearchBonusVision"
-      Float: 5000
-    }
-    Overrides {
-      Name: "cs:SearchDuration"
-      Float: 6
-    }
-    Overrides {
-      Name: "cs:PossibilityRadius"
-      Float: 800
-    }
-    Overrides {
-      Name: "cs:ChaseRadius"
-      Float: 4000
-    }
-    Overrides {
-      Name: "cs:AttackRange"
-      Float: 1300
-    }
-    Overrides {
-      Name: "cs:AttackCast"
-      Float: 0.5
-    }
-    Overrides {
-      Name: "cs:AttackRecovery"
-      Float: 1
-    }
-    Overrides {
-      Name: "cs:AttackCooldown"
-      Float: 1.5
-    }
-    Overrides {
-      Name: "cs:IsPushable"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:RewardResourceType"
-      String: "XP"
-    }
-    Overrides {
-      Name: "cs:RewardResourceAmount"
-      Int: 20
-    }
-    Overrides {
-      Name: "cs:LootId"
-      String: "Common"
-    }
-    Overrides {
-      Name: "cs:CurrentState:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:CurrentHealth:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:ObjectId:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:Team:isrep"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:LootId:tooltip"
-      String: "The ID of the group of loot from the Loot Factory. E.g. \"Common\" will drop a common loot when the NPC is killed. To drop nothing remove this property."
-    }
-    Overrides {
-      Name: "cs:ObjectId:tooltip"
-      String: "Set at runtime. The NPC Manager dynamically assigns an ID to each NPC so they can know if a networked event pertains to them or to another NPC."
-    }
-    Overrides {
-      Name: "cs:Team:tooltip"
-      String: "Like players, NPCs can have a team. They will fight players and NPCs from other teams and will not fight characters from the same team as them. When spawned from a spawn camp, the NPC\'s team is dynamically set to that of the camp."
-    }
-    Overrides {
-      Name: "cs:CurrentState:tooltip"
-      String: "Set dynamically at runtime. This is the internal state of the NPC, such as sleeping, engaging, attacking, etc. This networked property coordinates the server and client parts of the NPC."
-    }
-    Overrides {
-      Name: "cs:CurrentHealth:tooltip"
-      String: "The NPC\'s health/hitpoints. When editing it represents their max and initial health. During runtime it\'s their current health."
-    }
-    Overrides {
-      Name: "cs:MoveSpeed:tooltip"
-      String: "The NPC\'s top movement speed in cm/s. Set to zero for an NPC that doesn\'t move (e.g. Tower or other building)."
-    }
-    Overrides {
-      Name: "cs:TurnSpeed:tooltip"
-      String: "How quickly the NPC rotates to face their target or when searching for the origin of an attack."
-    }
-    Overrides {
-      Name: "cs:LogicalPeriod:tooltip"
-      String: "To avoid overusing the server\'s CPU the NPC\'s only make decisions periodically. The LogicalPeriod is the length of that interval, in seconds."
-    }
-    Overrides {
-      Name: "cs:ReturnToSpawn:tooltip"
-      String: "If true, the NPC will try to return to their spawn point after they have nothing to do."
-    }
-    Overrides {
-      Name: "cs:VisionHalfAngle:tooltip"
-      String: "This is half the vision cone\'s angle. Enemies outside the angle will not be seen. If set to 0 or greater than 360 then the NPC has full vision all around it. A value of 90 degrees would result in a half-sphere of peripheral vision. The smaller the value, the worse is the NPC\'s vision."
-    }
-    Overrides {
-      Name: "cs:VisionRadius:tooltip"
-      String: "The max range of the vision (in centimeters). Enemies at a distance greater than this value will not be seen."
-    }
-    Overrides {
-      Name: "cs:HearingRadius:tooltip"
-      String: "If an ally is hit by an attack, the point of impact is compared against the HearingRadius. If closer than this distance, then the NPC will begin a search to find the source of the attack."
-    }
-    Overrides {
-      Name: "cs:SearchBonusVision:tooltip"
-      String: "While searching for an enemy that recently attacked, the NPC can be given a bonus vision range."
-    }
-    Overrides {
-      Name: "cs:SearchDuration:tooltip"
-      String: "Duration, in seconds, if the search pattern."
-    }
-    Overrides {
-      Name: "cs:PossibilityRadius:tooltip"
-      String: "When searching for an enemy that attacked recently, the NPC will scan an area starting at itself then moving in the direction where the attack came from. The PossibilityRadius is the search volume that moves in that direction. A larger value means the NPC has an easier time spotting enemies."
-    }
-    Overrides {
-      Name: "cs:ChaseRadius:tooltip"
-      String: "If engaging an enemy that is outside of attack range, the NPC will give up the chase if the enemy goes further than their ChaseRadius."
-    }
-    Overrides {
-      Name: "cs:AttackRange:tooltip"
-      String: "The NPC engages and moves towards a target until that target is within the AttackRange. That\'s when it changes to an Attack state and produces the projectile that is the combat interaction. A smaller attack range means the NPC must get closer before executing an attack."
-    }
-    Overrides {
-      Name: "cs:AttackCast:tooltip"
-      String: "While executing an attack, the AttackCast is the amount of \"windup\" time, in seconds, before the projectile is produced."
-    }
-    Overrides {
-      Name: "cs:AttackRecovery:tooltip"
-      String: "During an attack, the AttackRecovery time is an amount in seconds after the projectile is created, during which the NPC winds down their attack and essentially does nothing."
-    }
-    Overrides {
-      Name: "cs:AttackCooldown:tooltip"
-      String: "The AttackCooldown is the minimum amount of time, in seconds, between NPC attacks. If the attack is on cooldown and the target continues within attack range, the NPC will essentially do nothing until the attack cooldown time completes."
-    }
-    Overrides {
-      Name: "cs:IsPushable:tooltip"
-      String: "If true, then the NPC can be pushed aside by allied characters if they are trying to occupy the same space."
-    }
-    Overrides {
-      Name: "cs:RewardResourceType:tooltip"
-      String: "Some NPCs can grant resources to players that kill them. The RewardResourceType is the Type of resource to grant to players."
-    }
-    Overrides {
-      Name: "cs:RewardResourceAmount:tooltip"
-      String: "Some NPCs can grant resources to players that kill them. The RewardResourceAmount is the Amount of the resource to grant to players"
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 11502514731107992463
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 7198450776543303234
-  ChildIds: 1841411109096737116
-  ChildIds: 922689809900255160
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 922689809900255160
-  Name: "GeoRoot"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11502514731107992463
-  ChildIds: 15511760529905011267
-  ChildIds: 4065777365944224070
-  ChildIds: 3659950994331918004
-  ChildIds: 13053938188962440797
-  ChildIds: 11471706507770129194
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 11471706507770129194
-  Name: "Bulwark Enemy"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -179.999969
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 922689809900255160
-  ChildIds: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 6622498573450364129
-  Name: "ClientContext"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -179.999969
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11471706507770129194
-  ChildIds: 13264081647548881842
-  ChildIds: 993168776107260547
-  ChildIds: 3352473732980955900
-  ChildIds: 15038771419259901827
-  ChildIds: 11171458276229430415
-  ChildIds: 7799973203067402076
-  ChildIds: 15659194359915861619
-  ChildIds: 11516486654791997092
-  ChildIds: 16054336031330856626
-  ChildIds: 1888047912037338359
-  ChildIds: 12581720275194337979
-  ChildIds: 1233055050124068176
-  ChildIds: 8754725745575041442
-  ChildIds: 261021730216036797
-  ChildIds: 10164945670747726348
-  ChildIds: 3613077952646460434
-  ChildIds: 584727163280549052
-  ChildIds: 8426292578119194579
-  ChildIds: 12058443945909103147
-  ChildIds: 15253208474135044774
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 15253208474135044774
-  Name: "AnimatedMeshCostume"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: -8.19622583e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7066117055503624470
-    }
-  }
-}
-Objects {
-  Id: 12058443945909103147
-  Name: "Skeleton Mob"
-  Transform {
-    Location {
-      Z: 104.998901
-    }
-    Rotation {
-      Yaw: -8.87924543e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 17803366332466114312
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9813487831248154703
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkNpcMechaBot"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1097
+            Y: -2114
+            Z: 1782
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -123.750031
+          }
+        }
       }
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 10824426293829047600
+    TemplateAsset {
+      Id: 8201025529106029590
     }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    InteractWithTriggers: true
-    AnimatedMesh {
-      AnimationStance: "unarmed_bind_pose"
-      AnimationStancePlaybackRate: 1
-      AnimationStanceShouldLoop: true
-      AnimationPlaybackRateMultiplier: 1
-      PlayOnStartAnimation {
-        PlaybackRate: 1
-      }
-      SkinnedMeshes {
-      }
-      SkinnedMeshes {
-      }
-      SkinnedMeshes {
-      }
-      SkinnedMeshes {
-      }
-    }
-  }
-}
-Objects {
-  Id: 8426292578119194579
-  Name: "right_prop"
-  Transform {
-    Location {
-      X: 7.66803885
-      Y: 53.3281136
-      Z: 107.507202
-    }
-    Rotation {
-      Pitch: 74.4261551
-      Yaw: -133.846039
-      Roll: 46.8662949
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 584727163280549052
-  Name: "head"
-  Transform {
-    Location {
-      X: -5
-      Z: 190
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "head_1"
-  }
-}
-Objects {
-  Id: 3613077952646460434
-  Name: "neck"
-  Transform {
-    Location {
-      X: -5
-      Z: 180
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "neck_1"
-  }
-}
-Objects {
-  Id: 10164945670747726348
-  Name: "left_shoulder"
-  Transform {
-    Location {
-      X: -5
-      Y: -25
-      Z: 170
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_shoulder_1"
-  }
-}
-Objects {
-  Id: 261021730216036797
-  Name: "left_elbow"
-  Transform {
-    Location {
-      X: -10
-      Y: -40
-      Z: 140
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_elbow_1"
-  }
-}
-Objects {
-  Id: 8754725745575041442
-  Name: "left_wrist"
-  Transform {
-    Location {
-      Y: -50
-      Z: 120
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_wrist_1"
-  }
-}
-Objects {
-  Id: 1233055050124068176
-  Name: "right_shoulder"
-  Transform {
-    Location {
-      X: -5
-      Y: 25
-      Z: 170
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_shoulder_1"
-  }
-}
-Objects {
-  Id: 12581720275194337979
-  Name: "right_elbow"
-  Transform {
-    Location {
-      X: -10
-      Y: 40
-      Z: 140
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_elbow_1"
-  }
-}
-Objects {
-  Id: 1888047912037338359
-  Name: "right_wrist"
-  Transform {
-    Location {
-      Y: 55
-      Z: 120
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_wrist_1"
-  }
-}
-Objects {
-  Id: 16054336031330856626
-  Name: "upper_spine"
-  Transform {
-    Location {
-      Z: 160
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "upper_spine_1"
-  }
-}
-Objects {
-  Id: 11516486654791997092
-  Name: "lower_spine"
-  Transform {
-    Location {
-      Z: 135
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "lower_spine_1"
-  }
-}
-Objects {
-  Id: 15659194359915861619
-  Name: "pelvis"
-  Transform {
-    Location {
-      Z: 120
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "pelvis_1"
-  }
-}
-Objects {
-  Id: 7799973203067402076
-  Name: "left_hip"
-  Transform {
-    Location {
-      Y: -10
-      Z: 110
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_hip_1"
-  }
-}
-Objects {
-  Id: 11171458276229430415
-  Name: "left_knee"
-  Transform {
-    Location {
-      Y: -15
-      Z: 60
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_knee_1"
-  }
-}
-Objects {
-  Id: 15038771419259901827
-  Name: "left_ankle"
-  Transform {
-    Location {
-      X: -10
-      Y: -25
-      Z: 10
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "left_ankle_1"
-  }
-}
-Objects {
-  Id: 3352473732980955900
-  Name: "right_hip"
-  Transform {
-    Location {
-      Y: 10
-      Z: 110
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_hip_1"
-  }
-}
-Objects {
-  Id: 993168776107260547
-  Name: "right_knee"
-  Transform {
-    Location {
-      Y: 15
-      Z: 60
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_knee_1"
-  }
-}
-Objects {
-  Id: 13264081647548881842
-  Name: "right_ankle"
-  Transform {
-    Location {
-      X: -10
-      Y: 25
-      Z: 10
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6622498573450364129
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "right_ankle_1"
-  }
-}
-Objects {
-  Id: 13053938188962440797
-  Name: "head"
-  Transform {
-    Location {
-      X: -0.34375
-      Y: -0.044921875
-      Z: 145.818359
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 922689809900255160
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 3659950994331918004
-  Name: "upper_spine"
-  Transform {
-    Location {
-      X: -0.34375
-      Y: -0.044921875
-      Z: 145.818359
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 922689809900255160
-  ChildIds: 561982565028751899
-  ChildIds: 3415098987080293879
-  ChildIds: 11061410698529569252
-  ChildIds: 3541012525902929320
-  ChildIds: 17986286202982979610
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17986286202982979610
-  Name: "Moss Chest"
-  Transform {
-    Location {
-      X: 10.4960938
-      Y: -7.95898438
-      Z: 16.2590332
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3659950994331918004
-  ChildIds: 17205813275536919012
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17205813275536919012
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 1.19528295e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17986286202982979610
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 3541012525902929320
-  Name: "Grass Rib"
-  Transform {
-    Location {
-      X: 2.05078125
-      Y: 14.3808594
-      Z: -1.82763672
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3659950994331918004
-  ChildIds: 17648129895541536163
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 17648129895541536163
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: -5.97641474e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3541012525902929320
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 11061410698529569252
-  Name: "Heart"
-  Transform {
-    Location {
-      X: -0.998046875
-      Y: -7.67089844
-      Z: 14.0097656
-    }
-    Rotation {
-      Roll: -12.2631531
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3659950994331918004
-  ChildIds: 13515220936480015114
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 13515220936480015114
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 12.2631292
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11061410698529569252
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 3415098987080293879
-  Name: "Guts"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3659950994331918004
-  ChildIds: 7376001598586337383
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7376001598586337383
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 3.84198102e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3415098987080293879
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 561982565028751899
-  Name: "Lung"
-  Transform {
-    Location {
-      X: -2.09570312
-      Y: 6.68359375
-      Z: 17.6203613
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 3659950994331918004
-  ChildIds: 9341477068151098772
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 9341477068151098772
-  Name: "ChanceToDestroyParent"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Roll: 3.84198102e-05
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 561982565028751899
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 4970194163464674918
-    }
-  }
-}
-Objects {
-  Id: 4065777365944224070
-  Name: "AnimControllerMechRobot"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 922689809900255160
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:AnimatedMesh"
-      ObjectReference {
-        SelfId: 12058443945909103147
-      }
-    }
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 7198450776543303234
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 8508037438717207987
-    }
-  }
-}
-Objects {
-  Id: 15511760529905011267
-  Name: "NPCHealthBarDataProviderClient"
-  Transform {
-    Location {
-      Z: 313.559082
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 922689809900255160
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Root"
-      ObjectReference {
-        SelfId: 7198450776543303234
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15592291175318004650
-    }
-  }
-}
-Objects {
-  Id: 1841411109096737116
-  Name: "ForwardNode"
-  Transform {
-    Location {
-      X: 100
-      Z: 100
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11502514731107992463
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceon"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
   }
 }
 Objects {
@@ -5091,7 +2038,7 @@ Objects {
 }
 Objects {
   Id: 9929179661642546837
-  Name: "FloatingPlatform_ENV"
+  Name: "FrameworkColonistPlatform"
   Transform {
     Location {
       X: -1161
@@ -5139,13 +2086,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 9929179661642546837
-    SubobjectId: 14593928250848836816
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-    WasRoot: true
   }
 }
 Objects {
@@ -5285,12 +2225,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13368547963163554620
-    SubobjectId: 18069879511842812281
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 17082395251102170005
@@ -5341,12 +2275,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 17082395251102170005
-    SubobjectId: 12561489196790774224
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -5419,12 +2347,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 7394372570761811124
-    SubobjectId: 2728498073200957169
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 17277844000734616074
@@ -5457,12 +2379,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 17277844000734616074
-    SubobjectId: 12431271651838777423
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -5512,12 +2428,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 12302236130071336942
-    SubobjectId: 16859742744556180907
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -5570,12 +2480,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 2859338512646708889
-    SubobjectId: 7272729685652135132
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 1873054303048032767
@@ -5625,12 +2529,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 1873054303048032767
-    SubobjectId: 6538638220445131706
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -5689,12 +2587,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 6267134279218326560
-    SubobjectId: 1565793943170723429
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 14021162663233280723
@@ -5752,12 +2644,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 14021162663233280723
-    SubobjectId: 9355851093938018454
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -5828,12 +2714,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13618139401046972509
-    SubobjectId: 18428410291155540504
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 6145108192679285483
@@ -5868,12 +2748,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 6145108192679285483
-    SubobjectId: 1586475914569486510
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -5923,12 +2797,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 1853404808850768888
-    SubobjectId: 6555862257502273981
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -5981,12 +2849,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13995041734034878675
-    SubobjectId: 9330302194323763862
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 10759247340935716447
@@ -6021,12 +2883,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 10759247340935716447
-    SubobjectId: 15425675708899744794
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6076,12 +2932,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 2931889125886489526
-    SubobjectId: 7778751780138398195
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6134,12 +2984,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 10252678432263444059
-    SubobjectId: 14774991586370671646
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 7734167277731859914
@@ -6174,12 +3018,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 7734167277731859914
-    SubobjectId: 2888720575280517007
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6229,12 +3067,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 14839209674765534761
-    SubobjectId: 10280858905993921644
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6287,12 +3119,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 1811546021282219351
-    SubobjectId: 6512314624225953554
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 7873723900933619724
@@ -6326,12 +3152,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 7873723900933619724
-    SubobjectId: 3316498757066654281
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6381,12 +3201,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 8497580571570163265
-    SubobjectId: 3940364515986508804
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6439,12 +3253,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 8374566678406426540
-    SubobjectId: 3998057519080648169
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 2881398802464150308
@@ -6478,12 +3286,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 2881398802464150308
-    SubobjectId: 7259605607613845857
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6533,12 +3335,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 12414009945720483648
-    SubobjectId: 17223146384631835909
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6591,12 +3387,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 17847796136005113491
-    SubobjectId: 13038932616360875222
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 9134079464015783602
@@ -6630,12 +3420,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 9134079464015783602
-    SubobjectId: 4431894733035709687
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6685,12 +3469,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 14381495328620878654
-    SubobjectId: 9572068859217598843
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6743,12 +3521,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 2211736866431872075
-    SubobjectId: 6769524668061969934
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
-  }
 }
 Objects {
   Id: 4919504737818559533
@@ -6783,12 +3555,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 4919504737818559533
-    SubobjectId: 506113281482262120
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6838,12 +3604,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 10451902305393370196
-    SubobjectId: 15154359732435920401
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6904,12 +3664,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 13499430992839710119
-    SubobjectId: 17875940104724371426
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -6979,12 +3733,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 394495247830492132
-    SubobjectId: 5060360919446020513
-    InstanceId: 9681967639165109287
-    TemplateId: 11270332208329448841
   }
 }
 Objects {
@@ -7255,12 +4003,6 @@ Objects {
   ParentId: 11592123833377885629
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -7316,12 +4058,6 @@ Objects {
   }
   ParentId: 11592123833377885629
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -7379,12 +4115,6 @@ Objects {
   ParentId: 11592123833377885629
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -7441,12 +4171,6 @@ Objects {
   ParentId: 11592123833377885629
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -7502,12 +4226,6 @@ Objects {
   }
   ParentId: 11592123833377885629
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -8546,12 +5264,6 @@ Objects {
   ParentId: 10950843679659926504
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 0.392383754
@@ -8565,12 +5277,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -8633,18 +5339,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -8744,12 +5438,6 @@ Objects {
   ParentId: 10950843679659926504
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 0.392383754
@@ -8763,12 +5451,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -8883,18 +5565,6 @@ Objects {
   ParentId: 15534149526551308867
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 1.0463562
@@ -8957,18 +5627,6 @@ Objects {
   ParentId: 15534149526551308867
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 1.0463562
@@ -9029,18 +5687,6 @@ Objects {
   }
   ParentId: 15534149526551308867
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
     Overrides {
       Name: "ma:Flame_A:color"
       Color {
@@ -9324,12 +5970,6 @@ Objects {
   ParentId: 7952103551673202209
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 0.392383754
@@ -9343,12 +5983,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -9411,18 +6045,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -9522,12 +6144,6 @@ Objects {
   ParentId: 7952103551673202209
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 0.392383754
@@ -9541,12 +6157,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -10346,12 +6956,6 @@ Objects {
   ParentId: 9888799320864915912
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 0.392383754
@@ -10365,12 +6969,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -10433,18 +7031,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -10544,12 +7130,6 @@ Objects {
   ParentId: 9888799320864915912
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
       Name: "ma:Flame_A:color"
       Color {
         G: 0.392383754
@@ -10563,12 +7143,6 @@ Objects {
         G: 0.392383754
         B: 0.75
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
       }
     }
   }
@@ -10782,18 +7356,6 @@ Objects {
   }
   ParentId: 17196963995282698995
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Flame_A:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
-    Overrides {
-      Name: "ma:Flame_B:id"
-      AssetReference {
-        Id: 7876552205251585207
-      }
-    }
     Overrides {
       Name: "ma:Flame_B:color"
       Color {
@@ -11351,12 +7913,6 @@ Objects {
   }
   ParentId: 11592123833377885629
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -14841,12 +11397,6 @@ Objects {
   }
   ParentId: 7729331741603834980
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -15015,12 +11565,6 @@ Objects {
   }
   ParentId: 7729331741603834980
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -17767,12 +14311,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -17826,12 +14364,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -17889,12 +14421,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -17948,12 +14474,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18011,12 +14531,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18070,12 +14584,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18133,12 +14641,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18192,12 +14694,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18255,12 +14751,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18314,12 +14804,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18377,12 +14861,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18436,12 +14914,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18499,12 +14971,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18558,12 +15024,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18621,12 +15081,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18680,12 +15134,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18743,12 +15191,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18802,12 +15244,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18865,12 +15301,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -18924,12 +15354,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -18987,12 +15411,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -19046,12 +15464,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -19109,12 +15521,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -19168,12 +15574,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -19231,12 +15631,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -19290,12 +15684,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -19353,12 +15741,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -19412,12 +15794,6 @@ Objects {
         G: 0.419631869
         B: 0.60800004
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -19712,12 +16088,6 @@ Objects {
   ParentId: 7729331741603834980
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.182886
@@ -19772,12 +16142,6 @@ Objects {
   }
   ParentId: 7729331741603834980
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -19834,12 +16198,6 @@ Objects {
   }
   ParentId: 7729331741603834980
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -20445,12 +16803,6 @@ Objects {
   ParentId: 7729331741603834980
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.52
@@ -20507,12 +16859,6 @@ Objects {
   ParentId: 7729331741603834980
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.52
@@ -20567,12 +16913,6 @@ Objects {
   }
   ParentId: 7729331741603834980
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -21505,12 +17845,6 @@ Objects {
   ParentId: 17422113296325043637
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.182886
@@ -22293,12 +18627,6 @@ Objects {
         A: 1
       }
     }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -22353,12 +18681,6 @@ Objects {
         G: 0.225000009
         B: 0.326
         A: 1
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
       }
     }
   }
@@ -22641,12 +18963,6 @@ Objects {
   }
   ParentId: 10154882333761848352
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -23103,12 +19419,6 @@ Objects {
   ParentId: 10154882333761848352
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -23165,12 +19475,6 @@ Objects {
   ParentId: 10154882333761848352
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -23224,12 +19528,6 @@ Objects {
   }
   ParentId: 10154882333761848352
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -23287,12 +19585,6 @@ Objects {
   ParentId: 10154882333761848352
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.182886
@@ -23346,12 +19638,6 @@ Objects {
   }
   ParentId: 10154882333761848352
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -23408,12 +19694,6 @@ Objects {
   }
   ParentId: 10154882333761848352
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -23715,12 +19995,6 @@ Objects {
   ParentId: 10154882333761848352
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -23777,12 +20051,6 @@ Objects {
   ParentId: 10154882333761848352
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -23836,12 +20104,6 @@ Objects {
   }
   ParentId: 10154882333761848352
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -23899,12 +20161,6 @@ Objects {
   ParentId: 10154882333761848352
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -23961,12 +20217,6 @@ Objects {
   ParentId: 10154882333761848352
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
         R: 0.341088027
@@ -24020,12 +20270,6 @@ Objects {
   }
   ParentId: 10154882333761848352
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
@@ -27854,12 +24098,6 @@ Objects {
   }
   ParentId: 13637680036120223781
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 3838721283619752521
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {

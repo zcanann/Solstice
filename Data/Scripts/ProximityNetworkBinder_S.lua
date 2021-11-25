@@ -13,11 +13,11 @@ function OnPlayerJoined(player)
 	playerProximityObjects[player.id] = playerProximityObjectId
 	playerProximityObjectsInverse[playerProximityObjectId] = player.id
 
+	player.serverUserData.playerProximityNetworking = playerProximityNetworking
+
 	-- Player attachment
 	playerProximityNetworking:AttachToPlayer(player, "pelvis")
 	networkInteractorScript.context.BindToPlayer(player)
-
-	player.serverUserData.playerProximityNetworking = playerProximityNetworking
 end
 
 function OnPlayerLeft(player)
