@@ -1,6 +1,160 @@
 Name: "UI"
 RootId: 5628166357863187692
 Objects {
+  Id: 8770223486394844110
+  Name: "UnitFrames"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5628166357863187692
+  ChildIds: 12917491428181922498
+  ChildIds: 12459676655263700272
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 12459676655263700272
+  Name: "UnitFrame_C"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8770223486394844110
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5131307976707040178
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 381
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 30
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8290807323105771514
+      value {
+        Overrides {
+          Name: "UIX"
+          Float: 377
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 0
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12411621271059381585
+      value {
+        Overrides {
+          Name: "Name"
+          String: "TargetUnitFrame"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10045553393318982251
+    }
+  }
+}
+Objects {
+  Id: 12917491428181922498
+  Name: "PlayerUnitFrame"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 8770223486394844110
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12411621271059381585
+      value {
+        Overrides {
+          Name: "Name"
+          String: "PlayerUnitFrame"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10045553393318982251
+    }
+  }
+}
+Objects {
   Id: 4997543145864768418
   Name: "Tabs"
   Transform {

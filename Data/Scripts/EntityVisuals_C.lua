@@ -8,14 +8,33 @@ local defaultDecalSize = 256.0
 local meleeRangeDecal = nil
 local debugAgroRangeDecal = nil
 
+local cachedMeleeRange = 0.0
+local isSelected = false
+
+function OnEntitySelected()
+    isSelected = true
+    if cachedMeleeRange == nil then
+        DestroyRadiusDecal(meleeRangeDecal)
+    elseif not Object.IsValid(meleeRangeDecal) then
+        meleeRangeDecal = CreateRadiusDecal((cachedMeleeRange or defaultDecalSize) / defaultDecalSize, Color.New(1.0, 1.0, 0.0))
+    end
+end
+
+function OnEntityDeselected()
+    isSelected = false
+    DestroyRadiusDecal(meleeRangeDecal)
+end
+
 function OnNetworkDataChanged(proximityDataId, key)
 end
 
 function OnMeleeRadiusChanged(proximityDataId, value)
-    if value == nil then
+    cachedMeleeRange = value
+
+    -- Refresh selection decal
+    if isSelected then
         DestroyRadiusDecal(meleeRangeDecal)
-    elseif not Object.IsValid(meleeRangeDecal) then
-        meleeRangeDecal = CreateRadiusDecal((value or defaultDecalSize) / defaultDecalSize)
+        OnEntitySelected()
     end
 end
 
@@ -24,7 +43,7 @@ function OnAgroRadiusChanged(proximityDataId, value)
         if value == nil then
             DestroyRadiusDecal(debugAgroRangeDecal)
         elseif not Object.IsValid(debugAgroRangeDecal) then
-            debugAgroRangeDecal = CreateRadiusDecal((value or defaultDecalSize) / defaultDecalSize)
+            debugAgroRangeDecal = CreateRadiusDecal((value or defaultDecalSize) / defaultDecalSize, Color.New(1.0, 0.0, 0.0))
         end
     end
 end
@@ -35,17 +54,20 @@ function DestroyRadiusDecal(decal)
     end
 end
 
-function CreateRadiusDecal(scale)
+function CreateRadiusDecal(scale, color)
     local decal = World.SpawnAsset(propRadiusDecalTemplate, { parent = script })
 
     decal:SetScale(Vector3.New(scale, scale, decal:GetScale().z))
 
     decal:SetSmartProperty("Stroke Width", decal:GetSmartProperty("Stroke Width") / scale)
-    decal:SetSmartProperty("Color", Color.New(1.0, 0.0, 0.0, 0.0))
-    decal:SetSmartProperty("Stroke Color", Color.New(1.0, 0.0, 0.0))
+    decal:SetSmartProperty("Color", Color.New(color.r, color.g, color.b, 0.0))
+    decal:SetSmartProperty("Stroke Color", color)
 
     return decal
 end
+
+Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. propProximityNetworkedObject.id, OnEntitySelected)
+Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. propProximityNetworkedObject.id, OnEntityDeselected)
 
 -- For nameplates
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.NAME, OnNetworkDataChanged)

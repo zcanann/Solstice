@@ -9,6 +9,8 @@ end
 
 RuntimeDataStore.Keys = { }
 
+RuntimeDataStore.Keys.SELECTED_TARGET = "selected_target"
+
 RuntimeDataStore.SetKey = function (key, value)
    _G.DataStore[key] = value
 end

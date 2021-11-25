@@ -12,6 +12,7 @@ EventKeysAPI.Interaction = require(script:GetCustomProperty("InteractionEvents")
 EventKeysAPI.Movement = require(script:GetCustomProperty("MovementEvents"))
 EventKeysAPI.Networking = require(script:GetCustomProperty("NetworkingEvents"))
 EventKeysAPI.Skill = require(script:GetCustomProperty("SkillEvents"))
+EventKeysAPI.UI = require(script:GetCustomProperty("UIEvents"))
 EventKeysAPI.Zone = require(script:GetCustomProperty("ZoneEvents"))
 
 -- Map all events to shorter names, following the format of "e{i}_"
@@ -19,6 +20,7 @@ EventKeysAPI.Zone = require(script:GetCustomProperty("ZoneEvents"))
 EventKeysAPI.EventNameMappings = TableUtils.CondenseStringConstants(EventKeysAPI, "e")
 
 EventKeysAPI.ResolveMappedName = function (name)
+    name = name or ""
     local results = { CoreString.Split(name, "_") }
 
     if #results > 0 and results[1] then

@@ -183,6 +183,7 @@ Objects {
     }
   }
   ParentId: 2058956127506152909
+  ChildIds: 923678390762420265
   ChildIds: 9287987596664656546
   ChildIds: 14589941801162997866
   ChildIds: 15594024896408941852
@@ -393,6 +394,91 @@ Objects {
   }
 }
 Objects {
+  Id: 923678390762420265
+  Name: "UnitFrameCapture_C"
+  Transform {
+    Location {
+      X: 71.4030685
+      Y: -7.62939453e-06
+      Z: 177
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12299963393686506760
+  ChildIds: 10768846797888291320
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
+  }
+}
+Objects {
+  Id: 10768846797888291320
+  Name: "CaptureCamera"
+  Transform {
+    Location {
+      X: 68.9999924
+    }
+    Rotation {
+      Yaw: 180
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 923678390762420265
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:alwaysvisible"
+  }
+  Camera {
+    AttachToLocalPlayer: true
+    InitialDistance: 400
+    MinDistance: 300
+    MaxDistance: 600
+    PositionOffset {
+    }
+    RotationOffset {
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:lookangle"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    DoesPositionOffsetSpring: true
+    AudioListenerOffset {
+    }
+  }
+}
+Objects {
   Id: 9348038341760866652
   Name: "ProximityNetworkedObject"
   Transform {
@@ -437,6 +523,12 @@ Objects {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
         Id: 17803366332466114312
+      }
+    }
+    Overrides {
+      Name: "cs:UnitFrameCapture"
+      ObjectReference {
+        SelfId: 923678390762420265
       }
     }
   }

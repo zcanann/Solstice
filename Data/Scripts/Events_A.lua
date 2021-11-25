@@ -1,7 +1,4 @@
-local TableUtils = require(script:GetCustomProperty("TableUtils"))
-
 local EventsAPI = { }
-local storedProximityEvents = { }
 
 EventsAPI.Broadcast = require(script:GetCustomProperty("Broadcast"))
 EventsAPI.Keys = require(script:GetCustomProperty("EventKeys"))

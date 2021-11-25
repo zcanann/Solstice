@@ -1,190 +1,144 @@
-local NamePlateController = { }
-
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propNameplate = script:GetCustomProperty("Nameplate"):WaitForObject()
+local propPlayerUnitFrame = script:GetCustomProperty("PlayerUnitFrame"):WaitForObject()
+local propTargetUnitFrame = script:GetCustomProperty("TargetUnitFrame"):WaitForObject()
 
-local FriendlyNameColor = Color.New(0.0, 1.0, 0.0)
-local EnemyNameColor = Color.New(1.0, 1.0, 0.0)
-local BorderColor = Color.New(0.0, 0.0, 0.0)
-local BackgroundColor = Color.New(1.0, 1.0, 1.0)
-local FriendlyHealthColor = Color.New(0.0, 1.0, 0.0)
-local EnemyHealthColor = Color.New(1.0, 0.0, 0.0)
-local DamageChangeColor = Color.New(1.0, 0.0, 0.0)
-local HealChangeColor = Color.New(0.0, 1.0, 0.0)
-local HealthNumberColor = Color.New(1.0, 0.0, 0.0)
-
-local SegmentSize = 20
-local BorderWidth = 0.02
-local NameplateLayerThickness = 0.01 -- To force draw order
-local HealthBarWidth = 1.5
-local HealthBarHeight = 0.08
-
-local proximityObject = nil
 local localPlayer = Game.GetLocalPlayer()
-local cachedHealth = 100
-local cachedMaxHealth = 100
+local eventListeners = { }
 
-local nameplateData = { }
+local cachedPlayerHealth = 100
+local cachedPlayerMaxHealth = 100
+local cachedPlayerMana = 100
+local cachedPlayerMaxMana = 100
 
-nameplateData.templateRoot = propNameplate
-nameplateData.borderPiece = propNameplate:GetCustomProperty("BorderPiece"):WaitForObject()
-nameplateData.backgroundPiece = propNameplate:GetCustomProperty("BackgroundPiece"):WaitForObject()
-nameplateData.healthPiece = propNameplate:GetCustomProperty("HealthPiece"):WaitForObject()
-nameplateData.healthText = propNameplate:GetCustomProperty("HealthText"):WaitForObject()
-nameplateData.nameText = propNameplate:GetCustomProperty("NameText"):WaitForObject()
-nameplateData.chatText = propNameplate:GetCustomProperty("ChatText"):WaitForObject()
+local cachedTargetHealth = 100
+local cachedTargetMaxHealth = 100
+local cachedTargetMana = 100
+local cachedTargetMaxMana = 100
 
--- Static properties on pieces
-nameplateData.borderPiece:SetScale(Vector3.New(NameplateLayerThickness, HealthBarWidth + 2.0 * BorderWidth, HealthBarHeight + 2.0 * BorderWidth))
-nameplateData.borderPiece:SetPosition(Vector3.New(-4.0 * NameplateLayerThickness, 0.0, 0.0))
-nameplateData.borderPiece:SetColor(BorderColor)
-nameplateData.backgroundPiece:SetScale(Vector3.New(NameplateLayerThickness, HealthBarWidth, HealthBarHeight))
-nameplateData.backgroundPiece:SetPosition(Vector3.New(-3.0 * NameplateLayerThickness, 0.0, 0.0))
-nameplateData.backgroundPiece:SetColor(BackgroundColor)
-nameplateData.healthText:SetPosition(Vector3.New(50.0 * NameplateLayerThickness, 0.0, 0.0))		-- Text must be 50 units ahead as it doesn't have thickness
-nameplateData.healthText:SetColor(HealthNumberColor)
-nameplateData.nameText.text = "Unknown"
-nameplateData.chatText.text = ""
+local targetListeners = { }
 
--- nil RotateNameplate(CoreObject)
--- Called every frame to make nameplateDatas align with the local view
-function RotateNameplate(nameplateData)
-	local quat = Quaternion.New(localPlayer:GetViewWorldRotation())
-	quat = quat * Quaternion.New(Vector3.UP, 180.0)
-	nameplateData.templateRoot:SetWorldRotation(Rotation.New(quat))
-end
+propPlayerUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject():SetPlayerProfile(localPlayer)
 
--- nil Tick(float)
--- Update dynamic properties (ex. team, health, and health animation) of every nameplate
-function Tick(deltaTime)
-	RotateNameplate(nameplateData)
-end
+function OnTargetSelected(proximityObjectId)
+    local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
 
-function SetDisplayedHealth(health, maxHealth)
-	if not Object.IsValid(propNameplate) then
+	if not Framework.IsEntity(objectInstance) then
 		return
 	end
 
-	health = health or 0
-	maxHealth = maxHealth or 0
-
-	local healthFraction = 0.0
-
-	if maxHealth ~= 0 then
-		healthFraction = health / maxHealth
+	for _, listener in ipairs(targetListeners) do
+		listener.Disconnect()
 	end
 
-	-- Set size and position of health bar
-	local healthPieceOffset = 50.0 * HealthBarWidth * (1.0 - healthFraction)
-	nameplateData.healthPiece:SetScale(Vector3.New(NameplateLayerThickness, HealthBarWidth * healthFraction, HealthBarHeight))
-	nameplateData.healthPiece:SetPosition(Vector3.New(-2.0 * NameplateLayerThickness, healthPieceOffset, 0.0))
+	targetListeners = { }
 
-	-- Update hit point number
-	nameplateData.healthText.text = string.format("%.0f / %.0f", health, maxHealth)
+	OnTargetHealthChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEALTH))
+	OnTargetMaxHealthChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH))
+	OnTargetManaChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MANA))
+	OnTargetMaxManaChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_MANA))
+	OnTargetNameChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.NAME))
+	OnTargetClassChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.CLASS))
+	OnTargetFactionChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.FACTION))
+	OnTargetRaceChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE))
 
-	-- Update name and health color based on teams
-	local nameColor = nil
-	local healthColor = nil
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEALTH, OnTargetHealthChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnTargetMaxHealthChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MANA, OnTargetManaChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_MANA, OnTargetMaxManaChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.NAME, OnTargetNameChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.CLASS, OnTargetClassChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.FACTION, OnTargetFactionChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnTargetRaceChanged))
 
-	nameColor = FriendlyNameColor
-	healthColor = FriendlyHealthColor
-
-	nameplateData.nameText:SetColor(nameColor)
-	nameplateData.healthPiece:SetColor(healthColor)
-end
-
-function PlayerChatHandler(player, params)
-	if not Object.IsValid(propNameplate) then
-		return
+	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
+	if currentTarget then
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
 	end
-
-	local chatCounter = nameplateData.chatCounter or 0
-	local chatDuration = 5.0
-
-	chatCounter = chatCounter + 1
-
-	nameplateData.chatText.text = params.message
-	nameplateData.chatCounter = chatCounter
-
-	Task.Spawn(function ()
-		if Object.IsValid(nameplateData) then
-			if nameplateData.chatCounter == chatCounter then
-				nameplateData.chatText.text = ""
-			end
-		end
-	end, chatDuration)
+	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET, proximityObjectId)
+	Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. proximityObjectId)
 end
 
-function OnEntityHealthChanged(proximityDataId, health)
-	cachedHealth = health
-	SetDisplayedHealth(cachedHealth, cachedMaxHealth)
+function OnPlayerHealthChanged(proximityDataId, health)
+	cachedPlayerHealth = health or 100
+	propPlayerUnitFrame:GetCustomProperty("HealthBar"):GetObject().progress = cachedPlayerHealth / cachedPlayerMaxHealth
+	propPlayerUnitFrame:GetCustomProperty("HealthText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerHealth, cachedPlayerMaxHealth)
 end
 
-function OnEntityMaxHealthChanged(proximityDataId, maxHealth)
-	cachedMaxHealth = maxHealth
-	SetDisplayedHealth(cachedHealth, cachedMaxHealth)
+function OnPlayerMaxHealthChanged(proximityDataId, maxHealth)
+	cachedPlayerMaxHealth = maxHealth or 100
+	propPlayerUnitFrame:GetCustomProperty("HealthBar"):GetObject().progress = cachedPlayerHealth / cachedPlayerMaxHealth
+	propPlayerUnitFrame:GetCustomProperty("HealthText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerHealth, cachedPlayerMaxHealth)
 end
 
-function OnEntityHeightChanged(proximityDataId, height)
-	if not Object.IsValid(propNameplate) then
-		return
-	end
+function OnPlayerManaChanged(proximityDataId, mana)
+	cachedPlayerMana = mana or 100
+	propPlayerUnitFrame:GetCustomProperty("SpecialBar"):GetObject().progress = cachedPlayerMana / cachedPlayerMaxMana
+	propPlayerUnitFrame:GetCustomProperty("SpecialText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerMana, cachedPlayerMaxMana)
+end
 
-	if height then
-		-- Player nameplates are attached differently, so these use a different height adjustment
-		if Object.IsValid(proximityObject) and proximityObject:IsA("Player") then
-			propNameplate:SetPosition(Vector3.New(0.0, 0.0, 48.0))
-		else
-			propNameplate:SetPosition(Vector3.New(0.0, 0.0, height / 2.0 + 64.0))
-		end
+function OnPlayerMaxManaChanged(proximityDataId, maxMana)
+	cachedPlayerMaxMana = maxMana or 100
+	propPlayerUnitFrame:GetCustomProperty("SpecialBar"):GetObject().progress = cachedPlayerMana / cachedPlayerMaxMana
+	propPlayerUnitFrame:GetCustomProperty("SpecialText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerMana, cachedPlayerMaxMana)
+end
+
+function OnPlayerNameChanged(proximityDataId, name)
+	propPlayerUnitFrame:GetCustomProperty("NameText"):GetObject().text = name or ""
+end
+
+function OnPlayerClassChanged(proximityDataId, class)
+end
+
+function OnPlayerFactionChanged(proximityDataId, faction)
+end
+
+function OnPlayerRaceChanged(proximityDataId, faction)
+end
+
+function OnTargetHealthChanged(proximityDataId, health)
+end
+
+function OnTargetMaxHealthChanged(proximityDataId, maxHealth)
+end
+
+function OnTargetManaChanged(proximityDataId, mana)
+end
+
+function OnTargetMaxManaChanged(proximityDataId, maxMana)
+end
+
+function OnTargetNameChanged(proximityDataId, name)
+	propTargetUnitFrame:GetCustomProperty("NameText"):GetObject().text = name or ""
+
+	ToggleTargetFrameVisibility(name)
+end
+
+function OnTargetClassChanged(proximityDataId, class)
+end
+
+function OnTargetFactionChanged(proximityDataId, faction)
+end
+
+function OnTargetRaceChanged(proximityDataId, faction)
+end
+
+function ToggleTargetFrameVisibility(isVisible)
+	if isVisible then
+		propTargetUnitFrame.visibility = Visibility.INHERIT
 	else
-		propNameplate:SetPosition(Vector3.ZERO)
+		propTargetUnitFrame.visibility = Visibility.FORCE_OFF
 	end
 end
 
-function OnEntityNameChanged(proximityDataId, name)
-	if not Object.IsValid(nameplateData.nameText) then
-		return
-	end
+ToggleTargetFrameVisibility(false)
 
-	if name then
-		nameplateData.nameText.text = name
-	else
-		nameplateData.nameText.text = "Unknown"
-	end
-end
-
-function OnEntityClassChanged(proximityDataId, class)
-	-- Unused
-end
-
-function OnEntityFactionChanged(proximityDataId, faction)
-	-- Unused
-end
-
-function OnEntityRaceChanged(proximityDataId, faction)
-	-- Unused
-end
-
-function SetProximityObject(newProximityObject)
-	proximityObject = newProximityObject
-
-	if Object.IsValid(proximityObject) then
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnEntityMaxHealthChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.NAME, OnEntityNameChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.CLASS, OnEntityClassChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.FACTION, OnEntityFactionChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
-
-		-- TODO: This needs to run off of replicated data, not a command hook. The reasoning is that messages should work for NPCs as well.
-		-- Chat.receiveMessageHook:Connect(PlayerChatHandler)
-	end
-end
-
--- Show full health until we receive the actual values
-SetDisplayedHealth(cachedHealth, cachedMaxHealth)
-
-return NamePlateController
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.HEALTH, OnPlayerHealthChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnPlayerMaxHealthChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.MANA, OnPlayerManaChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.MAX_MANA, OnPlayerMaxManaChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.NAME, OnPlayerNameChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.CLASS, OnPlayerClassChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.FACTION, OnPlayerFactionChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.RACE, OnPlayerRaceChanged)
+Framework.Events.Listen(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, OnTargetSelected)

@@ -11,7 +11,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:UnitFrame"
+        Name: "cs:PlayerUnitFrame"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:TargetUnitFrame"
         ObjectReference {
         }
       }

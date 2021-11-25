@@ -7,7 +7,7 @@ Assets {
       RootId: 12411621271059381585
       Objects {
         Id: 12411621271059381585
-        Name: "UnitFrame_C"
+        Name: "PlayerUnitFrame"
         Transform {
           Scale {
             X: 1
@@ -15,20 +15,43 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4781671109827199097
-        ChildIds: 1068419946221151660
+        ParentId: 8770223486394844110
         ChildIds: 4907862976858644602
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:UnitFrameControllerScript"
-            ObjectReference {
-              SubObjectId: 1068419946221151660
-            }
-          }
           Overrides {
             Name: "cs:NameText"
             ObjectReference {
               SubObjectId: 9037971833558607173
+            }
+          }
+          Overrides {
+            Name: "cs:HealthBar"
+            ObjectReference {
+              SubObjectId: 14456076785128352405
+            }
+          }
+          Overrides {
+            Name: "cs:HealthText"
+            ObjectReference {
+              SubObjectId: 15489700145758325051
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialBar"
+            ObjectReference {
+              SubObjectId: 2047374936007952982
+            }
+          }
+          Overrides {
+            Name: "cs:SpecialText"
+            ObjectReference {
+              SubObjectId: 3254937988505987214
+            }
+          }
+          Overrides {
+            Name: "cs:AvatarImage"
+            ObjectReference {
+              SubObjectId: 9544453353473744709
             }
           }
           Overrides {
@@ -53,47 +76,6 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 1068419946221151660
-        Name: "UnitFrameController_C"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12411621271059381585
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:UnitFrame"
-            ObjectReference {
-              SubObjectId: 12411621271059381585
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 17585551463286605103
-          }
         }
       }
       Objects {
@@ -253,8 +235,8 @@ Assets {
         Control {
           Width: 256
           Height: 40
-          UIX: 126
-          UIY: 1
+          UIX: 124
+          UIY: 11
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -694,6 +676,7 @@ Assets {
         ChildIds: 14456076785128352405
         ChildIds: 4548966392686919750
         ChildIds: 9359034503397226460
+        ChildIds: 15489700145758325051
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -709,8 +692,8 @@ Assets {
         Control {
           Width: 256
           Height: 24
-          UIX: 126
-          UIY: 41
+          UIX: 124
+          UIY: 51
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -735,7 +718,7 @@ Assets {
       }
       Objects {
         Id: 14456076785128352405
-        Name: "UI Progress Bar"
+        Name: "HealthBar"
         Transform {
           Location {
             X: 1344.06836
@@ -1065,6 +1048,89 @@ Assets {
         }
       }
       Objects {
+        Id: 15489700145758325051
+        Name: "HealthText"
+        Transform {
+          Location {
+            Z: 20
+          }
+          Rotation {
+            Yaw: 1.02452814e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4195283063475304694
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 60
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Text {
+            Label: "100 / 100"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 16
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            Font {
+              Id: 11918000404206027739
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+            ShadowColor {
+              A: 0.5
+            }
+            ShadowOffset {
+              X: 1
+              Y: 1
+            }
+            OutlineColor {
+              A: 1
+            }
+            OutlineSize: 2
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
         Id: 15469586284798632761
         Name: "SpecialPanel"
         Transform {
@@ -1086,6 +1152,9 @@ Assets {
         ChildIds: 2047374936007952982
         ChildIds: 14094791950032929444
         ChildIds: 17477454707590581553
+        ChildIds: 3254937988505987214
+        UnregisteredParameters {
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1101,8 +1170,8 @@ Assets {
         Control {
           Width: 256
           Height: 24
-          UIX: 126
-          UIY: 65
+          UIX: 124
+          UIY: 75
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -1127,7 +1196,7 @@ Assets {
       }
       Objects {
         Id: 2047374936007952982
-        Name: "UI Progress Bar"
+        Name: "SpecialBar"
         Transform {
           Location {
             X: 1344.06836
@@ -1168,7 +1237,8 @@ Assets {
           UseParentHeight: true
           StatBar {
             Color {
-              G: 0.5
+              G: 0.075
+              B: 1
               A: 1
             }
             BackgroundColor {
@@ -1207,7 +1277,7 @@ Assets {
       }
       Objects {
         Id: 14094791950032929444
-        Name: "HealthShadow"
+        Name: "SpecialShadow"
         Transform {
           Location {
             X: 1344.06738
@@ -1328,7 +1398,7 @@ Assets {
       }
       Objects {
         Id: 3292124516430211940
-        Name: "HealthBorder"
+        Name: "SpecialBorder"
         Transform {
           Location {
             X: 1344.06738
@@ -1393,7 +1463,7 @@ Assets {
       }
       Objects {
         Id: 1714960588116653676
-        Name: "HealthBorder"
+        Name: "SpecialBorder"
         Transform {
           Location {
             X: 1344.06836
@@ -1451,6 +1521,89 @@ Assets {
             TargetAnchor {
               Anchor {
                 Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 3254937988505987214
+        Name: "SpecialText"
+        Transform {
+          Location {
+            Z: 20
+          }
+          Rotation {
+            Yaw: 1.02452823e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15469586284798632761
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 60
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Text {
+            Label: "100 / 100"
+            Color {
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+            Size: 16
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            Font {
+              Id: 11918000404206027739
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:center"
+            }
+            ShadowColor {
+              A: 0.5
+            }
+            ShadowOffset {
+              X: 1
+              Y: 1
+            }
+            OutlineColor {
+              A: 1
+            }
+            OutlineSize: 2
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -1574,7 +1727,7 @@ Assets {
       }
       Objects {
         Id: 9544453353473744709
-        Name: "ProfileImage"
+        Name: "AvatarImage"
         Transform {
           Location {
             X: 1344.06738
@@ -2565,18 +2718,19 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Control {
-          Width: 200
-          Height: 200
+          Width: 4
+          Height: 4
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           UseParentHeight: true
           Image {
             Brush {
-              Id: 5529463789140125893
+              Id: 3481758651789323561
             }
             Color {
               R: 0.180392161
@@ -2680,15 +2834,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "Crosshair_002"
-      }
-    }
-    Assets {
-      Id: 5529463789140125893
-      Name: "Frame Beveled 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "FrameSolid8px_020"
       }
     }
     PrimaryAssetId {

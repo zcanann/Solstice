@@ -7,4 +7,7 @@ InteractionEvents.EVENT_WALK_FOR_INTERACTION_PREFIX = "event_walk_to_object_"
 InteractionEvents.EVENT_DEFAULT_INTERACTION_PREFIX = "event_query_interact_options_"
 InteractionEvents.EVENT_QUERY_INTERACT_OPTIONS_PREFIX = "event_query_interact_options_"
 
+InteractionEvents.EVENT_SELECT_TARGET_PREFIX = "event_select_target_"
+InteractionEvents.EVENT_DESELECT_TARGET_PREFIX = "event_deselect_target_"
+
 return InteractionEvents

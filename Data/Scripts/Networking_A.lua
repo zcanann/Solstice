@@ -41,12 +41,20 @@ Networking.SetProximityData = function(id, key, data)
 end
 
 Networking.GetProximityData = function(id, key)
-    local script = Networking.GetProximityDataScript(id)
-    if script then
-        return script.GetProximityData(key)
+    -- Only the server is capable of unresolving an id (ie )
+    if Environment.IsServer() then
+        local script = Networking.GetProximityDataScript(id)
+        if script then
+            return script.GetProximityData(key)
+        end
     else
-        return nil
+        -- For the client, just try to grab the proximity networked data from replicated user data
+        local networkedData = Game.GetLocalPlayer():GetPrivateNetworkedData(id)
+        if networkedData then
+            return networkedData[key]
+        end
     end
+    return nil
 end
 
 return Networking

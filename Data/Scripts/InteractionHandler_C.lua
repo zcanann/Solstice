@@ -13,9 +13,14 @@ function TryInteractRecursive(target, primary)
     local proximityNetworkedObject = proximityNetworkedObjectRef:GetObject()
 
     if primary then
+        -- Update target selection
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, { proximityNetworkedObject.id })
+
+        -- Try to perform the default action for the target object (ie auto-attack, mine, etc)
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. proximityNetworkedObject.id)
         return true
     else
+        -- Display option list on right-click
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. proximityNetworkedObject.id)
         return true
     end

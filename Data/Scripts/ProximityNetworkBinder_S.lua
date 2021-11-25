@@ -42,8 +42,8 @@ function OnPlayerReadyToReceiveProximityData(player)
 	end)
 end
 
--- For objects, their proximityDataObject.id is used as the key for replicating data to the client. However, the proximityDataObject created for each
--- player is only spawned on the server, so we remap it to the corresponding playerId, which is the id used for replication.
+-- For most objects, this does nothing. For players, it maps { proximityObjectId => playerId }. This is needed since clients are unaware of the proximityObjectIds
+-- for players, and only have the playerId as a reference.
 function OnResolveProximityNetworkedObjectId(proximityNetworkedObjectId, callback)
 	if playerProximityObjectsInverse[proximityNetworkedObjectId] then
 		callback(playerProximityObjectsInverse[proximityNetworkedObjectId])
@@ -52,7 +52,8 @@ function OnResolveProximityNetworkedObjectId(proximityNetworkedObjectId, callbac
 	end
 end
 
--- Provide the opposite, if we need to go from a playerId to the corresponding proximity object id. For other objects, this function has no effect.
+-- For most objects, this does nothing. For players, it maps { playerId => proximityObjectId }. This is needed since clients are unaware of the proximityObjectIds
+-- for players, and only have the playerId as a reference.
 function OnUnresolveProximityNetworkedObjectId(proximityNetworkedObjectId, callback)
 	if playerProximityObjects[proximityNetworkedObjectId] then
 		callback(playerProximityObjects[proximityNetworkedObjectId])

@@ -38,6 +38,12 @@ function OnPlayerJoined(player)
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.RACE))
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.TITLE,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.TITLE))
+
+	-- HP should come from a stored key, max HP/SP should be computed
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, 150)
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.HEALTH, 135)
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.MAX_MANA, 115)
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.MANA, 75)
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, 100.0)
 
 	-- This initializes server => client player database replication

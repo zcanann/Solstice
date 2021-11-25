@@ -71,6 +71,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:UIEvents"
+        AssetReference {
+          Id: 6924039588979540941
+        }
+      }
+      Overrides {
         Name: "cs:ZoneEvents"
         AssetReference {
           Id: 2983321934766811410
