@@ -500,12 +500,14 @@ Objects {
   ChildIds: 2058956127506152909
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Interactable"
-      Bool: true
-    }
-    Overrides {
       Name: "cs:Id"
       String: "TUTORIAL_ISLAND_LIANNA"
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
+      }
     }
     Overrides {
       Name: "cs:Id:isrep"

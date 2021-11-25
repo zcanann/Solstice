@@ -332,7 +332,7 @@ Objects {
         AudioFadeIntensityByDistance: 1
         VoiceChatPosition {
           X: 40
-          Y: 40
+          Y: 512
         }
         VoiceChatHorizontalAlignment {
           Value: "mc:ecorehorizontalalign:left"

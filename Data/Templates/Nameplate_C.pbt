@@ -709,4 +709,5 @@ Assets {
   }
   SerializationVersion: 101
   VirtualFolderPath: "UI"
+  VirtualFolderPath: "3D"
 }

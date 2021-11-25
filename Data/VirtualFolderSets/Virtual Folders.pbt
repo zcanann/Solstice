@@ -280,5 +280,20 @@ Assets {
       VirtualFolderPath: "Combat"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Resources"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "3D"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "HUD"
+      PlatformAssetType: 5
+    }
   }
 }

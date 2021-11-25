@@ -1,6 +1,6 @@
 Assets {
-  Id: 4247377252212412615
-  Name: "Fishable_C"
+  Id: 17585551463286605103
+  Name: "UnitFrameController_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,13 +11,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
+        Name: "cs:UnitFrame"
         ObjectReference {
         }
       }
     }
   }
   SerializationVersion: 101
-  VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Interactions"
+  VirtualFolderPath: "UI"
 }

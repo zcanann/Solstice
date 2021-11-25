@@ -8,7 +8,7 @@ local questData = Framework.Quests.GetQuestData(propQuestKey)
 local questProgress = Framework.Quests.GetQuestProgress(propQuestKey)
 
 function SetQuestProgressVisualState(state)
-    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id,
+    Framework.Networking.SetProximityData(propProximityNetworkedObject.id,
         Framework.Networking.ProximityKeys.Quests.STATE,
         { state = state }
     )

@@ -25,14 +25,6 @@ Assets {
         Int: 1
       }
       Overrides {
-        Name: "cs:Health"
-        Int: 8
-      }
-      Overrides {
-        Name: "cs:AttackSpeed"
-        Float: 3.3
-      }
-      Overrides {
         Name: "cs:DropTable"
         String: ""
       }
@@ -47,10 +39,6 @@ Assets {
       Overrides {
         Name: "cs:IsAgressive"
         Bool: false
-      }
-      Overrides {
-        Name: "cs:AgroRadius"
-        Float: 1500
       }
     }
   }

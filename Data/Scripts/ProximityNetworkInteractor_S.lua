@@ -67,11 +67,13 @@ if Framework.Debug.GetFlag(Framework.Debug.Flags.SERVER_SHOW_PROXIMITY_OBJECTS) 
             local pos = propReplicationTrigger:GetWorldPosition();
             CoreDebug.DrawSphere(pos, triggerRadius, {
                 duration = 0.01,
-                color = Color.GREEN
+                color = Color.GREEN,
+                thickness = 3,
             })
             CoreDebug.DrawSphere(pos, discardRadius, {
                 duration = 0.01,
-                color = Color.RED
+                color = Color.RED,
+                thickness = 3,
             })
             Task.Wait()
         end

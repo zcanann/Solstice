@@ -1,6 +1,5 @@
 -- Handles the dialog engagement session between a player and an NPC
 local Framework = require(script:GetCustomProperty("Framework"))
-local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 
 local engagedPlayers = { }
@@ -38,7 +37,7 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
         objectId = propProximityNetworkedObject.id,
@@ -53,7 +52,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function Tick(deltaSeconds)
@@ -61,4 +60,4 @@ function Tick(deltaSeconds)
 end
 
 -- TODO: Should probably move away from the standard engagement session for this, instead having a separate dialog session.
-Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id, Connect)

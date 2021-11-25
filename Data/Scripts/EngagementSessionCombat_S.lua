@@ -2,21 +2,13 @@
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
-local propHealth = script:GetCustomProperty("Health")
-local propAttackSpeed = script:GetCustomProperty("AttackSpeed")
 local propDropTable = script:GetCustomProperty("DropTable")
 local propRespawnTimeMin = script:GetCustomProperty("RespawnTimeMin")
 local propRespawnTimeMax = script:GetCustomProperty("RespawnTimeMax")
 
 local engagedPlayers = { }
-
--- Respawn state
-local isAlive = false
-local respawnTimer = 0.0
-local health = 0
 
 -- Combat state
 local attackTimer = 0.0
@@ -56,9 +48,11 @@ function Connect(player)
     end
 
     -- Deny requests for attacking dead enemies
+    --[[
     if not isAlive then
         return
     end
+    --]]
 
     if not player.serverUserData.engagement then
         player.serverUserData.engagement = { }
@@ -81,7 +75,7 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the npc
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
         objectId = propProximityNetworkedObject.id,
@@ -96,7 +90,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function DisconnectAllPlayers()
@@ -147,9 +141,11 @@ function CheckForPlayerAutoAttack(player, deltaSeconds)
 end
 
 function CheckForEnemyAutoAttack(deltaSeconds)
+    --[[
     if not isAlive then
         return
     end
+    --]]
 end
 
 function CheckForInterruption(player)
@@ -157,38 +153,47 @@ function CheckForInterruption(player)
         return
     end
 
+    -- TODO: Use enemy radius, chase, etc
     if (player.serverUserData.engagement.startLocation - player:GetWorldPosition()).size > 100.0 then
         Disconnect(player)
     end
 end
 
 function SetEnemyHealth(newHealth)
-    if not isAlive then return end
+    local health = GetEnemyHealth()
+    local maxHealth = Framework.Networking.GetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH)
 
-    health = CoreMath.Clamp(newHealth, 0, propHealth)
-    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, GetEnemyHealth())
+    -- if not isAlive then return end
+    if health == nil then return end
+    if maxHealth == nil then return end
+
+    health = CoreMath.Clamp(newHealth, 0, maxHealth)
+    Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, health)
 
     if health <= 0 then
-        isAlive = false
-        Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, isAlive)
+        -- isAlive = false
+        Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, false)
         DisconnectAllPlayers()
     end
 end
 
 function GetEnemyHealth()
-    return health
+    return Framework.Networking.GetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH)
 end
 
 function CheckForRespawn(deltaSeconds)
+    --[[
     if not isAlive then
         respawnTimer = respawnTimer - deltaSeconds
         if respawnTimer <= 0.0 then
             Respawn()
         end
     end
+    --]]
 end
 
 function Respawn()
+    --[[
     if isAlive then
         return
     end
@@ -196,9 +201,10 @@ function Respawn()
     isAlive = true
     SetEnemyHealth(propHealth)
 
-    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE,
+    Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE,
         { isAlive = isAlive })
     respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
+    --]]
 end
 
-Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id, Connect)

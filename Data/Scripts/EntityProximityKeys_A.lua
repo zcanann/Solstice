@@ -12,7 +12,9 @@ EntityProximityKeys.TITLE = "title"
 
 -- Generic
 EntityProximityKeys.HEALTH = "health"
+EntityProximityKeys.MAX_HEALTH = "max_health"
 EntityProximityKeys.MANA = "mana"
+EntityProximityKeys.MAX_MANA = "max_mana"
 EntityProximityKeys.EXPERIENCE = "experience"
 EntityProximityKeys.AGRO_RADIUS = "agro_radius"
 EntityProximityKeys.MELEE_RADIUS = "melee_radius"

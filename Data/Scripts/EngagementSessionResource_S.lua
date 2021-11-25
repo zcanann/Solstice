@@ -1,7 +1,6 @@
 -- Defines the engagement session between the player and an object or enemy, such as during mining, cooking, or fighting
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
 local Framework = require(script:GetCustomProperty("Framework"))
-local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
 local propRequiredItemType = script:GetCustomProperty("RequiredItemType")
@@ -64,7 +63,7 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
         objectId = propProximityNetworkedObject.id,
@@ -79,7 +78,7 @@ function Disconnect(player)
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function Tick(deltaSeconds)
@@ -139,7 +138,7 @@ end
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
 
-    Framework.Events.Broadcast.ProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Resources.AMOUNT,
+    Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Resources.AMOUNT,
         { remainingResources = remainingResources })
 
     if remainingResources == 0.0 then
@@ -147,4 +146,4 @@ function SetRemainingResources(newRemainingResources)
     end
 end
 
-Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id, Connect)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id, Connect)

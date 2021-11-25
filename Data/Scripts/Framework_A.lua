@@ -35,8 +35,18 @@ Framework.ObjectAssert = function (object, name, message)
     return result
 end
 
-Framework.IsPlayer = function (object)
-    return object and type(object) == "userdata"
+Framework.IsEntity = function (object)
+    if not object or not Object.IsValid(object) then
+        return false
+    end
+    local isPlayer = object:IsA("Player")
+    local isEntity = false
+
+    if not isPlayer then
+        isEntity = object:GetCustomProperty("ObjectType") == "Entity"
+    end
+
+    return isPlayer or isEntity
 end
 
 return Framework

@@ -11,11 +11,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Object"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:StopRadius"
         Float: 100
       }

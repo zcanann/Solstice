@@ -20,20 +20,10 @@ Assets {
         ChildIds: 14563214116528318820
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Interactable"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Name"
-            String: "Birch Tree"
-          }
-          Overrides {
-            Name: "cs:Name:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Name:ml"
-            Bool: false
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 14339239779283366160
+            }
           }
         }
         Collidable_v2 {
@@ -651,6 +641,12 @@ Assets {
               Id: 17803366332466114312
             }
           }
+          Overrides {
+            Name: "cs:ProximityNetworkedDataScript"
+            ObjectReference {
+              SubObjectId: 6522102959147454840
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceon"
@@ -765,7 +761,7 @@ Assets {
           }
         }
         ParentId: 14563214116528318820
-        ChildIds: 13263637815929123637
+        ChildIds: 3148064718191190559
         ChildIds: 14095468854766567585
         ChildIds: 4467639949336316295
         Collidable_v2 {
@@ -784,10 +780,12 @@ Assets {
         }
       }
       Objects {
-        Id: 13263637815929123637
-        Name: "Choppable_C"
+        Id: 3148064718191190559
+        Name: "CloseRangeInteractable_C"
         Transform {
           Location {
+            X: 0.000690533896
+            Y: 0.000690534
           }
           Rotation {
           }
@@ -800,10 +798,12 @@ Assets {
         ParentId: 11702653638974691971
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 7766009470731821977
-            }
+            Name: "cs:InteractText"
+            String: "Chop %s"
+          }
+          Overrides {
+            Name: "cs:InteractingText"
+            String: "Chopping..."
           }
           Overrides {
             Name: "cs:ProximityNetworkedObject"
@@ -847,22 +847,8 @@ Assets {
         ParentId: 11702653638974691971
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 7766009470731821977
-            }
-          }
-          Overrides {
             Name: "cs:StopRadius"
             Float: 200
-          }
-          Overrides {
-            Name: "cs:Object:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Object:ml"
-            Bool: false
           }
           Overrides {
             Name: "cs:ProximityNetworkedObject"
@@ -993,6 +979,7 @@ Assets {
           }
         }
         ParentId: 14563214116528318820
+        ChildIds: 13221866252213748657
         ChildIds: 7609061222847928851
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1008,6 +995,75 @@ Assets {
         }
         NetworkContext {
           Type: Server
+        }
+      }
+      Objects {
+        Id: 13221866252213748657
+        Name: "ResourceData_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9247258854874242901
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:RequiredItemType"
+            String: "hatchet"
+          }
+          Overrides {
+            Name: "cs:ResourceItem"
+            String: "birch_wood"
+          }
+          Overrides {
+            Name: "cs:SkillId"
+            String: "woodcutting"
+          }
+          Overrides {
+            Name: "cs:Exp"
+            Int: 18
+          }
+          Overrides {
+            Name: "cs:BaseDuration"
+            Float: 3.2
+          }
+          Overrides {
+            Name: "cs:MinResources"
+            Int: 4
+          }
+          Overrides {
+            Name: "cs:MaxResources"
+            Int: 4
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 14339239779283366160
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2139436041507685068
+          }
         }
       }
       Objects {

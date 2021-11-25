@@ -20,8 +20,10 @@ Assets {
         ChildIds: 3936958111886977860
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Interactable"
-            Bool: true
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 11237173423235480384
+            }
           }
         }
         Collidable_v2 {
@@ -644,6 +646,8 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
+            X: 1.5937525
+            Y: -1.59375226
           }
           Rotation {
             Pitch: 1.54860187
@@ -1736,12 +1740,6 @@ Assets {
         ChildIds: 4232056097359707309
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 18361376657929626207
-            }
-          }
-          Overrides {
             Name: "cs:IsProximityNetworkCollider"
             Bool: true
           }
@@ -1754,6 +1752,16 @@ Assets {
             AssetReference {
               Id: 17803366332466114312
             }
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedDataScript"
+            ObjectReference {
+              SubObjectId: 1456006550158431919
+            }
+          }
+          Overrides {
+            Name: "cs:ObjectType"
+            String: "Resource"
           }
         }
         Collidable_v2 {
@@ -2097,6 +2105,7 @@ Assets {
           }
         }
         ParentId: 3936958111886977860
+        ChildIds: 7601481592159493201
         ChildIds: 15792647630309582845
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2112,6 +2121,167 @@ Assets {
         }
         NetworkContext {
           Type: Server
+        }
+      }
+      Objects {
+        Id: 7601481592159493201
+        Name: "ResourceData_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9283846334413927800
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 11237173423235480384
+            }
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedObject:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedObject:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MaxEngagements"
+            Int: -1
+          }
+          Overrides {
+            Name: "cs:MaxEngagements:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MaxEngagements:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:RequiredItemType"
+            String: "pickaxe"
+          }
+          Overrides {
+            Name: "cs:RequiredItemType:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:RequiredItemType:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceItem"
+            String: "copper_ore"
+          }
+          Overrides {
+            Name: "cs:ResourceItem:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ResourceItem:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SkillId"
+            String: "mining"
+          }
+          Overrides {
+            Name: "cs:SkillId:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:SkillId:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:RequiredSkillLevel"
+            Int: 0
+          }
+          Overrides {
+            Name: "cs:RequiredSkillLevel:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:RequiredSkillLevel:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Exp"
+            Int: 18
+          }
+          Overrides {
+            Name: "cs:Exp:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Exp:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:BaseDuration"
+            Float: 3.2
+          }
+          Overrides {
+            Name: "cs:BaseDuration:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:BaseDuration:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MinResources"
+            Int: 4
+          }
+          Overrides {
+            Name: "cs:MinResources:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MinResources:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MaxResources"
+            Int: 6
+          }
+          Overrides {
+            Name: "cs:MaxResources:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:MaxResources:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:Name"
+            String: "Copper Ore"
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 2139436041507685068
+          }
         }
       }
       Objects {

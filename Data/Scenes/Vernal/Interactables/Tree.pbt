@@ -972,6 +972,15 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 3148064718191190559
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Choppable_C"
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 7766009470731821977
       value {
         Overrides {

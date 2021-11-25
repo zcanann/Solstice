@@ -17,4 +17,11 @@ function OnPrivateNetworkedDataChanged(player, key)
 	end
 end
 
+function OnReadyToReceiveProximityData()
+    for _, key in ipairs(localPlayer:GetPrivateNetworkedDataKeys()) do
+        OnPrivateNetworkedDataChanged(localPlayer, key)
+    end
+end
+
 localPlayer.privateNetworkedDataChangedEvent:Connect(OnPrivateNetworkedDataChanged)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK, OnReadyToReceiveProximityData)

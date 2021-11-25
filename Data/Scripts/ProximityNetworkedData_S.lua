@@ -11,31 +11,46 @@ local propProximityObjectDebugTemplate = script:GetCustomProperty("ProximityObje
 local playersInRange = { }
 local currentData = { }
 
-function OnServerSetProximityData(key, data)
+function SetProximityData(key, data)
     currentData[key] = data
     for player, _ in pairs(playersInRange) do
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID,
-            { propProximityNetworkedObject.id, function (proximityNetworkedObjectId) UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId) end })
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
+            propProximityNetworkedObject.id,
+            function (proximityNetworkedObjectId)
+                UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId)
+            end
+        })
     end
+end
+
+function GetProximityData(key)
+    return currentData[key]
 end
 
 function OnPlayerEnteredRange(player)
     playersInRange[player] = true
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID,
-        { propProximityNetworkedObject.id, function (proximityNetworkedObjectId) UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId) end })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
+        propProximityNetworkedObject.id,
+        function (proximityNetworkedObjectId)
+            UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId)
+        end
+    })
 end
 
 function OnPlayerLeftRange(player)
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID,
-        { propProximityNetworkedObject.id, function (proximityNetworkedObjectId) ClearProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId) end })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
+        propProximityNetworkedObject.id,
+        function (proximityNetworkedObjectId)
+            ClearProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId)
+        end
+    })
     playersInRange[player] = nil
 end
 
 function DrawDebugData()
     if Framework.Debug.GetFlag(Framework.Debug.Flags.SERVER_SHOW_PROXIMITY_OBJECTS) then
         local proximityObjectDebug = nil
-        local parentObject = propProximityNetworkedObject:GetCustomProperty("Object"):GetObject()
-        proximityObjectDebug = World.SpawnAsset(propProximityObjectDebugTemplate, { parent = parentObject })
+        proximityObjectDebug = World.SpawnAsset(propProximityObjectDebugTemplate, { parent = propProximityNetworkedObject })
         proximityObjectDebug:SetWorldPosition(propProximityNetworkedObject:GetWorldPosition())
 
         local propUIContainer = proximityObjectDebug:GetCustomProperty("UIContainer"):WaitForObject()
@@ -100,7 +115,6 @@ Task.Spawn(function ()
 Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID,
 { propProximityNetworkedObject.id,
     function (proximityNetworkedObjectId)
-        Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX .. proximityNetworkedObjectId, OnServerSetProximityData)
         Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. proximityNetworkedObjectId, OnPlayerEnteredRange)
         Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. proximityNetworkedObjectId, OnPlayerLeftRange)
     end

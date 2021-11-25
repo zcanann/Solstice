@@ -20,8 +20,10 @@ Assets {
         ChildIds: 9377427379436174445
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Interactable"
-            Bool: true
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 7023974313349407438
+            }
           }
         }
         Collidable_v2 {
@@ -240,12 +242,6 @@ Assets {
         ChildIds: 9215983193715055051
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
-          }
-          Overrides {
             Name: "cs:IsProximityNetworkCollider"
             Bool: true
           }
@@ -258,6 +254,16 @@ Assets {
             AssetReference {
               Id: 17803366332466114312
             }
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedDataScript"
+            ObjectReference {
+              SubObjectId: 7758815865985091230
+            }
+          }
+          Overrides {
+            Name: "cs:ObjectType"
+            String: "Entity"
           }
         }
         Collidable_v2 {

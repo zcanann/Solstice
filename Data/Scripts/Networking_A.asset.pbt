@@ -5,9 +5,21 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:Broadcast"
+        AssetReference {
+          Id: 9015254966748010645
+        }
+      }
+      Overrides {
         Name: "cs:ProximityKeys"
         AssetReference {
           Id: 3144785812480797997
+        }
+      }
+      Overrides {
+        Name: "cs:NetworkingEvents"
+        AssetReference {
+          Id: 1725569184759797556
         }
       }
     }

@@ -26,19 +26,19 @@ function OnPlayerJoined(player)
 	end
 
 	-- Load data from database into proximity replicated data
-    Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GUILD,
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GUILD,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.GUILD))
-	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CLASS,
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CLASS,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.CLASS))
-	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.NAME,
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.NAME,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.NAME))
-	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.FACTION,
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.FACTION,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.FACTION))
-	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE,
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.RACE))
-	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.TITLE,
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.TITLE,
 		Framework.DataBase.GetCharacterKey(player, Framework.Entities.Keys.TITLE))
-	Framework.Events.Broadcast.ProximityData(player.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, 100.0)
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, 100.0)
 
 	-- This initializes server => client player database replication
 	Framework.DataBase.ReplicateReadOnlyData(player)

@@ -412,22 +412,18 @@ Objects {
   ChildIds: 11765038470458309184
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
-    Overrides {
       Name: "cs:IsProximityNetworkCollider"
       Bool: true
     }
     Overrides {
-      Name: "cs:Object:isrep"
-      Bool: false
+      Name: "cs:ProximityNetworkedDataScript"
+      ObjectReference {
+        SelfId: 918561679083319262
+      }
     }
     Overrides {
-      Name: "cs:Object:ml"
-      Bool: false
+      Name: "cs:ObjectType"
+      String: "Entity"
     }
     Overrides {
       Name: "cs:IsProximityNetworkCollider:isrep"

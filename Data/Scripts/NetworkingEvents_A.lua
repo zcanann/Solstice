@@ -9,8 +9,8 @@ NetworkingEvents.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA = "event_client_re
 NetworkingEvents.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA_ACK = "event_client_ready_to_receive_proximity_data_ack"
 
 NetworkingEvents.EVENT_RESOLVE_PROXIMITY_OBJECT_ID = "event_resolve_proximity_object_id"
+NetworkingEvents.EVENT_UNRESOLVE_PROXIMITY_OBJECT_ID = "event_unresolve_proximity_object_id"
 
-NetworkingEvents.EVENT_SERVER_SET_PROXIMITY_DATA_PREFIX = "event_set_proximity_data_"
 NetworkingEvents.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX = "event_proximity_object_entered_range_"
 NetworkingEvents.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX = "event_proximity_object_left_range_"
 

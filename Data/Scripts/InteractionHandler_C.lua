@@ -5,16 +5,18 @@ function TryInteractRecursive(target, primary)
         return false
     end
 
-    local interaction, exists = target:GetCustomProperty("Interactable")
-    if interaction == nil or not exists then
+    local proximityNetworkedObjectRef, exists = target:GetCustomProperty("ProximityNetworkedObject")
+    if proximityNetworkedObjectRef == nil or not exists or not proximityNetworkedObjectRef:GetObject() then
         return TryInteractRecursive(target.parent, primary)
     end
 
+    local proximityNetworkedObject = proximityNetworkedObjectRef:GetObject()
+
     if primary then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. target.id)
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. proximityNetworkedObject.id)
         return true
     else
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. target.id)
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. proximityNetworkedObject.id)
         return true
     end
 end

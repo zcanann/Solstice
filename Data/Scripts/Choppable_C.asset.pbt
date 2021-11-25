@@ -11,14 +11,17 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Object"
+        Name: "cs:ProximityNetworkedObject"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
+        Name: "cs:InteractText"
+        String: ""
+      }
+      Overrides {
+        Name: "cs:InteractingText"
+        String: ""
       }
     }
   }

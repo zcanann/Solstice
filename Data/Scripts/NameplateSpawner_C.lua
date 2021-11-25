@@ -6,17 +6,9 @@ local propNameplateTemplate = script:GetCustomProperty("NameplateTemplate")
 local nameplates = { }
 
 function OnEntityEnteredRange(proximityObjectId)
-    CreateNameplate(proximityObjectId)
-end
-
-function OnEntityLeftRange(proximityObjectId)
-    DestroyNameplate(proximityObjectId)
-end
-
-function CreateNameplate(proximityObjectId)
     local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
 
-    if not objectInstance or Object.IsValid(nameplates[proximityObjectId]) then
+    if not Framework.IsEntity(objectInstance) then
         return
     end
 
@@ -29,11 +21,11 @@ function CreateNameplate(proximityObjectId)
         nameplate = World.SpawnAsset(propNameplateTemplate, { parent = objectInstance })
     end
 
-    nameplate:GetCustomProperty("NameplateControllerScript"):WaitForObject().context.SetProximityObject(objectInstance)
+    nameplate:GetCustomProperty("NameplateControllerScript"):GetObject().context.SetProximityObject(objectInstance)
     nameplates[proximityObjectId] = nameplate
 end
 
-function DestroyNameplate(proximityObjectId)
+function OnEntityLeftRange(proximityObjectId)
     if Object.IsValid(nameplates[proximityObjectId]) then
         nameplates[proximityObjectId]:Destroy()
     end

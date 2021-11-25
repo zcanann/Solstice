@@ -75,10 +75,14 @@ Assets {
             Bool: true
           }
           Overrides {
-            Name: "cs:Object"
+            Name: "cs:ProximityNetworkedDataScript"
             ObjectReference {
-              SubObjectId: 12585083632406728903
+              SubObjectId: 12087399381689548456
             }
+          }
+          Overrides {
+            Name: "cs:ObjectType"
+            String: "Entity"
           }
           Overrides {
             Name: "cs:IsProximityNetworkCollider:isrep"

@@ -22,7 +22,6 @@ function OnProximityObjectEnteredRange(proximityObjectId)
 end
 
 function OnProximityObjectLeftRange(proximityObjectId)
-
     if engagementListeners[proximityObjectId] then
         engagementListeners[proximityObjectId].Disconnect()
         engagementListeners[proximityObjectId] = nil

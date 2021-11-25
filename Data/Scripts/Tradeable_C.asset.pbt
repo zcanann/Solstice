@@ -5,11 +5,6 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Object"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:ProximityNetworkedObject"
         ObjectReference {
         }

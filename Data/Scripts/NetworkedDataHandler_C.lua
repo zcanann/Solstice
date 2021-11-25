@@ -40,7 +40,6 @@ function OnPrivateNetworkedDataChanged(player, key)
         else
             SendProximityDataEvents(key, subKey, subData)
         end
-
     end
 end
 
@@ -64,17 +63,21 @@ function SendProximityDataEvents(proximityObjectId, dataKey, data)
     --]]
 
     -- Note: These events are intentionally not reliable because there is no guarantee that a listener will be created for all networked pieces of data
+    -- Also, the order of events is deliberately ENTERED/UPDATE/LEFT. Processing ENTERED events to set up listeners and immediately receive updates.
 
-    -- Forward the object data changed event.
+    -- Broadcast entered proximity networking range events
+    if data ~= nil and not proximityObjectIdsInRange[proximityObjectId] then
+        proximityObjectIdsInRange[proximityObjectId] = true
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, { proximityObjectId })
+    end
+
+    -- Forward the object data changed event
     Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. dataKey, { proximityObjectId, data })
 
-    -- Broadcast entered/left proximity networking range events
+    -- Broadcast left proximity networking range events
     if data == nil and proximityObjectIdsInRange[proximityObjectId] then
         Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, { proximityObjectId })
         proximityObjectIdsInRange[proximityObjectId] = nil
-    elseif data ~= nil and not proximityObjectIdsInRange[proximityObjectId] then
-        proximityObjectIdsInRange[proximityObjectId] = true
-        Framework.Events.Broadcast.Local(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, { proximityObjectId })
     end
 end
 

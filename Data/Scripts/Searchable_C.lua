@@ -1,11 +1,11 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propObject = script:GetCustomProperty("Object"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 
-local name = propObject:GetCustomProperty("Name")
-local sfxOpenSound = propObject:GetCustomProperty("SFX_OpenSound")
-local sfxClosedSound = propObject:GetCustomProperty("SFX_ClosedSound")
+local sfxOpenSound = propProximityNetworkedObject:GetCustomProperty("SFX_OpenSound")
+local sfxClosedSound = propProximityNetworkedObject:GetCustomProperty("SFX_ClosedSound")
+
+local name = "Unknown"
 
 function DoSearch()
     if sfxOpenSound then
@@ -13,7 +13,7 @@ function DoSearch()
     end
 
     Framework.Chat.LocalMessage("Searching " .. name .. "...")
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propObject.id)
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id)
 end
 
 function EndSearch()
@@ -27,7 +27,7 @@ function Interact()
         DoSearch()
     end
 
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. propObject.id, { callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. propProximityNetworkedObject.id, { callback })
 end
 
 function ShowOption()
