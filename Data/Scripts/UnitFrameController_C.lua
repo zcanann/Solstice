@@ -61,26 +61,22 @@ end
 
 function OnPlayerHealthChanged(proximityDataId, health)
 	cachedPlayerHealth = health or 100
-	propPlayerUnitFrame:GetCustomProperty("HealthBar"):GetObject().progress = cachedPlayerHealth / cachedPlayerMaxHealth
-	propPlayerUnitFrame:GetCustomProperty("HealthText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerHealth, cachedPlayerMaxHealth)
+	UpdateHealthBar(propPlayerUnitFrame, cachedPlayerHealth, cachedPlayerMaxHealth)
 end
 
 function OnPlayerMaxHealthChanged(proximityDataId, maxHealth)
 	cachedPlayerMaxHealth = maxHealth or 100
-	propPlayerUnitFrame:GetCustomProperty("HealthBar"):GetObject().progress = cachedPlayerHealth / cachedPlayerMaxHealth
-	propPlayerUnitFrame:GetCustomProperty("HealthText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerHealth, cachedPlayerMaxHealth)
+	UpdateHealthBar(propPlayerUnitFrame, cachedPlayerHealth, cachedPlayerMaxHealth)
 end
 
 function OnPlayerManaChanged(proximityDataId, mana)
 	cachedPlayerMana = mana or 100
-	propPlayerUnitFrame:GetCustomProperty("SpecialBar"):GetObject().progress = cachedPlayerMana / cachedPlayerMaxMana
-	propPlayerUnitFrame:GetCustomProperty("SpecialText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerMana, cachedPlayerMaxMana)
+	UpdateSpecialBar(propPlayerUnitFrame, cachedPlayerMana, cachedPlayerMaxMana)
 end
 
 function OnPlayerMaxManaChanged(proximityDataId, maxMana)
 	cachedPlayerMaxMana = maxMana or 100
-	propPlayerUnitFrame:GetCustomProperty("SpecialBar"):GetObject().progress = cachedPlayerMana / cachedPlayerMaxMana
-	propPlayerUnitFrame:GetCustomProperty("SpecialText"):GetObject().text = string.format("%.0f / %.0f", cachedPlayerMana, cachedPlayerMaxMana)
+	UpdateSpecialBar(propPlayerUnitFrame, cachedPlayerMana, cachedPlayerMaxMana)
 end
 
 function OnPlayerNameChanged(proximityDataId, name)
@@ -97,15 +93,23 @@ function OnPlayerRaceChanged(proximityDataId, faction)
 end
 
 function OnTargetHealthChanged(proximityDataId, health)
+	cachedTargetHealth = health or 100
+	UpdateHealthBar(propTargetUnitFrame, cachedTargetHealth, cachedTargetMaxHealth)
 end
 
 function OnTargetMaxHealthChanged(proximityDataId, maxHealth)
+	cachedTargetMaxHealth = maxHealth or 100
+	UpdateHealthBar(propTargetUnitFrame, cachedTargetHealth, cachedTargetMaxHealth)
 end
 
 function OnTargetManaChanged(proximityDataId, mana)
+	cachedTargetMana = mana or 100
+	UpdateSpecialBar(propTargetUnitFrame, cachedTargetMana, cachedTargetMaxMana)
 end
 
 function OnTargetMaxManaChanged(proximityDataId, maxMana)
+	cachedTargetMaxMana = maxMana or 100
+	UpdateSpecialBar(propTargetUnitFrame, cachedTargetMana, cachedTargetMaxMana)
 end
 
 function OnTargetNameChanged(proximityDataId, name)
@@ -129,6 +133,16 @@ function ToggleTargetFrameVisibility(isVisible)
 	else
 		propTargetUnitFrame.visibility = Visibility.FORCE_OFF
 	end
+end
+
+function UpdateHealthBar(unitFrame, value, maxValue)
+	unitFrame:GetCustomProperty("HealthBar"):GetObject().progress = value / maxValue
+	unitFrame:GetCustomProperty("HealthText"):GetObject().text = string.format("%.0f / %.0f", value, maxValue)
+end
+
+function UpdateSpecialBar(unitFrame, value, maxValue)
+	unitFrame:GetCustomProperty("SpecialBar"):GetObject().progress = value / maxValue
+	unitFrame:GetCustomProperty("SpecialText"):GetObject().text = string.format("%.0f / %.0f", value, maxValue)
 end
 
 ToggleTargetFrameVisibility(false)

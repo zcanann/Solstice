@@ -99,6 +99,5 @@ Assets {
     }
   }
   SerializationVersion: 101
-  VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Combat"
 }

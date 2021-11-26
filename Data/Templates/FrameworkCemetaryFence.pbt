@@ -2605,5 +2605,5 @@ Assets {
   }
   SerializationVersion: 101
   VirtualFolderPath: "Framework"
-  VirtualFolderPath: "Exterior"
+  VirtualFolderPath: "Props"
 }

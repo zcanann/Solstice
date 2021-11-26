@@ -580,5 +580,6 @@ Assets {
   }
   SerializationVersion: 101
   VirtualFolderPath: "Framework"
-  VirtualFolderPath: "Interior"
+  VirtualFolderPath: "Buildings"
+  VirtualFolderPath: "Stairs"
 }

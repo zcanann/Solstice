@@ -76,22 +76,7 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Floors"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Walls"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
       VirtualFolderPath: "Water"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Interior"
       PlatformAssetType: 5
     }
     Folders {
@@ -122,11 +107,6 @@ Assets {
     Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Buildings"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Exterior"
       PlatformAssetType: 5
     }
     Folders {
@@ -264,15 +244,6 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Gameplay"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
-      VirtualFolderPath: "Combat"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Resources"
       PlatformAssetType: 3
     }
@@ -308,6 +279,39 @@ Assets {
     Folders {
       VirtualFolderPath: "Walls"
       PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Props"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Walls"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Floors"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Decor"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Stairs"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Combat"
+      PlatformAssetType: 5
     }
   }
 }

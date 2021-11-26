@@ -1156,4 +1156,5 @@ Assets {
     }
   }
   SerializationVersion: 101
+  VirtualFolderPath: "Framework"
 }
