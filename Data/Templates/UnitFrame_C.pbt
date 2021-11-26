@@ -2574,7 +2574,6 @@ Assets {
         Control {
           Width: 200
           Height: 200
-          RotationAngle: 45
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2650,6 +2649,7 @@ Assets {
         Control {
           Width: 200
           Height: 200
+          RotationAngle: 45
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -2678,12 +2678,12 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middleleft"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }

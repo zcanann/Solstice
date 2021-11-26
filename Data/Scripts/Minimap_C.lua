@@ -38,6 +38,9 @@ local ROTATION_ROOT = script:GetCustomProperty("RotationRoot"):WaitForObject()
 local propZoomInButton = script:GetCustomProperty("ZoomInButton"):WaitForObject()
 local propZoomOutButton = script:GetCustomProperty("ZoomOutButton"):WaitForObject()
 
+local propCameraCaptureImage = script:GetCustomProperty("CameraCaptureImage"):WaitForObject()
+local propTerrainCaptureCamera = script:GetCustomProperty("TerrainCaptureCamera"):WaitForObject()
+
 local minimapSize = CONTENT_PANEL.width -- Assumed to have equal width and height
 local minimapCullDistance = minimapSize / 2.0 + 12.0
 local minimapMouseHitTestDistance = minimapSize / 2.0 - 24.0
@@ -262,6 +265,12 @@ function Tick()
 
 	PositionDynamicObjects()
 	UpdateCompassRotations(minimapRotation)
+
+	local newCameraCoords = localPlayer:GetWorldPosition()
+	newCameraCoords.z = 30000
+	propTerrainCaptureCamera:SetWorldPosition(newCameraCoords)
+	propCameraCaptureImage.rotationAngle = 180
+	Framework.Utils.CameraCapture.Capture(propTerrainCaptureCamera, propCameraCaptureImage)
 end
 
 function UpdateCompassRotations(minimapRotation)
@@ -305,7 +314,8 @@ function OnMouseDown(cursorPosition, primary)
 		minimapCenterPositionY - cursorPosition.y
 	)
 
-	if minimapClickCoords.size < minimapMouseHitTestDistance then
+	if true or minimapClickCoords.size < minimapMouseHitTestDistance then
+		print("??")
 		-- Framework.Print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
 		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
 

@@ -131,16 +131,6 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 3211347355552805067
-      value {
-      }
-    }
-    ParameterOverrideMap {
-      key: 11944140580824408648
-      value {
-      }
-    }
-    ParameterOverrideMap {
       key: 12411621271059381585
       value {
         Overrides {
@@ -54897,7 +54887,7 @@ Objects {
 }
 Objects {
   Id: 2587382974214932426
-  Name: "Background"
+  Name: "CameraCaptureImage"
   Transform {
     Location {
       X: 1344.06738
@@ -54936,9 +54926,12 @@ Objects {
     }
     Image {
       Brush {
-        Id: 17476121550048471155
+        Id: 841534158063459245
       }
       Color {
+        R: 1
+        G: 1
+        B: 1
         A: 1
       }
       TeamSettings {
@@ -55317,6 +55310,7 @@ Objects {
     }
   }
   ParentId: 17917626017835754387
+  ChildIds: 4222954327607264118
   UnregisteredParameters {
     Overrides {
       Name: "cs:ContentPanel"
@@ -55456,6 +55450,18 @@ Objects {
       Name: "cs:CompassLower:ml"
       Bool: false
     }
+    Overrides {
+      Name: "cs:TerrainCaptureCamera"
+      ObjectReference {
+        SelfId: 4222954327607264118
+      }
+    }
+    Overrides {
+      Name: "cs:CameraCaptureImage"
+      ObjectReference {
+        SelfId: 2587382974214932426
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -55472,6 +55478,56 @@ Objects {
   Script {
     ScriptAsset {
       Id: 11257204585549143565
+    }
+  }
+}
+Objects {
+  Id: 4222954327607264118
+  Name: "TerrainCaptureCamera"
+  Transform {
+    Location {
+      X: 16522
+      Z: 5629
+    }
+    Rotation {
+      Pitch: -90
+      Roll: 90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17231288832128299088
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:alwaysvisible"
+  }
+  Camera {
+    PositionOffset {
+    }
+    RotationOffset {
+    }
+    FieldOfView: 25
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:default"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    DoesPositionOffsetSpring: true
+    AudioListenerOffset {
     }
   }
 }

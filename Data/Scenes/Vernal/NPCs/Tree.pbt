@@ -365,12 +365,6 @@ Objects {
       Id: 6046099596165086452
     }
   }
-  InstanceHistory {
-    SelfId: 16712260742463212075
-    SubobjectId: 11624635531437394695
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
-  }
 }
 Objects {
   Id: 14094711265554309001
@@ -1127,7 +1121,7 @@ Objects {
 }
 Objects {
   Id: 17493249929402542544
-  Name: "FrameworkNPCModel_Lianna"
+  Name: "Humanoid 1 Rig"
   Transform {
     Location {
     }
@@ -1221,13 +1215,6 @@ Objects {
       }
     }
   }
-  InstanceHistory {
-    SelfId: 17493249929402542544
-    SubobjectId: 13004815537659078908
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
-    WasRoot: true
-  }
 }
 Objects {
   Id: 2972445577384355625
@@ -1261,12 +1248,6 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 2972445577384355625
-    SubobjectId: 8070133278325138949
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
   }
 }
 Objects {
@@ -1314,12 +1295,6 @@ Objects {
     ScriptAsset {
       Id: 6046099596165086452
     }
-  }
-  InstanceHistory {
-    SelfId: 12515650815741287948
-    SubobjectId: 16937588428484796192
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
   }
 }
 Objects {
@@ -1391,12 +1366,6 @@ Objects {
     DecalBP {
     }
   }
-  InstanceHistory {
-    SelfId: 8706273284767743494
-    SubobjectId: 4497976278942613290
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
-  }
   Relevance {
     Value: "mc:eproxyrelevance:medium"
   }
@@ -1446,12 +1415,6 @@ Objects {
     ScriptAsset {
       Id: 6046099596165086452
     }
-  }
-  InstanceHistory {
-    SelfId: 16712260742463212075
-    SubobjectId: 11624635531437394695
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
   }
 }
 Objects {
@@ -1523,12 +1486,6 @@ Objects {
     DecalBP {
     }
   }
-  InstanceHistory {
-    SelfId: 8663927114617213109
-    SubobjectId: 4504324455583863193
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
-  }
   Relevance {
     Value: "mc:eproxyrelevance:medium"
   }
@@ -1578,12 +1535,6 @@ Objects {
     ScriptAsset {
       Id: 6046099596165086452
     }
-  }
-  InstanceHistory {
-    SelfId: 8219049218277496155
-    SubobjectId: 3796830542875186295
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
   }
 }
 Objects {
@@ -1663,12 +1614,6 @@ Objects {
     }
     DecalBP {
     }
-  }
-  InstanceHistory {
-    SelfId: 6246341363615685019
-    SubobjectId: 1157872144808958135
-    InstanceId: 10559816515954073844
-    TemplateId: 14331216442300634809
   }
   Relevance {
     Value: "mc:eproxyrelevance:medium"

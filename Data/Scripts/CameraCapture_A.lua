@@ -60,4 +60,13 @@ CameraCapture.UnitFrameImageCapture = function(captureCamera, avatarImage, entit
 	end
 end
 
+CameraCapture.Capture = function(captureCamera, captureImage)
+	if Object.IsValid(captureCamera) then
+		local capture = captureCamera:Capture(CameraCaptureResolution.MEDIUM)
+		if capture then
+			captureImage:SetCameraCapture(capture)
+		end
+	end
+end
+
 return CameraCapture
