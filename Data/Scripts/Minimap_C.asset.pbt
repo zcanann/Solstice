@@ -49,11 +49,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:CompassLower"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:ZoomInButton"
         ObjectReference {
         }
@@ -65,6 +60,11 @@ Assets {
       }
       Overrides {
         Name: "cs:ContentRoot"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:CaptureRoot"
         ObjectReference {
         }
       }
@@ -145,14 +145,6 @@ Assets {
       }
       Overrides {
         Name: "cs:Compass:ml"
-        Bool: false
-      }
-      Overrides {
-        Name: "cs:CompassLower:isrep"
-        Bool: false
-      }
-      Overrides {
-        Name: "cs:CompassLower:ml"
         Bool: false
       }
       Overrides {

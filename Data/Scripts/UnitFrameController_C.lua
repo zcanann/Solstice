@@ -21,6 +21,8 @@ local targetListeners = { }
 local playerUnitFrameCamera = nil
 local targetUnitFrameCamera = nil
 local selectedTarget = nil
+local playerUnitFrameCapture = nil
+local targetUnitFrameCapture = nil
 
 local playerAvatarImage = propPlayerUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject()
 local targetAvatarImage = propTargetUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject()

@@ -6,6 +6,7 @@ local propWaypointsTemplate = script:GetCustomProperty("MinimapWaypoints")
 
 local propContentPanel = script:GetCustomProperty("ContentPanel"):WaitForObject()
 local propContentRoot = script:GetCustomProperty("ContentRoot"):WaitForObject()
+local propCaptureRoot = script:GetCustomProperty("CaptureRoot"):WaitForObject()
 local propCompass = script:GetCustomProperty("Compass"):WaitForObject()
 local propRotationRoot = script:GetCustomProperty("RotationRoot"):WaitForObject()
 
@@ -35,6 +36,9 @@ local dynamicObjects = { }
 
 local minimapWaypoints = nil
 local cachedGoal = nil
+
+local capture = nil
+local cachedSuccessfulCaptureCoords = nil
 
 -- Local variables. Allocated here to prevent stressing LUA GC.
 local localPlayerPosMapSpace = Vector2.New()
@@ -246,7 +250,16 @@ function Tick()
 	newCameraCoords.z = 512 / scale
 	propCameraCaptureImage.rotationAngle = 180
 	propTerrainCaptureCamera:SetWorldPosition(newCameraCoords)
-	Framework.Utils.CameraCapture.Capture(propTerrainCaptureCamera, propCameraCaptureImage)
+	capture = Framework.Utils.CameraCapture.Capture(propTerrainCaptureCamera, propCameraCaptureImage, CameraCaptureResolution.SMALL)
+	if capture then
+		cachedSuccessfulCaptureCoords = newCameraCoords
+		propCaptureRoot.x = 0
+		propCaptureRoot.y = 0
+	elseif cachedSuccessfulCaptureCoords then
+		local drift = cachedSuccessfulCaptureCoords - newCameraCoords
+		propCaptureRoot.x = drift.x * scale
+		propCaptureRoot.y = drift.y * scale
+	end
 end
 
 function UpdateCompassRotations(minimapRotation)

@@ -1,13 +1,4 @@
 Assets {
-  Id: 18056787318024051379
-  Name: "Center Arrow 004 Wedge"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "CenterArrow_004Wedge"
-  }
-}
-Assets {
   Id: 17476121550048471155
   Name: "Center Circle 001"
   PlatformAssetType: 9

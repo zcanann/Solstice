@@ -209,7 +209,8 @@ function Tick()
         end
     end
 
-	Framework.Utils.CameraCapture.UnitFrameImageCapture(Framework.Utils.CameraCapture.GetCaptureCamera(proximityNetworkedObject), propAvatarImage, proximityNetworkedObject)
+	Framework.Utils.CameraCapture.UnitFrameImageCapture(Framework.Utils.CameraCapture.GetCaptureCamera(proximityNetworkedObject),
+        propAvatarImage, proximityNetworkedObject, CameraCaptureResolution.MEDIUM)
 end
 
 CloseDialog()
