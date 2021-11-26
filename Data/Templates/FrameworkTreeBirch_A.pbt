@@ -16,7 +16,8 @@ Assets {
           }
         }
         ParentId: 17246289419149383775
-        ChildIds: 4365555509994520938
+        ChildIds: 7579292625554974566
+        ChildIds: 15055210502351656642
         ChildIds: 14563214116528318820
         UnregisteredParameters {
           Overrides {
@@ -43,90 +44,23 @@ Assets {
         }
       }
       Objects {
-        Id: 4365555509994520938
-        Name: "Model"
+        Id: 7579292625554974566
+        Name: "HitTestCollision"
         Transform {
           Location {
-            X: 4
-            Y: 3
+            X: 4.00112629
+            Y: 2.9984715
             Z: -18
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.25
+            Y: 1.25
+            Z: 8
           }
         }
         ParentId: 7766009470731821977
-        ChildIds: 7287128762183353947
-        ChildIds: 15055210502351656642
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 7287128762183353947
-        Name: "Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4365555509994520938
-        ChildIds: 7579292625554974566
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsFilePartition: true
-          FilePartitionName: "Base"
-        }
-      }
-      Objects {
-        Id: 7579292625554974566
-        Name: "HitTestCollision"
-        Transform {
-          Location {
-            Z: 18
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 4
-          }
-        }
-        ParentId: 7287128762183353947
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -158,12 +92,12 @@ Assets {
       }
       Objects {
         Id: 15055210502351656642
-        Name: "ClientContext"
+        Name: "Model"
         Transform {
           Location {
-            X: 5
-            Y: -5
-            Z: -10
+            X: 9.00059319
+            Y: -2.00099444
+            Z: -28
           }
           Rotation {
           }
@@ -173,7 +107,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4365555509994520938
+        ParentId: 7766009470731821977
         ChildIds: 5534306159983936690
         ChildIds: 1165548352048504414
         ChildIds: 16566451080588489451
@@ -781,7 +715,7 @@ Assets {
       }
       Objects {
         Id: 3148064718191190559
-        Name: "CloseRangeInteractable_C"
+        Name: "Choppable_C"
         Transform {
           Location {
             X: 0.000690533896

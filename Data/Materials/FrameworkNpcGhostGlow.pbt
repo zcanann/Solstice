@@ -40,7 +40,7 @@ Assets {
       }
       Overrides {
         Name: "plasma scale"
-        Float: 152.497513
+        Float: 160
       }
       Overrides {
         Name: "fresnel exponent"
@@ -49,6 +49,14 @@ Assets {
       Overrides {
         Name: "threshold max"
         Float: 0.317214578
+      }
+      Overrides {
+        Name: "speed"
+        Vector {
+          X: -24
+          Y: -16
+          Z: 16
+        }
       }
     }
     Assets {

@@ -16,12 +16,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:NPCModelTemplate"
-        AssetReference {
-          Id: 841534158063459245
-        }
-      }
-      Overrides {
         Name: "cs:DefaultDialog"
         String: ""
       }

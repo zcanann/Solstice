@@ -320,6 +320,11 @@ Assets {
           Id: 10315488790040496240
         }
       }
+      Overrides {
+        Name: "cs:AvatarImage"
+        ObjectReference {
+        }
+      }
     }
   }
   SerializationVersion: 101

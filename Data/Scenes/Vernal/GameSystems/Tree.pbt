@@ -260,6 +260,7 @@ Objects {
     }
   }
   ParentId: 7308426861307254377
+  ChildIds: 6827537968935038766
   ChildIds: 15438030653965732917
   UnregisteredParameters {
   }
@@ -325,6 +326,39 @@ Objects {
   Script {
     ScriptAsset {
       Id: 17585551463286605103
+    }
+  }
+}
+Objects {
+  Id: 6827537968935038766
+  Name: "PlayerUnitFrameCameraSpawner_C"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2076012642278374580
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 5461236454713091310
     }
   }
 }

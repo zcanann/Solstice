@@ -57,7 +57,8 @@ Assets {
           }
         }
         ParentId: 11348517016719245190
-        ChildIds: 15707199388560082370
+        ChildIds: 12509239061899240200
+        ChildIds: 626143090792127046
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -75,41 +76,8 @@ Assets {
         }
       }
       Objects {
-        Id: 15707199388560082370
-        Name: "Base"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10692578985468426304
-        ChildIds: 10655239108442292697
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsFilePartition: true
-          FilePartitionName: "Base_1"
-        }
-      }
-      Objects {
-        Id: 10655239108442292697
-        Name: "Humanoid 2 Rig"
+        Id: 12509239061899240200
+        Name: "ClientContext"
         Transform {
           Location {
             Z: 90
@@ -122,7 +90,38 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15707199388560082370
+        ParentId: 10692578985468426304
+        ChildIds: 10655239108442292697
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 10655239108442292697
+        Name: "Humanoid 2 Rig"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12509239061899240200
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
@@ -185,6 +184,61 @@ Assets {
             SkinnedMeshes {
               Id: 841534158063459245
             }
+          }
+        }
+      }
+      Objects {
+        Id: 626143090792127046
+        Name: "MouseHitTestCollision"
+        Transform {
+          Location {
+            Z: 100
+          }
+          Rotation {
+            Yaw: 129.999939
+          }
+          Scale {
+            X: 1.5
+            Y: 1.5
+            Z: 2.5
+          }
+        }
+        ParentId: 10692578985468426304
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1137112816547272582
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
           }
         }
       }
@@ -264,6 +318,12 @@ Assets {
           Overrides {
             Name: "cs:ObjectType"
             String: "Entity"
+          }
+          Overrides {
+            Name: "cs:UnitFrameCapture"
+            ObjectReference {
+              SubObjectId: 7192784538913353112
+            }
           }
         }
         Collidable_v2 {
@@ -379,6 +439,7 @@ Assets {
           }
         }
         ParentId: 9377427379436174445
+        ChildIds: 7192784538913353112
         ChildIds: 10159321667435830933
         ChildIds: 1191209439160521628
         ChildIds: 4454967224019093893
@@ -396,6 +457,174 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 7192784538913353112
+        Name: "UnitFrameCapture_C"
+        Transform {
+          Location {
+            X: 23.2236271
+            Y: 13.0254793
+            Z: 175
+          }
+          Rotation {
+            Yaw: -5.00003052
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4848759869157782196
+        ChildIds: 8843280415189380362
+        ChildIds: 14189300426048271433
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:CaptureCamera"
+            ObjectReference {
+              SubObjectId: 8843280415189380362
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 8843280415189380362
+        Name: "CaptureCamera"
+        Transform {
+          Location {
+            X: 53
+            Y: 28.9999943
+            Z: 20
+          }
+          Rotation {
+            Pitch: -9.99996948
+            Yaw: -149.999954
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7192784538913353112
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:BackPlane"
+            ObjectReference {
+              SubObjectId: 14189300426048271433
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:alwaysvisible"
+        }
+        Camera {
+          PositionOffset {
+          }
+          RotationOffset {
+          }
+          FieldOfView: 25
+          ViewWidth: 1200
+          RotationMode {
+            Value: "mc:erotationmode:default"
+          }
+          MinPitch: -89
+          MaxPitch: 89
+          DoesPositionOffsetSpring: true
+          AudioListenerOffset {
+          }
+        }
+      }
+      Objects {
+        Id: 14189300426048271433
+        Name: "BackPlane"
+        Transform {
+          Location {
+            X: -50.5046387
+            Y: -28.0820274
+            Z: 0.449356079
+          }
+          Rotation {
+            Pitch: 79.999527
+            Yaw: -149.999664
+            Roll: 5.89978263e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7192784538913353112
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16248465704105362888
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7280120439921138985
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
         }
       }
       Objects {
@@ -988,6 +1217,15 @@ Assets {
       }
     }
     Assets {
+      Id: 1137112816547272582
+      Name: "Cylinder"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cylinder_002"
+      }
+    }
+    Assets {
       Id: 12095835209017042614
       Name: "Cube"
       PlatformAssetType: 1
@@ -1003,6 +1241,24 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 7280120439921138985
+      Name: "Plane 1m - One Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_plane_1m_001"
+      }
+    }
+    Assets {
+      Id: 16248465704105362888
+      Name: "Rock Obsidian 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fresnel_rock_obsidian_001_uv"
       }
     }
     PrimaryAssetId {

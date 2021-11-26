@@ -1,14 +1,9 @@
 Assets {
-  Id: 6046099596165086452
-  Name: "DecalAttachment_C"
+  Id: 1826885176696979723
+  Name: "CameraCapture_A"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
-      Overrides {
-        Name: "cs:Decal"
-        ObjectReference {
-        }
-      }
       Overrides {
         Name: "cs:Rig"
         ObjectReference {
@@ -17,14 +12,6 @@ Assets {
       Overrides {
         Name: "cs:Slot"
         String: ""
-      }
-      Overrides {
-        Name: "cs:Decal:isrep"
-        Bool: false
-      }
-      Overrides {
-        Name: "cs:Decal:ml"
-        Bool: false
       }
     }
   }

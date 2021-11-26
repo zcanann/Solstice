@@ -2,7 +2,6 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 
-local propNPCModelTemplate = script:GetCustomProperty("NPCModelTemplate")
 local propDefaultDialog = script:GetCustomProperty("DefaultDialog")
 local propDialogRange = script:GetCustomProperty("DialogRange")
 
@@ -11,9 +10,8 @@ local name = "Unknown"
 function BeginTalk()
     Framework.Print("Talking...")
     local data = {
-        object = propProximityNetworkedObject,
+        proximityNetworkedObject = propProximityNetworkedObject,
         range = propDialogRange,
-        npcModelTemplate = propNPCModelTemplate,
         dialog = propDefaultDialog,
         seed = nil,
     }

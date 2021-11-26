@@ -1,4 +1,3 @@
-
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local propDialogContainer = script:GetCustomProperty("DialogContainer"):WaitForObject()
@@ -55,6 +54,8 @@ local propIthkuilZFlex = script:GetCustomProperty("IthkuilZFlex")
 local propExclaimationMark = script:GetCustomProperty("ExclaimationMark")
 local propPeriod = script:GetCustomProperty("Period")
 local propQuestionMark = script:GetCustomProperty("QuestionMark")
+
+local propAvatarImage = script:GetCustomProperty("AvatarImage"):WaitForObject()
 
 local alphabet = {
     propIthkuilApostrophe,
@@ -121,8 +122,8 @@ local localPlayer = Game.GetLocalPlayer()
 local dialogData = nil
 local dialogRange = 0.0
 
--- Speaker model
-local screenObjectRoot = nil
+-- Speaker networked object
+local proximityNetworkedObject = nil
 
 -- Text
 local letterInstances = { }
@@ -137,18 +138,9 @@ function OnDialogOpened(newDialogData)
     end
 
     dialogRange = dialogData.range
+    proximityNetworkedObject = dialogData.proximityNetworkedObject
 
-    SpawnSpeaker()
     SpawnLetters()
-end
-
-function SpawnSpeaker()
-    if screenObjectRoot then
-        screenObjectRoot:Destroy()
-    end
-    screenObjectRoot = Framework.Utils.ScreenObject.New(propEmptyTemplate, Vector2.New(0.75, 0.2), 160.0, Vector3.New(0.0, 0.0, 45.0))
-    local npcModel = World.SpawnAsset(dialogData.npcModelTemplate, { parent = screenObjectRoot.object })
-    npcModel:SetPosition(Vector3.New(0.0, 0.0, -77.0))
 end
 
 function SpawnLetters()
@@ -161,7 +153,7 @@ function SpawnLetters()
     local seed = dialogData.seed
     if not seed then
         -- If no seed specified, get a dialog seed from the object MUID
-        local muid, _ = CoreString.Split(dialogData.object.id, ":")
+        local muid, _ = CoreString.Split(dialogData.proximityNetworkedObject.id, ":")
         seed = tonumber(muid, 16)
     end
 
@@ -205,20 +197,19 @@ end
 
 function CloseDialog()
     propDialogContainer.visibility = Visibility.FORCE_OFF
-    if screenObjectRoot then
-        screenObjectRoot:Destroy()
-        screenObjectRoot = nil
-    end
+    proximityNetworkedObject = nil
     dialogData = nil
 end
 
 function Tick()
     if dialogData then
-        local distance = (localPlayer:GetWorldPosition() - dialogData.object:GetWorldPosition()).size
+        local distance = (localPlayer:GetWorldPosition() - dialogData.proximityNetworkedObject:GetWorldPosition()).size
         if distance > dialogData.range then
             CloseDialog()
         end
     end
+
+	Framework.Utils.CameraCapture.UnitFrameImageCapture(Framework.Utils.CameraCapture.GetCaptureCamera(proximityNetworkedObject), propAvatarImage, proximityNetworkedObject)
 end
 
 CloseDialog()

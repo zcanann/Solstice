@@ -59,6 +59,12 @@ Objects {
         SelfId: 1957764865448918823
       }
     }
+    Overrides {
+      Name: "cs:AvatarImage"
+      ObjectReference {
+        SelfId: 12168356013156093139
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

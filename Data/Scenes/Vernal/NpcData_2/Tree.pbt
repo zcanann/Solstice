@@ -1,7 +1,7 @@
-Name: "NpcData_1"
-RootId: 10096729828545893152
+Name: "NpcData_2"
+RootId: 2862309105971316705
 Objects {
-  Id: 12309162144324646522
+  Id: 6719554274237472629
   Name: "NpcOffensiveStats_S"
   Transform {
     Location {
@@ -14,18 +14,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10096729828545893152
+  ParentId: 2862309105971316705
   UnregisteredParameters {
     Overrides {
       Name: "cs:Npc"
       ObjectReference {
-        SelfId: 8456854035221219726
+        SelfId: 17351291876623604907
       }
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 752018236670724354
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -46,15 +46,9 @@ Objects {
       Id: 11874967471006849858
     }
   }
-  InstanceHistory {
-    SelfId: 17044647822992236673
-    SubobjectId: 335534710826489481
-    InstanceId: 14678979447342944233
-    TemplateId: 17256152977790581857
-  }
 }
 Objects {
-  Id: 13916857564780629704
+  Id: 5414038384375960982
   Name: "NpcDefensiveStats_S"
   Transform {
     Location {
@@ -67,18 +61,18 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10096729828545893152
+  ParentId: 2862309105971316705
   UnregisteredParameters {
     Overrides {
       Name: "cs:Npc"
       ObjectReference {
-        SelfId: 8456854035221219726
+        SelfId: 17351291876623604907
       }
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 752018236670724354
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -99,15 +93,9 @@ Objects {
       Id: 9212125225912631800
     }
   }
-  InstanceHistory {
-    SelfId: 17995894161209645746
-    SubobjectId: 1269044833450421434
-    InstanceId: 14678979447342944233
-    TemplateId: 17256152977790581857
-  }
 }
 Objects {
-  Id: 3276136140947952663
+  Id: 1203551570909611507
   Name: "NpcStats_S"
   Transform {
     Location {
@@ -120,23 +108,23 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10096729828545893152
+  ParentId: 2862309105971316705
   UnregisteredParameters {
     Overrides {
       Name: "cs:Npc"
       ObjectReference {
-        SelfId: 8456854035221219726
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 752018236670724354
+        SelfId: 17351291876623604907
       }
     }
     Overrides {
       Name: "cs:MeleeRadius"
       Float: 200
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9348038341760866652
+      }
     }
   }
   Collidable_v2 {
@@ -156,15 +144,9 @@ Objects {
       Id: 7867712670032685259
     }
   }
-  InstanceHistory {
-    SelfId: 1245204717512158243
-    SubobjectId: 17970792969519094315
-    InstanceId: 14678979447342944233
-    TemplateId: 17256152977790581857
-  }
 }
 Objects {
-  Id: 8366793746082880492
+  Id: 394624392561640551
   Name: "NpcNameFaction_S"
   Transform {
     Location {
@@ -177,26 +159,30 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 10096729828545893152
+  ParentId: 2862309105971316705
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
-      String: "Frail Skeleton"
+      String: "Eldia"
     }
     Overrides {
       Name: "cs:Race"
-      String: "Undead"
+      String: "Molgra"
     }
     Overrides {
       Name: "cs:Npc"
       ObjectReference {
-        SelfId: 8456854035221219726
+        SelfId: 17351291876623604907
       }
+    }
+    Overrides {
+      Name: "cs:Faction"
+      String: "Ithkuil"
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 752018236670724354
+        SelfId: 9348038341760866652
       }
     }
   }
@@ -216,11 +202,5 @@ Objects {
     ScriptAsset {
       Id: 4891227166975548473
     }
-  }
-  InstanceHistory {
-    SelfId: 14810362549674768665
-    SubobjectId: 2714040742517067537
-    InstanceId: 14678979447342944233
-    TemplateId: 17256152977790581857
   }
 }

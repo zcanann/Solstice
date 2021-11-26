@@ -37,7 +37,7 @@ Objects {
   Name: "NavMeshArea"
   Transform {
     Location {
-      Z: 625
+      Z: 625.029
     }
     Rotation {
     }

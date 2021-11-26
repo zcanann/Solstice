@@ -5,6 +5,12 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:CameraCapture"
+        AssetReference {
+          Id: 1826885176696979723
+        }
+      }
+      Overrides {
         Name: "cs:DevUtils"
         AssetReference {
           Id: 3693793738310101289
@@ -14,12 +20,6 @@ Assets {
         Name: "cs:ObjectsUtils"
         AssetReference {
           Id: 12711822042249602293
-        }
-      }
-      Overrides {
-        Name: "cs:ScreenObject"
-        AssetReference {
-          Id: 15194872122274012203
         }
       }
       Overrides {

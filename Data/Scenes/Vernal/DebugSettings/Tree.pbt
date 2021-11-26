@@ -50,11 +50,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ServerShowProximityObjects"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:ShowAgroRadius"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {
@@ -124,11 +124,11 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ServerShowProximityObjects"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:ShowAgroRadius"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {

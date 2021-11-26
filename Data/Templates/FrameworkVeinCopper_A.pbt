@@ -16,7 +16,8 @@ Assets {
           }
         }
         ParentId: 17246289419149383775
-        ChildIds: 14909532260286085420
+        ChildIds: 16803602812192200373
+        ChildIds: 12971064613990579146
         ChildIds: 3936958111886977860
         UnregisteredParameters {
           Overrides {
@@ -43,13 +44,57 @@ Assets {
         }
       }
       Objects {
-        Id: 14909532260286085420
+        Id: 16803602812192200373
+        Name: "HitTestCollision"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.25
+            Y: 1.25
+            Z: 1.25
+          }
+        }
+        ParentId: 18361376657929626207
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1266200099515413851
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 12971064613990579146
         Name: "Model"
         Transform {
           Location {
-            X: 4
-            Y: 3
-            Z: -18
+            X: 8.9990387
+            Y: -1.99978614
+            Z: -28
           }
           Rotation {
           }
@@ -61,9 +106,16 @@ Assets {
         }
         ParentId: 18361376657929626207
         ChildIds: 8068096816496895139
-        ChildIds: 12971064613990579146
+        ChildIds: 732550294682356828
+        ChildIds: 3414290294168690133
+        ChildIds: 2923406219769570689
+        ChildIds: 12349232413866453133
+        ChildIds: 5459181690442352136
+        ChildIds: 5663368955927463604
+        ChildIds: 17812603002443832847
+        ChildIds: 9173146783906193299
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -74,8 +126,7 @@ Assets {
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
-        Folder {
-          IsGroup: true
+        NetworkContext {
         }
       }
       Objects {
@@ -83,6 +134,9 @@ Assets {
         Name: "Base"
         Transform {
           Location {
+            X: -4.99946642
+            Y: 4.99946547
+            Z: 10
           }
           Rotation {
           }
@@ -92,7 +146,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14909532260286085420
+        ParentId: 12971064613990579146
         ChildIds: 9681263259382482792
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -116,7 +170,7 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
-            Z: 62.971
+            Z: 63
           }
           Rotation {
           }
@@ -178,47 +232,6 @@ Assets {
         }
       }
       Objects {
-        Id: 12971064613990579146
-        Name: "ClientContext"
-        Transform {
-          Location {
-            X: 5
-            Y: -5
-            Z: -10
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 14909532260286085420
-        ChildIds: 732550294682356828
-        ChildIds: 3414290294168690133
-        ChildIds: 2923406219769570689
-        ChildIds: 12349232413866453133
-        ChildIds: 5459181690442352136
-        ChildIds: 5663368955927463604
-        ChildIds: 17812603002443832847
-        ChildIds: 9173146783906193299
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        NetworkContext {
-        }
-      }
-      Objects {
         Id: 732550294682356828
         Name: "BaseHasResources"
         Transform {
@@ -258,7 +271,7 @@ Assets {
         Name: "Flare Billboard"
         Transform {
           Location {
-            Y: 9.53674316e-06
+            Z: 0.0289917
           }
           Rotation {
           }
@@ -432,6 +445,7 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
+            Z: 0.0225349758
           }
           Rotation {
           }
@@ -542,11 +556,12 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
+            Z: 0.0225349758
           }
           Rotation {
-            Pitch: -63.7444038
+            Pitch: -63.7444153
             Yaw: 78.3738785
-            Roll: -9.36183262
+            Roll: -9.36184692
           }
           Scale {
             X: 0.100000009
@@ -648,6 +663,7 @@ Assets {
           Location {
             X: 1.5937525
             Y: -1.59375226
+            Z: 0.0289917
           }
           Rotation {
             Pitch: 1.54860187
@@ -716,6 +732,7 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
+            Z: 0.0289917
           }
           Rotation {
           }
@@ -862,6 +879,7 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
+            Z: 0.0289917
           }
           Rotation {
             Pitch: -47.2133179
@@ -930,6 +948,7 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
+            Z: 0.0289917
           }
           Rotation {
           }
@@ -1077,8 +1096,7 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
-            X: 3.92326401e-05
-            Y: -4.67556456e-05
+            Z: 0.0289917
           }
           Rotation {
             Pitch: 1.54860187
@@ -1149,6 +1167,7 @@ Assets {
           Location {
             X: 1.14017594
             Y: -0.0997530296
+            Z: 0.0289917
           }
           Rotation {
           }
@@ -1297,16 +1316,19 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
+            X: 1.33046096e-09
+            Y: -0.0207083579
+            Z: 0.0358679295
           }
           Rotation {
-            Pitch: -47.2133102
+            Pitch: -47.2133179
             Yaw: 82.4575882
-            Roll: -14.2675362
+            Roll: -14.2675476
           }
           Scale {
-            X: 0.190529212
-            Y: 0.236151949
-            Z: 0.155923486
+            X: 0.190529242
+            Y: 0.236152
+            Z: 0.155923516
           }
         }
         ParentId: 17812603002443832847
@@ -1513,16 +1535,19 @@ Assets {
         Name: "Rock 01"
         Transform {
           Location {
+            X: 1.33046096e-09
+            Y: -0.0207083579
+            Z: 0.0358679295
           }
           Rotation {
-            Pitch: -47.2133102
+            Pitch: -47.2133179
             Yaw: 82.4575882
-            Roll: -14.2675362
+            Roll: -14.2675476
           }
           Scale {
-            X: 0.190529212
-            Y: 0.236151949
-            Z: 0.155923486
+            X: 0.190529242
+            Y: 0.236152
+            Z: 0.155923516
           }
         }
         ParentId: 9173146783906193299
@@ -1581,13 +1606,16 @@ Assets {
         Name: "Callout Sparkle"
         Transform {
           Location {
+            X: 1.33046096e-09
+            Y: -0.0207083579
+            Z: 0.0358679295
           }
           Rotation {
           }
           Scale {
-            X: 0.48653391
-            Y: 0.472200811
-            Z: 0.724868
+            X: 0.486534
+            Y: 0.4722009
+            Z: 0.724868059
           }
         }
         ParentId: 9173146783906193299
@@ -1726,7 +1754,7 @@ Assets {
         Name: "ProximityNetworkedObject"
         Transform {
           Location {
-            Z: 55
+            Z: 55.0289917
           }
           Rotation {
           }
@@ -2358,6 +2386,15 @@ Assets {
             Id: 15725608099489840980
           }
         }
+      }
+    }
+    Assets {
+      Id: 1266200099515413851
+      Name: "Cube - Bottom-Aligned"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cube_001"
       }
     }
     Assets {

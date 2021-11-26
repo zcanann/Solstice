@@ -7,6 +7,9 @@ function TryInteractRecursive(target, primary)
         return false
     end
 
+    if target:IsA("Player") then
+        print("Player!")
+    end
     local proximityNetworkedObjectRef, exists = target:GetCustomProperty("ProximityNetworkedObject")
     if proximityNetworkedObjectRef == nil or not exists or not proximityNetworkedObjectRef:GetObject() then
         return TryInteractRecursive(target.parent, primary)
