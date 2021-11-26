@@ -7,9 +7,6 @@ function TryInteractRecursive(target, primary)
         return false
     end
 
-    if target:IsA("Player") then
-        print("Player!")
-    end
     local proximityNetworkedObjectRef, exists = target:GetCustomProperty("ProximityNetworkedObject")
     if proximityNetworkedObjectRef == nil or not exists or not proximityNetworkedObjectRef:GetObject() then
         return TryInteractRecursive(target.parent, primary)
@@ -53,8 +50,16 @@ local function OnMouseDown(cursorPosition, primary)
             Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATION, { goal })
         end
 
-        -- If no interaction found, fallback on the default action of walking
+        -- If no interaction found, fallback on the default action
         if primary then
+            --[[
+            -- Clear any unit selections
+            local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
+            if currentTarget then
+                Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
+                Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, nil)
+            end
+            --]]
             genericWalkHere()
         else
             Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", genericWalkHere })

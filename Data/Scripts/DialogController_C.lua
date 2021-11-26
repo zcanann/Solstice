@@ -121,6 +121,7 @@ local localPlayer = Game.GetLocalPlayer()
 -- Misc state
 local dialogData = nil
 local dialogRange = 0.0
+local capture = nil
 
 -- Speaker networked object
 local proximityNetworkedObject = nil
@@ -209,8 +210,20 @@ function Tick()
         end
     end
 
-	Framework.Utils.CameraCapture.UnitFrameImageCapture(Framework.Utils.CameraCapture.GetCaptureCamera(proximityNetworkedObject),
-        propAvatarImage, proximityNetworkedObject, CameraCaptureResolution.MEDIUM)
+    if not capture or not capture:IsValid() then
+        capture = Framework.Utils.CameraCapture.UnitFrameImageCapture(
+            Framework.Utils.CameraCapture.GetCaptureCamera(proximityNetworkedObject),
+            proximityNetworkedObject,
+            propAvatarImage,
+            CameraCaptureResolution.VERY_LARGE
+        )
+    else
+        Framework.Utils.CameraCapture.UnitFrameImageRecapture(
+            Framework.Utils.CameraCapture.GetCaptureCamera(proximityNetworkedObject),
+            proximityNetworkedObject,
+            capture
+        )
+    end
 end
 
 CloseDialog()

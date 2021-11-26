@@ -46,18 +46,31 @@ CameraCapture.GetCaptureCamera = function (objectInstance)
     return nil
 end
 
-CameraCapture.UnitFrameImageCapture = function(captureCamera, avatarImage, entity, quality)
-	quality = quality or CameraCaptureResolution.SMALL
+CameraCapture.UnitFrameImageRecapture = function(captureCamera, entity, capture)
 	if Object.IsValid(captureCamera) then
 		local backPlane = captureCamera:GetCustomProperty("BackPlane"):GetObject()
 		HideEquipmentForCapture(entity)
 		backPlane.visibility = Visibility.INHERIT
-		local capture = captureCamera:Capture(quality)
-		if capture then
-			avatarImage:SetCameraCapture(capture)
+		if capture and capture:IsValid() then
+			capture:Refresh()
 		end
 		backPlane.visibility = Visibility.FORCE_OFF
 		RestoreEquipmentPostCapture(entity)
+		return capture
+	end
+	return nil
+end
+
+CameraCapture.UnitFrameImageCapture = function(captureCamera, entity, captureImage, quality)
+	if Object.IsValid(captureCamera) and Object.IsValid(entity) and Object.IsValid(captureImage) then
+		quality = quality or CameraCaptureResolution.SMALL
+		local capture = captureCamera:Capture(quality)
+
+		if capture then
+			captureImage:SetCameraCapture(capture)
+			CameraCapture.UnitFrameImageRecapture(capture, captureCamera, entity)
+		end
+
 		return capture
 	end
 	return nil

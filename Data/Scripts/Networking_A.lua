@@ -6,12 +6,14 @@ local NetworkingKeys = require(script:GetCustomProperty("NetworkingEvents"))
 Networking.ProximityKeys = require(script:GetCustomProperty("ProximityKeys"))
 
 Networking.GetProximityInstance = function (proximityObjectId)
-    local player = Game.FindPlayer(proximityObjectId)
+    if not proximityObjectId then
+        return nil
+    end
 
-    if player then
-        return player
-    elseif string.match(proximityObjectId, '.+:.+') then
+    if string.match(proximityObjectId, '.+:.+') then
         return World.FindObjectById(proximityObjectId)
+    else
+        return Game.FindPlayer(proximityObjectId)
     end
 end
 
@@ -41,6 +43,10 @@ Networking.SetProximityData = function(id, key, data)
 end
 
 Networking.GetProximityData = function(id, key)
+    if not id or not key then
+        return nil
+    end
+
     -- Only the server is capable of unresolving an id (ie )
     if Environment.IsServer() then
         local script = Networking.GetProximityDataScript(id)

@@ -109,9 +109,15 @@ function OnRequestMoveNearLocation(goal, stopRadius, callback)
 	BeginMoveToGoal(goal, callback, false)
 end
 
+function OnRequestCancelMovement()
+	goalRachedCallback = nil
+	OnReachedDestination()
+end
+
 localPlayer.movementHook:Connect(MovementHook)
 
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATION, OnRequestMoveToLocation)
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_NEAR_LOCATION, OnRequestMoveNearLocation)
+Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_CANCEL_MOVEMENT, OnRequestCancelMovement)
 

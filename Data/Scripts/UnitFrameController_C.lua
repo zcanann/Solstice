@@ -30,7 +30,8 @@ local targetAvatarImage = propTargetUnitFrame:GetCustomProperty("AvatarImage"):W
 function OnTargetSelected(proximityObjectId)
     local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
 
-	if not Framework.IsEntity(objectInstance) then
+	-- Note that we do not early-exit on a nil target, as this is equivalent to deselecting
+	if objectInstance and not Framework.IsEntity(objectInstance) then
 		return
 	end
 
@@ -49,6 +50,23 @@ function OnTargetSelected(proximityObjectId)
 	OnTargetFactionChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.FACTION))
 	OnTargetRaceChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE))
 
+	-- Release the existing unit frame capture if it exists
+	if targetUnitFrameCapture and targetUnitFrameCapture:IsValid() and selectedTarget ~= objectInstance then
+		targetUnitFrameCapture:Release()
+		targetUnitFrameCapture = nil
+	end
+
+	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
+	if currentTarget then
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
+	end
+	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET, proximityObjectId)
+
+	-- Now it is safe to early-exit if the target is nil, since we have finished deselecting
+	if not objectInstance or not Object.IsValid(objectInstance) then
+		return
+	end
+
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEALTH, OnTargetHealthChanged))
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnTargetMaxHealthChanged))
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MANA, OnTargetManaChanged))
@@ -61,11 +79,6 @@ function OnTargetSelected(proximityObjectId)
 	targetUnitFrameCamera = Framework.Utils.CameraCapture.GetCaptureCamera(objectInstance)
 
 	selectedTarget = objectInstance
-	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
-	if currentTarget then
-		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
-	end
-	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET, proximityObjectId)
 	Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. proximityObjectId)
 end
 
@@ -74,8 +87,17 @@ function Tick(deltaSeconds)
 		playerUnitFrameCamera = Framework.Utils.CameraCapture.GetCaptureCamera(localPlayer)
 	end
 
-	Framework.Utils.CameraCapture.UnitFrameImageCapture(playerUnitFrameCamera, playerAvatarImage, localPlayer)
-	Framework.Utils.CameraCapture.UnitFrameImageCapture(targetUnitFrameCamera, targetAvatarImage, selectedTarget)
+	if not playerUnitFrameCapture or not playerUnitFrameCapture:IsValid() then
+		playerUnitFrameCapture = Framework.Utils.CameraCapture.UnitFrameImageCapture(playerUnitFrameCamera, localPlayer, playerAvatarImage, CameraCaptureResolution.MEDIUM)
+	else
+		Framework.Utils.CameraCapture.UnitFrameImageRecapture(playerUnitFrameCamera, localPlayer, playerUnitFrameCapture)
+	end
+
+	if not targetUnitFrameCapture or not targetUnitFrameCapture:IsValid() then
+		targetUnitFrameCapture = Framework.Utils.CameraCapture.UnitFrameImageCapture(targetUnitFrameCamera, selectedTarget, targetAvatarImage, CameraCaptureResolution.MEDIUM)
+	else
+		Framework.Utils.CameraCapture.UnitFrameImageRecapture(targetUnitFrameCamera, selectedTarget, targetUnitFrameCapture)
+	end
 end
 
 function OnPlayerHealthChanged(proximityDataId, health)

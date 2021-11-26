@@ -3,7 +3,6 @@ local propRig = script:GetCustomProperty("Rig"):WaitForObject()
 local propSlot = script:GetCustomProperty("Slot")
 
 for _, object in pairs(objects) do
-    print(object)
     local offset = object:GetWorldPosition()
     local rotation = object:GetRotation()
 

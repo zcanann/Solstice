@@ -250,15 +250,22 @@ function Tick()
 	newCameraCoords.z = 512 / scale
 	propCameraCaptureImage.rotationAngle = 180
 	propTerrainCaptureCamera:SetWorldPosition(newCameraCoords)
-	capture = Framework.Utils.CameraCapture.Capture(propTerrainCaptureCamera, propCameraCaptureImage, CameraCaptureResolution.SMALL)
-	if capture then
-		cachedSuccessfulCaptureCoords = newCameraCoords
-		propCaptureRoot.x = 0
-		propCaptureRoot.y = 0
-	elseif cachedSuccessfulCaptureCoords then
-		local drift = cachedSuccessfulCaptureCoords - newCameraCoords
-		propCaptureRoot.x = drift.x * scale
-		propCaptureRoot.y = drift.y * scale
+
+	if not capture or not capture:IsValid() then
+		capture = Framework.Utils.CameraCapture.Capture(propTerrainCaptureCamera, propCameraCaptureImage, CameraCaptureResolution.SMALL)
+
+		-- This isn't really relevant anymore, but I guess it doesn't hurt
+		if capture then
+			cachedSuccessfulCaptureCoords = newCameraCoords
+			propCaptureRoot.x = 0
+			propCaptureRoot.y = 0
+		elseif cachedSuccessfulCaptureCoords then
+			local drift = cachedSuccessfulCaptureCoords - newCameraCoords
+			propCaptureRoot.x = drift.x * scale
+			propCaptureRoot.y = drift.y * scale
+		end
+	else
+		capture:Refresh()
 	end
 end
 
