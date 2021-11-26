@@ -18,7 +18,12 @@ local cachedTargetMaxMana = 100
 
 local targetListeners = { }
 
-propPlayerUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject():SetPlayerProfile(localPlayer)
+local targetUnitFrameCamera = nil
+
+local playerAvatarImage = propPlayerUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject()
+local targetAvatarImage = propTargetUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject()
+
+playerAvatarImage:SetPlayerProfile(localPlayer)
 
 function OnTargetSelected(proximityObjectId)
     local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
@@ -51,12 +56,27 @@ function OnTargetSelected(proximityObjectId)
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.FACTION, OnTargetFactionChanged))
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnTargetRaceChanged))
 
+	if not objectInstance:IsA("Player") then
+		targetUnitFrameCamera = objectInstance:GetCustomProperty("UnitFrameCapture")
+		if targetUnitFrameCamera then
+			targetUnitFrameCamera = targetUnitFrameCamera:GetObject()
+		end
+	end
+
 	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
 	if currentTarget then
 		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
 	end
 	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET, proximityObjectId)
 	Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. proximityObjectId)
+end
+
+function Tick(deltaSeconds)
+	if Object.IsValid(targetUnitFrameCamera) then
+		targetUnitFrameCamera:GetCustomProperty("BackPlane"):GetObject().visibility = Visibility.INHERIT
+		targetAvatarImage:SetCameraCapture(targetUnitFrameCamera:Capture(CameraCaptureResolution.MEDIUM))
+		targetUnitFrameCamera:GetCustomProperty("BackPlane"):GetObject().visibility = Visibility.FORCE_OFF
+	end
 end
 
 function OnPlayerHealthChanged(proximityDataId, health)

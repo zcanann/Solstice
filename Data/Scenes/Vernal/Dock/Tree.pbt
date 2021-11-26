@@ -1,6 +1,62 @@
 Name: "Dock"
 RootId: 6624534854813149124
 Objects {
+  Id: 11832987229529931531
+  Name: "FrameworkLamp"
+  Transform {
+    Location {
+      X: 560
+      Y: -10030
+      Z: 80
+    }
+    Rotation {
+      Yaw: -105.000076
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6624534854813149124
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7749124055300962268
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkLamp"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1310
+            Y: 55
+            Z: -190
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -105.000092
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6670287073338102793
+    }
+  }
+}
+Objects {
   Id: 12705572755300212328
   Name: "FrameworkDockLarge"
   Transform {
@@ -372,46 +428,6 @@ Objects {
     }
     TemplateAsset {
       Id: 6670287073338102793
-    }
-  }
-}
-Objects {
-  Id: 6630383396335309459
-  Name: "FrameworkLamp"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6624534854813149124
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7749124055300962268
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkLamp"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1310
-            Y: 110
-            Z: -190
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -105.000031
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13852786068732677678
     }
   }
 }

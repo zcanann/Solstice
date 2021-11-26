@@ -183,7 +183,7 @@ Objects {
     }
   }
   ParentId: 2058956127506152909
-  ChildIds: 923678390762420265
+  ChildIds: 987356916609905130
   ChildIds: 9287987596664656546
   ChildIds: 14589941801162997866
   ChildIds: 15594024896408941852
@@ -394,13 +394,13 @@ Objects {
   }
 }
 Objects {
-  Id: 923678390762420265
+  Id: 987356916609905130
   Name: "UnitFrameCapture_C"
   Transform {
     Location {
-      X: 71.4030685
-      Y: -7.62939453e-06
-      Z: 177
+      X: 21
+      Y: 13
+      Z: 171
     }
     Rotation {
     }
@@ -412,31 +412,35 @@ Objects {
   }
   ParentId: 12299963393686506760
   ChildIds: 10768846797888291320
+  ChildIds: 17559974357896992831
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Folder {
-    IsGroup: true
+  NetworkContext {
   }
 }
 Objects {
-  Id: 10768846797888291320
-  Name: "CaptureCamera"
+  Id: 17559974357896992831
+  Name: "BackPlane"
   Transform {
     Location {
-      X: 68.9999924
+      X: -50.5046387
+      Y: -28.0820274
+      Z: 0.449356079
     }
     Rotation {
-      Yaw: 180
+      Pitch: 79.999527
+      Yaw: -149.999664
+      Roll: 5.89978263e-05
     }
     Scale {
       X: 1
@@ -444,7 +448,82 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 923678390762420265
+  ParentId: 987356916609905130
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 16248465704105362888
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7280120439921138985
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10768846797888291320
+  Name: "CaptureCamera"
+  Transform {
+    Location {
+      X: 50.4030762
+      Y: 28.9999962
+      Z: 20
+    }
+    Rotation {
+      Pitch: -9.99998379
+      Yaw: -149.999954
+      Roll: -4.33472167e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 987356916609905130
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:BackPlane"
+      ObjectReference {
+        SelfId: 17559974357896992831
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -458,18 +537,14 @@ Objects {
     Value: "mc:eindicatorvisibility:alwaysvisible"
   }
   Camera {
-    AttachToLocalPlayer: true
-    InitialDistance: 400
-    MinDistance: 300
-    MaxDistance: 600
     PositionOffset {
     }
     RotationOffset {
     }
-    FieldOfView: 90
+    FieldOfView: 25
     ViewWidth: 1200
     RotationMode {
-      Value: "mc:erotationmode:lookangle"
+      Value: "mc:erotationmode:default"
     }
     MinPitch: -89
     MaxPitch: 89
@@ -483,6 +558,8 @@ Objects {
   Name: "ProximityNetworkedObject"
   Transform {
     Location {
+      X: 5.96046448e-08
+      Y: 0.999999881
       Z: 95
     }
     Rotation {
@@ -528,7 +605,7 @@ Objects {
     Overrides {
       Name: "cs:UnitFrameCapture"
       ObjectReference {
-        SelfId: 923678390762420265
+        SelfId: 10768846797888291320
       }
     }
   }
