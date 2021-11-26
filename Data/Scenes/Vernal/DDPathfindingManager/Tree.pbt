@@ -16,6 +16,12 @@ Objects {
   }
   ParentId: 12356142918685322174
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:Framework"
+      AssetReference {
+        Id: 14480759715348141780
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

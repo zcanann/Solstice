@@ -11,8 +11,10 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ServerShowProximityObjects"
-        Bool: false
+        Name: "cs:DebugFlags"
+        AssetReference {
+          Id: 13434112719917117241
+        }
       }
       Overrides {
         Name: "cs:Dump"

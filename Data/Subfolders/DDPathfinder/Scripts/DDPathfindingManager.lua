@@ -13,11 +13,11 @@ local LAZYTHETA_STAR_SCRIPT = require(script:GetCustomProperty("LazyThetaStarPat
 local ROOT = script:FindAncestorByType('CoreObject')
 local DEFAULT_PATHFINDER = require(ROOT:GetCustomProperty("DefaultPathfinder"))
 local REGISTER_IN_GLOBALS = ROOT:GetCustomProperty("RegisterInGlobals")
-local VERBOSE_DEBUG = ROOT:GetCustomProperty("VerboseDebug")
-local DEBUG = ROOT:GetCustomProperty("Debug") or VERBOSE_DEBUG
 local DEFAULT_PATH_SEARCH_AREA = ROOT:GetCustomProperty("DefaultPathSearchArea") or "x=3_y=3_zMin=10_zMax=2"
 local MAX_PROCESSING_TIME_EACH_FRAME = ROOT:GetCustomProperty("MaxProcessingTimeEachFrame") or 0.05
 FOLIAGE_NAVMESH_GENERATION_FIX = ROOT:GetCustomProperty("FoliageNavMeshGenerationFix") or false
+
+local Framework = require(script:GetCustomProperty("Framework"))
 
 local numberStringToTable = function(str)
     local t = {}
@@ -674,6 +674,9 @@ Task.Spawn(function()
 end)
 
 Task.Wait(0.5) -- Give navmeshes some time to register
+
+VERBOSE_DEBUG = Framework.Debug.GetFlag(Framework.Debug.Flags.SHOW_NAV_MESH)
+DEBUG = VERBOSE_DEBUG
 
 if VERBOSE_DEBUG and _G[DD_NAVMESH_GLOBAL_ACCESS] then
     for _, navMeshGen in pairs(_G[DD_NAVMESH_GLOBAL_ACCESS].generators) do

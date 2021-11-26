@@ -52,6 +52,7 @@ function ChatCommandHandler(params)
         end
         if command == "/kill" then
             if #args == 1 then
+                -- TODO: Just send the player name and let the server do the rest
                 for _, targetPlayer in pairs(Game.GetPlayers()) do
                     if targetPlayer.name == args[1] then
                         success = true

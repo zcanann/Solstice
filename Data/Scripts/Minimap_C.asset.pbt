@@ -79,6 +79,11 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Terrain"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:ContentPanel:isrep"
         Bool: false
       }

@@ -50,7 +50,7 @@ local function OnMouseDown(cursorPosition, primary)
         local genericWalkHere = function ()
             local goalTransform = hitResult:GetTransform()
             local goal = goalTransform:GetPosition()
-            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { goal })
+            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATION, { goal })
         end
 
         -- If no interaction found, fallback on the default action of walking

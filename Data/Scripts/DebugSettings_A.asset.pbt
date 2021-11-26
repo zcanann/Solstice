@@ -18,6 +18,10 @@ Assets {
         Name: "cs:ShowAgroRadius"
         Bool: false
       }
+      Overrides {
+        Name: "cs:ShowNavMesh"
+        Bool: false
+      }
     }
   }
   SerializationVersion: 101

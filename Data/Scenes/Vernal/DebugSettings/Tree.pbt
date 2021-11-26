@@ -56,6 +56,10 @@ Objects {
       Name: "cs:ShowAgroRadius"
       Bool: false
     }
+    Overrides {
+      Name: "cs:ShowNavMesh"
+      Bool: false
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -128,6 +132,10 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowAgroRadius"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ShowNavMesh"
       Bool: false
     }
   }

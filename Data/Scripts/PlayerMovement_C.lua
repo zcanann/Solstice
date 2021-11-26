@@ -99,12 +99,12 @@ function UpdateWaypointProgress(player)
 	end
 end
 
-function OnMoveToLocation(goal, callback)
+function OnRequestMoveToLocation(goal, callback)
 	waypointClearRadius = 0.0
 	BeginMoveToGoal(goal, callback, true)
 end
 
-function OnMoveNearLocation(goal, stopRadius, callback)
+function OnRequestMoveNearLocation(goal, stopRadius, callback)
 	waypointClearRadius = stopRadius
 	BeginMoveToGoal(goal, callback, false)
 end
@@ -112,6 +112,6 @@ end
 localPlayer.movementHook:Connect(MovementHook)
 
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
-Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, OnMoveToLocation)
-Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, OnMoveNearLocation)
+Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATION, OnRequestMoveToLocation)
+Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_NEAR_LOCATION, OnRequestMoveNearLocation)
 

@@ -55462,6 +55462,12 @@ Objects {
         SelfId: 2587382974214932426
       }
     }
+    Overrides {
+      Name: "cs:Terrain"
+      ObjectReference {
+        SelfId: 8110563828106138299
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

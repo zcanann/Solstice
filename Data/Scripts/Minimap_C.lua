@@ -1,47 +1,22 @@
---[[
-Circular Minimap
-v1.0
-by: zcanann
-
-Setup:
-1. Place the Minimap UI template into your hierarchy. It is currently hard coded for Top-Right screen alignment.
-2. Update ParseMap() to search for objects that have a minimap representation.
-	a) Update these objects to have Width/Depth/Height custom properties
-
-Expert mode:
-- Some additional effort may be required if you intend to support mouse interaction. For example:
-	a) Create a MouseDispatcher.lua script that processes a mouse down event
-	b) Set _G.uiHitTest to false in this script
-	c) Broadcast "event_ui_mouse_down", passing in the mouse position, and a bool for left/right click.
-	d) The minimap will set _G.uiHitTest to true if it detects a click, and broadcast "event_move_to_location" with a Vector3
-		i) If click-to-move is supported, this event will need to be handled and passed to your Navmesh code
-	e) In MouseDispatcher.lua, check if _G.uiHitTest is false to determine whether to pass input through to the game
-
-Tips:
-- Avoid using large objects, as these could go outside of the minimap bounds before they can be culled
-- Avoid using more objects than necessary. A UI element is created for every one of them, so careful of performance
-- Use templates for everything that you want to be on the minimap, and assign these default Width/Depth/Height custom properties
-
---]]
-
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local MAP_PIECE_TEMPLATE = script:GetCustomProperty("MinimapPiece")
-local PLAYER_TEMPLATE = script:GetCustomProperty("MinimapPlayer")
-local WAYPOINTS_TEMPLATE = script:GetCustomProperty("MinimapWaypoints")
+local propMinimapPieceTemplate = script:GetCustomProperty("MinimapPiece")
+local propPlayerMinimapPieceTemplate = script:GetCustomProperty("MinimapPlayer")
+local propWaypointsTemplate = script:GetCustomProperty("MinimapWaypoints")
 
-local CONTENT_PANEL = script:GetCustomProperty("ContentPanel"):WaitForObject()
-local CONTENT_ROOT = script:GetCustomProperty("ContentRoot"):WaitForObject()
-local COMPASS = script:GetCustomProperty("Compass"):WaitForObject()
-local ROTATION_ROOT = script:GetCustomProperty("RotationRoot"):WaitForObject()
+local propContentPanel = script:GetCustomProperty("ContentPanel"):WaitForObject()
+local propContentRoot = script:GetCustomProperty("ContentRoot"):WaitForObject()
+local propCompass = script:GetCustomProperty("Compass"):WaitForObject()
+local propRotationRoot = script:GetCustomProperty("RotationRoot"):WaitForObject()
 
 local propZoomInButton = script:GetCustomProperty("ZoomInButton"):WaitForObject()
 local propZoomOutButton = script:GetCustomProperty("ZoomOutButton"):WaitForObject()
 
 local propCameraCaptureImage = script:GetCustomProperty("CameraCaptureImage"):WaitForObject()
 local propTerrainCaptureCamera = script:GetCustomProperty("TerrainCaptureCamera"):WaitForObject()
+local propTerrain = script:GetCustomProperty("Terrain"):WaitForObject()
 
-local minimapSize = CONTENT_PANEL.width -- Assumed to have equal width and height
+local minimapSize = propContentPanel.width -- Assumed to have equal width and height
 local minimapCullDistance = minimapSize / 2.0 + 12.0
 local minimapMouseHitTestDistance = minimapSize / 2.0 - 24.0
 local scaleMin 			= 2.5 / 100.0
@@ -120,7 +95,7 @@ function ParseMap()
 	end
 
 	-- Add waypoint manager to map
-	minimapWaypoints = World.SpawnAsset(WAYPOINTS_TEMPLATE, {parent = CONTENT_PANEL})
+	minimapWaypoints = World.SpawnAsset(propWaypointsTemplate, {parent = propContentPanel})
 	minimapWaypoints.visibility = Visibility.FORCE_OFF
 
 	OnScaleChanged()
@@ -130,7 +105,7 @@ function AddStaticObjectToMinimap(staticObject)
 	local baseColor = staticObject:GetCustomProperty("MinimapColor") or Color.WHITE
 	local size = staticObject:GetCustomProperty("WorldSize") or unitSize
 
-	local mapObject = World.SpawnAsset(MAP_PIECE_TEMPLATE, {parent = CONTENT_PANEL})
+	local mapObject = World.SpawnAsset(propMinimapPieceTemplate, {parent = propContentPanel})
 
 	mapObject:SetColor(baseColor)
 
@@ -139,7 +114,7 @@ end
 
 function AddDynamicObjectToMinimap(dynamicObject)
 	local minimapIconTemplate = dynamicObject:GetCustomProperty("MinimapIconTemplate")
-	local mapObject = World.SpawnAsset(minimapIconTemplate, {parent = CONTENT_PANEL})
+	local mapObject = World.SpawnAsset(minimapIconTemplate, {parent = propContentPanel})
 
 	table.insert(dynamicObjects, { mapObject = mapObject, worldObject = dynamicObject })
 end
@@ -177,8 +152,8 @@ function PositionDynamicObjects()
 
 		-- Scroll map to keep the local player centered
 		if (player == localPlayer) then 
-			CONTENT_PANEL.x = -pos.x * scale
-			CONTENT_PANEL.y = -pos.y * scale
+			propContentPanel.x = -pos.x * scale
+			propContentPanel.y = -pos.y * scale
 
 			localPlayerPosMapSpace.x = pos.x * scale
 			localPlayerPosMapSpace.y = pos.y * scale
@@ -267,20 +242,21 @@ function Tick()
 	UpdateCompassRotations(minimapRotation)
 
 	local newCameraCoords = localPlayer:GetWorldPosition()
-	newCameraCoords.z = 30000
-	propTerrainCaptureCamera:SetWorldPosition(newCameraCoords)
+	-- TODO: No idea where this 512 constant comes from. Produced by trial and error.
+	newCameraCoords.z = 512 / scale
 	propCameraCaptureImage.rotationAngle = 180
+	propTerrainCaptureCamera:SetWorldPosition(newCameraCoords)
 	Framework.Utils.CameraCapture.Capture(propTerrainCaptureCamera, propCameraCaptureImage)
 end
 
 function UpdateCompassRotations(minimapRotation)
 
-	ROTATION_ROOT.rotationAngle = -minimapRotation
+	propRotationRoot.rotationAngle = -minimapRotation
 	minimapWaypoints.rotationAngle = minimapRotation
-	COMPASS:GetCustomProperty("N"):WaitForObject().rotationAngle = minimapRotation
-	COMPASS:GetCustomProperty("S"):WaitForObject().rotationAngle = minimapRotation
-	COMPASS:GetCustomProperty("W"):WaitForObject().rotationAngle = minimapRotation
-	COMPASS:GetCustomProperty("E"):WaitForObject().rotationAngle = minimapRotation
+	propCompass:GetCustomProperty("N"):WaitForObject().rotationAngle = minimapRotation
+	propCompass:GetCustomProperty("S"):WaitForObject().rotationAngle = minimapRotation
+	propCompass:GetCustomProperty("W"):WaitForObject().rotationAngle = minimapRotation
+	propCompass:GetCustomProperty("E"):WaitForObject().rotationAngle = minimapRotation
 end
 
 function GetIndicatorForPlayer(player)
@@ -297,14 +273,14 @@ function GetIndicatorForPlayer(player)
 		return player.clientUserData.minimap
 	end
 	-- Spawn new indicator for this player
-	local minimapPlayer = World.SpawnAsset(PLAYER_TEMPLATE, {parent = CONTENT_PANEL})
+	local minimapPlayer = World.SpawnAsset(propPlayerMinimapPieceTemplate, {parent = propContentPanel})
 	
 	player.clientUserData.minimap = minimapPlayer
 	return minimapPlayer
 end
 
 function OnMouseDown(cursorPosition, primary)
-	local minimapPositionX, minimapPositionY = Framework.Utils.UI.GetControlScreenPosition(CONTENT_ROOT)
+	local minimapPositionX, minimapPositionY = Framework.Utils.UI.GetControlScreenPosition(propContentRoot)
 	local minimapCenterPositionX = minimapPositionX + minimapSize / 2.0
 	local minimapCenterPositionY = minimapPositionY + minimapSize / 2.0
 
@@ -314,14 +290,13 @@ function OnMouseDown(cursorPosition, primary)
 		minimapCenterPositionY - cursorPosition.y
 	)
 
-	if true or minimapClickCoords.size < minimapMouseHitTestDistance then
-		print("??")
+	if minimapClickCoords.size < minimapMouseHitTestDistance then
 		-- Framework.Print("Minimap clicked: " .. tostring(minimapClickCoords.x) .. ", " .. tostring(minimapClickCoords.y))
 		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_UI_CONSUME_MOUSE_INPUT)
 
 		local localPlayer = Game.GetLocalPlayer()
 		local pos = localPlayer:GetWorldPosition()
-		local rotation = math.rad(ROTATION_ROOT.rotationAngle + 90)
+		local rotation = math.rad(propRotationRoot.rotationAngle + 90)
 		local unscaledCoords = Vector2.New(
 			minimapClickCoords.x / scale,
 			minimapClickCoords.y / scale
@@ -331,8 +306,16 @@ function OnMouseDown(cursorPosition, primary)
 			(unscaledCoords.x * math.cos(rotation)) - (unscaledCoords.y * math.sin(rotation)) + pos.y,
 			pos.z
 		)
+		local hitTestStart = Vector3.New(worldCoords.x, worldCoords.y, 65535)
+		local hitTestEnd = Vector3.New(worldCoords.x, worldCoords.y, -65535)
 
-		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_MOVE_TO_LOCATION, { worldCoords })
+		-- The navigation goal z coord default to the player's z coord. However,
+		local hitResult = World.Raycast(hitTestStart, hitTestEnd, { checkObjects = propTerrain })
+		if hitResult then
+			worldCoords.z = hitResult:GetImpactPosition().z
+		end
+
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATION, { worldCoords })
 	end
 end
 

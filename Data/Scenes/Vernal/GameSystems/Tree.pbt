@@ -843,14 +843,6 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:Debug"
-      Bool: true
-    }
-    Overrides {
-      Name: "cs:VerboseDebug"
-      Bool: true
-    }
-    Overrides {
       Name: "cs:SaveDataFile:isrep"
       Bool: false
     }
@@ -896,22 +888,6 @@ Objects {
     }
     Overrides {
       Name: "cs:FoliageNavMeshGenerationFix:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Debug:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Debug:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VerboseDebug:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:VerboseDebug:ml"
       Bool: false
     }
   }

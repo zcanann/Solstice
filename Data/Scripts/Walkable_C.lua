@@ -16,7 +16,7 @@ function Interact(callback)
     if propProximityNetworkedObject then
         Chat.LocalMessage("Walking to " .. name .. "...")
     end
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_MOVE_NEAR_LOCATION, { GetWalkableDestination(), propStopRadius, callback })
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_NEAR_LOCATION, { GetWalkableDestination(), propStopRadius, callback })
 end
 
 function WalkForInteraction(callback)
