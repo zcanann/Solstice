@@ -16,15 +16,11 @@ Objects {
   }
   ChildIds: 3634084508390190355
   ChildIds: 16245330729688291331
-  ChildIds: 5915382994999563457
-  ChildIds: 6381282548104989817
   ChildIds: 1690414422520653577
+  ChildIds: 5710001917694784877
   ChildIds: 17076391056267575974
   ChildIds: 3913274247154626659
   ChildIds: 15687273565326506224
-  ChildIds: 9436467008346192030
-  ChildIds: 11077136462719129013
-  ChildIds: 9014724721584374887
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -37,132 +33,6 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
-  }
-}
-Objects {
-  Id: 9014724721584374887
-  Name: "FrameworkWorldMapGalleonSunken1_C"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 14777171684539100595
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkWorldMapGalleonSunken1_C"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -63590
-            Y: 46430
-            Z: -210
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 47.9365463
-            Yaw: -50.8894348
-            Roll: -58.8864136
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3305240709693057534
-    }
-  }
-}
-Objects {
-  Id: 11077136462719129013
-  Name: "FrameworkWorldMapGalleonSunken2_C"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 9319393237763394461
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkWorldMapGalleonSunken2_C"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -63730
-            Y: 47360
-            Z: -140
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -31.7720337
-            Yaw: 42.4290237
-            Roll: -25.7008972
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 16218441343377481981
-    }
-  }
-}
-Objects {
-  Id: 9436467008346192030
-  Name: "FrameworkWorldMapGalleonSunken3_C"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 6028263417679839493
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkWorldMapGalleonSunken3_C"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -62700
-            Y: 47250
-            Z: -160
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: -26.0645752
-            Yaw: -155.768112
-            Roll: 44.3104439
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15271756606391451219
-    }
   }
 }
 Objects {
@@ -3934,7 +3804,7 @@ Objects {
   Name: "Terrain"
   Transform {
     Location {
-      Z: -100
+      Z: -500
     }
     Rotation {
     }
@@ -3968,6 +3838,43 @@ Objects {
   }
 }
 Objects {
+  Id: 5710001917694784877
+  Name: "PostProcess"
+  Transform {
+    Location {
+      X: -531.636414
+      Y: 1496.73633
+      Z: 15189.7305
+    }
+    Rotation {
+      Pitch: -90
+      Yaw: -1.36603776e-05
+      Roll: 3.07358496e-05
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "PostProcess"
+  }
+}
+Objects {
   Id: 1690414422520653577
   Name: "Map"
   Transform {
@@ -3996,66 +3903,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Map"
-  }
-}
-Objects {
-  Id: 6381282548104989817
-  Name: "Audio"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Audio_1"
-  }
-}
-Objects {
-  Id: 5915382994999563457
-  Name: "UI"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI"
   }
 }
 Objects {

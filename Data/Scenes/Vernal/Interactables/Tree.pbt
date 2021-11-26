@@ -4,14 +4,6 @@ Objects {
   Id: 7415420476799049711
   Name: "FrameworkShrimpSchool"
   Transform {
-    Location {
-      X: 19558.5762
-      Y: -717.012695
-      Z: -375
-    }
-    Rotation {
-      Yaw: 44.9999924
-    }
     Scale {
       X: 1
       Y: 1
@@ -44,14 +36,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -158,51 +142,6 @@ Objects {
     }
     TemplateAsset {
       Id: 4288354741456242922
-    }
-  }
-}
-Objects {
-  Id: 4643077484368103303
-  Name: "FrameworkShrimpSchool"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 17246289419149383775
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 8227559236274747692
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkShrimpSchool"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 17583
-            Y: -14142
-            Z: -400
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 2465263127880219465
     }
   }
 }

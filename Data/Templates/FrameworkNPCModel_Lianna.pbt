@@ -36,12 +36,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:0:Shared_Detail1:id"
-            AssetReference {
-              Id: 18285745980965235686
-            }
-          }
-          Overrides {
             Name: "ma:0:Shared_Detail1:color"
             Color {
               R: 0.676000059

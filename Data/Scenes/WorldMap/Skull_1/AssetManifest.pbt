@@ -1,4 +1,13 @@
 Assets {
+  Id: 18337042597156708397
+  Name: "Stone Basic"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "stone_001"
+  }
+}
+Assets {
   Id: 14896948493337902517
   Name: "Decal Vines End 01"
   PlatformAssetType: 14
@@ -50,6 +59,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_fire_volume_vfx"
+  }
+}
+Assets {
+  Id: 2610890177546134007
+  Name: "Terrain - Mossy Concrete"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_terrain_concrete-moss_001_wa"
   }
 }
 Assets {

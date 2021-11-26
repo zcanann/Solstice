@@ -1,1 +1,0 @@
-script.parent:SetImage(Game.GetLocalPlayer())

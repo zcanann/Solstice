@@ -287,12 +287,26 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Npcs"
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "QuestIndicators"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "WorldMap"
       PlatformAssetType: 13
     }
     Folders {
       VirtualFolderPath: "Models"
-      VirtualFolderPath: "QuestIndicators"
+      VirtualFolderPath: "Resources"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "Npcs"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Walls"
       PlatformAssetType: 13
     }
   }

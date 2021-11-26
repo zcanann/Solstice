@@ -33,7 +33,7 @@ Objects {
 }
 Objects {
   Id: 14780527794531846052
-  Name: "PlayerInitializeServer"
+  Name: "ShipInitialize_S"
   Transform {
     Location {
     }

@@ -123,13 +123,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -144,6 +144,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -197,13 +217,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -218,6 +238,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -271,13 +311,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -292,6 +332,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -345,13 +405,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -366,6 +426,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -419,13 +499,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -440,6 +520,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -493,13 +593,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -514,6 +614,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -567,13 +687,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -588,6 +708,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -641,13 +781,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -662,6 +802,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -715,13 +875,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -736,6 +896,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -789,13 +969,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -810,6 +990,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -863,13 +1063,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -884,6 +1084,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -1252,13 +1472,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1273,6 +1493,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -1328,13 +1568,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1349,6 +1589,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -1403,13 +1663,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1424,6 +1684,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -1480,13 +1760,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1501,6 +1781,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -1557,13 +1857,13 @@ Assets {
           Overrides {
             Name: "ma:Building_Accent:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 15223136418523129893
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1578,6 +1878,26 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:smart"
             Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Building_Accent:color"
+            Color {
+              R: 0.424000025
+              G: 0.336953729
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Building_Accent:utile"
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -5496,6 +5816,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_urb_sub_craftsman_porch_001_rail"
+      }
+    }
+    Assets {
+      Id: 15799842230538849792
+      Name: "Wood Raw"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_raw_001_uv"
       }
     }
     Assets {

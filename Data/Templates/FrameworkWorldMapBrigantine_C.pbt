@@ -134,7 +134,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -195,7 +195,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -261,7 +261,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -328,7 +328,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -404,7 +404,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -471,7 +471,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -537,7 +537,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -604,7 +604,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -675,7 +675,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -747,7 +747,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -823,7 +823,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -901,7 +901,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -976,7 +976,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1051,7 +1051,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1127,7 +1127,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1190,7 +1190,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1257,7 +1257,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1324,7 +1324,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1390,7 +1390,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1461,7 +1461,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1525,7 +1525,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1591,7 +1591,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1662,7 +1662,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1730,7 +1730,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1805,7 +1805,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -1814,7 +1814,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1876,7 +1876,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2001,7 +2001,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2364,7 +2364,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2423,7 +2423,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2499,7 +2499,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2573,7 +2573,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2631,7 +2631,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2649,7 +2649,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.7
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -2706,7 +2706,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2724,7 +2724,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.7
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -2782,7 +2782,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2800,11 +2800,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.6
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -2858,7 +2858,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2876,11 +2876,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.6
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -2935,16 +2935,16 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.1
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3063,7 +3063,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3190,7 +3190,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3251,7 +3251,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3308,7 +3308,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3538,7 +3538,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -3605,7 +3605,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4570,7 +4570,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4727,7 +4727,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4786,7 +4786,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4848,7 +4848,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4908,7 +4908,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4970,7 +4970,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5031,7 +5031,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5093,7 +5093,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5155,7 +5155,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5217,7 +5217,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5283,7 +5283,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5396,7 +5396,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5457,7 +5457,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5514,7 +5514,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5742,7 +5742,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -5808,7 +5808,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -6472,7 +6472,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -6625,7 +6625,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -6699,7 +6699,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -6762,7 +6762,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -6862,7 +6862,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -6936,7 +6936,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -6999,7 +6999,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -7100,7 +7100,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -7174,7 +7174,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -7237,7 +7237,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -7338,7 +7338,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -7412,7 +7412,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -7475,7 +7475,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -7528,12 +7528,30 @@ Assets {
       }
     }
     Assets {
+      Id: 7498014650728682483
+      Name: "Wood Floor Light"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_floor_light_001_uv"
+      }
+    }
+    Assets {
       Id: 16865816306072098181
       Name: "Sci-fi Gear Small 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_sf_gen_gear_small_01"
+      }
+    }
+    Assets {
+      Id: 15799842230538849792
+      Name: "Wood Raw"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_raw_001_uv"
       }
     }
     Assets {
@@ -7579,6 +7597,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 8601819018764791109
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
       }
     }
     Assets {

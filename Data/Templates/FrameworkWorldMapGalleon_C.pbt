@@ -7,7 +7,7 @@ Assets {
       RootId: 4889661696414954706
       Objects {
         Id: 4889661696414954706
-        Name: "FrameworkWorldMapGalleon"
+        Name: "FrameworkWorldMapGalleon_C"
         Transform {
           Scale {
             X: 0.573734701
@@ -15,7 +15,7 @@ Assets {
             Z: 0.573734701
           }
         }
-        ParentId: 14978713886058654905
+        ParentId: 8097052498615802717
         ChildIds: 3193517359021956784
         ChildIds: 6224622061845185697
         ChildIds: 8753877004526164636
@@ -59,8 +59,6 @@ Assets {
         }
         ParentId: 4889661696414954706
         ChildIds: 4322886796210727091
-        ChildIds: 13608346051782444278
-        ChildIds: 6844194703891704101
         ChildIds: 13217256959915295784
         ChildIds: 7611421491937448379
         ChildIds: 7216189458549250784
@@ -306,360 +304,6 @@ Assets {
         }
       }
       Objects {
-        Id: 13608346051782444278
-        Name: "SailTrisVar2"
-        Transform {
-          Location {
-            X: 33.6176758
-            Y: 538.282227
-            Z: 81.1417236
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3193517359021956784
-        ChildIds: 3238135747177143095
-        ChildIds: 14686764230195196386
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3238135747177143095
-        Name: "Sails Tris"
-        Transform {
-          Location {
-            X: 26.3642578
-            Y: 70.5794678
-          }
-          Rotation {
-            Pitch: 24.3188267
-            Yaw: 104.386108
-            Roll: -12.3535309
-          }
-          Scale {
-            X: 3.29997373
-            Y: -2.1534977
-            Z: 2.69999218
-          }
-        }
-        ParentId: 13608346051782444278
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.63
-              G: 0.463112593
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14721617876969244054
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 14686764230195196386
-        Name: "Sails Tris"
-        Transform {
-          Location {
-            X: -26.3637695
-            Y: -70.5794067
-            Z: 27.9030762
-          }
-          Rotation {
-            Pitch: 26.7153206
-            Yaw: 124.658485
-            Roll: -6.68798828
-          }
-          Scale {
-            X: 3.59999752
-            Y: -2.80196381
-            Z: 4.22956848
-          }
-        }
-        ParentId: 13608346051782444278
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.63
-              G: 0.463112593
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14721617876969244054
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 6844194703891704101
-        Name: "SailTrisVar3"
-        Transform {
-          Location {
-            X: 33.6176758
-            Y: 538.282227
-            Z: 81.1417236
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3193517359021956784
-        ChildIds: 4502661255976457060
-        ChildIds: 17920169253801230552
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 4502661255976457060
-        Name: "Sails Tris"
-        Transform {
-          Location {
-            X: 26.3642578
-            Y: 70.5794678
-          }
-          Rotation {
-            Pitch: 24.3188267
-            Yaw: 104.386108
-            Roll: -12.3535156
-          }
-          Scale {
-            X: 3.29997373
-            Y: -2.1534977
-            Z: 2.69999218
-          }
-        }
-        ParentId: 6844194703891704101
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15816794967353213169
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14721617876969244054
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 17920169253801230552
-        Name: "Sails Tris"
-        Transform {
-          Location {
-            X: -26.3637695
-            Y: -70.5794067
-            Z: 27.9030762
-          }
-          Rotation {
-            Pitch: 26.7153206
-            Yaw: 124.658485
-            Roll: -6.68798828
-          }
-          Scale {
-            X: 3.59999752
-            Y: -2.80196381
-            Z: 4.22956848
-          }
-        }
-        ParentId: 6844194703891704101
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15816794967353213169
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.5
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.1
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 14721617876969244054
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
         Id: 13217256959915295784
         Name: "Prism - 8-Sided Half"
         Transform {
@@ -679,7 +323,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -740,7 +384,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -806,7 +450,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -873,7 +517,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -949,7 +593,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_Trim:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1013,7 +657,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1080,7 +724,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1146,7 +790,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1213,7 +857,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1278,7 +922,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 857866826598656736
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1342,7 +986,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 857866826598656736
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1413,7 +1057,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1485,7 +1129,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1561,7 +1205,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -1626,7 +1270,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 857866826598656736
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -1703,7 +1347,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1778,7 +1422,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1853,7 +1497,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1929,7 +1573,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -1992,7 +1636,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2059,7 +1703,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2126,7 +1770,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2192,7 +1836,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2263,7 +1907,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2327,7 +1971,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2393,7 +2037,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2464,7 +2108,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2532,7 +2176,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2607,7 +2251,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -2616,7 +2260,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2678,7 +2322,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -2741,16 +2385,16 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.1
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -2931,7 +2575,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9511224606688419874
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -3289,7 +2933,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3349,16 +2993,16 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.1
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3420,7 +3064,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3429,11 +3073,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.1
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -3496,7 +3140,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3505,11 +3149,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.2
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -3575,16 +3219,16 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.2
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3646,7 +3290,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 857866826598656736
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -3710,7 +3354,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 857866826598656736
+              Id: 7498014650728682483
             }
           }
           Overrides {
@@ -3871,7 +3515,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -3947,7 +3591,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4023,7 +3667,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4099,7 +3743,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4175,7 +3819,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4250,7 +3894,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4324,7 +3968,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4382,7 +4026,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4400,7 +4044,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.7
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -4457,7 +4101,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4475,7 +4119,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.7
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
@@ -4533,7 +4177,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4551,11 +4195,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.6
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -4609,7 +4253,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4627,11 +4271,11 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 2
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.6
+            Float: 1
           }
         }
         Collidable_v2 {
@@ -4685,16 +4329,16 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.1
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4758,16 +4402,16 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.1
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4832,16 +4476,16 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
+            Float: 0.125
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.1
+            Float: 1
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6253028042947364275
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4904,7 +4548,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -4978,8 +4622,6 @@ Assets {
         ChildIds: 14776190946295582324
         ChildIds: 11541414434002037925
         ChildIds: 11853988252946232894
-        ChildIds: 1385998669641566888
-        ChildIds: 8912683654224517626
         ChildIds: 18385279203625526224
         ChildIds: 4484342426311618131
         ChildIds: 6108827445661643933
@@ -5039,7 +4681,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5100,7 +4742,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5157,7 +4799,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5213,7 +4855,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -5490,493 +5132,6 @@ Assets {
         }
       }
       Objects {
-        Id: 1385998669641566888
-        Name: "SailsVar2"
-        Transform {
-          Location {
-            X: -194.035645
-            Y: -1.29217529
-            Z: 220.365723
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6224622061845185697
-        ChildIds: 13065855941006567625
-        ChildIds: 5484940175543702762
-        ChildIds: 11888288589423544729
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 13065855941006567625
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: -73.0390625
-            Y: -7.25004578
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.895173669
-            Roll: 178.286
-          }
-          Scale {
-            X: 2.96535683
-            Y: 3.22032666
-            Z: 5.3816967
-          }
-        }
-        ParentId: 1385998669641566888
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.539999962
-              G: 0.321854323
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 5484940175543702762
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: 3.71337891
-            Y: 4.38459778
-            Z: 285.937378
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.149207428
-            Roll: 179.031982
-          }
-          Scale {
-            X: 2.10003805
-            Y: 1.87848902
-            Z: 3.8435545
-          }
-        }
-        ParentId: 1385998669641566888
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.539999962
-              G: 0.321854323
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 11888288589423544729
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: 69.3251953
-            Y: 2.86546326
-            Z: 479.713745
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.447614163
-            Roll: 178.733582
-          }
-          Scale {
-            X: 1.3548696
-            Y: 0.99115628
-            Z: 2.49302244
-          }
-        }
-        ParentId: 1385998669641566888
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.539999962
-              G: 0.321854323
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 8912683654224517626
-        Name: "SailsVar3"
-        Transform {
-          Location {
-            X: -194.035645
-            Y: -1.29217529
-            Z: 220.365723
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6224622061845185697
-        ChildIds: 8423332822839224151
-        ChildIds: 1032133283717107329
-        ChildIds: 11175258640667061039
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 8423332822839224151
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: -73.0390625
-            Y: -7.25004578
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.895172119
-            Roll: 178.286
-          }
-          Scale {
-            X: 2.96535683
-            Y: 3.22032666
-            Z: 5.3816967
-          }
-        }
-        ParentId: 8912683654224517626
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.3
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 1032133283717107329
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: 3.71337891
-            Y: 4.38459778
-            Z: 285.937378
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.149200439
-            Roll: 179.031982
-          }
-          Scale {
-            X: 2.10003805
-            Y: 1.87848902
-            Z: 3.8435545
-          }
-        }
-        ParentId: 8912683654224517626
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 11175258640667061039
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: 69.3251953
-            Y: 2.86546326
-            Z: 479.713745
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.447601318
-            Roll: 178.733582
-          }
-          Scale {
-            X: 1.3548696
-            Y: 0.99115628
-            Z: 2.49302244
-          }
-        }
-        ParentId: 8912683654224517626
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.36
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
         Id: 18385279203625526224
         Name: "Cube - Bottom-Aligned"
         Transform {
@@ -6000,7 +5155,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -6067,7 +5222,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7260,7 +6415,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7319,7 +6474,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7553,7 +6708,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7612,7 +6767,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7674,7 +6829,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7734,7 +6889,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7796,7 +6951,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7857,7 +7012,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7919,7 +7074,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -7981,7 +7136,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -8043,7 +7198,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -8109,7 +7264,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -8170,8 +7325,6 @@ Assets {
         }
         ParentId: 4889661696414954706
         ChildIds: 15788058690525116360
-        ChildIds: 15351109167051245781
-        ChildIds: 16373481280918879475
         ChildIds: 11685962628012376932
         ChildIds: 16417640283040869442
         ChildIds: 13765639256863543147
@@ -8376,352 +7529,6 @@ Assets {
         }
       }
       Objects {
-        Id: 15351109167051245781
-        Name: "SailsVar2"
-        Transform {
-          Location {
-            X: -189.033203
-            Y: -2.69468689
-            Z: 220.193298
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8753877004526164636
-        ChildIds: 3117849588481590859
-        ChildIds: 9159947448737509875
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3117849588481590859
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: -28.5048828
-            Y: -5.81730652
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -5.79922152
-            Roll: 173.381989
-          }
-          Scale {
-            X: 2.96534753
-            Y: 2.67501473
-            Z: 4.40179396
-          }
-        }
-        ParentId: 15351109167051245781
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.327814609
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 9159947448737509875
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: 28.5043945
-            Y: 5.81730652
-            Z: 285.937256
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.895173669
-            Roll: 178.286
-          }
-          Scale {
-            X: 2.10003424
-            Y: 1.63105178
-            Z: 3.14372087
-          }
-        }
-        ParentId: 15351109167051245781
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.5
-              G: 0.327814609
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 16373481280918879475
-        Name: "SailsVar3"
-        Transform {
-          Location {
-            X: -189.033203
-            Y: -2.69468689
-            Z: 220.193298
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8753877004526164636
-        ChildIds: 7713594893988373280
-        ChildIds: 5702840104796698463
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 7713594893988373280
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: -28.5048828
-            Y: -5.81730652
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -5.79922485
-            Roll: 173.381989
-          }
-          Scale {
-            X: 2.96534753
-            Y: 2.67501473
-            Z: 4.40179396
-          }
-        }
-        ParentId: 16373481280918879475
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.3
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 5702840104796698463
-        Name: "Pipe - Half Thin"
-        Transform {
-          Location {
-            X: 28.5043945
-            Y: 5.81730652
-            Z: 285.937256
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -0.895172119
-            Roll: 178.286
-          }
-          Scale {
-            X: 2.10003424
-            Y: 1.63105178
-            Z: 3.14372087
-          }
-        }
-        ParentId: 16373481280918879475
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13122680889288675313
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.36
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11585801559919915394
-          }
-          Teams {
-            TeamInt: 1
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableReceiveDecals: true
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
         Id: 11685962628012376932
         Name: "Cone - Truncated Narrow"
         Transform {
@@ -8742,7 +7549,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -8803,7 +7610,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -8860,7 +7667,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -8916,7 +7723,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -8982,7 +7789,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -9646,7 +8453,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -9813,7 +8620,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -9874,7 +8681,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -9930,7 +8737,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -10158,7 +8965,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -10223,7 +9030,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -10885,7 +9692,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8647178281910085098
+              Id: 15799842230538849792
             }
           }
           Overrides {
@@ -11038,7 +9845,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11112,7 +9919,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11175,7 +9982,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11275,7 +10082,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11349,7 +10156,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11412,7 +10219,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11512,7 +10319,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11586,7 +10393,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11649,7 +10456,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11751,7 +10558,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11825,7 +10632,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11888,7 +10695,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -11989,7 +10796,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -12063,7 +10870,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -12126,7 +10933,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -12227,7 +11034,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -12301,7 +11108,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -12364,7 +11171,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2255233973468152781
+              Id: 8601819018764791109
             }
           }
           Overrides {
@@ -12435,12 +11242,30 @@ Assets {
       }
     }
     Assets {
+      Id: 7498014650728682483
+      Name: "Wood Floor Light"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_floor_light_001_uv"
+      }
+    }
+    Assets {
       Id: 16865816306072098181
       Name: "Sci-fi Gear Small 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_sf_gen_gear_small_01"
+      }
+    }
+    Assets {
+      Id: 15799842230538849792
+      Name: "Wood Raw"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_raw_001_uv"
       }
     }
     Assets {
@@ -12504,6 +11329,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_hq_002"
+      }
+    }
+    Assets {
+      Id: 8601819018764791109
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
       }
     }
     Assets {

@@ -4,13 +4,6 @@ Objects {
   Id: 12705572755300212328
   Name: "FrameworkDockLarge"
   Transform {
-    Location {
-      X: 860
-      Y: -11680
-      Z: 20
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -18,6 +11,12 @@ Objects {
     }
   }
   ParentId: 6624534854813149124
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 11055725640654435312
@@ -37,14 +36,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -428,14 +419,6 @@ Objects {
   Id: 271743671240803898
   Name: "FrameworkDockSmall"
   Transform {
-    Location {
-      X: 1490
-      Y: -11090
-      Z: -340
-    }
-    Rotation {
-      Yaw: 89.9999924
-    }
     Scale {
       X: 1
       Y: 1
@@ -443,6 +426,12 @@ Objects {
     }
   }
   ParentId: 6624534854813149124
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 2702689402074169013
