@@ -52,14 +52,6 @@ local function OnMouseDown(cursorPosition, primary)
 
         -- If no interaction found, fallback on the default action
         if primary then
-            --[[
-            -- Clear any unit selections
-            local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
-            if currentTarget then
-                Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
-                Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, nil)
-            end
-            --]]
             genericWalkHere()
         else
             Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk here", genericWalkHere })

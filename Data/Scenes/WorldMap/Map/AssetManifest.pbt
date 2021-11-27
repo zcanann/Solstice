@@ -44,6 +44,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7177328632787277750
+  Name: "Tree Oak Bare 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_tree_oak_002"
+  }
+}
+Assets {
   Id: 4061523298365537124
   Name: "Lightning VFX"
   PlatformAssetType: 8

@@ -1,6 +1,364 @@
 Name: "Map"
 RootId: 1690414422520653577
 Objects {
+  Id: 16690763405711974774
+  Name: "Castle Gatehouse"
+  Transform {
+    Location {
+      X: -54468
+      Y: 68026
+      Z: 10
+    }
+    Rotation {
+      Yaw: -179.999985
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1690414422520653577
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 336970261347359940
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -150.000488
+            Y: -300.000488
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9218488862609064200
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Castle Gatehouse"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 15138
+            Y: -59674
+            Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -179.999969
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5329018737069136950
+    }
+  }
+}
+Objects {
+  Id: 17204256867478616771
+  Name: "Castle Gatehouse"
+  Transform {
+    Location {
+      X: -54478
+      Y: 67249
+      Z: 10
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1690414422520653577
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 336970261347359940
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -150.000488
+            Y: -300.000488
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9218488862609064200
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Castle Gatehouse"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 15128
+            Y: -60451
+            Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5329018737069136950
+    }
+  }
+}
+Objects {
+  Id: 2622275763593656820
+  Name: "Tree Oak Bare 01"
+  Transform {
+    Location {
+      X: 33139
+      Y: 65983
+      Z: 305
+    }
+    Rotation {
+    }
+    Scale {
+      X: 10
+      Y: 10
+      Z: 10
+    }
+  }
+  ParentId: 1690414422520653577
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7177328632787277750
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 16254614022327940009
+  Name: "Tree Oak Bare 01"
+  Transform {
+    Location {
+      X: -10636
+      Y: 55445
+      Z: 305
+    }
+    Rotation {
+    }
+    Scale {
+      X: 10
+      Y: 10
+      Z: 10
+    }
+  }
+  ParentId: 1690414422520653577
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7177328632787277750
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2236616780962617306
+  Name: "Castle Gatehouse"
+  Transform {
+    Location {
+      X: -54478
+      Y: 67249
+      Z: 10
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1690414422520653577
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 336970261347359940
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -150.000488
+            Y: -300.000488
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9218488862609064200
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Castle Gatehouse"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -54468
+            Y: 68026
+            Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 180
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5329018737069136950
+    }
+  }
+}
+Objects {
+  Id: 2859987933968611210
+  Name: "Castle Gatehouse"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1690414422520653577
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 336970261347359940
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -150.000488
+            Y: -300.000488
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9218488862609064200
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Castle Gatehouse"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -54478
+            Y: 67249
+            Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5329018737069136950
+    }
+  }
+}
+Objects {
   Id: 14319930336018249631
   Name: "Regions"
   Transform {
