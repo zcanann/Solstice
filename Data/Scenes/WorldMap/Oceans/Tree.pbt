@@ -1,6 +1,140 @@
 Name: "Oceans"
 RootId: 13700530625918812234
 Objects {
+  Id: 4328206089386355547
+  Name: "Lava"
+  Transform {
+    Location {
+      X: 20387
+      Y: -18575
+      Z: 4686
+    }
+    Rotation {
+    }
+    Scale {
+      X: 99.5
+      Y: 99.5
+      Z: 0.3
+    }
+  }
+  ParentId: 13700530625918812234
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 15877967176672909406
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 4
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2350447770948360711
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7398966132667770731
+  Name: "Lava"
+  Transform {
+    Location {
+      X: -61632
+      Y: 20629
+      Z: 4686
+    }
+    Rotation {
+    }
+    Scale {
+      X: 136.299973
+      Y: 136.299973
+      Z: 0.3
+    }
+  }
+  ParentId: 13700530625918812234
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 15877967176672909406
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:utile"
+      Float: 4
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:vtile"
+      Float: 4
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2350447770948360711
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
   Id: 7939474946825347838
   Name: "FrameworkWorldMapBrigantine_C"
   Transform {
@@ -51,9 +185,9 @@ Objects {
     Rotation {
     }
     Scale {
-      X: 800
-      Y: 800
-      Z: 1
+      X: 1064.20032
+      Y: 1064.20032
+      Z: 1.30000007
     }
   }
   ParentId: 13700530625918812234

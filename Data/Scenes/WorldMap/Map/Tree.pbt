@@ -1,6 +1,140 @@
 Name: "Map"
 RootId: 1690414422520653577
 Objects {
+  Id: 6888045249211234768
+  Name: "Castle Gatehouse"
+  Transform {
+    Location {
+      X: -54478
+      Y: 67249
+      Z: 10
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1690414422520653577
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 336970261347359940
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -150.000488
+            Y: -300.000488
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9218488862609064200
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Castle Gatehouse"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 75289
+            Y: 25848
+            Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5329018737069136950
+    }
+  }
+}
+Objects {
+  Id: 12294591898725422611
+  Name: "Castle Gatehouse"
+  Transform {
+    Location {
+      X: -54468
+      Y: 68026
+      Z: 10
+    }
+    Rotation {
+      Yaw: -179.999985
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1690414422520653577
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 336970261347359940
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -150.000488
+            Y: -300.000488
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9218488862609064200
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Castle Gatehouse"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 75299
+            Y: 26625
+            Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -179.999969
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5329018737069136950
+    }
+  }
+}
+Objects {
   Id: 16690763405711974774
   Name: "Castle Gatehouse"
   Transform {
@@ -139,8 +273,8 @@ Objects {
   Name: "Tree Oak Bare 01"
   Transform {
     Location {
-      X: 33139
-      Y: 65983
+      X: 39751
+      Y: 48451
       Z: 305
     }
     Rotation {
@@ -188,8 +322,8 @@ Objects {
   Name: "Tree Oak Bare 01"
   Transform {
     Location {
-      X: -10636
-      Y: 55445
+      X: 1586
+      Y: 78156
       Z: 305
     }
     Rotation {

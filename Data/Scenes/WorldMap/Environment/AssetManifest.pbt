@@ -1,4 +1,13 @@
 Assets {
+  Id: 15019220636102850849
+  Name: "Ring Thick - Large"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ring_thick_lg_001_ref"
+  }
+}
+Assets {
   Id: 4239283541879762537
   Name: "Grid Basic"
   PlatformAssetType: 2
