@@ -5,16 +5,16 @@ Objects {
   Name: "Lava"
   Transform {
     Location {
-      X: 20387
-      Y: -18575
-      Z: 4686
+      X: 20843
+      Y: -13372
+      Z: 3319
     }
     Rotation {
     }
     Scale {
-      X: 99.5
-      Y: 99.5
-      Z: 0.3
+      X: 166.59996
+      Y: 166.59996
+      Z: 0.5
     }
   }
   ParentId: 13700530625918812234

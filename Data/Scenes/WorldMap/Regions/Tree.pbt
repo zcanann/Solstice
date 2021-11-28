@@ -1,6 +1,40 @@
 Name: "Regions"
 RootId: 14319930336018249631
 Objects {
+  Id: 12551192496672752832
+  Name: "Hades"
+  Transform {
+    Location {
+      X: 83523
+      Y: -4603
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14319930336018249631
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Hades"
+  }
+}
+Objects {
   Id: 6479750019610227661
   Name: "Estival"
   Transform {
@@ -98,7 +132,7 @@ Objects {
 }
 Objects {
   Id: 8097052498615802717
-  Name: "NameMe"
+  Name: "Valgrind"
   Transform {
     Location {
     }
@@ -125,7 +159,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "NameMe"
+    FilePartitionName: "Valgrind"
   }
 }
 Objects {

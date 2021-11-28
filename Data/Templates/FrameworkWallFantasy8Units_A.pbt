@@ -197,6 +197,6 @@ Assets {
   }
   SerializationVersion: 101
   VirtualFolderPath: "Framework"
-  VirtualFolderPath: "Buildings"
+  VirtualFolderPath: "Buildings_Human"
   VirtualFolderPath: "Walls"
 }

@@ -623,10 +623,8 @@ Objects {
     }
   }
   ParentId: 14978713886058654905
-  ChildIds: 6098342533089394294
   ChildIds: 2329328120586884720
   ChildIds: 13075306037253177025
-  ChildIds: 18113249229146003967
   ChildIds: 4627893026519608264
   ChildIds: 11629472128427181547
   ChildIds: 575164582939967217
@@ -639,11 +637,10 @@ Objects {
   ChildIds: 6507027557434201308
   ChildIds: 2652252922536444138
   ChildIds: 10866598950850398018
-  ChildIds: 6899090292529746417
-  ChildIds: 1792706756224595899
   ChildIds: 11764650044959254755
-  ChildIds: 9670261008523077954
-  ChildIds: 10460429145399746748
+  ChildIds: 784904889459428720
+  ChildIds: 5600694229143764462
+  ChildIds: 1454755909234975486
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -661,18 +658,19 @@ Objects {
   }
 }
 Objects {
-  Id: 10460429145399746748
+  Id: 1454755909234975486
   Name: "Fog"
   Transform {
     Location {
-      X: -35432.6641
-      Y: 65490.4766
+      X: -79622.8438
+      Y: 50012.8867
     }
     Rotation {
+      Yaw: 35.0000305
     }
     Scale {
-      X: 75
-      Y: 75
+      X: 150
+      Y: 150
       Z: 50
     }
   }
@@ -722,18 +720,81 @@ Objects {
   }
 }
 Objects {
-  Id: 9670261008523077954
+  Id: 5600694229143764462
   Name: "Fog"
   Transform {
     Location {
-      X: -26704.7793
-      Y: 60288.8711
+      X: -87532.9688
+      Y: 51113.9883
     }
     Rotation {
+      Yaw: 35.0000229
     }
     Scale {
-      X: 75
-      Y: 75
+      X: 150
+      Y: 150
+      Z: 50
+    }
+  }
+  ParentId: 949517804195607235
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 13081993940115856602
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:color"
+      Color {
+        G: 0.340000033
+        B: 0.0765563101
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1413196292823476264
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 784904889459428720
+  Name: "Fog"
+  Transform {
+    Location {
+      X: -94600.6
+      Y: 46165.1875
+    }
+    Rotation {
+      Yaw: 35.0000153
+    }
+    Scale {
+      X: 150
+      Y: 150
       Z: 50
     }
   }
@@ -787,130 +848,8 @@ Objects {
   Name: "Fog"
   Transform {
     Location {
-      X: 1351.26611
-      Y: 31037.0312
-    }
-    Rotation {
-    }
-    Scale {
-      X: 100
-      Y: 100
-      Z: 50
-    }
-  }
-  ParentId: 949517804195607235
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13081993940115856602
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.340000033
-        B: 0.0765563101
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1413196292823476264
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableDistanceFieldLighting: true
-    DisableCastShadows: true
-    DisableReceiveDecals: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 1792706756224595899
-  Name: "Fog"
-  Transform {
-    Location {
-      X: -29259.5273
-      Y: 63395.2266
-    }
-    Rotation {
-    }
-    Scale {
-      X: 75
-      Y: 75
-      Z: 50
-    }
-  }
-  ParentId: 949517804195607235
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13081993940115856602
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.340000033
-        B: 0.0765563101
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1413196292823476264
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableDistanceFieldLighting: true
-    DisableCastShadows: true
-    DisableReceiveDecals: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 6899090292529746417
-  Name: "Fog"
-  Transform {
-    Location {
-      X: -23334.0898
-      Y: 59464.0273
+      X: 3431.09326
+      Y: 32493.3398
     }
     Rotation {
     }
@@ -970,8 +909,8 @@ Objects {
   Name: "Fog"
   Transform {
     Location {
-      X: 15270.0879
-      Y: 21065.1523
+      X: 18495.7695
+      Y: 20806.5605
     }
     Rotation {
       Yaw: 85
@@ -1156,8 +1095,8 @@ Objects {
   Name: "Fog"
   Transform {
     Location {
-      X: 21701.0918
-      Y: 18477.9297
+      X: 26600.4414
+      Y: 21908.4902
     }
     Rotation {
       Yaw: 85
@@ -1342,8 +1281,8 @@ Objects {
   Name: "Fog"
   Transform {
     Location {
-      X: -71578.1719
-      Y: 5220.57324
+      X: -69249.5547
+      Y: 7892.44238
     }
     Rotation {
       Yaw: 100.000298
@@ -1710,68 +1649,6 @@ Objects {
   }
 }
 Objects {
-  Id: 18113249229146003967
-  Name: "Fog"
-  Transform {
-    Location {
-      X: -60992.2227
-      Y: 17617.3555
-    }
-    Rotation {
-      Yaw: 100.000053
-    }
-    Scale {
-      X: 150
-      Y: 150
-      Z: 50
-    }
-  }
-  ParentId: 949517804195607235
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13081993940115856602
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.340000033
-        B: 0.0765563101
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1413196292823476264
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableDistanceFieldLighting: true
-    DisableCastShadows: true
-    DisableReceiveDecals: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
   Id: 13075306037253177025
   Name: "Fog"
   Transform {
@@ -1838,76 +1715,15 @@ Objects {
   Name: "Fog"
   Transform {
     Location {
-      X: -95101.6562
-      Y: 44431.2266
+      X: -101483.141
+      Y: 37806.8906
     }
     Rotation {
       Yaw: 35.0000114
     }
     Scale {
-      X: 378.9
-      Y: 169.2
-      Z: 50
-    }
-  }
-  ParentId: 949517804195607235
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:id"
-      AssetReference {
-        Id: 13081993940115856602
-      }
-    }
-    Overrides {
-      Name: "ma:Shared_BaseMaterial:color"
-      Color {
-        G: 0.340000033
-        B: 0.0765563101
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 1413196292823476264
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableDistanceFieldLighting: true
-    DisableCastShadows: true
-    DisableReceiveDecals: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 6098342533089394294
-  Name: "Fog"
-  Transform {
-    Location {
-      X: -45293.2
-      Y: 66268.3672
-    }
-    Rotation {
-    }
-    Scale {
-      X: 300
-      Y: 300
+      X: 150
+      Y: 150
       Z: 50
     }
   }

@@ -1,13 +1,13 @@
 Name: "Map"
 RootId: 1690414422520653577
 Objects {
-  Id: 6888045249211234768
-  Name: "Castle Gatehouse"
+  Id: 13232480624692319208
+  Name: "Drammol"
   Transform {
     Location {
-      X: -54478
-      Y: 67249
-      Z: 10
+      X: -11264
+      Y: -77159
+      Z: -291
     }
     Rotation {
     }
@@ -18,254 +18,21 @@ Objects {
     }
   }
   ParentId: 1690414422520653577
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 336970261347359940
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -150.000488
-            Y: -300.000488
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9218488862609064200
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Castle Gatehouse"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 75289
-            Y: 25848
-            Z: 10
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5329018737069136950
-    }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
-}
-Objects {
-  Id: 12294591898725422611
-  Name: "Castle Gatehouse"
-  Transform {
-    Location {
-      X: -54468
-      Y: 68026
-      Z: 10
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  ParentId: 1690414422520653577
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 336970261347359940
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -150.000488
-            Y: -300.000488
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9218488862609064200
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Castle Gatehouse"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 75299
-            Y: 26625
-            Z: 10
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -179.999969
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5329018737069136950
-    }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
-}
-Objects {
-  Id: 16690763405711974774
-  Name: "Castle Gatehouse"
-  Transform {
-    Location {
-      X: -54468
-      Y: 68026
-      Z: 10
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  ParentId: 1690414422520653577
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 336970261347359940
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -150.000488
-            Y: -300.000488
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9218488862609064200
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Castle Gatehouse"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 15138
-            Y: -59674
-            Z: 10
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -179.999969
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5329018737069136950
-    }
-  }
-}
-Objects {
-  Id: 17204256867478616771
-  Name: "Castle Gatehouse"
-  Transform {
-    Location {
-      X: -54478
-      Y: 67249
-      Z: 10
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1690414422520653577
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 336970261347359940
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -150.000488
-            Y: -300.000488
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9218488862609064200
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Castle Gatehouse"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 15128
-            Y: -60451
-            Z: 10
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5329018737069136950
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Drammol"
   }
 }
 Objects {
@@ -363,132 +130,6 @@ Objects {
         LinearDamping: 0.01
       }
       BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 2236616780962617306
-  Name: "Castle Gatehouse"
-  Transform {
-    Location {
-      X: -54478
-      Y: 67249
-      Z: 10
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1690414422520653577
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 336970261347359940
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -150.000488
-            Y: -300.000488
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9218488862609064200
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Castle Gatehouse"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -54468
-            Y: 68026
-            Z: 10
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5329018737069136950
-    }
-  }
-}
-Objects {
-  Id: 2859987933968611210
-  Name: "Castle Gatehouse"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1690414422520653577
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 336970261347359940
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -150.000488
-            Y: -300.000488
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 9218488862609064200
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Castle Gatehouse"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -54478
-            Y: 67249
-            Z: 10
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5329018737069136950
     }
   }
 }

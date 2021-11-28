@@ -1,54 +1,36 @@
 Name: "VernalForest"
 RootId: 12702648053710241127
 Objects {
-  Id: 15721191356782980647
-  Name: "DockingPoint"
+  Id: 11453362712834940255
+  Name: "FrameworkDockingPoint"
   Transform {
-    Location {
-      X: -63430
-      Y: 67620
-    }
-    Rotation {
-    }
     Scale {
-      X: 1.30000019
-      Y: 1.30000019
-      Z: 1.30000019
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 12702648053710241127
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:DepositResourceName"
-      String: "Gold"
-    }
-    Overrides {
-      Name: "cs:ScoreResourceName"
-      String: "Score"
-    }
-    Overrides {
-      Name: "cs:MinimumDeposit"
-      Int: 50
-    }
-    Overrides {
-      Name: "cs:DepositFx"
-      AssetReference {
-        Id: 841534158063459245
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12977115046366620307
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkWorldMapDockingPoint"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -58901
+            Y: -64260
+          }
+        }
       }
     }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "DockingPoint"
+    TemplateAsset {
+      Id: 2451542490807423299
+    }
   }
 }
 Objects {
@@ -79,8 +61,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -64225
-            Y: 67325
+            X: -59696
+            Y: -64555
             Z: 60
           }
         }
@@ -102,8 +84,8 @@ Objects {
   Name: "Birds"
   Transform {
     Location {
-      X: -63480
-      Y: 67330
+      X: -58951
+      Y: -64550
       Z: 400
     }
     Rotation {
@@ -278,8 +260,8 @@ Objects {
   Name: "Vernal Forest"
   Transform {
     Location {
-      X: -64040
-      Y: 69980
+      X: -59511
+      Y: -61900
       Z: 180
     }
     Rotation {

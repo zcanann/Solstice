@@ -106,11 +106,6 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
       VirtualFolderPath: "WorldMap"
       PlatformAssetType: 5
     }
@@ -286,31 +281,59 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
+      VirtualFolderPath: "Combat"
+      PlatformAssetType: 5
+    }
+    Folders {
       VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Buildings_Human"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings_Human"
       VirtualFolderPath: "Walls"
       PlatformAssetType: 5
     }
     Folders {
       VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Buildings_Human"
       VirtualFolderPath: "Floors"
       PlatformAssetType: 5
     }
     Folders {
       VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Buildings_Human"
       VirtualFolderPath: "Decor"
       PlatformAssetType: 5
     }
     Folders {
       VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings"
+      VirtualFolderPath: "Buildings_Human"
       VirtualFolderPath: "Stairs"
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Combat"
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings_Orcish"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings_Orcish"
+      VirtualFolderPath: "Decor"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings_Orcish"
+      VirtualFolderPath: "Doors"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Buildings_Orcish"
+      VirtualFolderPath: "Walls"
       PlatformAssetType: 5
     }
   }
