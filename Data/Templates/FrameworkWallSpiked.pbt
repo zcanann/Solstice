@@ -7,7 +7,7 @@ Assets {
       RootId: 12905691303589374391
       Objects {
         Id: 12905691303589374391
-        Name: "OrcWall"
+        Name: "BlightWall"
         Transform {
           Scale {
             X: 1
@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3402116994310251578
+        ParentId: 3487850469301776289
         ChildIds: 8167791247467967267
         ChildIds: 8846035500943963975
         ChildIds: 9129526859441643949
@@ -37,7 +37,6 @@ Assets {
         ChildIds: 17965836845105898359
         ChildIds: 542928616757635089
         ChildIds: 3377481589342549099
-        ChildIds: 3608459835587792059
         ChildIds: 4341287481972647766
         ChildIds: 15626881910168045065
         ChildIds: 12221370028418639946
@@ -8815,68 +8814,6 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 6222351953099130337
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 3608459835587792059
-        Name: "Craftsman Roof 01 Beam"
-        Transform {
-          Location {
-            X: -13643.1885
-            Y: -12810.0684
-            Z: -1094.18555
-          }
-          Rotation {
-            Pitch: 90
-            Yaw: -35.2644234
-            Roll: -35.2645874
-          }
-          Scale {
-            X: 2.74261713
-            Y: 4.29854727
-            Z: 3.08336568
-          }
-        }
-        ParentId: 12905691303589374391
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 11891381492705318643
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8837677924631041350
           }
           Teams {
             IsTeamCollisionEnabled: true

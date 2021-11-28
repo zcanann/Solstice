@@ -36,7 +36,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "BlightWall"
+          String: "FrameworkWallSpiked"
         }
         Overrides {
           Name: "Position"
@@ -52,14 +52,6 @@ Objects {
             Yaw: -70.8309326
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
@@ -69,16 +61,8 @@ Objects {
 }
 Objects {
   Id: 1184296239344585467
-  Name: "OrcWall"
+  Name: "BlightWall"
   Transform {
-    Location {
-      X: 11988.8496
-      Y: 10484.6729
-      Z: 1021.47412
-    }
-    Rotation {
-      Yaw: -39.263195
-    }
     Scale {
       X: 1
       Y: 1
@@ -86,16 +70,11 @@ Objects {
     }
   }
   ParentId: 3487850469301776289
-  UnregisteredParameters {
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   TemplateInstance {
     ParameterOverrideMap {
@@ -103,7 +82,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "BlightWall"
+          String: "FrameworkWallSpiked"
         }
         Overrides {
           Name: "Position"
@@ -116,7 +95,7 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -9.22572136
+            Yaw: -9.22570801
           }
         }
       }
@@ -189,7 +168,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "BlightWallRight"
+          String: "FrameworkWallSpiked"
         }
         Overrides {
           Name: "Position"

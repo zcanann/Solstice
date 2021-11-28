@@ -139,7 +139,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "Prop_SpikeBarricade"
+          String: "FrameworkBarricadeSpiked"
         }
         Overrides {
           Name: "Position"
@@ -198,7 +198,7 @@ Objects {
       value {
         Overrides {
           Name: "Name"
-          String: "Prop_SpikeBarricade"
+          String: "FrameworkBarricadeSpiked"
         }
         Overrides {
           Name: "Position"

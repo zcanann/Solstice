@@ -19,7 +19,7 @@ local propTerrain = script:GetCustomProperty("Terrain"):WaitForObject()
 
 local minimapSize = propContentPanel.width -- Assumed to have equal width and height
 local minimapCullDistance = minimapSize / 2.0 + 12.0
-local minimapMouseHitTestDistance = minimapSize / 2.0 - 24.0
+local minimapMouseHitTestDistance = minimapSize / 2.0 - 8.0
 local scaleMin 			= 2.5 / 100.0
 local scaleMax 			= 5.0 / 100.0
 local scaleIncrement 	= 0.5 / 100.0
@@ -329,13 +329,19 @@ function OnMouseDown(cursorPosition, primary)
 		local hitTestStart = Vector3.New(worldCoords.x, worldCoords.y, 65535)
 		local hitTestEnd = Vector3.New(worldCoords.x, worldCoords.y, -65535)
 
-		-- The navigation goal z coord default to the player's z coord. However,
-		local hitResult = World.Raycast(hitTestStart, hitTestEnd, { checkObjects = propTerrain })
-		if hitResult then
-			worldCoords.z = hitResult:GetImpactPosition().z
+		local goalLocations = { worldCoords }
+
+		-- By default, we attempt to navigate to the click coords with the same Z as the player, but there may be some elevation changes
+		local hitResults = World.RaycastAll(hitTestStart, hitTestEnd, { checkObjects = propTerrain })
+		if hitResults then
+			for _, hitResult in ipairs(hitResults) do
+				if hitResult then
+					table.insert(goalLocations, Vector3.New(worldCoords.x, worldCoords.y, hitResult:GetImpactPosition().z))
+				end
+			end
 		end
 
-		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATION, { worldCoords })
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATIONS, { goalLocations })
 	end
 end
 

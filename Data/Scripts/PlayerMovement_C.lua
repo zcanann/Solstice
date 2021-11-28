@@ -104,6 +104,19 @@ function OnRequestMoveToLocation(goal, callback)
 	BeginMoveToGoal(goal, callback, true)
 end
 
+function OnRequestMoveToLocations(goals, callback)
+	waypointClearRadius = 0.0
+
+	-- Attempt to navigate to the first valid goal
+	for _, goal in ipairs(goals) do
+		BeginMoveToGoal(goal, callback, true)
+
+		if #remainingWayPoints > 0 then
+			return
+		end
+	end
+end
+
 function OnRequestMoveNearLocation(goal, stopRadius, callback)
 	waypointClearRadius = stopRadius
 	BeginMoveToGoal(goal, callback, false)
@@ -118,6 +131,7 @@ localPlayer.movementHook:Connect(MovementHook)
 
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_PLAYER_TELEPORTED, ClearWayPoints)
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATION, OnRequestMoveToLocation)
+Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_TO_LOCATIONS, OnRequestMoveToLocations)
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_NEAR_LOCATION, OnRequestMoveNearLocation)
 Framework.Events.Listen(Framework.Events.Keys.Movement.EVENT_REQUEST_CANCEL_MOVEMENT, OnRequestCancelMovement)
 
