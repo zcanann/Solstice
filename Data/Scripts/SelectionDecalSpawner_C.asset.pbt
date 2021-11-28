@@ -1,6 +1,6 @@
 Assets {
-  Id: 15922954283188355462
-  Name: "EntityVisuals_C"
+  Id: 277715315184695963
+  Name: "SelectionDecalSpawner_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,25 +11,14 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:RadiusDecalTemplate"
         AssetReference {
           Id: 9352932352998584318
         }
       }
-      Overrides {
-        Name: "cs:NameplateTemplate"
-        AssetReference {
-          Id: 5049470299132475441
-        }
-      }
     }
   }
   SerializationVersion: 101
-  VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Entities"
+  VirtualFolderPath: "UI"
+  VirtualFolderPath: "WorldSpace"
 }

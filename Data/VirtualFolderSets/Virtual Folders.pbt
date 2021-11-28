@@ -336,5 +336,10 @@ Assets {
       VirtualFolderPath: "Walls"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "WorldSpace"
+      PlatformAssetType: 3
+    }
   }
 }

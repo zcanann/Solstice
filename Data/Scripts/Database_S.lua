@@ -3,7 +3,7 @@ local Framework = require(script:GetCustomProperty("Framework"))
 function CreateTestingCharacter(player)
     local initialData = {
 		-- TODO: Reference the appropriate keys
-        [ Framework.Entities.Keys.NAME ] = "Generated",
+        [ Framework.Entities.Keys.NAME ] = "Lothlorian",
         [ Framework.Entities.Keys.RACE ] = "Ithkuil",
         [ Framework.Entities.Keys.FACTION ] = "Ithkuil",
         [ Framework.Entities.Keys.CLASS ] = "Mage",

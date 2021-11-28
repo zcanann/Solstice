@@ -1,21 +1,64 @@
 Assets {
   Id: 9352932352998584318
-  Name: "RadiusDecal_C"
+  Name: "SelectionDecal_C"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 7969865393592566211
+      RootId: 14099479014367028753
       Objects {
-        Id: 7969865393592566211
-        Name: "MeleeRangeDecal_C"
+        Id: 14099479014367028753
+        Name: "SelectionDecal_C"
         Transform {
           Scale {
             X: 1
             Y: 1
-            Z: 0.5
+            Z: 1
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 7969865393592566211
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:RadiusDecal"
+            ObjectReference {
+              SubObjectId: 7969865393592566211
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15922954283188355462
+          }
+        }
+      }
+      Objects {
+        Id: 7969865393592566211
+        Name: "SelectionDecal_C"
+        Transform {
+          Location {
+            Z: 325
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14099479014367028753
         UnregisteredParameters {
           Overrides {
             Name: "bp:Sides"
@@ -56,6 +99,12 @@ Assets {
           Overrides {
             Name: "bp:Blur"
             Float: 0
+          }
+          Overrides {
+            Name: "cs:SelectionDecalControllerScript"
+            ObjectReference {
+              SubObjectId: 14099479014367028753
+            }
           }
         }
         Collidable_v2 {

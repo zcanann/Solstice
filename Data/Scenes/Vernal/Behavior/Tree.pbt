@@ -214,7 +214,6 @@ Objects {
   ChildIds: 14876340246824747308
   ChildIds: 556461327270184391
   ChildIds: 14968452349871171000
-  ChildIds: 8682797781929730772
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -232,54 +231,6 @@ Objects {
   InstanceHistory {
     SelfId: 12351278660784194748
     SubobjectId: 4848759869157782196
-    InstanceId: 14678979447342944233
-    TemplateId: 17256152977790581857
-  }
-}
-Objects {
-  Id: 8682797781929730772
-  Name: "EntityVisuals_C"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: 65.0000229
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9108578578708364619
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 752018236670724354
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15922954283188355462
-    }
-  }
-  InstanceHistory {
-    SelfId: 11456825009596505559
-    SubobjectId: 8564753907370798047
     InstanceId: 14678979447342944233
     TemplateId: 17256152977790581857
   }

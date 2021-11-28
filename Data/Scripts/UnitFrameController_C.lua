@@ -58,7 +58,7 @@ function OnTargetSelected(proximityObjectId)
 
 	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
 	if currentTarget then
-		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
 	end
 	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET, proximityObjectId)
 
@@ -79,7 +79,7 @@ function OnTargetSelected(proximityObjectId)
 	targetUnitFrameCamera = Framework.Utils.CameraCapture.GetCaptureCamera(objectInstance)
 
 	selectedTarget = objectInstance
-	Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. proximityObjectId)
+	Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. proximityObjectId)
 end
 
 function Tick(deltaSeconds)

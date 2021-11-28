@@ -1,6 +1,6 @@
 Assets {
-  Id: 3373571473665939527
-  Name: "NameplateSpawner_C"
+  Id: 15922954283188355462
+  Name: "SelectionDecalController_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -8,12 +8,6 @@ Assets {
         Name: "cs:Framework"
         AssetReference {
           Id: 14480759715348141780
-        }
-      }
-      Overrides {
-        Name: "cs:NameplateTemplate"
-        AssetReference {
-          Id: 5049470299132475441
         }
       }
     }
