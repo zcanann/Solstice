@@ -33,7 +33,7 @@ end
 function OnEscape(localPlayer, params)
     -- TODO: Move any logic out of this class, dispatch various ordered escape menu events, with a callback if they did anything.
     -- Generally, the order would be full screen menus => windows => interrupt casting => clear selection (in that order)
-    local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
+    local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET_ID)
     if currentTarget then
         params.openPauseMenu = false
         DeselectCurrentTarget()
@@ -41,7 +41,7 @@ function OnEscape(localPlayer, params)
 end
 
 function DeselectCurrentTarget()
-    local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
+    local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET_ID)
     if currentTarget then
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, nil)

@@ -240,7 +240,6 @@ Objects {
       AbilityAimMode {
         Value: "mc:eabilityaimmode:lookrelative"
       }
-      AppearanceChannelingTime: 2
       MaxHitpoints: 100
       PlayerMasterVolumeMultiplier: 1
     }

@@ -17,12 +17,6 @@ Objects {
   ParentId: 10096729828545893152
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 8456854035221219726
-      }
-    }
-    Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
         SelfId: 752018236670724354
@@ -69,12 +63,6 @@ Objects {
   }
   ParentId: 10096729828545893152
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 8456854035221219726
-      }
-    }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
@@ -123,12 +111,6 @@ Objects {
   ParentId: 10096729828545893152
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 8456854035221219726
-      }
-    }
-    Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
         SelfId: 752018236670724354
@@ -136,7 +118,7 @@ Objects {
     }
     Overrides {
       Name: "cs:MeleeRadius"
-      Float: 200
+      Float: 500
     }
   }
   Collidable_v2 {
@@ -186,12 +168,6 @@ Objects {
     Overrides {
       Name: "cs:Race"
       String: "Undead"
-    }
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 8456854035221219726
-      }
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"

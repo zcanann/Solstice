@@ -68,7 +68,7 @@ CameraCapture.UnitFrameImageCapture = function(captureCamera, entity, captureIma
 
 		if capture then
 			captureImage:SetCameraCapture(capture)
-			CameraCapture.UnitFrameImageRecapture(capture, captureCamera, entity)
+			CameraCapture.UnitFrameImageRecapture(captureCamera, entity, capture)
 		end
 
 		return capture

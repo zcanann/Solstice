@@ -4,7 +4,6 @@ local propPlayerUnitFrame = script:GetCustomProperty("PlayerUnitFrame"):WaitForO
 local propTargetUnitFrame = script:GetCustomProperty("TargetUnitFrame"):WaitForObject()
 
 local localPlayer = Game.GetLocalPlayer()
-local eventListeners = { }
 
 local cachedPlayerHealth = 100
 local cachedPlayerMaxHealth = 100
@@ -35,11 +34,33 @@ function OnTargetSelected(proximityObjectId)
 		return
 	end
 
+	-- Early exit on reselections, nothing to do
+	if selectedTarget == objectInstance then
+		return
+	end
+
 	for _, listener in ipairs(targetListeners) do
 		listener.Disconnect()
 	end
 
 	targetListeners = { }
+
+	-- Release the existing unit frame capture if it exists
+	if targetUnitFrameCapture and targetUnitFrameCapture:IsValid() then
+		targetUnitFrameCapture:Release()
+		targetUnitFrameCapture = nil
+	end
+
+	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET_ID)
+	if currentTarget then
+		Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
+	end
+	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET_ID, proximityObjectId)
+
+	-- Now it is safe to early-exit if the target is nil, since we have finished deselecting
+	if not objectInstance or not Object.IsValid(objectInstance) then
+		return
+	end
 
 	OnTargetHealthChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEALTH))
 	OnTargetMaxHealthChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH))
@@ -49,23 +70,6 @@ function OnTargetSelected(proximityObjectId)
 	OnTargetClassChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.CLASS))
 	OnTargetFactionChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.FACTION))
 	OnTargetRaceChanged(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE))
-
-	-- Release the existing unit frame capture if it exists
-	if targetUnitFrameCapture and targetUnitFrameCapture:IsValid() and selectedTarget ~= objectInstance then
-		targetUnitFrameCapture:Release()
-		targetUnitFrameCapture = nil
-	end
-
-	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET)
-	if currentTarget then
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
-	end
-	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET, proximityObjectId)
-
-	-- Now it is safe to early-exit if the target is nil, since we have finished deselecting
-	if not objectInstance or not Object.IsValid(objectInstance) then
-		return
-	end
 
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEALTH, OnTargetHealthChanged))
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnTargetMaxHealthChanged))
