@@ -1,5 +1,5 @@
-local DataBase = require(script:GetCustomProperty("DataBase"))
 local Events = require(script:GetCustomProperty("Events"))
+local Storage = require(script:GetCustomProperty("Storage"))
 
 local Skills = { }
 
@@ -10,7 +10,7 @@ Skills.IsValidSkill = function (skillId)
 		return false
 	end
 
-    if DataBase.Keys.Skills.SkillIdMap[skillId] then
+    if Storage.Keys.Skills.SkillIdMap[skillId] then
         return true
     end
 
@@ -20,14 +20,14 @@ end
 Skills.GetSkillKeys = function (skillId)
 	assert(Skills.IsValidSkill(skillId), "Invalid skill provided " .. skillId)
 
-	return DataBase.Keys.Skills.SkillIdMap[skillId]
+	return Storage.Keys.Skills.SkillIdMap[skillId]
 end
 
 -- [Resource] Effective skill level
 
 Skills.GetEffectiveSkillLevel = function(player, skillId)
 	local skillKeys = Skills.GetSkillKeys(skillId)
-    local level = DataBase.GetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL) or 1
+    local level = Storage.GetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL) or 1
 
 	if level <= 0 then
 		return 1
@@ -39,7 +39,7 @@ end
 Skills.SetEffectiveSkillLevel = function(player, skillId, value)
 	local skillKeys = Skills.GetSkillKeys(skillId)
 
-    DataBase.SetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL, value)
+    Storage.SetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL, value)
 end
 
 -- [Resource] Skill level
@@ -54,7 +54,7 @@ end
 
 Skills.GetSkillExp = function(player, skillId)
 	local skillKeys = Skills.GetSkillKeys(skillId)
-    local exp = DataBase.GetCharacterKey(player, skillKeys.EXP) or 0
+    local exp = Storage.GetCharacterKey(player, skillKeys.EXP) or 0
 
 	if exp < 0 then
 		return 0
@@ -68,7 +68,7 @@ Skills.SetSkillExp = function(player, skillId, value)
 
 	local skillLevel = Skills.GetSkillLevel(player, skillId)
 	local newExp = value
-    DataBase.SetCharacterKey(player, skillKeys.EXP, newExp)
+    Storage.SetCharacterKey(player, skillKeys.EXP, newExp)
 
 	local newSkillLevel = Skills.ExpTable.GetLevelForExp(newExp)
 
@@ -86,9 +86,9 @@ end
 Skills.ResetSkillExp = function(player, skillId, value)
 	local skillKeys = Skills.GetSkillKeys(skillId)
 
-    DataBase.SetCharacterKey(player, skillKeys.LEVEL, 0)
-    DataBase.SetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL, 0)
-    DataBase.SetCharacterKey(player, skillKeys.EXP, 0)
+    Storage.SetCharacterKey(player, skillKeys.LEVEL, 0)
+    Storage.SetCharacterKey(player, skillKeys.EFFECTIVE_LEVEL, 0)
+    Storage.SetCharacterKey(player, skillKeys.EXP, 0)
 end
 
 return Skills

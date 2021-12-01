@@ -11,12 +11,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:DataBase"
-        AssetReference {
-          Id: 14949101436137413811
-        }
-      }
-      Overrides {
         Name: "cs:DataStructures"
         AssetReference {
           Id: 10763479141974973317
@@ -26,12 +20,6 @@ Assets {
         Name: "cs:Debug"
         AssetReference {
           Id: 2040874793391612142
-        }
-      }
-      Overrides {
-        Name: "cs:Entities"
-        AssetReference {
-          Id: 5096365601930900246
         }
       }
       Overrides {
@@ -80,6 +68,12 @@ Assets {
         Name: "cs:Strings"
         AssetReference {
           Id: 1312537665072127050
+        }
+      }
+      Overrides {
+        Name: "cs:Storage"
+        AssetReference {
+          Id: 14949101436137413811
         }
       }
       Overrides {

@@ -18,11 +18,11 @@ function CanRun(player)
 end
 
 function GetStamina(player)
-	return Framework.DataBase.GetCharacterKey(player, Framework.DataBase.Keys.STAMINA) or 100
+	return Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.STAMINA) or 100
 end
 
 function SetStamina(player, stamina)
-	Framework.DataBase.SetCharacterKey(player, Framework.DataBase.Keys.STAMINA, CoreMath.Clamp(stamina, 0, 100))
+	Framework.Storage.SetCharacterKey(player, Framework.Storage.Keys.STAMINA, CoreMath.Clamp(stamina, 0, 100))
 
 	if not CanRun(player) then
 		UpdateWalkState(player, movementStateEnum.Walk)
@@ -34,11 +34,11 @@ function AddStamina(player, amount)
 end
 
 function GetPlayerMovementState(player)
-	return Framework.DataBase.GetCharacterKey(player, storageKeyMovementState) or movementStateEnum.Run
+	return Framework.Storage.GetCharacterKey(player, storageKeyMovementState) or movementStateEnum.Run
 end
 
 function SetPlayerMovementState(player, movementState)
-	Framework.DataBase.SetCharacterKey(player, storageKeyMovementState, movementState)
+	Framework.Storage.SetCharacterKey(player, storageKeyMovementState, movementState)
 end
 
 function UpdateWalkState(player, movementState)

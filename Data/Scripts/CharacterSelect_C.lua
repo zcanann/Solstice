@@ -66,14 +66,14 @@ function SetCharacterSelectState(newState)
             propBorderIthkuilSelected.visibility = Visibility.INHERIT
             propBorderColonist.visibility = Visibility.INHERIT
             propBorderColonistSelected.visibility = Visibility.FORCE_OFF
-            SetActiveFaction(Framework.Entities.Factions.ITHKUIL)
+            SetActiveFaction(Framework.Storage.Keys.Factions.ITHKUIL)
         else
             propNewCharacterScreenColonist.visibility = Visibility.INHERIT
             propBorderIthkuil.visibility = Visibility.INHERIT
             propBorderIthkuilSelected.visibility = Visibility.FORCE_OFF
             propBorderColonist.visibility = Visibility.FORCE_OFF
             propBorderColonistSelected.visibility = Visibility.INHERIT
-            SetActiveFaction(Framework.Entities.Factions.COLONIST)
+            SetActiveFaction(Framework.Storage.Keys.Factions.COLONIST)
         end
     elseif currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
         propNewCharacterScreen.visibility = Visibility.INHERIT
@@ -92,7 +92,7 @@ function SetActiveFaction(newActiveFaction)
 end
 
 function OnSetActiveFactionGranted()
-    if activeFaction == Framework.Entities.Factions.ITHKUIL then
+    if activeFaction == Framework.Storage.Keys.Factions.ITHKUIL then
         localPlayer:SetOverrideCamera(propCameraIthkuil)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
     else
@@ -119,16 +119,16 @@ function UpdateEntryVisuals(characterId)
     propColonistBorder.visibility = Visibility.FORCE_OFF
     propColonistBorderSelected.visibility = Visibility.FORCE_OFF
 
-    if characterData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.ITHKUIL then
+    if characterData[Framework.Storage.Keys.Characters.FACTION] == Framework.Storage.Keys.Factions.ITHKUIL then
         if characterEntry == selectedEntry then
-            SetActiveFaction(Framework.Entities.Factions.ITHKUIL)
+            SetActiveFaction(Framework.Storage.Keys.Factions.ITHKUIL)
             propIthkuilBorderSelected.visibility = Visibility.INHERIT
         else
             propIthkuilBorder.visibility = Visibility.INHERIT
         end
     else
         if characterEntry == selectedEntry then
-            SetActiveFaction(Framework.Entities.Factions.COLONIST)
+            SetActiveFaction(Framework.Storage.Keys.Factions.COLONIST)
             propColonistBorderSelected.visibility = Visibility.INHERIT
         else
             propColonistBorder.visibility = Visibility.INHERIT
@@ -145,9 +145,9 @@ function CreateCharacterEntry(characterData)
     local propLevelText = characterEntry:GetCustomProperty("LevelText"):WaitForObject()
     local propZoneText = characterEntry:GetCustomProperty("ZoneText"):WaitForObject()
 
-    propCharacterNameText.text = characterData[Framework.Entities.Keys.NAME]
-    propLevelText.text = characterData[Framework.Entities.Keys.FACTION]
-    propZoneText.text = characterData[Framework.Entities.Keys.ZONE]
+    propCharacterNameText.text = characterData[Framework.Storage.Keys.Characters.NAME]
+    propLevelText.text = characterData[Framework.Storage.Keys.Characters.FACTION]
+    propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
 
     characterEntry.y = 32.0 + #characterIndices * 112.0
     characterEntry.clickedEvent:Connect(OnEntryClicked, characterEntry)
@@ -158,7 +158,7 @@ end
 function OnCharactersLoaded()
     ClearEntries()
 
-    characterList = Framework.DataBase.GetCharacterList(localPlayer)
+    characterList = Framework.Storage.GetCharacterList(localPlayer)
 
     for characterId, characterData in pairs(characterList) do
         local characterEntry = CreateCharacterEntry(characterData)
@@ -211,10 +211,10 @@ function OnFinalizeNewCharacterPressed()
     local class = "Mage"
 
     local initialData = {
-        [ Framework.Entities.Keys.NAME ] = name,
-        [ Framework.Entities.Keys.RACE ] = activeFaction,
-        [ Framework.Entities.Keys.FACTION ] = activeFaction,
-        [ Framework.Entities.Keys.CLASS ] = class,
+        [ Framework.Storage.Keys.Characters.NAME ] = name,
+        [ Framework.Storage.Keys.Characters.RACE ] = "UNSET",
+        [ Framework.Storage.Keys.Characters.FACTION ] = activeFaction,
+        [ Framework.Storage.Keys.Characters.CLASS ] = class,
     }
     SetCharacterSelectState(CharacterSelectState.CHARACTER_CREATE_PENDING)
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, initialData)
@@ -297,7 +297,7 @@ propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPr
 propEnterWorldButton.clickedEvent:Connect(OnEnterWorldButtonPressed)
 
 Chat.sendMessageHook:Connect(ChatCommandHandler)
-Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_INITIAL_PLAYER_DATA_LOADED, OnCharactersLoaded)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_INITIAL_PLAYER_DATA_LOADED, OnCharactersLoaded)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, OnLastLoggedInCharacterReceived)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, OnCharacterCreateSuccess)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED, OnCharacterCreateFailed)

@@ -1,9 +1,9 @@
 -- This class defines static quest information, such as descriptions, requirements, turn-in NPCs, etc.
 
-local DataBase = require(script:GetCustomProperty("DataBase"))
 local ItemKeys = require(script:GetCustomProperty("ItemKeys"))
 local NpcKeys = require(script:GetCustomProperty("NpcKeys"))
 local QuestKeys = require(script:GetCustomProperty("QuestKeys"))
+local Storage = require(script:GetCustomProperty("Storage"))
 
 local Quests = { }
 local ActiveEntry = nil
@@ -24,27 +24,27 @@ Quests.Progress.IN_PROGRESS = "in_progress"
 Quests.Progress.DROPPED = nil
 
 --[[
-    QUEST DATABASE STORAGE
+    QUEST Storage STORAGE
 --]]
 
 Quests.SaveQuestProgress = function(player, questKey, progress)
     if not questKey then return end
-    DataBase.SetCharacterKey(player, DataBase.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey, progress)
+    Storage.SetCharacterKey(player, Storage.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey, progress)
 end
 
 Quests.GetQuestProgress = function(player, questKey)
     if not questKey then return nil end
-    return DataBase.GetCharacterKey(player, DataBase.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey)
+    return Storage.GetCharacterKey(player, Storage.Keys.Quests.QUEST_PROGRESS_PREFIX .. questKey)
 end
 
 Quests.SaveQuestTaskProgress = function(player, questKey, taskId, progress)
     if not questKey or not taskId then return end
-    DataBase.SetCharacterKey(player, DataBase.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId, progress)
+    Storage.SetCharacterKey(player, Storage.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId, progress)
 end
 
 Quests.GetQuestTaskProgress = function(player, questKey, taskId)
     if not questKey or not taskId then return nil end
-    return DataBase.GetCharacterKey(player, DataBase.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId)
+    return Storage.GetCharacterKey(player, Storage.Keys.Quests.QUEST_TASK_PROGRESS_PREFIX .. questKey .. "_" .. taskId)
 end
 
 --[[

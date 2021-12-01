@@ -3,6 +3,8 @@ Assets {
   Name: "ShipInitialize_S"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
   VirtualFolderPath: "WorldMap"

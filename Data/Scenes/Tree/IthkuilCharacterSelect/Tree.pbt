@@ -461,7 +461,6 @@ Objects {
     AnimatedMesh {
       AnimationPlaybackRateMultiplier: 1
       PlayOnStartAnimation {
-        Animation: "unarmed_idle_relaxed"
         StartPosition: 0.591570854
         PlaybackRate: 1
       }

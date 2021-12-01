@@ -1,14 +1,13 @@
 local EntityProximityKeys = { }
 
--- Move to player?
-EntityProximityKeys.GUILD = "guild"
-EntityProximityKeys.CLASS = "class"
-
 -- Faction
 EntityProximityKeys.NAME = "name"
 EntityProximityKeys.FACTION = "faction"
 EntityProximityKeys.RACE = "race"
 EntityProximityKeys.TITLE = "title"
+EntityProximityKeys.GUILD = "guild"
+EntityProximityKeys.CLASS = "class"
+EntityProximityKeys.ZONE = "zone"
 
 -- Generic
 EntityProximityKeys.HEALTH = "health"

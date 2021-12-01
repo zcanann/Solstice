@@ -4,7 +4,7 @@ local propSpawnPointIthkuil = script:GetCustomProperty("SpawnPointIthkuil"):Wait
 local propSpawnPointColonist = script:GetCustomProperty("SpawnPointColonist"):WaitForObject()
 
 function LoadCharacters(player)
-    local lastLoggedInCharacterId = Framework.DataBase.GetGlobalKey(player, Framework.DataBase.KeyLastSelectedCharacterId)
+    local lastLoggedInCharacterId = Framework.Storage.GetGlobalKey(player, Framework.Storage.KeyLastSelectedCharacterId)
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, player, { lastLoggedInCharacterId })
 end
 
@@ -13,42 +13,42 @@ function OnCreateNewCharacterRequested(player, initialData)
 
     -- TODO: Validate race, class, name, ensure no other data is set (maybe just copy needed data over)
 
-    initialData[Framework.Entities.Keys.ZONE] = Framework.Entities.Zones.UNKNOWN
+    initialData[Framework.Storage.Keys.Characters.ZONE] = Framework.Storage.Keys.Zones.UNKNOWN
 
-    if initialData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.ITHKUIL then
-        initialData[Framework.Entities.Keys.ZONE] = Framework.Entities.Zones.VERNAL
-    elseif initialData[Framework.Entities.Keys.FACTION] == Framework.Entities.Factions.COLONIST then
-        initialData[Framework.Entities.Keys.ZONE] = Framework.Entities.Zones.HIBERNA
+    if initialData[Framework.Storage.Keys.Characters.FACTION] == Framework.Storage.Keys.Factions.ITHKUIL then
+        initialData[Framework.Storage.Keys.Characters.ZONE] = Framework.Storage.Keys.Zones.VERNAL
+    elseif initialData[Framework.Storage.Keys.Characters.FACTION] == Framework.Storage.Keys.Factions.COLONIST then
+        initialData[Framework.Storage.Keys.Characters.ZONE] = Framework.Storage.Keys.Zones.HIBERNA
     else
         error("Invalid faction supplied to character creation")
         Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED, player)
         return
     end
 
-    Framework.DataBase.CreateNewCharacter(player, initialData)
+    Framework.Storage.CreateNewCharacter(player, initialData)
     LoadCharacters(player)
 
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, player)
 end
 
 function OnRequestLogIntoCharacter(player, characterId)
-    local characterList = Framework.DataBase.GetCharacterList(player)
+    local characterList = Framework.Storage.GetCharacterList(player)
 
     for id, _ in pairs(characterList) do
         if id == characterId then
-            Framework.DataBase.SetActiveCharacterId(player, characterId)
+            Framework.Storage.SetActiveCharacterId(player, characterId)
             Framework.Print("Login granted")
         end
     end
 end
 
 function OnRequestDeleteCharacter(player, characterId)
-    Framework.DataBase.DeleteCharacter(player, characterId)
+    Framework.Storage.DeleteCharacter(player, characterId)
     LoadCharacters(player)
 end
 
 function OnRequestSetActiveFaction(player, newActiveFaction)
-    if newActiveFaction == Framework.Entities.Factions.ITHKUIL then
+    if newActiveFaction == Framework.Storage.Keys.Factions.ITHKUIL then
         player:Spawn({position = propSpawnPointIthkuil:GetWorldPosition(), rotation = propSpawnPointIthkuil:GetRotation()})
     else
         player:Spawn({position = propSpawnPointColonist:GetWorldPosition(), rotation = propSpawnPointColonist:GetRotation()})
@@ -58,7 +58,7 @@ function OnRequestSetActiveFaction(player, newActiveFaction)
 end
 
 function OnEnterWorldRequested(player, characterId)
-    if Framework.DataBase.SetActiveCharacterId(player, characterId) then
+    if Framework.Storage.SetActiveCharacterId(player, characterId) then
         player:TransferToScene("Vernal")
     end
 end

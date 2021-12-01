@@ -11193,6 +11193,8 @@ Assets {
             ReticleType {
               Value: "mc:ereticletype:none"
             }
+            AttackSfxAssetRef {
+            }
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
@@ -11418,6 +11420,8 @@ Assets {
             ReticleType {
               Value: "mc:ereticletype:none"
             }
+            AttackSfxAssetRef {
+            }
             MaxAmmo: -1
             AmmoType: "rounds"
             MultiShot: 1
@@ -11642,6 +11646,8 @@ Assets {
             }
             ReticleType {
               Value: "mc:ereticletype:none"
+            }
+            AttackSfxAssetRef {
             }
             MaxAmmo: -1
             AmmoType: "rounds"

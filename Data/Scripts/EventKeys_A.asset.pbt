@@ -23,12 +23,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:DatabaseEvents"
-        AssetReference {
-          Id: 13966859524303698997
-        }
-      }
-      Overrides {
         Name: "cs:DialogEvents"
         AssetReference {
           Id: 3170869226745027241
@@ -68,6 +62,12 @@ Assets {
         Name: "cs:SkillEvents"
         AssetReference {
           Id: 9935215235775901043
+        }
+      }
+      Overrides {
+        Name: "cs:StorageEvents"
+        AssetReference {
+          Id: 13966859524303698997
         }
       }
       Overrides {

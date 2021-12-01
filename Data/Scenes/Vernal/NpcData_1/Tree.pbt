@@ -118,7 +118,7 @@ Objects {
     }
     Overrides {
       Name: "cs:MeleeRadius"
-      Float: 500
+      Float: 200
     }
   }
   Collidable_v2 {

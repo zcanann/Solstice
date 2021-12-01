@@ -3,6 +3,8 @@ Assets {
   Name: "DevUtils_S"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
   VirtualFolderPath: "Utils"

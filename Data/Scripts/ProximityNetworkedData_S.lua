@@ -12,6 +12,12 @@ local playersInRange = { }
 local currentData = { }
 
 function SetProximityData(key, data)
+    if not key then
+        Framework.Warn("Invalid proximity data key supplied")
+        Framework.DumpStackTrace()
+        return
+    end
+
     currentData[key] = data
     for player, _ in pairs(playersInRange) do
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {

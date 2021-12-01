@@ -30,6 +30,7 @@ function OnIsAliveChanged(proximityDataId, isAliveNew)
 end
 
 function ReturnToStance()
+    propHumanoidRig.animationStance = "unarmed_idle_relaxed"
     propHumanoidRig.playbackRateMultiplier = 1.0
 end
 
@@ -44,6 +45,8 @@ function PlayDeathAnimation()
         end
     end)
 end
+
+ReturnToStance()
 
 -- Runtime combat (move these?)
 Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.IS_ALIVE, OnIsAliveChanged)

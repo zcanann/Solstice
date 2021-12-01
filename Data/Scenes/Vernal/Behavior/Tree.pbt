@@ -257,6 +257,12 @@ Objects {
         SelfId: 752018236670724354
       }
     }
+    Overrides {
+      Name: "cs:HumanoidRig"
+      ObjectReference {
+        SelfId: 13626580166256593768
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

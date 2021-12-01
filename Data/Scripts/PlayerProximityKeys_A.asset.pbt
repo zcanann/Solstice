@@ -3,6 +3,8 @@ Assets {
   Name: "PlayerProximityKeys_A"
   PlatformAssetType: 3
   TextAsset {
+    CustomParameters {
+    }
   }
   SerializationVersion: 101
   VirtualFolderPath: "Infrastructure"

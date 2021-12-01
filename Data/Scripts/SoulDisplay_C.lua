@@ -23,5 +23,5 @@ function OnPlayerDataLoaded()
     playerDataLoaded = true
 end
 
-Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_INITIAL_PLAYER_DATA_LOADED, OnPlayerDataLoaded)
-Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. soulKeys.EFFECTIVE_LEVEL, OnSoulChanged)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_INITIAL_PLAYER_DATA_LOADED, OnPlayerDataLoaded)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. soulKeys.EFFECTIVE_LEVEL, OnSoulChanged)

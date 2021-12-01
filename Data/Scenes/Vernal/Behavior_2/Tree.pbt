@@ -186,6 +186,7 @@ Objects {
   ChildIds: 9287987596664656546
   ChildIds: 14589941801162997866
   ChildIds: 15594024896408941852
+  ChildIds: 2342025470382023138
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -199,6 +200,63 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 2342025470382023138
+  Name: "NpcHumanoidAnimations_C"
+  Transform {
+    Location {
+      X: 180.403076
+      Y: -980.999878
+      Z: 5
+    }
+    Rotation {
+      Yaw: 89.9999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12299963393686506760
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9896911443865818310
+      }
+    }
+    Overrides {
+      Name: "cs:HumanoidRig"
+      ObjectReference {
+        SelfId: 17493249929402542544
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 16576816505681894369
+    }
+  }
+  InstanceHistory {
+    SelfId: 15416374578604982157
+    SubobjectId: 4454967224019093893
+    InstanceId: 14678979447342944233
+    TemplateId: 17256152977790581857
   }
 }
 Objects {

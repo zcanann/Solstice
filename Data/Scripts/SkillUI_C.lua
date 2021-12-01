@@ -76,10 +76,10 @@ end
 
 UpdateSkillText()
 
-Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_INITIAL_PLAYER_DATA_LOADED, OnPlayerDataLoaded)
-Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.LEVEL, OnSkillChanged)
-Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.EXP, OnSkillChanged)
-Framework.Events.Listen(Framework.Events.Keys.Database.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.EFFECTIVE_LEVEL, OnSkillChanged)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_INITIAL_PLAYER_DATA_LOADED, OnPlayerDataLoaded)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.LEVEL, OnSkillChanged)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.EXP, OnSkillChanged)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. skillKeys.EFFECTIVE_LEVEL, OnSkillChanged)
 
 propSkillHoverMenu.visibility = Visibility.FORCE_OFF
 

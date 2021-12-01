@@ -2,10 +2,8 @@
 
 local Framework = { }
 
-Framework.DataBase = require(script:GetCustomProperty("DataBase"))
 Framework.DataStructures = require(script:GetCustomProperty("DataStructures"))
 Framework.Debug = require(script:GetCustomProperty("Debug"))
-Framework.Entities = require(script:GetCustomProperty("Entities"))
 Framework.Events = require(script:GetCustomProperty("Events"))
 Framework.Math = require(script:GetCustomProperty("Math"))
 Framework.Networking = require(script:GetCustomProperty("Networking"))
@@ -13,6 +11,7 @@ Framework.Logger = require(script:GetCustomProperty("Logger"))
 Framework.Quests = require(script:GetCustomProperty("Quests"))
 Framework.RuntimeDataStore = require(script:GetCustomProperty("RuntimeDataStore"))
 Framework.Skills = require(script:GetCustomProperty("Skills"))
+Framework.Storage = require(script:GetCustomProperty("Storage"))
 Framework.Strings = require(script:GetCustomProperty("Strings"))
 Framework.Utils = require(script:GetCustomProperty("Utils"))
 
@@ -22,6 +21,9 @@ Framework.Warn = Framework.Logger.Warn
 Framework.Error = Framework.Logger.Error
 Framework.Dump = function (object)
     Framework.Print(Framework.Utils.Table.Serialize(object))
+end
+Framework.DumpStackTrace = function (object)
+    Framework.Dump(CoreDebug.GetStackTrace())
 end
 
 Framework.ObjectAssert = function (object, name, message)
