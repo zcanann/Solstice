@@ -1,8 +1,11 @@
 Assets {
-  Id: 6823151078516740555
-  Name: "Custom Metal Frame 03"
+  Id: 8470166797310738032
+  Name: "FrameworkReplicantFeminineVariantB"
   PlatformAssetType: 13
   SerializationVersion: 101
+  VirtualFolderPath: "Models"
+  VirtualFolderPath: "PlayerSkins"
+  VirtualFolderPath: "Replicant"
   CustomMaterialAsset {
     BaseMaterialId: 17000753320705279156
     ParameterOverrides {
@@ -11,18 +14,26 @@ Assets {
         Float: 0
       }
       Overrides {
-        Name: "color"
-        Color {
-          R: 2
-          G: 1
-          A: 1
-        }
-      }
-      Overrides {
         Name: "color_lights"
         Color {
           A: 1
         }
+      }
+      Overrides {
+        Name: "rotate_material"
+        Float: 1
+      }
+      Overrides {
+        Name: "material_scale"
+        Float: 1
+      }
+      Overrides {
+        Name: "u_tiles"
+        Float: 1
+      }
+      Overrides {
+        Name: "roughness_multiplier"
+        Float: 1
       }
     }
     Assets {

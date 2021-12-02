@@ -4,7 +4,7 @@ function CreateTestingCharacter(player)
     local initialData = {
 		-- TODO: Reference the appropriate keys
         [ Framework.Storage.Keys.Characters.NAME ] = "Lothlorian",
-        [ Framework.Storage.Keys.Characters.RACE ] = "UNSET",
+        [ Framework.Storage.Keys.Characters.RACE ] = "Undead",
         [ Framework.Storage.Keys.Characters.FACTION ] = Framework.Storage.Keys.Factions.ITHKUIL,
         [ Framework.Storage.Keys.Characters.CLASS ] = "Mage",
         [ Framework.Storage.Keys.Characters.GUILD ] = "",
@@ -17,6 +17,8 @@ end
 function OnPlayerJoined(player)
 	-- Debugging
 	-- Framework.Storage.WipePlayerData(player)
+
+	player.isVisible = false
 
 	-- Create a dummy character if testing in a local environment, not on the character select screen, and no characters exists
 	if not Environment.IsHostedGame() and Game.GetCurrentSceneName() ~= "Main" then

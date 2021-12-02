@@ -1,7 +1,7 @@
 Name: "Border_1"
-RootId: 6936499993778587495
+RootId: 17746218758623242943
 Objects {
-  Id: 7026063392912786469
+  Id: 1220474359861998440
   Name: "BorderBottom"
   Transform {
     Location {
@@ -15,8 +15,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6936499993778587495
-  ChildIds: 8765507733889356454
+  ParentId: 17746218758623242943
+  ChildIds: 10388147669558716739
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -61,7 +61,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8765507733889356454
+  Id: 10388147669558716739
   Name: "UI Image"
   Transform {
     Location {
@@ -78,7 +78,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 7026063392912786469
+  ParentId: 1220474359861998440
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -102,7 +102,7 @@ Objects {
     UseParentWidth: true
     Image {
       Brush {
-        Id: 13409475433922536892
+        Id: 14365080343611833635
       }
       Color {
         R: 0.498039246
@@ -133,7 +133,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13740550774711707819
+  Id: 10596999642960068881
   Name: "BorderTop"
   Transform {
     Location {
@@ -147,8 +147,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 6936499993778587495
-  ChildIds: 9075321182995833892
+  ParentId: 17746218758623242943
+  ChildIds: 5226106487463336122
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -193,7 +193,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9075321182995833892
+  Id: 5226106487463336122
   Name: "UI Image"
   Transform {
     Location {
@@ -210,7 +210,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 13740550774711707819
+  ParentId: 10596999642960068881
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -234,7 +234,7 @@ Objects {
     UseParentWidth: true
     Image {
       Brush {
-        Id: 13409475433922536892
+        Id: 14365080343611833635
       }
       Color {
         R: 0.498039246

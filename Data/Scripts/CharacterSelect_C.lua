@@ -181,6 +181,10 @@ function OnCharactersLoaded()
     for characterId, _ in pairs(characterEntries) do
         UpdateEntryVisuals(characterId)
     end
+
+    if Framework.Utils.Table.Count(characterList) <= 0 then
+        OnCreateNewCharacterPressed()
+    end
 end
 
 function OnLastLoggedInCharacterReceived(loadedLastLoggedInCharacterId)

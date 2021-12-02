@@ -60,9 +60,11 @@ end
 
 if propRainFollowPlayer then
     propRainVolume:AttachToPlayer(localPlayer, "nameplate")
+    propRainVolume.visibility = Visibility.FORCE_ON
 end
 
 propLightningLight:AttachToPlayer(localPlayer, "nameplate")
+propLightningLight.visibility = Visibility.FORCE_ON
 propLightningLight:SetPosition(Vector3.New(0.0, 0.0, 1500.0))
 propLightningLight:SetRotation(Rotation.New(0.0, -90.0, 0.0))
 

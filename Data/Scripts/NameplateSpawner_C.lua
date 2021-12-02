@@ -22,6 +22,7 @@ function OnEntityEnteredRange(proximityObjectId)
     end
 
     nameplate:GetCustomProperty("NameplateControllerScript"):GetObject().context.SetProximityObject(objectInstance)
+    nameplate.visibility = Visibility.FORCE_ON
     nameplates[proximityObjectId] = nameplate
 end
 

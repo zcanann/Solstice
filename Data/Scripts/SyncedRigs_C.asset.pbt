@@ -1,6 +1,6 @@
 Assets {
-  Id: 11268320084557931241
-  Name: "PlayerAnimationController_C"
+  Id: 8492786302978856618
+  Name: "SyncedRigs_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,7 +11,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:PlayerAnimationSet"
+        Name: "cs:MainRig"
         ObjectReference {
         }
       }

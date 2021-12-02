@@ -341,5 +341,68 @@ Assets {
       VirtualFolderPath: "WorldSpace"
       PlatformAssetType: 3
     }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      VirtualFolderPath: "Replicant"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      VirtualFolderPath: "DarkElf"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      VirtualFolderPath: "Wukong"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      VirtualFolderPath: "Undead"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Infrastructure"
+      VirtualFolderPath: "Animations"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      VirtualFolderPath: "Undead"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      VirtualFolderPath: "Replicants"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      VirtualFolderPath: "Orcs"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      VirtualFolderPath: "Human"
+      PlatformAssetType: 5
+    }
   }
 }

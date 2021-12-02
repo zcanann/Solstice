@@ -26,6 +26,18 @@ Framework.DumpStackTrace = function (object)
     Framework.Dump(CoreDebug.GetStackTrace())
 end
 
+Framework.AwaitOnce = function(predicate, callback)
+    if predicate() then
+        callback()
+    else
+        Task.Spawn(function ()
+            if predicate() then
+                callback()
+            end
+        end)
+    end
+end
+
 Framework.ObjectAssert = function (object, name, message)
     local result = object and Object.IsValid(object) and object:IsA(name)
 

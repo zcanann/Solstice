@@ -25,10 +25,16 @@ function OnProximityObjectEnteredRange(proximityObjectId)
 
     equipmentChangeListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, "TODO_EQUIPMENT_KEY", OnPlayerEquipmentChanged)
 
-    if not player.clientUserData.equipmentWeapon then
-        player.clientUserData.equipmentWeapon = World.SpawnAsset(propDebugItemTemplate, { parent = script })
-        player.clientUserData.equipmentWeapon:Equip(player)
-    end
+    -- Bind the equipment to the player's model. This may not be created yet, so wait at most one frame for the model to spawn
+    Framework.AwaitOnce(function () return player.clientUserData.model end,
+        function ()
+            if not player.clientUserData.equipmentWeapon then
+                player.clientUserData.equipmentWeapon = World.SpawnAsset(propDebugItemTemplate, { parent = script })
+                player.clientUserData.model:AttachCoreObject(player.clientUserData.equipmentWeapon, "right_wrist")
+                -- player.clientUserData.equipmentWeapon:Equip(player)
+            end
+        end
+    )
 end
 
 function OnProximityObjectLeftRange(proximityObjectId)

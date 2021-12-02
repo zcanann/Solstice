@@ -1,4 +1,4 @@
-Name: "NewCharacterIthkuil"
+Name: "Deprecated"
 RootId: 9236217334296286072
 Objects {
   Id: 9672883842298369924

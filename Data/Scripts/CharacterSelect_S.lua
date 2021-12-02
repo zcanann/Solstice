@@ -5,6 +5,7 @@ local propSpawnPointColonist = script:GetCustomProperty("SpawnPointColonist"):Wa
 
 function LoadCharacters(player)
     local lastLoggedInCharacterId = Framework.Storage.GetGlobalKey(player, Framework.Storage.KeyLastSelectedCharacterId)
+
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, player, { lastLoggedInCharacterId })
 end
 
@@ -28,6 +29,7 @@ function OnCreateNewCharacterRequested(player, initialData)
     Framework.Storage.CreateNewCharacter(player, initialData)
     LoadCharacters(player)
 
+    player.isVisible = true
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, player)
 end
 

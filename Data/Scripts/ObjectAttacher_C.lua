@@ -19,7 +19,7 @@
 
 local propRig = script:GetCustomProperty("Rig"):WaitForObject()
 
-local allObjects = script.parent:GetChildren()
+local allObjects = script:GetChildren()
 
 for _,obj in ipairs(allObjects) do
 	if obj:IsA("Folder") then

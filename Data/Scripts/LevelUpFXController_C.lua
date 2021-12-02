@@ -43,6 +43,7 @@ function OnPlayerLeveledUp(player, skillId)
     end
 	vfx:AttachToPlayer(player, "pelvis")
     vfx:SetPosition(Vector3.New(0.0, 0.0, -128.0))
+    vfx.visibility = Visibility.FORCE_ON
     vfx:Play()
 
     local sfx = World.SpawnAsset(propLevelUpSFXTemplate)

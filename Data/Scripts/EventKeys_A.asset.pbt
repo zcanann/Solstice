@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:AnimationEvents"
+        AssetReference {
+          Id: 11970251099676155256
+        }
+      }
+      Overrides {
         Name: "cs:CharacterSelectEvents"
         AssetReference {
           Id: 948373845369640216
