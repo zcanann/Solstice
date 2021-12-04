@@ -28,7 +28,7 @@ function OnProximityObjectEnteredRange(proximityObjectId)
     -- Bind the equipment to the player's model. This may not be created yet, so wait at most one frame for the model to spawn
     Framework.AwaitOnce(function () return player.clientUserData.model end,
         function ()
-            if not player.clientUserData.equipmentWeapon then
+            if not Object.IsValid(player.clientUserData.equipmentWeapon) then
                 player.clientUserData.equipmentWeapon = World.SpawnAsset(propDebugItemTemplate, { parent = script })
                 player.clientUserData.model:AttachCoreObject(player.clientUserData.equipmentWeapon, "right_wrist")
                 -- player.clientUserData.equipmentWeapon:Equip(player)
@@ -46,7 +46,7 @@ function OnProximityObjectLeftRange(proximityObjectId)
     local player = Game.FindPlayer(proximityObjectId)
 
     if player then
-        if player.clientUserData.equipmentWeapon then
+        if Object.IsValid(player.clientUserData.equipmentWeapon) then
             player.clientUserData.equipmentWeapon:Destroy()
             player.clientUserData.equipmentWeapon = nil
         end

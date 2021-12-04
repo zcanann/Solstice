@@ -1,13 +1,13 @@
 Assets {
-  Id: 16445951611764285841
-  Name: "FrameworkHumanMasculineVariantE"
+  Id: 3961478734540321845
+  Name: "FrameworkVanaraMasculineVariantA"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1858458530171366993
+      RootId: 8523174043047730250
       Objects {
-        Id: 1858458530171366993
-        Name: "FrameworkHumanMasculineVariantE"
+        Id: 8523174043047730250
+        Name: "FrameworkVanaraMasculineVariantA"
         Transform {
           Scale {
             X: 1
@@ -16,6 +16,14 @@ Assets {
           }
         }
         ParentId: 15010763861394408712
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:0:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 13327796119306530430
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -45,7 +53,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 9266868553966372263
+              Id: 6270525319424035150
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -70,12 +78,12 @@ Assets {
       }
     }
     Assets {
-      Id: 9266868553966372263
-      Name: "Humanoid 2 Kenton"
+      Id: 6270525319424035150
+      Name: "Humanoid 2 Wukong"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_basic_003_ref"
+        AssetId: "npc_human_guy_head_fantasy_008_ref"
       }
     }
     PrimaryAssetId {
@@ -86,5 +94,5 @@ Assets {
   SerializationVersion: 101
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "CharacterModels"
-  VirtualFolderPath: "Human"
+  VirtualFolderPath: "Vanara"
 }

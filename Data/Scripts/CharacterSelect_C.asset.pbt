@@ -52,16 +52,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ChangeFactionIthkuilButton"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:ChangeFactionColonistButton"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:DeleteCharacterButton"
         ObjectReference {
         }

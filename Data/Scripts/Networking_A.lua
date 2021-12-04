@@ -24,7 +24,7 @@ Networking.GetProximityDataScript = function(id)
         id,
         function (proximityObjectId)
             local proximityInstance = Networking.GetProximityInstance(proximityObjectId)
-            if Object.IsValid(proximityInstance) then
+            if Object.IsValid(proximityInstance) and not proximityInstance:IsA("Player") then
                 local proximityData = proximityInstance:GetCustomProperty("ProximityNetworkedDataScript")
                 if Object.IsValid(proximityInstance) and proximityData then
                     script = proximityData:GetObject().context

@@ -1,13 +1,13 @@
 Assets {
-  Id: 11550593676070167778
+  Id: 12147551385636730131
   Name: "FrameworkHumanMasculineVariantA"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 15622723455553940306
+      RootId: 3101731870679369773
       Objects {
-        Id: 15622723455553940306
-        Name: "FrameworkHumanMasculineVariantA"
+        Id: 3101731870679369773
+        Name: "FrameworkHumanMasculineVariantF"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,6 @@ Assets {
           }
         }
         ParentId: 15010763861394408712
-        UnregisteredParameters {
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -47,7 +45,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 14951614199189363308
+              Id: 4262471157560748602
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -72,12 +70,12 @@ Assets {
       }
     }
     Assets {
-      Id: 14951614199189363308
-      Name: "Humanoid 2 Roscoe"
+      Id: 4262471157560748602
+      Name: "Humanoid 2 Zack"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_military_001_ref"
+        AssetId: "npc_human_guy_head_basic_001_ref"
       }
     }
     PrimaryAssetId {

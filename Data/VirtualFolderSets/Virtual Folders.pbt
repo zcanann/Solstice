@@ -404,5 +404,23 @@ Assets {
       VirtualFolderPath: "Human"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      VirtualFolderPath: "DarkElf"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      VirtualFolderPath: "Vanara"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      VirtualFolderPath: "Vanara"
+      PlatformAssetType: 5
+    }
   }
 }

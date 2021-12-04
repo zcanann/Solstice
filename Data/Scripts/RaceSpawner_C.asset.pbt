@@ -13,32 +13,14 @@ Assets {
       Overrides {
         Name: "cs:UndeadMaleTemplate"
         AssetReference {
-          Id: 9052587894103723134
+          Id: 3281216361488631298
         }
       }
       Overrides {
         Name: "cs:UndeadFemaleTemplate"
         AssetReference {
-          Id: 2394855426563419737
+          Id: 3281216361488631298
         }
-      }
-    }
-    Assets {
-      Id: 9052587894103723134
-      Name: "Humanoid 2 Zed"
-      PlatformAssetType: 26
-      PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_basic_005_ref"
-      }
-    }
-    Assets {
-      Id: 2394855426563419737
-      Name: "Humanoid 1 Zoe"
-      PlatformAssetType: 26
-      PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_head_basic_005_ref"
       }
     }
   }

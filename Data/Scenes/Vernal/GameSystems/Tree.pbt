@@ -508,7 +508,7 @@ Objects {
     Overrides {
       Name: "cs:UndeadMaleTemplate"
       AssetReference {
-        Id: 6411149018742534969
+        Id: 5083528162285600105
       }
     }
   }

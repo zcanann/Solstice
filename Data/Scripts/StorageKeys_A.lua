@@ -8,6 +8,7 @@ StorageKeys.Characters = require(script:GetCustomProperty("StorageKeysCharacters
 StorageKeys.Factions = require(script:GetCustomProperty("StorageKeysFactions"))
 StorageKeys.Items = require(script:GetCustomProperty("StorageKeysItems"))
 StorageKeys.Quests = require(script:GetCustomProperty("StorageKeysQuests"))
+StorageKeys.Races = require(script:GetCustomProperty("StorageKeysRaces"))
 StorageKeys.Skills = require(script:GetCustomProperty("StorageKeysSkills"))
 StorageKeys.Zones = require(script:GetCustomProperty("StorageKeysZones"))
 

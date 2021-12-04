@@ -175,12 +175,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ChangeFactionColonistButton"
-      ObjectReference {
-        SelfId: 1381945759818713307
-      }
-    }
-    Overrides {
       Name: "cs:CameraIthkuil"
       ObjectReference {
         SelfId: 3785637843159838533

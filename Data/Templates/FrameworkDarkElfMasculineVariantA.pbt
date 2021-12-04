@@ -1,13 +1,13 @@
 Assets {
-  Id: 12147551385636730131
-  Name: "FrameworkHumanMasculineVariantF"
+  Id: 14172646328327824576
+  Name: "FrameworkDarkElfMasculineVariantA"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 3101731870679369773
+      RootId: 6943539654448025038
       Objects {
-        Id: 3101731870679369773
-        Name: "FrameworkHumanMasculineVariantF"
+        Id: 6943539654448025038
+        Name: "FrameworkDarkElfMasculineVariantA"
         Transform {
           Scale {
             X: 1
@@ -16,6 +16,23 @@ Assets {
           }
         }
         ParentId: 15010763861394408712
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:0:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 6003250989474810368
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_BaseMaterial:color"
+            Color {
+              R: 0.193956032
+              G: 0.294942528
+              B: 0.744792
+              A: 1
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -45,7 +62,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 4262471157560748602
+              Id: 3937915864506208880
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -70,12 +87,12 @@ Assets {
       }
     }
     Assets {
-      Id: 4262471157560748602
-      Name: "Humanoid 2 Zack"
+      Id: 3937915864506208880
+      Name: "Humanoid 2 Vark"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_basic_001_ref"
+        AssetId: "npc_human_guy_head_casual_004_ref"
       }
     }
     PrimaryAssetId {
@@ -86,5 +103,5 @@ Assets {
   SerializationVersion: 101
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "CharacterModels"
-  VirtualFolderPath: "Human"
+  VirtualFolderPath: "DarkElf"
 }

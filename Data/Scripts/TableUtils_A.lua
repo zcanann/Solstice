@@ -412,6 +412,18 @@ local function Count(inTable)
 	return count
 end
 
+local function Contains(inTable, value)
+	if not inTable then return nil end
+
+	for _, v in pairs(inTable) do
+		if v == value then
+			return true
+		end
+	end
+
+	return false
+end
+
 -------------------------------------------
 
 TableUtils.CondenseStringConstants = TableCondenseStringConstants
@@ -421,5 +433,6 @@ TableUtils.Diff = TableDiff
 TableUtils.GetDiffKeys = TableDiffKeys
 TableUtils.Patch = TablePatch
 TableUtils.Count = Count
+TableUtils.Contains = Contains
 
 return TableUtils

@@ -11,7 +11,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "roughness_multiplier"
-        Float: 1.25
+        Float: 1
       }
       Overrides {
         Name: "u_tiles"

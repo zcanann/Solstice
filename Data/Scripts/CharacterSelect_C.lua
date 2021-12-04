@@ -10,8 +10,6 @@ local propNewCharacterScreenColonist = script:GetCustomProperty("NewCharacterScr
 
 local propCreateNewCharacterButton = script:GetCustomProperty("CreateNewCharacterButton"):WaitForObject()
 local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewCharacterButton"):WaitForObject()
-local propChangeFactionIthkuilButton = script:GetCustomProperty("ChangeFactionIthkuilButton"):WaitForObject()
-local propChangeFactionColonistButton = script:GetCustomProperty("ChangeFactionColonistButton"):WaitForObject()
 local propDeleteCharacterButton = script:GetCustomProperty("DeleteCharacterButton"):WaitForObject()
 local propEnterWorldButton = script:GetCustomProperty("EnterWorldButton"):WaitForObject()
 
@@ -25,11 +23,10 @@ local propSunlight = script:GetCustomProperty("Sunlight"):WaitForObject()
 local CharacterNameValidator = require(script:GetCustomProperty("CharacterNameValidator"))
 
 local CharacterSelectState = { }
-CharacterSelectState.CHARACTER_SELECT = "character_select"
-CharacterSelectState.NEW_CHARACTER_ITHKUIL = "new_character_ithkia"
-CharacterSelectState.NEW_CHARACTER_COLONIST = "new_character_kotava"
-CharacterSelectState.DELETE_SELECTED_CHARACTER = "delete_character"
-CharacterSelectState.CHARACTER_CREATE_PENDING = "character_create_pending"
+CharacterSelectState.CHARACTER_SELECT = 0
+CharacterSelectState.NEW_CHARACTER = 1
+CharacterSelectState.DELETE_SELECTED_CHARACTER = 2
+CharacterSelectState.CHARACTER_CREATE_PENDING = 3
 
 local localPlayer = Game.GetLocalPlayer()
 local characterEntries = { }
@@ -37,7 +34,8 @@ local characterIndices = { }
 local characterList = { }
 local lastLoggedInCharacterId = nil
 local currentState = nil
-local activeFaction = nil
+local activeRace = nil
+local activeClass = "mage"
 local selectedEntry = nil
 
 local defaultNameText = propCharacterNameTextBox.text
@@ -52,28 +50,16 @@ function SetCharacterSelectState(newState)
 
     if currentState == CharacterSelectState.CHARACTER_SELECT then
         propCharacterSelectScreen.visibility = Visibility.INHERIT
-    elseif currentState == CharacterSelectState.NEW_CHARACTER_ITHKUIL or currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
+    elseif currentState == CharacterSelectState.NEW_CHARACTER then
         propNewCharacterScreen.visibility = Visibility.INHERIT
-        local propBorderIthkuil = propChangeFactionIthkuilButton:GetCustomProperty("Border"):WaitForObject()
-        local propBorderIthkuilSelected = propChangeFactionIthkuilButton:GetCustomProperty("BorderSelected"):WaitForObject()
-        local propBorderColonist = propChangeFactionColonistButton:GetCustomProperty("Border"):WaitForObject()
-        local propBorderColonistSelected = propChangeFactionColonistButton:GetCustomProperty("BorderSelected"):WaitForObject()
         propFinalizeNewCharacterButton.isInteractable = false
         propCharacterNameTextBox.text = defaultNameText
-        if currentState == CharacterSelectState.NEW_CHARACTER_ITHKUIL then
+        if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, activeRace) then
             propNewCharacterScreenIthkuil.visibility = Visibility.INHERIT
-            propBorderIthkuil.visibility = Visibility.FORCE_OFF
-            propBorderIthkuilSelected.visibility = Visibility.INHERIT
-            propBorderColonist.visibility = Visibility.INHERIT
-            propBorderColonistSelected.visibility = Visibility.FORCE_OFF
-            SetActiveFaction(Framework.Storage.Keys.Factions.ITHKUIL)
-        else
+        elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, activeRace) then
             propNewCharacterScreenColonist.visibility = Visibility.INHERIT
-            propBorderIthkuil.visibility = Visibility.INHERIT
-            propBorderIthkuilSelected.visibility = Visibility.FORCE_OFF
-            propBorderColonist.visibility = Visibility.FORCE_OFF
-            propBorderColonistSelected.visibility = Visibility.INHERIT
-            SetActiveFaction(Framework.Storage.Keys.Factions.COLONIST)
+        else
+            warn("Invalid active race set")
         end
     elseif currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
         propNewCharacterScreen.visibility = Visibility.INHERIT
@@ -84,20 +70,23 @@ function SetCharacterSelectState(newState)
     end
 end
 
-function SetActiveFaction(newActiveFaction)
-    if activeFaction ~= newActiveFaction then
-        activeFaction = newActiveFaction
-        Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_FACTION, { activeFaction })
+function RequestSetActiveRace(newActiveRace)
+    if activeRace ~= newActiveRace then
+        activeRace = newActiveRace
+        Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, { newActiveRace })
     end
 end
 
-function OnSetActiveFactionGranted()
-    if activeFaction == Framework.Storage.Keys.Factions.ITHKUIL then
+function OnSetActiveRaceSuccess(newActiveRace)
+    activeRace = newActiveRace
+    if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, activeRace) then
         localPlayer:SetOverrideCamera(propCameraIthkuil)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
-    else
+    elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, activeRace) then
         localPlayer:SetOverrideCamera(propCameraColonist)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
+    else
+        warn("Invalid active race set")
     end
 end
 
@@ -121,14 +110,12 @@ function UpdateEntryVisuals(characterId)
 
     if characterData[Framework.Storage.Keys.Characters.FACTION] == Framework.Storage.Keys.Factions.ITHKUIL then
         if characterEntry == selectedEntry then
-            SetActiveFaction(Framework.Storage.Keys.Factions.ITHKUIL)
             propIthkuilBorderSelected.visibility = Visibility.INHERIT
         else
             propIthkuilBorder.visibility = Visibility.INHERIT
         end
     else
         if characterEntry == selectedEntry then
-            SetActiveFaction(Framework.Storage.Keys.Factions.COLONIST)
             propColonistBorderSelected.visibility = Visibility.INHERIT
         else
             propColonistBorder.visibility = Visibility.INHERIT
@@ -201,35 +188,33 @@ function OnCharacterCreateFailed()
 end
 
 function OnCreateNewCharacterPressed()
-    if math.random() >= 0.5 then
-        SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKUIL)
+    local factionRng = math.random()
+    local race = nil
+
+    if factionRng < 0.5 then
+        local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.COLONIST)
+        race = Framework.Storage.Keys.Races.COLONIST[math.random(raceCount)]
     else
-        SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_COLONIST)
+        local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.ITHKUIL)
+        race = Framework.Storage.Keys.Races.ITHKUIL[math.random(raceCount)]
     end
+
+    RequestSetActiveRace(race)
+    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER)
 end
 
 function OnFinalizeNewCharacterPressed()
     selectedEntry = nil
     lastLoggedInCharacterId = nil
     local name = propCharacterNameTextBox.text
-    local class = "Mage"
 
     local initialData = {
         [ Framework.Storage.Keys.Characters.NAME ] = name,
-        [ Framework.Storage.Keys.Characters.RACE ] = "UNSET",
-        [ Framework.Storage.Keys.Characters.FACTION ] = activeFaction,
-        [ Framework.Storage.Keys.Characters.CLASS ] = class,
+        [ Framework.Storage.Keys.Characters.RACE ] = activeRace,
+        [ Framework.Storage.Keys.Characters.CLASS ] = activeClass,
     }
     SetCharacterSelectState(CharacterSelectState.CHARACTER_CREATE_PENDING)
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, initialData)
-end
-
-function OnSetFactionIthkuilPressed()
-    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_ITHKUIL)
-end
-
-function OnSetFactionColonistPressed()
-    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER_COLONIST)
 end
 
 function OnDeleteSelectedCharacterButtonPressed()
@@ -290,13 +275,8 @@ function ChatCommandHandler(params)
     end
 end
 
-OnCharactersLoaded()
-SetCharacterSelectState(CharacterSelectState.CHARACTER_SELECT)
-
 propCreateNewCharacterButton.clickedEvent:Connect(OnCreateNewCharacterPressed)
 propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPressed)
-propChangeFactionIthkuilButton.clickedEvent:Connect(OnSetFactionIthkuilPressed)
-propChangeFactionColonistButton.clickedEvent:Connect(OnSetFactionColonistPressed)
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
 propEnterWorldButton.clickedEvent:Connect(OnEnterWorldButtonPressed)
 
@@ -305,4 +285,4 @@ Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_INITIAL_PLAYER_DATA_
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, OnLastLoggedInCharacterReceived)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, OnCharacterCreateSuccess)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED, OnCharacterCreateFailed)
-Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_FACTION_SUCCESS, OnSetActiveFactionGranted)
+Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_RACE_SUCCESS, OnSetActiveRaceSuccess)
