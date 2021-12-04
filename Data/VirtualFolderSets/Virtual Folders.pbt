@@ -389,12 +389,6 @@ Assets {
     Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "CharacterModels"
-      VirtualFolderPath: "Replicants"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "CharacterModels"
       VirtualFolderPath: "Orcs"
       PlatformAssetType: 5
     }
@@ -420,6 +414,12 @@ Assets {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "CharacterModels"
       VirtualFolderPath: "Vanara"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "CharacterModels"
+      VirtualFolderPath: "Transcendents"
       PlatformAssetType: 5
     }
   }

@@ -1,13 +1,13 @@
 Assets {
-  Id: 13929251522609491248
-  Name: "FrameworkReplicantMasculineVariantC"
+  Id: 10136783166237093130
+  Name: "FrameworkTranscendentFeminineVariantA"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11519152407027522013
+      RootId: 3884664389665251075
       Objects {
-        Id: 11519152407027522013
-        Name: "FrameworkReplicantMasculineVariantC"
+        Id: 3884664389665251075
+        Name: "FrameworkReplicantFeminineVariantA"
         Transform {
           Scale {
             X: 1
@@ -16,26 +16,36 @@ Assets {
           }
         }
         ParentId: 15010763861394408712
-        ChildIds: 8385565825393831493
-        ChildIds: 7542642031899489562
+        ChildIds: 6060833268135023503
+        ChildIds: 7695563687904425373
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 9889775764180899101
+              Id: 8470166797310738032
             }
           }
           Overrides {
-            Name: "ma:0:Shared_Detail2:id"
-            AssetReference {
-              Id: 13337077198413602857
-            }
-          }
-          Overrides {
-            Name: "ma:0:Shared_Detail2:color"
+            Name: "ma:1:Shared_BaseMaterial:color"
             Color {
-              G: 0.455165148
-              B: 0.87
+              R: 1
+              G: 1
+              B: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5297107198309577767
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_BaseMaterial:color"
+            Color {
+              R: 0.360784322
+              G: 1
+              B: 1
               A: 1
             }
           }
@@ -60,7 +70,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16794234107403285238
+            Id: 13857943057331475071
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -75,10 +85,10 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 14951614199189363308
+              Id: 6435866532900058359
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 17124023611434561119
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -90,7 +100,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8385565825393831493
+        Id: 6060833268135023503
         Name: "SyncedRigs_C"
         Transform {
           Location {
@@ -103,13 +113,13 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11519152407027522013
-        ChildIds: 14279603620829628798
+        ParentId: 3884664389665251075
+        ChildIds: 7914026952504159985
         UnregisteredParameters {
           Overrides {
             Name: "cs:MainRig"
             ObjectReference {
-              SubObjectId: 11519152407027522013
+              SubObjectId: 3884664389665251075
             }
           }
         }
@@ -132,8 +142,8 @@ Assets {
         }
       }
       Objects {
-        Id: 14279603620829628798
-        Name: "Humanoid 2 Rig"
+        Id: 7914026952504159985
+        Name: "Humanoid 1 Rig"
         Transform {
           Location {
           }
@@ -145,16 +155,8 @@ Assets {
             Z: 0.99
           }
         }
-        ParentId: 8385565825393831493
+        ParentId: 6060833268135023503
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:0:Shared_Detail2:color"
-            Color {
-              G: 0.455165148
-              B: 0.87
-              A: 1
-            }
-          }
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
@@ -174,13 +176,31 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:1:Shared_Detail3:id"
+            Name: "ma:2:Shared_BaseMaterial:id"
             AssetReference {
               Id: 2018227301497757374
             }
           }
           Overrides {
-            Name: "ma:1:Shared_Detail4:id"
+            Name: "ma:2:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail4:id"
             AssetReference {
               Id: 2018227301497757374
             }
@@ -200,7 +220,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16794234107403285238
+            Id: 13857943057331475071
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -215,13 +235,13 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 14951614199189363308
-            }
-            SkinnedMeshes {
-              Id: 5495325946687197585
+              Id: 6435866532900058359
             }
             SkinnedMeshes {
               Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 7155942901144560299
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -230,12 +250,16 @@ Assets {
         }
       }
       Objects {
-        Id: 7542642031899489562
+        Id: 7695563687904425373
         Name: "ObjectAttacher_C"
         Transform {
           Location {
+            X: 509
+            Y: 1482
+            Z: 5
           }
           Rotation {
+            Yaw: -89.9999847
           }
           Scale {
             X: 1
@@ -243,14 +267,14 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11519152407027522013
-        ChildIds: 6712097782558519324
-        ChildIds: 6032438496256928971
+        ParentId: 3884664389665251075
+        ChildIds: 6964100234979778102
+        ChildIds: 15102274532858775824
         UnregisteredParameters {
           Overrides {
             Name: "cs:Rig"
             ObjectReference {
-              SubObjectId: 11519152407027522013
+              SubObjectId: 3884664389665251075
             }
           }
         }
@@ -273,12 +297,16 @@ Assets {
         }
       }
       Objects {
-        Id: 6712097782558519324
+        Id: 6964100234979778102
         Name: "head"
         Transform {
           Location {
+            X: 1481.99976
+            Y: -509.00061
+            Z: -5
           }
           Rotation {
+            Yaw: 89.9999771
           }
           Scale {
             X: 1
@@ -286,9 +314,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7542642031899489562
-        ChildIds: 14252803174813394093
-        ChildIds: 14720848717658988057
+        ParentId: 7695563687904425373
+        ChildIds: 15839120697270490602
+        ChildIds: 13799693488953365454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -303,12 +331,12 @@ Assets {
         }
       }
       Objects {
-        Id: 14252803174813394093
+        Id: 15839120697270490602
         Name: "Sphere"
         Transform {
           Location {
-            X: 5.00000191
-            Y: -3.00158405
+            X: 6.00000286
+            Y: -5.00158358
             Z: 88
           }
           Rotation {
@@ -319,7 +347,7 @@ Assets {
             Z: 0.035
           }
         }
-        ParentId: 6712097782558519324
+        ParentId: 6964100234979778102
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -367,13 +395,14 @@ Assets {
         }
       }
       Objects {
-        Id: 14720848717658988057
-        Name: "Humanoid 2 Rig"
+        Id: 13799693488953365454
+        Name: "Humanoid 1 Rig"
         Transform {
           Location {
             Z: 5
           }
           Rotation {
+            Yaw: 6.83018561e-06
           }
           Scale {
             X: 0.94
@@ -381,36 +410,10 @@ Assets {
             Z: 0.94
           }
         }
-        ParentId: 6712097782558519324
+        ParentId: 6964100234979778102
         UnregisteredParameters {
           Overrides {
-            Name: "ma:0:Shared_Detail2:color"
-            Color {
-              G: 0.455165148
-              B: 0.87
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:0:Shared_Detail1:id"
-            AssetReference {
-              Id: 2018227301497757374
-            }
-          }
-          Overrides {
-            Name: "ma:1:Shared_Detail4:id"
-            AssetReference {
-              Id: 2018227301497757374
-            }
-          }
-          Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2018227301497757374
-            }
-          }
-          Overrides {
-            Name: "ma:1:Shared_Detail3:id"
             AssetReference {
               Id: 2018227301497757374
             }
@@ -422,7 +425,7 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:2:Shared_Detail4:id"
+            Name: "ma:1:Shared_Detail2:id"
             AssetReference {
               Id: 2018227301497757374
             }
@@ -434,7 +437,7 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:2:Shared_Detail3:id"
+            Name: "ma:2:Shared_Detail1:id"
             AssetReference {
               Id: 2018227301497757374
             }
@@ -446,13 +449,67 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:2:Shared_Detail1:id"
+            Name: "ma:2:Shared_Detail3:id"
             AssetReference {
               Id: 2018227301497757374
             }
           }
           Overrides {
-            Name: "ma:1:Shared_Detail2:id"
+            Name: "ma:2:Shared_Detail4:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail3:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail4:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail3:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail4:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail2:id"
             AssetReference {
               Id: 2018227301497757374
             }
@@ -472,7 +529,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 16794234107403285238
+            Id: 13857943057331475071
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -487,13 +544,13 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 14951614199189363308
+              Id: 6435866532900058359
             }
             SkinnedMeshes {
-              Id: 1619046284421263831
+              Id: 256548928180637423
             }
             SkinnedMeshes {
-              Id: 15858215164728204894
+              Id: 917273584169936355
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -502,7 +559,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6032438496256928971
+        Id: 15102274532858775824
         Name: "upper_spine"
         Transform {
           Location {
@@ -519,8 +576,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7542642031899489562
-        ChildIds: 5776886021005128947
+        ParentId: 7695563687904425373
+        ChildIds: 5317449677698797121
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -535,7 +592,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5776886021005128947
+        Id: 5317449677698797121
         Name: "Donut"
         Transform {
           Location {
@@ -552,7 +609,7 @@ Assets {
             Z: 0.125
           }
         }
-        ParentId: 6032438496256928971
+        ParentId: 15102274532858775824
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -596,30 +653,39 @@ Assets {
       }
     }
     Assets {
-      Id: 16794234107403285238
-      Name: "Humanoid 2 Rig"
+      Id: 13857943057331475071
+      Name: "Humanoid 1 Rig"
       PlatformAssetType: 25
       PrimaryAsset {
         AssetType: "SkeletonAssetRef"
-        AssetId: "npc_guy_wireframe_001_ref"
+        AssetId: "npc_gal_wireframe_001_ref"
       }
     }
     Assets {
-      Id: 14951614199189363308
-      Name: "Humanoid 2 Roscoe"
+      Id: 6435866532900058359
+      Name: "Humanoid 1 Nancy"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_military_001_ref"
+        AssetId: "npc_human_gal_head_basic_002_ref"
       }
     }
     Assets {
-      Id: 13337077198413602857
-      Name: "Additive Soft Edge"
+      Id: 17124023611434561119
+      Name: "Humanoid 1 Nancy Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_hair_basic_002_ref"
+      }
+    }
+    Assets {
+      Id: 5297107198309577767
+      Name: "Metal Painted Basic 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "fxma_additive_edgefade"
+        AssetId: "mi_painted_metal_basic_001"
       }
     }
     Assets {
@@ -632,12 +698,12 @@ Assets {
       }
     }
     Assets {
-      Id: 5495325946687197585
-      Name: "Humanoid 2 Cyber Hacker Helmet"
+      Id: 7155942901144560299
+      Name: "Humanoid 1 Viper Helmet"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_hat_scifi_005_ref"
+        AssetId: "npc_human_gal_hat_scifi_001_ref"
       }
     }
     Assets {
@@ -650,21 +716,30 @@ Assets {
       }
     }
     Assets {
-      Id: 1619046284421263831
-      Name: "Humanoid 2 Trooper Armor"
-      PlatformAssetType: 26
+      Id: 13337077198413602857
+      Name: "Additive Soft Edge"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_upper_scifi_002_ref"
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxma_additive_edgefade"
       }
     }
     Assets {
-      Id: 15858215164728204894
-      Name: "Humanoid 2 Crisis Pants"
+      Id: 256548928180637423
+      Name: "Humanoid 1 Racer Jumpsuit Pants"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_lower_scifi_003_ref"
+        AssetId: "npc_human_gal_lower_sport_003_ref"
+      }
+    }
+    Assets {
+      Id: 917273584169936355
+      Name: "Humanoid 1 Racer Jumpsuit Top"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_upper_sport_003_ref"
       }
     }
     Assets {
@@ -693,5 +768,5 @@ Assets {
   SerializationVersion: 101
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "CharacterModels"
-  VirtualFolderPath: "Replicants"
+  VirtualFolderPath: "Transcendents"
 }
