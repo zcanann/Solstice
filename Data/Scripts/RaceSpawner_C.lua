@@ -23,12 +23,12 @@ local propFrameworkVanaraFeminineVariantA = script:GetCustomProperty("FrameworkV
 local propFrameworkVanaraFeminineVariantB = script:GetCustomProperty("FrameworkVanaraFeminineVariantB")
 local propFrameworkVanaraFeminineVariantC = script:GetCustomProperty("FrameworkVanaraFeminineVariantC")
 local propFrameworkVanaraMasculineVariantA = script:GetCustomProperty("FrameworkVanaraMasculineVariantA")
-local propFrameworkTranscendentFeminineVariantA = script:GetCustomProperty("FrameworkTranscendentFeminineVariantA")
-local propFrameworkTranscendentFeminineVariantB = script:GetCustomProperty("FrameworkTranscendentFeminineVariantB")
-local propFrameworkTranscendentFeminineVariantC = script:GetCustomProperty("FrameworkTranscendentFeminineVariantC")
-local propFrameworkTranscendentMasculineVariantA = script:GetCustomProperty("FrameworkTranscendentMasculineVariantA")
-local propFrameworkTranscendentMasculineVariantB = script:GetCustomProperty("FrameworkTranscendentMasculineVariantB")
-local propFrameworkTranscendentMasculineVariantC = script:GetCustomProperty("FrameworkTranscendentMasculineVariantC")
+local propFrameworkAscendentFeminineVariantA = script:GetCustomProperty("FrameworkAscendentFeminineVariantA")
+local propFrameworkAscendentFeminineVariantB = script:GetCustomProperty("FrameworkAscendentFeminineVariantB")
+local propFrameworkAscendentFeminineVariantC = script:GetCustomProperty("FrameworkAscendentFeminineVariantC")
+local propFrameworkAscendentMasculineVariantA = script:GetCustomProperty("FrameworkAscendentMasculineVariantA")
+local propFrameworkAscendentMasculineVariantB = script:GetCustomProperty("FrameworkAscendentMasculineVariantB")
+local propFrameworkAscendentMasculineVariantC = script:GetCustomProperty("FrameworkAscendentMasculineVariantC")
 
 -- Variables
 local playerModels = { }
@@ -99,12 +99,18 @@ function RebuildModel(proximityObjectId)
         playerModel = World.SpawnAsset(propFrameworkDarkElfMasculineVariantA)
     elseif race == Framework.Storage.Keys.Races.HUMAN then
         playerModel = World.SpawnAsset(propFrameworkHumanMasculineVariantA)
-    elseif race == Framework.Storage.Keys.Races.TRANSCENDENT then
-        playerModel = World.SpawnAsset(propFrameworkTranscendentMasculineVariantA)
+    elseif race == Framework.Storage.Keys.Races.ASCENDENT then
+        playerModel = World.SpawnAsset(propFrameworkAscendentMasculineVariantA)
     elseif race == Framework.Storage.Keys.Races.VANARA then
         playerModel = World.SpawnAsset(propFrameworkVanaraMasculineVariantA)
     else
-        playerModel = World.SpawnAsset(propFrameworkTranscendentFeminineVariantA)
+        -- TODO: Spawn some sort of default error model
+        playerModel = World.SpawnAsset(propFrameworkAscendentMasculineVariantA)
+    end
+
+    if not playerModel then
+        warn("Invalid race provided")
+        return
     end
 
     playerModel:AttachToPlayer(player, "nameplate")

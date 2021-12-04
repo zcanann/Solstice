@@ -44,17 +44,15 @@ Objects {
   }
 }
 Objects {
-  Id: 6574011873009460602
-  Name: "CameraColonist"
+  Id: 2033215230845879164
+  Name: "SpawnPointVanara"
   Transform {
     Location {
-      X: -24646
-      Y: -26835
-      Z: 1954
+      X: -40750
+      Z: 125
     }
     Rotation {
-      Pitch: -20
-      Yaw: -55
+      Yaw: 3.74998975
     }
     Scale {
       X: 1
@@ -63,8 +61,7 @@ Objects {
     }
   }
   ParentId: 2654916338316290302
-  UnregisteredParameters {
-  }
+  ChildIds: 3785637843159838533
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -74,37 +71,28 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Camera {
-    InitialDistance: 600
-    MinDistance: 600
-    MaxDistance: 600
-    PositionOffset {
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:alwaysvisible"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+    PlayerScaleMultiplier: 1
+    SpawnEffectsTemplate {
+      Id: 841534158063459245
     }
-    RotationOffset {
-      Pitch: 10
-    }
-    FieldOfView: 90
-    ViewWidth: 1200
-    RotationMode {
-      Value: "mc:erotationmode:default"
-    }
-    MinPitch: -89
-    MaxPitch: 89
-    UseAsAudioListener: true
   }
 }
 Objects {
   Id: 3785637843159838533
-  Name: "CameraIthkuil"
+  Name: "CameraVanara"
   Transform {
     Location {
-      X: -12580.6191
-      Y: -3621.92896
-      Z: 670
+      Z: 54
     }
     Rotation {
-      Pitch: -20
-      Yaw: 58.749855
+      Pitch: -20.0000019
+      Yaw: 167.499664
+      Roll: 1.3628503e-06
     }
     Scale {
       X: 1
@@ -112,7 +100,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2654916338316290302
+  ParentId: 2033215230845879164
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -146,7 +134,7 @@ Objects {
 }
 Objects {
   Id: 14024615332737507217
-  Name: "SpawnPointColonist"
+  Name: "SpawnPointAscendent"
   Transform {
     Location {
       X: -24650
@@ -163,6 +151,7 @@ Objects {
     }
   }
   ParentId: 2654916338316290302
+  ChildIds: 6574011873009460602
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -181,12 +170,60 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
-    ShouldDecrowdPlayers: true
   }
 }
 Objects {
-  Id: 2033215230845879164
-  Name: "SpawnPointIthkuil"
+  Id: 6574011873009460602
+  Name: "CameraAscendent"
+  Transform {
+    Location {
+      Z: 54
+    }
+    Rotation {
+      Pitch: -19.9999886
+      Yaw: 168.750046
+      Roll: -6.81425149e-07
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14024615332737507217
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Camera {
+    InitialDistance: 600
+    MinDistance: 600
+    MaxDistance: 600
+    PositionOffset {
+    }
+    RotationOffset {
+      Pitch: 10
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:default"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    UseAsAudioListener: true
+  }
+}
+Objects {
+  Id: 17292675452936151906
+  Name: "SpawnPointHuman"
   Transform {
     Location {
       X: -12574.7539
@@ -203,6 +240,7 @@ Objects {
     }
   }
   ParentId: 2654916338316290302
+  ChildIds: 17661473445715384497
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -221,7 +259,326 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
-    ShouldDecrowdPlayers: true
+  }
+}
+Objects {
+  Id: 17661473445715384497
+  Name: "CameraHuman"
+  Transform {
+    Location {
+      Z: 54
+    }
+    Rotation {
+      Pitch: -20.0000019
+      Yaw: 167.499664
+      Roll: 1.3628503e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17292675452936151906
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Camera {
+    UseAsDefault: true
+    InitialDistance: 600
+    MinDistance: 600
+    MaxDistance: 600
+    PositionOffset {
+    }
+    RotationOffset {
+      Pitch: 10
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:default"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    UseAsAudioListener: true
+  }
+}
+Objects {
+  Id: 5504317759731691145
+  Name: "SpawnPointUndead"
+  Transform {
+    Location {
+      X: -33025
+      Y: -25125
+      Z: 100
+    }
+    Rotation {
+      Yaw: 48.750042
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2654916338316290302
+  ChildIds: 17842537656311257442
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:alwaysvisible"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+    PlayerScaleMultiplier: 1
+    SpawnEffectsTemplate {
+      Id: 841534158063459245
+    }
+  }
+}
+Objects {
+  Id: 17842537656311257442
+  Name: "CameraUndead"
+  Transform {
+    Location {
+      Z: 54
+    }
+    Rotation {
+      Pitch: -20.0000019
+      Yaw: 167.499664
+      Roll: 1.3628503e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5504317759731691145
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Camera {
+    UseAsDefault: true
+    InitialDistance: 600
+    MinDistance: 600
+    MaxDistance: 600
+    PositionOffset {
+    }
+    RotationOffset {
+      Pitch: 10
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:default"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    UseAsAudioListener: true
+  }
+}
+Objects {
+  Id: 15097237594246849961
+  Name: "SpawnPointDarkElf"
+  Transform {
+    Location {
+      X: -29975
+      Y: 19075
+      Z: 125
+    }
+    Rotation {
+      Yaw: -41.2499695
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2654916338316290302
+  ChildIds: 4204365656750963011
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:alwaysvisible"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+    PlayerScaleMultiplier: 1
+    SpawnEffectsTemplate {
+      Id: 841534158063459245
+    }
+  }
+}
+Objects {
+  Id: 4204365656750963011
+  Name: "CameraDarkElf"
+  Transform {
+    Location {
+      Z: 54
+    }
+    Rotation {
+      Pitch: -20.0000019
+      Yaw: 167.499664
+      Roll: 1.3628503e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15097237594246849961
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Camera {
+    UseAsDefault: true
+    InitialDistance: 600
+    MinDistance: 600
+    MaxDistance: 600
+    PositionOffset {
+    }
+    RotationOffset {
+      Pitch: 10
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:default"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    UseAsAudioListener: true
+  }
+}
+Objects {
+  Id: 3625622293708889024
+  Name: "SpawnPointOrc"
+  Transform {
+    Location {
+      X: 18500
+      Y: -45275
+      Z: 225
+    }
+    Rotation {
+      Yaw: 161.250107
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2654916338316290302
+  ChildIds: 1333719890946758618
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:alwaysvisible"
+  }
+  PlayerSpawnPoint {
+    TeamInt: 1
+    PlayerScaleMultiplier: 1
+    SpawnEffectsTemplate {
+      Id: 841534158063459245
+    }
+  }
+}
+Objects {
+  Id: 1333719890946758618
+  Name: "CameraOrc"
+  Transform {
+    Location {
+      Z: 54
+    }
+    Rotation {
+      Pitch: -20.0000019
+      Yaw: 167.499664
+      Roll: 1.3628503e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3625622293708889024
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Camera {
+    UseAsDefault: true
+    InitialDistance: 600
+    MinDistance: 600
+    MaxDistance: 600
+    PositionOffset {
+    }
+    RotationOffset {
+      Pitch: 10
+    }
+    FieldOfView: 90
+    ViewWidth: 1200
+    RotationMode {
+      Value: "mc:erotationmode:default"
+    }
+    MinPitch: -89
+    MaxPitch: 89
+    UseAsAudioListener: true
   }
 }
 Objects {
@@ -327,7 +684,6 @@ Objects {
       MaxAcceleration: 1800
       WalkableFloorAngle: 50
       GroundFriction: 8
-      GravityScale: 1.9
       MaxSwimSpeed: 420
       Buoyancy: 1
       TouchForceFactor: 1

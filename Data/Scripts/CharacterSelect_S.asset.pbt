@@ -11,19 +11,39 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:SpawnPointIthkuil"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:SpawnPointColonist"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:CharacterNameValidator"
         AssetReference {
           Id: 1440846473950342765
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointOrc"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointDarkElf"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointUndead"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointHuman"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointAscendent"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:SpawnPointVanara"
+        ObjectReference {
         }
       }
     }

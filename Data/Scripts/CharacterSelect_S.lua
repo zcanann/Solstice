@@ -1,7 +1,11 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propSpawnPointIthkuil = script:GetCustomProperty("SpawnPointIthkuil"):WaitForObject()
-local propSpawnPointColonist = script:GetCustomProperty("SpawnPointColonist"):WaitForObject()
+local propSpawnPointOrc = script:GetCustomProperty("SpawnPointOrc"):WaitForObject()
+local propSpawnPointDarkElf = script:GetCustomProperty("SpawnPointDarkElf"):WaitForObject()
+local propSpawnPointUndead = script:GetCustomProperty("SpawnPointUndead"):WaitForObject()
+local propSpawnPointHuman = script:GetCustomProperty("SpawnPointHuman"):WaitForObject()
+local propSpawnPointAscendent = script:GetCustomProperty("SpawnPointAscendent"):WaitForObject()
+local propSpawnPointVanara = script:GetCustomProperty("SpawnPointVanara"):WaitForObject()
 
 function LoadCharacters(player)
     local lastLoggedInCharacterId = Framework.Storage.GetGlobalKey(player, Framework.Storage.KeyLastSelectedCharacterId)
@@ -61,18 +65,24 @@ function OnRequestDeleteCharacter(player, characterId)
 end
 
 function OnRequestSetActiveRace(player, newActiveRace)
-    if newActiveRace == Framework.Storage.Keys.Races.ORC or
-        newActiveRace == Framework.Storage.Keys.Races.UNDEAD or
-        newActiveRace == Framework.Storage.Keys.Races.DARK_ELF then
-        player:Spawn({position = propSpawnPointIthkuil:GetWorldPosition(), rotation = propSpawnPointIthkuil:GetRotation()})
-    elseif newActiveRace == Framework.Storage.Keys.Races.HUMAN or
-        newActiveRace == Framework.Storage.Keys.Races.TRANSCENDENT or
-        newActiveRace == Framework.Storage.Keys.Races.VANARA then
-        player:Spawn({position = propSpawnPointColonist:GetWorldPosition(), rotation = propSpawnPointColonist:GetRotation()})
+    if newActiveRace == Framework.Storage.Keys.Races.ORC then
+        player:Spawn({position = propSpawnPointOrc:GetWorldPosition(), rotation = propSpawnPointOrc:GetRotation()})
+    elseif newActiveRace == Framework.Storage.Keys.Races.UNDEAD then
+        player:Spawn({position = propSpawnPointUndead:GetWorldPosition(), rotation = propSpawnPointUndead:GetRotation()})
+    elseif newActiveRace == Framework.Storage.Keys.Races.DARK_ELF then
+        player:Spawn({position = propSpawnPointDarkElf:GetWorldPosition(), rotation = propSpawnPointDarkElf:GetRotation()})
+    elseif newActiveRace == Framework.Storage.Keys.Races.HUMAN then
+        player:Spawn({position = propSpawnPointHuman:GetWorldPosition(), rotation = propSpawnPointHuman:GetRotation()})
+    elseif newActiveRace == Framework.Storage.Keys.Races.ASCENDENT then
+        player:Spawn({position = propSpawnPointAscendent:GetWorldPosition(), rotation = propSpawnPointAscendent:GetRotation()})
+    elseif newActiveRace == Framework.Storage.Keys.Races.VANARA then
+        player:Spawn({position = propSpawnPointVanara:GetWorldPosition(), rotation = propSpawnPointVanara:GetRotation()})
     else
         warn("Attempted to set invalid race")
         return;
     end
+
+    Framework.Print(newActiveRace)
 
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE, newActiveRace)
     Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_RACE_SUCCESS, player, { newActiveRace })

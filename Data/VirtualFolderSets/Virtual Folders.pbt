@@ -419,7 +419,7 @@ Assets {
     Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "CharacterModels"
-      VirtualFolderPath: "Transcendents"
+      VirtualFolderPath: "Ascendents"
       PlatformAssetType: 5
     }
   }

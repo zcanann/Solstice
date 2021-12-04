@@ -17,6 +17,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:CharacterNameValidator"
+        AssetReference {
+          Id: 1440846473950342765
+        }
+      }
+      Overrides {
         Name: "cs:CharacterEntriesRoot"
         ObjectReference {
         }
@@ -62,16 +68,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:CameraIthkuil"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:CameraColonist"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:CharacterNameTextBox"
         ObjectReference {
         }
@@ -82,9 +78,33 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:CharacterNameValidator"
-        AssetReference {
-          Id: 1440846473950342765
+        Name: "cs:CameraOrc"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:CameraDarkElf"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:CameraUndead"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:CameraHuman"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:CameraAscendent"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:CameraVanara"
+        ObjectReference {
         }
       }
     }

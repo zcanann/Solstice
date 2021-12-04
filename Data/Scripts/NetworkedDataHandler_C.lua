@@ -96,6 +96,7 @@ Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_R
 if Environment.IsPreview() then
     -- Needs a delay for preview mode, in order for the server to have a listener ready
     Task.Spawn(function ()
+        Task.Wait()
         Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA)
     end)
 else

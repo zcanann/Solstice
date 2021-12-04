@@ -34,6 +34,9 @@ function GetProximityData(key)
 end
 
 function OnPlayerEnteredRange(player)
+    if playersInRange[player] then
+        return
+    end
     playersInRange[player] = true
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
         propProximityNetworkedObject.id,
@@ -44,6 +47,9 @@ function OnPlayerEnteredRange(player)
 end
 
 function OnPlayerLeftRange(player)
+    if not playersInRange[player] then
+        return
+    end
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
         propProximityNetworkedObject.id,
         function (proximityNetworkedObjectId)

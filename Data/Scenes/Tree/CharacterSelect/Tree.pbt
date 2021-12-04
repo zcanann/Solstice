@@ -49,15 +49,39 @@ Objects {
   ParentId: 4738139620739167810
   UnregisteredParameters {
     Overrides {
-      Name: "cs:SpawnPointIthkuil"
+      Name: "cs:SpawnPointDarkElf"
       ObjectReference {
-        SelfId: 2033215230845879164
+        SelfId: 15097237594246849961
       }
     }
     Overrides {
-      Name: "cs:SpawnPointColonist"
+      Name: "cs:SpawnPointOrc"
+      ObjectReference {
+        SelfId: 3625622293708889024
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPointUndead"
+      ObjectReference {
+        SelfId: 5504317759731691145
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPointHuman"
+      ObjectReference {
+        SelfId: 17292675452936151906
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPointAscendent"
       ObjectReference {
         SelfId: 14024615332737507217
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPointVanara"
+      ObjectReference {
+        SelfId: 2033215230845879164
       }
     }
   }
@@ -169,24 +193,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ChangeFactionIthkuilButton"
-      ObjectReference {
-        SelfId: 12421013910225517787
-      }
-    }
-    Overrides {
-      Name: "cs:CameraIthkuil"
-      ObjectReference {
-        SelfId: 3785637843159838533
-      }
-    }
-    Overrides {
-      Name: "cs:CameraColonist"
-      ObjectReference {
-        SelfId: 6574011873009460602
-      }
-    }
-    Overrides {
       Name: "cs:NewCharacterScreenIthkuil"
       ObjectReference {
         SelfId: 9236217334296286072
@@ -208,6 +214,42 @@ Objects {
       Name: "cs:EnterWorldButton"
       ObjectReference {
         SelfId: 10213111332676198809
+      }
+    }
+    Overrides {
+      Name: "cs:CameraVanara"
+      ObjectReference {
+        SelfId: 3785637843159838533
+      }
+    }
+    Overrides {
+      Name: "cs:CameraAscendent"
+      ObjectReference {
+        SelfId: 6574011873009460602
+      }
+    }
+    Overrides {
+      Name: "cs:CameraOrc"
+      ObjectReference {
+        SelfId: 1333719890946758618
+      }
+    }
+    Overrides {
+      Name: "cs:CameraHuman"
+      ObjectReference {
+        SelfId: 17661473445715384497
+      }
+    }
+    Overrides {
+      Name: "cs:CameraDarkElf"
+      ObjectReference {
+        SelfId: 4204365656750963011
+      }
+    }
+    Overrides {
+      Name: "cs:CameraUndead"
+      ObjectReference {
+        SelfId: 17842537656311257442
       }
     }
   }

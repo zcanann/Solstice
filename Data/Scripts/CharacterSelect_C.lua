@@ -13,8 +13,12 @@ local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewChar
 local propDeleteCharacterButton = script:GetCustomProperty("DeleteCharacterButton"):WaitForObject()
 local propEnterWorldButton = script:GetCustomProperty("EnterWorldButton"):WaitForObject()
 
-local propCameraIthkuil = script:GetCustomProperty("CameraIthkuil"):WaitForObject()
-local propCameraColonist = script:GetCustomProperty("CameraColonist"):WaitForObject()
+local propCameraOrc = script:GetCustomProperty("CameraOrc"):WaitForObject()
+local propCameraDarkElf = script:GetCustomProperty("CameraDarkElf"):WaitForObject()
+local propCameraUndead = script:GetCustomProperty("CameraUndead"):WaitForObject()
+local propCameraHuman = script:GetCustomProperty("CameraHuman"):WaitForObject()
+local propCameraAscendent = script:GetCustomProperty("CameraAscendent"):WaitForObject()
+local propCameraVanara = script:GetCustomProperty("CameraVanara"):WaitForObject()
 
 local propCharacterNameTextBox = script:GetCustomProperty("CharacterNameTextBox"):WaitForObject()
 
@@ -72,6 +76,7 @@ end
 
 function RequestSetActiveRace(newActiveRace)
     if activeRace ~= newActiveRace then
+        Framework.Print(newActiveRace)
         activeRace = newActiveRace
         Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, { newActiveRace })
     end
@@ -79,14 +84,28 @@ end
 
 function OnSetActiveRaceSuccess(newActiveRace)
     activeRace = newActiveRace
-    if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, activeRace) then
-        localPlayer:SetOverrideCamera(propCameraIthkuil)
-        propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
-    elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, activeRace) then
-        localPlayer:SetOverrideCamera(propCameraColonist)
+
+    if activeRace == Framework.Storage.Keys.Races.ORC then
+        localPlayer:SetOverrideCamera(propCameraOrc)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
+    elseif activeRace == Framework.Storage.Keys.Races.UNDEAD then
+        localPlayer:SetOverrideCamera(propCameraUndead)
+        propSunlight:SetRotation(Rotation.New(0.0, -150.0, 20.0))
+    elseif activeRace == Framework.Storage.Keys.Races.DARK_ELF then
+        localPlayer:SetOverrideCamera(propCameraDarkElf)
+        propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
+    elseif activeRace == Framework.Storage.Keys.Races.HUMAN then
+        localPlayer:SetOverrideCamera(propCameraHuman)
+        propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
+    elseif activeRace == Framework.Storage.Keys.Races.ASCENDENT then
+        localPlayer:SetOverrideCamera(propCameraAscendent)
+        propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
+    elseif activeRace == Framework.Storage.Keys.Races.VANARA then
+        localPlayer:SetOverrideCamera(propCameraVanara)
+        propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
     else
-        warn("Invalid active race set")
+        warn("Attempted to set invalid race")
+        return;
     end
 end
 

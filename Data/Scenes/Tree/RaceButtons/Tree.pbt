@@ -205,7 +205,7 @@ Objects {
       value {
         Overrides {
           Name: "cs:RaceKey"
-          String: "transcendent"
+          String: "ascendent"
         }
       }
     }
@@ -236,7 +236,7 @@ Objects {
       value {
         Overrides {
           Name: "Label"
-          String: "Transcendent"
+          String: "Ascendent"
         }
       }
     }
