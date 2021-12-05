@@ -26,6 +26,23 @@ Framework.DumpStackTrace = function (object)
     Framework.Dump(CoreDebug.GetStackTrace())
 end
 
+Framework.Await = function(predicate, callback, maxTicks)
+    if predicate() then
+        callback()
+    else
+        local task = nil
+
+        task = Task.Spawn(function ()
+            if predicate() then
+                callback()
+                task:Cancel()
+            end
+        end)
+
+        task.repeatCount = maxTicks or 4096
+    end
+end
+
 Framework.AwaitOnce = function(predicate, callback)
     if predicate() then
         callback()

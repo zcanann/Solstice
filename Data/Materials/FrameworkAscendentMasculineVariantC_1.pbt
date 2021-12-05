@@ -1,6 +1,6 @@
 Assets {
   Id: 9889775764180899101
-  Name: "FrameworkReplicantMasculineVariantC"
+  Name: "FrameworkAscendentMasculineVariantC"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"

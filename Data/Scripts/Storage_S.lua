@@ -30,7 +30,7 @@ function OnPlayerJoined(player)
 	end
 
 	-- Load data from Storage into proximity replicated data
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GUILD,
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GUILD,
 		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.GUILD))
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CLASS,
 		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.CLASS))

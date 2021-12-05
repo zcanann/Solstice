@@ -38,7 +38,8 @@ Objects {
   Transform {
     Location {
       X: -40750
-      Z: 125
+      Y: -35
+      Z: 230
     }
     Rotation {
       Yaw: 3.74998975
@@ -128,7 +129,7 @@ Objects {
     Location {
       X: -24650
       Y: -26840
-      Z: 1900
+      Z: 1885
     }
     Rotation {
       Yaw: 136.249924
@@ -216,7 +217,7 @@ Objects {
     Location {
       X: -12574.7539
       Y: -3624.49854
-      Z: 620
+      Z: 605
     }
     Rotation {
       Yaw: -108.749832
@@ -305,8 +306,8 @@ Objects {
   Transform {
     Location {
       X: -33025
-      Y: -25125
-      Z: 100
+      Y: -25245
+      Z: 120
     }
     Rotation {
       Yaw: 48.750042
@@ -396,7 +397,7 @@ Objects {
     Location {
       X: -29975
       Y: 19075
-      Z: 125
+      Z: 220
     }
     Rotation {
       Yaw: -41.2499695
@@ -484,9 +485,9 @@ Objects {
   Name: "SpawnPointOrc"
   Transform {
     Location {
-      X: 18500
-      Y: -45275
-      Z: 225
+      X: 18425
+      Y: -45220
+      Z: 230
     }
     Rotation {
       Yaw: 161.250107
@@ -672,6 +673,7 @@ Objects {
       MaxAcceleration: 1800
       WalkableFloorAngle: 50
       GroundFriction: 8
+      GravityScale: 1.9
       MaxSwimSpeed: 420
       Buoyancy: 1
       TouchForceFactor: 1

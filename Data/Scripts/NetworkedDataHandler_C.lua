@@ -47,6 +47,8 @@ function SendProximityDataEvents(proximityObjectId, dataKey, data)
     local keyIsObject = string.match(proximityObjectId, '.+:.+') ~= nil
     local keyAsPlayer = Game.FindPlayer(proximityObjectId)
 
+    Framework.Dump(keyAsPlayer)
+
     if not keyIsObject and not keyAsPlayer then
         Framework.Warn("Not a proxy object: " .. proximityObjectId)
         Framework.DumpStackTrace()
@@ -96,7 +98,6 @@ Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_R
 if Environment.IsPreview() then
     -- Needs a delay for preview mode, in order for the server to have a listener ready
     Task.Spawn(function ()
-        Task.Wait()
         Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA)
     end)
 else

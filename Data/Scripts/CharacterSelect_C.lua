@@ -81,7 +81,7 @@ function UpdateCameraFromRace(race)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
     elseif race == Framework.Storage.Keys.Races.UNDEAD then
         localPlayer:SetOverrideCamera(propCameraUndead)
-        propSunlight:SetRotation(Rotation.New(0.0, -150.0, 20.0))
+        propSunlight:SetRotation(Rotation.New(0.0, -130.0, 20.0))
     elseif race == Framework.Storage.Keys.Races.DARK_ELF then
         localPlayer:SetOverrideCamera(propCameraDarkElf)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
@@ -243,5 +243,5 @@ propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPresse
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
 propEnterWorldButton.clickedEvent:Connect(OnEnterWorldButtonPressed)
 
-Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_INITIAL_PLAYER_DATA_LOADED, OnCharactersLoaded)
+Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_CLIENT_INITIAL_PLAYER_DATA_LOADED, OnCharactersLoaded)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_CHARACTER_SELECT_STATE, OnCharacterSelectStateChanged)

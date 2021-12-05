@@ -137,10 +137,6 @@ function SendCharacterSelectStateData(player)
     })
 end
 
-function OnPlayerJoined(player)
-    LoadInitialState(player)
-end
-
 function OnPlayerLeft(player)
     characterSelectScreenStates[player] = nil
 end
@@ -161,10 +157,14 @@ function ChatCommandHandler(player, params)
     end
 end
 
+function OnPlayerReadyToReceiveProximityData(player)
+    LoadInitialState(player)
+end
+
 Chat.receiveMessageHook:Connect(ChatCommandHandler)
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
 Game.playerLeftEvent:Connect(OnPlayerLeft)
 
+Framework.Events.ListenForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER, OnBeginCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER, OnFinalizeCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)

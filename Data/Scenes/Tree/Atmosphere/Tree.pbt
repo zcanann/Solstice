@@ -1,6 +1,929 @@
 Name: "Atmosphere"
 RootId: 807049152915355110
 Objects {
+  Id: 17752220490444446393
+  Name: "StormyWeather"
+  Transform {
+    Location {
+      X: -30016.6973
+      Y: 29599.498
+      Z: 360
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 807049152915355110
+  ChildIds: 12447374599294051396
+  ChildIds: 11336989475286643465
+  ChildIds: 1469252416675659203
+  ChildIds: 13534217976207276918
+  ChildIds: 8882053199182383857
+  ChildIds: 3347685447569673509
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 3347685447569673509
+  Name: "Ambient Nature Rain Big Drops 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.99999994
+    }
+  }
+  ParentId: 17752220490444446393
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16721017574548411792
+    }
+    AutoPlay: true
+    Volume: 1
+    Falloff: 3200
+    Radius: 3200
+    EnableOcclusion: true
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 8882053199182383857
+  Name: "Ambience Nature Wind and Trees Set 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.99999994
+    }
+  }
+  ParentId: 17752220490444446393
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 9875985295117749919
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      AutoPlay: true
+      Volume: 1
+      Falloff: 3200
+      Radius: 3200
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 13534217976207276918
+  Name: "Rain Volume VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 100
+      Y: 100
+      Z: 15
+    }
+  }
+  ParentId: 17752220490444446393
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 96
+    }
+    Overrides {
+      Name: "bp:Volume Type"
+      Enum {
+        Value: "mc:evfxvolumetype:0"
+      }
+    }
+    Overrides {
+      Name: "bp:Velocity"
+      Vector {
+        X: 3
+        Z: -24
+      }
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3481943897843322681
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:medium"
+  }
+}
+Objects {
+  Id: 1469252416675659203
+  Name: "Lightning VFX With Sound"
+  Transform {
+    Location {
+      X: -5400
+      Y: -5000
+      Z: 3400
+    }
+    Rotation {
+      Pitch: -90
+    }
+    Scale {
+      X: 8
+      Y: 8
+      Z: 8
+    }
+  }
+  ParentId: 17752220490444446393
+  ChildIds: 16325525439517808251
+  ChildIds: 11723537916539766720
+  ChildIds: 11837096446449265666
+  ChildIds: 8507766060559995476
+  ChildIds: 11108204400558207469
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Lightning Shape"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Loop"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Flash Value"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Lightning Style"
+      Int: 3
+    }
+    Overrides {
+      Name: "bp:Randomize Shape"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Scale Low"
+      Float: 0.565153658
+    }
+    Overrides {
+      Name: "bp:Scale High"
+      Float: 1.2263515
+    }
+    Overrides {
+      Name: "bp:Jitter Speed"
+      Float: 0.680177212
+    }
+    Overrides {
+      Name: "bp:Erosion Speed"
+      Float: 0.162573099
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+    Overrides {
+      Name: "bp:Secondary Flash Brightness"
+      Float: 40
+    }
+    Overrides {
+      Name: "bp:Flash Duration"
+      Float: 0.0591980964
+    }
+    Overrides {
+      Name: "bp:Onset Duration"
+      Float: 0.203181177
+    }
+    Overrides {
+      Name: "bp:Fade Value"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Randomize Rotation On Play"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Rotation High"
+      Rotator {
+      }
+    }
+    Overrides {
+      Name: "bp:Randomize Scale on Play"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4061523298365537124
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:high"
+  }
+}
+Objects {
+  Id: 11108204400558207469
+  Name: "SFXFar4"
+  Transform {
+    Location {
+      X: 436.751465
+      Y: 564.625
+      Z: -2224.98755
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 1469252416675659203
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 8507766060559995476
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 11837096446449265666
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 11723537916539766720
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 16325525439517808251
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1.30106866
+      Falloff: 3600
+      Radius: 20000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 8507766060559995476
+  Name: "SFXFar3"
+  Transform {
+    Location {
+      X: 401.88916
+      Y: 1324.99988
+      Z: 1252.91565
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 1469252416675659203
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "bp:Start Delay Min (Seconds)"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 8507766060559995476
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 11837096446449265666
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 11723537916539766720
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 16325525439517808251
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.410566419
+      Falloff: 3600
+      Radius: 15000
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 11837096446449265666
+  Name: "SFXFar2"
+  Transform {
+    Location {
+      X: 344.544891
+      Y: -1368.74988
+      Z: -97.3416748
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 1469252416675659203
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "bp:Start Delay Min (Seconds)"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 8507766060559995476
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 11837096446449265666
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 11723537916539766720
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 16325525439517808251
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.722242236
+      Falloff: 3600
+      Radius: 15000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 11723537916539766720
+  Name: "SFXFar1"
+  Transform {
+    Location {
+      X: 892.967529
+      Y: -457.11731
+      Z: -2099.89966
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 1469252416675659203
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 8507766060559995476
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 11837096446449265666
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 11723537916539766720
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 16325525439517808251
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1.81310749
+      Falloff: 3600
+      Radius: 20000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 16325525439517808251
+  Name: "SFXClose"
+  Transform {
+    Location {
+      X: 308.47934
+      Z: 96.8867
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 1469252416675659203
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:27"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 8507766060559995476
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 11837096446449265666
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 11723537916539766720
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 16325525439517808251
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 3
+      Falloff: 15000
+      Radius: 4000
+      FadeOutTime: 1
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 11336989475286643465
+  Name: "LightningLight"
+  Transform {
+    Location {
+      Z: 1500
+    }
+    Rotation {
+      Pitch: -90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17752220490444446393
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Light {
+    Intensity: 2000
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    CastShadows: true
+    VolumetricIntensity: 5
+    TeamSettings {
+    }
+    Light {
+      Temperature: 6500
+      LocalLight {
+        AttenuationRadius: 6000
+        AreaLight {
+          BarnDoorAngle: 90
+          BarnDoorLength: 4000
+          SourceWidth: 5000
+          SourceHeight: 5000
+        }
+      }
+      MaxDrawDistance: 5000
+      MaxDistanceFadeRange: 1000
+    }
+  }
+}
+Objects {
+  Id: 12447374599294051396
+  Name: "StormyWeatherController"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17752220490444446393
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFXFar1"
+      ObjectReference {
+        SelfId: 11723537916539766720
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar2"
+      ObjectReference {
+        SelfId: 11837096446449265666
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar3"
+      ObjectReference {
+        SelfId: 8507766060559995476
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar4"
+      ObjectReference {
+        SelfId: 11108204400558207469
+      }
+    }
+    Overrides {
+      Name: "cs:SFXClose"
+      ObjectReference {
+        SelfId: 16325525439517808251
+      }
+    }
+    Overrides {
+      Name: "cs:LightningVFX"
+      ObjectReference {
+        SelfId: 1469252416675659203
+      }
+    }
+    Overrides {
+      Name: "cs:RainVolume"
+      ObjectReference {
+        SelfId: 13534217976207276918
+      }
+    }
+    Overrides {
+      Name: "cs:LightningLight"
+      ObjectReference {
+        SelfId: 11336989475286643465
+      }
+    }
+    Overrides {
+      Name: "cs:LightningSkybox"
+      ObjectReference {
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11968576244738891005
+    }
+  }
+}
+Objects {
   Id: 17667724210395317465
   Name: "Group"
   Transform {
@@ -574,13 +1497,1859 @@ Objects {
   }
 }
 Objects {
+  Id: 1822451023865682557
+  Name: "StormyWeather"
+  Transform {
+    Location {
+      X: -42000.0234
+      Y: 5598.19482
+      Z: 61
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 807049152915355110
+  ChildIds: 6239481929078632039
+  ChildIds: 9598176937797326219
+  ChildIds: 4494701685593231695
+  ChildIds: 8699587718442320848
+  ChildIds: 18056328886708906990
+  ChildIds: 14352323647624051021
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 14352323647624051021
+  Name: "Ambient Nature Rain Big Drops 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.99999994
+    }
+  }
+  ParentId: 1822451023865682557
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16721017574548411792
+    }
+    AutoPlay: true
+    Volume: 1
+    Falloff: 3200
+    Radius: 3200
+    EnableOcclusion: true
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 18056328886708906990
+  Name: "Ambience Nature Wind and Trees Set 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.99999994
+    }
+  }
+  ParentId: 1822451023865682557
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 9875985295117749919
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      AutoPlay: true
+      Volume: 1
+      Falloff: 3200
+      Radius: 3200
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 8699587718442320848
+  Name: "Rain Volume VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 100
+      Y: 100
+      Z: 15
+    }
+  }
+  ParentId: 1822451023865682557
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 96
+    }
+    Overrides {
+      Name: "bp:Volume Type"
+      Enum {
+        Value: "mc:evfxvolumetype:0"
+      }
+    }
+    Overrides {
+      Name: "bp:Velocity"
+      Vector {
+        X: 3
+        Z: -24
+      }
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3481943897843322681
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:medium"
+  }
+}
+Objects {
+  Id: 4494701685593231695
+  Name: "Lightning VFX With Sound"
+  Transform {
+    Location {
+      X: -5400
+      Y: -5000
+      Z: 3400
+    }
+    Rotation {
+      Pitch: -90
+    }
+    Scale {
+      X: 8
+      Y: 8
+      Z: 8
+    }
+  }
+  ParentId: 1822451023865682557
+  ChildIds: 4963640633682585391
+  ChildIds: 17171373820891862718
+  ChildIds: 2358005105494589424
+  ChildIds: 455663000707098580
+  ChildIds: 13014154521391435390
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Lightning Shape"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Loop"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Flash Value"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Lightning Style"
+      Int: 3
+    }
+    Overrides {
+      Name: "bp:Randomize Shape"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Scale Low"
+      Float: 0.565153658
+    }
+    Overrides {
+      Name: "bp:Scale High"
+      Float: 1.2263515
+    }
+    Overrides {
+      Name: "bp:Jitter Speed"
+      Float: 0.680177212
+    }
+    Overrides {
+      Name: "bp:Erosion Speed"
+      Float: 0.162573099
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+    Overrides {
+      Name: "bp:Secondary Flash Brightness"
+      Float: 40
+    }
+    Overrides {
+      Name: "bp:Flash Duration"
+      Float: 0.0591980964
+    }
+    Overrides {
+      Name: "bp:Onset Duration"
+      Float: 0.203181177
+    }
+    Overrides {
+      Name: "bp:Fade Value"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Randomize Rotation On Play"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Rotation High"
+      Rotator {
+      }
+    }
+    Overrides {
+      Name: "bp:Randomize Scale on Play"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4061523298365537124
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:high"
+  }
+}
+Objects {
+  Id: 13014154521391435390
+  Name: "SFXFar4"
+  Transform {
+    Location {
+      X: 436.751465
+      Y: 564.625
+      Z: -2224.98755
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4494701685593231695
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 455663000707098580
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 2358005105494589424
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 17171373820891862718
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 4963640633682585391
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1.30106866
+      Falloff: 3600
+      Radius: 20000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 455663000707098580
+  Name: "SFXFar3"
+  Transform {
+    Location {
+      X: 401.88916
+      Y: 1324.99988
+      Z: 1252.91565
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4494701685593231695
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "bp:Start Delay Min (Seconds)"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 455663000707098580
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 2358005105494589424
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 17171373820891862718
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 4963640633682585391
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.410566419
+      Falloff: 3600
+      Radius: 15000
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 2358005105494589424
+  Name: "SFXFar2"
+  Transform {
+    Location {
+      X: 344.544891
+      Y: -1368.74988
+      Z: -97.3416748
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4494701685593231695
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "bp:Start Delay Min (Seconds)"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 455663000707098580
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 2358005105494589424
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 17171373820891862718
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 4963640633682585391
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.722242236
+      Falloff: 3600
+      Radius: 15000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 17171373820891862718
+  Name: "SFXFar1"
+  Transform {
+    Location {
+      X: 892.967529
+      Y: -457.11731
+      Z: -2099.89966
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4494701685593231695
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 455663000707098580
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 2358005105494589424
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 17171373820891862718
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 4963640633682585391
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1.81310749
+      Falloff: 3600
+      Radius: 20000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 4963640633682585391
+  Name: "SFXClose"
+  Transform {
+    Location {
+      X: 308.47934
+      Z: 96.8867
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4494701685593231695
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:27"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 455663000707098580
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 2358005105494589424
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 17171373820891862718
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 4963640633682585391
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 3
+      Falloff: 15000
+      Radius: 4000
+      FadeOutTime: 1
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 9598176937797326219
+  Name: "LightningLight"
+  Transform {
+    Location {
+      Z: 1500
+    }
+    Rotation {
+      Pitch: -90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1822451023865682557
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Light {
+    Intensity: 2000
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    CastShadows: true
+    VolumetricIntensity: 5
+    TeamSettings {
+    }
+    Light {
+      Temperature: 6500
+      LocalLight {
+        AttenuationRadius: 6000
+        AreaLight {
+          BarnDoorAngle: 90
+          BarnDoorLength: 4000
+          SourceWidth: 5000
+          SourceHeight: 5000
+        }
+      }
+      MaxDrawDistance: 5000
+      MaxDistanceFadeRange: 1000
+    }
+  }
+}
+Objects {
+  Id: 6239481929078632039
+  Name: "StormyWeatherController"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1822451023865682557
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFXFar1"
+      ObjectReference {
+        SelfId: 17171373820891862718
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar2"
+      ObjectReference {
+        SelfId: 2358005105494589424
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar3"
+      ObjectReference {
+        SelfId: 455663000707098580
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar4"
+      ObjectReference {
+        SelfId: 13014154521391435390
+      }
+    }
+    Overrides {
+      Name: "cs:SFXClose"
+      ObjectReference {
+        SelfId: 4963640633682585391
+      }
+    }
+    Overrides {
+      Name: "cs:LightningVFX"
+      ObjectReference {
+        SelfId: 4494701685593231695
+      }
+    }
+    Overrides {
+      Name: "cs:RainVolume"
+      ObjectReference {
+        SelfId: 8699587718442320848
+      }
+    }
+    Overrides {
+      Name: "cs:LightningLight"
+      ObjectReference {
+        SelfId: 9598176937797326219
+      }
+    }
+    Overrides {
+      Name: "cs:LightningSkybox"
+      ObjectReference {
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11968576244738891005
+    }
+  }
+}
+Objects {
+  Id: 2598463239852365746
+  Name: "StormyWeather"
+  Transform {
+    Location {
+      X: -18318.3047
+      Y: -46987.2344
+      Z: 285
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 807049152915355110
+  ChildIds: 14796279000858062410
+  ChildIds: 18252696378587623477
+  ChildIds: 4317406420643735375
+  ChildIds: 17174217929081515582
+  ChildIds: 11773320262178638907
+  ChildIds: 15050540249686768562
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 15050540249686768562
+  Name: "Ambient Nature Rain Big Drops 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.99999994
+    }
+  }
+  ParentId: 2598463239852365746
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  AudioInstance {
+    AudioAsset {
+      Id: 16721017574548411792
+    }
+    AutoPlay: true
+    Volume: 1
+    Falloff: 3200
+    Radius: 3200
+    EnableOcclusion: true
+    IsSpatializationEnabled: true
+    IsAttenuationEnabled: true
+  }
+}
+Objects {
+  Id: 11773320262178638907
+  Name: "Ambience Nature Wind and Trees Set 01 SFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 0.99999994
+    }
+  }
+  ParentId: 2598463239852365746
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 9875985295117749919
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      AutoPlay: true
+      Volume: 1
+      Falloff: 3200
+      Radius: 3200
+      EnableOcclusion: true
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 17174217929081515582
+  Name: "Rain Volume VFX"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 100
+      Y: 100
+      Z: 15
+    }
+  }
+  ParentId: 2598463239852365746
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Density"
+      Float: 96
+    }
+    Overrides {
+      Name: "bp:Volume Type"
+      Enum {
+        Value: "mc:evfxvolumetype:0"
+      }
+    }
+    Overrides {
+      Name: "bp:Velocity"
+      Vector {
+        X: 3
+        Z: -24
+      }
+    }
+    Overrides {
+      Name: "bp:Life"
+      Float: 1
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 3481943897843322681
+    }
+    TeamSettings {
+    }
+    Vfx {
+      AutoPlay: true
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:medium"
+  }
+}
+Objects {
+  Id: 4317406420643735375
+  Name: "Lightning VFX With Sound"
+  Transform {
+    Location {
+      X: -5400
+      Y: -5000
+      Z: 3400
+    }
+    Rotation {
+      Pitch: -90
+    }
+    Scale {
+      X: 8
+      Y: 8
+      Z: 8
+    }
+  }
+  ParentId: 2598463239852365746
+  ChildIds: 1981594873589637165
+  ChildIds: 9553533166300469582
+  ChildIds: 4207937034520070276
+  ChildIds: 9265094754804847654
+  ChildIds: 18354704707275499104
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Lightning Shape"
+      Int: 1
+    }
+    Overrides {
+      Name: "bp:Loop"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Flash Value"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Lightning Style"
+      Int: 3
+    }
+    Overrides {
+      Name: "bp:Randomize Shape"
+      Bool: true
+    }
+    Overrides {
+      Name: "bp:Scale Low"
+      Float: 0.565153658
+    }
+    Overrides {
+      Name: "bp:Scale High"
+      Float: 1.2263515
+    }
+    Overrides {
+      Name: "bp:Jitter Speed"
+      Float: 0.680177212
+    }
+    Overrides {
+      Name: "bp:Erosion Speed"
+      Float: 0.162573099
+    }
+    Overrides {
+      Name: "bp:Emissive Boost"
+      Float: 20
+    }
+    Overrides {
+      Name: "bp:Secondary Flash Brightness"
+      Float: 40
+    }
+    Overrides {
+      Name: "bp:Flash Duration"
+      Float: 0.0591980964
+    }
+    Overrides {
+      Name: "bp:Onset Duration"
+      Float: 0.203181177
+    }
+    Overrides {
+      Name: "bp:Fade Value"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Randomize Rotation On Play"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Rotation High"
+      Rotator {
+      }
+    }
+    Overrides {
+      Name: "bp:Randomize Scale on Play"
+      Bool: true
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 4061523298365537124
+    }
+    TeamSettings {
+    }
+    Vfx {
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:high"
+  }
+}
+Objects {
+  Id: 18354704707275499104
+  Name: "SFXFar4"
+  Transform {
+    Location {
+      X: 436.751465
+      Y: 564.625
+      Z: -2224.98755
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4317406420643735375
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 9265094754804847654
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 4207937034520070276
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 9553533166300469582
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 1981594873589637165
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1.30106866
+      Falloff: 3600
+      Radius: 20000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 9265094754804847654
+  Name: "SFXFar3"
+  Transform {
+    Location {
+      X: 401.88916
+      Y: 1324.99988
+      Z: 1252.91565
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4317406420643735375
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "bp:Start Delay Min (Seconds)"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 9265094754804847654
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 4207937034520070276
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 9553533166300469582
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 1981594873589637165
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.410566419
+      Falloff: 3600
+      Radius: 15000
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 4207937034520070276
+  Name: "SFXFar2"
+  Transform {
+    Location {
+      X: 344.544891
+      Y: -1368.74988
+      Z: -97.3416748
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4317406420643735375
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "bp:Start Delay Min (Seconds)"
+      Float: 1
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 9265094754804847654
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 4207937034520070276
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 9553533166300469582
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 1981594873589637165
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 0.722242236
+      Falloff: 3600
+      Radius: 15000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 9553533166300469582
+  Name: "SFXFar1"
+  Transform {
+    Location {
+      X: 892.967529
+      Y: -457.11731
+      Z: -2099.89966
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4317406420643735375
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:23"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 9265094754804847654
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 4207937034520070276
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 9553533166300469582
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 1981594873589637165
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 1.81310749
+      Falloff: 3600
+      Radius: 20000
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 1981594873589637165
+  Name: "SFXClose"
+  Transform {
+    Location {
+      X: 308.47934
+      Z: 96.8867
+    }
+    Rotation {
+      Pitch: 84.9996948
+      Yaw: -179.999893
+      Roll: -179.999893
+    }
+    Scale {
+      X: 0.75
+      Y: 9.25000286
+      Z: 3.375
+    }
+  }
+  ParentId: 4317406420643735375
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Type"
+      Enum {
+        Value: "mc:esfx_thunder:27"
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_1"
+      ObjectReference {
+        SelfId: 9265094754804847654
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_2"
+      ObjectReference {
+        SelfId: 4207937034520070276
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_3"
+      ObjectReference {
+        SelfId: 9553533166300469582
+      }
+    }
+    Overrides {
+      Name: "cs:NatureThunderClapBoomSet01SFX_4"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:ThunderClose"
+      ObjectReference {
+        SelfId: 1981594873589637165
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11386117978447059772
+    }
+    TeamSettings {
+    }
+    AudioBP {
+      Volume: 3
+      Falloff: 15000
+      Radius: 4000
+      FadeOutTime: 1
+      IsSpatializationEnabled: true
+      IsAttenuationEnabled: true
+    }
+  }
+}
+Objects {
+  Id: 18252696378587623477
+  Name: "LightningLight"
+  Transform {
+    Location {
+      Z: 1500
+    }
+    Rotation {
+      Pitch: -90
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2598463239852365746
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Light {
+    Intensity: 2000
+    Color {
+      R: 1
+      G: 1
+      B: 1
+      A: 1
+    }
+    CastShadows: true
+    VolumetricIntensity: 5
+    TeamSettings {
+    }
+    Light {
+      Temperature: 6500
+      LocalLight {
+        AttenuationRadius: 6000
+        AreaLight {
+          BarnDoorAngle: 90
+          BarnDoorLength: 4000
+          SourceWidth: 5000
+          SourceHeight: 5000
+        }
+      }
+      MaxDrawDistance: 5000
+      MaxDistanceFadeRange: 1000
+    }
+  }
+}
+Objects {
+  Id: 14796279000858062410
+  Name: "StormyWeatherController"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2598463239852365746
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SFXFar1"
+      ObjectReference {
+        SelfId: 9553533166300469582
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar2"
+      ObjectReference {
+        SelfId: 4207937034520070276
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar3"
+      ObjectReference {
+        SelfId: 9265094754804847654
+      }
+    }
+    Overrides {
+      Name: "cs:SFXFar4"
+      ObjectReference {
+        SelfId: 18354704707275499104
+      }
+    }
+    Overrides {
+      Name: "cs:SFXClose"
+      ObjectReference {
+        SelfId: 1981594873589637165
+      }
+    }
+    Overrides {
+      Name: "cs:LightningVFX"
+      ObjectReference {
+        SelfId: 4317406420643735375
+      }
+    }
+    Overrides {
+      Name: "cs:RainVolume"
+      ObjectReference {
+        SelfId: 17174217929081515582
+      }
+    }
+    Overrides {
+      Name: "cs:LightningLight"
+      ObjectReference {
+        SelfId: 18252696378587623477
+      }
+    }
+    Overrides {
+      Name: "cs:LightningSkybox"
+      ObjectReference {
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 11968576244738891005
+    }
+  }
+}
+Objects {
   Id: 3247381971845202712
   Name: "StormyWeather"
   Transform {
     Location {
-      X: -11720.3018
-      Y: 6196.3667
-      Z: 998
+      X: -10660.3535
+      Y: 6511.03369
+      Z: 520
     }
     Rotation {
     }

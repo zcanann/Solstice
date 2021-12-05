@@ -13311,7 +13311,6 @@ Objects {
   ChildIds: 16024726280648043974
   ChildIds: 12161397237976812213
   ChildIds: 5263678068500145359
-  ChildIds: 10101920257344490038
   ChildIds: 2481170972904599923
   ChildIds: 6059202906343293466
   ChildIds: 12301080159900412344
@@ -13398,9 +13397,9 @@ Objects {
   Name: "Rock 02"
   Transform {
     Location {
-      X: -1916.80493
-      Y: -1225.20874
-      Z: 54.9361572
+      X: -1819.70703
+      Y: -1056.88037
+      Z: 18
     }
     Rotation {
       Pitch: -8.70733643
@@ -13408,9 +13407,9 @@ Objects {
       Roll: 12.475069
     }
     Scale {
-      X: 1
-      Y: 3.60000014
-      Z: 2.10000014
+      X: 0.7
+      Y: 2.60000014
+      Z: 1.5
     }
   }
   ParentId: 15790201798293230089
@@ -13830,9 +13829,9 @@ Objects {
   Name: "Rock 02"
   Transform {
     Location {
-      X: -792.904297
-      Y: -222.574066
-      Z: 141.491821
+      X: -792.904907
+      Y: -222.575317
+      Z: 75
     }
     Rotation {
       Pitch: -57.657959
@@ -14033,60 +14032,6 @@ Objects {
     }
     Rotation {
       Yaw: 103.226707
-    }
-    Scale {
-      X: 1.26008534
-      Y: 1.20492673
-      Z: 2.78994346
-    }
-  }
-  ParentId: 15790201798293230089
-  UnregisteredParameters {
-    Overrides {
-      Name: "ma:Nature_Grass:color"
-      Color {
-        R: 0.200000048
-        G: 0.0834437311
-        A: 1
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  CoreMesh {
-    MeshAsset {
-      Id: 15058761924089929943
-    }
-    Teams {
-      IsTeamCollisionEnabled: true
-      IsEnemyCollisionEnabled: true
-    }
-    DisableCastShadows: true
-    InteractWithTriggers: true
-    StaticMesh {
-      Physics {
-      }
-      BoundsScale: 1
-    }
-  }
-}
-Objects {
-  Id: 10101920257344490038
-  Name: "Grass Tall"
-  Transform {
-    Location {
-      X: -891.432068
-      Y: -271.405029
-    }
-    Rotation {
-      Yaw: 103.226692
     }
     Scale {
       X: 1.26008534
@@ -14997,7 +14942,8 @@ Objects {
   }
   ParentId: 15790201798293230089
   ChildIds: 6394226240058190465
-  ChildIds: 971480307331407830
+  ChildIds: 17265430709301486898
+  ChildIds: 8847252562465837458
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -15014,17 +14960,21 @@ Objects {
   }
 }
 Objects {
-  Id: 971480307331407830
+  Id: 8847252562465837458
   Name: "Fern 02"
   Transform {
     Location {
+      X: -284.880127
+      Y: 105.626633
+      Z: 4.03959656
     }
     Rotation {
+      Yaw: -84.9999695
     }
     Scale {
-      X: 0.996161699
-      Y: 0.996161699
-      Z: 0.996161699
+      X: 1
+      Y: 1
+      Z: 1
     }
   }
   ParentId: 2754774308080782833
@@ -15032,9 +14982,65 @@ Objects {
     Overrides {
       Name: "ma:Nature_Leaves:color"
       Color {
-        R: 5
-        G: 4
-        B: 1
+        R: 0.015625
+        G: 0.00310430489
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceon"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14134667170458327176
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    DisableDistanceFieldLighting: true
+    DisableCastShadows: true
+    DisableReceiveDecals: true
+    InteractWithTriggers: true
+    StaticMesh {
+      Physics {
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17265430709301486898
+  Name: "Fern 02"
+  Transform {
+    Location {
+      X: 35.5326958
+      Y: -89.3929
+      Z: 4.03959656
+    }
+    Rotation {
+      Yaw: -85
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2754774308080782833
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Nature_Leaves:color"
+      Color {
+        R: 0.015625
+        G: 0.00310430489
         A: 1
       }
     }
@@ -15072,6 +15078,8 @@ Objects {
   Name: "Fern 02"
   Transform {
     Location {
+      X: -44.1785927
+      Y: 175.603546
       Z: 4.03959656
     }
     Rotation {

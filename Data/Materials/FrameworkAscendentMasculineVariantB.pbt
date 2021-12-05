@@ -1,6 +1,6 @@
 Assets {
-  Id: 19410885183799782
-  Name: "FrameworkReplicantMasculineVariantC"
+  Id: 15681535859029345503
+  Name: "FrameworkAscendentMasculineVariantB"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"
@@ -29,7 +29,7 @@ Assets {
       }
       Overrides {
         Name: "u_tiles"
-        Float: 1.3
+        Float: 1
       }
     }
     Assets {

@@ -43,11 +43,11 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -640
+          Float: -48
         }
         Overrides {
           Name: "UIY"
-          Float: 128
+          Float: 72
         }
         Overrides {
           Name: "Scale"
@@ -172,7 +172,7 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -640
+          Float: -192
         }
         Overrides {
           Name: "UIY"
@@ -315,11 +315,11 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -640
+          Float: -48
         }
         Overrides {
           Name: "UIY"
-          Float: -128
+          Float: -72
         }
         Overrides {
           Name: "Anchor"
@@ -436,11 +436,11 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: 640
+          Float: 48
         }
         Overrides {
           Name: "UIY"
-          Float: 64
+          Float: 72
         }
         Overrides {
           Name: "Scale"
@@ -518,11 +518,7 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: 640
-        }
-        Overrides {
-          Name: "UIY"
-          Float: -64
+          Float: 192
         }
         Overrides {
           Name: "Scale"
@@ -531,6 +527,10 @@ Objects {
             Y: 1
             Z: 1
           }
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 0
         }
       }
     }
@@ -595,15 +595,6 @@ Objects {
           Rotator {
             Yaw: -125.000038
           }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 3706508022978875077
-      value {
-        Overrides {
-          Name: "cs:RaceKey"
-          String: "orc"
         }
       }
     }

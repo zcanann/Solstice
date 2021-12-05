@@ -16,7 +16,7 @@ function OnCharacterSelectStateChanged(state)
         propBorderSelected.visibility = Visibility.INHERIT
     else
         propBorder.visibility = Visibility.INHERIT
-        propBorder.visibility = Visibility.FORCE_OFF
+        propBorderSelected.visibility = Visibility.FORCE_OFF
     end
 end
 

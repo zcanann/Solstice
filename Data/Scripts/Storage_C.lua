@@ -14,7 +14,7 @@ function OnPrivateNetworkedDataChanged(player, key)
 
 	if not dataLoadedEventSent and characterDataLoaded and globalDataLoaded then
         dataLoadedEventSent = true
-		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Storage.EVENT_INITIAL_PLAYER_DATA_LOADED)
+		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Storage.EVENT_CLIENT_INITIAL_PLAYER_DATA_LOADED)
 	end
 end
 

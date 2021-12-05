@@ -21,44 +21,55 @@ Objects {
   ChildIds: 8729500933419566991
   ChildIds: 5250854901689189847
   ChildIds: 17435930762379839603
+  ChildIds: 16479159577220641451
   ChildIds: 18371167689229727921
   ChildIds: 8110563828106138299
   ChildIds: 17798366900404206124
   ChildIds: 985119534114562754
-  ChildIds: 12390497063096835920
-  ChildIds: 9342923501668939267
-  ChildIds: 15133949330285973010
-  ChildIds: 9316455102310507431
-  ChildIds: 10263672601307220440
-  ChildIds: 11700855058447145307
-  ChildIds: 1563348855017049914
-  ChildIds: 11474039947244322388
-  ChildIds: 8012318643305497587
-  ChildIds: 9138346863515015966
-  ChildIds: 8990012256897986242
-  ChildIds: 17437029564996549778
-  ChildIds: 3619237784346835430
-  ChildIds: 2083698256531118640
-  ChildIds: 7382330726580789388
-  ChildIds: 11210057656494337091
-  ChildIds: 17112204174338053369
-  ChildIds: 3008609492274983893
-  ChildIds: 358287118183845671
-  ChildIds: 5373161006358427193
-  ChildIds: 17271452918026942235
-  ChildIds: 13977700090302405935
-  ChildIds: 17102617602101563324
-  ChildIds: 13007780517000862060
-  ChildIds: 211315708492959835
-  ChildIds: 3926137620143104828
-  ChildIds: 13538047952077442996
-  ChildIds: 7641411567094510927
-  ChildIds: 16517507720178964548
-  ChildIds: 13489320122293609193
-  ChildIds: 4222402997854607656
-  ChildIds: 13530690849626901212
-  ChildIds: 18178097109339884903
-  ChildIds: 1720175243336597592
+  ChildIds: 2073809368899518713
+  ChildIds: 935690916523560710
+  ChildIds: 10672217843445025839
+  ChildIds: 5063169857513112826
+  ChildIds: 14086649273120145461
+  ChildIds: 6988700148678048842
+  ChildIds: 7657994601082739596
+  ChildIds: 13819248192806838818
+  ChildIds: 17029104147975612613
+  ChildIds: 10950450792897151385
+  ChildIds: 12917535124678071009
+  ChildIds: 5478327638057713361
+  ChildIds: 7370641250855223804
+  ChildIds: 11076365916333777417
+  ChildIds: 7275974697528415314
+  ChildIds: 14543280374675544081
+  ChildIds: 3005441865425960492
+  ChildIds: 6130741929969829654
+  ChildIds: 15914163327500750516
+  ChildIds: 11444891104895409238
+  ChildIds: 4340160606382254587
+  ChildIds: 9721852630374095162
+  ChildIds: 11201555046971932358
+  ChildIds: 6974703832069708854
+  ChildIds: 17350416598577470249
+  ChildIds: 13818670684071084071
+  ChildIds: 15653259780940515252
+  ChildIds: 5483444002355137604
+  ChildIds: 8329820082655132095
+  ChildIds: 13437809659680135293
+  ChildIds: 11220502259764810103
+  ChildIds: 3453805270990598406
+  ChildIds: 15900636454867096520
+  ChildIds: 452865317540844724
+  ChildIds: 11198150460364856739
+  ChildIds: 13340040461766343917
+  ChildIds: 7673093858642200399
+  ChildIds: 6010069329529172112
+  ChildIds: 12446383921301219439
+  ChildIds: 4128748201590661047
+  ChildIds: 2019925427795747885
+  ChildIds: 8361887129482091888
+  ChildIds: 9767007295777703311
+  ChildIds: 4808068622092371303
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -74,13 +85,12 @@ Objects {
   }
 }
 Objects {
-  Id: 1720175243336597592
-  Name: "Halloween Stump"
+  Id: 4808068622092371303
+  Name: "Tree Redwood Small"
   Transform {
     Location {
-      X: -32950
-      Y: -25825
-      Z: -75
+      X: -41535
+      Y: 2085
     }
     Rotation {
     }
@@ -91,53 +101,1997 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9767007295777703311
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -42530
+      Y: 665
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 8361887129482091888
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -42650
+      Y: -715
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2019925427795747885
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -41615
+      Y: 1180
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4128748201590661047
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -41540
+      Y: -1830
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 12446383921301219439
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -44000
+      Y: -2755
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6010069329529172112
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -45310
+      Y: -2170
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7673093858642200399
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -48275
+      Y: 5335
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13340040461766343917
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -53900
+      Y: -200
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11198150460364856739
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -50830
+      Y: 7360
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 452865317540844724
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -49160
+      Y: 10020
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15900636454867096520
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -53095
+      Y: 4475
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 3453805270990598406
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -43915
+      Y: -3130
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11220502259764810103
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -48735
+      Y: 6955
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13437809659680135293
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -46805
+      Y: 120
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 8329820082655132095
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -49205
+      Y: 860
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5483444002355137604
+  Name: "Tree Redwood Big"
+  Transform {
+    Location {
+      X: -46750
+      Y: 1500
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16389249627325813852
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15653259780940515252
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -44825
+      Y: 1565
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13818670684071084071
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -43655
+      Y: 3585
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17350416598577470249
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -44985
+      Y: -190
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6974703832069708854
+  Name: "Tree Redwood Big"
+  Transform {
+    Location {
+      X: -44135
+      Y: 4380
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16389249627325813852
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11201555046971932358
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -45865
+      Y: 3385
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 9721852630374095162
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -49545
+      Y: 5495
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 4340160606382254587
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -52665
+      Y: 2125
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11444891104895409238
+  Name: "Tree Birch Bare 02"
+  Transform {
+    Location {
+      X: -50725
+      Y: 1405
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8689797879480000287
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 15914163327500750516
+  Name: "Tree Birch Bare 02"
+  Transform {
+    Location {
+      X: -47130
+      Y: 3890
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 8689797879480000287
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6130741929969829654
+  Name: "Tree Birch Bare 01"
+  Transform {
+    Location {
+      X: -43250
+      Y: 1530
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 1532272877039490747
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 3005441865425960492
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -47285
+      Y: -2065
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 14543280374675544081
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -49355
+      Y: -1005
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7275974697528415314
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -45645
+      Y: 5880
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 11076365916333777417
+  Name: "Tree Oak 01"
+  Transform {
+    Location {
+      X: -48545
+      Y: 2770
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 904435902304511947
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7370641250855223804
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -45605
+      Y: 4035
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5478327638057713361
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -48450
+      Y: 270
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 12917535124678071009
+  Name: "Tree Redwood Bare Big"
+  Transform {
+    Location {
+      X: -45890
+      Y: 655
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2208895367360511592
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10950450792897151385
+  Name: "Tree Redwood Bare Medium"
+  Transform {
+    Location {
+      X: -45065
+      Y: 2070
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 14989263344727764211
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 17029104147975612613
+  Name: "Tree Redwood Bare Small"
+  Transform {
+    Location {
+      X: -44080
+      Y: -1250
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 2134134556186268007
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 13819248192806838818
+  Name: "Tree Redwood Medium"
+  Transform {
+    Location {
+      X: -43165
+      Y: 550
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 3612635789517759352
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 7657994601082739596
+  Name: "Tree Redwood Small"
+  Transform {
+    Location {
+      X: -43285
+      Y: 2530
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 9271635383826568870
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 6988700148678048842
+  Name: "Realistic_Palms"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
   TemplateInstance {
     ParameterOverrideMap {
-      key: 11017059926580416564
+      key: 9845225680727406467
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Stump"
+          String: "Realistic_Palms"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -41575
-            Y: -25825
-            Z: 400
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
+            X: -34645
+            Y: 30
+            Z: -10
           }
         }
       }
     }
     TemplateAsset {
-      Id: 12535408048212426689
+      Id: 4468954764162669597
     }
   }
 }
 Objects {
-  Id: 18178097109339884903
-  Name: "Halloween Tree"
+  Id: 14086649273120145461
+  Name: "Tree Oak Stump 01"
   Transform {
     Location {
-      X: -40600
-      Y: -23875
+      X: -30045
+      Y: 19155
+      Z: -190
+    }
+    Rotation {
+      Yaw: -162.999924
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7498710859431192967
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 5063169857513112826
+  Name: "Tree Oak Stump 01"
+  Transform {
+    Location {
+      X: -40820
+      Y: 20
+      Z: -190
+    }
+    Rotation {
+      Yaw: -163
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 7498710859431192967
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 10672217843445025839
+  Name: "Gem - Round Polished"
+  Transform {
+    Location {
+      X: 18430
+      Y: -45220
+      Z: 70
+    }
+    Rotation {
+    }
+    Scale {
+      X: 3
+      Y: 3
+      Z: 3
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 5294976795930544598
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 11585941676026007135
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 935690916523560710
+  Name: "Gem - Round Polished"
+  Transform {
+    Location {
+      X: 18430
+      Y: -45220
+      Z: 95
+    }
+    Rotation {
+    }
+    Scale {
+      X: 2.5
+      Y: 2.5
+      Z: 0.8
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:id"
+      AssetReference {
+        Id: 10391998035329798382
+      }
+    }
+    Overrides {
+      Name: "ma:Shared_BaseMaterial:smart"
+      Bool: false
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 674459473947709713
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    StaticMesh {
+      Physics {
+        Mass: 100
+        LinearDamping: 0.01
+      }
+      BoundsScale: 1
+    }
+  }
+}
+Objects {
+  Id: 2073809368899518713
+  Name: "UnitFrameModels"
+  Transform {
+    Location {
+      X: -33325
+      Y: -7950
       Z: 100
     }
     Rotation {
-      Yaw: -123.749947
     }
     Scale {
       X: 1
@@ -146,26 +2100,110 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
+  ChildIds: 8897412307602262288
+  ChildIds: 11776399781846705835
+  ChildIds: 15778467061300212764
+  ChildIds: 16268877673565449873
+  ChildIds: 8292337296657335119
+  ChildIds: 5220004195382607738
+  ChildIds: 3696813460530549948
+  ChildIds: 4368535157486934535
+  ChildIds: 7943232515497367227
+  ChildIds: 10699215391895617769
+  ChildIds: 1387773479593972997
+  ChildIds: 4645215076396019458
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+}
+Objects {
+  Id: 4645215076396019458
+  Name: "FrameworkVanaraMasculineVariantA"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 8523174043047730250
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkVanaraMasculineVariantA"
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -179.999969
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -42850
-            Y: -22950
-            Z: 250
+            X: -900
+            Y: 24.9995117
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3961478734540321845
+    }
+  }
+}
+Objects {
+  Id: 1387773479593972997
+  Name: "FrameworkAscendentMasculineVariantA"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2073809368899518713
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3786144584552121706
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkAscendentMasculineVariantA"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 325
+            Y: 25
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 146.249954
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -179,49 +2217,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 5628769040671060772
     }
   }
 }
 Objects {
-  Id: 13530690849626901212
-  Name: "Halloween Tree"
+  Id: 10699215391895617769
+  Name: "FrameworkUndeadMasculineVariantA"
   Transform {
-    Location {
-      X: -41825
-      Y: -34500
-      Z: 1500
-    }
-    Rotation {
-      Yaw: -135
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 15477144341272499523
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkUndeadMasculineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -45750
-            Y: -33075
-            Z: 1550
+            X: -650
+            Y: 25
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -90
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -235,49 +2264,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 3281216361488631298
     }
   }
 }
 Objects {
-  Id: 4222402997854607656
-  Name: "Halloween Tree"
+  Id: 7943232515497367227
+  Name: "FrameworkOrcMasculineVariantA"
   Transform {
-    Location {
-      X: -44125
-      Y: -25325
-      Z: 625
-    }
-    Rotation {
-      Yaw: -135
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 4589093596228675304
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkOrcMasculineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -41825
-            Y: -34500
-            Z: 1500
+            X: -350
+            Y: 25
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 90
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -291,49 +2311,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 11015913052092835113
     }
   }
 }
 Objects {
-  Id: 13489320122293609193
-  Name: "Halloween Tree"
+  Id: 4368535157486934535
+  Name: "FrameworkDarkElfMasculineVariantA"
   Transform {
-    Location {
-      X: -44125
-      Y: -29300
-      Z: 625
-    }
-    Rotation {
-      Yaw: -135
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 6943539654448025038
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkDarkElfMasculineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -44125
-            Y: -25325
-            Z: 625
+            X: -75
+            Y: 25
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -22.5
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -347,49 +2358,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 14172646328327824576
     }
   }
 }
 Objects {
-  Id: 16517507720178964548
-  Name: "Halloween Tree"
+  Id: 3696813460530549948
+  Name: "FrameworkHumanMasculineVariantA"
   Transform {
-    Location {
-      X: -48400
-      Y: -31050
-      Z: 2150
-    }
-    Rotation {
-      Yaw: -135
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 3101731870679369773
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkHumanMasculineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -44125
-            Y: -29300
-            Z: 625
+            X: 725
+            Y: 25.0004883
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 180
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -403,49 +2405,87 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 12147551385636730131
     }
   }
 }
 Objects {
-  Id: 7641411567094510927
-  Name: "Halloween Tree"
+  Id: 5220004195382607738
+  Name: "FrameworkVanaraFeminineVariantA"
   Transform {
-    Location {
-      X: -48400
-      Y: -27600
-      Z: 2450
-    }
-    Rotation {
-      Yaw: -135
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 11929823851291248270
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkVanaraFeminineVariantA"
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -179.999969
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -48400
-            Y: -31050
-            Z: 2150
+            X: -900
+            Y: -225.000488
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1327389494140555912
+    }
+  }
+}
+Objects {
+  Id: 8292337296657335119
+  Name: "FrameworkUndeadFeminineVariantA"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2073809368899518713
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9998133712108381818
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkUndeadFeminineVariantA"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -675
+            Y: -225
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -135
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -459,49 +2499,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 8732923125588220592
     }
   }
 }
 Objects {
-  Id: 13538047952077442996
-  Name: "Halloween Tree"
+  Id: 16268877673565449873
+  Name: "FrameworkOrcFeminineVariantA"
   Transform {
-    Location {
-      X: -37100
-      Y: -23000
-      Z: -50
-    }
-    Rotation {
-      Yaw: -135
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 1931223855351569882
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkOrcFeminineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -48400
-            Y: -27600
-            Z: 2450
+            X: -375
+            Y: -225
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -135
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -515,49 +2546,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 4218799733159320420
     }
   }
 }
 Objects {
-  Id: 3926137620143104828
-  Name: "Halloween Tree"
+  Id: 15778467061300212764
+  Name: "FrameworkDarkElfFeminineVariantA"
   Transform {
-    Location {
-      X: -40600
-      Y: -23875
-      Z: 100
-    }
-    Rotation {
-      Yaw: -123.749947
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 7258860011355820599
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkDarkElfFeminineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -37100
-            Y: -23000
-            Z: -50
+            X: -75
+            Y: -225
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -135
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -571,49 +2593,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 5083528162285600105
     }
   }
 }
 Objects {
-  Id: 211315708492959835
-  Name: "Halloween Tree"
+  Id: 11776399781846705835
+  Name: "FrameworkHumanFeminineVariantA"
   Transform {
-    Location {
-      X: -40600
-      Y: -26550
-      Z: 350
-    }
-    Rotation {
-      Yaw: -123.749947
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 6899517394802424479
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkHumanFeminineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -40600
-            Y: -23875
-            Z: 100
+            X: 725
+            Y: -224.999512
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -123.749939
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -627,49 +2640,40 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
+      Id: 5447166590459497721
     }
   }
 }
 Objects {
-  Id: 13007780517000862060
-  Name: "Halloween Tree"
+  Id: 8897412307602262288
+  Name: "FrameworkAscendentFeminineVariantA"
   Transform {
-    Location {
-      X: -40600
-      Y: -30275
-      Z: 350
-    }
-    Rotation {
-      Yaw: -67.5000381
-    }
     Scale {
       X: 1
       Y: 1
       Z: 1
     }
   }
-  ParentId: 4781671109827199097
+  ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7846518934435898791
+      key: 3884664389665251075
       value {
         Overrides {
           Name: "Name"
-          String: "Halloween Tree"
+          String: "FrameworkAscendentFeminineVariantA"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: -40600
-            Y: -26550
-            Z: 350
+            X: 325
+            Y: -225
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -123.749939
+            Yaw: -179.999969
           }
         }
         Overrides {
@@ -683,911 +2687,7 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 571606747914652983
-    }
-  }
-}
-Objects {
-  Id: 17102617602101563324
-  Name: "Halloween Tree"
-  Transform {
-    Location {
-      X: -38400
-      Y: -30275
-      Z: -75
-    }
-    Rotation {
-      Yaw: -67.5000153
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7846518934435898791
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Tree"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -40600
-            Y: -30275
-            Z: 350
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.5000305
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 571606747914652983
-    }
-  }
-}
-Objects {
-  Id: 13977700090302405935
-  Name: "Halloween Tree"
-  Transform {
-    Location {
-      X: -38825
-      Y: -28025
-      Z: 100
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7846518934435898791
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Tree"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -38400
-            Y: -30275
-            Z: -75
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.5
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 571606747914652983
-    }
-  }
-}
-Objects {
-  Id: 17271452918026942235
-  Name: "Halloween_Crypt"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 3635194809864055656
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween_Crypt"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35450
-            Y: -29625
-            Z: -25
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.499939
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 4449774825422226449
-    }
-  }
-}
-Objects {
-  Id: 5373161006358427193
-  Name: "Halloween Tree"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7846518934435898791
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Tree"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -38825
-            Y: -28025
-            Z: 100
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 11084000201057787818
-    }
-  }
-}
-Objects {
-  Id: 358287118183845671
-  Name: "Halloween Tomb 02"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 9629959668748445268
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Tomb 02"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35150
-            Y: -28475
-            Z: -25
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.499939
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13106095149214920106
-    }
-  }
-}
-Objects {
-  Id: 3008609492274983893
-  Name: "Halloween Tomb"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 14256160436749207822
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Tomb"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -36250
-            Y: -28950
-            Z: -25
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.5
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 15981493893446915845
-    }
-  }
-}
-Objects {
-  Id: 17112204174338053369
-  Name: "Halloween Stump"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 11017059926580416564
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Stump"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -32950
-            Y: -25825
-            Z: -75
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 12535408048212426689
-    }
-  }
-}
-Objects {
-  Id: 11210057656494337091
-  Name: "Halloween Statue"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 14881089962639150356
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Statue"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -36525
-            Y: -27800
-            Z: 200
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 22.4999866
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 14418367882306362106
-    }
-  }
-}
-Objects {
-  Id: 7382330726580789388
-  Name: "Halloween Skull Bookstand"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 8782798938680308090
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Skull Bookstand"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -33450
-            Y: -24750
-            Z: -50
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -22.5000305
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 12342257139661617066
-    }
-  }
-}
-Objects {
-  Id: 2083698256531118640
-  Name: "Halloween Pumpkin Wagon"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 18304217968112383514
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Pumpkin Wagon"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -38750
-            Y: -24350
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -33.7500305
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 10672631161664521964
-    }
-  }
-}
-Objects {
-  Id: 3619237784346835430
-  Name: "Halloween Pumpkin Lamp"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 10604643254425679125
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Pumpkin Lamp"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -36825
-            Y: -25125
-            Z: 150
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 8198305303195323371
-    }
-  }
-}
-Objects {
-  Id: 17437029564996549778
-  Name: "Halloween Pumpkin 03"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 9396363126269109822
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Pumpkin 03"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35250
-            Y: -24800
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 17376059017464466299
-    }
-  }
-}
-Objects {
-  Id: 8990012256897986242
-  Name: "Halloween Pumpkin 02"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4328848712493140255
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Pumpkin 02"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35200
-            Y: -25300
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 8068737189921835311
-    }
-  }
-}
-Objects {
-  Id: 9138346863515015966
-  Name: "Halloween Pumpkin 03"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 9396363126269109822
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Pumpkin 03"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35750
-            Y: -24975
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 17376059017464466299
-    }
-  }
-}
-Objects {
-  Id: 8012318643305497587
-  Name: "Halloween Grave 02"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 12772403943113079531
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Grave 02"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -36200
-            Y: -28225
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -157.5
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 18135587125067788432
-    }
-  }
-}
-Objects {
-  Id: 11474039947244322388
-  Name: "Halloween Grave"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1795931023023932908
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Grave"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35774.1953
-            Y: -28625
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 22.4999866
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 6056012270813659211
-    }
-  }
-}
-Objects {
-  Id: 1563348855017049914
-  Name: "Halloween Grave"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1795931023023932908
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Grave"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -35725
-            Y: -27575
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 22.4999866
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 6056012270813659211
-    }
-  }
-}
-Objects {
-  Id: 11700855058447145307
-  Name: "Halloween Crypt_Wall_Opened"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 11625856035427328049
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Crypt_Wall_Opened"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -33775
-            Y: -25725
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.5
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 16509994310237110375
-    }
-  }
-}
-Objects {
-  Id: 10263672601307220440
-  Name: "Halloween Crypt_Wall Opene"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 8154601917278458865
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Crypt_Wall Opene"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -32900
-            Y: -25700
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.5
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 17211517546342379306
-    }
-  }
-}
-Objects {
-  Id: 9316455102310507431
-  Name: "Halloween Crypt_Wall 02"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 14535236211505780164
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Crypt_Wall 02"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -33525
-            Y: -26325
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.4999695
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7039230862831909636
-    }
-  }
-}
-Objects {
-  Id: 15133949330285973010
-  Name: "Halloween Crypt_Wall"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 17177797880973503076
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Crypt_Wall"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -32900
-            Y: -26650
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.5
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 4570024086092687649
-    }
-  }
-}
-Objects {
-  Id: 9342923501668939267
-  Name: "Halloween Crypt Main"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 14240724510875587082
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Crypt Main"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -37875
-            Y: -25850
-            Z: -125
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13207086796762404845
-    }
-  }
-}
-Objects {
-  Id: 12390497063096835920
-  Name: "Halloween Crypt Gate"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1971087315865582126
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Halloween Crypt Gate"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -34075
-            Y: -24950
-            Z: -25
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -67.4999695
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 5335022319345743762
+      Id: 10136783166237093130
     }
   }
 }
@@ -2012,11 +3112,12 @@ Objects {
   Name: "Ocean"
   Transform {
     Location {
-      X: -45660
-      Y: 2540
-      Z: -100
+      X: -35180.8867
+      Y: 30.0745773
+      Z: -290
     }
     Rotation {
+      Yaw: -151
     }
     Scale {
       X: 533.333374
@@ -2058,6 +3159,41 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+}
+Objects {
+  Id: 16479159577220641451
+  Name: "UndeadCharacterSelect"
+  Transform {
+    Location {
+      X: -38150
+      Y: -27100
+      Z: -125
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "UndeadCharacterSelect"
   }
 }
 Objects {
