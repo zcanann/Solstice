@@ -48,15 +48,23 @@ function OnEntityEnteredRange(proximityObjectId)
 
     if objectInstance:IsA("Player") then
         if not raceListeners[proximityObjectId] then
-            raceListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged) 
+            raceListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
         end
         if not heightListeners[proximityObjectId] then
-            heightListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged) 
+            heightListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
         end
     end
 end
 
 function OnEntityLeftRange(proximityObjectId)
+    if heightListeners[proximityObjectId] then
+        heightListeners[proximityObjectId]:Disconnect()
+        heightListeners[proximityObjectId] = nil
+    end
+    if raceListeners[proximityObjectId] then
+        raceListeners[proximityObjectId]:Disconnect()
+        raceListeners[proximityObjectId] = nil
+    end
     if Object.IsValid(playerModels[proximityObjectId]) then
         playerModels[proximityObjectId]:Destroy()
     end

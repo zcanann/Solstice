@@ -1628,7 +1628,6 @@ Objects {
     TeamSettings {
     }
     AudioBP {
-      AutoPlay: true
       Pitch: -12
       Volume: 1
       Falloff: 3600

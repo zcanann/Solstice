@@ -1,3 +1,7 @@
+-- Partial framework includes
+local Framework = { }
+Framework.Networking = require(script:GetCustomProperty("Networking"))
+
 local EventsAPI = { }
 
 EventsAPI.Broadcast = require(script:GetCustomProperty("Broadcast"))
@@ -49,11 +53,26 @@ EventsAPI.ListenForProximityEvent = function (proximityObjectId, key, callback)
         warn("====================================")
         return
     end
+    if not callback then
+        warn("Invalid proximity callback provided:")
+        warn(CoreDebug.GetStackTrace())
+        warn("====================================")
+        return
+    end
+
+    -- Immediately fire the callback, as those listening for proximity events will otherwise miss any existing state
+    callback(proximityObjectId, Framework.Networking.GetProximityData(proximityObjectId, key))
+
     -- Framework.Print("LISTENING: " .. key .. proximityObjectId)
     return EventsAPI.Listen(EventsAPI.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. key, callback)
 end
 
 EventsAPI.ListenForPlayer = function (key, callback, ...)
+    if not key then
+        warn("Invalid listener key provided:")
+        warn(CoreDebug.GetStackTrace())
+        warn("====================================")
+    end
     return Events.ConnectForPlayer(key, callback, ...)
 end
 

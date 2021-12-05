@@ -64,6 +64,7 @@ function DrawDebugData()
         local proximityObjectDebug = nil
         proximityObjectDebug = World.SpawnAsset(propProximityObjectDebugTemplate, { parent = propProximityNetworkedObject })
         proximityObjectDebug:SetWorldPosition(propProximityNetworkedObject:GetWorldPosition())
+        proximityObjectDebug.visibility = Visibility.FORCE_ON
 
         local propUIContainer = proximityObjectDebug:GetCustomProperty("UIContainer"):WaitForObject()
         local propPlayersInRangeText = proximityObjectDebug:GetCustomProperty("PlayersInRangeText"):WaitForObject()

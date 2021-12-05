@@ -17,9 +17,9 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:TableUtils"
+        Name: "cs:Networking"
         AssetReference {
-          Id: 11279245430205585369
+          Id: 8086703094338473467
         }
       }
     }

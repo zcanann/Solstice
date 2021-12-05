@@ -10,7 +10,7 @@ end
 
 CharacterNameValidator.IsNameValid = function(name)
     -- Check if alpha (non-numeric). This should support unicode names.
-    if(not name:match("%W")
+    if(name and not name:match("%W")
         and not string.find(name, "%d")
         and string.len(name) >= CharacterNameValidator.MinNameSize
         and string.len(name) <= CharacterNameValidator.MaxNameSize) then

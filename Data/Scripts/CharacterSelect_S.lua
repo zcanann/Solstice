@@ -1,5 +1,7 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
+local CharacterNameValidator = require(script:GetCustomProperty("CharacterNameValidator"))
+
 local propSpawnPointOrc = script:GetCustomProperty("SpawnPointOrc"):WaitForObject()
 local propSpawnPointDarkElf = script:GetCustomProperty("SpawnPointDarkElf"):WaitForObject()
 local propSpawnPointUndead = script:GetCustomProperty("SpawnPointUndead"):WaitForObject()
@@ -7,14 +9,48 @@ local propSpawnPointHuman = script:GetCustomProperty("SpawnPointHuman"):WaitForO
 local propSpawnPointAscendent = script:GetCustomProperty("SpawnPointAscendent"):WaitForObject()
 local propSpawnPointVanara = script:GetCustomProperty("SpawnPointVanara"):WaitForObject()
 
-function LoadCharacters(player)
-    local lastLoggedInCharacterId = Framework.Storage.GetGlobalKey(player, Framework.Storage.KeyLastSelectedCharacterId)
+local characterSelectScreenStates = { }
 
-    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, player, { lastLoggedInCharacterId })
+function LoadInitialState(player)
+    local characterList = Framework.Storage.GetCharacterList(player)
+    local lastLoggedInCharacterId = Framework.Storage.GetGlobalKey(player, Framework.Storage.KeyLastSelectedCharacterId)
+    local hasCharacters = Framework.Utils.Table.Count(characterList) > 0
+
+    characterSelectScreenStates[player] = { }
+    characterSelectScreenStates[player].lastLoggedInCharacterId = lastLoggedInCharacterId
+
+    if hasCharacters then
+        characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
+    else
+        -- No characters found -- initialize state to NEW_CHARACTER
+        OnBeginCreateNewCharacterRequested(player)
+    end
+
+    SendCharacterSelectStateData(player)
 end
 
-function OnCreateNewCharacterRequested(player, initialData)
-    if not initialData then return end
+function OnBeginCreateNewCharacterRequested(player)
+    local factionRng = math.random()
+    if factionRng < 0.5 then
+        local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.COLONIST)
+        SetActiveRace(player, Framework.Storage.Keys.Races.COLONIST[math.random(raceCount)])
+    else
+        local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.ITHKUIL)
+        SetActiveRace(player, Framework.Storage.Keys.Races.ITHKUIL[math.random(raceCount)])
+    end
+    characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
+end
+
+function OnFinalizeCreateNewCharacterRequested(player, initialData)
+    if not initialData then
+        warn("No character creation data provided")
+        return
+    end
+
+    if not characterSelectScreenStates[player] then
+        warn("Character state not found")
+        return
+    end
 
     initialData[Framework.Storage.Keys.Characters.ZONE] = Framework.Storage.Keys.Zones.UNKNOWN
 
@@ -42,10 +78,7 @@ function OnCreateNewCharacterRequested(player, initialData)
     -- TOOD: Class validation
 
     Framework.Storage.CreateNewCharacter(player, initialData)
-    LoadCharacters(player)
-
-    player.isVisible = true
-    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, player)
+    SendCharacterSelectStateData(player)
 end
 
 function OnRequestLogIntoCharacter(player, characterId)
@@ -54,53 +87,86 @@ function OnRequestLogIntoCharacter(player, characterId)
     for id, _ in pairs(characterList) do
         if id == characterId then
             Framework.Storage.SetActiveCharacterId(player, characterId)
-            Framework.Print("Login granted")
         end
     end
 end
 
 function OnRequestDeleteCharacter(player, characterId)
     Framework.Storage.DeleteCharacter(player, characterId)
-    LoadCharacters(player)
+    SendCharacterSelectStateData(player)
 end
 
-function OnRequestSetActiveRace(player, newActiveRace)
-    if newActiveRace == Framework.Storage.Keys.Races.ORC then
+function SetActiveRace(player, race)
+    characterSelectScreenStates[player].race = race
+    if race == Framework.Storage.Keys.Races.ORC then
         player:Spawn({position = propSpawnPointOrc:GetWorldPosition(), rotation = propSpawnPointOrc:GetRotation()})
-    elseif newActiveRace == Framework.Storage.Keys.Races.UNDEAD then
+    elseif race == Framework.Storage.Keys.Races.UNDEAD then
         player:Spawn({position = propSpawnPointUndead:GetWorldPosition(), rotation = propSpawnPointUndead:GetRotation()})
-    elseif newActiveRace == Framework.Storage.Keys.Races.DARK_ELF then
+    elseif race == Framework.Storage.Keys.Races.DARK_ELF then
         player:Spawn({position = propSpawnPointDarkElf:GetWorldPosition(), rotation = propSpawnPointDarkElf:GetRotation()})
-    elseif newActiveRace == Framework.Storage.Keys.Races.HUMAN then
+    elseif race == Framework.Storage.Keys.Races.HUMAN then
         player:Spawn({position = propSpawnPointHuman:GetWorldPosition(), rotation = propSpawnPointHuman:GetRotation()})
-    elseif newActiveRace == Framework.Storage.Keys.Races.ASCENDENT then
+    elseif race == Framework.Storage.Keys.Races.ASCENDENT then
         player:Spawn({position = propSpawnPointAscendent:GetWorldPosition(), rotation = propSpawnPointAscendent:GetRotation()})
-    elseif newActiveRace == Framework.Storage.Keys.Races.VANARA then
+    elseif race == Framework.Storage.Keys.Races.VANARA then
         player:Spawn({position = propSpawnPointVanara:GetWorldPosition(), rotation = propSpawnPointVanara:GetRotation()})
     else
         warn("Attempted to set invalid race")
         return;
     end
 
-    Framework.Print(newActiveRace)
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE, race)
+end
 
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE, newActiveRace)
-    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_RACE_SUCCESS, player, { newActiveRace })
+function OnRequestSetActiveRace(player, newActiveRace)
+    SetActiveRace(player, newActiveRace)
+    SendCharacterSelectStateData(player)
 end
 
 function OnEnterWorldRequested(player, characterId)
     if Framework.Storage.SetActiveCharacterId(player, characterId) then
+        -- TODO: Pull from active player data
         player:TransferToScene("Vernal")
     end
 end
 
-function OnPlayerJoined(player)
-    LoadCharacters(player)
+function SendCharacterSelectStateData(player)
+    Framework.Events.Broadcast.ServerToPlayerReliable(Framework.Events.Keys.CharacterSelect.EVENT_SEND_CHARACTER_SELECT_STATE, player,
+    {
+        characterSelectScreenStates[player]
+    })
 end
 
-Game.playerJoinedEvent:Connect(OnPlayerJoined)
+function OnPlayerJoined(player)
+    LoadInitialState(player)
+end
 
-Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, OnCreateNewCharacterRequested)
+function OnPlayerLeft(player)
+    characterSelectScreenStates[player] = nil
+end
+
+function ChatCommandHandler(player, params)
+    if not characterSelectScreenStates[player] then
+        warn("No player state found for player: " .. player.id)
+        return
+    end
+
+    if characterSelectScreenStates[player].state == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
+        -- Enforce lowercase with first character capitalization
+        local name = CharacterNameValidator.SanitizeName(params.message)
+        if CharacterNameValidator.IsNameValid(name) then
+            characterSelectScreenStates[player].name = name
+            SendCharacterSelectStateData(player)
+        end
+    end
+end
+
+Chat.receiveMessageHook:Connect(ChatCommandHandler)
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
+Game.playerLeftEvent:Connect(OnPlayerLeft)
+
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER, OnBeginCreateNewCharacterRequested)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER, OnFinalizeCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, OnRequestDeleteCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, OnRequestSetActiveRace)

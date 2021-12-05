@@ -1,8 +1,8 @@
 Name: "Settings"
 RootId: 2654916338316290302
 Objects {
-  Id: 5336517008004073883
-  Name: "DebugSettings_A"
+  Id: 587315297906126792
+  Name: "DebugSettings"
   Transform {
     Location {
     }
@@ -15,16 +15,6 @@ Objects {
     }
   }
   ParentId: 2654916338316290302
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ServerShowProximityObjects"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ShowCombatObjects"
-      Bool: true
-    }
-  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -37,10 +27,9 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Script {
-    ScriptAsset {
-      Id: 11300382029977244970
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "DebugSettings"
   }
 }
 Objects {
@@ -87,10 +76,10 @@ Objects {
   Name: "CameraVanara"
   Transform {
     Location {
-      Z: 54
+      Z: 35
     }
     Rotation {
-      Pitch: -20.0000019
+      Pitch: -20
       Yaw: 167.499664
       Roll: 1.3628503e-06
     }
@@ -114,9 +103,9 @@ Objects {
   }
   Camera {
     UseAsDefault: true
-    InitialDistance: 600
-    MinDistance: 600
-    MaxDistance: 600
+    InitialDistance: 450
+    MinDistance: 450
+    MaxDistance: 450
     PositionOffset {
     }
     RotationOffset {
@@ -177,12 +166,11 @@ Objects {
   Name: "CameraAscendent"
   Transform {
     Location {
-      Z: 54
+      Z: 35
     }
     Rotation {
-      Pitch: -19.9999886
+      Pitch: -20
       Yaw: 168.750046
-      Roll: -6.81425149e-07
     }
     Scale {
       X: 1
@@ -203,9 +191,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Camera {
-    InitialDistance: 600
-    MinDistance: 600
-    MaxDistance: 600
+    InitialDistance: 450
+    MinDistance: 450
+    MaxDistance: 450
     PositionOffset {
     }
     RotationOffset {
@@ -266,10 +254,10 @@ Objects {
   Name: "CameraHuman"
   Transform {
     Location {
-      Z: 54
+      Z: 35
     }
     Rotation {
-      Pitch: -20.0000019
+      Pitch: -20
       Yaw: 167.499664
       Roll: 1.3628503e-06
     }
@@ -293,9 +281,9 @@ Objects {
   }
   Camera {
     UseAsDefault: true
-    InitialDistance: 600
-    MinDistance: 600
-    MaxDistance: 600
+    InitialDistance: 450
+    MinDistance: 450
+    MaxDistance: 450
     PositionOffset {
     }
     RotationOffset {
@@ -356,10 +344,10 @@ Objects {
   Name: "CameraUndead"
   Transform {
     Location {
-      Z: 54
+      Z: 35
     }
     Rotation {
-      Pitch: -20.0000019
+      Pitch: -20
       Yaw: 167.499664
       Roll: 1.3628503e-06
     }
@@ -383,9 +371,9 @@ Objects {
   }
   Camera {
     UseAsDefault: true
-    InitialDistance: 600
-    MinDistance: 600
-    MaxDistance: 600
+    InitialDistance: 450
+    MinDistance: 450
+    MaxDistance: 450
     PositionOffset {
     }
     RotationOffset {
@@ -446,10 +434,10 @@ Objects {
   Name: "CameraDarkElf"
   Transform {
     Location {
-      Z: 54
+      Z: 35
     }
     Rotation {
-      Pitch: -20.0000019
+      Pitch: -20
       Yaw: 167.499664
       Roll: 1.3628503e-06
     }
@@ -473,9 +461,9 @@ Objects {
   }
   Camera {
     UseAsDefault: true
-    InitialDistance: 600
-    MinDistance: 600
-    MaxDistance: 600
+    InitialDistance: 450
+    MinDistance: 450
+    MaxDistance: 450
     PositionOffset {
     }
     RotationOffset {
@@ -536,10 +524,10 @@ Objects {
   Name: "CameraOrc"
   Transform {
     Location {
-      Z: 54
+      Z: 35
     }
     Rotation {
-      Pitch: -20.0000019
+      Pitch: -20
       Yaw: 167.499664
       Roll: 1.3628503e-06
     }
@@ -563,9 +551,9 @@ Objects {
   }
   Camera {
     UseAsDefault: true
-    InitialDistance: 600
-    MinDistance: 600
-    MaxDistance: 600
+    InitialDistance: 450
+    MinDistance: 450
+    MaxDistance: 450
     PositionOffset {
     }
     RotationOffset {

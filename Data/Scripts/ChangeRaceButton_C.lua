@@ -10,8 +10,8 @@ function OnChangeRaceButtonPressed()
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, { propRaceKey })
 end
 
-function OnSetActiveRaceSuccess(race)
-    if race == propRaceKey then
+function OnCharacterSelectStateChanged(state)
+    if state.race == propRaceKey then
         propBorder.visibility = Visibility.FORCE_OFF
         propBorderSelected.visibility = Visibility.INHERIT
     else
@@ -21,4 +21,4 @@ function OnSetActiveRaceSuccess(race)
 end
 
 propButton.clickedEvent:Connect(OnChangeRaceButtonPressed)
-Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_RACE_SUCCESS, OnSetActiveRaceSuccess)
+Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_CHARACTER_SELECT_STATE, OnCharacterSelectStateChanged)

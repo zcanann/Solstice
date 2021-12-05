@@ -6,8 +6,6 @@
 
 -- TODO: listen for equipment changes, check it against a data store of id => template, spawn the appropriate template per-slot
 function OnPlayerEquipmentChanged(player, data)
-    if not Framework.ObjectAssert(player, "Player", "Invalid Player object") then return end
-
     --[[
 	local engagementData = nil
 	if data and data[Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION] then

@@ -26,85 +26,76 @@ local propSunlight = script:GetCustomProperty("Sunlight"):WaitForObject()
 
 local CharacterNameValidator = require(script:GetCustomProperty("CharacterNameValidator"))
 
-local CharacterSelectState = { }
-CharacterSelectState.CHARACTER_SELECT = 0
-CharacterSelectState.NEW_CHARACTER = 1
-CharacterSelectState.DELETE_SELECTED_CHARACTER = 2
-CharacterSelectState.CHARACTER_CREATE_PENDING = 3
-
 local localPlayer = Game.GetLocalPlayer()
 local characterEntries = { }
 local characterIndices = { }
 local characterList = { }
 local lastLoggedInCharacterId = nil
-local currentState = nil
-local activeRace = nil
-local activeClass = "mage"
 local selectedEntry = nil
 
 local defaultNameText = propCharacterNameTextBox.text
 
-function SetCharacterSelectState(newState)
-    currentState = newState
+function OnCharacterSelectStateChanged(stateData)
+    lastLoggedInCharacterId = stateData.lastLoggedInCharacterId
+
+    if CharacterNameValidator.IsNameValid(stateData.name) then
+        propCharacterNameTextBox.text = stateData.name
+    else
+        propCharacterNameTextBox.text = "<Type character name into chat>"
+    end
+
+    UpdateCameraFromRace(stateData.race)
 
     propCharacterSelectScreen.visibility = Visibility.FORCE_OFF
     propNewCharacterScreen.visibility = Visibility.FORCE_OFF
     propNewCharacterScreenIthkuil.visibility = Visibility.FORCE_OFF
     propNewCharacterScreenColonist.visibility = Visibility.FORCE_OFF
 
-    if currentState == CharacterSelectState.CHARACTER_SELECT then
+    if stateData.state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
         propCharacterSelectScreen.visibility = Visibility.INHERIT
-    elseif currentState == CharacterSelectState.NEW_CHARACTER then
+    elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
         propNewCharacterScreen.visibility = Visibility.INHERIT
         propFinalizeNewCharacterButton.isInteractable = false
         propCharacterNameTextBox.text = defaultNameText
-        if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, activeRace) then
+        if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, stateData.race) then
             propNewCharacterScreenIthkuil.visibility = Visibility.INHERIT
-        elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, activeRace) then
+        elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, stateData.race) then
             propNewCharacterScreenColonist.visibility = Visibility.INHERIT
         else
             warn("Invalid active race set")
         end
-    elseif currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
-        propNewCharacterScreen.visibility = Visibility.INHERIT
-    elseif currentState == CharacterSelectState.DELETE_SELECTED_CHARACTER then
+    elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.DELETE_SELECTED_CHARACTER then
         propCharacterSelectScreen.visibility = Visibility.INHERIT
         -- TODO modal
-    elseif currentState == CharacterSelectState.CHARACTER_CREATE_PENDING then
+    elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.CHARACTER_CREATE_PENDING then
     end
 end
 
-function RequestSetActiveRace(newActiveRace)
-    if activeRace ~= newActiveRace then
-        Framework.Print(newActiveRace)
-        activeRace = newActiveRace
-        Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, { newActiveRace })
-    end
+function AwaitServerResponse()
+    
 end
 
-function OnSetActiveRaceSuccess(newActiveRace)
-    activeRace = newActiveRace
-
-    if activeRace == Framework.Storage.Keys.Races.ORC then
+function UpdateCameraFromRace(race)
+    if race == Framework.Storage.Keys.Races.ORC then
         localPlayer:SetOverrideCamera(propCameraOrc)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
-    elseif activeRace == Framework.Storage.Keys.Races.UNDEAD then
+    elseif race == Framework.Storage.Keys.Races.UNDEAD then
         localPlayer:SetOverrideCamera(propCameraUndead)
         propSunlight:SetRotation(Rotation.New(0.0, -150.0, 20.0))
-    elseif activeRace == Framework.Storage.Keys.Races.DARK_ELF then
+    elseif race == Framework.Storage.Keys.Races.DARK_ELF then
         localPlayer:SetOverrideCamera(propCameraDarkElf)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
-    elseif activeRace == Framework.Storage.Keys.Races.HUMAN then
+    elseif race == Framework.Storage.Keys.Races.HUMAN then
         localPlayer:SetOverrideCamera(propCameraHuman)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
-    elseif activeRace == Framework.Storage.Keys.Races.ASCENDENT then
+    elseif race == Framework.Storage.Keys.Races.ASCENDENT then
         localPlayer:SetOverrideCamera(propCameraAscendent)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
-    elseif activeRace == Framework.Storage.Keys.Races.VANARA then
+    elseif race == Framework.Storage.Keys.Races.VANARA then
         localPlayer:SetOverrideCamera(propCameraVanara)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
     else
-        warn("Attempted to set invalid race")
+        warn("Invalid race")
         return;
     end
 end
@@ -147,13 +138,19 @@ function CreateCharacterEntry(characterData)
 
     local characterEntry = World.SpawnAsset(propCharacterEntryTemplate, { parent = propCharacterEntriesRoot })
 
-    local propCharacterNameText = characterEntry:GetCustomProperty("CharacterNameText"):WaitForObject()
-    local propLevelText = characterEntry:GetCustomProperty("LevelText"):WaitForObject()
-    local propZoneText = characterEntry:GetCustomProperty("ZoneText"):WaitForObject()
+    local propCharacterNameText = characterEntry:GetCustomProperty("CharacterNameText"):GetObject()
+    local propLevelText = characterEntry:GetCustomProperty("LevelText"):GetObject()
+    local propZoneText = characterEntry:GetCustomProperty("ZoneText"):GetObject()
 
-    propCharacterNameText.text = characterData[Framework.Storage.Keys.Characters.NAME]
-    propLevelText.text = characterData[Framework.Storage.Keys.Characters.FACTION]
-    propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
+    if propCharacterNameText then
+        propCharacterNameText.text = characterData[Framework.Storage.Keys.Characters.NAME]
+    end
+    if propLevelText then
+        propLevelText.text = characterData[Framework.Storage.Keys.Characters.FACTION]
+    end
+    if propZoneText then
+        propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
+    end
 
     characterEntry.y = 32.0 + #characterIndices * 112.0
     characterEntry.clickedEvent:Connect(OnEntryClicked, characterEntry)
@@ -187,53 +184,16 @@ function OnCharactersLoaded()
     for characterId, _ in pairs(characterEntries) do
         UpdateEntryVisuals(characterId)
     end
-
-    if Framework.Utils.Table.Count(characterList) <= 0 then
-        OnCreateNewCharacterPressed()
-    end
-end
-
-function OnLastLoggedInCharacterReceived(loadedLastLoggedInCharacterId)
-    lastLoggedInCharacterId = loadedLastLoggedInCharacterId
-    OnCharactersLoaded()
-end
-
-function OnCharacterCreateSuccess()
-    SetCharacterSelectState(CharacterSelectState.CHARACTER_SELECT)
-end
-
-function OnCharacterCreateFailed()
-    SetCharacterSelectState(CharacterSelectState.CHARACTER_SELECT)
 end
 
 function OnCreateNewCharacterPressed()
-    local factionRng = math.random()
-    local race = nil
-
-    if factionRng < 0.5 then
-        local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.COLONIST)
-        race = Framework.Storage.Keys.Races.COLONIST[math.random(raceCount)]
-    else
-        local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.ITHKUIL)
-        race = Framework.Storage.Keys.Races.ITHKUIL[math.random(raceCount)]
-    end
-
-    RequestSetActiveRace(race)
-    SetCharacterSelectState(CharacterSelectState.NEW_CHARACTER)
+    AwaitServerResponse()
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER)
 end
 
 function OnFinalizeNewCharacterPressed()
-    selectedEntry = nil
-    lastLoggedInCharacterId = nil
-    local name = propCharacterNameTextBox.text
-
-    local initialData = {
-        [ Framework.Storage.Keys.Characters.NAME ] = name,
-        [ Framework.Storage.Keys.Characters.RACE ] = activeRace,
-        [ Framework.Storage.Keys.Characters.CLASS ] = activeClass,
-    }
-    SetCharacterSelectState(CharacterSelectState.CHARACTER_CREATE_PENDING)
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER, initialData)
+    AwaitServerResponse()
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER)
 end
 
 function OnDeleteSelectedCharacterButtonPressed()
@@ -278,30 +238,10 @@ function ClearEntries()
     characterIndices = { }
 end
 
-function SetCharacterNameText(nameText)
-    -- No validation here. Validation is done by the server and by the client when entering a new name in chat.
-    propCharacterNameTextBox.text = nameText
-end
-
-function ChatCommandHandler(params)
-    if currentState == CharacterSelectState.NEW_CHARACTER_ITHKUIL or currentState == CharacterSelectState.NEW_CHARACTER_COLONIST then
-        -- Enforce lowercase with first character capitalization
-        local name = CharacterNameValidator.SanitizeName(params.message)
-        if CharacterNameValidator.IsNameValid(name) then
-            SetCharacterNameText(name)
-            propFinalizeNewCharacterButton.isInteractable = true
-        end
-    end
-end
-
 propCreateNewCharacterButton.clickedEvent:Connect(OnCreateNewCharacterPressed)
 propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPressed)
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
 propEnterWorldButton.clickedEvent:Connect(OnEnterWorldButtonPressed)
 
-Chat.sendMessageHook:Connect(ChatCommandHandler)
 Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_INITIAL_PLAYER_DATA_LOADED, OnCharactersLoaded)
-Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_LAST_LOGGED_IN_CHARACTER, OnLastLoggedInCharacterReceived)
-Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_SUCCESS, OnCharacterCreateSuccess)
-Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CREATE_NEW_CHARACTER_FAILED, OnCharacterCreateFailed)
-Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SET_ACTIVE_RACE_SUCCESS, OnSetActiveRaceSuccess)
+Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_CHARACTER_SELECT_STATE, OnCharacterSelectStateChanged)

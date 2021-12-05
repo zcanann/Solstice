@@ -16,7 +16,7 @@ end
 
 function OnPlayerJoined(player)
 	-- Debugging
-	-- Framework.Storage.WipePlayerData(player)
+	Framework.Storage.WipePlayerData(player)
 
 	player.isVisible = false
 
