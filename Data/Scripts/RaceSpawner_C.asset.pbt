@@ -133,13 +133,13 @@ Assets {
       Overrides {
         Name: "cs:FrameworkVanaraFeminineVariantB"
         AssetReference {
-          Id: 887012707339773905
+          Id: 9836977827035437350
         }
       }
       Overrides {
         Name: "cs:FrameworkVanaraFeminineVariantC"
         AssetReference {
-          Id: 159560351388496846
+          Id: 5470963346508225509
         }
       }
       Overrides {

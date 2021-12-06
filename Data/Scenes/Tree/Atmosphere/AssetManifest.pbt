@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4798291423668807145
+  Name: "Fog Adjustment Volume"
+  PlatformAssetType: 20
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_fog_adjustment"
+  }
+}
+Assets {
   Id: 4061523298365537124
   Name: "Lightning VFX"
   PlatformAssetType: 8

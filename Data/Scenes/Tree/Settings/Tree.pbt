@@ -34,12 +34,12 @@ Objects {
 }
 Objects {
   Id: 2033215230845879164
-  Name: "SpawnPointVanara"
+  Name: "SpawnPointDarkElf"
   Transform {
     Location {
       X: -40750
       Y: -35
-      Z: 230
+      Z: 220
     }
     Rotation {
       Yaw: 3.74998975
@@ -74,7 +74,7 @@ Objects {
 }
 Objects {
   Id: 3785637843159838533
-  Name: "CameraVanara"
+  Name: "CameraDarkElf"
   Transform {
     Location {
       Z: 35
@@ -129,7 +129,7 @@ Objects {
     Location {
       X: -24650
       Y: -26840
-      Z: 1885
+      Z: 1905
     }
     Rotation {
       Yaw: 136.249924
@@ -217,7 +217,7 @@ Objects {
     Location {
       X: -12574.7539
       Y: -3624.49854
-      Z: 605
+      Z: 615
     }
     Rotation {
       Yaw: -108.749832
@@ -307,7 +307,7 @@ Objects {
     Location {
       X: -33025
       Y: -25245
-      Z: 120
+      Z: 110
     }
     Rotation {
       Yaw: 48.750042
@@ -392,12 +392,12 @@ Objects {
 }
 Objects {
   Id: 15097237594246849961
-  Name: "SpawnPointDarkElf"
+  Name: "SpawnPointVanara"
   Transform {
     Location {
-      X: -29975
-      Y: 19075
-      Z: 220
+      X: -99295
+      Y: 97855
+      Z: 42895
     }
     Rotation {
       Yaw: -41.2499695
@@ -432,7 +432,7 @@ Objects {
 }
 Objects {
   Id: 4204365656750963011
-  Name: "CameraDarkElf"
+  Name: "CameraVanara"
   Transform {
     Location {
       Z: 35

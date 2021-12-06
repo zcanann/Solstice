@@ -79,37 +79,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  ChildIds: 15010763861394408712
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-}
-Objects {
-  Id: 15010763861394408712
-  Name: "Stupid"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1314884817738718373
   ChildIds: 16157608700227224570
   ChildIds: 4810518623037149890
   ChildIds: 1987608383384020982
@@ -137,26 +106,25 @@ Objects {
   ChildIds: 13400462034987802619
   ChildIds: 6444304820697638753
   ChildIds: 11675544315499044793
-  ChildIds: 10364534505480446253
-  ChildIds: 18059802422843144062
+  ChildIds: 4921875418269029293
+  ChildIds: 5923219289696597497
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Folder {
-    IsGroup: true
+  NetworkContext {
   }
 }
 Objects {
-  Id: 18059802422843144062
+  Id: 5923219289696597497
   Name: "FrameworkVanaraFeminineVariantC"
   Transform {
     Scale {
@@ -165,10 +133,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
-      key: 12019638526464963679
+      key: 9487123082128792598
       value {
         Overrides {
           Name: "Name"
@@ -178,19 +146,19 @@ Objects {
           Name: "Position"
           Vector {
             X: 264
-            Y: -562
+            Y: -600
             Z: 10
           }
         }
       }
     }
     TemplateAsset {
-      Id: 159560351388496846
+      Id: 5470963346508225509
     }
   }
 }
 Objects {
-  Id: 10364534505480446253
+  Id: 4921875418269029293
   Name: "FrameworkVanaraFeminineVariantB"
   Transform {
     Scale {
@@ -199,10 +167,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
-      key: 10710209650214177610
+      key: 13026295034084250414
       value {
         Overrides {
           Name: "Name"
@@ -212,14 +180,14 @@ Objects {
           Name: "Position"
           Vector {
             X: 264
-            Y: -458
+            Y: -480
             Z: 10
           }
         }
       }
     }
     TemplateAsset {
-      Id: 887012707339773905
+      Id: 9836977827035437350
     }
   }
 }
@@ -233,7 +201,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 11929823851291248270
@@ -248,6 +216,11 @@ Objects {
             X: 264
             Y: -354
             Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -267,7 +240,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 8523174043047730250
@@ -282,6 +255,19 @@ Objects {
             X: 249
             Y: -136
             Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -301,7 +287,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 11519152407027522013
@@ -316,6 +302,19 @@ Objects {
             X: -303
             Y: -88
             Z: 3
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -335,7 +334,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 7624929089460813867
@@ -350,6 +349,19 @@ Objects {
             X: -295
             Y: -716
             Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -369,7 +381,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -397,6 +409,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -414,7 +434,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -442,6 +462,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -459,7 +487,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -487,6 +515,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -504,7 +540,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -532,6 +568,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -549,7 +593,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -577,6 +621,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -594,7 +646,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 6943539654448025038
@@ -609,6 +661,19 @@ Objects {
             X: 240
             Y: 688
             Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -628,7 +693,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 3101731870679369773
@@ -643,6 +708,19 @@ Objects {
             X: 13
             Y: -119
             Z: 6
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -662,7 +740,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -690,6 +768,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -707,7 +793,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 6899517394802424479
@@ -722,6 +808,19 @@ Objects {
             X: 41
             Y: -479
             Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -741,7 +840,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -769,6 +868,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -786,7 +893,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 3786144584552121706
@@ -801,6 +908,19 @@ Objects {
             X: -285
             Y: -330
             Z: 3
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -820,7 +940,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 3995227768644959029
@@ -835,6 +955,19 @@ Objects {
             X: -280
             Y: -213
             Z: 3
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -854,7 +987,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 15477144341272499523
@@ -875,6 +1008,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -892,7 +1033,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -920,6 +1061,14 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -937,7 +1086,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 2342570306699762335
@@ -960,6 +1109,19 @@ Objects {
             Id: 3695172008212327780
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -977,7 +1139,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 4589093596228675304
@@ -992,6 +1154,19 @@ Objects {
             X: -390
             Y: 597
             Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -1011,7 +1186,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 15723099411216546034
@@ -1034,6 +1209,19 @@ Objects {
             Id: 403499311418171517
           }
         }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -1051,7 +1239,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 10735517718188429033
@@ -1066,6 +1254,19 @@ Objects {
             X: 31
             Y: -640
             Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -1085,7 +1286,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 10930072270500787327
@@ -1100,6 +1301,19 @@ Objects {
             X: 41
             Y: -554
             Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -1119,7 +1333,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 4797544078261956891
@@ -1134,6 +1348,19 @@ Objects {
             X: -15
             Y: 236
             Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -1153,7 +1380,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 1931223855351569882
@@ -1168,6 +1395,19 @@ Objects {
             X: -375
             Y: 395
             Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -1187,7 +1427,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 7408482662365135628
@@ -1202,6 +1442,19 @@ Objects {
             X: -350
             Y: 293
             Z: 10
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }
@@ -1221,7 +1474,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15010763861394408712
+  ParentId: 1314884817738718373
   TemplateInstance {
     ParameterOverrideMap {
       key: 9998133712108381818
@@ -1234,6 +1487,19 @@ Objects {
           Name: "Position"
           Vector {
             Y: 337
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
       }

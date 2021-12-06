@@ -81,6 +81,15 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 4738545747254556631
+      value {
+        Overrides {
+          Name: "FlipHorizontal"
+          Bool: true
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 5910614296575724205
       value {
         Overrides {
@@ -206,6 +215,15 @@ Objects {
         Overrides {
           Name: "cs:RaceKey"
           String: "ascendent"
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 4738545747254556631
+      value {
+        Overrides {
+          Name: "FlipHorizontal"
+          Bool: true
         }
       }
     }
@@ -341,6 +359,15 @@ Objects {
         Overrides {
           Name: "cs:RaceKey"
           String: "human"
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 4738545747254556631
+      value {
+        Overrides {
+          Name: "FlipHorizontal"
+          Bool: true
         }
       }
     }

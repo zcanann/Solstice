@@ -1,16 +1,16 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local propButton = script:GetCustomProperty("Button"):WaitForObject()
-local propRaceKey = script:GetCustomProperty("RaceKey")
+local propGenderKey = script:GetCustomProperty("GenderKey")
 
 local propBorderSelected = propButton:GetCustomProperty("BorderSelected"):WaitForObject()
 
 function OnChangeRaceButtonPressed()
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, { propRaceKey })
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_GENDER, { propGenderKey })
 end
 
 function OnCharacterSelectStateChanged(state)
-    if state.race == propRaceKey then
+    if state.gender == propGenderKey then
         propBorderSelected.visibility = Visibility.INHERIT
     else
         propBorderSelected.visibility = Visibility.FORCE_OFF

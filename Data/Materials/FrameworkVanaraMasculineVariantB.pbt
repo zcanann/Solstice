@@ -1,6 +1,6 @@
 Assets {
-  Id: 2783732507378246625
-  Name: "FrameworkWukongFeminineVariantB"
+  Id: 7443683350140792147
+  Name: "FrameworkVanaraMasculineVariantB"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"
@@ -15,7 +15,7 @@ Assets {
       }
       Overrides {
         Name: "v_tiles"
-        Float: 0.95
+        Float: 1.15
       }
     }
     Assets {

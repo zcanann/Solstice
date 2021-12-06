@@ -143,12 +143,30 @@ Assets {
   }
 }
 Assets {
+  Id: 11585941676026007135
+  Name: "Diamond - 8-Sided"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_diamond_8_sided_001"
+  }
+}
+Assets {
   Id: 11193898931303947221
   Name: "Wood Raw"
   PlatformAssetType: 2
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_wood_raw_001_uv"
+  }
+}
+Assets {
+  Id: 10391998035329798382
+  Name: "Granite 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_rock_granite_001_uv_ref"
   }
 }
 Assets {
@@ -233,6 +251,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5294976795930544598
+  Name: "Cliff 03"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "cliff_003"
+  }
+}
+Assets {
   Id: 4871448386712350861
   Name: "Sphere"
   PlatformAssetType: 1
@@ -311,6 +338,15 @@ Assets {
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_torch_fire"
+  }
+}
+Assets {
+  Id: 674459473947709713
+  Name: "Pyramid - 6-Sided Truncated Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pyramid_sixsided_truncated_hq_001"
   }
 }
 Assets {

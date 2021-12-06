@@ -167,6 +167,10 @@ function OnEntityRaceChanged(proximityDataId, faction)
 	-- Unused
 end
 
+function OnEntityGenderChanged(proximityDataId, faction)
+	-- Unused
+end
+
 function SetProximityObject(newProximityObject)
 	proximityObject = newProximityObject
 
@@ -178,6 +182,7 @@ function SetProximityObject(newProximityObject)
 		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.CLASS, OnEntityClassChanged)
 		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.FACTION, OnEntityFactionChanged)
 		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
+		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.GENDER, OnEntityGenderChanged)
 
 		-- TODO: This needs to run off of replicated data, not a command hook. The reasoning is that messages should work for NPCs as well.
 		-- Chat.receiveMessageHook:Connect(PlayerChatHandler)

@@ -1,6 +1,6 @@
 Assets {
-  Id: 16490029426583005804
-  Name: "FrameworkWukongFeminineVariantA"
+  Id: 6535975939711247890
+  Name: "FrameworkVanaraFeminineVariantC"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"

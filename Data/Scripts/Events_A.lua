@@ -76,4 +76,20 @@ EventsAPI.ListenForPlayer = function (key, callback, ...)
     return Events.ConnectForPlayer(key, callback, ...)
 end
 
+EventsAPI.Disconnect = function (listener)
+    if listener then
+        listener:Disconnect()
+    end
+end
+
+EventsAPI.DisconnectAll = function (listenerList)
+    if listenerList then
+        for _, listener in ipairs(listenerList) do
+            if listener then
+                listener:Disconnect()
+            end
+        end
+    end
+end
+
 return EventsAPI

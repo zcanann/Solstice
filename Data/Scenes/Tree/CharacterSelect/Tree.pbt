@@ -51,7 +51,7 @@ Objects {
     Overrides {
       Name: "cs:SpawnPointDarkElf"
       ObjectReference {
-        SelfId: 15097237594246849961
+        SelfId: 2033215230845879164
       }
     }
     Overrides {
@@ -81,7 +81,7 @@ Objects {
     Overrides {
       Name: "cs:SpawnPointVanara"
       ObjectReference {
-        SelfId: 2033215230845879164
+        SelfId: 15097237594246849961
       }
     }
   }
@@ -219,7 +219,7 @@ Objects {
     Overrides {
       Name: "cs:CameraVanara"
       ObjectReference {
-        SelfId: 3785637843159838533
+        SelfId: 4204365656750963011
       }
     }
     Overrides {
@@ -243,7 +243,7 @@ Objects {
     Overrides {
       Name: "cs:CameraDarkElf"
       ObjectReference {
-        SelfId: 4204365656750963011
+        SelfId: 3785637843159838533
       }
     }
     Overrides {

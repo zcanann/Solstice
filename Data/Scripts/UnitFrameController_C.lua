@@ -70,6 +70,7 @@ function OnTargetSelected(proximityObjectId)
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.CLASS, OnTargetClassChanged))
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.FACTION, OnTargetFactionChanged))
 	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnTargetRaceChanged))
+	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.GENDER, OnTargetGenderChanged))
 
 	targetUnitFrameCamera = Framework.Utils.CameraCapture.GetCaptureCamera(objectInstance)
 
@@ -128,6 +129,9 @@ end
 function OnPlayerRaceChanged(proximityDataId, faction)
 end
 
+function OnPlayerGenderChanged(proximityDataId, faction)
+end
+
 function OnTargetHealthChanged(proximityDataId, health)
 	cachedTargetHealth = health or 100
 	UpdateHealthBar(propTargetUnitFrame, cachedTargetHealth, cachedTargetMaxHealth)
@@ -163,6 +167,9 @@ end
 function OnTargetRaceChanged(proximityDataId, faction)
 end
 
+function OnTargetGenderChanged(proximityDataId, faction)
+end
+
 function ToggleTargetFrameVisibility(isVisible)
 	if isVisible then
 		propTargetUnitFrame.visibility = Visibility.INHERIT
@@ -191,4 +198,5 @@ Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.Pr
 Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.CLASS, OnPlayerClassChanged)
 Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.FACTION, OnPlayerFactionChanged)
 Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.RACE, OnPlayerRaceChanged)
+Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.GENDER, OnPlayerGenderChanged)
 Framework.Events.Listen(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, OnTargetSelected)

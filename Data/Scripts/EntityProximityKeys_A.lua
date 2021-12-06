@@ -4,6 +4,7 @@ local EntityProximityKeys = { }
 EntityProximityKeys.NAME = "name"
 EntityProximityKeys.FACTION = "faction"
 EntityProximityKeys.RACE = "race"
+EntityProximityKeys.GENDER = "gender"
 EntityProximityKeys.TITLE = "title"
 EntityProximityKeys.GUILD = "guild"
 EntityProximityKeys.CLASS = "class"

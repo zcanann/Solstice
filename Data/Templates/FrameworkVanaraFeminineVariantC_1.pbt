@@ -1,12 +1,12 @@
 Assets {
-  Id: 159560351388496846
+  Id: 5470963346508225509
   Name: "FrameworkVanaraFeminineVariantC"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12019638526464963679
+      RootId: 9487123082128792598
       Objects {
-        Id: 12019638526464963679
+        Id: 9487123082128792598
         Name: "FrameworkVanaraFeminineVariantC"
         Transform {
           Scale {
@@ -15,8 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
-        ChildIds: 4281151014005761657
+        ParentId: 1314884817738718373
+        ChildIds: 12131030670623055792
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
@@ -117,7 +117,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4281151014005761657
+        Id: 12131030670623055792
         Name: "SyncedRigs_C"
         Transform {
           Location {
@@ -130,13 +130,13 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12019638526464963679
-        ChildIds: 14603350562439252178
+        ParentId: 9487123082128792598
+        ChildIds: 9915138135498311681
         UnregisteredParameters {
           Overrides {
             Name: "cs:MainRig"
             ObjectReference {
-              SubObjectId: 12019638526464963679
+              SubObjectId: 9487123082128792598
             }
           }
         }
@@ -159,7 +159,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14603350562439252178
+        Id: 9915138135498311681
         Name: "Humanoid 1 Rig"
         Transform {
           Location {
@@ -172,7 +172,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4281151014005761657
+        ParentId: 12131030670623055792
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
@@ -224,10 +224,6 @@ Assets {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:color"
             Color {
-              R: 0.078
-              G: 0.0272722803
-              B: 0.00934397057
-              A: 1
             }
           }
           Overrides {
@@ -249,6 +245,36 @@ Assets {
               G: 0.0313725509
               B: 0.0313725509
               A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail2:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail4:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail3:id"
+            AssetReference {
+              Id: 2018227301497757374
             }
           }
         }
@@ -284,7 +310,7 @@ Assets {
               Id: 11929174939694211128
             }
             SkinnedMeshes {
-              Id: 13353958418249580037
+              Id: 7155942901144560299
             }
             SkinnedMeshes {
               Id: 6304018492943247092
@@ -351,12 +377,12 @@ Assets {
       }
     }
     Assets {
-      Id: 13353958418249580037
-      Name: "Humanoid 1 Cassidy Hair"
+      Id: 7155942901144560299
+      Name: "Humanoid 1 Viper Helmet"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_hair_basic_001_ref"
+        AssetId: "npc_human_gal_hat_scifi_001_ref"
       }
     }
     Assets {

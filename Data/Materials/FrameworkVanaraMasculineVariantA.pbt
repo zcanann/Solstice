@@ -1,6 +1,6 @@
 Assets {
-  Id: 7443683350140792147
-  Name: "FrameworkWukongMasculineVariantB"
+  Id: 13327796119306530430
+  Name: "FrameworkVanaraMasculineVariantA"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"
@@ -12,10 +12,6 @@ Assets {
       Overrides {
         Name: "roughness_multiplier"
         Float: 1.25
-      }
-      Overrides {
-        Name: "v_tiles"
-        Float: 1.15
       }
     }
     Assets {

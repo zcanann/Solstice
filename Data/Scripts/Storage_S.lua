@@ -5,6 +5,7 @@ function CreateTestingCharacter(player)
 		-- TODO: Reference the appropriate keys
         [ Framework.Storage.Keys.Characters.NAME ] = "Lothlorian",
         [ Framework.Storage.Keys.Characters.RACE ] = Framework.Storage.Keys.Races.UNDEAD,
+        [ Framework.Storage.Keys.Characters.GENDER ] = Framework.Storage.Keys.Genders.MASCULINE,
         [ Framework.Storage.Keys.Characters.FACTION ] = Framework.Storage.Keys.Factions.ITHKUIL,
         [ Framework.Storage.Keys.Characters.CLASS ] = "mage",
         [ Framework.Storage.Keys.Characters.GUILD ] = "",
@@ -40,6 +41,8 @@ function OnPlayerJoined(player)
 		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.FACTION))
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE,
 		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.RACE))
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GENDER,
+		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.GENDER))
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.TITLE,
 		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.TITLE))
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ZONE,

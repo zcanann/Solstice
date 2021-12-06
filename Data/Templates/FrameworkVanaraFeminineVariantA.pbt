@@ -224,10 +224,6 @@ Assets {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:color"
             Color {
-              R: 0.078
-              G: 0.0272722803
-              B: 0.00934397057
-              A: 1
             }
           }
           Overrides {
@@ -249,6 +245,36 @@ Assets {
               G: 0.0313725509
               B: 0.0313725509
               A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail2:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail4:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail3:id"
+            AssetReference {
+              Id: 2018227301497757374
             }
           }
         }
@@ -284,7 +310,7 @@ Assets {
               Id: 13822615372482203236
             }
             SkinnedMeshes {
-              Id: 13353958418249580037
+              Id: 7155942901144560299
             }
             SkinnedMeshes {
               Id: 6304018492943247092
@@ -351,12 +377,12 @@ Assets {
       }
     }
     Assets {
-      Id: 13353958418249580037
-      Name: "Humanoid 1 Cassidy Hair"
+      Id: 7155942901144560299
+      Name: "Humanoid 1 Viper Helmet"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_hair_basic_001_ref"
+        AssetId: "npc_human_gal_hat_scifi_001_ref"
       }
     }
     Assets {

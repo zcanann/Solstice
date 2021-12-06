@@ -33,11 +33,13 @@ local propFrameworkAscendentMasculineVariantC = script:GetCustomProperty("Framew
 -- Variables
 local playerModels = { }
 
-local cachedPlayerHeights = { }
 local cachedPlayerRaces = { }
+local cachedPlayerGenders = { }
+local cachedPlayerHeights = { }
 
-local heightListeners = { }
 local raceListeners = { }
+local genderListeners = { }
+local heightListeners = { }
 
 function OnEntityEnteredRange(proximityObjectId)
     local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
@@ -50,6 +52,9 @@ function OnEntityEnteredRange(proximityObjectId)
         if not raceListeners[proximityObjectId] then
             raceListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
         end
+        if not genderListeners[proximityObjectId] then
+            genderListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.GENDER, OnEntityGenderChanged)
+        end
         if not heightListeners[proximityObjectId] then
             heightListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
         end
@@ -57,14 +62,18 @@ function OnEntityEnteredRange(proximityObjectId)
 end
 
 function OnEntityLeftRange(proximityObjectId)
-    if heightListeners[proximityObjectId] then
-        heightListeners[proximityObjectId]:Disconnect()
-        heightListeners[proximityObjectId] = nil
-    end
-    if raceListeners[proximityObjectId] then
-        raceListeners[proximityObjectId]:Disconnect()
-        raceListeners[proximityObjectId] = nil
-    end
+    Framework.Events.Disconnect(raceListeners[proximityObjectId])
+    raceListeners[proximityObjectId] = nil
+    cachedPlayerRaces[proximityObjectId] = nil
+
+    Framework.Events.Disconnect(genderListeners[proximityObjectId])
+    genderListeners[proximityObjectId] = nil
+    cachedPlayerGenders[proximityObjectId] = nil
+
+    Framework.Events.Disconnect(heightListeners[proximityObjectId])
+    heightListeners[proximityObjectId] = nil
+    cachedPlayerHeights[proximityObjectId] = nil
+
     if Object.IsValid(playerModels[proximityObjectId]) then
         playerModels[proximityObjectId]:Destroy()
     end
@@ -73,8 +82,6 @@ function OnEntityLeftRange(proximityObjectId)
         player.clientUserData.model = nil
     end
     playerModels[proximityObjectId] = nil
-    cachedPlayerHeights[proximityObjectId] = nil
-    cachedPlayerRaces[proximityObjectId] = nil
 end
 
 function RebuildModel(proximityObjectId)
@@ -90,34 +97,60 @@ function RebuildModel(proximityObjectId)
         player.clientUserData.model = nil
     end
 
-    if not cachedPlayerHeights[proximityObjectId] or not cachedPlayerRaces[proximityObjectId] then
+    local race = cachedPlayerRaces[proximityObjectId]
+    local gender = cachedPlayerGenders[proximityObjectId]
+    local height = cachedPlayerHeights[proximityObjectId]
+
+    if not race or not gender or not height then
         -- Still waiting on the data we need to construct the model
         return
     end
 
-    local race = cachedPlayerRaces[proximityObjectId]
-    local height = cachedPlayerHeights[proximityObjectId]
     local playerModel = nil
 
     if race == Framework.Storage.Keys.Races.ORC then
-        playerModel = World.SpawnAsset(propFrameworkOrcMasculineVariantA)
+        if gender == Framework.Storage.Keys.Genders.MASCULINE then
+            playerModel = World.SpawnAsset(propFrameworkOrcMasculineVariantA)
+        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
+            playerModel = World.SpawnAsset(propFrameworkOrcFeminineVariantA)
+        end
     elseif race == Framework.Storage.Keys.Races.UNDEAD then
-        playerModel = World.SpawnAsset(propFrameworkUndeadMasculineVariantA)
+        if gender == Framework.Storage.Keys.Genders.MASCULINE then
+            playerModel = World.SpawnAsset(propFrameworkUndeadMasculineVariantA)
+        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
+            playerModel = World.SpawnAsset(propFrameworkUndeadFeminineVariantA)
+        end
     elseif race == Framework.Storage.Keys.Races.DARK_ELF then
-        playerModel = World.SpawnAsset(propFrameworkDarkElfMasculineVariantA)
+        if gender == Framework.Storage.Keys.Genders.MASCULINE then
+            playerModel = World.SpawnAsset(propFrameworkDarkElfMasculineVariantA)
+        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
+            playerModel = World.SpawnAsset(propFrameworkDarkElfFeminineVariantA)
+        end
     elseif race == Framework.Storage.Keys.Races.HUMAN then
-        playerModel = World.SpawnAsset(propFrameworkHumanMasculineVariantA)
+        if gender == Framework.Storage.Keys.Genders.MASCULINE then
+            playerModel = World.SpawnAsset(propFrameworkHumanMasculineVariantA)
+        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
+            playerModel = World.SpawnAsset(propFrameworkHumanFeminineVariantA)
+        end
     elseif race == Framework.Storage.Keys.Races.ASCENDENT then
-        playerModel = World.SpawnAsset(propFrameworkAscendentMasculineVariantA)
+        if gender == Framework.Storage.Keys.Genders.MASCULINE then
+            playerModel = World.SpawnAsset(propFrameworkAscendentMasculineVariantA)
+        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
+            playerModel = World.SpawnAsset(propFrameworkAscendentFeminineVariantA)
+        end
     elseif race == Framework.Storage.Keys.Races.VANARA then
-        playerModel = World.SpawnAsset(propFrameworkVanaraMasculineVariantA)
+        if gender == Framework.Storage.Keys.Genders.MASCULINE then
+            playerModel = World.SpawnAsset(propFrameworkVanaraMasculineVariantA)
+        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
+            playerModel = World.SpawnAsset(propFrameworkVanaraFeminineVariantA)
+        end
     else
         -- TODO: Spawn some sort of default error model
         playerModel = World.SpawnAsset(propFrameworkAscendentMasculineVariantA)
     end
 
     if not playerModel then
-        warn("Invalid race provided")
+        warn("Invalid race or gender provided")
         return
     end
 
@@ -130,6 +163,11 @@ end
 
 function OnEntityRaceChanged(proximityObjectId, race)
     cachedPlayerRaces[proximityObjectId] = race
+    RebuildModel(proximityObjectId)
+end
+
+function OnEntityGenderChanged(proximityObjectId, gender)
+    cachedPlayerGenders[proximityObjectId] = gender
     RebuildModel(proximityObjectId)
 end
 

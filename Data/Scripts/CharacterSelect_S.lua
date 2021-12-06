@@ -31,6 +31,10 @@ end
 
 function OnBeginCreateNewCharacterRequested(player)
     local factionRng = math.random()
+    local genderCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Genders.GENDERS)
+
+    SetActiveGender(player, Framework.Storage.Keys.Genders.GENDERS[math.random(genderCount)])
+
     if factionRng < 0.5 then
         local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.COLONIST)
         SetActiveRace(player, Framework.Storage.Keys.Races.COLONIST[math.random(raceCount)])
@@ -38,6 +42,7 @@ function OnBeginCreateNewCharacterRequested(player)
         local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.ITHKUIL)
         SetActiveRace(player, Framework.Storage.Keys.Races.ITHKUIL[math.random(raceCount)])
     end
+
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
 end
 
@@ -97,7 +102,6 @@ function OnRequestDeleteCharacter(player, characterId)
 end
 
 function SetActiveRace(player, race)
-    characterSelectScreenStates[player].race = race
     if race == Framework.Storage.Keys.Races.ORC then
         player:Spawn({position = propSpawnPointOrc:GetWorldPosition(), rotation = propSpawnPointOrc:GetRotation()})
     elseif race == Framework.Storage.Keys.Races.UNDEAD then
@@ -115,11 +119,28 @@ function SetActiveRace(player, race)
         return;
     end
 
+    characterSelectScreenStates[player].race = race
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE, race)
 end
 
-function OnRequestSetActiveRace(player, newActiveRace)
-    SetActiveRace(player, newActiveRace)
+
+function SetActiveGender(player, gender)
+    if gender ~= Framework.Storage.Keys.Genders.MASCULINE and gender ~= Framework.Storage.Keys.Genders.FEMININE then
+        warn("Attempted to set invalid gender")
+        return
+    end
+
+    characterSelectScreenStates[player].gender = gender
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GENDER, gender)
+end
+
+function OnRequestSetActiveRace(player, race)
+    SetActiveRace(player, race)
+    SendCharacterSelectStateData(player)
+end
+
+function OnRequestSetActiveGender(player, gender)
+    SetActiveGender(player, gender)
     SendCharacterSelectStateData(player)
 end
 
@@ -170,4 +191,5 @@ Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQ
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, OnRequestDeleteCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, OnRequestSetActiveRace)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_GENDER, OnRequestSetActiveGender)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, OnEnterWorldRequested)
