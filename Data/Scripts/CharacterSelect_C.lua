@@ -11,6 +11,7 @@ local propNewCharacterScreenColonist = script:GetCustomProperty("NewCharacterScr
 local propCreateNewCharacterButton = script:GetCustomProperty("CreateNewCharacterButton"):WaitForObject()
 local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewCharacterButton"):WaitForObject()
 local propDeleteCharacterButton = script:GetCustomProperty("DeleteCharacterButton"):WaitForObject()
+local propCancelCreateCharacterButton = script:GetCustomProperty("CancelCreateCharacterButton"):WaitForObject()
 local propEnterWorldButton = script:GetCustomProperty("EnterWorldButton"):WaitForObject()
 
 local propCameraOrc = script:GetCustomProperty("CameraOrc"):WaitForObject()
@@ -57,9 +58,10 @@ function OnCharacterSelectStateChanged(stateData)
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
         OnCharactersLoaded()
         propCharacterSelectScreen.visibility = Visibility.INHERIT
-        propCreateNewCharacterButton.isInteractable = Framework.Utils.Table.Count(characterList) < Framework.Storage.CharacterCreateLimit
+        propCreateNewCharacterButton.isInteractable = stateData.characterListCount < Framework.Storage.CharacterCreateLimit
     elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
         propNewCharacterScreen.visibility = Visibility.INHERIT
+        propCancelCreateCharacterButton.isInteractable = stateData.characterListCount > 0
         if CharacterNameValidator.IsNameValid(stateData.name) then
             propCharacterNameTextBox.text = stateData.name
             propFinalizeNewCharacterButton.isInteractable = true
@@ -154,18 +156,13 @@ function CreateCharacterEntry(characterData)
     local characterEntry = World.SpawnAsset(propCharacterEntryTemplate, { parent = propCharacterEntriesRoot })
 
     local propCharacterNameText = characterEntry:GetCustomProperty("CharacterNameText"):GetObject()
-    local propLevelText = characterEntry:GetCustomProperty("LevelText"):GetObject()
+    local propLevelClassText = characterEntry:GetCustomProperty("LevelClassText"):GetObject()
     local propZoneText = characterEntry:GetCustomProperty("ZoneText"):GetObject()
+    local level = characterData[Framework.Storage.Keys.Characters.LEVEL] or 1
 
-    if propCharacterNameText then
-        propCharacterNameText.text = characterData[Framework.Storage.Keys.Characters.NAME]
-    end
-    if propLevelText then
-        propLevelText.text = characterData[Framework.Storage.Keys.Characters.FACTION]
-    end
-    if propZoneText then
-        propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
-    end
+    propCharacterNameText.text = characterData[Framework.Storage.Keys.Characters.NAME]
+    propLevelClassText.text = "Level " .. tostring(level) .. " " .. characterData[Framework.Storage.Keys.Characters.RACE] .. " " .. characterData[Framework.Storage.Keys.Characters.CLASS]
+    propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
 
     characterEntry.y = 32.0 + (characterData.sortIndex - 1) * 112.0
     characterEntry.clickedEvent:Connect(OnEntryClicked)
@@ -210,6 +207,11 @@ function OnCreateNewCharacterPressed()
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER)
 end
 
+function OnCancelCreateCharacterPressed()
+    AwaitServerResponse()
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_CREATE_NEW_CHARACTER)
+end
+
 function OnFinalizeNewCharacterPressed()
     selectedCharacterId = nil
     AwaitServerResponse()
@@ -217,16 +219,10 @@ function OnFinalizeNewCharacterPressed()
 end
 
 function OnDeleteSelectedCharacterButtonPressed()
-    local previousCharacterId = nil
-    for characterId, _ in pairs(characterList) do
-        if characterId == selectedCharacterId then
-            lastLoggedInCharacterId = nil
-            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, { selectedCharacterId })
-            selectedCharacterId = previousCharacterId
-            return
-        end
-        previousCharacterId = characterId
-    end
+    AwaitServerResponse()
+    local characterId = selectedCharacterId
+    selectedCharacterId = nil
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, { characterId })
 end
 
 function OnEnterWorldButtonPressed()
@@ -260,6 +256,7 @@ function ClearEntries()
 end
 
 propCreateNewCharacterButton.clickedEvent:Connect(OnCreateNewCharacterPressed)
+propCancelCreateCharacterButton.clickedEvent:Connect(OnCancelCreateCharacterPressed)
 propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPressed)
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
 propEnterWorldButton.clickedEvent:Connect(OnEnterWorldButtonPressed)

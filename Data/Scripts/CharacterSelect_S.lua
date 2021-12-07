@@ -11,12 +11,14 @@ local propSpawnPointVanara = script:GetCustomProperty("SpawnPointVanara"):WaitFo
 
 local characterSelectScreenStates = { }
 
-function LoadInitialState(player)
+function RefreshState(player)
     local characterList = Framework.Storage.GetCharacterList(player)
-    local hasCharacters = Framework.Utils.Table.Count(characterList) > 0
+    local characterListCount = Framework.Utils.Table.Count(characterList)
+    local hasCharacters = characterListCount > 0
 
     characterSelectScreenStates[player] = { }
     characterSelectScreenStates[player].lastLoggedInCharacterId = GetLastLoggedInCharacterId(player)
+    characterSelectScreenStates[player].characterListCount = characterListCount
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
 
     if hasCharacters then
@@ -52,6 +54,15 @@ function OnBeginCreateNewCharacterRequested(player)
 
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
     SendCharacterSelectStateData(player)
+end
+
+function OnCancelCreateNewCharacterRequested(player)
+    if characterSelectScreenStates[player].state ~= Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
+        warn("Attempted to cancel creating character from invalid state")
+        return
+    end
+
+    RefreshState(player)
 end
 
 function OnFinalizeCreateNewCharacterRequested(player)
@@ -96,9 +107,7 @@ function OnFinalizeCreateNewCharacterRequested(player)
     end
 
     Framework.Storage.CreateNewCharacter(player, initialData)
-    characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
-    characterSelectScreenStates[player].lastLoggedInCharacterId = GetLastLoggedInCharacterId(player)
-    SendCharacterSelectStateData(player)
+    RefreshState(player)
 end
 
 function OnRequestLogIntoCharacter(player, characterId)
@@ -111,13 +120,22 @@ function OnRequestLogIntoCharacter(player, characterId)
     end
 end
 
-function OnRequestSelectCharacter(player, characterId)
+function OnRequestSelectCharacter(player, characterIdToSelect)
     if not Object.IsValid(player) then
         warn("Invalid player")
         return
     end
 
-    Framework.Storage.SetActiveCharacterId(player, characterId)
+    -- Select the first available character if the characterId is invalid
+    if not Framework.Storage.IsValidCharacterId(player, characterIdToSelect) then
+        local characterList = Framework.Storage.GetCharacterList(player)
+        for characterId, _ in pairs(characterList) do
+            characterIdToSelect = characterId
+            break
+        end
+    end
+
+    Framework.Storage.SetActiveCharacterId(player, characterIdToSelect)
     SetActiveClass(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.CLASS))
     SetActiveGender(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.GENDER))
     SetActiveRace(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.RACE))
@@ -125,10 +143,19 @@ function OnRequestSelectCharacter(player, characterId)
     SendCharacterSelectStateData(player)
 end
 
-function OnRequestDeleteCharacter(player, characterId)
-    Framework.Storage.DeleteCharacter(player, characterId)
-    characterSelectScreenStates[player].lastLoggedInCharacterId = GetLastLoggedInCharacterId(player)
-    SendCharacterSelectStateData(player)
+function OnRequestDeleteCharacter(player, characterIdToDelete)
+    local sortIndex = Framework.Storage.GetCharacterSortIndex(player, characterIdToDelete)
+    Framework.Storage.DeleteCharacter(player, characterIdToDelete)
+
+    local characterList = Framework.Storage.GetCharacterList(player)
+
+    for characterId, characterData in pairs(characterList) do
+        if characterData.sortIndex > sortIndex then
+            Framework.Storage.SetActiveCharacterId(player, characterId)
+        end
+    end
+
+    RefreshState(player)
 end
 
 function GetLastLoggedInCharacterId(player)
@@ -238,7 +265,7 @@ function ChatCommandHandler(player, params)
 end
 
 function OnPlayerReadyToReceiveProximityData(player)
-    LoadInitialState(player)
+    RefreshState(player)
 end
 
 Chat.receiveMessageHook:Connect(ChatCommandHandler)
@@ -246,6 +273,7 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 Framework.Events.ListenForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER, OnBeginCreateNewCharacterRequested)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_CREATE_NEW_CHARACTER, OnCancelCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER, OnFinalizeCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SELECT_CHARACTER, OnRequestSelectCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)

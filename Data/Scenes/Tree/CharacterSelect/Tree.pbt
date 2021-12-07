@@ -252,6 +252,12 @@ Objects {
         SelfId: 17842537656311257442
       }
     }
+    Overrides {
+      Name: "cs:CancelCreateCharacterButton"
+      ObjectReference {
+        SelfId: 5301055616480901615
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

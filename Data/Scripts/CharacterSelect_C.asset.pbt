@@ -63,6 +63,11 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:CancelCreateCharacterButton"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:EnterWorldButton"
         ObjectReference {
         }

@@ -76,7 +76,7 @@ StorageAPI.WipePlayerData = function (player)
 	end
 end
 
-StorageAPI.ReplicateReadOnlyData = function(player)
+StorageAPI.ReplicateReadOnlyData = function (player)
 	local playerData = GetPlayerDataWrapper(player)
 
 	-- Replicate all stored data to the client. If this has perf issues in the future, we may need to limit what we send here.
@@ -86,6 +86,16 @@ end
 
 StorageAPI.GetActiveCharacterId = function (player)
 	return StorageAPI.GetGlobalKey(player, StorageAPI.KeyLastLoggedInCharacterId)
+end
+
+StorageAPI.IsValidCharacterId = function (player, characterId)
+	local playerData = GetPlayerDataWrapper(player)
+
+	if not characterId or not playerData[StorageAPI.CharacterDataKey][characterId] then
+		return false
+	end
+
+	return true
 end
 
 StorageAPI.SetActiveCharacterId = function (player, characterId)
@@ -142,28 +152,26 @@ StorageAPI.CreateNewCharacter = function (player, initialData)
 end
 
 StorageAPI.DeleteCharacter = function (player, characterId)
-	if not characterId then return end
+	if not StorageAPI.IsValidCharacterId(player, characterId) then
+		warn("Invalid characterId provided: " .. (characterId or ""))
+		return
+	end
 
 	local playerData = GetPlayerDataWrapper(player)
+	local deletedSortIndex = playerData[StorageAPI.CharacterDataKey][characterId].sortIndex
+	playerData[StorageAPI.CharacterDataKey][characterId] = nil
 
-	if playerData[StorageAPI.CharacterDataKey][characterId] then
-		local deletedSortIndex = playerData[StorageAPI.CharacterDataKey][characterId].sortIndex
-		playerData[StorageAPI.CharacterDataKey][characterId] = nil
-
-		-- Shift sort indicies to account for deleted character
-		if deletedSortIndex then
-			for _, data in pairs(playerData[StorageAPI.CharacterDataKey]) do
-				if data.sortIndex > deletedSortIndex then
-					data.sortIndex = data.sortIndex - 1
-				end
+	-- Shift sort indicies to account for deleted character
+	if deletedSortIndex then
+		for _, data in pairs(playerData[StorageAPI.CharacterDataKey]) do
+			if data.sortIndex > deletedSortIndex then
+				data.sortIndex = data.sortIndex - 1
 			end
 		end
-
-		SetPlayerDataWrapper(player, playerData)
-		StorageAPI.SetActiveCharacterId(player, nil)
-	else
-		warn("Unable to delete character data, id not found: " .. characterId)
 	end
+
+	SetPlayerDataWrapper(player, playerData)
+	StorageAPI.SetActiveCharacterId(player, nil)
 end
 
 StorageAPI.GetCharacterList = function (player)
@@ -199,6 +207,17 @@ StorageAPI.GetCharacterKey = function (player, key)
 	end
 
 	return playerData[StorageAPI.CharacterDataKey][characterId][key]
+end
+
+StorageAPI.GetCharacterSortIndex = function (player, characterId)
+	if not StorageAPI.IsValidCharacterId(player, characterId) then
+		warn("Invalid characterId")
+		return
+	end
+
+	local playerData = GetPlayerDataWrapper(player)
+
+	return playerData[StorageAPI.CharacterDataKey][characterId].sortIndex
 end
 
 StorageAPI.SetCharacterKey = function (player, key, value)

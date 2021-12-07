@@ -10,5 +10,6 @@ Player.RACE = "race"
 Player.GENDER = "gender"
 Player.TITLE = "title"
 Player.ZONE = "zone"
+Player.LEVEL = "level"
 
 return Player
