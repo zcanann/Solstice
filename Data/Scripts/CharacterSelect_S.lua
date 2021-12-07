@@ -13,15 +13,14 @@ local characterSelectScreenStates = { }
 
 function LoadInitialState(player)
     local characterList = Framework.Storage.GetCharacterList(player)
-    local lastLoggedInCharacterId = Framework.Storage.GetGlobalKey(player, Framework.Storage.KeyLastSelectedCharacterId)
     local hasCharacters = Framework.Utils.Table.Count(characterList) > 0
 
     characterSelectScreenStates[player] = { }
-    characterSelectScreenStates[player].lastLoggedInCharacterId = lastLoggedInCharacterId
+    characterSelectScreenStates[player].lastLoggedInCharacterId = GetLastLoggedInCharacterId(player)
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
 
     if hasCharacters then
-        OnRequestSetActiveCharacter(player, characterSelectScreenStates[player].lastLoggedInCharacterId)
+        OnRequestSelectCharacter(player, characterSelectScreenStates[player].lastLoggedInCharacterId)
     else
         -- No characters found -- change state to NEW_CHARACTER
         OnBeginCreateNewCharacterRequested(player)
@@ -98,6 +97,7 @@ function OnFinalizeCreateNewCharacterRequested(player)
 
     Framework.Storage.CreateNewCharacter(player, initialData)
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
+    characterSelectScreenStates[player].lastLoggedInCharacterId = GetLastLoggedInCharacterId(player)
     SendCharacterSelectStateData(player)
 end
 
@@ -111,13 +111,11 @@ function OnRequestLogIntoCharacter(player, characterId)
     end
 end
 
-function OnRequestSetActiveCharacter(player, characterId)
+function OnRequestSelectCharacter(player, characterId)
     if not Object.IsValid(player) then
         warn("Invalid player")
         return
     end
-
-    print(characterId)
 
     Framework.Storage.SetActiveCharacterId(player, characterId)
     SetActiveClass(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.CLASS))
@@ -129,7 +127,23 @@ end
 
 function OnRequestDeleteCharacter(player, characterId)
     Framework.Storage.DeleteCharacter(player, characterId)
+    characterSelectScreenStates[player].lastLoggedInCharacterId = GetLastLoggedInCharacterId(player)
     SendCharacterSelectStateData(player)
+end
+
+function GetLastLoggedInCharacterId(player)
+    local lastLoggedInCharacterId = Framework.Storage.GetGlobalKey(player, Framework.Storage.KeyLastLoggedInCharacterId)
+
+    if not lastLoggedInCharacterId then
+        local characterList = Framework.Storage.GetCharacterList(player)
+
+        for characterId, _ in pairs(characterList) do
+            lastLoggedInCharacterId = characterId
+            break
+        end
+    end
+
+    return lastLoggedInCharacterId
 end
 
 function SetActiveRace(player, race)
@@ -233,7 +247,7 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER, OnBeginCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER, OnFinalizeCreateNewCharacterRequested)
-Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CHARACTER, OnRequestSetActiveCharacter)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SELECT_CHARACTER, OnRequestSelectCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, OnRequestDeleteCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, OnRequestSetActiveRace)

@@ -3090,7 +3090,8 @@ Objects {
     }
   }
   ParentId: 7541412349701524784
-  ChildIds: 14527709608773272263
+  ChildIds: 16796562498369195295
+  ChildIds: 6704523325297520964
   ChildIds: 16666328305868573987
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3119,25 +3120,21 @@ Objects {
       }
       FontSize: 20
       ButtonColor {
-        R: 0.498039246
-        G: 0.498039246
+        R: 0.235294133
         A: 1
       }
       HoveredColor {
-        R: 1
-        G: 0.843137324
-        B: 0.21960786
+        R: 0.478431404
         A: 1
       }
       PressedColor {
-        R: 1
-        G: 0.843137324
-        B: 0.21960786
+        R: 0.478431404
         A: 1
       }
       DisabledColor {
-        R: 0.498039246
-        G: 0.498039246
+        R: 0.0627451
+        G: 0.0627451
+        B: 0.0627451
         A: 1
       }
       Brush {
@@ -3259,81 +3256,6 @@ Objects {
   }
 }
 Objects {
-  Id: 14527709608773272263
-  Name: "UI Image"
-  Transform {
-    Location {
-      X: -1722.73254
-      Y: 186.212891
-      Z: -200
-    }
-    Rotation {
-      Yaw: 124.999992
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 6727347562858841381
-  ChildIds: 16796562498369195295
-  ChildIds: 6704523325297520964
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: -8
-    Height: -8
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    AddSizeToParentIfUsingParentSize: true
-    UseParentWidth: true
-    UseParentHeight: true
-    Image {
-      Brush {
-        Id: 841534158063459245
-      }
-      Color {
-        R: 0.238
-        A: 1
-      }
-      TeamSettings {
-      }
-      ShadowColor {
-        A: 1
-      }
-      ShadowOffset {
-      }
-      ScreenshotIndex: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:middlecenter"
-        }
-      }
-    }
-  }
-}
-Objects {
   Id: 6704523325297520964
   Name: "BorderBottom"
   Transform {
@@ -3348,7 +3270,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14527709608773272263
+  ParentId: 6727347562858841381
   ChildIds: 13643887626131797690
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3363,16 +3285,13 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 8
-    Height: -24
-    UIX: -4
-    UIY: 4
+    Width: 100
+    Height: 100
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     UseParentHeight: true
     Panel {
@@ -3480,7 +3399,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14527709608773272263
+  ParentId: 6727347562858841381
   ChildIds: 18360592206011420222
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3495,16 +3414,13 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 8
-    Height: -24
-    UIX: -4
-    UIY: -4
+    Width: 100
+    Height: 100
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
-    AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     UseParentHeight: true
     Panel {

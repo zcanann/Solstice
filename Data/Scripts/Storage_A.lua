@@ -4,11 +4,11 @@ local StorageAPI = { }
 local Framework = { }
 Framework.Dump = require(script:GetCustomProperty("Dump")).Dump
 
-StorageAPI.CharacterLimit = 3
+StorageAPI.CharacterCreateLimit = 3
 StorageAPI.Keys = require(script:GetCustomProperty("StorageKeys"))
 StorageAPI.CharacterDataKey = "characters"
 StorageAPI.GlobalDataKey = "global"
-StorageAPI.KeyLastSelectedCharacterId = "last_selected_character_id"
+StorageAPI.KeyLastLoggedInCharacterId = "last_logged_in_character_id"
 
 function GenerateCharacterId()
 	-- The character format is an 8 letter random string. This only needs to be unique for a Core account, not globally.
@@ -85,7 +85,7 @@ StorageAPI.ReplicateReadOnlyData = function(player)
 end
 
 StorageAPI.GetActiveCharacterId = function (player)
-	return StorageAPI.GetGlobalKey(player, StorageAPI.KeyLastSelectedCharacterId)
+	return StorageAPI.GetGlobalKey(player, StorageAPI.KeyLastLoggedInCharacterId)
 end
 
 StorageAPI.SetActiveCharacterId = function (player, characterId)
@@ -95,7 +95,7 @@ StorageAPI.SetActiveCharacterId = function (player, characterId)
 		return
 	end
 
-	if not playerData[StorageAPI.CharacterDataKey][characterId] then
+	if characterId and not playerData[StorageAPI.CharacterDataKey][characterId] then
 		warn("Character id not found: " .. characterId)
 		return false
 	end
@@ -103,7 +103,7 @@ StorageAPI.SetActiveCharacterId = function (player, characterId)
 	-- Clear replicated Storage data
 	_G.ActiveCharacterId = characterId
 
-	StorageAPI.SetGlobalKey(player, StorageAPI.KeyLastSelectedCharacterId, characterId)
+	StorageAPI.SetGlobalKey(player, StorageAPI.KeyLastLoggedInCharacterId, characterId)
 	return true
 end
 
@@ -120,7 +120,7 @@ StorageAPI.CreateNewCharacter = function (player, initialData)
 	local playerData = GetPlayerDataWrapper(player)
 	local characterCount = StorageAPI.GetCharacterCount(player)
 
-	if characterCount >= StorageAPI.CharacterLimit then
+	if characterCount >= StorageAPI.CharacterCreateLimit then
 		warn("Cannot create another character! Limit reached.")
 		return
 	end
@@ -160,6 +160,7 @@ StorageAPI.DeleteCharacter = function (player, characterId)
 		end
 
 		SetPlayerDataWrapper(player, playerData)
+		StorageAPI.SetActiveCharacterId(player, nil)
 	else
 		warn("Unable to delete character data, id not found: " .. characterId)
 	end

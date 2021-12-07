@@ -29,11 +29,13 @@ function OnPrivateNetworkedDataChanged(player, key)
         end
 
         -- In this Framework, it is assumed that only 3 types of data are networked over private player data: character, global, and proximity data
-        if key == Framework.Storage.CharacterDataKey and subData then
+        if key == Framework.Storage.CharacterDataKey then
             -- Broadcast character data changes
             -- TODO: This seems to fire too often for too many keys. Diff problem?
-            for characterDataKey, _ in pairs(subData) do
-                Framework.Events.Broadcast.Local(Framework.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
+            if subData then
+                for characterDataKey, _ in pairs(subData) do
+                    Framework.Events.Broadcast.Local(Framework.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
+                end
             end
         elseif key == Framework.Storage.GlobalDataKey then
             -- Nothing

@@ -57,6 +57,7 @@ function OnCharacterSelectStateChanged(stateData)
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
         OnCharactersLoaded()
         propCharacterSelectScreen.visibility = Visibility.INHERIT
+        propCreateNewCharacterButton.isInteractable = Framework.Utils.Table.Count(characterList) < Framework.Storage.CharacterCreateLimit
     elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
         propNewCharacterScreen.visibility = Visibility.INHERIT
         if CharacterNameValidator.IsNameValid(stateData.name) then
@@ -176,10 +177,15 @@ function OnCharactersLoaded()
     ClearEntries()
 
     characterList = Framework.Storage.GetCharacterList(localPlayer) or { }
+    local found = false
 
     for characterId, characterData in pairs(characterList) do
         local characterEntry = CreateCharacterEntry(characterData)
         characterEntries[characterId] = characterEntry
+
+        if characterId == selectedCharacterId then
+            found = true
+        end
 
         if not selectedCharacterId and (lastLoggedInCharacterId == nil or characterId == lastLoggedInCharacterId) then
             selectedCharacterId = characterId
@@ -187,7 +193,7 @@ function OnCharactersLoaded()
     end
 
     -- If no selection was made, select the first character
-    if not selectedCharacterId  then
+    if not found or not selectedCharacterId  then
         for characterId, _ in pairs(characterEntries) do
             selectedCharacterId = characterId
             break
@@ -205,17 +211,18 @@ function OnCreateNewCharacterPressed()
 end
 
 function OnFinalizeNewCharacterPressed()
+    selectedCharacterId = nil
     AwaitServerResponse()
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER)
 end
 
 function OnDeleteSelectedCharacterButtonPressed()
     local previousCharacterId = nil
-    for characterId, _ in ipairs(characterEntries) do
+    for characterId, _ in pairs(characterList) do
         if characterId == selectedCharacterId then
             lastLoggedInCharacterId = nil
+            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, { selectedCharacterId })
             selectedCharacterId = previousCharacterId
-            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, { characterId })
             return
         end
         previousCharacterId = characterId
@@ -227,7 +234,7 @@ function OnEnterWorldButtonPressed()
         warn("Attempted to enter world without selecting a character!")
         return
     end
-    print(selectedCharacterId)
+
     Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, { selectedCharacterId })
 end
 
@@ -235,7 +242,7 @@ function OnEntryClicked(selectedEntry)
     for characterId, entry in pairs(characterEntries) do
         if entry == selectedEntry then
             selectedCharacterId = characterId
-            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CHARACTER, { selectedCharacterId })
+            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SELECT_CHARACTER, { selectedCharacterId })
         end
     end
 
