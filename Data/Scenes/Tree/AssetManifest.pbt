@@ -8,6 +8,15 @@ Assets {
   }
 }
 Assets {
+  Id: 16814658523769158151
+  Name: "Camouflage - Woodland"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "camo_woodland_001"
+  }
+}
+Assets {
   Id: 15582506287555989570
   Name: "Bush Leafy Low 01"
   PlatformAssetType: 1

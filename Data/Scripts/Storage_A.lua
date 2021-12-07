@@ -91,7 +91,9 @@ end
 StorageAPI.SetActiveCharacterId = function (player, characterId)
 	local playerData = GetPlayerDataWrapper(player)
 
-	if characterId == _G.ActiveCharacterId then return end
+	if characterId == _G.ActiveCharacterId then
+		return
+	end
 
 	if not playerData[StorageAPI.CharacterDataKey][characterId] then
 		warn("Character id not found: " .. characterId)
@@ -130,8 +132,11 @@ StorageAPI.CreateNewCharacter = function (player, initialData)
 		return nil
 	end
 
+	initialData.sortIndex = StorageAPI.GetCharacterCount(player) + 1
+
 	playerData[StorageAPI.CharacterDataKey][characterId] = initialData or { }
 	SetPlayerDataWrapper(player, playerData)
+	StorageAPI.SetActiveCharacterId(player, characterId)
 
 	return characterId
 end
@@ -142,7 +147,18 @@ StorageAPI.DeleteCharacter = function (player, characterId)
 	local playerData = GetPlayerDataWrapper(player)
 
 	if playerData[StorageAPI.CharacterDataKey][characterId] then
+		local deletedSortIndex = playerData[StorageAPI.CharacterDataKey][characterId].sortIndex
 		playerData[StorageAPI.CharacterDataKey][characterId] = nil
+
+		-- Shift sort indicies to account for deleted character
+		if deletedSortIndex then
+			for _, data in pairs(playerData[StorageAPI.CharacterDataKey]) do
+				if data.sortIndex > deletedSortIndex then
+					data.sortIndex = data.sortIndex - 1
+				end
+			end
+		end
+
 		SetPlayerDataWrapper(player, playerData)
 	else
 		warn("Unable to delete character data, id not found: " .. characterId)
@@ -156,6 +172,10 @@ StorageAPI.GetCharacterList = function (player)
 	for characterId, characterData in pairs(playerData[StorageAPI.CharacterDataKey]) do
 		characterList[characterId] = characterData
 	end
+
+	table.sort(characterList, function (a, b)
+		return a.sortIndex < b.sortIndex
+	end)
 
 	return characterList
 end

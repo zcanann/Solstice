@@ -24,6 +24,8 @@ for _, image in pairs(images) do
                     shadow.dock = image.dock
                     shadow.anchor = image.anchor
                     shadow.rotationAngle = image.rotationAngle
+                    shadow.isFlippedHorizontal = image.isFlippedHorizontal
+                    shadow.isFlippedVertical = image.isFlippedVertical
                     shadow:SetShadowOffset(Vector2.New(x * propShadowSize, y * propShadowSize))
                 end
             end

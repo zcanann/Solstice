@@ -87,6 +87,14 @@ Objects {
             Id: 10081236574278643900
           }
         }
+        Overrides {
+          Name: "Width"
+          Int: 40
+        }
+        Overrides {
+          Name: "Height"
+          Int: 40
+        }
       }
     }
     ParameterOverrideMap {

@@ -26,23 +26,26 @@ local propSunlight = script:GetCustomProperty("Sunlight"):WaitForObject()
 
 local CharacterNameValidator = require(script:GetCustomProperty("CharacterNameValidator"))
 
+local factionExplainerColonist = "The Colonists are a technologically advanced race from the ice planet <Planet name>. Fleeing this dying planet, fleets of colonists traveled to Kotava in suspended hibernation. Here the Colonists seek to forge a new beginning and rebuild their great empire. However, This monumental task is made difficult by the hostile Ithikuil inhabiting the planet."
+local factionExplainerIthkuil = "The Ithkuil are the native inhabitants of Kotava. Despite not being technologically advanced, they compensate for this through their mastery of elemental magic. Until the arrival of the Colonists, they lived a simple and peaceful life guided by their spirits. The agression by the Colonists has forced the Ithkuil tribes to band together to preserve their traditions."
+
+local classExplainerColonist = "- Improved Engineering<br>- Improved Alchemy<br>Goblins are a small and intelligent humanoid race. They are physically weak, but compensate for this with their craftiness."
+local classExplainerIthkuil = ""
+
+local raceExplainerColonist = ""
+local raceExplainerIthkuil = ""
+
 local localPlayer = Game.GetLocalPlayer()
 local characterEntries = { }
-local characterIndices = { }
 local characterList = { }
 local lastLoggedInCharacterId = nil
-local selectedEntry = nil
+local selectedCharacterId = nil
 
 local defaultNameText = propCharacterNameTextBox.text
 
 function OnCharacterSelectStateChanged(stateData)
     lastLoggedInCharacterId = stateData.lastLoggedInCharacterId
-
-    if CharacterNameValidator.IsNameValid(stateData.name) then
-        propCharacterNameTextBox.text = stateData.name
-    else
-        propCharacterNameTextBox.text = "<Type character name into chat>"
-    end
+    selectedCharacterId = selectedCharacterId or lastLoggedInCharacterId
 
     UpdateCameraFromRace(stateData.race)
 
@@ -52,11 +55,17 @@ function OnCharacterSelectStateChanged(stateData)
     propNewCharacterScreenColonist.visibility = Visibility.FORCE_OFF
 
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
+        OnCharactersLoaded()
         propCharacterSelectScreen.visibility = Visibility.INHERIT
     elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
         propNewCharacterScreen.visibility = Visibility.INHERIT
-        propFinalizeNewCharacterButton.isInteractable = false
-        propCharacterNameTextBox.text = defaultNameText
+        if CharacterNameValidator.IsNameValid(stateData.name) then
+            propCharacterNameTextBox.text = stateData.name
+            propFinalizeNewCharacterButton.isInteractable = true
+        else
+            propCharacterNameTextBox.text = defaultNameText
+            propFinalizeNewCharacterButton.isInteractable = false
+        end
         if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, stateData.race) then
             propNewCharacterScreenIthkuil.visibility = Visibility.INHERIT
         elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, stateData.race) then
@@ -72,7 +81,12 @@ function OnCharacterSelectStateChanged(stateData)
 end
 
 function AwaitServerResponse()
-    
+    --[[
+    propCharacterSelectScreen.visibility = Visibility.FORCE_OFF
+    propNewCharacterScreen.visibility = Visibility.FORCE_OFF
+    propNewCharacterScreenIthkuil.visibility = Visibility.FORCE_OFF
+    propNewCharacterScreenColonist.visibility = Visibility.FORCE_OFF
+    --]]
 end
 
 function UpdateCameraFromRace(race)
@@ -119,13 +133,13 @@ function UpdateEntryVisuals(characterId)
     propColonistBorderSelected.visibility = Visibility.FORCE_OFF
 
     if characterData[Framework.Storage.Keys.Characters.FACTION] == Framework.Storage.Keys.Factions.ITHKUIL then
-        if characterEntry == selectedEntry then
+        if characterId == selectedCharacterId then
             propIthkuilBorderSelected.visibility = Visibility.INHERIT
         else
             propIthkuilBorder.visibility = Visibility.INHERIT
         end
     else
-        if characterEntry == selectedEntry then
+        if characterId == selectedCharacterId then
             propColonistBorderSelected.visibility = Visibility.INHERIT
         else
             propColonistBorder.visibility = Visibility.INHERIT
@@ -152,8 +166,8 @@ function CreateCharacterEntry(characterData)
         propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
     end
 
-    characterEntry.y = 32.0 + #characterIndices * 112.0
-    characterEntry.clickedEvent:Connect(OnEntryClicked, characterEntry)
+    characterEntry.y = 32.0 + (characterData.sortIndex - 1) * 112.0
+    characterEntry.clickedEvent:Connect(OnEntryClicked)
 
     return characterEntry
 end
@@ -161,22 +175,21 @@ end
 function OnCharactersLoaded()
     ClearEntries()
 
-    characterList = Framework.Storage.GetCharacterList(localPlayer)
+    characterList = Framework.Storage.GetCharacterList(localPlayer) or { }
 
     for characterId, characterData in pairs(characterList) do
         local characterEntry = CreateCharacterEntry(characterData)
         characterEntries[characterId] = characterEntry
-        table.insert(characterIndices, characterId)
 
-        if not selectedEntry and (lastLoggedInCharacterId == nil or characterId == lastLoggedInCharacterId) then
-            selectedEntry = characterEntry
+        if not selectedCharacterId and (lastLoggedInCharacterId == nil or characterId == lastLoggedInCharacterId) then
+            selectedCharacterId = characterId
         end
     end
 
     -- If no selection was made, select the first character
-    if not selectedEntry or not Object.IsValid(selectedEntry) then
-        for _, characterEntry in pairs(characterEntries) do
-            selectedEntry = characterEntry
+    if not selectedCharacterId  then
+        for characterId, _ in pairs(characterEntries) do
+            selectedCharacterId = characterId
             break
         end
     end
@@ -197,32 +210,34 @@ function OnFinalizeNewCharacterPressed()
 end
 
 function OnDeleteSelectedCharacterButtonPressed()
-    local previousEntry = nil
-    for _, characterId in ipairs(characterIndices) do
-        local characterEntry = characterEntries[characterId]
-
-        if characterEntry == selectedEntry then
-            selectedEntry = previousEntry
+    local previousCharacterId = nil
+    for characterId, _ in ipairs(characterEntries) do
+        if characterId == selectedCharacterId then
             lastLoggedInCharacterId = nil
+            selectedCharacterId = previousCharacterId
             Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, { characterId })
             return
         end
+        previousCharacterId = characterId
     end
 end
 
 function OnEnterWorldButtonPressed()
-    for _, characterId in ipairs(characterIndices) do
-        local characterEntry = characterEntries[characterId]
-
-        if characterEntry == selectedEntry then
-            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, { characterId })
-            return
-        end
+    if not selectedCharacterId then
+        warn("Attempted to enter world without selecting a character!")
+        return
     end
+    print(selectedCharacterId)
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, { selectedCharacterId })
 end
 
-function OnEntryClicked(characterEntry)
-    selectedEntry = characterEntry
+function OnEntryClicked(selectedEntry)
+    for characterId, entry in pairs(characterEntries) do
+        if entry == selectedEntry then
+            selectedCharacterId = characterId
+            Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CHARACTER, { selectedCharacterId })
+        end
+    end
 
     for characterId, _ in pairs(characterList) do
         UpdateEntryVisuals(characterId)
@@ -235,7 +250,6 @@ function ClearEntries()
     end
 
     characterEntries = { }
-    characterIndices = { }
 end
 
 propCreateNewCharacterButton.clickedEvent:Connect(OnCreateNewCharacterPressed)

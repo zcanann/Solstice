@@ -1,13 +1,4 @@
 Assets {
-  Id: 14923596241881017761
-  Name: "Icon Gold"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Gold"
-  }
-}
-Assets {
   Id: 9553706678394867791
   Name: "Japanese Frame 001"
   PlatformAssetType: 9

@@ -21,6 +21,58 @@ Objects {
   ParentId: 15022815161956759828
   TemplateInstance {
     ParameterOverrideMap {
+      key: 653116478839468812
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2075924017437700122
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2127752434331508577
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2350415781653029360
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3595273194815043168
       value {
         Overrides {
@@ -43,11 +95,11 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -48
+          Float: -21
         }
         Overrides {
           Name: "UIY"
-          Float: 72
+          Float: 228
         }
         Overrides {
           Name: "Scale"
@@ -60,13 +112,13 @@ Objects {
         Overrides {
           Name: "Anchor"
           Enum {
-            Value: "mc:euianchor:middleright"
+            Value: "mc:euianchor:topright"
           }
         }
         Overrides {
           Name: "Dock"
           Enum {
-            Value: "mc:euianchor:middleright"
+            Value: "mc:euianchor:topright"
           }
         }
       }
@@ -81,11 +133,37 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 4335019176636083810
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 4738545747254556631
       value {
         Overrides {
           Name: "FlipHorizontal"
           Bool: true
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 5110088942499273130
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
         }
       }
     }
@@ -101,12 +179,142 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 6115254664595709178
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 7774143969801346823
       value {
         Overrides {
           Name: "Image"
           AssetReference {
             Id: 1735542245241184245
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8514764647823187465
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9545393606344960954
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10758254065362199686
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11635536842508140720
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12303157076950826821
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12343195199696229056
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13784995448426081219
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15759738271171445342
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15885875453866596476
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
           }
         }
       }
@@ -159,6 +367,58 @@ Objects {
   ParentId: 15022815161956759828
   TemplateInstance {
     ParameterOverrideMap {
+      key: 653116478839468812
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2075924017437700122
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2127752434331508577
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2350415781653029360
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3595273194815043168
       value {
         Overrides {
@@ -181,11 +441,11 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -192
+          Float: -165
         }
         Overrides {
           Name: "UIY"
-          Float: 0
+          Float: 156
         }
         Overrides {
           Name: "Scale"
@@ -198,13 +458,13 @@ Objects {
         Overrides {
           Name: "Anchor"
           Enum {
-            Value: "mc:euianchor:middleright"
+            Value: "mc:euianchor:topright"
           }
         }
         Overrides {
           Name: "Dock"
           Enum {
-            Value: "mc:euianchor:middleright"
+            Value: "mc:euianchor:topright"
           }
         }
       }
@@ -219,11 +479,37 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 4335019176636083810
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 4738545747254556631
       value {
         Overrides {
           Name: "FlipHorizontal"
           Bool: true
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 5110088942499273130
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
         }
       }
     }
@@ -239,12 +525,142 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 6115254664595709178
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 7774143969801346823
       value {
         Overrides {
           Name: "Image"
           AssetReference {
             Id: 1735542245241184245
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8514764647823187465
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9545393606344960954
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10758254065362199686
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11635536842508140720
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12303157076950826821
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12343195199696229056
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13784995448426081219
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15759738271171445342
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15885875453866596476
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
           }
         }
       }
@@ -303,6 +719,58 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 653116478839468812
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2075924017437700122
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2127752434331508577
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 2350415781653029360
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3595273194815043168
       value {
         Overrides {
@@ -333,22 +801,22 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -48
+          Float: -21
         }
         Overrides {
           Name: "UIY"
-          Float: -72
+          Float: 84
         }
         Overrides {
           Name: "Anchor"
           Enum {
-            Value: "mc:euianchor:middleright"
+            Value: "mc:euianchor:topright"
           }
         }
         Overrides {
           Name: "Dock"
           Enum {
-            Value: "mc:euianchor:middleright"
+            Value: "mc:euianchor:topright"
           }
         }
       }
@@ -363,11 +831,37 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 4335019176636083810
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 4738545747254556631
       value {
         Overrides {
           Name: "FlipHorizontal"
           Bool: true
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 5110088942499273130
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
         }
       }
     }
@@ -383,12 +877,142 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 6115254664595709178
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 7774143969801346823
       value {
         Overrides {
           Name: "Image"
           AssetReference {
             Id: 1735542245241184245
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8514764647823187465
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 9545393606344960954
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10758254065362199686
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 11635536842508140720
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12303157076950826821
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 12343195199696229056
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13784995448426081219
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15759738271171445342
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15885875453866596476
+      value {
+        Overrides {
+          Name: "Color"
+          Color {
+            G: 0.105882362
+            B: 0.329411775
+            A: 1
           }
         }
       }
@@ -463,11 +1087,11 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: 48
+          Float: 17
         }
         Overrides {
           Name: "UIY"
-          Float: 72
+          Float: 221
         }
         Overrides {
           Name: "Scale"
@@ -475,6 +1099,18 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+        Overrides {
+          Name: "Anchor"
+          Enum {
+            Value: "mc:euianchor:topleft"
+          }
+        }
+        Overrides {
+          Name: "Dock"
+          Enum {
+            Value: "mc:euianchor:topleft"
           }
         }
       }
@@ -545,7 +1181,7 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: 192
+          Float: 161
         }
         Overrides {
           Name: "Scale"
@@ -557,7 +1193,19 @@ Objects {
         }
         Overrides {
           Name: "UIY"
-          Float: 0
+          Float: 149
+        }
+        Overrides {
+          Name: "Anchor"
+          Enum {
+            Value: "mc:euianchor:topleft"
+          }
+        }
+        Overrides {
+          Name: "Dock"
+          Enum {
+            Value: "mc:euianchor:topleft"
+          }
         }
       }
     }
@@ -623,10 +1271,181 @@ Objects {
             Yaw: -125.000038
           }
         }
+        Overrides {
+          Name: "UIX"
+          Float: 17
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 77
+        }
       }
     }
     TemplateAsset {
       Id: 4895940294124353172
+    }
+  }
+}
+Objects {
+  Id: 14806804982927840474
+  Name: "RaceTextColonists"
+  Transform {
+    Location {
+      X: 1140
+      Y: 1305
+      Z: -200
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15022815161956759828
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIX: -16
+    UIY: 16
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Colonists"
+      Color {
+        G: 0.0901960805
+        B: 0.749019623
+        A: 1
+      }
+      Size: 28
+      Justification {
+        Value: "mc:etextjustify:right"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11918000404206027739
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+      OutlineSize: 3
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topright"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topright"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14287197185503625573
+  Name: "RaceTextIthkuil"
+  Transform {
+    Location {
+      X: 1140
+      Y: 1305
+      Z: -200
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15022815161956759828
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    UIX: 16
+    UIY: 16
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Text {
+      Label: "Ithkuil"
+      Color {
+        R: 0.478431404
+        A: 1
+      }
+      Size: 28
+      Justification {
+        Value: "mc:etextjustify:left"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 11918000404206027739
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+      OutlineSize: 3
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
     }
   }
 }

@@ -18,22 +18,30 @@ function LoadInitialState(player)
 
     characterSelectScreenStates[player] = { }
     characterSelectScreenStates[player].lastLoggedInCharacterId = lastLoggedInCharacterId
+    characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
 
     if hasCharacters then
-        characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
+        OnRequestSetActiveCharacter(player, characterSelectScreenStates[player].lastLoggedInCharacterId)
     else
-        -- No characters found -- initialize state to NEW_CHARACTER
+        -- No characters found -- change state to NEW_CHARACTER
         OnBeginCreateNewCharacterRequested(player)
+        SendCharacterSelectStateData(player)
     end
-
-    SendCharacterSelectStateData(player)
 end
 
 function OnBeginCreateNewCharacterRequested(player)
+    if characterSelectScreenStates[player].state ~= Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
+        warn("Attempted to begin creating character from invalid state")
+        return
+    end
+
     local factionRng = math.random()
     local genderCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Genders.GENDERS)
+    local classCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Classes.CLASSES)
 
+    SetActiveName(player, nil)
     SetActiveGender(player, Framework.Storage.Keys.Genders.GENDERS[math.random(genderCount)])
+    SetActiveClass(player, Framework.Storage.Keys.Classes.CLASSES[math.random(classCount)])
 
     if factionRng < 0.5 then
         local raceCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Races.COLONIST)
@@ -44,19 +52,27 @@ function OnBeginCreateNewCharacterRequested(player)
     end
 
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
+    SendCharacterSelectStateData(player)
 end
 
-function OnFinalizeCreateNewCharacterRequested(player, initialData)
-    if not initialData then
-        warn("No character creation data provided")
-        return
-    end
-
+function OnFinalizeCreateNewCharacterRequested(player)
     if not characterSelectScreenStates[player] then
         warn("Character state not found")
         return
     end
 
+    if characterSelectScreenStates[player].state ~= Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
+        warn("Player is not in character creation state")
+        return
+    end
+
+    local initialData = { }
+
+    -- TOOD: Validation
+    initialData[Framework.Storage.Keys.Characters.CLASS] = characterSelectScreenStates[player].class
+    initialData[Framework.Storage.Keys.Characters.GENDER] = characterSelectScreenStates[player].gender
+    initialData[Framework.Storage.Keys.Characters.RACE] = characterSelectScreenStates[player].race
+    initialData[Framework.Storage.Keys.Characters.NAME] = characterSelectScreenStates[player].name
     initialData[Framework.Storage.Keys.Characters.ZONE] = Framework.Storage.Keys.Zones.UNKNOWN
 
     -- Determine the faction from the provided race
@@ -80,9 +96,8 @@ function OnFinalizeCreateNewCharacterRequested(player, initialData)
         return
     end
 
-    -- TOOD: Class validation
-
     Framework.Storage.CreateNewCharacter(player, initialData)
+    characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
     SendCharacterSelectStateData(player)
 end
 
@@ -94,6 +109,22 @@ function OnRequestLogIntoCharacter(player, characterId)
             Framework.Storage.SetActiveCharacterId(player, characterId)
         end
     end
+end
+
+function OnRequestSetActiveCharacter(player, characterId)
+    if not Object.IsValid(player) then
+        warn("Invalid player")
+        return
+    end
+
+    print(characterId)
+
+    Framework.Storage.SetActiveCharacterId(player, characterId)
+    SetActiveClass(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.CLASS))
+    SetActiveGender(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.GENDER))
+    SetActiveRace(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.RACE))
+    SetActiveName(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.NAME))
+    SendCharacterSelectStateData(player)
 end
 
 function OnRequestDeleteCharacter(player, characterId)
@@ -123,7 +154,6 @@ function SetActiveRace(player, race)
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE, race)
 end
 
-
 function SetActiveGender(player, gender)
     if gender ~= Framework.Storage.Keys.Genders.MASCULINE and gender ~= Framework.Storage.Keys.Genders.FEMININE then
         warn("Attempted to set invalid gender")
@@ -134,6 +164,16 @@ function SetActiveGender(player, gender)
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GENDER, gender)
 end
 
+function SetActiveClass(player, class)
+    -- TODO: Validate
+    characterSelectScreenStates[player].class = class
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CLASS, class)
+end
+
+function SetActiveName(player, name)
+    characterSelectScreenStates[player].name = name
+end
+
 function OnRequestSetActiveRace(player, race)
     SetActiveRace(player, race)
     SendCharacterSelectStateData(player)
@@ -141,6 +181,11 @@ end
 
 function OnRequestSetActiveGender(player, gender)
     SetActiveGender(player, gender)
+    SendCharacterSelectStateData(player)
+end
+
+function OnRequestSetActiveClass(player, class)
+    SetActiveClass(player, class)
     SendCharacterSelectStateData(player)
 end
 
@@ -188,8 +233,10 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER, OnBeginCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER, OnFinalizeCreateNewCharacterRequested)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CHARACTER, OnRequestSetActiveCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_LOG_IN_TO_CHARACTER, OnRequestLogIntoCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_DELETE_CHARACTER, OnRequestDeleteCharacter)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, OnRequestSetActiveRace)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_GENDER, OnRequestSetActiveGender)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CLASS, OnRequestSetActiveClass)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, OnEnterWorldRequested)

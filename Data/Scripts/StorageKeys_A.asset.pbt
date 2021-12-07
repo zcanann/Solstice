@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:StorageKeysClasses"
+        AssetReference {
+          Id: 5546344857860482876
+        }
+      }
+      Overrides {
         Name: "cs:StorageKeysFactions"
         AssetReference {
           Id: 1419245646877094397

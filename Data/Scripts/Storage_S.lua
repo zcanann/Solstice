@@ -7,7 +7,7 @@ function CreateTestingCharacter(player)
         [ Framework.Storage.Keys.Characters.RACE ] = Framework.Storage.Keys.Races.UNDEAD,
         [ Framework.Storage.Keys.Characters.GENDER ] = Framework.Storage.Keys.Genders.MASCULINE,
         [ Framework.Storage.Keys.Characters.FACTION ] = Framework.Storage.Keys.Factions.ITHKUIL,
-        [ Framework.Storage.Keys.Characters.CLASS ] = "mage",
+        [ Framework.Storage.Keys.Characters.CLASS ] = Framework.Storage.Keys.Classes.MAGE,
         [ Framework.Storage.Keys.Characters.GUILD ] = "",
         [ Framework.Storage.Keys.Characters.ZONE ] = Framework.Storage.Keys.Zones.VERNAL,
     }
@@ -17,7 +17,7 @@ end
 
 function OnPlayerJoined(player)
 	-- Debugging
-	Framework.Storage.WipePlayerData(player)
+	-- Framework.Storage.WipePlayerData(player)
 
 	player.isVisible = false
 

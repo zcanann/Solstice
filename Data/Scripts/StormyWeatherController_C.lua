@@ -32,7 +32,12 @@ function Tick(deltaSeconds)
 end
 
 function LightningStrike()
-    local lightningPosition = localPlayer:GetWorldPosition()
+    local lightningPosition = nil
+    if propLightningFollowPlayer then
+        lightningPosition = localPlayer:GetWorldPosition()
+    else
+        lightningPosition = script:GetWorldPosition()
+    end
 
     lightningPosition.x = lightningPosition.x + Sign(math.random(-1.0, 1.0)) * math.random(6500.0, 9500.0)
     lightningPosition.y = lightningPosition.y + Sign(math.random(-1.0, 1.0)) * math.random(6500.0, 9500.0)
@@ -63,8 +68,10 @@ if propRainFollowPlayer then
     propRainVolume.visibility = Visibility.FORCE_ON
 end
 
-propLightningLight:AttachToPlayer(localPlayer, "nameplate")
-propLightningLight.visibility = Visibility.FORCE_ON
+if propLightningFollowPlayer then
+    propLightningLight:AttachToPlayer(localPlayer, "nameplate")
+    propLightningLight.visibility = Visibility.FORCE_ON
+end
 propLightningLight:SetPosition(Vector3.New(0.0, 0.0, 1500.0))
 propLightningLight:SetRotation(Rotation.New(0.0, -90.0, 0.0))
 

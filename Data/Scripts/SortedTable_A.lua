@@ -30,7 +30,6 @@ function OrderedNext(t, state)
         return key, t[key]
     end
     t.__orderedIndex = nil
-    return
 end
 
 -- Exposed functions

@@ -47,8 +47,6 @@ function SendProximityDataEvents(proximityObjectId, dataKey, data)
     local keyIsObject = string.match(proximityObjectId, '.+:.+') ~= nil
     local keyAsPlayer = Game.FindPlayer(proximityObjectId)
 
-    Framework.Dump(keyAsPlayer)
-
     if not keyIsObject and not keyAsPlayer then
         Framework.Warn("Not a proxy object: " .. proximityObjectId)
         Framework.DumpStackTrace()
