@@ -21,6 +21,7 @@ Assets {
         ChildIds: 16426658547796354564
         ChildIds: 2787584329724115709
         ChildIds: 12046869449141237354
+        ChildIds: 10079096076336041208
         UnregisteredParameters {
           Overrides {
             Name: "cs:BorderSelected"
@@ -44,6 +45,8 @@ Assets {
         Control {
           Width: 80
           Height: 80
+          UIX: -363
+          UIY: 61
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -131,6 +134,10 @@ Assets {
             ObjectReference {
               SubObjectId: 6026121202690229008
             }
+          }
+          Overrides {
+            Name: "cs:ClassKey"
+            String: "warrior"
           }
         }
         Collidable_v2 {
@@ -433,6 +440,106 @@ Assets {
                 Value: "mc:euianchor:middlecenter"
               }
             }
+          }
+        }
+      }
+      Objects {
+        Id: 10079096076336041208
+        Name: "C_InputConsumer"
+        Transform {
+          Location {
+            X: -3445.36035
+            Y: 372.930176
+            Z: -200
+          }
+          Rotation {
+            Yaw: 125.000061
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6026121202690229008
+        ChildIds: 16057367274216823047
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 200
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+            Opacity: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 16057367274216823047
+        Name: "InputConsumer_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10079096076336041208
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Bounds"
+            ObjectReference {
+              SubObjectId: 10079096076336041208
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17597382582349471728
           }
         }
       }

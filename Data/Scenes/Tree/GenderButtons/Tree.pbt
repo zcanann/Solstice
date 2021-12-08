@@ -11,16 +11,13 @@ Objects {
     }
   }
   ParentId: 11863232996044764122
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
-    ParameterOverrideMap {
-      key: 6131367025017027622
-      value {
-        Overrides {
-          Name: "cs:GenderKey"
-          String: "feminine"
-        }
-      }
-    }
     ParameterOverrideMap {
       key: 15451947882331090707
       value {

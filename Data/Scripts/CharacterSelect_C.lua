@@ -41,6 +41,8 @@ local characterEntries = { }
 local characterList = { }
 local lastLoggedInCharacterId = nil
 local selectedCharacterId = nil
+local dragRotatePosition = nil
+local startRotation = nil
 
 local defaultNameText = propCharacterNameTextBox.text
 
@@ -255,11 +257,37 @@ function ClearEntries()
     characterEntries = { }
 end
 
+function Tick(deltaSeconds)
+    if dragRotatePosition and localPlayer.clientUserData.model then
+        local delta = UI.GetCursorPosition() - dragRotatePosition
+
+        if not startRotation then
+            startRotation = localPlayer.clientUserData.model:GetRotation()
+        end
+
+        local rotation = Rotation.New(startRotation.x, startRotation.y, startRotation.z - delta.x / 3.0)
+        localPlayer.clientUserData.model:SetRotation(rotation)
+    end
+end
+
+function OnMouseDown(cursorPosition, primary)
+   if not primary then return end
+   dragRotatePosition = cursorPosition
+end
+
+function OnMouseUp(cursorPosition, primary)
+    if not primary then return end
+    dragRotatePosition = nil
+    startRotation = nil
+end
+
 propCreateNewCharacterButton.clickedEvent:Connect(OnCreateNewCharacterPressed)
 propCancelCreateCharacterButton.clickedEvent:Connect(OnCancelCreateCharacterPressed)
 propFinalizeNewCharacterButton.clickedEvent:Connect(OnFinalizeNewCharacterPressed)
 propDeleteCharacterButton.clickedEvent:Connect(OnDeleteSelectedCharacterButtonPressed)
 propEnterWorldButton.clickedEvent:Connect(OnEnterWorldButtonPressed)
 
+Framework.Events.Listen(Framework.Events.Keys.Input.EVENT_MOUSE_DOWN, OnMouseDown)
+Framework.Events.Listen(Framework.Events.Keys.Input.EVENT_MOUSE_UP, OnMouseUp)
 Framework.Events.Listen(Framework.Events.Keys.Storage.EVENT_CLIENT_INITIAL_PLAYER_DATA_LOADED, OnCharactersLoaded)
 Framework.Events.Listen(Framework.Events.Keys.CharacterSelect.EVENT_SEND_CHARACTER_SELECT_STATE, OnCharacterSelectStateChanged)

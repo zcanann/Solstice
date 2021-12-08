@@ -15,8 +15,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10345062969895997297
+        ParentId: 4781671109827199097
         ChildIds: 1466412050863808434
+        ChildIds: 11103393806210012100
         UnregisteredParameters {
           Overrides {
             Name: "cs:CharacterNameText"
@@ -1743,6 +1744,104 @@ Assets {
                 Value: "mc:euianchor:bottomleft"
               }
             }
+          }
+        }
+      }
+      Objects {
+        Id: 11103393806210012100
+        Name: "C_InputConsumer"
+        Transform {
+          Location {
+            X: -0.0068359375
+            Y: -0.00708007812
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18137618514526888631
+        ChildIds: 8709931929503302868
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 200
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+            Opacity: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 8709931929503302868
+        Name: "InputConsumer_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11103393806210012100
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Bounds"
+            ObjectReference {
+              SubObjectId: 11103393806210012100
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17597382582349471728
           }
         }
       }

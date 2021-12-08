@@ -20,6 +20,7 @@ Assets {
         ChildIds: 7360706017177733639
         ChildIds: 196703154507984678
         ChildIds: 2521556309928385129
+        ChildIds: 15474514366234927771
         UnregisteredParameters {
           Overrides {
             Name: "cs:BorderSelected"
@@ -130,6 +131,10 @@ Assets {
             ObjectReference {
               SubObjectId: 15451947882331090707
             }
+          }
+          Overrides {
+            Name: "cs:GenderKey"
+            String: "feminine"
           }
         }
         Collidable_v2 {
@@ -368,6 +373,106 @@ Assets {
                 Value: "mc:euianchor:middlecenter"
               }
             }
+          }
+        }
+      }
+      Objects {
+        Id: 15474514366234927771
+        Name: "C_InputConsumer"
+        Transform {
+          Location {
+            X: -3445.60278
+            Y: 371.537109
+            Z: -200
+          }
+          Rotation {
+            Yaw: 125.000053
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15451947882331090707
+        ChildIds: 7337938039106768391
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 200
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          UseParentHeight: true
+          Panel {
+            Opacity: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 7337938039106768391
+        Name: "InputConsumer_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15474514366234927771
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Bounds"
+            ObjectReference {
+              SubObjectId: 15474514366234927771
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 17597382582349471728
           }
         }
       }

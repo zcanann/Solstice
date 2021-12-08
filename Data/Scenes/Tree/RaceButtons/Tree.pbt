@@ -1271,14 +1271,6 @@ Objects {
             Yaw: -125.000038
           }
         }
-        Overrides {
-          Name: "UIX"
-          Float: 17
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 77
-        }
       }
     }
     TemplateAsset {

@@ -2,6 +2,9 @@ local Framework = require(script:GetCustomProperty("Framework"))
 local propBounds = script:GetCustomProperty("Bounds"):WaitForObject()
 
 function OnMouseDown(cursorPosition, primary)
+	if not Object.IsValid(propBounds) then
+		return
+	end
 	local boundsX, boundsY = Framework.Utils.UI.GetControlScreenPosition(propBounds)
 
 	if cursorPosition.x >= boundsX and

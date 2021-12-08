@@ -9,6 +9,8 @@ function OnBindingPressed(player, binding)
     local mouseDownEvent = (function(primary)
         -- Check for UI hit test first as highest priority
         uiHitTest = false
+
+        -- Fire a UI mouse down event. Note that anything listening for this can broadcast EVENT_UI_CONSUME_MOUSE_INPUT to set uiHitResult to true.
         Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_MOUSE_DOWN, { UI.GetCursorPosition(), primary })
 
         if uiHitTest then
@@ -31,6 +33,7 @@ end
 function OnBindingReleased(player, binding)
     local mouseUpEvent = (function(primary)
         Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_UI_MOUSE_UP, { UI.GetCursorPosition(), primary })
+        Framework.Events.Broadcast.Local(Framework.Events.Keys.Input.EVENT_MOUSE_UP, { UI.GetCursorPosition(), primary })
     end)
 
 	if binding == primaryBinding then

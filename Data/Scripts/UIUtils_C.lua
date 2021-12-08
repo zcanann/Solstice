@@ -38,8 +38,8 @@ UIUtils.GetTopLeftPositionInParent = function(uiControl, parentWidth, parentHeig
         parentWidth = screenSize.x
         parentHeight = screenSize.y
     else
-        parentWidth = parentWidth or uiControl.parent.width
-        parentHeight = parentHeight or uiControl.parent.height
+        parentWidth = parentWidth or uiControl.parent.width or 0
+        parentHeight = parentHeight or uiControl.parent.height or 0
     end
 
     -- Docking

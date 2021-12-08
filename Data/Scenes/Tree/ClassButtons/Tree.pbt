@@ -574,14 +574,6 @@ Objects {
   Id: 10690521781715214798
   Name: "ChangeClassButton_C"
   Transform {
-    Location {
-      X: -2281.6709
-      Y: -2608.37158
-      Z: 200
-    }
-    Rotation {
-      Yaw: -125.000053
-    }
     Scale {
       X: 1
       Y: 1
@@ -589,6 +581,12 @@ Objects {
     }
   }
   ParentId: 4721940148143912233
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 6026121202690229008
@@ -610,23 +608,6 @@ Objects {
           Rotator {
             Yaw: -125.000053
           }
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 61
-        }
-        Overrides {
-          Name: "UIX"
-          Float: -363
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 8854775087741321860
-      value {
-        Overrides {
-          Name: "cs:ClassKey"
-          String: "warrior"
         }
       }
     }
