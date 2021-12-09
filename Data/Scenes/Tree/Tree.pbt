@@ -5522,24 +5522,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:FrameworkAscendentFeminineVariantA"
-      ObjectReference {
-        SelfId: 6573936859173530201
-        SubObjectId: 3884664389665251075
-        InstanceId: 8897412307602262288
-        TemplateId: 10136783166237093130
-      }
-    }
-    Overrides {
-      Name: "cs:FrameworkAscendentMasculineVariantA"
-      ObjectReference {
-        SelfId: 5432189378820430282
-        SubObjectId: 3786144584552121706
-        InstanceId: 1387773479593972997
-        TemplateId: 5628769040671060772
-      }
-    }
-    Overrides {
       Name: "cs:FrameworkHumanFeminineVariantA"
       ObjectReference {
         SelfId: 9094425884298680234
@@ -5666,20 +5648,38 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:AscendentRenderTarget"
-      ObjectReference {
-        SelfId: 8376841075964511735
-        SubObjectId: 4738545747254556631
-        InstanceId: 15118498325512468179
-        TemplateId: 4895940294124353172
-      }
-    }
-    Overrides {
       Name: "cs:VanaraRenderTarget"
       ObjectReference {
         SelfId: 8500844803980843069
         SubObjectId: 4738545747254556631
         InstanceId: 75276870471099151
+        TemplateId: 4895940294124353172
+      }
+    }
+    Overrides {
+      Name: "cs:FrameworkAscendantFeminineVariantA"
+      ObjectReference {
+        SelfId: 6573936859173530201
+        SubObjectId: 3884664389665251075
+        InstanceId: 8897412307602262288
+        TemplateId: 10136783166237093130
+      }
+    }
+    Overrides {
+      Name: "cs:FrameworkAscendantMasculineVariantA"
+      ObjectReference {
+        SelfId: 5432189378820430282
+        SubObjectId: 3786144584552121706
+        InstanceId: 1387773479593972997
+        TemplateId: 5628769040671060772
+      }
+    }
+    Overrides {
+      Name: "cs:AscendantRenderTarget"
+      ObjectReference {
+        SelfId: 8376841075964511735
+        SubObjectId: 4738545747254556631
+        InstanceId: 15118498325512468179
         TemplateId: 4895940294124353172
       }
     }

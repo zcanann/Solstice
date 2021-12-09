@@ -1,6 +1,6 @@
 Assets {
-  Id: 6823151078516740555
-  Name: "FrameworkAscendentFeminineVariantA"
+  Id: 8470166797310738032
+  Name: "FrameworkAscendantFeminineVariantB"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"
@@ -29,7 +29,7 @@ Assets {
       }
       Overrides {
         Name: "u_tiles"
-        Float: 1.15
+        Float: 1
       }
       Overrides {
         Name: "roughness_multiplier"

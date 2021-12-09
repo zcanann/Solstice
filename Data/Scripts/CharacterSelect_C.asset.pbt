@@ -38,16 +38,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:NewCharacterScreenIthkuil"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:NewCharacterScreenColonist"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:CreateNewCharacterButton"
         ObjectReference {
         }
@@ -103,12 +93,37 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:CameraAscendent"
+        Name: "cs:CameraAscendant"
         ObjectReference {
         }
       }
       Overrides {
         Name: "cs:CameraVanara"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:ClassExplainerText"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:RaceExplainerText"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:FactionExplainerText"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:DecorIthkuil"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:DecorColonist"
         ObjectReference {
         }
       }

@@ -1,6 +1,6 @@
 Assets {
-  Id: 13426038435786654267
-  Name: "FrameworkAscendentMasculineVariantA"
+  Id: 6823151078516740555
+  Name: "FrameworkAscendantFeminineVariantA"
   PlatformAssetType: 13
   SerializationVersion: 101
   VirtualFolderPath: "Models"

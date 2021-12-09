@@ -17,6 +17,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6737363802440446460
+  Name: "Fantasy Symbol 01"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Icon_Symbol_01"
+  }
+}
+Assets {
   Id: 6382792620031146827
   Name: "Cabin"
   PlatformAssetType: 28

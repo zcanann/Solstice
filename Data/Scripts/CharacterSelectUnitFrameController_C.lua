@@ -1,8 +1,8 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local propUnitFrameCapture = script:GetCustomProperty("UnitFrameCapture"):WaitForObject()
-local propFrameworkAscendentFeminineVariantA = script:GetCustomProperty("FrameworkAscendentFeminineVariantA"):WaitForObject()
-local propFrameworkAscendentMasculineVariantA = script:GetCustomProperty("FrameworkAscendentMasculineVariantA"):WaitForObject()
+local propFrameworkAscendantFeminineVariantA = script:GetCustomProperty("FrameworkAscendantFeminineVariantA"):WaitForObject()
+local propFrameworkAscendantMasculineVariantA = script:GetCustomProperty("FrameworkAscendantMasculineVariantA"):WaitForObject()
 local propFrameworkHumanFeminineVariantA = script:GetCustomProperty("FrameworkHumanFeminineVariantA"):WaitForObject()
 local propFrameworkHumanMasculineVariantA = script:GetCustomProperty("FrameworkHumanMasculineVariantA"):WaitForObject()
 local propFrameworkDarkElfFeminineVariantA = script:GetCustomProperty("FrameworkDarkElfFeminineVariantA"):WaitForObject()
@@ -18,7 +18,7 @@ local propOrcRenderTarget = script:GetCustomProperty("OrcRenderTarget"):WaitForO
 local propUndeadRenderTarget = script:GetCustomProperty("UndeadRenderTarget"):WaitForObject()
 local propDarkElfRenderTarget = script:GetCustomProperty("DarkElfRenderTarget"):WaitForObject()
 local propHumanRenderTarget = script:GetCustomProperty("HumanRenderTarget"):WaitForObject()
-local propAscendentRenderTarget = script:GetCustomProperty("AscendentRenderTarget"):WaitForObject()
+local propAscendantRenderTarget = script:GetCustomProperty("AscendantRenderTarget"):WaitForObject()
 local propVanaraRenderTarget = script:GetCustomProperty("VanaraRenderTarget"):WaitForObject()
 
 local masculineModels =
@@ -27,7 +27,7 @@ local masculineModels =
 	[Framework.Storage.Keys.Races.UNDEAD] = propFrameworkUndeadMasculineVariantA,
 	[Framework.Storage.Keys.Races.DARK_ELF] = propFrameworkDarkElfMasculineVariantA,
 	[Framework.Storage.Keys.Races.HUMAN] = propFrameworkHumanMasculineVariantA,
-	[Framework.Storage.Keys.Races.ASCENDENT] = propFrameworkAscendentMasculineVariantA,
+	[Framework.Storage.Keys.Races.ASCENDANT] = propFrameworkAscendantMasculineVariantA,
 	[Framework.Storage.Keys.Races.VANARA] = propFrameworkVanaraMasculineVariantA,
 }
 
@@ -37,7 +37,7 @@ local feminineModels =
 	[Framework.Storage.Keys.Races.UNDEAD] = propFrameworkUndeadFeminineVariantA,
 	[Framework.Storage.Keys.Races.DARK_ELF] = propFrameworkDarkElfFeminineVariantA,
 	[Framework.Storage.Keys.Races.HUMAN] = propFrameworkHumanFeminineVariantA,
-	[Framework.Storage.Keys.Races.ASCENDENT] = propFrameworkAscendentFeminineVariantA,
+	[Framework.Storage.Keys.Races.ASCENDANT] = propFrameworkAscendantFeminineVariantA,
 	[Framework.Storage.Keys.Races.VANARA] = propFrameworkVanaraFeminineVariantA,
 }
 
@@ -47,7 +47,7 @@ local renderTargets =
 	[Framework.Storage.Keys.Races.UNDEAD] = propUndeadRenderTarget,
 	[Framework.Storage.Keys.Races.DARK_ELF] = propDarkElfRenderTarget,
 	[Framework.Storage.Keys.Races.HUMAN] = propHumanRenderTarget,
-	[Framework.Storage.Keys.Races.ASCENDENT] = propAscendentRenderTarget,
+	[Framework.Storage.Keys.Races.ASCENDANT] = propAscendantRenderTarget,
 	[Framework.Storage.Keys.Races.VANARA] = propVanaraRenderTarget,
 }
 

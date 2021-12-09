@@ -16,12 +16,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentFeminineVariantA"
+        Name: "cs:FrameworkAscendantFeminineVariantA"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentMasculineVariantA"
+        Name: "cs:FrameworkAscendantMasculineVariantA"
         ObjectReference {
         }
       }
@@ -96,7 +96,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:AscendentRenderTarget"
+        Name: "cs:AscendantRenderTarget"
         ObjectReference {
         }
       }

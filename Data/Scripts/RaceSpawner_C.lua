@@ -23,12 +23,12 @@ local propFrameworkVanaraFeminineVariantA = script:GetCustomProperty("FrameworkV
 local propFrameworkVanaraFeminineVariantB = script:GetCustomProperty("FrameworkVanaraFeminineVariantB")
 local propFrameworkVanaraFeminineVariantC = script:GetCustomProperty("FrameworkVanaraFeminineVariantC")
 local propFrameworkVanaraMasculineVariantA = script:GetCustomProperty("FrameworkVanaraMasculineVariantA")
-local propFrameworkAscendentFeminineVariantA = script:GetCustomProperty("FrameworkAscendentFeminineVariantA")
-local propFrameworkAscendentFeminineVariantB = script:GetCustomProperty("FrameworkAscendentFeminineVariantB")
-local propFrameworkAscendentFeminineVariantC = script:GetCustomProperty("FrameworkAscendentFeminineVariantC")
-local propFrameworkAscendentMasculineVariantA = script:GetCustomProperty("FrameworkAscendentMasculineVariantA")
-local propFrameworkAscendentMasculineVariantB = script:GetCustomProperty("FrameworkAscendentMasculineVariantB")
-local propFrameworkAscendentMasculineVariantC = script:GetCustomProperty("FrameworkAscendentMasculineVariantC")
+local propFrameworkAscendantFeminineVariantA = script:GetCustomProperty("FrameworkAscendantFeminineVariantA")
+local propFrameworkAscendantFeminineVariantB = script:GetCustomProperty("FrameworkAscendantFeminineVariantB")
+local propFrameworkAscendantFeminineVariantC = script:GetCustomProperty("FrameworkAscendantFeminineVariantC")
+local propFrameworkAscendantMasculineVariantA = script:GetCustomProperty("FrameworkAscendantMasculineVariantA")
+local propFrameworkAscendantMasculineVariantB = script:GetCustomProperty("FrameworkAscendantMasculineVariantB")
+local propFrameworkAscendantMasculineVariantC = script:GetCustomProperty("FrameworkAscendantMasculineVariantC")
 
 -- Variables
 local playerModels = { }
@@ -132,11 +132,11 @@ function RebuildModel(proximityObjectId)
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
             playerModel = World.SpawnAsset(propFrameworkHumanFeminineVariantA)
         end
-    elseif race == Framework.Storage.Keys.Races.ASCENDENT then
+    elseif race == Framework.Storage.Keys.Races.ASCENDANT then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            playerModel = World.SpawnAsset(propFrameworkAscendentMasculineVariantA)
+            playerModel = World.SpawnAsset(propFrameworkAscendantMasculineVariantA)
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            playerModel = World.SpawnAsset(propFrameworkAscendentFeminineVariantA)
+            playerModel = World.SpawnAsset(propFrameworkAscendantFeminineVariantA)
         end
     elseif race == Framework.Storage.Keys.Races.VANARA then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
@@ -146,7 +146,7 @@ function RebuildModel(proximityObjectId)
         end
     else
         -- TODO: Spawn some sort of default error model
-        playerModel = World.SpawnAsset(propFrameworkAscendentMasculineVariantA)
+        playerModel = World.SpawnAsset(propFrameworkAscendantMasculineVariantA)
     end
 
     if not playerModel then

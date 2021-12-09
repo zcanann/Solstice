@@ -3,7 +3,7 @@ local RaceKeys = { }
 RaceKeys.UNKNOWN = "Unknown"
 
 RaceKeys.HUMAN = "human"
-RaceKeys.ASCENDENT = "ascendent"
+RaceKeys.ASCENDANT = "ascendant"
 RaceKeys.VANARA = "vanara"
 
 RaceKeys.ORC = "orc"
@@ -13,7 +13,7 @@ RaceKeys.DARK_ELF = "dark_elf"
 RaceKeys.COLONIST =
 {
     RaceKeys.HUMAN,
-    RaceKeys.ASCENDENT,
+    RaceKeys.ASCENDANT,
     RaceKeys.VANARA,
 }
 

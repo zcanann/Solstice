@@ -124,7 +124,7 @@ Objects {
 }
 Objects {
   Id: 14024615332737507217
-  Name: "SpawnPointAscendent"
+  Name: "SpawnPointAscendant"
   Transform {
     Location {
       X: -24650
@@ -164,7 +164,7 @@ Objects {
 }
 Objects {
   Id: 6574011873009460602
-  Name: "CameraAscendent"
+  Name: "CameraAscendant"
   Transform {
     Location {
       Z: 35
@@ -741,15 +741,15 @@ Objects {
         ChatMode {
         }
         ChatPosition {
-          X: 24
-          Y: -24
+          X: -400
+          Y: -224
         }
         ChatSize {
-          X: 800
-          Y: 256
+          X: 450
+          Y: 400
         }
         ChatHorizontalAlignment {
-          Value: "mc:ecorehorizontalalign:left"
+          Value: "mc:ecorehorizontalalign:center"
         }
         ChatVerticalAlignment {
           Value: "mc:ecoreverticalalign:bottom"

@@ -37,7 +37,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:SpawnPointAscendent"
+        Name: "cs:SpawnPointAscendant"
         ObjectReference {
         }
       }

@@ -474,7 +474,7 @@ Objects {
       value {
         Overrides {
           Name: "cs:RaceKey"
-          String: "ascendent"
+          String: "ascendant"
         }
       }
     }

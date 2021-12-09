@@ -1,12 +1,11 @@
 local Framework = require(script:GetCustomProperty("Framework"))
+local CharacterNameValidator = require(script:GetCustomProperty("CharacterNameValidator"))
 
 local propCharacterEntryTemplate = script:GetCustomProperty("CharacterEntryTemplate")
 local propCharacterEntriesRoot = script:GetCustomProperty("CharacterEntriesRoot"):WaitForObject()
 
 local propCharacterSelectScreen = script:GetCustomProperty("CharacterSelectScreen"):WaitForObject()
 local propNewCharacterScreen = script:GetCustomProperty("NewCharacterScreen"):WaitForObject()
-local propNewCharacterScreenIthkuil = script:GetCustomProperty("NewCharacterScreenIthkuil"):WaitForObject()
-local propNewCharacterScreenColonist = script:GetCustomProperty("NewCharacterScreenColonist"):WaitForObject()
 
 local propCreateNewCharacterButton = script:GetCustomProperty("CreateNewCharacterButton"):WaitForObject()
 local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewCharacterButton"):WaitForObject()
@@ -18,23 +17,37 @@ local propCameraOrc = script:GetCustomProperty("CameraOrc"):WaitForObject()
 local propCameraDarkElf = script:GetCustomProperty("CameraDarkElf"):WaitForObject()
 local propCameraUndead = script:GetCustomProperty("CameraUndead"):WaitForObject()
 local propCameraHuman = script:GetCustomProperty("CameraHuman"):WaitForObject()
-local propCameraAscendent = script:GetCustomProperty("CameraAscendent"):WaitForObject()
+local propCameraAscendant = script:GetCustomProperty("CameraAscendant"):WaitForObject()
 local propCameraVanara = script:GetCustomProperty("CameraVanara"):WaitForObject()
 
 local propCharacterNameTextBox = script:GetCustomProperty("CharacterNameTextBox"):WaitForObject()
 
 local propSunlight = script:GetCustomProperty("Sunlight"):WaitForObject()
 
-local CharacterNameValidator = require(script:GetCustomProperty("CharacterNameValidator"))
+local propClassExplainerText = script:GetCustomProperty("ClassExplainerText"):WaitForObject()
+local propRaceExplainerText = script:GetCustomProperty("RaceExplainerText"):WaitForObject()
+local propFactionExplainerText = script:GetCustomProperty("FactionExplainerText"):WaitForObject()
+local propDecorIthkuil = script:GetCustomProperty("DecorIthkuil"):WaitForObject()
+local propDecorColonist = script:GetCustomProperty("DecorColonist"):WaitForObject()
 
-local factionExplainerColonist = "The Colonists are a technologically advanced race from the ice planet <Planet name>. Fleeing this dying planet, fleets of colonists traveled to Kotava in suspended hibernation. Here the Colonists seek to forge a new beginning and rebuild their great empire. However, This monumental task is made difficult by the hostile Ithikuil inhabiting the planet."
-local factionExplainerIthkuil = "The Ithkuil are the native inhabitants of Kotava. Despite not being technologically advanced, they compensate for this through their mastery of elemental magic. Until the arrival of the Colonists, they lived a simple and peaceful life guided by their spirits. The agression by the Colonists has forced the Ithkuil tribes to band together to preserve their traditions."
+local factionExplainerColonist = "- Improved Engineering\n\nThe Colonists are a technologically advanced race from the ice planet <Planet name>. Fleeing this dying planet, fleets of colonists traveled to Kotava in suspended hibernation. Here the Colonists seek to forge a new beginning and rebuild their great empire. However, This monumental task is made difficult by the hostile Ithikuil inhabiting the planet."
+local factionExplainerIthkuil = "- Improved Alchemy\n\nThe Ithkuil are the native inhabitants of Kotava. Despite not being technologically advanced, they compensate for this through their mastery of elemental magic. Until the arrival of the Colonists, they lived a simple and peaceful life guided by their spirits. The agression by the Colonists has forced the Ithkuil tribes to band together to preserve their traditions."
 
-local classExplainerColonist = "- Improved Engineering<br>- Improved Alchemy<br>Goblins are a small and intelligent humanoid race. They are physically weak, but compensate for this with their craftiness."
-local classExplainerIthkuil = ""
+local classExplainerWarrior = "Priests weild holy power to provide aid to their allies."
+local classExplainerMage = "Mages are masters of destruction magic."
+local classExplainerRogue = "Rogues are a race."
+local classExplainerNecromancer = "Necromancers are masters of black magic. This allows them to summon apparitions, raise the dead, and use powerful forbidden magic."
+local classExplainerArcher = "Archers are a race."
+local classExplainerDruid = "Druids are a race."
+local classExplainerPriest = "Priests are a race."
+local classExplainerJusticar = "Justicars are a race."
 
-local raceExplainerColonist = ""
-local raceExplainerIthkuil = ""
+local raceExplainerOrc = "The Orcs are a race."
+local raceExplainerUndead = "- Increased Shadow Resistance\n\nThe Undead are a race."
+local raceExplainerDarkElf = "- Increased Shadow Resistance\n\nThe Dark Elves are a race."
+local raceExplainerHuman = "Humans are a race."
+local raceExplainerAscendant = "Ascendants are a race."
+local raceExplainerVanara = "Vanaras are a race."
 
 local localPlayer = Game.GetLocalPlayer()
 local characterEntries = { }
@@ -54,8 +67,8 @@ function OnCharacterSelectStateChanged(stateData)
 
     propCharacterSelectScreen.visibility = Visibility.FORCE_OFF
     propNewCharacterScreen.visibility = Visibility.FORCE_OFF
-    propNewCharacterScreenIthkuil.visibility = Visibility.FORCE_OFF
-    propNewCharacterScreenColonist.visibility = Visibility.FORCE_OFF
+    propDecorColonist.visibility = Visibility.FORCE_OFF
+    propDecorIthkuil.visibility = Visibility.FORCE_OFF
 
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
         OnCharactersLoaded()
@@ -71,12 +84,53 @@ function OnCharacterSelectStateChanged(stateData)
             propCharacterNameTextBox.text = defaultNameText
             propFinalizeNewCharacterButton.isInteractable = false
         end
-        if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, stateData.race) then
-            propNewCharacterScreenIthkuil.visibility = Visibility.INHERIT
-        elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, stateData.race) then
-            propNewCharacterScreenColonist.visibility = Visibility.INHERIT
+
+        if stateData.race == Framework.Storage.Keys.Races.ORC then
+            propRaceExplainerText.text = raceExplainerOrc
+        elseif stateData.race == Framework.Storage.Keys.Races.UNDEAD then
+            propRaceExplainerText.text = raceExplainerUndead
+        elseif stateData.race == Framework.Storage.Keys.Races.DARK_ELF then
+            propRaceExplainerText.text = raceExplainerDarkElf
+        elseif stateData.race == Framework.Storage.Keys.Races.HUMAN then
+            propRaceExplainerText.text = raceExplainerHuman
+        elseif stateData.race == Framework.Storage.Keys.Races.ASCENDANT then
+            propRaceExplainerText.text = raceExplainerAscendant
+        elseif stateData.race == Framework.Storage.Keys.Races.VANARA then
+            propRaceExplainerText.text = raceExplainerVanara
         else
-            warn("Invalid active race set")
+            propRaceExplainerText.text = "Unknown"
+            warn("Invalid race set")
+        end
+
+        if stateData.class == Framework.Storage.Keys.Classes.WARRIOR then
+            propClassExplainerText.text = classExplainerWarrior
+        elseif stateData.class == Framework.Storage.Keys.Classes.MAGE then
+            propClassExplainerText.text = classExplainerMage
+        elseif stateData.class == Framework.Storage.Keys.Classes.ROGUE then
+            propClassExplainerText.text = classExplainerRogue
+        elseif stateData.class == Framework.Storage.Keys.Classes.NECROMANCER then
+            propClassExplainerText.text = classExplainerNecromancer
+        elseif stateData.class == Framework.Storage.Keys.Classes.ARCHER then
+            propClassExplainerText.text = classExplainerArcher
+        elseif stateData.class == Framework.Storage.Keys.Classes.DRUID then
+            propClassExplainerText.text = classExplainerDruid
+        elseif stateData.class == Framework.Storage.Keys.Classes.PRIEST then
+            propClassExplainerText.text = classExplainerPriest
+        elseif stateData.class == Framework.Storage.Keys.Classes.JUSTICAR then
+            propClassExplainerText.text = classExplainerJusticar
+        else
+            propClassExplainerText.text = "Unknown"
+            warn("Invalid active class set")
+        end
+
+        if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, stateData.race) then
+            propFactionExplainerText.text = factionExplainerIthkuil
+            propDecorIthkuil.visibility = Visibility.INHERIT
+        elseif Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.COLONIST, stateData.race) then
+            propFactionExplainerText.text = factionExplainerColonist
+            propDecorColonist.visibility = Visibility.INHERIT
+        else
+            warn("Invalid faction set")
         end
     elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.DELETE_SELECTED_CHARACTER then
         propCharacterSelectScreen.visibility = Visibility.INHERIT
@@ -89,8 +143,8 @@ function AwaitServerResponse()
     --[[
     propCharacterSelectScreen.visibility = Visibility.FORCE_OFF
     propNewCharacterScreen.visibility = Visibility.FORCE_OFF
-    propNewCharacterScreenIthkuil.visibility = Visibility.FORCE_OFF
-    propNewCharacterScreenColonist.visibility = Visibility.FORCE_OFF
+    propDecorColonist.visibility = Visibility.FORCE_OFF
+    propDecorIthkuil.visibility = Visibility.FORCE_OFF
     --]]
 end
 
@@ -107,8 +161,8 @@ function UpdateCameraFromRace(race)
     elseif race == Framework.Storage.Keys.Races.HUMAN then
         localPlayer:SetOverrideCamera(propCameraHuman)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
-    elseif race == Framework.Storage.Keys.Races.ASCENDENT then
-        localPlayer:SetOverrideCamera(propCameraAscendent)
+    elseif race == Framework.Storage.Keys.Races.ASCENDANT then
+        localPlayer:SetOverrideCamera(propCameraAscendant)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
     elseif race == Framework.Storage.Keys.Races.VANARA then
         localPlayer:SetOverrideCamera(propCameraVanara)
@@ -163,7 +217,7 @@ function CreateCharacterEntry(characterData)
     local level = characterData[Framework.Storage.Keys.Characters.LEVEL] or 1
 
     propCharacterNameText.text = characterData[Framework.Storage.Keys.Characters.NAME]
-    propLevelClassText.text = "Level " .. tostring(level) .. " " .. characterData[Framework.Storage.Keys.Characters.RACE] .. " " .. characterData[Framework.Storage.Keys.Characters.CLASS]
+    propLevelClassText.text = "Level " .. tostring(level) .. " " .. characterData[Framework.Storage.Keys.Characters.CLASS]
     propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
 
     characterEntry.y = 32.0 + (characterData.sortIndex - 1) * 112.0

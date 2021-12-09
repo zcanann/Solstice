@@ -149,37 +149,37 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentFeminineVariantA"
+        Name: "cs:FrameworkAscendantFeminineVariantA"
         AssetReference {
           Id: 10136783166237093130
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentFeminineVariantB"
+        Name: "cs:FrameworkAscendantFeminineVariantB"
         AssetReference {
           Id: 6411149018742534969
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentFeminineVariantC"
+        Name: "cs:FrameworkAscendantFeminineVariantC"
         AssetReference {
           Id: 3242651276054556474
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentMasculineVariantA"
+        Name: "cs:FrameworkAscendantMasculineVariantA"
         AssetReference {
           Id: 5628769040671060772
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentMasculineVariantB"
+        Name: "cs:FrameworkAscendantMasculineVariantB"
         AssetReference {
           Id: 16061080343895741245
         }
       }
       Overrides {
-        Name: "cs:FrameworkAscendentMasculineVariantC"
+        Name: "cs:FrameworkAscendantMasculineVariantC"
         AssetReference {
           Id: 13929251522609491248
         }

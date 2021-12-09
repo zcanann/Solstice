@@ -1,13 +1,13 @@
 Assets {
-  Id: 3242651276054556474
-  Name: "FrameworkAscendentFeminineVariantC"
+  Id: 10136783166237093130
+  Name: "FrameworkAscendantFeminineVariantA"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 7624929089460813867
+      RootId: 3884664389665251075
       Objects {
-        Id: 7624929089460813867
-        Name: "FrameworkReplicantFeminineVariantC"
+        Id: 3884664389665251075
+        Name: "FrameworkReplicantFeminineVariantA"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,8 @@ Assets {
           }
         }
         ParentId: 15010763861394408712
-        ChildIds: 586680212139232423
-        ChildIds: 3959802424359758517
+        ChildIds: 6060833268135023503
+        ChildIds: 7695563687904425373
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
@@ -85,10 +85,10 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 13822615372482203236
+              Id: 6435866532900058359
             }
             SkinnedMeshes {
-              Id: 5172911281595672315
+              Id: 17124023611434561119
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -100,7 +100,7 @@ Assets {
         }
       }
       Objects {
-        Id: 586680212139232423
+        Id: 6060833268135023503
         Name: "SyncedRigs_C"
         Transform {
           Location {
@@ -113,13 +113,13 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7624929089460813867
-        ChildIds: 3597369639792882137
+        ParentId: 3884664389665251075
+        ChildIds: 7914026952504159985
         UnregisteredParameters {
           Overrides {
             Name: "cs:MainRig"
             ObjectReference {
-              SubObjectId: 7624929089460813867
+              SubObjectId: 3884664389665251075
             }
           }
         }
@@ -142,7 +142,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3597369639792882137
+        Id: 7914026952504159985
         Name: "Humanoid 1 Rig"
         Transform {
           Location {
@@ -155,7 +155,7 @@ Assets {
             Z: 0.99
           }
         }
-        ParentId: 586680212139232423
+        ParentId: 6060833268135023503
         UnregisteredParameters {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
@@ -235,7 +235,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 13822615372482203236
+              Id: 6435866532900058359
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -250,7 +250,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3959802424359758517
+        Id: 7695563687904425373
         Name: "ObjectAttacher_C"
         Transform {
           Location {
@@ -267,14 +267,14 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 7624929089460813867
-        ChildIds: 4367749956240310558
-        ChildIds: 10209140945798583864
+        ParentId: 3884664389665251075
+        ChildIds: 6964100234979778102
+        ChildIds: 15102274532858775824
         UnregisteredParameters {
           Overrides {
             Name: "cs:Rig"
             ObjectReference {
-              SubObjectId: 7624929089460813867
+              SubObjectId: 3884664389665251075
             }
           }
         }
@@ -297,7 +297,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4367749956240310558
+        Id: 6964100234979778102
         Name: "head"
         Transform {
           Location {
@@ -314,9 +314,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3959802424359758517
-        ChildIds: 9797569372868954818
-        ChildIds: 16409557010377837798
+        ParentId: 7695563687904425373
+        ChildIds: 15839120697270490602
+        ChildIds: 13799693488953365454
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -331,12 +331,12 @@ Assets {
         }
       }
       Objects {
-        Id: 9797569372868954818
+        Id: 15839120697270490602
         Name: "Sphere"
         Transform {
           Location {
-            X: 6.00000238
-            Y: -4.00158358
+            X: 6.00000286
+            Y: -5.00158358
             Z: 88
           }
           Rotation {
@@ -347,7 +347,7 @@ Assets {
             Z: 0.035
           }
         }
-        ParentId: 4367749956240310558
+        ParentId: 6964100234979778102
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -395,7 +395,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16409557010377837798
+        Id: 13799693488953365454
         Name: "Humanoid 1 Rig"
         Transform {
           Location {
@@ -410,7 +410,7 @@ Assets {
             Z: 0.94
           }
         }
-        ParentId: 4367749956240310558
+        ParentId: 6964100234979778102
         UnregisteredParameters {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
@@ -544,7 +544,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 13822615372482203236
+              Id: 6435866532900058359
             }
             SkinnedMeshes {
               Id: 256548928180637423
@@ -559,7 +559,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10209140945798583864
+        Id: 15102274532858775824
         Name: "upper_spine"
         Transform {
           Location {
@@ -576,8 +576,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3959802424359758517
-        ChildIds: 1581688684636344681
+        ParentId: 7695563687904425373
+        ChildIds: 5317449677698797121
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -592,7 +592,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1581688684636344681
+        Id: 5317449677698797121
         Name: "Donut"
         Transform {
           Location {
@@ -609,7 +609,7 @@ Assets {
             Z: 0.125
           }
         }
-        ParentId: 10209140945798583864
+        ParentId: 15102274532858775824
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -662,21 +662,21 @@ Assets {
       }
     }
     Assets {
-      Id: 13822615372482203236
-      Name: "Humanoid 1 Aparna"
+      Id: 6435866532900058359
+      Name: "Humanoid 1 Nancy"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_head_basic_008_ref"
+        AssetId: "npc_human_gal_head_basic_002_ref"
       }
     }
     Assets {
-      Id: 5172911281595672315
-      Name: "Humanoid 1 Zoe Hair"
+      Id: 17124023611434561119
+      Name: "Humanoid 1 Nancy Hair"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_hair_basic_005_ref"
+        AssetId: "npc_human_gal_hair_basic_002_ref"
       }
     }
     Assets {

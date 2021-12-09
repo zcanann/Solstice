@@ -172,7 +172,6 @@ Objects {
   ChildIds: 15022815161956759828
   ChildIds: 4721940148143912233
   ChildIds: 11863232996044764122
-  ChildIds: 9236217334296286072
   ChildIds: 18055793306275902885
   ChildIds: 1636713729405553466
   ChildIds: 5301055616480901615
@@ -1493,38 +1492,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "InformationPanels"
-  }
-}
-Objects {
-  Id: 9236217334296286072
-  Name: "Deprecated"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1256500426707964891
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Deprecated"
   }
 }
 Objects {

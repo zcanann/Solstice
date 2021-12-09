@@ -73,15 +73,15 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:SpawnPointAscendent"
-      ObjectReference {
-        SelfId: 14024615332737507217
-      }
-    }
-    Overrides {
       Name: "cs:SpawnPointVanara"
       ObjectReference {
         SelfId: 15097237594246849961
+      }
+    }
+    Overrides {
+      Name: "cs:SpawnPointAscendant"
+      ObjectReference {
+        SelfId: 14024615332737507217
       }
     }
   }
@@ -193,18 +193,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:NewCharacterScreenIthkuil"
-      ObjectReference {
-        SelfId: 9236217334296286072
-      }
-    }
-    Overrides {
-      Name: "cs:NewCharacterScreenColonist"
-      ObjectReference {
-        SelfId: 18055793306275902885
-      }
-    }
-    Overrides {
       Name: "cs:CharacterNameTextBox"
       ObjectReference {
         SelfId: 2204542871266170372
@@ -220,12 +208,6 @@ Objects {
       Name: "cs:CameraVanara"
       ObjectReference {
         SelfId: 4204365656750963011
-      }
-    }
-    Overrides {
-      Name: "cs:CameraAscendent"
-      ObjectReference {
-        SelfId: 6574011873009460602
       }
     }
     Overrides {
@@ -256,6 +238,42 @@ Objects {
       Name: "cs:CancelCreateCharacterButton"
       ObjectReference {
         SelfId: 5301055616480901615
+      }
+    }
+    Overrides {
+      Name: "cs:ClassExplainerText"
+      ObjectReference {
+        SelfId: 12563938161533995708
+      }
+    }
+    Overrides {
+      Name: "cs:RaceExplainerText"
+      ObjectReference {
+        SelfId: 6778070754226772461
+      }
+    }
+    Overrides {
+      Name: "cs:FactionExplainerText"
+      ObjectReference {
+        SelfId: 3406473377641652744
+      }
+    }
+    Overrides {
+      Name: "cs:DecorIthkuil"
+      ObjectReference {
+        SelfId: 689305378583054432
+      }
+    }
+    Overrides {
+      Name: "cs:DecorColonist"
+      ObjectReference {
+        SelfId: 2506157523858975680
+      }
+    }
+    Overrides {
+      Name: "cs:CameraAscendant"
+      ObjectReference {
+        SelfId: 6574011873009460602
       }
     }
   }

@@ -6,7 +6,7 @@ local propSpawnPointOrc = script:GetCustomProperty("SpawnPointOrc"):WaitForObjec
 local propSpawnPointDarkElf = script:GetCustomProperty("SpawnPointDarkElf"):WaitForObject()
 local propSpawnPointUndead = script:GetCustomProperty("SpawnPointUndead"):WaitForObject()
 local propSpawnPointHuman = script:GetCustomProperty("SpawnPointHuman"):WaitForObject()
-local propSpawnPointAscendent = script:GetCustomProperty("SpawnPointAscendent"):WaitForObject()
+local propSpawnPointAscendant = script:GetCustomProperty("SpawnPointAscendant"):WaitForObject()
 local propSpawnPointVanara = script:GetCustomProperty("SpawnPointVanara"):WaitForObject()
 
 local characterSelectScreenStates = { }
@@ -182,8 +182,8 @@ function SetActiveRace(player, race)
         player:Spawn({position = propSpawnPointDarkElf:GetWorldPosition(), rotation = propSpawnPointDarkElf:GetRotation()})
     elseif race == Framework.Storage.Keys.Races.HUMAN then
         player:Spawn({position = propSpawnPointHuman:GetWorldPosition(), rotation = propSpawnPointHuman:GetRotation()})
-    elseif race == Framework.Storage.Keys.Races.ASCENDENT then
-        player:Spawn({position = propSpawnPointAscendent:GetWorldPosition(), rotation = propSpawnPointAscendent:GetRotation()})
+    elseif race == Framework.Storage.Keys.Races.ASCENDANT then
+        player:Spawn({position = propSpawnPointAscendant:GetWorldPosition(), rotation = propSpawnPointAscendant:GetRotation()})
     elseif race == Framework.Storage.Keys.Races.VANARA then
         player:Spawn({position = propSpawnPointVanara:GetWorldPosition(), rotation = propSpawnPointVanara:GetRotation()})
     else
