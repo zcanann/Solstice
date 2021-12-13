@@ -82,6 +82,7 @@ function OnEntityLeftRange(proximityObjectId)
         player.clientUserData.model = nil
     end
     playerModels[proximityObjectId] = nil
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
 end
 
 function RebuildModel(proximityObjectId)
@@ -90,11 +91,6 @@ function RebuildModel(proximityObjectId)
     if not player or not Object.IsValid(player) or not player:IsA("Player") then
         warn("Invalid player provided")
         return
-    end
-
-    if Object.IsValid(player.clientUserData.model) then
-        player.clientUserData.model:Destroy()
-        player.clientUserData.model = nil
     end
 
     local race = cachedPlayerRaces[proximityObjectId]
@@ -106,59 +102,70 @@ function RebuildModel(proximityObjectId)
         return
     end
 
+    local playerModelAsset = nil
     local playerModel = nil
 
     if race == Framework.Storage.Keys.Races.ORC then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            playerModel = World.SpawnAsset(propFrameworkOrcMasculineVariantA)
+            playerModelAsset = propFrameworkOrcMasculineVariantA
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            playerModel = World.SpawnAsset(propFrameworkOrcFeminineVariantA)
+            playerModelAsset = propFrameworkOrcFeminineVariantA
         end
     elseif race == Framework.Storage.Keys.Races.UNDEAD then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            playerModel = World.SpawnAsset(propFrameworkUndeadMasculineVariantA)
+            playerModelAsset = propFrameworkUndeadMasculineVariantA
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            playerModel = World.SpawnAsset(propFrameworkUndeadFeminineVariantA)
+            playerModelAsset = propFrameworkUndeadFeminineVariantA
         end
     elseif race == Framework.Storage.Keys.Races.DARK_ELF then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            playerModel = World.SpawnAsset(propFrameworkDarkElfMasculineVariantA)
+            playerModelAsset = propFrameworkDarkElfMasculineVariantA
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            playerModel = World.SpawnAsset(propFrameworkDarkElfFeminineVariantA)
+            playerModelAsset = propFrameworkDarkElfFeminineVariantA
         end
     elseif race == Framework.Storage.Keys.Races.HUMAN then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            playerModel = World.SpawnAsset(propFrameworkHumanMasculineVariantA)
+            playerModelAsset = propFrameworkHumanMasculineVariantA
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            playerModel = World.SpawnAsset(propFrameworkHumanFeminineVariantA)
+            playerModelAsset = propFrameworkHumanFeminineVariantA
         end
     elseif race == Framework.Storage.Keys.Races.ASCENDANT then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            playerModel = World.SpawnAsset(propFrameworkAscendantMasculineVariantA)
+            playerModelAsset = propFrameworkAscendantMasculineVariantA
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            playerModel = World.SpawnAsset(propFrameworkAscendantFeminineVariantA)
+            playerModelAsset = propFrameworkAscendantFeminineVariantA
         end
     elseif race == Framework.Storage.Keys.Races.VANARA then
         if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            playerModel = World.SpawnAsset(propFrameworkVanaraMasculineVariantA)
+            playerModelAsset = propFrameworkVanaraMasculineVariantA
         elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            playerModel = World.SpawnAsset(propFrameworkVanaraFeminineVariantA)
+            playerModelAsset = propFrameworkVanaraFeminineVariantA
         end
     else
         -- TODO: Spawn some sort of default error model
-        playerModel = World.SpawnAsset(propFrameworkAscendantMasculineVariantA)
+        playerModelAsset = propFrameworkAscendantMasculineVariantA
     end
 
-    if not playerModel then
-        warn("Invalid race or gender provided")
+    local playerModelAssetId, _ = CoreString.Split(playerModelAsset, ":")
+
+    -- No need to destroy/respawn the model if it is already spawned
+    if Object.IsValid(player.clientUserData.model) and player.clientUserData.model.sourceTemplateId == playerModelAssetId then
         return
     end
+
+    if Object.IsValid(player.clientUserData.model) then
+        player.clientUserData.model:Destroy()
+        player.clientUserData.model = nil
+    end
+
+    playerModel = World.SpawnAsset(playerModelAsset)
 
     playerModel:AttachToPlayer(player, "nameplate")
     playerModel.visibility = Visibility.FORCE_ON
     playerModel:SetPosition(Vector3.New(0.0, 0.0, -(height or 0.0) - 32.0))
     playerModels[player.id] = playerModel
     player.clientUserData.model = playerModel
+    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
 end
 
 function OnEntityRaceChanged(proximityObjectId, race)

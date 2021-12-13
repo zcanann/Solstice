@@ -21,7 +21,7 @@ function RestoreEquipmentPostCapture(entity)
 end
 
 function GetCaptureCameraFromRoot(captureRoot)
-	if captureRoot then
+	if Object.IsValid(captureRoot) then
 		local unitFrameCameraRef = captureRoot:GetCustomProperty("CaptureCamera")
 		if unitFrameCameraRef then
 			return unitFrameCameraRef:GetObject()

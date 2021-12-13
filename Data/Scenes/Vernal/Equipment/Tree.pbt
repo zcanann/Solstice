@@ -47,12 +47,6 @@ Objects {
   }
   ParentId: 4407062972772890412
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:DebugItem"
-      AssetReference {
-        Id: 15059549690028216849
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

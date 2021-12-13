@@ -55,6 +55,12 @@ Framework.AwaitOnce = function(predicate, callback)
     end
 end
 
+Framework.NextFrame = function(callback)
+    Task.Spawn(function ()
+        callback()
+    end)
+end
+
 Framework.ObjectAssert = function (object, name, message)
     local result = object and Object.IsValid(object) and object:IsA(name)
 

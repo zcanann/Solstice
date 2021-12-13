@@ -188,15 +188,6 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Items"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Items"
-      VirtualFolderPath: "Equipment"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Water"
       PlatformAssetType: 13
     }
@@ -420,6 +411,50 @@ Assets {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "CharacterModels"
       VirtualFolderPath: "Ascendents"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Chest"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Legs"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Feet"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Head"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Shoulders"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Wrists"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Hands"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Weapons"
       PlatformAssetType: 5
     }
   }

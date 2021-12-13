@@ -1,55 +1,136 @@
 
  local Framework = require(script:GetCustomProperty("Framework"))
- local propDebugItemTemplate = script:GetCustomProperty("DebugItem")
+ local EquipmentTable = require(script:GetCustomProperty("EquipmentTable"))
 
- local equipmentChangeListeners = { }
+ local equipmentChangeHeadListeners = { }
+ local equipmentChangeNeckListeners = { }
+ local equipmentChangeShouldersListeners = { }
+ local equipmentChangeBackListeners = { }
+ local equipmentChangeChestListeners = { }
+ local equipmentChangeWristsListeners = { }
+ local equipmentChangeLegsListeners = { }
+ local equipmentChangeFeetListeners = { }
 
--- TODO: listen for equipment changes, check it against a data store of id => template, spawn the appropriate template per-slot
-function OnPlayerEquipmentChanged(player, data)
-    --[[
-	local engagementData = nil
-	if data and data[Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION] then
-		engagementData = data[Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION]
-	end
-    --]]
+ local allListeners = {
+    ["head"] = equipmentChangeHeadListeners,
+    ["neck"] = equipmentChangeNeckListeners,
+    ["shoulders"] = equipmentChangeShouldersListeners,
+    ["back"] = equipmentChangeBackListeners,
+    ["chest"] = equipmentChangeChestListeners,
+    ["wrists"] = equipmentChangeWristsListeners,
+    ["legs"] = equipmentChangeLegsListeners,
+    ["feet"] = equipmentChangeFeetListeners,
+ }
+
+ -- In theory we should be able to spawn the equipment template, iterate through children attaching them to proper slots
+ -- And when we are done, we should be able to just delete the template and the slots should auto dispose?
+
+ function DespawnAndUnequipModel(player, modelSlot)
+    if player.clientUserData.equipmentModels and Object.IsValid(player.clientUserData.equipmentModels [modelSlot]) then
+        player.clientUserData.equipmentModels[modelSlot]:Destroy()
+        player.clientUserData.equipmentModels[modelSlot] = nil
+    end
+ end
+
+ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
+    if not player.clientUserData.equipmentModels then
+        player.clientUserData.equipmentModels = { }
+    end
+
+    DespawnAndUnequipModel(player, modelSlot)
+
+    if EquipmentTable[equipmentModelTemplateId] == nil then
+        warn("Unknown equipment id " .. equipmentModelTemplateId)
+        return
+    end
+
+    print("SPAWNED " .. modelSlot)
+
+    -- Spawn the entire equipment template as a child of this script, then iterate through all model slots and attach them to the player.
+    -- For example, a model for pants can be spawned, and individual parts will be separately attached to the pelvis, both legs, and knees.
+    player.clientUserData.equipmentModels[modelSlot] = World.SpawnAsset(EquipmentTable[equipmentModelTemplateId], { parent = script })
+    player.clientUserData.equipmentModels[modelSlot]:SetWorldPosition(player.clientUserData.model:GetWorldPosition())
+    player.clientUserData.equipmentModels[modelSlot]:SetWorldRotation(player.clientUserData.model:GetWorldRotation())
+    local equipmentStyles =  player.clientUserData.equipmentModels[modelSlot]:GetChildren()
+    for _, style in ipairs(equipmentStyles) do
+        if style.name == "Default" then
+            local modelPeices =  style:GetChildren()
+            for _, modelPeice in ipairs(modelPeices) do
+                if modelPeice:IsA("Folder") then
+                    local socketName = modelPeice.name
+                    local pos = modelPeice:GetWorldPosition()
+                    local rot = modelPeice:GetWorldRotation()
+
+                    player.clientUserData.model:AttachCoreObject(modelPeice, socketName)
+
+                    modelPeice:SetWorldPosition(pos)
+                    modelPeice:SetWorldRotation(rot)
+                end
+            end
+        end
+        style.visibility = Visibility.FORCE_OFF
+    end
 end
 
-function OnProximityObjectEnteredRange(proximityObjectId)
-    local player = Game.FindPlayer(proximityObjectId)
+function OnModelChanged(playerId, equipmentModelTemplateId, modelSlot)
+    local player = nil
+
+    if playerId then
+        player = Game.FindPlayer(playerId)
+    end
 
     if not player then
         return
     end
 
-    equipmentChangeListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, "TODO_EQUIPMENT_KEY", OnPlayerEquipmentChanged)
-
-    -- Bind the equipment to the player's model. This may not be created yet, so wait at most one frame for the model to spawn
-    Framework.AwaitOnce(function () return player.clientUserData.model end,
-        function ()
-            if not Object.IsValid(player.clientUserData.equipmentWeapon) then
-                player.clientUserData.equipmentWeapon = World.SpawnAsset(propDebugItemTemplate, { parent = script })
-                player.clientUserData.model:AttachCoreObject(player.clientUserData.equipmentWeapon, "right_wrist")
-                -- player.clientUserData.equipmentWeapon:Equip(player)
-            end
-        end
-    )
-end
-
-function OnProximityObjectLeftRange(proximityObjectId)
-    if equipmentChangeListeners[proximityObjectId] then
-        equipmentChangeListeners[proximityObjectId].Disconnect()
-        equipmentChangeListeners[proximityObjectId] = nil
-    end
-
-    local player = Game.FindPlayer(proximityObjectId)
-
-    if player then
-        if Object.IsValid(player.clientUserData.equipmentWeapon) then
-            player.clientUserData.equipmentWeapon:Destroy()
-            player.clientUserData.equipmentWeapon = nil
-        end
+    if equipmentModelTemplateId == nil then
+        DespawnAndUnequipModel(player, modelSlot)
+    else
+        SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
     end
 end
 
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnProximityObjectEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnProximityObjectLeftRange)
+function OnHeadModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "head")
+end
+
+function OnNeckModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "neck")
+end
+
+function OnShouldersModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "shoulders")
+end
+
+function OnBackModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "back")
+end
+
+function OnChestModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "chest")
+end
+
+function OnWristsModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "wrists")
+end
+
+function OnLegsModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "legs")
+end
+
+function OnFeetModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "feet")
+end
+
+function OnNearbyPlayerModelChanged(player)
+    OnHeadModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD))
+    OnNeckModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_NECK))
+    OnShouldersModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS))
+    OnBackModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK))
+    OnChestModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST))
+    OnWristsModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS))
+    OnLegsModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS))
+    OnFeetModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET))
+end
+
+Framework.Events.Listen(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, OnNearbyPlayerModelChanged)

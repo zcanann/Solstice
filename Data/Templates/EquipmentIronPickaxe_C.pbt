@@ -1,6 +1,6 @@
 Assets {
   Id: 15059549690028216849
-  Name: "ItemModel_Pickaxe"
+  Name: "EquipmentIronPickaxe_C"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
@@ -703,6 +703,6 @@ Assets {
     }
   }
   SerializationVersion: 101
-  VirtualFolderPath: "Items"
-  VirtualFolderPath: "Equipment"
+  VirtualFolderPath: "EquipmentModels"
+  VirtualFolderPath: "Weapons"
 }

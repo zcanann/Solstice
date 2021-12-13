@@ -193,6 +193,7 @@ function SetActiveRace(player, race)
 
     characterSelectScreenStates[player].race = race
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE, race)
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "necromancers_robes")
 end
 
 function SetActiveGender(player, gender)

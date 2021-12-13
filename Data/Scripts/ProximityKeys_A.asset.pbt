@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:EquipmentProximityKeys"
+        AssetReference {
+          Id: 14718590476333441047
+        }
+      }
+      Overrides {
         Name: "cs:QuestProximityKeys"
         AssetReference {
           Id: 8658523841663182765

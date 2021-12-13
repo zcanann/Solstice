@@ -47,7 +47,7 @@ Networking.GetProximityData = function(id, key)
         return nil
     end
 
-    -- Only the server is capable of unresolving an id (ie )
+    -- Only the server is capable of unresolving an id
     if Environment.IsServer() then
         local script = Networking.GetProximityDataScript(id)
         if script then

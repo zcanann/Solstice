@@ -10,6 +10,12 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:EquipmentTable"
+        AssetReference {
+          Id: 5324092377236356746
+        }
+      }
     }
   }
   SerializationVersion: 101
