@@ -1,6 +1,6 @@
 Assets {
   Id: 4996983483957389124
-  Name: "EntityModelEvents_C"
+  Name: "EntityEvents_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

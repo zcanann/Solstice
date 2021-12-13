@@ -24,6 +24,7 @@ Objects {
   ChildIds: 2318422323319872019
   ChildIds: 5631062039258215038
   ChildIds: 14673192470203336140
+  ChildIds: 9004641152035665064
   ChildIds: 4295518732797847828
   ChildIds: 13144026719656007011
   ChildIds: 15660281359551195921
@@ -71,7 +72,7 @@ Objects {
           Vector {
             X: 498.852
             Y: 596.513
-            Z: 17
+            Z: 105
           }
         }
         Overrides {
@@ -176,6 +177,68 @@ Objects {
     }
     TemplateAsset {
       Id: 14433396417658744852
+    }
+  }
+}
+Objects {
+  Id: 9004641152035665064
+  Name: "Humanoid 2 Rig"
+  Transform {
+    Location {
+      X: 575
+      Y: 290
+      Z: 105
+    }
+    Rotation {
+      Yaw: -179.999985
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16794234107403285238
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_bind_posew"
+      AnimationStancePlaybackRate: 1
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        PlaybackRate: 1
+      }
+      SkinnedMeshes {
+        Id: 8532477695942616287
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
     }
   }
 }
@@ -6238,10 +6301,9 @@ Objects {
     Location {
       X: 575
       Y: 290
-      Z: 17
     }
     Rotation {
-      Yaw: 164
+      Yaw: 180
     }
     Scale {
       X: 1
@@ -8497,12 +8559,11 @@ Objects {
   Name: "Costume"
   Transform {
     Location {
-      X: 384.198517
-      Y: 145.363113
-      Z: 17
+      X: 566
+      Y: 91
     }
     Rotation {
-      Yaw: 128
+      Yaw: 180
     }
     Scale {
       X: 1

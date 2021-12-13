@@ -31,7 +31,7 @@ local propDecorIthkuil = script:GetCustomProperty("DecorIthkuil"):WaitForObject(
 local propDecorColonist = script:GetCustomProperty("DecorColonist"):WaitForObject()
 
 local factionExplainerColonist = "- Improved Engineering\n\nThe Colonists are a technologically advanced race from the ice planet <Planet name>. Fleeing this dying planet, fleets of colonists traveled to Kotava in suspended hibernation. Here the Colonists seek to forge a new beginning and rebuild their great empire. However, This monumental task is made difficult by the hostile Ithikuil inhabiting the planet."
-local factionExplainerIthkuil = "- Improved Alchemy\n\nThe Ithkuil are the native inhabitants of Kotava. Despite not being technologically advanced, they compensate for this through their mastery of elemental magic. Until the arrival of the Colonists, they lived a simple and peaceful life guided by their spirits. The agression by the Colonists has forced the Ithkuil tribes to band together to preserve their traditions."
+local factionExplainerIthkuil = "- Improved Alchemy\n\nThe Ithkuil are the native inhabitants of Kotava. Despite not being technologically advanced, they compensate for this through their mastery of elemental magic. Until the arrival of the Colonists, they lived a simple and peaceful life guided by their spirits. The agression by the Colonists has forced the Ithkuil tribes to band together to preserve their land and traditions."
 
 local classExplainerWarrior = "Priests weild holy power to provide aid to their allies."
 local classExplainerMage = "Mages are masters of destruction magic."
@@ -69,14 +69,15 @@ function OnCharacterSelectStateChanged(stateData)
     propNewCharacterScreen.visibility = Visibility.FORCE_OFF
     propDecorColonist.visibility = Visibility.FORCE_OFF
     propDecorIthkuil.visibility = Visibility.FORCE_OFF
+    local characterListCount = Framework.Utils.Table.Count(stateData.characterList)
 
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
-        OnCharactersLoaded()
+        OnCharactersLoaded(stateData.characterList)
         propCharacterSelectScreen.visibility = Visibility.INHERIT
-        propCreateNewCharacterButton.isInteractable = stateData.characterListCount < Framework.Storage.CharacterCreateLimit
+        propCreateNewCharacterButton.isInteractable = characterListCount < Framework.Storage.CharacterCreateLimit
     elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
         propNewCharacterScreen.visibility = Visibility.INHERIT
-        propCancelCreateCharacterButton.isInteractable = stateData.characterListCount > 0
+        propCancelCreateCharacterButton.isInteractable = characterListCount > 0
         if CharacterNameValidator.IsNameValid(stateData.name) then
             propCharacterNameTextBox.text = stateData.name
             propFinalizeNewCharacterButton.isInteractable = true
@@ -140,12 +141,10 @@ function OnCharacterSelectStateChanged(stateData)
 end
 
 function AwaitServerResponse()
-    --[[
     propCharacterSelectScreen.visibility = Visibility.FORCE_OFF
     propNewCharacterScreen.visibility = Visibility.FORCE_OFF
     propDecorColonist.visibility = Visibility.FORCE_OFF
     propDecorIthkuil.visibility = Visibility.FORCE_OFF
-    --]]
 end
 
 function UpdateCameraFromRace(race)
@@ -175,7 +174,7 @@ end
 
 function UpdateEntryVisuals(characterId)
     local characterEntry = characterEntries[characterId]
-    local characterData = characterList[characterId]
+    local characterData = characterList[characterId] or { }
 
     if not Object.IsValid(characterEntry) then
         return
@@ -226,10 +225,13 @@ function CreateCharacterEntry(characterData)
     return characterEntry
 end
 
-function OnCharactersLoaded()
+function OnCharactersLoaded(characterList)
     ClearEntries()
 
-    characterList = Framework.Storage.GetCharacterList(localPlayer) or { }
+    if not characterList then
+        characterList = Framework.Storage.GetCharacterList(localPlayer) or { }
+    end
+
     local found = false
 
     for characterId, characterData in pairs(characterList) do

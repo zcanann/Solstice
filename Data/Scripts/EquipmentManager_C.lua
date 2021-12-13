@@ -44,16 +44,19 @@
         return
     end
 
-    print("SPAWNED " .. modelSlot)
-
     -- Spawn the entire equipment template as a child of this script, then iterate through all model slots and attach them to the player.
     -- For example, a model for pants can be spawned, and individual parts will be separately attached to the pelvis, both legs, and knees.
     player.clientUserData.equipmentModels[modelSlot] = World.SpawnAsset(EquipmentTable[equipmentModelTemplateId], { parent = script })
     player.clientUserData.equipmentModels[modelSlot]:SetWorldPosition(player.clientUserData.model:GetWorldPosition())
     player.clientUserData.equipmentModels[modelSlot]:SetWorldRotation(player.clientUserData.model:GetWorldRotation())
+
+    -- local race = Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE)
+    local gender = Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.GENDER)
     local equipmentStyles =  player.clientUserData.equipmentModels[modelSlot]:GetChildren()
+
     for _, style in ipairs(equipmentStyles) do
-        if style.name == "Default" then
+        if (style.name == "HumanoidFeminine" and gender == Framework.Storage.Keys.Genders.FEMININE) or
+           (style.name == "HumanoidMasculine" and gender == Framework.Storage.Keys.Genders.MASCULINE) then
             local modelPeices =  style:GetChildren()
             for _, modelPeice in ipairs(modelPeices) do
                 if modelPeice:IsA("Folder") then
@@ -67,8 +70,10 @@
                     modelPeice:SetWorldRotation(rot)
                 end
             end
+        else
+            -- Destroy unused models. Not the most performant appraoch to spawn all variants and despawn unused ones. Maybe revisit.
+            style:Destroy()
         end
-        style.visibility = Visibility.FORCE_OFF
     end
 end
 

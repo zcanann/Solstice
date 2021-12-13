@@ -18,7 +18,7 @@ function RefreshState(player)
 
     characterSelectScreenStates[player] = { }
     characterSelectScreenStates[player].lastLoggedInCharacterId = GetLastLoggedInCharacterId(player)
-    characterSelectScreenStates[player].characterListCount = characterListCount
+    characterSelectScreenStates[player].characterList = characterList
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT
 
     if hasCharacters then
