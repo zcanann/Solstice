@@ -34,6 +34,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14717575180957685650
@@ -70,6 +73,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_1"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15960178944899643149
@@ -104,6 +110,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Grave_2"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -141,6 +150,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_3"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15806037212658346990
@@ -175,6 +187,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Grave_4"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -212,6 +227,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_5"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 137815742230058716
@@ -246,6 +264,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Grave_6"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -283,6 +304,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_7"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17738699463030632746
@@ -318,6 +342,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_8"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9081122747228203041
@@ -352,6 +379,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Grave_9"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -389,6 +419,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_10"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10356399966070490091
@@ -424,6 +457,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_11"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13462322522138007016
@@ -458,6 +494,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Grave_12"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -495,6 +534,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Grave_13"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1346670390237424974
@@ -529,6 +571,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Grave_14"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -575,6 +620,9 @@ Objects {
       Id: 12567248150923504473
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7371805387785542198
@@ -610,6 +658,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Fencing"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4392687778309285954
@@ -644,6 +695,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Nature"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -684,5 +738,8 @@ Objects {
     TemplateAsset {
       Id: 409670787022032353
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

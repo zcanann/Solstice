@@ -46,6 +46,9 @@ Objects {
       Id: 14994156121394993613
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5779941895382745253
@@ -101,6 +104,9 @@ Objects {
       Id: 14994156121394993613
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13812881826426423788
@@ -134,6 +140,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Graveyard"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -181,6 +190,9 @@ Objects {
       Id: 9388604537018251804
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6624534854813149124
@@ -212,6 +224,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Dock"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -247,6 +262,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Fence"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -344,6 +362,9 @@ Objects {
       Id: 6011071057881920699
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4463632000165143331
@@ -397,6 +418,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17246289419149383775
@@ -432,6 +456,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Interactables"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -469,6 +496,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Zones"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15162611111499902024
@@ -505,6 +535,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Decor"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15393860705899249997
@@ -538,6 +571,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Floors"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4133531031245386448
@@ -568,6 +604,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Walls"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -604,6 +643,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "NPCs"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 807049152915355110
@@ -637,6 +679,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Atmosphere"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1495303198340745656
@@ -668,6 +713,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -778,6 +826,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "DDPathfindingManager"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -912,5 +963,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "DDNavMeshGenerator"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

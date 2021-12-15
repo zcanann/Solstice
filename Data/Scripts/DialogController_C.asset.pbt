@@ -327,7 +327,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 101
+  SerializationVersion: 103
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Dialog"
 }

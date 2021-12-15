@@ -2,7 +2,7 @@ Assets {
   Id: 11237267171393895703
   Name: "Virtual Folders"
   PlatformAssetType: 30
-  SerializationVersion: 101
+  SerializationVersion: 103
   VirtualFolderSetAsset {
     Folders {
       VirtualFolderPath: "UI"
@@ -419,42 +419,18 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "EquipmentModels"
-      VirtualFolderPath: "Chest"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "EquipmentModels"
-      VirtualFolderPath: "Legs"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "EquipmentModels"
-      VirtualFolderPath: "Feet"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "EquipmentModels"
-      VirtualFolderPath: "Head"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "EquipmentModels"
-      VirtualFolderPath: "Shoulders"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "EquipmentModels"
-      VirtualFolderPath: "Wrists"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "EquipmentModels"
-      VirtualFolderPath: "Hands"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "EquipmentModels"
       VirtualFolderPath: "Weapons"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Justicar"
       PlatformAssetType: 5
     }
   }

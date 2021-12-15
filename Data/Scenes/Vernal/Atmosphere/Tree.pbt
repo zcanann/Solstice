@@ -36,6 +36,9 @@ Objects {
   }
   NetworkContext {
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7583698413176784183
@@ -74,6 +77,9 @@ Objects {
     Volume: 1
     Falloff: -1
     Radius: 32000
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -114,6 +120,9 @@ Objects {
       Falloff: 3600
       Radius: 32000
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -178,6 +187,9 @@ Objects {
     BlueprintAsset {
       Id: 2224571462023946700
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -246,6 +258,9 @@ Objects {
   }
   Relevance {
     Value: "mc:eproxyrelevance:medium"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -367,6 +382,9 @@ Objects {
   Relevance {
     Value: "mc:eproxyrelevance:high"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8765271389779871924
@@ -458,6 +476,9 @@ Objects {
       IsSpatializationEnabled: true
       IsAttenuationEnabled: true
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -553,6 +574,9 @@ Objects {
       Radius: 15000
       IsAttenuationEnabled: true
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -650,6 +674,9 @@ Objects {
       IsAttenuationEnabled: true
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8316387967808315502
@@ -741,6 +768,9 @@ Objects {
       IsSpatializationEnabled: true
       IsAttenuationEnabled: true
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -834,6 +864,9 @@ Objects {
       IsAttenuationEnabled: true
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9693065228057676946
@@ -890,6 +923,9 @@ Objects {
       MaxDrawDistance: 5000
       MaxDistanceFadeRange: 1000
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -996,6 +1032,9 @@ Objects {
       Id: 11968576244738891005
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15439589432286443040
@@ -1031,6 +1070,9 @@ Objects {
   }
   Folder {
     IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1116,6 +1158,9 @@ Objects {
       Id: 1353607577508895962
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16740128619716418957
@@ -1197,6 +1242,9 @@ Objects {
       Id: 1353607577508895962
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2006356675448143227
@@ -1260,6 +1308,9 @@ Objects {
     BlueprintAsset {
       Id: 1353607577508895962
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1327,6 +1378,9 @@ Objects {
     BlueprintAsset {
       Id: 11515840070784317904
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1487,5 +1541,8 @@ Objects {
     BlueprintAsset {
       Id: 7887238662729938253
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

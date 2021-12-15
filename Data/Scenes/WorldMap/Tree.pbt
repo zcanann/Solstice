@@ -32,6 +32,9 @@ Objects {
   }
   Folder {
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17076391056267575974
@@ -70,6 +73,9 @@ Objects {
     GeneratorID: "DEPRECATED"
     MaxLOD: 32
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5710001917694784877
@@ -107,6 +113,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "PostProcess"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1690414422520653577
@@ -137,6 +146,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Map"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -170,6 +182,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "GameSystems"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3634084508390190355
@@ -198,5 +213,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Settings"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

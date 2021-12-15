@@ -11,14 +11,20 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:EquipmentTable"
+        Name: "cs:EquipmentModelTableHumanoidFeminine"
         AssetReference {
           Id: 5324092377236356746
         }
       }
+      Overrides {
+        Name: "cs:EquipmentModelTableHumanoidMasculine"
+        AssetReference {
+          Id: 7395091076940394780
+        }
+      }
     }
   }
-  SerializationVersion: 101
+  SerializationVersion: 103
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Equipment"
 }

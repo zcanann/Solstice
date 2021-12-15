@@ -67,6 +67,9 @@ Assets {
             }
           }
         }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
       }
     }
     PrimaryAssetId {
@@ -77,7 +80,7 @@ Assets {
   Marketplace {
     Description: "Default UI Image, templatized"
   }
-  SerializationVersion: 101
+  SerializationVersion: 103
   VirtualFolderPath: "UI"
   VirtualFolderPath: "EmptyTemplates"
 }

@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "DebugSettings"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2033215230845879164
@@ -70,6 +73,9 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -121,6 +127,9 @@ Objects {
     MaxPitch: 89
     UseAsAudioListener: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14024615332737507217
@@ -160,6 +169,9 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -209,6 +221,9 @@ Objects {
     MaxPitch: 89
     UseAsAudioListener: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17292675452936151906
@@ -248,6 +263,9 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -299,6 +317,9 @@ Objects {
     MaxPitch: 89
     UseAsAudioListener: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5504317759731691145
@@ -338,6 +359,9 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -389,6 +413,9 @@ Objects {
     MaxPitch: 89
     UseAsAudioListener: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15097237594246849961
@@ -428,6 +455,9 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -479,6 +509,9 @@ Objects {
     MaxPitch: 89
     UseAsAudioListener: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3625622293708889024
@@ -518,6 +551,9 @@ Objects {
     SpawnEffectsTemplate {
       Id: 841534158063459245
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -569,6 +605,9 @@ Objects {
     MaxPitch: 89
     UseAsAudioListener: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3432427007554611280
@@ -605,6 +644,9 @@ Objects {
       StartSpawned: true
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5990543115566140013
@@ -638,6 +680,9 @@ Objects {
         Value: "mc:eteammode:teamsvs"
       }
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -702,6 +747,9 @@ Objects {
       MaxHitpoints: 100
       PlayerMasterVolumeMultiplier: 1
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -811,5 +859,8 @@ Objects {
         Value: "mc:eplayerstoragemode:none"
       }
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

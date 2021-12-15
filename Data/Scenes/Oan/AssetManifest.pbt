@@ -206,6 +206,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13857943057331475071
+  Name: "Humanoid 1 Rig"
+  PlatformAssetType: 25
+  PrimaryAsset {
+    AssetType: "SkeletonAssetRef"
+    AssetId: "npc_gal_wireframe_001_ref"
+  }
+}
+Assets {
   Id: 13711763667417590523
   Name: "Cone - Truncated Hollow Concave"
   PlatformAssetType: 1
@@ -557,6 +566,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6435866532900058359
+  Name: "Humanoid 1 Nancy"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_head_basic_002_ref"
+  }
+}
+Assets {
   Id: 5866314305483512762
   Name: "Curtains Straight"
   PlatformAssetType: 1
@@ -824,6 +842,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_bones_human_scap_01_ref"
+  }
+}
+Assets {
+  Id: 968683000654906430
+  Name: "Humanoid 1 Aparna Hair"
+  PlatformAssetType: 26
+  PrimaryAsset {
+    AssetType: "SkinnedMeshAssetRef"
+    AssetId: "npc_human_gal_hair_basic_008_ref"
   }
 }
 Assets {

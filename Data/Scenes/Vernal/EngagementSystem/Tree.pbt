@@ -31,6 +31,9 @@ Objects {
   NetworkContext {
     Type: Server
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12842179600927695529
@@ -63,5 +66,8 @@ Objects {
     ScriptAsset {
       Id: 17083025265275362642
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

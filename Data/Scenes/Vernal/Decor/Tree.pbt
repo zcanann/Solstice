@@ -45,6 +45,9 @@ Objects {
       Id: 14494917759503598136
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9211391535045264655
@@ -78,5 +81,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Folliage"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

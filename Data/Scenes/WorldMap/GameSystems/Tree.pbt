@@ -31,6 +31,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Networking"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6042946726416711795
@@ -62,6 +65,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -172,6 +178,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "DDPathfindingManager"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -307,6 +316,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "DDNavMeshGenerator"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17461222279151401912
@@ -339,6 +351,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Interaction"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16007666421361320972
@@ -369,6 +384,9 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -402,6 +420,9 @@ Objects {
     ScriptAsset {
       Id: 9861263428996501487
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -453,6 +474,9 @@ Objects {
       Id: 5793929070704032215
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13524778982515551559
@@ -486,6 +510,9 @@ Objects {
       Id: 2903886657326780764
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11991588353537543329
@@ -518,6 +545,9 @@ Objects {
     ScriptAsset {
       Id: 3753108497802826248
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -553,6 +583,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "ShipEquipment"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8953408975506779281
@@ -585,6 +618,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Chat"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2616760452881115365
@@ -616,5 +652,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "AnimationSystem"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

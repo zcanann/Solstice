@@ -72,6 +72,9 @@ Objects {
       Id: 6436200425402533515
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12584117481693844477
@@ -172,6 +175,9 @@ Objects {
       Id: 7349392275418325864
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14351759243446978713
@@ -221,5 +227,8 @@ Objects {
     BlueprintAsset {
       Id: 773012505465694237
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

@@ -33,6 +33,9 @@ Objects {
   NetworkContext {
     Type: Server
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14460312518976504560
@@ -84,6 +87,9 @@ Objects {
       Id: 7380580963784353904
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4999244393636055979
@@ -131,6 +137,9 @@ Objects {
       Id: 8987297397785865558
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2862309105971316705
@@ -167,6 +176,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "NpcData_2"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12299963393686506760
@@ -200,6 +212,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -258,6 +273,9 @@ Objects {
     InstanceId: 14678979447342944233
     TemplateId: 17256152977790581857
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15594024896408941852
@@ -289,6 +307,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "QuestVisuals"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -349,6 +370,9 @@ Objects {
       Id: 13256092117753200766
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9287987596664656546
@@ -393,6 +417,9 @@ Objects {
     ScriptAsset {
       Id: 15932647530187038661
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -483,6 +510,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11765038470458309184
@@ -516,6 +546,9 @@ Objects {
   }
   NetworkContext {
     Type: Server
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -557,5 +590,8 @@ Objects {
     ScriptAsset {
       Id: 5474629016980680411
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

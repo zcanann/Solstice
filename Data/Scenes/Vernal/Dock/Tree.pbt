@@ -55,6 +55,9 @@ Objects {
       Id: 6670287073338102793
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12705572755300212328
@@ -99,6 +102,9 @@ Objects {
     TemplateAsset {
       Id: 1255341925665995454
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -154,6 +160,9 @@ Objects {
       Id: 1255341925665995454
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 1367730135117708209
@@ -208,6 +217,9 @@ Objects {
       Id: 1255341925665995454
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 18208273811333520337
@@ -261,6 +273,9 @@ Objects {
     TemplateAsset {
       Id: 1255341925665995454
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -318,6 +333,9 @@ Objects {
       Id: 6670287073338102793
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4504398219996773183
@@ -373,6 +391,9 @@ Objects {
     TemplateAsset {
       Id: 6670287073338102793
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -430,6 +451,9 @@ Objects {
       Id: 6670287073338102793
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 271743671240803898
@@ -475,6 +499,9 @@ Objects {
     TemplateAsset {
       Id: 14643202096128563157
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -522,6 +549,9 @@ Objects {
       Id: 1255341925665995454
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16386861428709253839
@@ -561,5 +591,8 @@ Objects {
     TemplateAsset {
       Id: 14643202096128563157
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

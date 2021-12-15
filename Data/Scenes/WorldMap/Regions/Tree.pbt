@@ -33,6 +33,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Hades"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6479750019610227661
@@ -64,6 +67,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Estival"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -97,6 +103,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "DeadmansPass"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 9957181379389271161
@@ -128,6 +137,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "PerilousSea"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -161,6 +173,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Valgrind"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 12702648053710241127
@@ -192,5 +207,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "VernalForest"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

@@ -66,6 +66,9 @@ Objects {
       Id: 7631465242278993574
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16283541881807136400
@@ -115,6 +118,9 @@ Objects {
       Id: 7219382939942816704
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 18147049523427805738
@@ -161,6 +167,9 @@ Objects {
     BlueprintAsset {
       Id: 11470788976083836933
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -212,6 +221,9 @@ Objects {
     BlueprintAsset {
       Id: 7829951139778158953
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -351,6 +363,9 @@ Objects {
       Id: 17964132252558952939
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6683781605055427252
@@ -400,5 +415,8 @@ Objects {
     BlueprintAsset {
       Id: 773012505465694237
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

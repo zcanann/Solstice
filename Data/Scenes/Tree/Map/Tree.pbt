@@ -34,6 +34,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "VanaraCharacterSelect"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16479159577220641451
@@ -68,6 +71,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "UndeadCharacterSelect"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -104,6 +110,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "HumanCharacterSelect"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5250854901689189847
@@ -138,6 +147,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "AscendentCharacterSelect"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -175,6 +187,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "OrcCharacterSelect"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 10903555143971574133
@@ -209,6 +224,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "DarkElfCharacterSelect"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 807049152915355110
@@ -241,5 +259,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Atmosphere"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

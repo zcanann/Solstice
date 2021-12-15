@@ -244,6 +244,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2076012642278374580
@@ -274,6 +277,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -328,6 +334,9 @@ Objects {
       Id: 17585551463286605103
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 6827537968935038766
@@ -361,6 +370,9 @@ Objects {
       Id: 5461236454713091310
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 11573066637352010849
@@ -393,6 +405,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Storage"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7608157449072439859
@@ -423,6 +438,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -457,6 +475,9 @@ Objects {
       Id: 277715315184695963
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7391612819685303134
@@ -487,6 +508,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -529,6 +553,9 @@ Objects {
       Id: 16372425022101325848
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2308143338953339694
@@ -560,6 +587,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Networking"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -806,6 +836,9 @@ Objects {
   Folder {
     IsGroup: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17281413761246435318
@@ -835,6 +868,9 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -869,6 +905,9 @@ Objects {
       Id: 3373571473665939527
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 15140153797398253369
@@ -900,6 +939,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "StatsAndSkillsSystem"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -933,6 +975,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "EngagementSystem"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 4084976127399678787
@@ -965,6 +1010,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Interaction"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17323502209317733254
@@ -995,6 +1043,9 @@ Objects {
     Value: "mc:ecollisionsetting:forceoff"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1027,6 +1078,9 @@ Objects {
     ScriptAsset {
       Id: 6272685453400113195
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1074,6 +1128,9 @@ Objects {
       Id: 5793929070704032215
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5348816236042250609
@@ -1106,6 +1163,9 @@ Objects {
     ScriptAsset {
       Id: 2903886657326780764
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1140,6 +1200,9 @@ Objects {
       Id: 3753108497802826248
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7509983156954433682
@@ -1171,6 +1234,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Equipment"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1204,6 +1270,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Dialog_1"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 2961315606830123504
@@ -1236,6 +1305,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Chat"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 8605600878384434373
@@ -1266,6 +1338,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1308,6 +1383,9 @@ Objects {
       Id: 16474912751185200051
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 7278630398078622535
@@ -1339,5 +1417,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "AnimationSystem"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

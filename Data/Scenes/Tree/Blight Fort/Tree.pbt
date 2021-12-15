@@ -58,6 +58,9 @@ Objects {
       Id: 4305411352690016132
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 16694590863029366288
@@ -104,6 +107,9 @@ Objects {
       Id: 4305411352690016132
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 3614037709453986265
@@ -138,6 +144,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "BlightTower"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -190,6 +199,9 @@ Objects {
       Id: 2418048523852605265
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17654607156916323311
@@ -224,6 +236,9 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "BlightGates"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -267,6 +282,9 @@ Objects {
     TemplateId: 4305411352690016132
     WasRoot: true
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 13784305244525056415
@@ -301,5 +319,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "BlightTower_1"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

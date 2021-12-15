@@ -30,6 +30,9 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "StaminaSystem"
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 5237743725734057376
@@ -60,6 +63,9 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -93,5 +99,8 @@ Objects {
     ScriptAsset {
       Id: 12983476834377073916
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

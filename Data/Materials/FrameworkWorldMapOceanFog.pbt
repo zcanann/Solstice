@@ -2,7 +2,7 @@ Assets {
   Id: 13081993940115856602
   Name: "FrameworkWorldMapOceanFog"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 103
   VirtualFolderPath: "WorldMap"
   CustomMaterialAsset {
     BaseMaterialId: 1082809058784319555

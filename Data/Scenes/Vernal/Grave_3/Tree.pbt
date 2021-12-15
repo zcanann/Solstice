@@ -56,6 +56,9 @@ Objects {
       BoundsScale: 1
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 17929823581644343301
@@ -102,5 +105,8 @@ Objects {
     TemplateAsset {
       Id: 11635264254606736608
     }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }

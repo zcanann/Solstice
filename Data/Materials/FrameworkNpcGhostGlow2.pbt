@@ -2,7 +2,7 @@ Assets {
   Id: 2334612471939404507
   Name: "FrameworkNpcGhostGlow2"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 103
   VirtualFolderPath: "Models"
   VirtualFolderPath: "Npcs"
   CustomMaterialAsset {

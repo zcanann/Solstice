@@ -2,7 +2,7 @@ Assets {
   Id: 6003250989474810368
   Name: "FrameworkDarkElfMasculine"
   PlatformAssetType: 13
-  SerializationVersion: 101
+  SerializationVersion: 103
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   VirtualFolderPath: "DarkElf"

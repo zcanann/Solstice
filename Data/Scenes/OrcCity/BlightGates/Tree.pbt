@@ -39,6 +39,9 @@ Objects {
       Id: 18444013972859453356
     }
   }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
 }
 Objects {
   Id: 14902560760785003311
@@ -72,5 +75,8 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "HornsFrontGate"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
   }
 }
