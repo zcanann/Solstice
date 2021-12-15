@@ -61,6 +61,18 @@ Framework.NextFrame = function(callback)
     end)
 end
 
+Framework.WaitFrames = function(callback, frameCount)
+    -- Task.Spawn() will wait a frame automatically, so we adjust for that
+    frameCount = (frameCount or 0) - 1
+    Task.Spawn(function ()
+        while (frameCount > 0) do
+            frameCount = frameCount - 1
+            Task.Wait()
+        end
+        callback()
+    end)
+end
+
 Framework.ObjectAssert = function (object, name, message)
     local result = object and Object.IsValid(object) and object:IsA(name)
 

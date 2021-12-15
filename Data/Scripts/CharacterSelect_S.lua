@@ -193,7 +193,6 @@ function SetActiveRace(player, race)
 
     characterSelectScreenStates[player].race = race
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.RACE, race)
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "justicar_chest")
 end
 
 function SetActiveGender(player, gender)
@@ -207,7 +206,74 @@ function SetActiveGender(player, gender)
 end
 
 function SetActiveClass(player, class)
-    -- TODO: Validate
+    if class == Framework.Storage.Keys.Classes.WARRIOR then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "warrior_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "warrior_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "warrior_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "warrior_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "warrior_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "warrior_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "warrior_feet")
+    elseif class == Framework.Storage.Keys.Classes.MAGE then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "mage_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "mage_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "mage_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "mage_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "mage_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "mage_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "mage_feet")
+    elseif class == Framework.Storage.Keys.Classes.ROGUE then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "rogue_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "rogue_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "rogue_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "rogue_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "rogue_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "rogue_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "rogue_feet")
+    elseif class == Framework.Storage.Keys.Classes.NECROMANCER then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "necromancer_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "necromancer_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "necromancer_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "necromancer_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "necromancer_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "necromancer_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "necromancer_feet")
+    elseif class == Framework.Storage.Keys.Classes.ARCHER then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "archer_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "archer_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "archer_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "archer_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "archer_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "archer_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "archer_feet")
+    elseif class == Framework.Storage.Keys.Classes.DRUID then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "druid_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "druid_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "druid_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "druid_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "druid_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "druid_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "druid_feet")
+    elseif class == Framework.Storage.Keys.Classes.PRIEST then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "priest_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "priest_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "priest_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "priest_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "priest_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "priest_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "priest_feet")
+    elseif class == Framework.Storage.Keys.Classes.JUSTICAR then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, "justicar_head")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, "justicar_shoulders")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, "justicar_chest")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, "justicar_wrists")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, "justicar_feet")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, "justicar_legs")
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, "justicar_feet")
+    else
+        warn("Attempted to set invalid class")
+        return
+    end
     characterSelectScreenStates[player].class = class
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CLASS, class)
 end

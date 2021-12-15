@@ -8,9 +8,12 @@ local equipmentChangeNeckListeners = { }
 local equipmentChangeShouldersListeners = { }
 local equipmentChangeBackListeners = { }
 local equipmentChangeChestListeners = { }
+local equipmentChangeWaistListeners = { }
 local equipmentChangeWristsListeners = { }
 local equipmentChangeLegsListeners = { }
 local equipmentChangeFeetListeners = { }
+
+local nextFrameModelRebuildQueue = { }
 
 local allListeners = {
     ["head"] = equipmentChangeHeadListeners,
@@ -18,6 +21,7 @@ local allListeners = {
     ["shoulders"] = equipmentChangeShouldersListeners,
     ["back"] = equipmentChangeBackListeners,
     ["chest"] = equipmentChangeChestListeners,
+    ["waist"] = equipmentChangeWaistListeners,
     ["wrists"] = equipmentChangeWristsListeners,
     ["legs"] = equipmentChangeLegsListeners,
     ["feet"] = equipmentChangeFeetListeners,
@@ -60,11 +64,14 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
     -- Spawn the entire equipment template as a child of this script, then iterate through all model slots and attach them to the player.
     -- For example, a model for pants can be spawned, and individual parts will be separately attached to the pelvis, both legs, and knees.
     local equipmentModels = World.SpawnAsset(equipmentTable[equipmentModelTemplateId], { parent = script })
+    local modelPeices = equipmentModels:GetChildren()
+    local originalStance = player.clientUserData.model.animationStance
+
+    -- TODO: This doesn't seem to work. If this is ever fixed, we can stop rebuilding the full model when one piece of equipment changes...
+    player.clientUserData.model.animationStance = "unarmed_bind_pose"
 
     equipmentModels:SetWorldPosition(player.clientUserData.model:GetWorldPosition())
     equipmentModels:SetWorldRotation(player.clientUserData.model:GetWorldRotation())
-
-    local modelPeices = equipmentModels:GetChildren()
 
     for _, modelPeice in ipairs(modelPeices) do
         if modelPeice:IsA("Folder") or modelPeice:IsA("NetworkContext") then
@@ -78,6 +85,8 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
             modelPeice:SetWorldRotation(rot)
         end
     end
+
+    player.clientUserData.model.animationStance = originalStance
 end
 
 function OnModelChanged(playerId, equipmentModelTemplateId, modelSlot)
@@ -118,6 +127,10 @@ function OnChestModelChanged(playerId, equipmentModelTemplateId)
     OnModelChanged(playerId, equipmentModelTemplateId, "chest")
 end
 
+function OnWaistModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "waist")
+end
+
 function OnWristsModelChanged(playerId, equipmentModelTemplateId)
     OnModelChanged(playerId, equipmentModelTemplateId, "wrists")
 end
@@ -136,9 +149,72 @@ function OnNearbyPlayerModelChanged(player)
     OnShouldersModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS))
     OnBackModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK))
     OnChestModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST))
+    OnWaistModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST))
     OnWristsModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS))
     OnLegsModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS))
     OnFeetModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET))
 end
 
+function OnProximityObjectEnteredRange(proximityObjectId)
+    local player = Game.FindPlayer(proximityObjectId)
+
+    if not player then
+        return
+    end
+
+    -- This would be the ideal flow, but for some incomprehensible reason we cannot set the animationStance to "unarmed_bind_pose" and immediately attach objects
+    --[[
+    equipmentChangeHeadListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, OnHeadModelChanged)
+    equipmentChangeNeckListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_NECK, OnNeckModelChanged)
+    equipmentChangeShouldersListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, OnShouldersModelChanged)
+    equipmentChangeBackListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, OnBackModelChanged)
+    equipmentChangeChestListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, OnChestModelChanged)
+    equipmentChangeWaistListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, OnWaistModelChanged)
+    equipmentChangeWristsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, OnWristsModelChanged)
+    equipmentChangeLegsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, OnLegsModelChanged)
+    equipmentChangeFeetListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, OnFeetModelChanged)
+    --]]
+
+    -- When equipment changes for a player, add them to a list of players for which models will be rebuilt next frame.
+    -- This is deferred by a frame since many peices of equipment can change in a single frame, and we want to avoid doing 7+ rebuilds in a row.
+    local rebuildModelFunc = function ()
+        nextFrameModelRebuildQueue[player] = true
+    end
+
+    equipmentChangeHeadListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, rebuildModelFunc)
+    equipmentChangeNeckListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_NECK, rebuildModelFunc)
+    equipmentChangeShouldersListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, rebuildModelFunc)
+    equipmentChangeBackListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, rebuildModelFunc)
+    equipmentChangeChestListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, rebuildModelFunc)
+    equipmentChangeWaistListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, rebuildModelFunc)
+    equipmentChangeWristsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, rebuildModelFunc)
+    equipmentChangeLegsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, rebuildModelFunc)
+    equipmentChangeFeetListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, rebuildModelFunc)
+end
+
+function Tick(deltaSeconds)
+    for player, _ in pairs(nextFrameModelRebuildQueue) do
+        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.FORCE_REBUILD_NEARBY_ENTITY_MODEL, { player })
+    end
+
+    nextFrameModelRebuildQueue = { }
+end
+
+function OnProximityObjectLeftRange(proximityObjectId)
+    local player = Game.FindPlayer(proximityObjectId)
+
+    if not player then
+        return
+    end
+
+    for _, listenerTable in ipairs(allListeners) do
+        if listenerTable[proximityObjectId] then
+            listenerTable[proximityObjectId]:Disconnect()
+            listenerTable[proximityObjectId] = nil
+        end
+    end
+end
+
 Framework.Events.Listen(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, OnNearbyPlayerModelChanged)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnProximityObjectEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnProximityObjectLeftRange)

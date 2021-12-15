@@ -183,5 +183,16 @@ function OnEntityHeightChanged(proximityObjectId, height)
     RebuildModel(proximityObjectId)
 end
 
+function OnForceRebuildModel(player)
+    if Object.IsValid(player) then
+        if Object.IsValid(player.clientUserData.model) then
+            player.clientUserData.model:Destroy()
+            player.clientUserData.model = nil
+        end
+        RebuildModel(player.id)
+    end
+end
+
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnEntityEnteredRange)
 Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnEntityLeftRange)
+Framework.Events.Listen(Framework.Events.Keys.Entities.FORCE_REBUILD_NEARBY_ENTITY_MODEL, OnForceRebuildModel)
