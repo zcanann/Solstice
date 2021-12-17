@@ -433,5 +433,60 @@ Assets {
       VirtualFolderPath: "Justicar"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Equipment"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Jordan"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Jordan"
+      VirtualFolderPath: "Spanish"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Warrior"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Hunter"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Priest"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Mage"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Rogue"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Druid"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "EquipmentModels"
+      VirtualFolderPath: "Sets"
+      VirtualFolderPath: "Necromancer"
+      PlatformAssetType: 5
+    }
   }
 }

@@ -37,7 +37,7 @@ local classExplainerWarrior = "Priests weild holy power to provide aid to their 
 local classExplainerMage = "Mages are masters of destruction magic."
 local classExplainerRogue = "Rogues are a race."
 local classExplainerNecromancer = "Necromancers are masters of black magic. This allows them to summon apparitions, raise the dead, and use powerful forbidden magic."
-local classExplainerArcher = "Archers are a race."
+local classExplainerHunter = "Hunters are a race."
 local classExplainerDruid = "Druids are a race."
 local classExplainerPriest = "Priests are a race."
 local classExplainerJusticar = "Justicars are a race."
@@ -111,8 +111,8 @@ function OnCharacterSelectStateChanged(stateData)
             propClassExplainerText.text = classExplainerRogue
         elseif stateData.class == Framework.Storage.Keys.Classes.NECROMANCER then
             propClassExplainerText.text = classExplainerNecromancer
-        elseif stateData.class == Framework.Storage.Keys.Classes.ARCHER then
-            propClassExplainerText.text = classExplainerArcher
+        elseif stateData.class == Framework.Storage.Keys.Classes.HUNTER then
+            propClassExplainerText.text = classExplainerHunter
         elseif stateData.class == Framework.Storage.Keys.Classes.DRUID then
             propClassExplainerText.text = classExplainerDruid
         elseif stateData.class == Framework.Storage.Keys.Classes.PRIEST then

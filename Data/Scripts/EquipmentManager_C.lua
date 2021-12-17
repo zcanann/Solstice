@@ -70,6 +70,7 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
     -- TODO: This doesn't seem to work. If this is ever fixed, we can stop rebuilding the full model when one piece of equipment changes...
     player.clientUserData.model.animationStance = "unarmed_bind_pose"
 
+    equipmentModels.cameraCollision = Collision.FORCE_OFF
     equipmentModels:SetWorldPosition(player.clientUserData.model:GetWorldPosition())
     equipmentModels:SetWorldRotation(player.clientUserData.model:GetWorldRotation())
 
@@ -79,10 +80,14 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
             local pos = modelPeice:GetWorldPosition()
             local rot = modelPeice:GetWorldRotation()
 
+            modelPeice.cameraCollision = Collision.FORCE_OFF
             player.clientUserData.model:AttachCoreObject(modelPeice, socketName)
 
             modelPeice:SetWorldPosition(pos)
             modelPeice:SetWorldRotation(rot)
+        else
+            -- Destroy unexpected objects in equipment templates
+            modelPeice:Destroy()
         end
     end
 

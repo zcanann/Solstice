@@ -1,0 +1,71 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "3252147084904d38aeed49dfaac83243"
+  OwnerAccountId: "6d6a2be0deb64a00851b13a9c1452cf8"
+  OwnerName: "Agrauwin"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 432978696144371211
+  value: 2120153693449941786
+}
+AssetIdsOriginalToNew {
+  key: 1619944536278850625
+  value: 8858927251884714677
+}
+AssetIdsOriginalToNew {
+  key: 1859190051848703210
+  value: 7614550640851763701
+}
+AssetIdsOriginalToNew {
+  key: 2213421003718124265
+  value: 6648303910851530093
+}
+AssetIdsOriginalToNew {
+  key: 3480826706838752994
+  value: 7687597225228259966
+}
+AssetIdsOriginalToNew {
+  key: 3933908283975134561
+  value: 4825497292671892797
+}
+AssetIdsOriginalToNew {
+  key: 4569412576660616296
+  value: 7164179002107847294
+}
+AssetIdsOriginalToNew {
+  key: 5854356524766514194
+  value: 4307981501874555090
+}
+AssetIdsOriginalToNew {
+  key: 6337642816531226178
+  value: 8744060787906929846
+}
+AssetIdsOriginalToNew {
+  key: 8953329453853630809
+  value: 13932326818092754850
+}
+AssetIdsOriginalToNew {
+  key: 9107461119892579391
+  value: 9075993318934850928
+}
+AssetIdsOriginalToNew {
+  key: 9387198999026677749
+  value: 5774666413678096476
+}
+AssetIdsOriginalToNew {
+  key: 11584382584975989822
+  value: 7331522281711909425
+}
+AssetIdsOriginalToNew {
+  key: 11599590478403009569
+  value: 5226616020811035315
+}
+AssetIdsOriginalToNew {
+  key: 13682613287650585568
+  value: 14718139226054167572
+}
+AssetIdsOriginalToNew {
+  key: 17321304796711723284
+  value: 3921696362396870472
+}

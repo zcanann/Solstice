@@ -1,0 +1,107 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "0c8421415c2f47419550c9b8423f3010"
+  OwnerAccountId: "645c7ed91e35417a845249da3c9ff0e1"
+  OwnerName: "SloopDR"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 1610921631540064361
+  value: 1403951819313692968
+}
+AssetIdsOriginalToNew {
+  key: 2269351121133595552
+  value: 9223403991678562733
+}
+AssetIdsOriginalToNew {
+  key: 2773263720070698009
+  value: 1553693763666124294
+}
+AssetIdsOriginalToNew {
+  key: 2964478298088243082
+  value: 12259094578850043831
+}
+AssetIdsOriginalToNew {
+  key: 3627104901573337012
+  value: 201208150187704472
+}
+AssetIdsOriginalToNew {
+  key: 4042203258559966994
+  value: 7397707590781639192
+}
+AssetIdsOriginalToNew {
+  key: 5070863978728479236
+  value: 15732394526698640171
+}
+AssetIdsOriginalToNew {
+  key: 6142782112311147386
+  value: 7877404404912446223
+}
+AssetIdsOriginalToNew {
+  key: 6181535863098808780
+  value: 11691656931035614120
+}
+AssetIdsOriginalToNew {
+  key: 8575212897509927215
+  value: 16113491979562390163
+}
+AssetIdsOriginalToNew {
+  key: 8704416401659248674
+  value: 8329556812328395787
+}
+AssetIdsOriginalToNew {
+  key: 9123806273619472820
+  value: 11062637066201584635
+}
+AssetIdsOriginalToNew {
+  key: 9264914974151091964
+  value: 18297859128519273966
+}
+AssetIdsOriginalToNew {
+  key: 9893555221372529986
+  value: 14884555125577599790
+}
+AssetIdsOriginalToNew {
+  key: 10523504525206311087
+  value: 10535969315473855562
+}
+AssetIdsOriginalToNew {
+  key: 10647312450701033422
+  value: 1583534701972250976
+}
+AssetIdsOriginalToNew {
+  key: 12490511283868717593
+  value: 16294896152783959115
+}
+AssetIdsOriginalToNew {
+  key: 14045700152877848164
+  value: 13773854660383775308
+}
+AssetIdsOriginalToNew {
+  key: 14531759451542909891
+  value: 13466808565227787002
+}
+AssetIdsOriginalToNew {
+  key: 15334354510796595800
+  value: 18158958816660984904
+}
+AssetIdsOriginalToNew {
+  key: 15440398354388452703
+  value: 509090247673808951
+}
+AssetIdsOriginalToNew {
+  key: 15806345981376362273
+  value: 10722796685577284963
+}
+AssetIdsOriginalToNew {
+  key: 16173048288920429689
+  value: 15510974649219850955
+}
+AssetIdsOriginalToNew {
+  key: 16342014093847624300
+  value: 11193448561611570641
+}
+AssetIdsOriginalToNew {
+  key: 17619348575259751277
+  value: 14891682781154569582
+}

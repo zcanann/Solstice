@@ -358,7 +358,7 @@ Objects {
       value {
         Overrides {
           Name: "cs:ClassKey"
-          String: "archer"
+          String: "hunter"
         }
       }
     }
