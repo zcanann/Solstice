@@ -42,8 +42,9 @@ Assets {
         Name: "left_wrist"
         Transform {
           Location {
-            X: -1
-            Y: -48
+            X: 2.00005627
+            Y: -47.9999847
+            Z: 11
           }
           Rotation {
           }
@@ -185,8 +186,9 @@ Assets {
         Name: "right_wrist"
         Transform {
           Location {
-            X: 1
-            Y: 47
+            X: 4.00006199
+            Y: 46.9999809
+            Z: 11
           }
           Rotation {
           }

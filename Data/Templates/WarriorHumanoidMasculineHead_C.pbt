@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 10634286106440302193
+        ChildIds: 1799585185876733550
         ChildIds: 10420955624594777713
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37,43 +38,6 @@ Assets {
         }
       }
       Objects {
-        Id: 10420955624594777713
-        Name: "head"
-        Transform {
-          Location {
-          }
-          Rotation {
-            Pitch: -9.93498135
-            Yaw: 9.99131516e-05
-            Roll: 8.26617854e-13
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11119209686519032265
-        ChildIds: 1799585185876733550
-        ChildIds: 8019879922149137292
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 1799585185876733550
         Name: "MeshOverrides"
         Transform {
@@ -87,7 +51,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10420955624594777713
+        ParentId: 11119209686519032265
         UnregisteredParameters {
           Overrides {
             Name: "ma:1:Shared_Detail1:color"
@@ -153,18 +117,9 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:1:Shared_BaseMaterial:color"
-            Color {
-              R: 0.00392156886
-              G: 0.00392156886
-              B: 0.00392156886
-              A: 1
-            }
-          }
-          Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5476846266485836183
+              Id: 2018227301497757374
             }
           }
           Overrides {
@@ -215,6 +170,9 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
               Id: 403499311418171517
             }
             SkinnedMeshes {
@@ -223,10 +181,43 @@ Assets {
             SkinnedMeshes {
               Id: 841534158063459245
             }
-            SkinnedMeshes {
-              Id: 841534158063459245
-            }
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10420955624594777713
+        Name: "head"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -9.93498135
+            Yaw: 9.99131516e-05
+            Roll: 8.26617854e-13
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11119209686519032265
+        ChildIds: 8019879922149137292
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -3464,21 +3455,21 @@ Assets {
       }
     }
     Assets {
-      Id: 5476846266485836183
-      Name: "Rubber Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_rubber_old_001_uv_ref"
-      }
-    }
-    Assets {
       Id: 2018227301497757374
       Name: "Invisible"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 5476846266485836183
+      Name: "Rubber Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
       }
     }
     Assets {

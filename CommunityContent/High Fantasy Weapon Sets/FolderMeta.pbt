@@ -1,0 +1,59 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "2ec65aa3d8904a7ca50f2d9b99a12452"
+  OwnerAccountId: "7448f2c5e52a43208b10a55182c65c58"
+  OwnerName: "Thvald"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 2850381801154286804
+  value: 14212297836999963205
+}
+AssetIdsOriginalToNew {
+  key: 4511727541605298897
+  value: 2862124641147339573
+}
+AssetIdsOriginalToNew {
+  key: 7913027248883351485
+  value: 14846996197084264662
+}
+AssetIdsOriginalToNew {
+  key: 8912482204223209572
+  value: 9625340191769429395
+}
+AssetIdsOriginalToNew {
+  key: 10024205280103329680
+  value: 4822589975939944768
+}
+AssetIdsOriginalToNew {
+  key: 10978241149596536765
+  value: 16206347482851857137
+}
+AssetIdsOriginalToNew {
+  key: 11541519595923026057
+  value: 8856657661703507351
+}
+AssetIdsOriginalToNew {
+  key: 13169834947093026536
+  value: 6392814135005774239
+}
+AssetIdsOriginalToNew {
+  key: 14063791600223333312
+  value: 13368711008750437673
+}
+AssetIdsOriginalToNew {
+  key: 14079959321753098018
+  value: 1014791500785927773
+}
+AssetIdsOriginalToNew {
+  key: 15832081690433258419
+  value: 7617609127635754486
+}
+AssetIdsOriginalToNew {
+  key: 15995254323398193128
+  value: 12174649942383570458
+}
+AssetIdsOriginalToNew {
+  key: 17618912404531196210
+  value: 9941338288583564488
+}

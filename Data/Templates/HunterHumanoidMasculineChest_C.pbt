@@ -16,7 +16,6 @@ Assets {
           }
         }
         ParentId: 2302788462528321651
-        ChildIds: 9363522360378301347
         ChildIds: 481810141587578436
         ChildIds: 4403730336174819063
         ChildIds: 10377334814451243082
@@ -42,15 +41,57 @@ Assets {
         }
       }
       Objects {
-        Id: 9363522360378301347
-        Name: "MeshOverrides"
+        Id: 481810141587578436
+        Name: "upper_spine"
         Transform {
           Location {
-            X: 0.999999762
-            Y: -7.1525568e-07
+            X: 2.29327345
+            Y: 0.750852585
+            Z: 55.7848053
           }
           Rotation {
-            Yaw: -3.05175563e-05
+            Yaw: 1.99991965
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18328773757213500289
+        ChildIds: 9363522360378301347
+        ChildIds: 6975692587531895453
+        ChildIds: 14741139559786373801
+        ChildIds: 3630107833094778165
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        NetworkContext {
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9363522360378301347
+        Name: "Plate"
+        Transform {
+          Location {
+            X: -1.31868958
+            Y: -0.705263257
+            Z: -55.7848053
+          }
+          Rotation {
+            Pitch: 3
+            Yaw: -2
           }
           Scale {
             X: 1.05
@@ -58,7 +99,7 @@ Assets {
             Z: 1.05
           }
         }
-        ParentId: 18328773757213500289
+        ParentId: 481810141587578436
         UnregisteredParameters {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
@@ -132,38 +173,90 @@ Assets {
         }
       }
       Objects {
-        Id: 481810141587578436
-        Name: "upper_spine"
+        Id: 6975692587531895453
+        Name: "Plate"
         Transform {
           Location {
-            X: 2.29327345
-            Y: 0.750852585
-            Z: 55.7848053
+            X: -1.31868958
+            Y: -0.705263257
+            Z: -55.7848053
           }
           Rotation {
-            Yaw: 1.99991965
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.05
+            Y: 1.05
+            Z: 1.05
           }
         }
-        ParentId: 18328773757213500289
-        ChildIds: 14741139559786373801
-        ChildIds: 3630107833094778165
+        ParentId: 481810141587578436
         UnregisteredParameters {
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8363341854360369298
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail2:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail3:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
-        NetworkContext {
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16794234107403285238
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          AnimatedMesh {
+            AnimationStance: "unarmed_bind_pose"
+            AnimationStancePlaybackRate: 1
+            AnimationStanceShouldLoop: true
+            AnimationPlaybackRateMultiplier: 1
+            PlayOnStartAnimation {
+              PlaybackRate: 1
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 5245926228518167640
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"

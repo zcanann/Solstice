@@ -105,6 +105,39 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:color"
+            Color {
+              R: 0.282352954
+              G: 0.141176477
+              B: 0.0274509825
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3301699299468232310
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:id"
+            AssetReference {
+              Id: 3301699299468232310
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail3:id"
+            AssetReference {
+              Id: 1442863044624651352
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:id"
+            AssetReference {
+              Id: 5423748691977508462
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -141,10 +174,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 14898920256026763246
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 14898920256026763246
             }
           }
         }

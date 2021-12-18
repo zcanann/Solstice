@@ -1,0 +1,95 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "ea7b597163e44383b73ba20172ea24f1"
+  OwnerAccountId: "6630e85f40994eb1845b5afc8df37c9b"
+  OwnerName: "SQZ"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 253193476747432413
+  value: 12749546538765841434
+}
+AssetIdsOriginalToNew {
+  key: 2688401178856794642
+  value: 5296171003836025628
+}
+AssetIdsOriginalToNew {
+  key: 5009865551602498783
+  value: 18315693445664665402
+}
+AssetIdsOriginalToNew {
+  key: 6182537080835323396
+  value: 14102949927150233328
+}
+AssetIdsOriginalToNew {
+  key: 6224285631515562087
+  value: 13538265453574536900
+}
+AssetIdsOriginalToNew {
+  key: 7811325020167055792
+  value: 5077864384824714493
+}
+AssetIdsOriginalToNew {
+  key: 8227411339376474432
+  value: 3177343706046474289
+}
+AssetIdsOriginalToNew {
+  key: 8721506889248994389
+  value: 3645381416669958832
+}
+AssetIdsOriginalToNew {
+  key: 8761959021950688115
+  value: 11649656547492554229
+}
+AssetIdsOriginalToNew {
+  key: 8979730931644004787
+  value: 9761596124407084930
+}
+AssetIdsOriginalToNew {
+  key: 9312896226034593367
+  value: 7524927474467838823
+}
+AssetIdsOriginalToNew {
+  key: 9937314938716957216
+  value: 16870891935250029314
+}
+AssetIdsOriginalToNew {
+  key: 10087494868310392483
+  value: 13064729095279227339
+}
+AssetIdsOriginalToNew {
+  key: 10472625307399765361
+  value: 471809446032608484
+}
+AssetIdsOriginalToNew {
+  key: 11694904347286601299
+  value: 6255858782943670863
+}
+AssetIdsOriginalToNew {
+  key: 12828920187362459586
+  value: 9559812674251139198
+}
+AssetIdsOriginalToNew {
+  key: 13220348744405315235
+  value: 8367628446838711300
+}
+AssetIdsOriginalToNew {
+  key: 13631265318634546106
+  value: 12913726901393800205
+}
+AssetIdsOriginalToNew {
+  key: 16244883982752449603
+  value: 11509345428576783914
+}
+AssetIdsOriginalToNew {
+  key: 16259499920280438114
+  value: 3788369901938353343
+}
+AssetIdsOriginalToNew {
+  key: 16923367632016594506
+  value: 820850367405959207
+}
+AssetIdsOriginalToNew {
+  key: 17035827291645526232
+  value: 7098095332075684856
+}

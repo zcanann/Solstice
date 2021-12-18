@@ -59,7 +59,7 @@ Assets {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11769523987462008650
+              Id: 2018227301497757374
             }
           }
           Overrides {
@@ -131,10 +131,10 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 17124023611434561119
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 968683000654906430
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -3006,12 +3006,12 @@ Assets {
       }
     }
     Assets {
-      Id: 17124023611434561119
-      Name: "Humanoid 1 Nancy Hair"
+      Id: 968683000654906430
+      Name: "Humanoid 1 Aparna Hair"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_hair_basic_002_ref"
+        AssetId: "npc_human_gal_hair_basic_008_ref"
       }
     }
     Assets {

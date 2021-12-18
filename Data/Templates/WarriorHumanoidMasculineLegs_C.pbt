@@ -45,14 +45,14 @@ Assets {
         Name: "right_knee"
         Transform {
           Location {
-            X: -0.395495653
-            Y: 16.8265305
-            Z: -50.302
+            X: -2.39549494
+            Y: 16.8265324
+            Z: -45.302
           }
           Rotation {
             Pitch: -3.90996218
-            Yaw: 3.62910175
-            Roll: -4.28347969
+            Yaw: 3.62910295
+            Roll: -4.28348064
           }
           Scale {
             X: 1
@@ -226,14 +226,14 @@ Assets {
         Name: "pelvis"
         Transform {
           Location {
-            X: 0.606445
-            Y: -0.0544437766
-            Z: 10.2679901
+            X: -1.39355421
+            Y: -0.0544423461
+            Z: 15.2679901
           }
           Rotation {
             Pitch: 7.51320767e-05
-            Yaw: 5.12263396e-05
-            Roll: 1.2424041e-17
+            Yaw: 5.12263141e-05
+            Roll: 1.86360616e-17
           }
           Scale {
             X: 1
@@ -757,14 +757,14 @@ Assets {
         Name: "left_hip"
         Transform {
           Location {
-            X: -0.779792488
-            Y: -10.5454054
-            Z: -0.365005493
+            X: -2.77979183
+            Y: -10.5454044
+            Z: 4.63499451
           }
           Rotation {
             Pitch: 3.17944598
-            Yaw: 0.349459499
-            Roll: 4.47927284
+            Yaw: 0.349459231
+            Roll: 4.47927427
           }
           Scale {
             X: 1
@@ -1035,14 +1035,14 @@ Assets {
         Name: "right_hip"
         Transform {
           Location {
-            X: -0.779777467
-            Y: 10.4365206
-            Z: -0.365005493
+            X: -2.77977681
+            Y: 10.4365215
+            Z: 4.63499451
           }
           Rotation {
             Pitch: 3.17958951
-            Yaw: -0.34945634
-            Roll: -4.47894144
+            Yaw: -0.349456072
+            Roll: -4.47894049
           }
           Scale {
             X: 1
@@ -1313,13 +1313,13 @@ Assets {
         Name: "left_knee"
         Transform {
           Location {
-            X: -0.395519793
-            Y: -16.9354172
-            Z: -50.302
+            X: -2.39551902
+            Y: -16.9354153
+            Z: -45.302
           }
           Rotation {
             Pitch: -3.90987325
-            Yaw: -3.62921309
+            Yaw: -3.62921405
             Roll: 4.28336573
           }
           Scale {

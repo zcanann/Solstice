@@ -1,0 +1,83 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "a00ec6b1349a492b9154e4c386208d05"
+  OwnerAccountId: "903ac519134746a9a7595085cf805188"
+  OwnerName: "Taovi"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 917997764497922828
+  value: 3800979347227902282
+}
+AssetIdsOriginalToNew {
+  key: 1675088037560199982
+  value: 7106025936452643282
+}
+AssetIdsOriginalToNew {
+  key: 2322581879212074685
+  value: 8659668261512345151
+}
+AssetIdsOriginalToNew {
+  key: 3648624622317465213
+  value: 14700894479469334009
+}
+AssetIdsOriginalToNew {
+  key: 8158582704149015377
+  value: 4782549563727002928
+}
+AssetIdsOriginalToNew {
+  key: 8398228721825726427
+  value: 9163201697980006474
+}
+AssetIdsOriginalToNew {
+  key: 8586404322039440230
+  value: 6979325805303910846
+}
+AssetIdsOriginalToNew {
+  key: 9231773833627633440
+  value: 3335129001998700742
+}
+AssetIdsOriginalToNew {
+  key: 9322331251990264259
+  value: 15366325276162570190
+}
+AssetIdsOriginalToNew {
+  key: 11126689684270086980
+  value: 8459355769606399098
+}
+AssetIdsOriginalToNew {
+  key: 12792966699217935347
+  value: 9790370266088112522
+}
+AssetIdsOriginalToNew {
+  key: 14285268320099361989
+  value: 9432342774303166105
+}
+AssetIdsOriginalToNew {
+  key: 15103436201085257270
+  value: 15666810392224206839
+}
+AssetIdsOriginalToNew {
+  key: 15290052583901237664
+  value: 6337695594118352109
+}
+AssetIdsOriginalToNew {
+  key: 15755728873758410495
+  value: 8913974056788960428
+}
+AssetIdsOriginalToNew {
+  key: 17172812396812870337
+  value: 1488631419374265480
+}
+AssetIdsOriginalToNew {
+  key: 17716474489000691114
+  value: 14774085319372472030
+}
+AssetIdsOriginalToNew {
+  key: 17751161154302804940
+  value: 11040758230306027671
+}
+AssetIdsOriginalToNew {
+  key: 17832322612794457775
+  value: 2876549427865064151
+}

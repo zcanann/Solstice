@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 12643833006656352311
+        ChildIds: 11926946390257897317
         ChildIds: 7384792121802055256
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37,15 +38,15 @@ Assets {
         }
       }
       Objects {
-        Id: 7384792121802055256
-        Name: "head"
+        Id: 11926946390257897317
+        Name: "MeshOverrides"
         Transform {
           Location {
           }
           Rotation {
-            Pitch: -9.93499756
-            Yaw: 9.99132171e-05
-            Roll: 8.26617854e-13
+            Pitch: -9.93498802
+            Yaw: 9.99131444e-05
+            Roll: 1.65323571e-12
           }
           Scale {
             X: 0.900000036
@@ -54,45 +55,11 @@ Assets {
           }
         }
         ParentId: 15114827518215117093
-        ChildIds: 11926946390257897317
-        ChildIds: 14183413243302303391
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        NetworkContext {
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 11926946390257897317
-        Name: "MeshOverrides"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7384792121802055256
         UnregisteredParameters {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11769523987462008650
+              Id: 2018227301497757374
             }
           }
           Overrides {
@@ -164,10 +131,10 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 17124023611434561119
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 968683000654906430
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -176,6 +143,42 @@ Assets {
               Id: 841534158063459245
             }
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7384792121802055256
+        Name: "head"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Pitch: -9.93499756
+            Yaw: 9.99132171e-05
+            Roll: 8.26617854e-13
+          }
+          Scale {
+            X: 0.900000036
+            Y: 0.900000036
+            Z: 0.900000036
+          }
+        }
+        ParentId: 15114827518215117093
+        ChildIds: 14183413243302303391
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        NetworkContext {
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -3404,12 +3407,12 @@ Assets {
       }
     }
     Assets {
-      Id: 17124023611434561119
-      Name: "Humanoid 1 Nancy Hair"
+      Id: 968683000654906430
+      Name: "Humanoid 1 Aparna Hair"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_hair_basic_002_ref"
+        AssetId: "npc_human_gal_hair_basic_008_ref"
       }
     }
     Assets {

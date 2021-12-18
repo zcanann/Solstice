@@ -142,6 +142,57 @@ Assets {
               Id: 5476846266485836183
             }
           }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:color"
+            Color {
+              R: 0.011764707
+              G: 0.011764707
+              B: 0.011764707
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8177325227117246427
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:id"
+            AssetReference {
+              Id: 9969499844361561680
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:id"
+            AssetReference {
+              Id: 15579886486698017771
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail3:id"
+            AssetReference {
+              Id: 3409264884863408709
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -178,10 +229,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 14898920256026763246
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 14898920256026763246
             }
           }
         }

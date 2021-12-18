@@ -131,7 +131,7 @@ Assets {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 5476846266485836183
+              Id: 2018227301497757374
             }
           }
           Overrides {
@@ -182,10 +182,10 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 403499311418171517
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 403499311418171517
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -4556,21 +4556,21 @@ Assets {
       }
     }
     Assets {
-      Id: 5476846266485836183
-      Name: "Rubber Old 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_mil_rubber_old_001_uv_ref"
-      }
-    }
-    Assets {
       Id: 2018227301497757374
       Name: "Invisible"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 5476846266485836183
+      Name: "Rubber Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
       }
     }
     Assets {

@@ -62,15 +62,6 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:2:Shared_Detail1:color"
-            Color {
-              R: 0.0150000006
-              G: 0.0150000006
-              B: 0.0150000006
-              A: 1
-            }
-          }
-          Overrides {
             Name: "ma:1:Shared_Detail2:color"
             Color {
               R: 0.014
@@ -91,18 +82,18 @@ Assets {
           Overrides {
             Name: "ma:2:Shared_Detail2:color"
             Color {
-              R: 0.00392156886
-              G: 0.00392156886
-              B: 0.00392156886
+              R: 0.011764707
+              G: 0.011764707
+              B: 0.011764707
               A: 1
             }
           }
           Overrides {
             Name: "ma:2:Shared_Detail3:color"
             Color {
-              R: 0.00392156886
-              G: 0.00392156886
-              B: 0.00392156886
+              R: 0.011764707
+              G: 0.011764707
+              B: 0.011764707
               A: 1
             }
           }
@@ -142,6 +133,30 @@ Assets {
               Id: 5476846266485836183
             }
           }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5476846266485836183
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:id"
+            AssetReference {
+              Id: 5476846266485836183
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:id"
+            AssetReference {
+              Id: 5476846266485836183
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:id"
+            AssetReference {
+              Id: 13230585777016256487
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -175,10 +190,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 1619046284421263831
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 1619046284421263831
             }
             SkinnedMeshes {
               Id: 841534158063459245

@@ -42,12 +42,12 @@ Assets {
         Name: "right_elbow"
         Transform {
           Location {
-            X: 147.002808
-            Y: -6.75529146
+            X: 1.0034126
+            Y: -6.75518703
             Z: -105
           }
           Rotation {
-            Yaw: -3.05175672e-05
+            Yaw: -3.05175308e-05
           }
           Scale {
             X: 1
@@ -193,12 +193,12 @@ Assets {
         Name: "left_elbow"
         Transform {
           Location {
-            X: 147.002808
-            Y: -0.000105144631
+            X: 1.00341749
+            Y: -7.17700345e-07
             Z: -105
           }
           Rotation {
-            Yaw: -3.05175672e-05
+            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -229,14 +229,14 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -10.837471
-            Y: -27.4574
+            X: -10.8374643
+            Y: -27.4573727
             Z: 152.427795
           }
           Rotation {
-            Pitch: -20.3742886
+            Pitch: -20.3742619
             Yaw: -178.009598
-            Roll: 151.371201
+            Roll: 151.37117
           }
           Scale {
             X: 0.123425625

@@ -1,0 +1,71 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "e40440134adb4a0d921eb3d924d38f0e"
+  OwnerAccountId: "cce678c8b67d4c1ba16ca8596a00ad1c"
+  OwnerName: "Honstar"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 123994272168548394
+  value: 4548017425331739093
+}
+AssetIdsOriginalToNew {
+  key: 1518160165269425996
+  value: 16175072768231824558
+}
+AssetIdsOriginalToNew {
+  key: 3691668285842845988
+  value: 9657511655570936218
+}
+AssetIdsOriginalToNew {
+  key: 3696543723512829738
+  value: 9279551188548552035
+}
+AssetIdsOriginalToNew {
+  key: 3731118247202363736
+  value: 9844087437087021319
+}
+AssetIdsOriginalToNew {
+  key: 6069741256991147615
+  value: 6025433711113497536
+}
+AssetIdsOriginalToNew {
+  key: 7445855579671141283
+  value: 5421123429404356332
+}
+AssetIdsOriginalToNew {
+  key: 7702565210062601240
+  value: 1013363310677302315
+}
+AssetIdsOriginalToNew {
+  key: 8321817849622882250
+  value: 14950398174663859781
+}
+AssetIdsOriginalToNew {
+  key: 8799101599018051692
+  value: 13094132501072928845
+}
+AssetIdsOriginalToNew {
+  key: 9770511928359673738
+  value: 17591687607251324366
+}
+AssetIdsOriginalToNew {
+  key: 10109220941690346490
+  value: 17057502864776356847
+}
+AssetIdsOriginalToNew {
+  key: 10251728999306098252
+  value: 17331051686597956799
+}
+AssetIdsOriginalToNew {
+  key: 14373757464648078715
+  value: 15008797684627606428
+}
+AssetIdsOriginalToNew {
+  key: 16943198897384362849
+  value: 3300969442327320752
+}
+AssetIdsOriginalToNew {
+  key: 16946794819248017744
+  value: 7411375549961147978
+}

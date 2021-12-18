@@ -17,6 +17,7 @@ end
 
 UtilsAPI.CameraCapture = require(script:GetCustomProperty("CameraCapture"))
 UtilsAPI.Objects = require(script:GetCustomProperty("ObjectsUtils"))
+UtilsAPI.Meshes = require(script:GetCustomProperty("MeshUtils"))
 UtilsAPI.Table = require(script:GetCustomProperty("TableUtils"))
 
 return UtilsAPI

@@ -49,13 +49,13 @@ Assets {
       Overrides {
         Name: "cs:justicar_back"
         AssetReference {
-          Id: 841534158063459245
+          Id: 4386248052141626340
         }
       }
       Overrides {
         Name: "cs:justicar_hands"
         AssetReference {
-          Id: 841534158063459245
+          Id: 12175479501021401254
         }
       }
       Overrides {
@@ -175,13 +175,13 @@ Assets {
       Overrides {
         Name: "cs:rogue_back"
         AssetReference {
-          Id: 841534158063459245
+          Id: 15602547611334303230
         }
       }
       Overrides {
         Name: "cs:rogue_shoulders"
         AssetReference {
-          Id: 841534158063459245
+          Id: 832868481895636223
         }
       }
       Overrides {
@@ -193,19 +193,19 @@ Assets {
       Overrides {
         Name: "cs:rogue_waist"
         AssetReference {
-          Id: 841534158063459245
+          Id: 8556754368118863379
         }
       }
       Overrides {
         Name: "cs:rogue_wrists"
         AssetReference {
-          Id: 841534158063459245
+          Id: 7105410474811271103
         }
       }
       Overrides {
         Name: "cs:rogue_hands"
         AssetReference {
-          Id: 841534158063459245
+          Id: 18309952226676850278
         }
       }
       Overrides {
@@ -217,7 +217,7 @@ Assets {
       Overrides {
         Name: "cs:rogue_feet"
         AssetReference {
-          Id: 841534158063459245
+          Id: 4911190497790986348
         }
       }
       Overrides {

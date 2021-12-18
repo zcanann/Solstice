@@ -50,7 +50,7 @@ Assets {
             Y: -1.30967223e-10
           }
           Rotation {
-            Yaw: 6.40330086e-07
+            Yaw: 1.1099055e-05
           }
           Scale {
             X: 1
@@ -117,6 +117,12 @@ Assets {
               Id: 2018227301497757374
             }
           }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 8363341854360369298
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -150,10 +156,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 12568227104136102308
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 12568227104136102308
             }
             SkinnedMeshes {
               Id: 841534158063459245

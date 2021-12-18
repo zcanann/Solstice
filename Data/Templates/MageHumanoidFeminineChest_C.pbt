@@ -42,12 +42,12 @@ Assets {
         Name: "upper_spine"
         Transform {
           Location {
-            X: 146.999573
-            Y: -1.0001049
+            X: 1.00018191
+            Y: -1.00000048
             Z: -105
           }
           Rotation {
-            Yaw: -3.05175672e-05
+            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -861,12 +861,12 @@ Assets {
         Name: "neck"
         Transform {
           Location {
-            X: 146.999573
-            Y: -1.0001049
+            X: 1.00018191
+            Y: -1.00000048
             Z: -105
           }
           Rotation {
-            Yaw: -3.05175672e-05
+            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1

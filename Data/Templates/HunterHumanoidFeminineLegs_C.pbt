@@ -16,7 +16,7 @@ Assets {
           }
         }
         ParentId: 13001125932609692133
-        ChildIds: 7456010384679721470
+        ChildIds: 4069075055691331753
         ChildIds: 12182587810805772704
         ChildIds: 17861841315112707339
         ChildIds: 9779333452739923672
@@ -41,12 +41,10 @@ Assets {
         }
       }
       Objects {
-        Id: 7456010384679721470
+        Id: 4069075055691331753
         Name: "MeshOverrides"
         Transform {
           Location {
-            X: 0.000183105411
-            Y: -1.30967223e-10
           }
           Rotation {
           }
@@ -59,60 +57,97 @@ Assets {
         ParentId: 898539022755869376
         UnregisteredParameters {
           Overrides {
-            Name: "ma:2:Shared_Detail3:id"
-            AssetReference {
-              Id: 2018227301497757374
+            Name: "ma:1:Shared_Detail2:color"
+            Color {
+              R: 0.0360000022
+              G: 0.00254770811
+              B: 0.000359997532
+              A: 1
             }
           }
           Overrides {
-            Name: "ma:2:Shared_Detail2:id"
-            AssetReference {
-              Id: 2018227301497757374
+            Name: "ma:1:Shared_Detail1:color"
+            Color {
+              R: 0.244000018
+              G: 0.138754681
+              B: 0.0861320049
+              A: 1
             }
           }
           Overrides {
-            Name: "ma:2:Shared_Detail1:id"
-            AssetReference {
-              Id: 2018227301497757374
+            Name: "ma:2:Shared_Detail1:color"
+            Color {
+              R: 0.0352941193
+              A: 1
             }
           }
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8363341854360369298
+              Id: 3301699299468232310
             }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:vtile"
+            Float: 0.75
           }
           Overrides {
             Name: "ma:1:Shared_Detail1:id"
             AssetReference {
-              Id: 2018227301497757374
+              Id: 3301699299468232310
             }
           }
           Overrides {
-            Name: "ma:1:Shared_Detail4:id"
+            Name: "ma:1:Shared_Detail1:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8363341854360369298
+              Id: 3301699299468232310
             }
           }
           Overrides {
-            Name: "ma:1:Shared_Detail2:id"
+            Name: "ma:2:Shared_Detail2:id"
             AssetReference {
-              Id: 8363341854360369298
+              Id: 3301699299468232310
             }
           }
           Overrides {
-            Name: "ma:1:Shared_Detail2:color"
+            Name: "ma:2:Shared_BaseMaterial:color"
             Color {
-              R: 0.592
-              G: 0.592
-              B: 0.592
+              R: 0.284
+              G: 0.144044802
+              B: 0.0295359939
               A: 1
             }
           }
           Overrides {
-            Name: "ma:1:Shared_Detail3:id"
+            Name: "ma:3:Shared_Detail3:id"
             AssetReference {
-              Id: 2018227301497757374
+              Id: 6649159904539862966
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:id"
+            AssetReference {
+              Id: 12774579908168954522
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:id"
+            AssetReference {
+              Id: 2544142586690299676
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12236264927120487519
             }
           }
         }
@@ -151,10 +186,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 10033300965642188152
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 10033300965642188152
             }
           }
         }
@@ -1023,24 +1058,6 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_lower_casual_023_ref"
-      }
-    }
-    Assets {
-      Id: 2018227301497757374
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
-      }
-    }
-    Assets {
-      Id: 8363341854360369298
-      Name: "Bone Raw"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_bone_raw_001_uv_ref"
       }
     }
     Assets {

@@ -1,0 +1,71 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "35e531456c16462fa7b70754537e6f16"
+  OwnerAccountId: "557d4f1ae17646579646dfd20dcb7b66"
+  OwnerName: "AwkwardGameDev"
+  Version: "1.3.0"
+}
+AssetIdsOriginalToNew {
+  key: 171090409284182791
+  value: 10939559981357767958
+}
+AssetIdsOriginalToNew {
+  key: 307406115803496087
+  value: 17641067792785375380
+}
+AssetIdsOriginalToNew {
+  key: 440168262593430639
+  value: 8922772248369152930
+}
+AssetIdsOriginalToNew {
+  key: 1427829216143793458
+  value: 4315249216302628445
+}
+AssetIdsOriginalToNew {
+  key: 3791193255840744479
+  value: 12969925410271066374
+}
+AssetIdsOriginalToNew {
+  key: 4020958367257585299
+  value: 14222051792746234675
+}
+AssetIdsOriginalToNew {
+  key: 5082628058110625875
+  value: 8793692678897224967
+}
+AssetIdsOriginalToNew {
+  key: 8231864641263103893
+  value: 3790831938578296732
+}
+AssetIdsOriginalToNew {
+  key: 8459825612529451237
+  value: 3249482194393059192
+}
+AssetIdsOriginalToNew {
+  key: 9165652873987739487
+  value: 13656792232577419577
+}
+AssetIdsOriginalToNew {
+  key: 9220757331295617461
+  value: 6979371170890769554
+}
+AssetIdsOriginalToNew {
+  key: 9769388002978626027
+  value: 9982536505960782600
+}
+AssetIdsOriginalToNew {
+  key: 12439034694186114331
+  value: 3186696330409790209
+}
+AssetIdsOriginalToNew {
+  key: 12971704803185333098
+  value: 5822868586852734164
+}
+AssetIdsOriginalToNew {
+  key: 13033197038424522750
+  value: 17489462388137438623
+}
+AssetIdsOriginalToNew {
+  key: 13834785171864095136
+  value: 4725668615195329717
+}

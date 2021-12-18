@@ -23,6 +23,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:MeshUtils"
+        AssetReference {
+          Id: 9832009797434736257
+        }
+      }
+      Overrides {
         Name: "cs:TableUtils"
         AssetReference {
           Id: 11279245430205585369

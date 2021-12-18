@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
+        ParentId: 12138717742109737789
         ChildIds: 8385565825393831493
         ChildIds: 7542642031899489562
         UnregisteredParameters {
@@ -254,7 +254,6 @@ Assets {
         }
         ParentId: 11519152407027522013
         ChildIds: 6712097782558519324
-        ChildIds: 6032438496256928971
         UnregisteredParameters {
           Overrides {
             Name: "cs:Rig"
@@ -522,105 +521,6 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 6032438496256928971
-        Name: "upper_spine"
-        Transform {
-          Location {
-            X: 1481.99976
-            Y: -509.00061
-            Z: -5
-          }
-          Rotation {
-            Yaw: 89.9999771
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7542642031899489562
-        ChildIds: 5776886021005128947
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 5776886021005128947
-        Name: "Donut"
-        Transform {
-          Location {
-            X: -7
-            Y: 0.00158274174
-            Z: 70
-          }
-          Rotation {
-            Pitch: -15
-          }
-          Scale {
-            X: 0.125
-            Y: 0.125
-            Z: 0.125
-          }
-        }
-        ParentId: 6032438496256928971
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4382344445801906146
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 13988402689267315321
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
     }
     Assets {
       Id: 16794234107403285238
@@ -692,24 +592,6 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_lower_scifi_003_ref"
-      }
-    }
-    Assets {
-      Id: 13988402689267315321
-      Name: "Donut"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_001"
-      }
-    }
-    Assets {
-      Id: 4382344445801906146
-      Name: "Metal Vent Duct Square 01"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_urb_vent_duct_square_001_uv_ref"
       }
     }
     PrimaryAssetId {

@@ -1,0 +1,111 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "7cf51c652f1047a7a19bc45c6ac74913"
+  OwnerAccountId: "8f58c67d343b49cf8217b25d0b7928ca"
+  OwnerName: "DREADNAUGHT360"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 171090409284182791
+  value: 14695749887275750124
+}
+AssetIdsOriginalToNew {
+  key: 307406115803496087
+  value: 13153437970761052871
+}
+AssetIdsOriginalToNew {
+  key: 440168262593430639
+  value: 11500447794744556267
+}
+AssetIdsOriginalToNew {
+  key: 463595174786857128
+  value: 11956580790108823138
+}
+AssetIdsOriginalToNew {
+  key: 1427829216143793458
+  value: 5599220346987708611
+}
+AssetIdsOriginalToNew {
+  key: 4020958367257585299
+  value: 10573633760735260658
+}
+AssetIdsOriginalToNew {
+  key: 4138592951921227045
+  value: 7096149323369287431
+}
+AssetIdsOriginalToNew {
+  key: 4304936244948778528
+  value: 8687526928529572943
+}
+AssetIdsOriginalToNew {
+  key: 5082628058110625875
+  value: 7919020693385487086
+}
+AssetIdsOriginalToNew {
+  key: 5300475831583707402
+  value: 10981314629433516509
+}
+AssetIdsOriginalToNew {
+  key: 6111386356512715203
+  value: 14572894682360899841
+}
+AssetIdsOriginalToNew {
+  key: 6142695344868911655
+  value: 9628357485195720218
+}
+AssetIdsOriginalToNew {
+  key: 6530327413271442246
+  value: 8563406971172091492
+}
+AssetIdsOriginalToNew {
+  key: 7528264149012072721
+  value: 6341661651433600227
+}
+AssetIdsOriginalToNew {
+  key: 8459825612529451237
+  value: 16191783048292017474
+}
+AssetIdsOriginalToNew {
+  key: 10357086490028271085
+  value: 5581237821803508903
+}
+AssetIdsOriginalToNew {
+  key: 10862078263694899819
+  value: 4945512885707198286
+}
+AssetIdsOriginalToNew {
+  key: 12439034694186114331
+  value: 75353374394333169
+}
+AssetIdsOriginalToNew {
+  key: 12748504239623720876
+  value: 11025031932564105780
+}
+AssetIdsOriginalToNew {
+  key: 12971704803185333098
+  value: 6373352533386640842
+}
+AssetIdsOriginalToNew {
+  key: 13033197038424522750
+  value: 8045655205702705124
+}
+AssetIdsOriginalToNew {
+  key: 13863903107354181900
+  value: 13311743155144591707
+}
+AssetIdsOriginalToNew {
+  key: 14561254289566393221
+  value: 18027712565631520554
+}
+AssetIdsOriginalToNew {
+  key: 16682447987153289902
+  value: 9791426843136024622
+}
+AssetIdsOriginalToNew {
+  key: 17267761659388008343
+  value: 8317200954171503762
+}
+AssetIdsOriginalToNew {
+  key: 18239461955378318510
+  value: 17076152234179098706
+}

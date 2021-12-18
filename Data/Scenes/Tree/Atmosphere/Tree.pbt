@@ -2,7 +2,7 @@ Name: "Atmosphere"
 RootId: 807049152915355110
 Objects {
   Id: 17667724210395317465
-  Name: "Group"
+  Name: "Sky"
   Transform {
     Location {
     }
@@ -253,7 +253,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "bp:Intensity"
-      Float: 2.03480339
+      Float: 4
     }
     Overrides {
       Name: "bp:Light Color"

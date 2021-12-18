@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 7354809377469680473
+        ChildIds: 309019264105112954
         ChildIds: 13767094804500649600
         ChildIds: 17262135847266423998
         Collidable_v2 {
@@ -38,16 +39,14 @@ Assets {
         }
       }
       Objects {
-        Id: 13767094804500649600
-        Name: "head"
+        Id: 309019264105112954
+        Name: "MeshOverrides"
         Transform {
           Location {
-            X: 6.54836116e-11
-            Y: 9.15527053e-05
-            Z: -105
+            X: -3.05175054e-05
+            Y: 9.15527271e-05
           }
           Rotation {
-            Yaw: -3.05175672e-05
           }
           Scale {
             X: 1
@@ -56,47 +55,11 @@ Assets {
           }
         }
         ParentId: 2304053106600958888
-        ChildIds: 309019264105112954
-        ChildIds: 16600924450142519761
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 309019264105112954
-        Name: "MeshOverrides"
-        Transform {
-          Location {
-            X: -3.05175708e-05
-            Z: 105
-          }
-          Rotation {
-            Yaw: 3.05175672e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13767094804500649600
         UnregisteredParameters {
           Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 11769523987462008650
+              Id: 2018227301497757374
             }
           }
           Overrides {
@@ -168,6 +131,9 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
               Id: 968683000654906430
             }
             SkinnedMeshes {
@@ -176,10 +142,43 @@ Assets {
             SkinnedMeshes {
               Id: 841534158063459245
             }
-            SkinnedMeshes {
-              Id: 841534158063459245
-            }
           }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 13767094804500649600
+        Name: "head"
+        Transform {
+          Location {
+            X: 6.54836116e-11
+            Y: 9.15527053e-05
+            Z: -105
+          }
+          Rotation {
+            Yaw: -3.05175672e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2304053106600958888
+        ChildIds: 16600924450142519761
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"

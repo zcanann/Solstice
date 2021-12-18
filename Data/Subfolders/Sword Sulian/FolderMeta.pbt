@@ -1,0 +1,95 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "ea7b597163e44383b73ba20172ea24f1"
+  OwnerAccountId: "6630e85f40994eb1845b5afc8df37c9b"
+  OwnerName: "SQZ"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 253193476747432413
+  value: 8166323733275001365
+}
+AssetIdsOriginalToNew {
+  key: 2688401178856794642
+  value: 1403636699886245620
+}
+AssetIdsOriginalToNew {
+  key: 5009865551602498783
+  value: 11754313656301830857
+}
+AssetIdsOriginalToNew {
+  key: 6182537080835323396
+  value: 18203382217458127112
+}
+AssetIdsOriginalToNew {
+  key: 6224285631515562087
+  value: 6552154494522412078
+}
+AssetIdsOriginalToNew {
+  key: 7811325020167055792
+  value: 8818573791157153678
+}
+AssetIdsOriginalToNew {
+  key: 8227411339376474432
+  value: 12507415365739742567
+}
+AssetIdsOriginalToNew {
+  key: 8721506889248994389
+  value: 13900980322581885932
+}
+AssetIdsOriginalToNew {
+  key: 8761959021950688115
+  value: 6002863030126063269
+}
+AssetIdsOriginalToNew {
+  key: 8979730931644004787
+  value: 864735317193115168
+}
+AssetIdsOriginalToNew {
+  key: 9312896226034593367
+  value: 895852050769810272
+}
+AssetIdsOriginalToNew {
+  key: 9937314938716957216
+  value: 7741608956424545497
+}
+AssetIdsOriginalToNew {
+  key: 10087494868310392483
+  value: 58114187026034793
+}
+AssetIdsOriginalToNew {
+  key: 10472625307399765361
+  value: 8332746236260133028
+}
+AssetIdsOriginalToNew {
+  key: 11694904347286601299
+  value: 7297713022984840375
+}
+AssetIdsOriginalToNew {
+  key: 12828920187362459586
+  value: 14723354007645789357
+}
+AssetIdsOriginalToNew {
+  key: 13220348744405315235
+  value: 9674011361814619540
+}
+AssetIdsOriginalToNew {
+  key: 13631265318634546106
+  value: 7448024505134263185
+}
+AssetIdsOriginalToNew {
+  key: 16244883982752449603
+  value: 6030131782961428662
+}
+AssetIdsOriginalToNew {
+  key: 16259499920280438114
+  value: 143158118100921703
+}
+AssetIdsOriginalToNew {
+  key: 16923367632016594506
+  value: 12263067568762595850
+}
+AssetIdsOriginalToNew {
+  key: 17035827291645526232
+  value: 16961226026109937081
+}

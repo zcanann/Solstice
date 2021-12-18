@@ -47,7 +47,7 @@ Assets {
           Location {
           }
           Rotation {
-            Yaw: -3.05175563e-05
+            Yaw: -3.05175781e-05
           }
           Scale {
             X: 1
@@ -56,6 +56,40 @@ Assets {
           }
         }
         ParentId: 10579301817723860522
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:3:Shared_Detail1:id"
+            AssetReference {
+              Id: 14263024695528103928
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:vtile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:id"
+            AssetReference {
+              Id: 17163782647431030420
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail3:id"
+            AssetReference {
+              Id: 10260458217391861041
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18022308622272594193
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -91,10 +125,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 2760985011174261883
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 2760985011174261883
             }
           }
         }
@@ -963,6 +997,15 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_lower_military_000_ref"
+      }
+    }
+    Assets {
+      Id: 14263024695528103928
+      Name: "Skull and  Bones 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fan_ground_bones_001_uv"
       }
     }
     Assets {

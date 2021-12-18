@@ -16,9 +16,9 @@ Assets {
           }
         }
         ParentId: 8622959906860917915
+        ChildIds: 16872893513245819590
         ChildIds: 921745367376853562
         ChildIds: 15287160090691545312
-        ChildIds: 16872893513245819590
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -39,16 +39,258 @@ Assets {
         }
       }
       Objects {
+        Id: 16872893513245819590
+        Name: "lower_spine"
+        Transform {
+          Location {
+            X: 1.00018191
+            Y: -1.00000048
+            Z: -105
+          }
+          Rotation {
+            Yaw: -3.05175436e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6879129135587416020
+        ChildIds: 18095319909074010623
+        ChildIds: 12195016172263533631
+        ChildIds: 858338615303224398
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 18095319909074010623
+        Name: "Teardrop - Truncated"
+        Transform {
+          Location {
+            X: -3.32080078
+            Y: 0.265319824
+            Z: 100
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.311915487
+            Y: 0.350621283
+            Z: 0.42501545
+          }
+        }
+        ParentId: 16872893513245819590
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10765242685784547638
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 12195016172263533631
+        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
+        Transform {
+          Location {
+            X: 14.0222168
+            Y: -11.7561836
+            Z: 127.773621
+          }
+          Rotation {
+            Pitch: -5.9538269
+            Yaw: 92.2347717
+            Roll: -79.680481
+          }
+          Scale {
+            X: 0.0628670454
+            Y: 0.140497103
+            Z: -0.0490016341
+          }
+        }
+        ParentId: 16872893513245819590
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15104704190817301101
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 858338615303224398
+        Name: "Pyramid - 5-Sided Truncated Hollow Thin"
+        Transform {
+          Location {
+            X: -5.05374
+            Y: -2.08019066
+            Z: 3
+          }
+          Rotation {
+            Yaw: -2.36254883
+          }
+          Scale {
+            X: 0.999902844
+            Y: 0.917174339
+            Z: 1.64879894
+          }
+        }
+        ParentId: 16872893513245819590
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.00784313772
+              B: 0.200000018
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.25
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.25
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1329465866196198752
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 921745367376853562
         Name: "right_hip"
         Transform {
           Location {
-            X: 147.092468
-            Y: 2.27745128
+            X: 1.09307981
+            Y: 2.2775557
             Z: -88.5275421
           }
           Rotation {
-            Yaw: -3.05175672e-05
+            Yaw: -3.05175436e-05
           }
           Scale {
             X: 0.849156737
@@ -437,12 +679,12 @@ Assets {
         Name: "left_hip"
         Transform {
           Location {
-            X: 146.860168
-            Y: -5.92368698
+            X: 0.860774338
+            Y: -5.92358255
             Z: -89.8300934
           }
           Rotation {
-            Yaw: -3.05175672e-05
+            Yaw: -3.05175436e-05
           }
           Scale {
             X: 0.867146313
@@ -888,248 +1130,6 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 16872893513245819590
-        Name: "lower_spine"
-        Transform {
-          Location {
-            X: 146.999573
-            Y: -1.0001049
-            Z: -105
-          }
-          Rotation {
-            Yaw: -3.05175672e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 6879129135587416020
-        ChildIds: 18095319909074010623
-        ChildIds: 12195016172263533631
-        ChildIds: 858338615303224398
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 18095319909074010623
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -3.32080078
-            Y: 0.265319824
-            Z: 100
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.311915487
-            Y: 0.350621283
-            Z: 0.42501545
-          }
-        }
-        ParentId: 16872893513245819590
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 18326201903501436663
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10765242685784547638
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 12195016172263533631
-        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
-        Transform {
-          Location {
-            X: 14.0222168
-            Y: -11.7561836
-            Z: 127.773621
-          }
-          Rotation {
-            Pitch: -5.9538269
-            Yaw: 92.2347717
-            Roll: -79.680481
-          }
-          Scale {
-            X: 0.0628670454
-            Y: 0.140497103
-            Z: -0.0490016341
-          }
-        }
-        ParentId: 16872893513245819590
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 18326201903501436663
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15104704190817301101
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 858338615303224398
-        Name: "Pyramid - 5-Sided Truncated Hollow Thin"
-        Transform {
-          Location {
-            X: -5.05374
-            Y: -2.08019066
-            Z: 3
-          }
-          Rotation {
-            Yaw: -2.36254883
-          }
-          Scale {
-            X: 0.999902844
-            Y: 0.917174339
-            Z: 1.64879894
-          }
-        }
-        ParentId: 16872893513245819590
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 18326201903501436663
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              G: 0.00784313772
-              B: 0.200000018
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.25
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.25
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1329465866196198752
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
     }
     Assets {
       Id: 10765242685784547638
@@ -1141,21 +1141,21 @@ Assets {
       }
     }
     Assets {
-      Id: 15104704190817301101
-      Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ts_fan_cas_stairs_001_150cm_corner02"
-      }
-    }
-    Assets {
       Id: 18326201903501436663
       Name: "Carpet 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_carpets_001_uv"
+      }
+    }
+    Assets {
+      Id: 15104704190817301101
+      Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_fan_cas_stairs_001_150cm_corner02"
       }
     }
     Assets {

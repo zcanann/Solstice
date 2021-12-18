@@ -99,17 +99,9 @@ Objects {
   }
 }
 Objects {
-  Id: 1284070276951952513
+  Id: 10690521781715214798
   Name: "ChangeClassButton_C"
   Transform {
-    Location {
-      X: -2281.6709
-      Y: -2608.37158
-      Z: 200
-    }
-    Rotation {
-      Yaw: -125.000053
-    }
     Scale {
       X: 1
       Y: 1
@@ -117,6 +109,12 @@ Objects {
     }
   }
   ParentId: 4721940148143912233
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 6026121202690229008
@@ -140,51 +138,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
           Name: "UIX"
-          Float: 394
+          Float: 391
         }
         Overrides {
           Name: "UIY"
           Float: 61
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 8854775087741321860
-      value {
-        Overrides {
-          Name: "cs:ClassKey"
-          String: "necromancer"
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16191652070592491981
-      value {
-        Overrides {
-          Name: "cs:ShadowImageOverride"
-          AssetReference {
-            Id: 4003055093873339273
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16426658547796354564
-      value {
-        Overrides {
-          Name: "Image"
-          AssetReference {
-            Id: 4003055093873339273
-          }
         }
       }
     }
@@ -197,7 +156,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2746495366153353635
+  Id: 17814078436390126030
   Name: "ChangeClassButton_C"
   Transform {
     Location {
@@ -247,7 +206,7 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: 283
+          Float: 285
         }
         Overrides {
           Name: "UIY"
@@ -260,7 +219,7 @@ Objects {
       value {
         Overrides {
           Name: "cs:ClassKey"
-          String: "priest"
+          String: "rogue"
         }
       }
     }
@@ -270,7 +229,7 @@ Objects {
         Overrides {
           Name: "cs:ShadowImageOverride"
           AssetReference {
-            Id: 1440991542639344596
+            Id: 2423707158429651699
           }
         }
       }
@@ -281,105 +240,7 @@ Objects {
         Overrides {
           Name: "Image"
           AssetReference {
-            Id: 1440991542639344596
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13497371274632946030
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 8645734186864334629
-  Name: "ChangeClassButton_C"
-  Transform {
-    Location {
-      X: -2281.6709
-      Y: -2608.37158
-      Z: 200
-    }
-    Rotation {
-      Yaw: -125.000053
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4721940148143912233
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 6026121202690229008
-      value {
-        Overrides {
-          Name: "Name"
-          String: "ChangeClassButton_C"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -1140.6709
-            Y: -1304.37158
-            Z: 100
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -125.000053
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "UIX"
-          Float: 183
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 61
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 8854775087741321860
-      value {
-        Overrides {
-          Name: "cs:ClassKey"
-          String: "hunter"
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16191652070592491981
-      value {
-        Overrides {
-          Name: "cs:ShadowImageOverride"
-          AssetReference {
-            Id: 16184373244004005130
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16426658547796354564
-      value {
-        Overrides {
-          Name: "Image"
-          AssetReference {
-            Id: 16184373244004005130
+            Id: 2423707158429651699
           }
         }
       }
@@ -443,7 +304,7 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -583
+          Float: 173
         }
         Overrides {
           Name: "UIY"
@@ -491,7 +352,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17814078436390126030
+  Id: 8645734186864334629
   Name: "ChangeClassButton_C"
   Transform {
     Location {
@@ -541,7 +402,7 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -473
+          Float: -245
         }
         Overrides {
           Name: "UIY"
@@ -554,7 +415,7 @@ Objects {
       value {
         Overrides {
           Name: "cs:ClassKey"
-          String: "rogue"
+          String: "hunter"
         }
       }
     }
@@ -564,7 +425,7 @@ Objects {
         Overrides {
           Name: "cs:ShadowImageOverride"
           AssetReference {
-            Id: 2423707158429651699
+            Id: 16184373244004005130
           }
         }
       }
@@ -575,7 +436,7 @@ Objects {
         Overrides {
           Name: "Image"
           AssetReference {
-            Id: 2423707158429651699
+            Id: 16184373244004005130
           }
         }
       }
@@ -589,9 +450,17 @@ Objects {
   }
 }
 Objects {
-  Id: 10690521781715214798
+  Id: 1284070276951952513
   Name: "ChangeClassButton_C"
   Transform {
+    Location {
+      X: -2281.6709
+      Y: -2608.37158
+      Z: 200
+    }
+    Rotation {
+      Yaw: -125.000053
+    }
     Scale {
       X: 1
       Y: 1
@@ -599,12 +468,6 @@ Objects {
     }
   }
   ParentId: 4721940148143912233
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 6026121202690229008
@@ -625,6 +488,53 @@ Objects {
           Name: "Rotation"
           Rotator {
             Yaw: -125.000053
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "UIX"
+          Float: -364
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 61
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8854775087741321860
+      value {
+        Overrides {
+          Name: "cs:ClassKey"
+          String: "necromancer"
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16191652070592491981
+      value {
+        Overrides {
+          Name: "cs:ShadowImageOverride"
+          AssetReference {
+            Id: 4003055093873339273
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16426658547796354564
+      value {
+        Overrides {
+          Name: "Image"
+          AssetReference {
+            Id: 4003055093873339273
           }
         }
       }
@@ -678,7 +588,7 @@ Objects {
         }
         Overrides {
           Name: "UIX"
-          Float: -247
+          Float: -470
         }
         Overrides {
           Name: "UIY"
@@ -713,6 +623,104 @@ Objects {
           Name: "Image"
           AssetReference {
             Id: 5896026373278190909
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13497371274632946030
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2746495366153353635
+  Name: "ChangeClassButton_C"
+  Transform {
+    Location {
+      X: -2281.6709
+      Y: -2608.37158
+      Z: 200
+    }
+    Rotation {
+      Yaw: -125.000053
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4721940148143912233
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 6026121202690229008
+      value {
+        Overrides {
+          Name: "Name"
+          String: "ChangeClassButton_C"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1140.6709
+            Y: -1304.37158
+            Z: 100
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -125.000053
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "UIX"
+          Float: -583
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 61
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 8854775087741321860
+      value {
+        Overrides {
+          Name: "cs:ClassKey"
+          String: "priest"
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16191652070592491981
+      value {
+        Overrides {
+          Name: "cs:ShadowImageOverride"
+          AssetReference {
+            Id: 1440991542639344596
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 16426658547796354564
+      value {
+        Overrides {
+          Name: "Image"
+          AssetReference {
+            Id: 1440991542639344596
           }
         }
       }

@@ -56,12 +56,6 @@ Assets {
         ParentId: 16403496555496555411
         UnregisteredParameters {
           Overrides {
-            Name: "ma:1:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 11769523987462008650
-            }
-          }
-          Overrides {
             Name: "ma:1:Shared_Detail2:color"
             Color {
               R: 0.00392156886
@@ -92,6 +86,45 @@ Assets {
             Name: "ma:0:Shared_Detail1:id"
             AssetReference {
               Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:color"
+            Color {
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:id"
+            AssetReference {
+              Id: 16104719890204285654
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:id"
+            AssetReference {
+              Id: 3940357594108839941
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:id"
+            AssetReference {
+              Id: 10367585326991483965
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4074686094211558549
             }
           }
         }
@@ -127,10 +160,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 16776996512184969771
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 16776996512184969771
             }
             SkinnedMeshes {
               Id: 841534158063459245

@@ -4,7 +4,7 @@ local EquipmentModelTableHumanoidFeminine = require(script:GetCustomProperty("Eq
 local EquipmentModelTableHumanoidMasculine = require(script:GetCustomProperty("EquipmentModelTableHumanoidMasculine"))
 
 local equipmentChangeHeadListeners = { }
-local equipmentChangeNeckListeners = { }
+local equipmentChangeHandsListeners = { }
 local equipmentChangeShouldersListeners = { }
 local equipmentChangeBackListeners = { }
 local equipmentChangeChestListeners = { }
@@ -17,12 +17,12 @@ local nextFrameModelRebuildQueue = { }
 
 local allListeners = {
     ["head"] = equipmentChangeHeadListeners,
-    ["neck"] = equipmentChangeNeckListeners,
     ["shoulders"] = equipmentChangeShouldersListeners,
     ["back"] = equipmentChangeBackListeners,
     ["chest"] = equipmentChangeChestListeners,
     ["waist"] = equipmentChangeWaistListeners,
     ["wrists"] = equipmentChangeWristsListeners,
+    ["hands"] = equipmentChangeHandsListeners,
     ["legs"] = equipmentChangeLegsListeners,
     ["feet"] = equipmentChangeFeetListeners,
 }
@@ -75,7 +75,7 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
     equipmentModels:SetWorldRotation(player.clientUserData.model:GetWorldRotation())
 
     for _, modelPeice in ipairs(modelPeices) do
-        if modelPeice:IsA("Folder") or modelPeice:IsA("NetworkContext") then
+        if modelPeice and (modelPeice:IsA("Folder") or modelPeice:IsA("NetworkContext")) then
             local socketName = modelPeice.name
             local pos = modelPeice:GetWorldPosition()
             local rot = modelPeice:GetWorldRotation()
@@ -85,6 +85,15 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
 
             modelPeice:SetWorldPosition(pos)
             modelPeice:SetWorldRotation(rot)
+        elseif modelPeice and modelPeice:IsA("AnimatedMesh") and modelPeice.name == "MeshOverrides" then
+            -- Copy overrides from any animated meshes. We currently follow this format:
+            -- Slot 1: Base animation mesh
+            -- Slot 2: Hair or helmet
+            -- Slot 3: Chest
+            -- Slot 4: Legs
+            Framework.Utils.Meshes.CopyMeshOverrides(player.clientUserData.model, modelPeice)
+            -- We don't need the original anymore now that we have copied the overriden properties
+            modelPeice:Destroy()
         else
             -- Destroy unexpected objects in equipment templates
             modelPeice:Destroy()
@@ -116,8 +125,8 @@ function OnHeadModelChanged(playerId, equipmentModelTemplateId)
     OnModelChanged(playerId, equipmentModelTemplateId, "head")
 end
 
-function OnNeckModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "neck")
+function OnHandsModelChanged(playerId, equipmentModelTemplateId)
+    OnModelChanged(playerId, equipmentModelTemplateId, "hands")
 end
 
 function OnShouldersModelChanged(playerId, equipmentModelTemplateId)
@@ -150,7 +159,7 @@ end
 
 function OnNearbyPlayerModelChanged(player)
     OnHeadModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD))
-    OnNeckModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_NECK))
+    OnHandsModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS))
     OnShouldersModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS))
     OnBackModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK))
     OnChestModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST))
@@ -170,7 +179,7 @@ function OnProximityObjectEnteredRange(proximityObjectId)
     -- This would be the ideal flow, but for some incomprehensible reason we cannot set the animationStance to "unarmed_bind_pose" and immediately attach objects
     --[[
     equipmentChangeHeadListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, OnHeadModelChanged)
-    equipmentChangeNeckListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_NECK, OnNeckModelChanged)
+    equipmentChangeHandsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, OnHandsModelChanged)
     equipmentChangeShouldersListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, OnShouldersModelChanged)
     equipmentChangeBackListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, OnBackModelChanged)
     equipmentChangeChestListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, OnChestModelChanged)
@@ -187,7 +196,7 @@ function OnProximityObjectEnteredRange(proximityObjectId)
     end
 
     equipmentChangeHeadListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, rebuildModelFunc)
-    equipmentChangeNeckListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_NECK, rebuildModelFunc)
+    equipmentChangeHandsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, rebuildModelFunc)
     equipmentChangeShouldersListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, rebuildModelFunc)
     equipmentChangeBackListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, rebuildModelFunc)
     equipmentChangeChestListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, rebuildModelFunc)

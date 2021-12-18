@@ -94,17 +94,55 @@ Assets {
           Overrides {
             Name: "ma:2:Shared_BaseMaterial:color"
             Color {
-              R: 0.0156862754
-              G: 0.011764707
-              B: 0.011764707
+              R: 1
+              G: 1
+              B: 1
               A: 1
             }
           }
           Overrides {
             Name: "ma:2:Shared_Detail1:color"
             Color {
-              R: 0.0352941193
+              R: 0.24313727
+              G: 0.137254909
+              B: 0.0862745121
               A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 3301699299468232310
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:vtile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:id"
+            AssetReference {
+              Id: 3301699299468232310
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:id"
+            AssetReference {
+              Id: 7021437749201867296
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:id"
+            AssetReference {
+              Id: 7480031711343766133
             }
           }
         }
@@ -140,10 +178,10 @@ Assets {
               Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 14788449615596066441
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 14788449615596066441
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -294,12 +332,12 @@ Assets {
         Name: "Tree Oak 01"
         Transform {
           Location {
-            X: -2.46200562
+            X: -2.4619751
             Y: -1.18502581
-            Z: -13.6058197
+            Z: -21.6058197
           }
           Rotation {
-            Pitch: -6.99999428
+            Pitch: -7
             Yaw: 179.999954
           }
           Scale {
