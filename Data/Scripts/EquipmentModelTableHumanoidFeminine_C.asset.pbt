@@ -436,6 +436,72 @@ Assets {
           Id: 6288322319794463452
         }
       }
+      Overrides {
+        Name: "cs:priest_weapon"
+        AssetReference {
+          Id: 9498382601827979815
+        }
+      }
+      Overrides {
+        Name: "cs:mage_weapon"
+        AssetReference {
+          Id: 13168695260363595227
+        }
+      }
+      Overrides {
+        Name: "cs:necromancer_weapon"
+        AssetReference {
+          Id: 17052222126415488560
+        }
+      }
+      Overrides {
+        Name: "cs:hunter_weapon"
+        AssetReference {
+          Id: 3666131841485924044
+        }
+      }
+      Overrides {
+        Name: "cs:druid_weapon"
+        AssetReference {
+          Id: 7043364231055543608
+        }
+      }
+      Overrides {
+        Name: "cs:rogue_weapon_mainhand"
+        AssetReference {
+          Id: 15829290982748272935
+        }
+      }
+      Overrides {
+        Name: "cs:warrior_weapon"
+        AssetReference {
+          Id: 6009261573420733968
+        }
+      }
+      Overrides {
+        Name: "cs:justicar_weapon"
+        AssetReference {
+          Id: 5392565705112395384
+        }
+      }
+      Overrides {
+        Name: "cs:justicar_offhand"
+        AssetReference {
+          Id: 9316400985676147872
+        }
+      }
+      Overrides {
+        Name: "cs:warrior_offhand"
+        AssetReference {
+          Id: 10779414442988973058
+        }
+      }
+      Overrides {
+        Name: "cs:rogue_weapon_offhand"
+        AssetReference {
+          Id: 2546367590007374276
+        }
+      }
     }
   }
   SerializationVersion: 103

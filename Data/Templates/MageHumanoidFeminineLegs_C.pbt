@@ -43,12 +43,8 @@ Assets {
         Name: "lower_spine"
         Transform {
           Location {
-            X: 1.00018191
-            Y: -1.00000048
-            Z: -105
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -81,11 +77,12 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -3.32080078
-            Y: 0.265319824
-            Z: 100
+            X: -2.3206172
+            Y: -0.734678268
+            Z: -5
           }
           Rotation {
+            Yaw: -3.05175181e-05
           }
           Scale {
             X: 0.311915487
@@ -141,14 +138,14 @@ Assets {
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: 14.0222168
-            Y: -11.7561836
-            Z: 127.773621
+            X: 15.0223389
+            Y: -12.7561646
+            Z: 22.7736206
           }
           Rotation {
-            Pitch: -5.9538269
-            Yaw: 92.2347717
-            Roll: -79.680481
+            Pitch: -5.95382071
+            Yaw: 92.234726
+            Roll: -79.6804276
           }
           Scale {
             X: 0.0628670454
@@ -210,12 +207,12 @@ Assets {
         Name: "Pyramid - 5-Sided Truncated Hollow Thin"
         Transform {
           Location {
-            X: -5.05374
-            Y: -2.08019066
-            Z: 3
+            X: -4.05355883
+            Y: -3.08019638
+            Z: -102
           }
           Rotation {
-            Yaw: -2.36254883
+            Yaw: -2.36257792
           }
           Scale {
             X: 0.999902844
@@ -285,26 +282,22 @@ Assets {
         Name: "right_hip"
         Transform {
           Location {
-            X: 1.09307981
-            Y: 2.2775557
-            Z: -88.5275421
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
-            X: 0.849156737
-            Y: 0.849156737
-            Z: 0.849156737
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 6879129135587416020
+        ChildIds: 12346729971000241069
+        ChildIds: 2943807483683594252
         ChildIds: 16017829528035914553
         ChildIds: 2583374053068505570
         ChildIds: 5000810870212045807
         ChildIds: 5840075436603870783
-        ChildIds: 12346729971000241069
-        ChildIds: 2943807483683594252
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -322,254 +315,23 @@ Assets {
         }
       }
       Objects {
-        Id: 16017829528035914553
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -3.09204102
-            Y: 15.779953
-            Z: 102.099274
-          }
-          Rotation {
-            Yaw: -179.999954
-            Roll: -177.503784
-          }
-          Scale {
-            X: 0.199999928
-            Y: 0.199999899
-            Z: 0.288568854
-          }
-        }
-        ParentId: 921745367376853562
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10765242685784547638
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 2583374053068505570
-        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
-        Transform {
-          Location {
-            X: 2.15637207
-            Y: 18.7619705
-            Z: 17.0658264
-          }
-          Rotation {
-            Pitch: 21.6702156
-            Yaw: 112.092682
-            Roll: 100.491737
-          }
-          Scale {
-            X: 0.0741510093
-            Y: 0.184021384
-            Z: -0.17044726
-          }
-        }
-        ParentId: 921745367376853562
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15104704190817301101
-          }
-          Teams {
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 5000810870212045807
-        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
-        Transform {
-          Location {
-            X: 12.8511963
-            Y: 38.8860359
-            Z: -4.81219482
-          }
-          Rotation {
-            Pitch: 20.7126026
-            Yaw: 169.716019
-            Roll: 101.976
-          }
-          Scale {
-            X: 0.107904971
-            Y: 0.203580081
-            Z: -0.0107788816
-          }
-        }
-        ParentId: 921745367376853562
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15104704190817301101
-          }
-          Teams {
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 5840075436603870783
-        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
-        Transform {
-          Location {
-            X: -20.6539307
-            Y: 8.26936913
-            Z: -9.265625
-          }
-          Rotation {
-            Pitch: 17.8043633
-            Yaw: -149.586243
-            Roll: 95.0797424
-          }
-          Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
-          }
-        }
-        ParentId: 921745367376853562
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15104704190817301101
-          }
-          Teams {
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 12346729971000241069
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: 0.327270508
-            Y: 6.99328613
-            Z: -16.9923706
+            X: 1.37097168
+            Y: 8.21594238
+            Z: -102.956726
           }
           Rotation {
-            Pitch: 10.0768166
-            Yaw: 60.052002
-            Roll: 89.3355942
+            Pitch: 10.0768099
+            Yaw: 60.0519333
+            Roll: 89.3356
           }
           Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
+            X: 0.0541035
+            Y: 0.215033263
+            Z: -0.0790599436
           }
         }
         ParentId: 921745367376853562
@@ -618,19 +380,250 @@ Assets {
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: 16.4040527
-            Y: -17.7043171
-            Z: 131.072571
+            X: 15.022644
+            Y: -12.7562256
+            Z: 22.773613
           }
           Rotation {
-            Pitch: -5.95382786
-            Yaw: 92.2347717
-            Roll: -79.6804123
+            Pitch: -5.95380735
+            Yaw: 92.234726
+            Roll: -79.6803665
           }
           Scale {
-            X: 0.074034676
-            Y: 0.16545485
-            Z: -0.0577062294
+            X: 0.0628670454
+            Y: 0.140497103
+            Z: -0.0490016341
+          }
+        }
+        ParentId: 921745367376853562
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15104704190817301101
+          }
+          Teams {
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 16017829528035914553
+        Name: "Teardrop - Truncated"
+        Transform {
+          Location {
+            X: -1.53255057
+            Y: 15.6771822
+            Z: -1.82925415
+          }
+          Rotation {
+            Yaw: -179.999969
+            Roll: -177.503784
+          }
+          Scale {
+            X: 0.169831291
+            Y: 0.169831261
+            Z: 0.245040193
+          }
+        }
+        ParentId: 921745367376853562
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10765242685784547638
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 2583374053068505570
+        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
+        Transform {
+          Location {
+            X: 2.92416382
+            Y: 18.2093506
+            Z: -74.0359802
+          }
+          Rotation {
+            Pitch: 21.6702023
+            Yaw: 112.092628
+            Roll: 100.49176
+          }
+          Scale {
+            X: 0.0629658327
+            Y: 0.156263
+            Z: -0.144736439
+          }
+        }
+        ParentId: 921745367376853562
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15104704190817301101
+          }
+          Teams {
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5000810870212045807
+        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
+        Transform {
+          Location {
+            X: 12.0057068
+            Y: 35.2978516
+            Z: -92.6138458
+          }
+          Rotation {
+            Pitch: 20.7126026
+            Yaw: 169.715973
+            Roll: 101.976036
+          }
+          Scale {
+            X: 0.0916282311
+            Y: 0.172871396
+            Z: -0.00915296
+          }
+        }
+        ParentId: 921745367376853562
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15104704190817301101
+          }
+          Teams {
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5840075436603870783
+        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
+        Transform {
+          Location {
+            X: -16.445343
+            Y: 9.29962158
+            Z: -96.3955078
+          }
+          Rotation {
+            Pitch: 17.8043556
+            Yaw: -149.586227
+            Roll: 95.0797501
+          }
+          Scale {
+            X: 0.0541035
+            Y: 0.215033263
+            Z: -0.0790599436
           }
         }
         ParentId: 921745367376853562
@@ -679,27 +672,23 @@ Assets {
         Name: "left_hip"
         Transform {
           Location {
-            X: 0.860774338
-            Y: -5.92358255
-            Z: -89.8300934
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
-            X: 0.867146313
-            Y: 0.867146313
-            Z: 0.867146313
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 6879129135587416020
+        ChildIds: 5908558428445999791
         ChildIds: 7887122701759731902
         ChildIds: 10595543851315741719
         ChildIds: 6427850410540819863
         ChildIds: 17573989566439500570
         ChildIds: 12205016214723514169
         ChildIds: 11693500761025588444
-        ChildIds: 5908558428445999791
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -717,22 +706,83 @@ Assets {
         }
       }
       Objects {
+        Id: 5908558428445999791
+        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
+        Transform {
+          Location {
+            X: 2.88317871
+            Y: -34.8233032
+            Z: -104.749146
+          }
+          Rotation {
+            Pitch: 7.00046539
+            Yaw: 15.5642433
+            Roll: 101.536415
+          }
+          Scale {
+            X: 0.0552496947
+            Y: 0.219588786
+            Z: -0.080734849
+          }
+        }
+        ParentId: 15287160090691545312
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 5344560935423739807
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15104704190817301101
+          }
+          Teams {
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 7887122701759731902
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -3.35302734
-            Y: -14.0744247
-            Z: 102.099274
+            X: -2.04679537
+            Y: -18.1281643
+            Z: -1.29508209
           }
           Rotation {
-            Yaw: -179.999954
-            Roll: 174.826645
+            Yaw: -179.999969
+            Roll: 174.826614
           }
           Scale {
-            X: 0.199999928
-            Y: 0.199999899
-            Z: 0.288568854
+            X: 0.173429206
+            Y: 0.173429176
+            Z: 0.250231415
           }
         }
         ParentId: 15287160090691545312
@@ -769,19 +819,19 @@ Assets {
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: -18.7227783
-            Y: -41.7201576
-            Z: -20.6342468
+            X: -15.3746948
+            Y: -42.1009521
+            Z: -107.723007
           }
           Rotation {
-            Pitch: 11.6250839
-            Yaw: -42.8996353
-            Roll: 107.588081
+            Pitch: 11.6250629
+            Yaw: -42.8997
+            Roll: 107.588066
           }
           Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
+            X: 0.0552496947
+            Y: 0.219588786
+            Z: -0.080734849
           }
         }
         ParentId: 15287160090691545312
@@ -830,19 +880,19 @@ Assets {
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: -19.4429932
-            Y: -26.0237465
-            Z: -18.6948853
+            X: -15.999176
+            Y: -28.4898682
+            Z: -106.04129
           }
           Rotation {
             Pitch: 1.72040164
-            Yaw: -4.75825739
-            Roll: 99.9425507
+            Yaw: -4.75829124
+            Roll: 99.9426
           }
           Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
+            X: 0.0552496947
+            Y: 0.219588786
+            Z: -0.080734849
           }
         }
         ParentId: 15287160090691545312
@@ -891,19 +941,19 @@ Assets {
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: -5.27307129
-            Y: -23.9980125
-            Z: -22.5781555
+            X: -3.71176147
+            Y: -26.7333984
+            Z: -109.408661
           }
           Rotation {
             Pitch: 2.60125017
-            Yaw: 29.3013058
+            Yaw: 29.3012638
             Roll: 97.039856
           }
           Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
+            X: 0.0552496947
+            Y: 0.219588786
+            Z: -0.080734849
           }
         }
         ParentId: 15287160090691545312
@@ -952,19 +1002,19 @@ Assets {
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: -37.9147339
-            Y: -10.8596115
-            Z: -8.85882568
+            X: -32.0168762
+            Y: -15.340332
+            Z: -97.5119934
           }
           Rotation {
             Pitch: 18.5394745
-            Yaw: -113.702232
-            Roll: 102.389709
+            Yaw: -113.702225
+            Roll: 102.389748
           }
           Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
+            X: 0.0552496947
+            Y: 0.219588786
+            Z: -0.080734849
           }
         }
         ParentId: 15287160090691545312
@@ -1013,80 +1063,19 @@ Assets {
         Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
         Transform {
           Location {
-            X: -14.9005127
-            Y: -38.5466347
-            Z: -1.62606812
+            X: -12.0601807
+            Y: -39.349
+            Z: -91.2401352
           }
           Rotation {
-            Pitch: 25.5197773
-            Yaw: -111.303375
-            Roll: 92.8195496
+            Pitch: 25.5197639
+            Yaw: -111.303368
+            Roll: 92.819519
           }
           Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
-          }
-        }
-        ParentId: 15287160090691545312
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail1:id"
-            AssetReference {
-              Id: 5344560935423739807
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15104704190817301101
-          }
-          Teams {
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 5908558428445999791
-        Name: "Fantasy Castle Stairs 01 - 150cm Corner 02"
-        Transform {
-          Location {
-            X: 2.33227539
-            Y: -33.327404
-            Z: -17.2047729
-          }
-          Rotation {
-            Pitch: 7.00047207
-            Yaw: 15.5642433
-            Roll: 101.536385
-          }
-          Scale {
-            X: 0.063714385
-            Y: 0.253231525
-            Z: -0.0931040645
+            X: 0.0552496947
+            Y: 0.219588786
+            Z: -0.080734849
           }
         }
         ParentId: 15287160090691545312

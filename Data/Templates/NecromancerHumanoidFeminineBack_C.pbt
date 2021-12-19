@@ -10,9 +10,9 @@ Assets {
         Name: "NecromancerHumanoidFeminineBack_C"
         Transform {
           Scale {
-            X: 0.99999994
-            Y: 0.99999994
-            Z: 0.99999994
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 4376692596514421773
@@ -38,9 +38,6 @@ Assets {
         Name: "upper_spine"
         Transform {
           Location {
-            X: -25.9418907
-            Y: 1.28724968
-            Z: 30.8509712
           }
           Rotation {
           }
@@ -51,6 +48,7 @@ Assets {
           }
         }
         ParentId: 15218889734842753471
+        ChildIds: 9906367042471364205
         ChildIds: 2106773392339905702
         ChildIds: 12658732423369516753
         ChildIds: 5488586539131602670
@@ -82,7 +80,6 @@ Assets {
         ChildIds: 3797241446888960283
         ChildIds: 5892686524878033434
         ChildIds: 13871080208806305403
-        ChildIds: 9906367042471364205
         ChildIds: 12516802977800467260
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -104,23 +101,512 @@ Assets {
         }
       }
       Objects {
+        Id: 9906367042471364205
+        Name: "Chain"
+        Transform {
+          Location {
+            X: -23.8131294
+            Y: 48.3153076
+            Z: 101.610764
+          }
+          Rotation {
+            Yaw: -6.15703235e-12
+            Roll: -104.913231
+          }
+          Scale {
+            X: 0.0521739088
+            Y: 0.0521739088
+            Z: 0.0521739088
+          }
+        }
+        ParentId: 3440671892042926393
+        ChildIds: 4780521277798353543
+        ChildIds: 2870908903914109115
+        ChildIds: 17261138215970945
+        ChildIds: 12703092417912773408
+        ChildIds: 594120752955254353
+        ChildIds: 14182721231252222967
+        ChildIds: 8607187147922961535
+        ChildIds: 11140197475663888604
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4780521277798353543
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+          }
+          Rotation {
+            Roll: -89.9999084
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 2870908903914109115
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+            Y: 0.0009765625
+            Z: 92.7519531
+          }
+          Rotation {
+            Pitch: 0.000129773587
+            Yaw: 79.9992
+            Roll: -90.0000534
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17261138215970945
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+            Z: 279
+          }
+          Rotation {
+            Pitch: 0.000150264153
+            Yaw: 79.9990616
+            Roll: -90.0000916
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 12703092417912773408
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+            Y: 0.00390625
+            Z: 184.658203
+          }
+          Rotation {
+            Roll: -89.9999084
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 594120752955254353
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+            Y: 0.0009765625
+            Z: 648.234375
+          }
+          Rotation {
+            Pitch: 0.000150264153
+            Yaw: 79.9990616
+            Roll: -90.0000916
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14182721231252222967
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+            Y: -0.001953125
+            Z: 553.892578
+          }
+          Rotation {
+            Roll: -89.9999084
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 8607187147922961535
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+            Y: -0.0009765625
+            Z: 461.984375
+          }
+          Rotation {
+            Pitch: 0.000150264153
+            Yaw: 79.9990616
+            Roll: -90.0000916
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 11140197475663888604
+        Name: "Ring - Beveled Thick"
+        Transform {
+          Location {
+            X: 0.001953125
+            Y: 0.001953125
+            Z: 369.230469
+          }
+          Rotation {
+            Roll: -89.9999084
+          }
+          Scale {
+            X: 0.689062476
+            Y: 1.49740255
+            Z: 1
+          }
+        }
+        ParentId: 9906367042471364205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16399116315888499769
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10025162284120957192
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 2106773392339905702
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: 11.130825
-            Y: 41.9315
-            Z: 61.5673752
+            X: -14.8111839
+            Y: 43.2186852
+            Z: 92.4183426
           }
           Rotation {
-            Pitch: 40.1713905
-            Yaw: -36.5928345
-            Roll: -144.969788
+            Pitch: 40.1713409
+            Yaw: -36.5927773
+            Roll: -144.969727
           }
           Scale {
-            X: 0.649145484
-            Y: 0.663417637
-            Z: 0.86956507
+            X: 0.649145424
+            Y: 0.663417578
+            Z: 0.869565
           }
         }
         ParentId: 3440671892042926393
@@ -157,19 +643,19 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: 9.91500187
-            Y: -47.3594933
-            Z: 59.76754
+            X: -16.0270023
+            Y: -46.0721779
+            Z: 90.6185074
           }
           Rotation {
-            Pitch: -54.9298477
-            Yaw: -137.959274
-            Roll: -147.660919
+            Pitch: -54.9297867
+            Yaw: -137.959213
+            Roll: -147.660843
           }
           Scale {
-            X: 0.649144709
-            Y: 0.663418412
-            Z: 0.86956507
+            X: 0.64914465
+            Y: 0.663418353
+            Z: 0.869565
           }
         }
         ParentId: 3440671892042926393
@@ -206,19 +692,19 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -2.10824442
-            Y: 43.7326546
-            Z: 31.7428627
+            X: -28.0502529
+            Y: 45.0198402
+            Z: 62.5938301
           }
           Rotation {
-            Pitch: 74.0106506
-            Yaw: 22.3558311
-            Roll: -98.0963669
+            Pitch: 74.0104752
+            Yaw: 22.3557472
+            Roll: -98.0962143
           }
           Scale {
-            X: 0.649145663
-            Y: 0.663417697
-            Z: 0.782608688
+            X: 0.649145603
+            Y: 0.663417637
+            Z: 0.782608628
           }
         }
         ParentId: 3440671892042926393
@@ -255,19 +741,19 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -2.488801
-            Y: -44.9233284
-            Z: 31.8337135
+            X: -28.430809
+            Y: -43.636013
+            Z: 62.6846809
           }
           Rotation {
-            Pitch: -81.3174744
-            Yaw: -69.1538773
-            Roll: 127.975868
+            Pitch: -81.3171539
+            Yaw: -69.1536179
+            Roll: 127.975594
           }
           Scale {
-            X: 0.649145484
-            Y: 0.663417637
-            Z: 0.782608628
+            X: 0.649145424
+            Y: 0.663417578
+            Z: 0.782608569
           }
         }
         ParentId: 3440671892042926393
@@ -304,19 +790,19 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: 5.03017569
-            Y: 36.0679779
-            Z: 11.3349314
+            X: -20.9118309
+            Y: 37.3551636
+            Z: 42.1858978
           }
           Rotation {
-            Pitch: 63.1282539
-            Yaw: 156.219757
-            Roll: 32.2037354
+            Pitch: 63.1281853
+            Yaw: 156.219772
+            Roll: 32.2037315
           }
           Scale {
-            X: 0.649145663
-            Y: 0.663417697
-            Z: 0.652173877
+            X: 0.649145603
+            Y: 0.663417637
+            Z: 0.652173817
           }
         }
         ParentId: 3440671892042926393
@@ -353,19 +839,19 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: 5.44873476
-            Y: -34.9428635
-            Z: 9.19363499
+            X: -20.4932423
+            Y: -33.6555481
+            Z: 40.0446
           }
           Rotation {
-            Pitch: -61.3389893
-            Yaw: 49.9617462
-            Roll: 13.3277035
+            Pitch: -61.338913
+            Yaw: 49.9617119
+            Roll: 13.3277292
           }
           Scale {
-            X: 0.649145484
-            Y: 0.663417637
-            Z: 0.652173817
+            X: 0.649145424
+            Y: 0.663417578
+            Z: 0.652173758
           }
         }
         ParentId: 3440671892042926393
@@ -402,19 +888,19 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: 0.285813
-            Y: -63.0100632
-            Z: 69.820549
+            X: -25.6561642
+            Y: -61.722744
+            Z: 100.671509
           }
           Rotation {
-            Pitch: -58.322258
-            Yaw: -97.8010559
-            Roll: -2.59274459
+            Pitch: -58.3221779
+            Yaw: -97.800972
+            Roll: -2.5927453
           }
           Scale {
-            X: 0.652173877
-            Y: 0.652173877
-            Z: 0.652173877
+            X: 0.652173817
+            Y: 0.652173817
+            Z: 0.652173817
           }
         }
         ParentId: 3440671892042926393
@@ -451,19 +937,19 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -17.0594234
-            Y: -57.9990044
-            Z: 33.4532356
+            X: -43.0014
+            Y: -56.7116852
+            Z: 64.3042
           }
           Rotation {
-            Pitch: -84.932518
-            Yaw: -75.8796921
-            Roll: -54.5583153
+            Pitch: -84.9319382
+            Yaw: -75.8791046
+            Roll: -54.5578461
           }
           Scale {
-            X: 0.652173877
-            Y: 0.652173877
-            Z: 0.652173877
+            X: 0.652173817
+            Y: 0.652173817
+            Z: 0.652173817
           }
         }
         ParentId: 3440671892042926393
@@ -500,19 +986,19 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -4.21645832
-            Y: -40.6240082
-            Z: 3.10008287
+            X: -30.1584682
+            Y: -39.3366928
+            Z: 33.9510536
           }
           Rotation {
-            Pitch: -64.5073929
-            Yaw: 63.852314
+            Pitch: -64.5072403
+            Yaw: 63.8521957
             Roll: 173.508957
           }
           Scale {
-            X: 0.652173877
-            Y: 0.652173877
-            Z: 0.652173877
+            X: 0.652173817
+            Y: 0.652173817
+            Z: 0.652173817
           }
         }
         ParentId: 3440671892042926393
@@ -549,19 +1035,19 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: 3.35294676
-            Y: 58.8225
-            Z: 75.8938522
+            X: -22.5890598
+            Y: 60.1096802
+            Z: 106.744812
           }
           Rotation {
-            Pitch: 45.0346642
-            Yaw: -95.7888489
-            Roll: -13.347106
+            Pitch: 45.0346107
+            Yaw: -95.7887802
+            Roll: -13.347126
           }
           Scale {
-            X: 0.652173877
-            Y: 0.652173877
-            Z: 0.652173877
+            X: 0.652173817
+            Y: 0.652173817
+            Z: 0.652173817
           }
         }
         ParentId: 3440671892042926393
@@ -598,19 +1084,19 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -16.7050915
-            Y: 58.0030556
-            Z: 33.2245674
+            X: -42.647068
+            Y: 59.2902374
+            Z: 64.075531
           }
           Rotation {
-            Pitch: 87.2367
-            Yaw: 66.0354385
-            Roll: 118.305717
+            Pitch: 87.2355652
+            Yaw: 66.0346451
+            Roll: 118.304825
           }
           Scale {
-            X: 0.652173877
-            Y: 0.652173877
-            Z: 0.652173877
+            X: 0.652173817
+            Y: 0.652173817
+            Z: 0.652173817
           }
         }
         ParentId: 3440671892042926393
@@ -647,19 +1133,19 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -7.19412
-            Y: 44.5144577
-            Z: 5.64167833
+            X: -33.1360893
+            Y: 45.8016434
+            Z: 36.4926453
           }
           Rotation {
-            Pitch: 67.2586746
-            Yaw: 106.551895
-            Roll: 173.315079
+            Pitch: 67.2585449
+            Yaw: 106.551765
+            Roll: 173.315048
           }
           Scale {
-            X: 0.652173877
-            Y: 0.652173877
-            Z: 0.652173877
+            X: 0.652173817
+            Y: 0.652173817
+            Z: 0.652173817
           }
         }
         ParentId: 3440671892042926393
@@ -696,16 +1182,16 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -10.5211391
-            Y: 51.9954224
-            Z: 4.30084276
+            X: -36.4631119
+            Y: 53.2826042
+            Z: 35.1518097
           }
           Rotation {
           }
           Scale {
-            X: 4.347826
-            Y: 4.347826
-            Z: 4.347826
+            X: 4.34782553
+            Y: 4.34782553
+            Z: 4.34782553
           }
         }
         ParentId: 3440671892042926393
@@ -772,16 +1258,16 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -20.9835
-            Y: 65.2029953
-            Z: 37.8174477
+            X: -46.9254456
+            Y: 66.4901123
+            Z: 68.6684113
           }
           Rotation {
           }
           Scale {
-            X: 4.347826
-            Y: 4.347826
-            Z: 4.347826
+            X: 4.34782553
+            Y: 4.34782553
+            Z: 4.34782553
           }
         }
         ParentId: 3440671892042926393
@@ -848,16 +1334,16 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: 1.68855298
-            Y: 64.4324722
-            Z: 83.2426834
+            X: -24.2534237
+            Y: 65.7195892
+            Z: 114.093643
           }
           Rotation {
           }
           Scale {
-            X: 4.347826
-            Y: 4.347826
-            Z: 4.347826
+            X: 4.34782553
+            Y: 4.34782553
+            Z: 4.34782553
           }
         }
         ParentId: 3440671892042926393
@@ -924,16 +1410,16 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -0.175830737
-            Y: -69.2406387
-            Z: 75.0241165
+            X: -26.1178379
+            Y: -67.9532623
+            Z: 105.875076
           }
           Rotation {
           }
           Scale {
-            X: 4.347826
-            Y: 4.347826
-            Z: 4.347826
+            X: 4.34782553
+            Y: 4.34782553
+            Z: 4.34782553
           }
         }
         ParentId: 3440671892042926393
@@ -1000,16 +1486,16 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -21.8599644
-            Y: -63.6310196
-            Z: 34.715519
+            X: -47.8019257
+            Y: -62.3437
+            Z: 65.5664825
           }
           Rotation {
           }
           Scale {
-            X: 4.347826
-            Y: 4.347826
-            Z: 4.347826
+            X: 4.34782553
+            Y: 4.34782553
+            Z: 4.34782553
           }
         }
         ParentId: 3440671892042926393
@@ -1076,15 +1562,16 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -8.64328
-            Y: -46.0752373
+            X: -34.5852509
+            Y: -44.7879257
+            Z: 30.8509693
           }
           Rotation {
           }
           Scale {
-            X: 4.347826
-            Y: 4.347826
-            Z: 4.347826
+            X: 4.34782553
+            Y: 4.34782553
+            Z: 4.34782553
           }
         }
         ParentId: 3440671892042926393
@@ -1151,19 +1638,19 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 7.9740963
-            Y: 51.8864021
-            Z: 71.0065079
+            X: -17.9679108
+            Y: 53.1735802
+            Z: 101.857468
           }
           Rotation {
-            Pitch: 17.6188202
-            Yaw: -1.61410427
-            Roll: 39.7804375
+            Pitch: 17.6188
+            Yaw: -1.61410582
+            Roll: 39.7803841
           }
           Scale {
-            X: 0.0869565234
-            Y: 0.0869565234
-            Z: 0.0652173758
+            X: 0.0869565159
+            Y: 0.0869565159
+            Z: 0.0652173683
           }
         }
         ParentId: 3440671892042926393
@@ -1208,19 +1695,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 7.49430084
-            Y: 54.6532478
-            Z: 68.6075211
+            X: -18.4477062
+            Y: 55.9404259
+            Z: 99.4584808
           }
           Rotation {
-            Pitch: -1.33519948
-            Yaw: 0.55823034
+            Pitch: -1.33519268
+            Yaw: 0.558229923
             Roll: 132.544785
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1265,19 +1752,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 8.09732246
-            Y: 49.0877533
-            Z: 73.621666
+            X: -17.8446827
+            Y: 50.3749352
+            Z: 104.472626
           }
           Rotation {
-            Pitch: -1.33526099
-            Yaw: 0.558247745
-            Roll: -47.4543419
+            Pitch: -1.33525407
+            Yaw: 0.558247209
+            Roll: -47.4542656
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1322,19 +1809,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 11.9426613
-            Y: 52.5330658
-            Z: 71.3208389
+            X: -13.9993477
+            Y: 53.8202477
+            Z: 102.171799
           }
           Rotation {
-            Pitch: 42.5302
-            Yaw: -88.2161407
-            Roll: 91.8118744
+            Pitch: 42.5301437
+            Yaw: -88.2160645
+            Roll: 91.8118057
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1379,19 +1866,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 4.02667713
-            Y: 51.4531136
-            Z: 70.8773422
+            X: -21.9152985
+            Y: 52.7402954
+            Z: 101.728302
           }
           Rotation {
-            Pitch: 42.530159
-            Yaw: -88.2161407
-            Roll: -88.187645
+            Pitch: 42.530098
+            Yaw: -88.2160873
+            Roll: -88.1875839
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1436,19 +1923,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 2.03130031
-            Y: -56.6926193
-            Z: 65.9585
+            X: -23.910677
+            Y: -55.405304
+            Z: 96.8094635
           }
           Rotation {
-            Pitch: -54.4593849
-            Yaw: -95.5070114
-            Roll: -93.2460785
+            Pitch: -54.4593201
+            Yaw: -95.5069427
+            Roll: -93.2460251
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1493,19 +1980,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 9.72468662
-            Y: -58.5484
-            Z: 67.1365891
+            X: -16.2173176
+            Y: -57.2610817
+            Z: 97.9875488
           }
           Rotation {
-            Pitch: -54.4593048
-            Yaw: -95.5069427
-            Roll: 86.7535095
+            Pitch: -54.4592171
+            Yaw: -95.5068665
+            Roll: 86.7534256
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1550,19 +2037,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 5.70262289
-            Y: -59.7655
-            Z: 63.3560867
+            X: -20.2393532
+            Y: -58.4781799
+            Z: 94.2070541
           }
           Rotation {
             Pitch: 1.8864162
-            Yaw: -8.15003109
-            Roll: -144.50209
+            Yaw: -8.15004349
+            Roll: -144.502075
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1607,19 +2094,19 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: 5.68565845
-            Y: -55.4150352
-            Z: 69.4841232
+            X: -20.2563171
+            Y: -54.1277161
+            Z: 100.335083
           }
           Rotation {
             Pitch: 1.88639569
-            Yaw: -8.14999866
-            Roll: 35.4966087
+            Yaw: -8.15001297
+            Roll: 35.4965973
           }
           Scale {
-            X: 0.0347826071
-            Y: 0.0347826071
-            Z: 0.0434782617
+            X: 0.0347826034
+            Y: 0.0347826034
+            Z: 0.043478258
           }
         }
         ParentId: 3440671892042926393
@@ -1664,19 +2151,19 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: 5.88658476
-            Y: -57.515255
-            Z: 66.4528122
+            X: -20.0553913
+            Y: -56.2279358
+            Z: 97.303772
           }
           Rotation {
             Pitch: -2.55385542
-            Yaw: -26.7049332
-            Roll: -56.8453331
+            Yaw: -26.7048874
+            Roll: -56.8452721
           }
           Scale {
-            X: 0.0869565234
-            Y: 0.0869565234
-            Z: 0.0652173758
+            X: 0.0869565159
+            Y: 0.0869565159
+            Z: 0.0652173683
           }
         }
         ParentId: 3440671892042926393
@@ -1721,18 +2208,18 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: 0.109487668
-            Y: -55.7914963
-            Z: 63.7195816
+            X: -25.832489
+            Y: -54.5041771
+            Z: 94.570549
           }
           Rotation {
-            Yaw: -3.25561301e-12
+            Yaw: -9.77018119e-12
             Roll: 178.118652
           }
           Scale {
-            X: 0.0521739088
-            Y: 0.0521739088
-            Z: 0.0521739088
+            X: 0.0521739051
+            Y: 0.0521739051
+            Z: 0.0521739051
           }
         }
         ParentId: 3440671892042926393
@@ -2212,19 +2699,19 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: 2.12885022
-            Y: 50.8076706
-            Z: 68.5362778
+            X: -23.8131256
+            Y: 52.0948486
+            Z: 99.3872375
           }
           Rotation {
             Pitch: -2.67919612
-            Yaw: -69.7895
+            Yaw: -69.7894516
             Roll: -172.934402
           }
           Scale {
-            X: 0.0521739088
-            Y: 0.0521739088
-            Z: 0.0521739088
+            X: 0.0521739051
+            Y: 0.0521739051
+            Z: 0.0521739051
           }
         }
         ParentId: 3440671892042926393
@@ -2474,18 +2961,18 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: 0.109482788
-            Y: -19.9448795
-            Z: 58.7956314
+            X: -25.8325253
+            Y: -18.6576271
+            Z: 89.6466
           }
           Rotation {
-            Yaw: -2.53902194e-12
-            Roll: -77.5546875
+            Yaw: -3.55891011e-12
+            Roll: -77.5546112
           }
           Scale {
-            X: 0.0521739125
-            Y: 0.0521739125
-            Z: 0.0521739125
+            X: 0.0521739088
+            Y: 0.0521739088
+            Z: 0.0521739088
           }
         }
         ParentId: 3440671892042926393
@@ -2961,511 +3448,23 @@ Assets {
         }
       }
       Objects {
-        Id: 9906367042471364205
-        Name: "Chain"
-        Transform {
-          Location {
-            X: 2.1288476
-            Y: 47.0281258
-            Z: 70.7598
-          }
-          Rotation {
-            Roll: -104.913231
-          }
-          Scale {
-            X: 0.0521739125
-            Y: 0.0521739125
-            Z: 0.0521739125
-          }
-        }
-        ParentId: 3440671892042926393
-        ChildIds: 4780521277798353543
-        ChildIds: 2870908903914109115
-        ChildIds: 17261138215970945
-        ChildIds: 12703092417912773408
-        ChildIds: 594120752955254353
-        ChildIds: 14182721231252222967
-        ChildIds: 8607187147922961535
-        ChildIds: 11140197475663888604
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 4780521277798353543
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-          }
-          Rotation {
-            Roll: -89.9999084
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 2870908903914109115
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-            Y: 0.0009765625
-            Z: 92.7519531
-          }
-          Rotation {
-            Pitch: 0.000129773587
-            Yaw: 79.9992
-            Roll: -90.0000534
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 17261138215970945
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-            Z: 279
-          }
-          Rotation {
-            Pitch: 0.000150264153
-            Yaw: 79.9990616
-            Roll: -90.0000916
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 12703092417912773408
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-            Y: 0.00390625
-            Z: 184.658203
-          }
-          Rotation {
-            Roll: -89.9999084
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 594120752955254353
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-            Y: 0.0009765625
-            Z: 648.234375
-          }
-          Rotation {
-            Pitch: 0.000150264153
-            Yaw: 79.9990616
-            Roll: -90.0000916
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 14182721231252222967
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-            Y: -0.001953125
-            Z: 553.892578
-          }
-          Rotation {
-            Roll: -89.9999084
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 8607187147922961535
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-            Y: -0.0009765625
-            Z: 461.984375
-          }
-          Rotation {
-            Pitch: 0.000150264153
-            Yaw: 79.9990616
-            Roll: -90.0000916
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 11140197475663888604
-        Name: "Ring - Beveled Thick"
-        Transform {
-          Location {
-            X: 0.001953125
-            Y: 0.001953125
-            Z: 369.230469
-          }
-          Rotation {
-            Roll: -89.9999084
-          }
-          Scale {
-            X: 0.689062476
-            Y: 1.49740255
-            Z: 1
-          }
-        }
-        ParentId: 9906367042471364205
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16399116315888499769
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10025162284120957192
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 12516802977800467260
         Name: "Chain"
         Transform {
           Location {
-            X: 2.06006455
-            Y: 9.32592297
-            Z: 61.3908615
+            X: -23.8819427
+            Y: 10.6131725
+            Z: 92.2418289
           }
           Rotation {
             Pitch: 0.199660078
             Yaw: -4.28689671
-            Roll: -96.5761337
+            Roll: -96.5761108
           }
           Scale {
-            X: 0.0521739125
-            Y: 0.0521739125
-            Z: 0.0521739125
+            X: 0.0521739088
+            Y: 0.0521739088
+            Z: 0.0521739088
           }
         }
         ParentId: 3440671892042926393
@@ -3826,6 +3825,15 @@ Assets {
       }
     }
     Assets {
+      Id: 10025162284120957192
+      Name: "Ring - Beveled Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ring_faceted_003"
+      }
+    }
+    Assets {
       Id: 8862136610131911150
       Name: "Bone Human Spine 01"
       PlatformAssetType: 1
@@ -3868,15 +3876,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cone_001"
-      }
-    }
-    Assets {
-      Id: 10025162284120957192
-      Name: "Ring - Beveled Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_ring_faceted_003"
       }
     }
     PrimaryAssetId {

@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 7354809377469680473
+        ChildIds: 11792610205961270389
         ChildIds: 3369370485174384545
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -31,6 +32,136 @@ Assets {
         }
         Folder {
           IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 11792610205961270389
+        Name: "MeshOverrides"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 1.3660374e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4479829909792537080
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:1:Shared_Detail2:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:color"
+            Color {
+              R: 0.313725501
+              G: 0.313725501
+              B: 0.313725501
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12799735335173377382
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:id"
+            AssetReference {
+              Id: 1263589713213389785
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:color"
+            Color {
+              R: 0.323
+              G: 0.264431804
+              B: 0.151800528
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13857943057331475071
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          AnimatedMesh {
+            AnimationStance: "unarmed_bind_pose"
+            AnimationStancePlaybackRate: 1
+            AnimationStanceShouldLoop: true
+            AnimationPlaybackRateMultiplier: 1
+            PlayOnStartAnimation {
+              PlaybackRate: 1
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 1642036294069078973
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -856,6 +987,42 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+      }
+    }
+    Assets {
+      Id: 13857943057331475071
+      Name: "Humanoid 1 Rig"
+      PlatformAssetType: 25
+      PrimaryAsset {
+        AssetType: "SkeletonAssetRef"
+        AssetId: "npc_gal_wireframe_001_ref"
+      }
+    }
+    Assets {
+      Id: 1642036294069078973
+      Name: "Humanoid 1 Military Fatigues"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_upper_military_000_ref"
+      }
+    }
+    Assets {
+      Id: 2018227301497757374
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {

@@ -41,12 +41,8 @@ Assets {
         Name: "head"
         Transform {
           Location {
-            X: 6.54836116e-11
-            Y: 9.15527053e-05
-            Z: -105
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -78,12 +74,12 @@ Assets {
         Transform {
           Location {
             X: -9.99822617
-            Y: -8.97268e-05
-            Z: 199
+            Y: 7.15129045e-06
+            Z: 94
           }
           Rotation {
-            Yaw: 75.9998779
-            Roll: 12.6529083
+            Yaw: 75.9997559
+            Roll: 12.6529398
           }
           Scale {
             X: 0.3

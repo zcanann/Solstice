@@ -38,9 +38,6 @@ Assets {
         Name: "pelvis"
         Transform {
           Location {
-            X: 20.6771183
-            Y: -1.00019753
-            Z: 17.9999943
           }
           Rotation {
           }
@@ -51,6 +48,7 @@ Assets {
           }
         }
         ParentId: 2116657062999270143
+        ChildIds: 15318668871958342701
         ChildIds: 14823371260167344031
         ChildIds: 16479952563708873547
         ChildIds: 6119215101889300635
@@ -62,7 +60,6 @@ Assets {
         ChildIds: 1072124921184207221
         ChildIds: 3231359102731597869
         ChildIds: 3346987824683527267
-        ChildIds: 15318668871958342701
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -83,22 +80,79 @@ Assets {
         }
       }
       Objects {
+        Id: 15318668871958342701
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: 15.7905579
+            Y: -15.0885715
+            Z: 18.2164707
+          }
+          Rotation {
+            Pitch: 1.621719
+            Yaw: -159.304352
+            Roll: -21.6402607
+          }
+          Scale {
+            X: 0.511034
+            Y: 0.300001115
+            Z: 0.54138267
+          }
+        }
+        ParentId: 6177735452569181252
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 7690866305564376230
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 14823371260167344031
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: 3.37762403
-            Y: -0.0192284845
-            Z: 0.260910064
+            X: 24.0547142
+            Y: -1.01942599
+            Z: 18.2609043
           }
           Rotation {
             Pitch: 1.83020377
-            Yaw: -86.0089493
-            Roll: -24.5968304
+            Yaw: -86.0088882
+            Roll: -24.5967674
           }
           Scale {
             X: 0.51165092
-            Y: 0.38749516
+            Y: 0.38749522
             Z: 0.739630818
           }
         }
@@ -144,14 +198,14 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -6.00244093
-            Y: -0.734675705
-            Z: 5.19579363
+            X: 14.6746616
+            Y: -1.73487353
+            Z: 23.1957874
           }
           Rotation {
           }
           Scale {
-            X: 0.200000018
+            X: 0.200000048
             Y: 0.3
             Z: 0.0681109354
           }
@@ -206,14 +260,14 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 4.50945711
-            Y: -2.38904071
-            Z: 2.51755548
+            X: 25.1865463
+            Y: -3.38923883
+            Z: 20.5175495
           }
           Rotation {
-            Pitch: -52.6454735
+            Pitch: -52.6454163
             Yaw: -161.238251
-            Roll: 136.31987
+            Roll: 136.319839
           }
           Scale {
             X: 0.0348246023
@@ -263,13 +317,13 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 4.74932909
-            Y: 2.86309409
-            Z: 2.50398278
+            X: 25.4264183
+            Y: 1.86289656
+            Z: 20.5039768
           }
           Rotation {
-            Pitch: 55.4860916
-            Yaw: 3.91450453
+            Pitch: 55.4860153
+            Yaw: 3.9144969
             Roll: 155.170197
           }
           Scale {
@@ -320,17 +374,17 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 4.62847805
-            Y: 0.829952598
-            Z: 5.2618947
+            X: 25.3055668
+            Y: -0.170245111
+            Z: 23.2618885
           }
           Rotation {
-            Pitch: 26.134016
-            Yaw: 17.9870186
+            Pitch: 26.133997
+            Yaw: 17.9870262
             Roll: 132.36496
           }
           Scale {
-            X: 0.106796034
+            X: 0.106796049
             Y: 0.154749662
             Z: 0.0110553578
           }
@@ -385,17 +439,17 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: 4.12371683
-            Y: 0.114865199
-            Z: 5.48362
+            X: 24.800806
+            Y: -0.885332584
+            Z: 23.483614
           }
           Rotation {
-            Pitch: 16.3820915
-            Yaw: -4.40222216
-            Roll: 57.0343475
+            Pitch: 16.3820648
+            Yaw: -4.40222168
+            Roll: 57.0342674
           }
           Scale {
-            X: 0.106796183
+            X: 0.106796198
             Y: 0.171238288
             Z: 0.0110556185
           }
@@ -450,17 +504,17 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -3.81255221
-            Y: 11.744812
-            Z: 5.26261187
+            X: 16.8645363
+            Y: 10.7446136
+            Z: 23.2626057
           }
           Rotation {
-            Pitch: 24.2819366
-            Yaw: 35.8573036
-            Roll: 38.9678764
+            Pitch: 24.2819214
+            Yaw: 35.8572731
+            Roll: 38.9678116
           }
           Scale {
-            X: 0.112715602
+            X: 0.112715617
             Y: 0.139303818
             Z: 0.00809468143
           }
@@ -515,17 +569,17 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -2.80498147
-            Y: 14.7319946
-            Z: 4.68793535
+            X: 17.8721066
+            Y: 13.7317972
+            Z: 22.6879292
           }
           Rotation {
-            Pitch: -20.3369
-            Yaw: 10.2261667
-            Roll: 162.897171
+            Pitch: -20.3368797
+            Yaw: 10.2261896
+            Roll: 162.897125
           }
           Scale {
-            X: 0.0493089892
+            X: 0.0493089966
             Y: 0.0328366
             Z: 0.00809472706
           }
@@ -580,14 +634,14 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -3.39885545
-            Y: 12.1981821
-            Z: 0.216499358
+            X: 17.2782326
+            Y: 11.1979828
+            Z: 18.2164936
           }
           Rotation {
             Pitch: 1.621719
-            Yaw: -23.0292759
-            Roll: -21.6408501
+            Yaw: -23.0292263
+            Roll: -21.6408119
           }
           Scale {
             X: 0.511034
@@ -637,17 +691,17 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -4.66407347
-            Y: -17.1390285
-            Z: 3.92665911
+            X: 16.0130157
+            Y: -18.1392269
+            Z: 21.9266529
           }
           Rotation {
-            Pitch: -30.5598831
-            Yaw: -44.9180031
-            Roll: 51.7677269
+            Pitch: -30.5598621
+            Yaw: -44.9179573
+            Roll: 51.7677307
           }
           Scale {
-            X: 0.0493089892
+            X: 0.0493089966
             Y: 0.0328366
             Z: 0.00809472706
           }
@@ -702,14 +756,14 @@ Assets {
         Name: "Horn"
         Transform {
           Location {
-            X: -1.73829007
-            Y: -12.5982027
-            Z: 6.3075037
+            X: 18.938797
+            Y: -13.5984
+            Z: 24.3075
           }
           Rotation {
-            Pitch: 24.2204437
-            Yaw: -20.7932301
-            Roll: 148.112289
+            Pitch: 24.2204227
+            Yaw: -20.7932014
+            Roll: 148.112213
           }
           Scale {
             X: 0.0704138
@@ -746,63 +800,6 @@ Assets {
         CoreMesh {
           MeshAsset {
             Id: 13828127444655325311
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 15318668871958342701
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: -4.88654423
-            Y: -14.0883732
-            Z: 0.21647647
-          }
-          Rotation {
-            Pitch: 1.621719
-            Yaw: -159.304352
-            Roll: -21.6402988
-          }
-          Scale {
-            X: 0.511034
-            Y: 0.300001115
-            Z: 0.54138267
-          }
-        }
-        ParentId: 6177735452569181252
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 7690866305564376230
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
           }
           Teams {
             IsTeamCollisionEnabled: true

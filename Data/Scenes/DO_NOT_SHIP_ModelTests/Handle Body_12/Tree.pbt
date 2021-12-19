@@ -1,7 +1,7 @@
 Name: "Handle Body_12"
-RootId: 3613721971751082052
+RootId: 16323333966422566986
 Objects {
-  Id: 9879869798742954954
+  Id: 12938834171511465102
   Name: "Gem"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3613721971751082052
+  ParentId: 16323333966422566986
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -32,6 +32,12 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Gem_11"
+  }
+  InstanceHistory {
+    SelfId: 12938834171511465102
+    SubobjectId: 8213740143517029126
+    InstanceId: 2527284138914015236
+    TemplateId: 5838106527476150161
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

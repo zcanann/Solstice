@@ -42,9 +42,6 @@ Assets {
         Name: "right_wrist"
         Transform {
           Location {
-            X: 3.99729109
-            Y: 53.9999809
-            Z: 11
           }
           Rotation {
           }
@@ -81,14 +78,14 @@ Assets {
         Name: "Bone Human Hand 01"
         Transform {
           Location {
-            X: -0.820556641
-            Y: 0.995666504
-            Z: 3.00066376
+            X: 3.17673445
+            Y: 54.995636
+            Z: 14.0006638
           }
           Rotation {
-            Pitch: -13.3072815
+            Pitch: -13.3072701
             Yaw: 158.229187
-            Roll: 30.7766056
+            Roll: 30.776619
           }
           Scale {
             X: -0.875
@@ -134,14 +131,14 @@ Assets {
         Name: "Bone Human Hand 01"
         Transform {
           Location {
-            X: -0.997436523
-            Y: -0.999145508
-            Z: 0.000122070312
+            X: 2.99985456
+            Y: 53.000824
+            Z: 11.0001221
           }
           Rotation {
-            Pitch: -13.3072815
-            Yaw: 158.229172
-            Roll: 30.776619
+            Pitch: -13.3072844
+            Yaw: 158.229187
+            Roll: 30.7766323
           }
           Scale {
             X: -0.7
@@ -187,9 +184,6 @@ Assets {
         Name: "left_wrist"
         Transform {
           Location {
-            X: 1.99727964
-            Y: -47.9999847
-            Z: 11
           }
           Rotation {
           }
@@ -200,8 +194,8 @@ Assets {
           }
         }
         ParentId: 547757049440490728
-        ChildIds: 5922262999332773089
         ChildIds: 9319213428954763722
+        ChildIds: 5922262999332773089
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -222,23 +216,23 @@ Assets {
         }
       }
       Objects {
-        Id: 5922262999332773089
+        Id: 9319213428954763722
         Name: "Bone Human Hand 01"
         Transform {
           Location {
-            X: 1.89861345
-            Y: -9.27178669
-            Z: 4
+            X: 4.99983215
+            Y: -51.9999275
+            Z: 11
           }
           Rotation {
-            Pitch: 13.3073044
-            Yaw: 31.7706032
-            Roll: -149.223892
+            Pitch: 11.4107389
+            Yaw: 32.784977
+            Roll: -144.487595
           }
           Scale {
-            X: 0.875
-            Y: 0.875
-            Z: 0.875
+            X: 0.7
+            Y: 0.7
+            Z: 0.7
           }
         }
         ParentId: 15580169009990690769
@@ -275,22 +269,23 @@ Assets {
         }
       }
       Objects {
-        Id: 9319213428954763722
+        Id: 5922262999332773089
         Name: "Bone Human Hand 01"
         Transform {
           Location {
-            X: 3.00255966
-            Y: -4.00000095
+            X: 3.89588928
+            Y: -57.2717171
+            Z: 15
           }
           Rotation {
-            Pitch: 11.4107389
-            Yaw: 32.7849579
-            Roll: -144.48761
+            Pitch: 13.3072844
+            Yaw: 31.7706165
+            Roll: -149.223862
           }
           Scale {
-            X: 0.7
-            Y: 0.7
-            Z: 0.7
+            X: 0.875
+            Y: 0.875
+            Z: 0.875
           }
         }
         ParentId: 15580169009990690769

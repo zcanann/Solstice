@@ -42,9 +42,6 @@ Assets {
         Name: "right_shoulder"
         Transform {
           Location {
-            X: 1.00341749
-            Y: -7.17700345e-07
-            Z: -104.998901
           }
           Rotation {
           }
@@ -55,11 +52,11 @@ Assets {
           }
         }
         ParentId: 5056029215700176618
+        ChildIds: 9969161954140228092
         ChildIds: 11215745054062962139
         ChildIds: 17254074256460269994
         ChildIds: 10116932071038028359
         ChildIds: 16177390898258973309
-        ChildIds: 9969161954140228092
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -77,255 +74,18 @@ Assets {
         }
       }
       Objects {
-        Id: 11215745054062962139
-        Name: "Crescent - 02"
-        Transform {
-          Location {
-            X: -6.69976473
-            Y: 29.1153812
-            Z: 175.803879
-          }
-          Rotation {
-            Pitch: 46.7034569
-            Yaw: 58.131752
-            Roll: -123.136253
-          }
-          Scale {
-            X: 0.285385221
-            Y: 0.285385221
-            Z: 0.0178275276
-          }
-        }
-        ParentId: 7256975429587949816
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6930415435317125193
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 17254074256460269994
-        Name: "Crescent - 02"
-        Transform {
-          Location {
-            X: -3.43217731
-            Y: 29.0227528
-            Z: 175.803879
-          }
-          Rotation {
-            Pitch: 46.7528687
-            Yaw: 126.339653
-            Roll: -63.8486061
-          }
-          Scale {
-            X: 0.285385221
-            Y: 0.285385221
-            Z: 0.0178275276
-          }
-        }
-        ParentId: 7256975429587949816
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6930415435317125193
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 10116932071038028359
-        Name: "Crescent - 02"
-        Transform {
-          Location {
-            X: -5.44091129
-            Y: 29.0796947
-            Z: 175.803879
-          }
-          Rotation {
-            Pitch: 58.0109673
-            Yaw: 93.8840866
-            Roll: -90.3317642
-          }
-          Scale {
-            X: 0.285385221
-            Y: 0.285385281
-            Z: 0.0450712144
-          }
-        }
-        ParentId: 7256975429587949816
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 6930415435317125193
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 16177390898258973309
-        Name: "Bone Human Scapula 01"
-        Transform {
-          Location {
-            X: -7.44447041
-            Y: 55.5041046
-            Z: 147.006088
-          }
-          Rotation {
-            Pitch: 36.5734482
-            Yaw: 82.1495667
-            Roll: -7.8401866
-          }
-          Scale {
-            X: 0.271001041
-            Y: 0.143579602
-            Z: 1.00538838
-          }
-        }
-        ParentId: 7256975429587949816
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 14212988502358508072
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0352941193
-              G: 0.0313725509
-              B: 0.0352941193
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1271802712005788862
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 9969161954140228092
         Name: "Crescent - 01"
         Transform {
           Location {
-            X: -4.91963
-            Y: 30.3584557
-            Z: 172.981033
+            X: -3.9162066
+            Y: 30.3584538
+            Z: 67.982132
           }
           Rotation {
-            Pitch: 71.805809
-            Yaw: 74.2966461
-            Roll: -106.075462
+            Pitch: 71.8057175
+            Yaw: 74.2965
+            Roll: -106.075439
           }
           Scale {
             X: 0.119632825
@@ -380,13 +140,247 @@ Assets {
         }
       }
       Objects {
+        Id: 11215745054062962139
+        Name: "Crescent - 02"
+        Transform {
+          Location {
+            X: -5.69635773
+            Y: 29.1153526
+            Z: 70.8049774
+          }
+          Rotation {
+            Pitch: 46.7033768
+            Yaw: 58.1316414
+            Roll: -123.136215
+          }
+          Scale {
+            X: 0.285385221
+            Y: 0.285385221
+            Z: 0.0178275276
+          }
+        }
+        ParentId: 7256975429587949816
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6930415435317125193
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17254074256460269994
+        Name: "Crescent - 02"
+        Transform {
+          Location {
+            X: -2.42875028
+            Y: 29.0227604
+            Z: 70.8049774
+          }
+          Rotation {
+            Pitch: 46.7528
+            Yaw: 126.339577
+            Roll: -63.8485794
+          }
+          Scale {
+            X: 0.285385221
+            Y: 0.285385221
+            Z: 0.0178275276
+          }
+        }
+        ParentId: 7256975429587949816
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6930415435317125193
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10116932071038028359
+        Name: "Crescent - 02"
+        Transform {
+          Location {
+            X: -4.43747711
+            Y: 29.0797081
+            Z: 70.8049774
+          }
+          Rotation {
+            Pitch: 58.0108833
+            Yaw: 93.8839951
+            Roll: -90.3316574
+          }
+          Scale {
+            X: 0.285385221
+            Y: 0.285385281
+            Z: 0.0450712144
+          }
+        }
+        ParentId: 7256975429587949816
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6930415435317125193
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 16177390898258973309
+        Name: "Bone Human Scapula 01"
+        Transform {
+          Location {
+            X: -6.44105959
+            Y: 55.5040169
+            Z: 42.0071869
+          }
+          Rotation {
+            Pitch: 36.5734
+            Yaw: 82.1495
+            Roll: -7.84018946
+          }
+          Scale {
+            X: 0.271001041
+            Y: 0.143579602
+            Z: 1.00538838
+          }
+        }
+        ParentId: 7256975429587949816
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 14212988502358508072
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0352941193
+              G: 0.0313725509
+              B: 0.0352941193
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1271802712005788862
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 2419292788516939512
         Name: "left_shoulder"
         Transform {
           Location {
-            X: 1.00341749
-            Y: -7.17700345e-07
-            Z: -104.998901
           }
           Rotation {
           }
@@ -423,13 +417,13 @@ Assets {
         Name: "Crescent - 02"
         Transform {
           Location {
-            X: -5.50484896
-            Y: -28.2837353
-            Z: 176.526123
+            X: -4.50142193
+            Y: -28.283741
+            Z: 71.5272217
           }
           Rotation {
-            Pitch: 46.7029648
-            Yaw: -137.286392
+            Pitch: 46.702919
+            Yaw: -137.286301
             Roll: -123.137077
           }
           Scale {
@@ -480,14 +474,14 @@ Assets {
         Name: "Crescent - 02"
         Transform {
           Location {
-            X: -6.70873785
-            Y: -27.9147072
-            Z: 176.526123
+            X: -5.70531
+            Y: -27.9147224
+            Z: 71.5272217
           }
           Rotation {
-            Pitch: 58.0102959
-            Yaw: -101.533981
-            Roll: -90.3312683
+            Pitch: 58.0102158
+            Yaw: -101.533936
+            Roll: -90.3312
           }
           Scale {
             X: 0.285385221
@@ -537,14 +531,14 @@ Assets {
         Name: "Crescent - 02"
         Transform {
           Location {
-            X: -8.63017941
-            Y: -27.3258018
-            Z: 176.526123
+            X: -7.62675714
+            Y: -27.3257923
+            Z: 71.5272217
           }
           Rotation {
-            Pitch: 46.7523918
-            Yaw: -69.0782776
-            Roll: -63.8491631
+            Pitch: 46.7523193
+            Yaw: -69.078186
+            Roll: -63.8491173
           }
           Scale {
             X: 0.285385221
@@ -594,14 +588,14 @@ Assets {
         Name: "Bone Human Scapula 01"
         Transform {
           Location {
-            X: -9.08288574
-            Y: -53.1150589
-            Z: 151.262665
+            X: -8.07952881
+            Y: -53.1149292
+            Z: 46.2637634
           }
           Rotation {
             Pitch: 37.5248337
-            Yaw: -76.8602524
-            Roll: 11.9247894
+            Yaw: -76.8602066
+            Roll: 11.9248352
           }
           Scale {
             X: 0.27100113
@@ -660,14 +654,14 @@ Assets {
         Name: "Crescent - 01"
         Transform {
           Location {
-            X: -6.7925539
-            Y: -30.0811272
-            Z: 173.555756
+            X: -5.78914309
+            Y: -30.0811043
+            Z: 68.5568542
           }
           Rotation {
-            Pitch: 62.3856544
-            Yaw: -85.3044586
-            Roll: 100.018631
+            Pitch: 62.3855515
+            Yaw: -85.3043594
+            Roll: 100.018539
           }
           Scale {
             X: 0.119632825
@@ -723,6 +717,24 @@ Assets {
       }
     }
     Assets {
+      Id: 5786776235862333585
+      Name: "Crescent - 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_crescent_001"
+      }
+    }
+    Assets {
+      Id: 14212988502358508072
+      Name: "Metal Basic Steel"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "steel_001"
+      }
+    }
+    Assets {
       Id: 6930415435317125193
       Name: "Crescent - 02"
       PlatformAssetType: 1
@@ -747,24 +759,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_bones_human_scap_01_ref"
-      }
-    }
-    Assets {
-      Id: 14212988502358508072
-      Name: "Metal Basic Steel"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "steel_001"
-      }
-    }
-    Assets {
-      Id: 5786776235862333585
-      Name: "Crescent - 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_crescent_001"
       }
     }
     PrimaryAssetId {

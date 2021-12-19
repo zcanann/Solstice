@@ -307,7 +307,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 14134667170458327176
+            Id: 8698530872141969228
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -459,12 +459,12 @@ Assets {
       }
     }
     Assets {
-      Id: 14134667170458327176
-      Name: "Fern 02"
+      Id: 8698530872141969228
+      Name: "Fern 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_fern_generic_002"
+        AssetId: "sm_fern_generic_001"
       }
     }
     PrimaryAssetId {

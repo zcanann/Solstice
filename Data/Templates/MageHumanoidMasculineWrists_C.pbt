@@ -42,9 +42,6 @@ Assets {
         Name: "left_elbow"
         Transform {
           Location {
-            X: 0.999994755
-            Y: -6.99999857
-            Z: -105
           }
           Rotation {
           }
@@ -77,14 +74,14 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -12.0000153
-            Y: -26.9999847
-            Z: 152.427795
+            X: -11.0000048
+            Y: -33.9999771
+            Z: 47.4277954
           }
           Rotation {
-            Pitch: -21.3736877
+            Pitch: -21.373661
             Yaw: -177.996307
-            Roll: 151.333893
+            Roll: 151.333878
           }
           Scale {
             X: 0.2
@@ -134,9 +131,6 @@ Assets {
         Name: "right_elbow"
         Transform {
           Location {
-            X: -4.83168651e-06
-            Y: -6.75518608
-            Z: -105
           }
           Rotation {
             Yaw: -1.0027019e-05
@@ -148,8 +142,8 @@ Assets {
           }
         }
         ParentId: 16962469691471103823
-        ChildIds: 11356450379897719936
         ChildIds: 2042451138288838615
+        ChildIds: 11356450379897719936
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -167,23 +161,23 @@ Assets {
         }
       }
       Objects {
-        Id: 11356450379897719936
+        Id: 2042451138288838615
         Name: "Cone - Truncated Hollow Wide"
         Transform {
           Location {
-            X: -4.13851213
-            Y: 50.3025703
-            Z: 134.450439
+            X: -0.999963164
+            Y: 47.9991302
+            Z: 22
           }
           Rotation {
-            Pitch: 26.5505695
-            Yaw: 5.88855648
-            Roll: 154.906479
+            Pitch: 29.534214
+            Yaw: 6.05492973
+            Roll: 155.260376
           }
           Scale {
-            X: 0.175
-            Y: 0.175
-            Z: 0.175
+            X: 0.125
+            Y: 0.125
+            Z: 0.125
           }
         }
         ParentId: 5278071278952149945
@@ -224,23 +218,23 @@ Assets {
         }
       }
       Objects {
-        Id: 2042451138288838615
+        Id: 11356450379897719936
         Name: "Cone - Truncated Hollow Wide"
         Transform {
           Location {
-            X: -0.999960542
-            Y: 54.7544098
-            Z: 127
+            X: -4.13850832
+            Y: 43.5473518
+            Z: 29.4504395
           }
           Rotation {
-            Pitch: 29.5342426
-            Yaw: 6.05492687
-            Roll: 155.260361
+            Pitch: 26.5505352
+            Yaw: 5.88856077
+            Roll: 154.906494
           }
           Scale {
-            X: 0.125
-            Y: 0.125
-            Z: 0.125
+            X: 0.175
+            Y: 0.175
+            Z: 0.175
           }
         }
         ParentId: 5278071278952149945

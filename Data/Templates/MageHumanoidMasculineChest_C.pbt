@@ -16,6 +16,7 @@ Assets {
           }
         }
         ParentId: 17729538882398592273
+        ChildIds: 10135314283830554380
         ChildIds: 14507152767101217416
         ChildIds: 1936452541666637737
         Collidable_v2 {
@@ -38,13 +39,10 @@ Assets {
         }
       }
       Objects {
-        Id: 14507152767101217416
-        Name: "upper_spine"
+        Id: 10135314283830554380
+        Name: "MeshOverrides"
         Transform {
           Location {
-            X: 0.999999762
-            Y: -7.1525568e-07
-            Z: -105
           }
           Rotation {
           }
@@ -55,6 +53,184 @@ Assets {
           }
         }
         ParentId: 8512533890565475205
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:1:Shared_Detail1:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail2:color"
+            Color {
+              R: 0.014
+              G: 0.014
+              B: 0.014
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail3:color"
+            Color {
+              R: 0.025
+              G: 0.025
+              B: 0.025
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 5476846266485836183
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail1:id"
+            AssetReference {
+              Id: 5476846266485836183
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_Detail3:id"
+            AssetReference {
+              Id: 5476846266485836183
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9410338397693246552
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:id"
+            AssetReference {
+              Id: 9410338397693246552
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:id"
+            AssetReference {
+              Id: 5476846266485836183
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:id"
+            AssetReference {
+              Id: 9410338397693246552
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16794234107403285238
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          AnimatedMesh {
+            AnimationStance: "unarmed_bind_pose"
+            AnimationStancePlaybackRate: 1
+            AnimationStanceShouldLoop: true
+            AnimationPlaybackRateMultiplier: 1
+            PlayOnStartAnimation {
+              PlaybackRate: 1
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 14788449615596066441
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14507152767101217416
+        Name: "upper_spine"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8512533890565475205
+        ChildIds: 2415212563414295409
         ChildIds: 4245289871858700638
         ChildIds: 14704642684610726643
         ChildIds: 13684551758458306087
@@ -67,7 +243,6 @@ Assets {
         ChildIds: 16559461629257082337
         ChildIds: 3456843870147109928
         ChildIds: 683982427056740200
-        ChildIds: 2415212563414295409
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -85,18 +260,84 @@ Assets {
         }
       }
       Objects {
+        Id: 2415212563414295409
+        Name: "Teardrop - Truncated"
+        Transform {
+          Location {
+            X: -2.14800501
+            Y: 1.53637347e-06
+            Z: 76
+          }
+          Rotation {
+            Pitch: -6
+            Yaw: 178.367218
+            Roll: -179.82933
+          }
+          Scale {
+            X: 0.3
+            Y: 0.4
+            Z: 0.4
+          }
+        }
+        ParentId: 14507152767101217416
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 15883340561898099110
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0177083015
+              G: 0.0177083015
+              B: 0.0177083015
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 10765242685784547638
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 4245289871858700638
         Name: "Curtains Straight"
         Transform {
           Location {
-            X: 15.0000143
-            Y: 24.9998741
-            Z: 103.976166
+            X: 15.9999971
+            Y: 24.9998589
+            Z: -1.02383423
           }
           Rotation {
-            Pitch: -4.49331665
-            Yaw: -60.4178772
-            Roll: -10.4378662
+            Pitch: -4.49330807
+            Yaw: -60.4178162
+            Roll: -10.4378881
           }
           Scale {
             X: 0.0967554525
@@ -154,14 +395,14 @@ Assets {
         Name: "Curtains Straight"
         Transform {
           Location {
-            X: 13.9999781
-            Y: -25.9999256
-            Z: 104
+            X: 14.9999628
+            Y: -25.9998817
+            Z: -1
           }
           Rotation {
             Pitch: 3.96680975
-            Yaw: -122.730637
-            Roll: -10.3909302
+            Yaw: -122.730621
+            Roll: -10.390954
           }
           Scale {
             X: 0.0967554525
@@ -219,13 +460,13 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -9.1480093
-            Y: -6.99999285
-            Z: 185
+            X: -8.14799404
+            Y: -6.99999237
+            Z: 80
           }
           Rotation {
-            Yaw: 178.376236
-            Roll: -179.999985
+            Yaw: 178.376221
+            Roll: -179.999954
           }
           Scale {
             X: 0.3
@@ -284,13 +525,13 @@ Assets {
         Name: "Cone - Truncated Concave"
         Transform {
           Location {
-            X: -5.4936862
-            Y: -14.1823025
-            Z: 178.707748
+            X: -4.49367905
+            Y: -14.1823053
+            Z: 73.7077484
           }
           Rotation {
-            Yaw: 178.376236
-            Roll: 11.140625
+            Yaw: 178.376221
+            Roll: 11.1406488
           }
           Scale {
             X: 0.207612172
@@ -340,14 +581,14 @@ Assets {
         Name: "Cone - Truncated Concave"
         Transform {
           Location {
-            X: -5.4222641
-            Y: 15.7391911
-            Z: 178.000137
+            X: -4.42225695
+            Y: 15.7391958
+            Z: 73.0001373
           }
           Rotation {
             Pitch: 2.91609454
             Yaw: 4.37822723
-            Roll: 10.7809076
+            Roll: 10.7809343
           }
           Scale {
             X: 0.207612172
@@ -397,14 +638,14 @@ Assets {
         Name: "Ring - Thick"
         Transform {
           Location {
-            X: 4.38040543
-            Y: 15.8870144
-            Z: 175.627579
+            X: 5.38039732
+            Y: 15.8870163
+            Z: 70.6275787
           }
           Rotation {
-            Pitch: 34.5184288
+            Pitch: 34.5183907
             Yaw: -159.029221
-            Roll: -11.2657776
+            Roll: -11.2658043
           }
           Scale {
             X: 0.0775469467
@@ -454,13 +695,13 @@ Assets {
         Name: "Ring - Thick"
         Transform {
           Location {
-            X: 3.73769403
-            Y: -15.204217
-            Z: 176.340286
+            X: 4.73768663
+            Y: -15.2042236
+            Z: 71.3402863
           }
           Rotation {
-            Pitch: 12.7825413
-            Yaw: -141.478241
+            Pitch: 12.7825279
+            Yaw: -141.478256
             Roll: 30.1389256
           }
           Scale {
@@ -511,14 +752,14 @@ Assets {
         Name: "Curtains Tied"
         Transform {
           Location {
-            X: 12.8519821
-            Y: 0.961176574
-            Z: 145.071594
+            X: 13.8519659
+            Y: 0.961171508
+            Z: 40.0715942
           }
           Rotation {
-            Pitch: -2.16033936
-            Yaw: -71.1727
-            Roll: 9.40768814
+            Pitch: -2.16033411
+            Yaw: -71.1726303
+            Roll: 9.40770817
           }
           Scale {
             X: 0.2
@@ -581,14 +822,14 @@ Assets {
         Name: "Curtains Straight"
         Transform {
           Location {
-            X: 7.39871216
+            X: 8.3987093
             Y: -1.60314941
-            Z: 172
+            Z: 67
           }
           Rotation {
-            Pitch: -2.06887817
-            Yaw: -96.0685425
-            Roll: -35.2068787
+            Pitch: -2.06885052
+            Yaw: -96.0685501
+            Roll: -35.2068901
           }
           Scale {
             X: -0.2
@@ -651,14 +892,14 @@ Assets {
         Name: "Curtains Straight"
         Transform {
           Location {
-            X: 12.8519897
+            X: 13.8519888
             Y: -2.04486084
-            Z: 161.470901
+            Z: 56.4709
           }
           Rotation {
-            Pitch: 0.237950116
-            Yaw: -96.4057312
-            Roll: -14.3302307
+            Pitch: 0.237963781
+            Yaw: -96.4057388
+            Roll: -14.3302689
           }
           Scale {
             X: -0.22
@@ -721,14 +962,14 @@ Assets {
         Name: "Curtains Straight"
         Transform {
           Location {
-            X: 13.5869751
+            X: 14.5869751
             Y: -2.26477051
-            Z: 154
+            Z: 49
           }
           Rotation {
-            Pitch: 1.88465405
-            Yaw: -96.1279602
-            Roll: 0.582301795
+            Pitch: 1.88464034
+            Yaw: -96.1279678
+            Roll: 0.582303345
           }
           Scale {
             X: -0.2
@@ -791,12 +1032,12 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -9.14800358
-            Y: 6.99999952
-            Z: 185
+            X: -8.14798832
+            Y: 7.00000381
+            Z: 80
           }
           Rotation {
-            Yaw: 178.376236
+            Yaw: 178.376221
             Roll: -179.999954
           }
           Scale {
@@ -852,79 +1093,10 @@ Assets {
         }
       }
       Objects {
-        Id: 2415212563414295409
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -3.14800835
-            Y: 1.12581563e-06
-            Z: 181
-          }
-          Rotation {
-            Pitch: -6
-            Yaw: 178.367218
-            Roll: -179.82933
-          }
-          Scale {
-            X: 0.3
-            Y: 0.4
-            Z: 0.4
-          }
-        }
-        ParentId: 14507152767101217416
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15883340561898099110
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0177083015
-              G: 0.0177083015
-              B: 0.0177083015
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10765242685784547638
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 1936452541666637737
         Name: "neck"
         Transform {
           Location {
-            X: 0.999999762
-            Y: -7.1525568e-07
-            Z: -105
           }
           Rotation {
           }
@@ -935,10 +1107,10 @@ Assets {
           }
         }
         ParentId: 8512533890565475205
+        ChildIds: 13425253985824558736
         ChildIds: 4252045895813575213
         ChildIds: 8080404362941952184
         ChildIds: 3259094385894657720
-        ChildIds: 13425253985824558736
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -956,17 +1128,74 @@ Assets {
         }
       }
       Objects {
+        Id: 13425253985824558736
+        Name: "Arch Fancy Peaked 2m"
+        Transform {
+          Location {
+            X: -5.0674634
+            Y: 0.127933249
+            Z: 77
+          }
+          Rotation {
+            Pitch: -89.0539322
+            Yaw: -33.2294769
+            Roll: -147.41214
+          }
+          Scale {
+            X: 0.036286395
+            Y: 0.0631452501
+            Z: 0.0297881849
+          }
+        }
+        ParentId: 1936452541666637737
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2682051035333449239
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 4252045895813575213
         Name: "Arch Fancy Peaked 2m"
         Transform {
           Location {
-            X: -6.66952133
-            Y: 0.176607549
-            Z: 184.035248
+            X: -5.66951418
+            Y: 0.176578701
+            Z: 79.0352478
           }
           Rotation {
-            Pitch: 73.1356125
-            Yaw: -0.541137695
+            Pitch: 73.1354675
+            Yaw: -0.541136086
             Roll: -177.500031
           }
           Scale {
@@ -1017,14 +1246,14 @@ Assets {
         Name: "Arch Fancy Peaked 2m"
         Transform {
           Location {
-            X: -6.06747055
-            Y: 0.127870768
-            Z: 184.035248
+            X: -5.0674634
+            Y: 0.127872214
+            Z: 79.0352478
           }
           Rotation {
-            Pitch: -89.0566406
-            Yaw: -33.231781
-            Roll: -147.41214
+            Pitch: -89.0539322
+            Yaw: -33.2301636
+            Roll: -147.410767
           }
           Scale {
             X: 0.0978999361
@@ -1074,13 +1303,13 @@ Assets {
         Name: "Arch Fancy Peaked 2m"
         Transform {
           Location {
-            X: -6.66949081
-            Y: 0.176607549
-            Z: 182
+            X: -5.66948366
+            Y: 0.176578701
+            Z: 77
           }
           Rotation {
-            Pitch: 73.1354523
-            Yaw: -0.541290283
+            Pitch: 73.1353073
+            Yaw: -0.541288316
             Roll: -177.500031
           }
           Scale {
@@ -1126,62 +1355,50 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 13425253985824558736
-        Name: "Arch Fancy Peaked 2m"
-        Transform {
-          Location {
-            X: -6.06747055
-            Y: 0.127931803
-            Z: 182
-          }
-          Rotation {
-            Pitch: -89.0557861
-            Yaw: -33.2303467
-            Roll: -147.413239
-          }
-          Scale {
-            X: 0.036286395
-            Y: 0.0631452501
-            Z: 0.0297881849
-          }
-        }
-        ParentId: 1936452541666637737
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2682051035333449239
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
+    }
+    Assets {
+      Id: 16794234107403285238
+      Name: "Humanoid 2 Rig"
+      PlatformAssetType: 25
+      PrimaryAsset {
+        AssetType: "SkeletonAssetRef"
+        AssetId: "npc_guy_wireframe_001_ref"
+      }
+    }
+    Assets {
+      Id: 14788449615596066441
+      Name: "Humanoid 2 Peasant Shirt"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_guy_upper_fantasy_000_ref_temp"
+      }
+    }
+    Assets {
+      Id: 5476846266485836183
+      Name: "Rubber Old 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_mil_rubber_old_001_uv_ref"
+      }
+    }
+    Assets {
+      Id: 9410338397693246552
+      Name: "Rubber Basic 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_scf_rubber_panels_004_uv"
+      }
+    }
+    Assets {
+      Id: 10765242685784547638
+      Name: "Teardrop - Truncated"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_truncated_teardrop_001"
       }
     }
     Assets {
@@ -1200,15 +1417,6 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_carpets_001_uv"
-      }
-    }
-    Assets {
-      Id: 10765242685784547638
-      Name: "Teardrop - Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_truncated_teardrop_001"
       }
     }
     Assets {

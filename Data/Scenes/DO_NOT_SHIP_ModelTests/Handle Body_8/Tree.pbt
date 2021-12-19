@@ -1,7 +1,7 @@
 Name: "Handle Body_8"
-RootId: 11011614046883809765
+RootId: 2038439777459724772
 Objects {
-  Id: 11786776592228603184
+  Id: 14592319362727848531
   Name: "Gem"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11011614046883809765
+  ParentId: 2038439777459724772
   UnregisteredParameters {
   }
   Collidable_v2 {

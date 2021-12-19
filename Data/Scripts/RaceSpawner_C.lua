@@ -78,9 +78,7 @@ function OnEntityLeftRange(proximityObjectId)
         playerModels[proximityObjectId]:Destroy()
     end
     local player = Game.FindPlayer(proximityObjectId)
-    if player then
-        player.clientUserData.model = nil
-    end
+    DestroyModel(player)
     playerModels[proximityObjectId] = nil
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
 end
@@ -153,19 +151,26 @@ function RebuildModel(proximityObjectId)
         return
     end
 
-    if Object.IsValid(player.clientUserData.model) then
-        player.clientUserData.model:Destroy()
-        player.clientUserData.model = nil
-    end
+    DestroyModel(player)
 
     playerModel = World.SpawnAsset(playerModelAsset)
+
+    player.clientUserData.model = playerModel
 
     playerModel:AttachToPlayer(player, "nameplate")
     playerModel.visibility = Visibility.FORCE_ON
     playerModel:SetPosition(Vector3.New(0.0, 0.0, -(height or 0.0) - 32.0))
     playerModels[player.id] = playerModel
-    player.clientUserData.model = playerModel
+
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
+end
+
+function DestroyModel(player)
+    if Object.IsValid(player.clientUserData.model) then
+        player.clientUserData.model:Destroy()
+    end
+
+    player.clientUserData.model = nil
 end
 
 function OnEntityRaceChanged(proximityObjectId, race)
@@ -185,10 +190,7 @@ end
 
 function OnForceRebuildModel(player)
     if Object.IsValid(player) then
-        if Object.IsValid(player.clientUserData.model) then
-            player.clientUserData.model:Destroy()
-            player.clientUserData.model = nil
-        end
+        DestroyModel(player)
         RebuildModel(player.id)
     end
 end

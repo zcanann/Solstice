@@ -206,29 +206,47 @@ function SetActiveGender(player, gender)
 end
 
 function SetActiveClass(player, class)
+    local typeKeys = Framework.Networking.ProximityKeys.Equipment.PropModelTypeKeys
+
     if class == Framework.Storage.Keys.Classes.WARRIOR then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "warrior_weapon", ["type"] = typeKeys.WEAPON_1H })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { ["id"] = "warrior_offhand", ["type"] = typeKeys.SHIELD })
     elseif class == Framework.Storage.Keys.Classes.MAGE then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "mage_weapon", ["type"] = typeKeys.WEAPON_STAFF })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { nil })
     elseif class == Framework.Storage.Keys.Classes.ROGUE then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "rogue_weapon_mainhand", ["type"] = typeKeys.WEAPON_1H })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { ["id"] = "rogue_weapon_offhand", ["type"] = typeKeys.WEAPON_1H })
     elseif class == Framework.Storage.Keys.Classes.NECROMANCER then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "necromancer_weapon", ["type"] = typeKeys.WEAPON_STAFF })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { nil })
     elseif class == Framework.Storage.Keys.Classes.HUNTER then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "hunter_weapon", ["type"] = typeKeys.WEAPON_BOW })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { nil })
     elseif class == Framework.Storage.Keys.Classes.DRUID then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "druid_weapon", ["type"] = typeKeys.WEAPON_STAFF })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { nil })
     elseif class == Framework.Storage.Keys.Classes.PRIEST then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "priest_weapon", ["type"] = typeKeys.WEAPON_STAFF })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { nil })
     elseif class == Framework.Storage.Keys.Classes.JUSTICAR then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { ["id"] = "justicar_weapon", ["type"] = typeKeys.WEAPON_1H })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { ["id"] = "justicar_offhand", ["type"] = typeKeys.SHIELD })
     else
         warn("Attempted to set invalid class")
         return
     end
 
-    -- It is assumed that there is a "class_{slot}" equipment model for each class/slot combination.
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, class .. "_head")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, class .. "_back")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, class .. "_shoulders")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, class .. "_chest")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, class .. "_wrists")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, class .. "_waist")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, class .. "_hands")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, class .. "_legs")
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, class .. "_feet")
+    -- It is assumed that there is a "class_{slot}" equipment model id for each class/slot combination.
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, { ["id"] = class .. "_head" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, { ["id"] = class .. "_back" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, { ["id"] = class .. "_shoulders" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, { ["id"] = class .. "_chest" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, { ["id"] = class .. "_wrists" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, { ["id"] = class .. "_waist" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, { ["id"] = class .. "_hands" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, { ["id"] = class .. "_legs" })
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, { ["id"] = class .. "_feet" })
 
     characterSelectScreenStates[player].class = class
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CLASS, class)

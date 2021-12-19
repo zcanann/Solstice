@@ -1,13 +1,13 @@
 Assets {
-  Id: 3590853704560797096
-  Name: "DruidGreatStaff_C"
+  Id: 7043364231055543608
+  Name: "DruidHumanoidFeminineGreatStaff_C"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 13482949333474709580
+      RootId: 15312233957912299198
       Objects {
-        Id: 13482949333474709580
-        Name: "DruidGreatStaff_C"
+        Id: 15312233957912299198
+        Name: "DruidHumanoidFeminineGreatStaff_C"
         Transform {
           Scale {
             X: 1
@@ -15,26 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3126764276359791062
-        ChildIds: 5747650163042899867
-        ChildIds: 5704586488601312572
-        ChildIds: 4095739469955511347
-        ChildIds: 5057012631714873649
-        ChildIds: 4202748567912580655
-        ChildIds: 9347886709101446328
-        ChildIds: 1625159817314119111
-        ChildIds: 9190048349058771963
-        ChildIds: 10236970635047340484
-        ChildIds: 17074978186515109455
-        ChildIds: 8436389317625829456
-        ChildIds: 3467481939566087039
-        ChildIds: 17577707157493528178
-        ChildIds: 4923777270885188918
-        ChildIds: 1320816521946886794
-        ChildIds: 9572239988274902173
-        ChildIds: 4975854960950532790
-        ChildIds: 13914028338324886919
-        ChildIds: 5630830762990948314
+        ParentId: 12659626195236791824
+        ChildIds: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -55,18 +37,75 @@ Assets {
         }
       }
       Objects {
-        Id: 5747650163042899867
+        Id: 209502034090124090
+        Name: "right_prop"
+        Transform {
+          Location {
+            X: -49.2001457
+            Y: 48.3253784
+            Z: 0.848974228
+          }
+          Rotation {
+            Pitch: -90
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 15312233957912299198
+        ChildIds: 2351217712718643561
+        ChildIds: 2326169115666033614
+        ChildIds: 6319685018808378049
+        ChildIds: 2976012258235619267
+        ChildIds: 6138930611913937117
+        ChildIds: 17210690955167306314
+        ChildIds: 8786328731207596853
+        ChildIds: 1219183692224724233
+        ChildIds: 16245596414041317174
+        ChildIds: 9481334378640834749
+        ChildIds: 1906964592356757154
+        ChildIds: 6880388762908204429
+        ChildIds: 11282215071384526976
+        ChildIds: 3113728988947796932
+        ChildIds: 9022556079645303928
+        ChildIds: 16984649649832518255
+        ChildIds: 3057729651217697860
+        ChildIds: 12572495855208235893
+        ChildIds: 2397691732075092264
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 2351217712718643561
         Name: "Bone Human Tibula 01"
         Transform {
           Location {
-            X: 7.94513226
-            Y: 0.0439147949
-            Z: -3.09791327
+            X: 0.705266
+            Y: -1.24845028
+            Z: 14.7381878
           }
           Rotation {
             Pitch: 0.0485216603
-            Yaw: 0.936926961
-            Roll: -11.0414429
+            Yaw: 0.936925948
+            Roll: -11.0414495
           }
           Scale {
             X: 0.809518754
@@ -74,7 +113,7 @@ Assets {
             Z: 0.490776479
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -112,18 +151,18 @@ Assets {
         }
       }
       Objects {
-        Id: 5704586488601312572
+        Id: 2326169115666033614
         Name: "Fantasy Pommel 05"
         Transform {
           Location {
-            X: 6.99330807
-            Y: -0.237541199
-            Z: -17.8361378
+            X: -0.246555224
+            Y: -1.52990532
+            Z: -2.19196081e-05
           }
           Rotation {
-            Pitch: 0.0485148318
-            Yaw: 0.936928153
-            Roll: -5.9258728
+            Pitch: 0.0485216603
+            Yaw: 0.936927319
+            Roll: -5.92586946
           }
           Scale {
             X: 1.68820739
@@ -131,7 +170,7 @@ Assets {
             Z: 1.68820739
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -161,18 +200,18 @@ Assets {
         }
       }
       Objects {
-        Id: 4095739469955511347
+        Id: 6319685018808378049
         Name: "Bone Human Tibula 01"
         Transform {
           Location {
-            X: 7.94420671
-            Y: 0.151245117
-            Z: -4.13202286
+            X: 0.704341888
+            Y: -1.14111876
+            Z: 13.7040806
           }
           Rotation {
-            Pitch: 0.048494339
-            Yaw: 0.936929882
-            Roll: -11.0414734
+            Pitch: 0.0484875105
+            Yaw: 0.936930537
+            Roll: -11.0414782
           }
           Scale {
             X: 1.32681513
@@ -180,7 +219,7 @@ Assets {
             Z: 0.490776569
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -222,16 +261,17 @@ Assets {
         }
       }
       Objects {
-        Id: 5057012631714873649
+        Id: 2976012258235619267
         Name: "Bone Human Tibula 01"
         Transform {
           Location {
-            X: 3.43056679
-            Y: -5
-            Z: 1.55581331
+            X: -3.80929375
+            Y: -6.29236555
+            Z: 19.3919144
           }
           Rotation {
-            Roll: -5.99154663
+            Yaw: -2.79978671e-08
+            Roll: -5.99154472
           }
           Scale {
             X: 1.32681513
@@ -239,7 +279,7 @@ Assets {
             Z: 0.809518933
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -281,17 +321,18 @@ Assets {
         }
       }
       Objects {
-        Id: 4202748567912580655
+        Id: 6138930611913937117
         Name: "Bone Human Tibula 01"
         Transform {
           Location {
-            X: 8.6770649
-            Y: 0.944091797
-            Z: 34.709465
+            X: 1.43719864
+            Y: -0.34827289
+            Z: 52.545536
           }
           Rotation {
-            Pitch: 5
-            Roll: -5.99154663
+            Pitch: 4.99999857
+            Yaw: -1.33911698e-07
+            Roll: -5.9915452
           }
           Scale {
             X: 0.809518754
@@ -299,7 +340,7 @@ Assets {
             Z: 0.809518754
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -337,16 +378,17 @@ Assets {
         }
       }
       Objects {
-        Id: 9347886709101446328
+        Id: 17210690955167306314
         Name: "Bone Human Tibula 01"
         Transform {
           Location {
-            X: 6.96374512
-            Y: 0.944091797
-            Z: 34.4381
+            X: -0.276123047
+            Y: -0.348273069
+            Z: 52.2741661
           }
           Rotation {
-            Roll: -5.99154663
+            Yaw: -2.79978671e-08
+            Roll: -5.99154472
           }
           Scale {
             X: 1.32681513
@@ -354,7 +396,7 @@ Assets {
             Z: 0.809518933
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -396,17 +438,18 @@ Assets {
         }
       }
       Objects {
-        Id: 1625159817314119111
+        Id: 8786328731207596853
         Name: "Ivy 04"
         Transform {
           Location {
-            X: 4.32511902
-            Y: 3.83197021
-            Z: 87.7565384
+            X: -2.91474152
+            Y: 2.53960538
+            Z: 105.592552
           }
           Rotation {
+            Pitch: -6.83018879e-06
             Yaw: -178.50206
-            Roll: 89.9999847
+            Roll: 89.9999237
           }
           Scale {
             X: 0.227315694
@@ -414,7 +457,7 @@ Assets {
             Z: 1.00000024
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -446,16 +489,17 @@ Assets {
         }
       }
       Objects {
-        Id: 9190048349058771963
+        Id: 1219183692224724233
         Name: "Ivy 04"
         Transform {
           Location {
-            X: 4.32511902
-            Y: -2
-            Z: 87.7565384
+            X: -2.91474915
+            Y: -3.29236484
+            Z: 105.59256
           }
           Rotation {
-            Roll: 89.9999847
+            Yaw: 3.6578017e-06
+            Roll: 89.9999313
           }
           Scale {
             X: 0.227315694
@@ -463,7 +507,7 @@ Assets {
             Z: 1.00000024
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -495,13 +539,13 @@ Assets {
         }
       }
       Objects {
-        Id: 10236970635047340484
+        Id: 16245596414041317174
         Name: "Fantasy Sword Grip 01"
         Transform {
           Location {
-            X: 8.2644043
-            Y: 1.22290039
-            Z: 56.9553528
+            X: 1.02454376
+            Y: -0.0694636405
+            Z: 74.7914047
           }
           Rotation {
           }
@@ -511,7 +555,7 @@ Assets {
             Z: 1.79843676
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -549,13 +593,13 @@ Assets {
         }
       }
       Objects {
-        Id: 17074978186515109455
+        Id: 9481334378640834749
         Name: "Bone Human Scapula 01"
         Transform {
           Location {
-            X: 9.23590088
-            Y: 4.71289062
-            Z: 109.201004
+            X: 1.99603271
+            Y: 3.42052603
+            Z: 127.03701
           }
           Rotation {
           }
@@ -565,7 +609,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -603,15 +647,17 @@ Assets {
         }
       }
       Objects {
-        Id: 8436389317625829456
+        Id: 1906964592356757154
         Name: "Bone Human Scapula 01"
         Transform {
           Location {
-            X: 9.2361908
-            Y: -3.61281586
-            Z: 109.201759
+            X: 1.99632597
+            Y: -4.90518379
+            Z: 127.037872
           }
           Rotation {
+            Yaw: -9.77066431e-12
+            Roll: 5.99991281e-12
           }
           Scale {
             X: 1
@@ -619,7 +665,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -657,13 +703,13 @@ Assets {
         }
       }
       Objects {
-        Id: 3467481939566087039
+        Id: 6880388762908204429
         Name: "Bone Human Scapula 01"
         Transform {
           Location {
-            X: 9.23590088
-            Y: 4.71289062
-            Z: 109.201004
+            X: 1.99603271
+            Y: 3.42052603
+            Z: 127.03701
           }
           Rotation {
           }
@@ -673,7 +719,7 @@ Assets {
             Z: 1.20291841
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -715,15 +761,17 @@ Assets {
         }
       }
       Objects {
-        Id: 17577707157493528178
+        Id: 11282215071384526976
         Name: "Ivy 03"
         Transform {
           Location {
-            X: 5.02561951
-            Y: -5.90175629
-            Z: 138.269501
+            X: -2.21424413
+            Y: -7.19412422
+            Z: 156.105637
           }
           Rotation {
+            Pitch: -2.04905664e-05
+            Yaw: -1.79292183e-05
             Roll: 89.9999313
           }
           Scale {
@@ -732,7 +780,7 @@ Assets {
             Z: -0.11724285
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -762,13 +810,13 @@ Assets {
         }
       }
       Objects {
-        Id: 4923777270885188918
+        Id: 3113728988947796932
         Name: "Tree Birch Bare 01"
         Transform {
           Location {
-            X: 5.67470551
-            Y: 2.69238281
-            Z: 92.0204926
+            X: -1.56515503
+            Y: 1.40001714
+            Z: 109.856522
           }
           Rotation {
           }
@@ -778,7 +826,7 @@ Assets {
             Z: 0.1
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Nature_Trunk:id"
@@ -818,17 +866,17 @@ Assets {
         }
       }
       Objects {
-        Id: 1320816521946886794
+        Id: 9022556079645303928
         Name: "Branches Cluster Big"
         Transform {
           Location {
-            X: 13.4814835
-            Y: 4.21405029
-            Z: 151.742599
+            X: 6.24160767
+            Y: 2.92168546
+            Z: 169.578568
           }
           Rotation {
-            Pitch: -43.5552673
-            Roll: 89.9999771
+            Pitch: -43.5552139
+            Roll: 89.9998779
           }
           Scale {
             X: 0.0777457505
@@ -836,7 +884,7 @@ Assets {
             Z: 0.098108843
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -868,18 +916,18 @@ Assets {
         }
       }
       Objects {
-        Id: 9572239988274902173
+        Id: 16984649649832518255
         Name: "Branches Cluster Big"
         Transform {
           Location {
-            X: 6.68370819
-            Y: 4.21405029
-            Z: 155.965454
+            X: -0.556167603
+            Y: 2.9216857
+            Z: 173.801407
           }
           Rotation {
             Pitch: 1.35831285
-            Yaw: -179.999969
-            Roll: -89.999939
+            Yaw: -179.999954
+            Roll: -89.9998779
           }
           Scale {
             X: 0.080046773
@@ -887,7 +935,7 @@ Assets {
             Z: 0.080046773
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -919,18 +967,18 @@ Assets {
         }
       }
       Objects {
-        Id: 4975854960950532790
+        Id: 3057729651217697860
         Name: "Branches Cluster Big"
         Transform {
           Location {
-            X: 6.68370819
-            Y: 4.21405029
-            Z: 155.965454
+            X: -0.556167603
+            Y: 2.9216857
+            Z: 173.801407
           }
           Rotation {
-            Pitch: 52.0503502
-            Yaw: 107.724915
-            Roll: -75.3444824
+            Pitch: 52.0502777
+            Yaw: 107.724854
+            Roll: -75.344368
           }
           Scale {
             X: 0.0690276
@@ -938,7 +986,7 @@ Assets {
             Z: 0.0690276
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -970,16 +1018,18 @@ Assets {
         }
       }
       Objects {
-        Id: 13914028338324886919
+        Id: 12572495855208235893
         Name: "Ivy 03"
         Transform {
           Location {
-            X: 5.02560425
-            Y: 3.8303833
-            Z: 138.268784
+            X: -2.21426392
+            Y: 2.53801823
+            Z: 156.104752
           }
           Rotation {
-            Roll: 89.9999542
+            Pitch: 6.83018879e-06
+            Yaw: -3.58670673e-06
+            Roll: 89.9999084
           }
           Scale {
             X: 0.356569499
@@ -987,7 +1037,7 @@ Assets {
             Z: 0.626879454
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1017,13 +1067,13 @@ Assets {
         }
       }
       Objects {
-        Id: 5630830762990948314
+        Id: 2397691732075092264
         Name: "Sphere"
         Transform {
           Location {
-            X: 8.40584564
-            Y: 5.57818604
-            Z: 160.74054
+            X: 1.16596985
+            Y: 4.28582191
+            Z: 178.576492
           }
           Rotation {
           }
@@ -1033,7 +1083,7 @@ Assets {
             Z: 0.232572213
           }
         }
-        ParentId: 13482949333474709580
+        ParentId: 209502034090124090
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1185,4 +1235,7 @@ Assets {
     }
   }
   SerializationVersion: 103
+  VirtualFolderPath: "EquipmentModels"
+  VirtualFolderPath: "Sets"
+  VirtualFolderPath: "Druid"
 }

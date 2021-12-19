@@ -16,6 +16,8 @@ Assets {
           }
         }
         ParentId: 4376692596514421773
+        ChildIds: 15671557742919833199
+        ChildIds: 7385688808468339681
         ChildIds: 16675350244322213071
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37,16 +39,12 @@ Assets {
         }
       }
       Objects {
-        Id: 16675350244322213071
-        Name: "upper_spine"
+        Id: 15671557742919833199
+        Name: "MeshOverrides"
         Transform {
           Location {
-            X: 1.00018191
-            Y: -1.00000048
-            Z: -105
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -55,9 +53,391 @@ Assets {
           }
         }
         ParentId: 8985640033421033143
-        ChildIds: 6551718090184357002
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:1:Shared_Detail2:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:color"
+            Color {
+              R: 0.00392156886
+              G: 0.00392156886
+              B: 0.00392156886
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 12799735335173377382
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:2:Shared_Detail3:id"
+            AssetReference {
+              Id: 1263589713213389785
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13857943057331475071
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          AnimatedMesh {
+            AnimationStance: "unarmed_bind_pose"
+            AnimationStancePlaybackRate: 1
+            AnimationStanceShouldLoop: true
+            AnimationPlaybackRateMultiplier: 1
+            PlayOnStartAnimation {
+              PlaybackRate: 1
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 1642036294069078973
+            }
+            SkinnedMeshes {
+              Id: 841534158063459245
+            }
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7385688808468339681
+        Name: "neck"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8985640033421033143
+        ChildIds: 8282621922722821459
+        ChildIds: 3138596163309746743
+        ChildIds: 7934257931637136807
+        ChildIds: 16951799378100080175
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 8282621922722821459
+        Name: "Arch Fancy Peaked 2m"
+        Transform {
+          Location {
+            X: -5.06729
+            Y: -0.872066438
+            Z: 72.9597931
+          }
+          Rotation {
+            Pitch: -89.0529
+            Yaw: -33.2292252
+            Roll: -147.411209
+          }
+          Scale {
+            X: 0.036286395
+            Y: 0.0631452501
+            Z: 0.0297881849
+          }
+        }
+        ParentId: 7385688808468339681
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2682051035333449239
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3138596163309746743
+        Name: "Arch Fancy Peaked 2m"
+        Transform {
+          Location {
+            X: -5.66934061
+            Y: -0.823390484
+            Z: 74.9950256
+          }
+          Rotation {
+            Pitch: 73.1354675
+            Yaw: -0.541166663
+            Roll: -177.500031
+          }
+          Scale {
+            X: 0.0979001448
+            Y: 0.044068832
+            Z: 0.0368066169
+          }
+        }
+        ParentId: 7385688808468339681
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2682051035333449239
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7934257931637136807
+        Name: "Arch Fancy Peaked 2m"
+        Transform {
+          Location {
+            X: -5.06729
+            Y: -0.872127473
+            Z: 74.9950256
+          }
+          Rotation {
+            Pitch: -89.0543518
+            Yaw: -33.2306938
+            Roll: -147.411011
+          }
+          Scale {
+            X: 0.0978999361
+            Y: 0.0440688245
+            Z: 0.0207894761
+          }
+        }
+        ParentId: 7385688808468339681
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2682051035333449239
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 16951799378100080175
+        Name: "Arch Fancy Peaked 2m"
+        Transform {
+          Location {
+            X: -5.66931
+            Y: -0.823390484
+            Z: 72.9597931
+          }
+          Rotation {
+            Pitch: 73.1352844
+            Yaw: -0.541319132
+            Roll: -177.500031
+          }
+          Scale {
+            X: 0.0362864621
+            Y: 0.0631452575
+            Z: 0.0527383424
+          }
+        }
+        ParentId: 7385688808468339681
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 1655423451270624188
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2682051035333449239
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 16675350244322213071
+        Name: "upper_spine"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8985640033421033143
         ChildIds: 13884387426934640612
-        ChildIds: 7385688808468339681
+        ChildIds: 6551718090184357002
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -75,15 +455,1211 @@ Assets {
         }
       }
       Objects {
+        Id: 13884387426934640612
+        Name: "Necklace"
+        Transform {
+          Location {
+            X: 17.0001755
+            Y: -0.434826493
+            Z: 41.8304596
+          }
+          Rotation {
+            Pitch: -0.0796809793
+            Yaw: -90.6079407
+            Roll: -27.2736645
+          }
+          Scale {
+            X: 0.434782505
+            Y: 0.434782505
+            Z: 0.434782505
+          }
+        }
+        ParentId: 16675350244322213071
+        ChildIds: 8399363386730703467
+        ChildIds: 16858814211058843204
+        ChildIds: 1558929912039610319
+        ChildIds: 1979010773077518877
+        ChildIds: 13907656923941515245
+        ChildIds: 5208773624292477236
+        ChildIds: 13789050862331475979
+        ChildIds: 1109819826048578768
+        ChildIds: 3262368071645936672
+        ChildIds: 8037048973546769540
+        ChildIds: 9684275809687131237
+        ChildIds: 642593687958697773
+        ChildIds: 4997734722925285195
+        ChildIds: 7773082053296122939
+        ChildIds: 10781225315893783900
+        ChildIds: 6815615315854359303
+        ChildIds: 11552848765742134298
+        ChildIds: 4075497366306368176
+        ChildIds: 14984208738552661820
+        ChildIds: 77784459457070146
+        ChildIds: 15881716286994414135
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 8399363386730703467
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: -1.47875977
+            Y: -7.85488892
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 16858814211058843204
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: 24.1499023
+            Y: -7.85488892
+            Z: 19.7189331
+          }
+          Rotation {
+            Pitch: -16.1949177
+            Yaw: 25.6951752
+            Roll: 30.0986309
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1558929912039610319
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: -25.7446289
+            Y: -7.85488892
+            Z: 14.5023804
+          }
+          Rotation {
+            Pitch: -32.5129433
+            Yaw: 36.7226372
+            Roll: -16.0263538
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1979010773077518877
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: 31.3706055
+            Y: -7.85488892
+            Z: 42.1907196
+          }
+          Rotation {
+            Pitch: -14.2176189
+            Yaw: -29.8655472
+            Roll: 23.1816273
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 13907656923941515245
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: -38.5793457
+            Y: -7.85488892
+            Z: 36.2142792
+          }
+          Rotation {
+            Pitch: -32.5129433
+            Yaw: 3.68903112
+            Roll: -16.0266323
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5208773624292477236
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: 41.0646973
+            Y: -7.85488892
+            Z: 66.8256073
+          }
+          Rotation {
+            Pitch: -26.2837543
+            Yaw: 31.9203167
+            Roll: -3.70727801
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 13789050862331475979
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: -47.3793945
+            Y: -7.85488892
+            Z: 66.0276642
+          }
+          Rotation {
+            Pitch: -30.0687866
+            Yaw: -46.1146049
+            Roll: 16.4105854
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1109819826048578768
+        Name: "Bone Human Ulna 01"
+        Transform {
+          Location {
+            X: -13.1225586
+            Y: 2.83535767
+            Z: 15.6383362
+          }
+          Rotation {
+            Pitch: -18.1121788
+            Yaw: -42.2358589
+            Roll: 65.2757874
+          }
+          Scale {
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4140947576203033441
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3262368071645936672
+        Name: "Bone Human Ulna 01"
+        Transform {
+          Location {
+            X: -13.2548828
+            Y: 2.63876343
+            Z: 13.971817
+          }
+          Rotation {
+            Pitch: -26.668663
+            Yaw: 32.6625671
+            Roll: 154.438553
+          }
+          Scale {
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4140947576203033441
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 8037048973546769540
+        Name: "Bone Human Ulna 01"
+        Transform {
+          Location {
+            X: 30.4458
+            Y: 7.88104248
+            Z: 31.1775055
+          }
+          Rotation {
+            Pitch: -9.21744251
+            Yaw: -110.313995
+            Roll: 147.852036
+          }
+          Scale {
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4140947576203033441
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9684275809687131237
+        Name: "Bone Human Ulna 01"
+        Transform {
+          Location {
+            X: 30.4643555
+            Y: 8.18612671
+            Z: 32.8327789
+          }
+          Rotation {
+            Pitch: -18.6307
+            Yaw: -136.713516
+            Roll: 30.9652386
+          }
+          Scale {
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4140947576203033441
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 642593687958697773
+        Name: "Bone Human Ulna 01"
+        Transform {
+          Location {
+            X: 34.3430176
+            Y: 4.60049438
+            Z: 60.7579803
+          }
+          Rotation {
+            Pitch: -50.5907402
+            Yaw: 139.373138
+            Roll: 66.749054
+          }
+          Scale {
+            X: 0.4
+            Y: 0.4
+            Z: 0.4
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17636451187442300607
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4997734722925285195
+        Name: "Bone Human Ulna 01"
+        Transform {
+          Location {
+            X: -27.2692871
+            Y: 4.60049438
+            Z: 35.812149
+          }
+          Rotation {
+            Pitch: -50.0707359
+            Yaw: -141.51001
+            Roll: 60.2787857
+          }
+          Scale {
+            X: 0.4
+            Y: 0.4
+            Z: 0.4
+          }
+        }
+        ParentId: 13884387426934640612
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17636451187442300607
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7773082053296122939
+        Name: "Horn"
+        Transform {
+          Location {
+            X: 6.12792969
+            Y: 0.197753906
+            Z: 20.7652893
+          }
+          Rotation {
+            Pitch: 8.35189342
+            Yaw: -19.9085064
+            Roll: 137.874649
+          }
+          Scale {
+            X: 0.05
+            Y: 0.05
+            Z: 0.12
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10517312685900379713
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15388879858733687781
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10781225315893783900
+        Name: "Horn"
+        Transform {
+          Location {
+            X: -29.4121094
+            Y: -3.72473145
+            Z: 60.8344269
+          }
+          Rotation {
+            Pitch: -61.2133827
+            Yaw: -44.3978462
+            Roll: -178.477875
+          }
+          Scale {
+            X: 0.05
+            Y: 0.05
+            Z: 0.12
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 10517312685900379713
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15388879858733687781
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 6815615315854359303
+        Name: "Cylinder - Chamfered Small Polished"
+        Transform {
+          Location {
+            X: 9.1418457
+            Y: 5.59643555
+            Z: 14.7516174
+          }
+          Rotation {
+            Pitch: 17.8872681
+            Yaw: -3.1411438
+            Roll: -9.84605217
+          }
+          Scale {
+            X: 0.04
+            Y: 0.04
+            Z: 0.03
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9009220903006351861
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0885416642
+              G: 0.0281456914
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7215919523090671302
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 11552848765742134298
+        Name: "Cylinder - Chamfered Small Polished"
+        Transform {
+          Location {
+            X: -12.7617188
+            Y: 2.79187
+            Z: 14.7516174
+          }
+          Rotation {
+            Pitch: -42.3641281
+            Yaw: -6.28287077
+            Roll: 4.62930298
+          }
+          Scale {
+            X: 0.04
+            Y: 0.04
+            Z: 0.03
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9009220903006351861
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0885416642
+              G: 0.0281456914
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7215919523090671302
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4075497366306368176
+        Name: "Cylinder - Chamfered Small Polished"
+        Transform {
+          Location {
+            X: 29.7861328
+            Y: 7.8132019
+            Z: 32.2835846
+          }
+          Rotation {
+            Pitch: 16.7313251
+            Yaw: -7.14289
+            Roll: -23.2390537
+          }
+          Scale {
+            X: 0.04
+            Y: 0.04
+            Z: 0.03
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9009220903006351861
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0885416642
+              G: 0.0281456914
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7215919523090671302
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14984208738552661820
+        Name: "Cylinder - Chamfered Small Polished"
+        Transform {
+          Location {
+            X: 34.6196289
+            Y: 5.23010254
+            Z: 60.9355927
+          }
+          Rotation {
+            Pitch: 86.8831482
+            Yaw: -91.7567062
+            Roll: -115.269691
+          }
+          Scale {
+            X: 0.04
+            Y: 0.04
+            Z: 0.03
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9009220903006351861
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0885416642
+              G: 0.0281456914
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7215919523090671302
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 77784459457070146
+        Name: "Cylinder - Chamfered Small Polished"
+        Transform {
+          Location {
+            X: -27.859375
+            Y: 4.77966309
+            Z: 35.963913
+          }
+          Rotation {
+            Pitch: -81.3615417
+            Yaw: -77.252243
+            Roll: 11.2269297
+          }
+          Scale {
+            X: 0.04
+            Y: 0.04
+            Z: 0.03
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9009220903006351861
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0885416642
+              G: 0.0281456914
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7215919523090671302
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 15881716286994414135
+        Name: "Cylinder - Chamfered Small Polished"
+        Transform {
+          Location {
+            X: -34.6533203
+            Y: 1.55709839
+            Z: 57.0843658
+          }
+          Rotation {
+            Pitch: -54.7613144
+            Yaw: -51.8368759
+            Roll: 25.5260601
+          }
+          Scale {
+            X: 0.04
+            Y: 0.04
+            Z: 0.03
+          }
+        }
+        ParentId: 13884387426934640612
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 9009220903006351861
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0885416642
+              G: 0.0281456914
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7215919523090671302
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 6551718090184357002
         Name: "Robe"
         Transform {
           Location {
-            X: 10
-            Y: 1
-            Z: 87
+            X: 11.0001793
+            Y: -7.86794317e-06
+            Z: -18
           }
           Rotation {
+            Yaw: -3.05175181e-05
           }
           Scale {
             X: 1
@@ -1447,1481 +3023,50 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 13884387426934640612
-        Name: "Necklace"
-        Transform {
-          Location {
-            X: 15.9999962
-            Y: 0.565182388
-            Z: 146.83046
-          }
-          Rotation {
-            Pitch: -0.0796814
-            Yaw: -90.6079407
-            Roll: -27.2737122
-          }
-          Scale {
-            X: 0.434782505
-            Y: 0.434782505
-            Z: 0.434782505
-          }
-        }
-        ParentId: 16675350244322213071
-        ChildIds: 8399363386730703467
-        ChildIds: 16858814211058843204
-        ChildIds: 1558929912039610319
-        ChildIds: 1979010773077518877
-        ChildIds: 13907656923941515245
-        ChildIds: 5208773624292477236
-        ChildIds: 13789050862331475979
-        ChildIds: 1109819826048578768
-        ChildIds: 3262368071645936672
-        ChildIds: 8037048973546769540
-        ChildIds: 9684275809687131237
-        ChildIds: 642593687958697773
-        ChildIds: 4997734722925285195
-        ChildIds: 7773082053296122939
-        ChildIds: 10781225315893783900
-        ChildIds: 6815615315854359303
-        ChildIds: 11552848765742134298
-        ChildIds: 4075497366306368176
-        ChildIds: 14984208738552661820
-        ChildIds: 77784459457070146
-        ChildIds: 15881716286994414135
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsFilePartition: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 8399363386730703467
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: -1.47875977
-            Y: -7.85488892
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 16858814211058843204
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: 24.1499023
-            Y: -7.85488892
-            Z: 19.7189331
-          }
-          Rotation {
-            Pitch: -16.1949177
-            Yaw: 25.6951752
-            Roll: 30.0986309
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 1558929912039610319
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: -25.7446289
-            Y: -7.85488892
-            Z: 14.5023804
-          }
-          Rotation {
-            Pitch: -32.5129433
-            Yaw: 36.7226372
-            Roll: -16.0263538
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 1979010773077518877
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: 31.3706055
-            Y: -7.85488892
-            Z: 42.1907196
-          }
-          Rotation {
-            Pitch: -14.2176189
-            Yaw: -29.8655472
-            Roll: 23.1816273
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 13907656923941515245
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: -38.5793457
-            Y: -7.85488892
-            Z: 36.2142792
-          }
-          Rotation {
-            Pitch: -32.5129433
-            Yaw: 3.68903112
-            Roll: -16.0266323
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 5208773624292477236
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: 41.0646973
-            Y: -7.85488892
-            Z: 66.8256073
-          }
-          Rotation {
-            Pitch: -26.2837543
-            Yaw: 31.9203167
-            Roll: -3.70727801
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 13789050862331475979
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: -47.3793945
-            Y: -7.85488892
-            Z: 66.0276642
-          }
-          Rotation {
-            Pitch: -30.0687866
-            Yaw: -46.1146049
-            Roll: 16.4105854
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 1109819826048578768
-        Name: "Bone Human Ulna 01"
-        Transform {
-          Location {
-            X: -13.1225586
-            Y: 2.83535767
-            Z: 15.6383362
-          }
-          Rotation {
-            Pitch: -18.1121788
-            Yaw: -42.2358589
-            Roll: 65.2757874
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4140947576203033441
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 3262368071645936672
-        Name: "Bone Human Ulna 01"
-        Transform {
-          Location {
-            X: -13.2548828
-            Y: 2.63876343
-            Z: 13.971817
-          }
-          Rotation {
-            Pitch: -26.668663
-            Yaw: 32.6625671
-            Roll: 154.438553
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4140947576203033441
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 8037048973546769540
-        Name: "Bone Human Ulna 01"
-        Transform {
-          Location {
-            X: 30.4458
-            Y: 7.88104248
-            Z: 31.1775055
-          }
-          Rotation {
-            Pitch: -9.21744251
-            Yaw: -110.313995
-            Roll: 147.852036
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4140947576203033441
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 9684275809687131237
-        Name: "Bone Human Ulna 01"
-        Transform {
-          Location {
-            X: 30.4643555
-            Y: 8.18612671
-            Z: 32.8327789
-          }
-          Rotation {
-            Pitch: -18.6307
-            Yaw: -136.713516
-            Roll: 30.9652386
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4140947576203033441
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 642593687958697773
-        Name: "Bone Human Ulna 01"
-        Transform {
-          Location {
-            X: 34.3430176
-            Y: 4.60049438
-            Z: 60.7579803
-          }
-          Rotation {
-            Pitch: -50.5907402
-            Yaw: 139.373138
-            Roll: 66.749054
-          }
-          Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17636451187442300607
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 4997734722925285195
-        Name: "Bone Human Ulna 01"
-        Transform {
-          Location {
-            X: -27.2692871
-            Y: 4.60049438
-            Z: 35.812149
-          }
-          Rotation {
-            Pitch: -50.0707359
-            Yaw: -141.51001
-            Roll: 60.2787857
-          }
-          Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
-          }
-        }
-        ParentId: 13884387426934640612
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17636451187442300607
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7773082053296122939
-        Name: "Horn"
-        Transform {
-          Location {
-            X: 6.12792969
-            Y: 0.197753906
-            Z: 20.7652893
-          }
-          Rotation {
-            Pitch: 8.35189342
-            Yaw: -19.9085064
-            Roll: 137.874649
-          }
-          Scale {
-            X: 0.05
-            Y: 0.05
-            Z: 0.12
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10517312685900379713
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15388879858733687781
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 10781225315893783900
-        Name: "Horn"
-        Transform {
-          Location {
-            X: -29.4121094
-            Y: -3.72473145
-            Z: 60.8344269
-          }
-          Rotation {
-            Pitch: -61.2133827
-            Yaw: -44.3978462
-            Roll: -178.477875
-          }
-          Scale {
-            X: 0.05
-            Y: 0.05
-            Z: 0.12
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 10517312685900379713
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 15388879858733687781
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 6815615315854359303
-        Name: "Cylinder - Chamfered Small Polished"
-        Transform {
-          Location {
-            X: 9.1418457
-            Y: 5.59643555
-            Z: 14.7516174
-          }
-          Rotation {
-            Pitch: 17.8872681
-            Yaw: -3.1411438
-            Roll: -9.84605217
-          }
-          Scale {
-            X: 0.04
-            Y: 0.04
-            Z: 0.03
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 9009220903006351861
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0885416642
-              G: 0.0281456914
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7215919523090671302
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 11552848765742134298
-        Name: "Cylinder - Chamfered Small Polished"
-        Transform {
-          Location {
-            X: -12.7617188
-            Y: 2.79187
-            Z: 14.7516174
-          }
-          Rotation {
-            Pitch: -42.3641281
-            Yaw: -6.28287077
-            Roll: 4.62930298
-          }
-          Scale {
-            X: 0.04
-            Y: 0.04
-            Z: 0.03
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 9009220903006351861
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0885416642
-              G: 0.0281456914
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7215919523090671302
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 4075497366306368176
-        Name: "Cylinder - Chamfered Small Polished"
-        Transform {
-          Location {
-            X: 29.7861328
-            Y: 7.8132019
-            Z: 32.2835846
-          }
-          Rotation {
-            Pitch: 16.7313251
-            Yaw: -7.14289
-            Roll: -23.2390537
-          }
-          Scale {
-            X: 0.04
-            Y: 0.04
-            Z: 0.03
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 9009220903006351861
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0885416642
-              G: 0.0281456914
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7215919523090671302
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 14984208738552661820
-        Name: "Cylinder - Chamfered Small Polished"
-        Transform {
-          Location {
-            X: 34.6196289
-            Y: 5.23010254
-            Z: 60.9355927
-          }
-          Rotation {
-            Pitch: 86.8831482
-            Yaw: -91.7567062
-            Roll: -115.269691
-          }
-          Scale {
-            X: 0.04
-            Y: 0.04
-            Z: 0.03
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 9009220903006351861
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0885416642
-              G: 0.0281456914
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7215919523090671302
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 77784459457070146
-        Name: "Cylinder - Chamfered Small Polished"
-        Transform {
-          Location {
-            X: -27.859375
-            Y: 4.77966309
-            Z: 35.963913
-          }
-          Rotation {
-            Pitch: -81.3615417
-            Yaw: -77.252243
-            Roll: 11.2269297
-          }
-          Scale {
-            X: 0.04
-            Y: 0.04
-            Z: 0.03
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 9009220903006351861
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0885416642
-              G: 0.0281456914
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7215919523090671302
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 15881716286994414135
-        Name: "Cylinder - Chamfered Small Polished"
-        Transform {
-          Location {
-            X: -34.6533203
-            Y: 1.55709839
-            Z: 57.0843658
-          }
-          Rotation {
-            Pitch: -54.7613144
-            Yaw: -51.8368759
-            Roll: 25.5260601
-          }
-          Scale {
-            X: 0.04
-            Y: 0.04
-            Z: 0.03
-          }
-        }
-        ParentId: 13884387426934640612
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 9009220903006351861
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0885416642
-              G: 0.0281456914
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7215919523090671302
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7385688808468339681
-        Name: "neck"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 16675350244322213071
-        ChildIds: 3138596163309746743
-        ChildIds: 7934257931637136807
-        ChildIds: 16951799378100080175
-        ChildIds: 8282621922722821459
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 3138596163309746743
-        Name: "Arch Fancy Peaked 2m"
-        Transform {
-          Location {
-            X: -6.66952324
-            Y: 0.176607549
-            Z: 179.995026
-          }
-          Rotation {
-            Pitch: 73.1356125
-            Yaw: -0.541137695
-            Roll: -177.500031
-          }
-          Scale {
-            X: 0.0979001448
-            Y: 0.044068832
-            Z: 0.0368066169
-          }
-        }
-        ParentId: 7385688808468339681
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2682051035333449239
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7934257931637136807
-        Name: "Arch Fancy Peaked 2m"
-        Transform {
-          Location {
-            X: -6.06747246
-            Y: 0.127870768
-            Z: 179.995026
-          }
-          Rotation {
-            Pitch: -89.0566406
-            Yaw: -33.2319336
-            Roll: -147.412079
-          }
-          Scale {
-            X: 0.0978999361
-            Y: 0.0440688245
-            Z: 0.0207894761
-          }
-        }
-        ParentId: 7385688808468339681
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2682051035333449239
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 16951799378100080175
-        Name: "Arch Fancy Peaked 2m"
-        Transform {
-          Location {
-            X: -6.66949272
-            Y: 0.176607549
-            Z: 177.959793
-          }
-          Rotation {
-            Pitch: 73.1354523
-            Yaw: -0.541290283
-            Roll: -177.500031
-          }
-          Scale {
-            X: 0.0362864621
-            Y: 0.0631452575
-            Z: 0.0527383424
-          }
-        }
-        ParentId: 7385688808468339681
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2682051035333449239
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 8282621922722821459
-        Name: "Arch Fancy Peaked 2m"
-        Transform {
-          Location {
-            X: -6.06747246
-            Y: 0.127931803
-            Z: 177.959793
-          }
-          Rotation {
-            Pitch: -89.0556
-            Yaw: -33.2301636
-            Roll: -147.413315
-          }
-          Scale {
-            X: 0.036286395
-            Y: 0.0631452501
-            Z: 0.0297881849
-          }
-        }
-        ParentId: 7385688808468339681
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 1655423451270624188
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2682051035333449239
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
+    }
+    Assets {
+      Id: 13857943057331475071
+      Name: "Humanoid 1 Rig"
+      PlatformAssetType: 25
+      PrimaryAsset {
+        AssetType: "SkeletonAssetRef"
+        AssetId: "npc_gal_wireframe_001_ref"
       }
     }
     Assets {
-      Id: 10765242685784547638
-      Name: "Teardrop - Truncated"
-      PlatformAssetType: 1
+      Id: 1642036294069078973
+      Name: "Humanoid 1 Military Fatigues"
+      PlatformAssetType: 26
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_truncated_teardrop_001"
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_upper_military_000_ref"
       }
     }
     Assets {
-      Id: 8728220210900530054
-      Name: "Cone - Truncated Concave"
+      Id: 2018227301497757374
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 2682051035333449239
+      Name: "Arch Fancy Peaked 2m"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cone_truncated_concave_001"
+        AssetId: "sm_arch_fancy_ogive_2m_001"
       }
     }
     Assets {
@@ -2934,57 +3079,12 @@ Assets {
       }
     }
     Assets {
-      Id: 5866314305483512762
-      Name: "Curtains Straight"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_curtain_02"
-      }
-    }
-    Assets {
-      Id: 8595923131042039867
-      Name: "Stone Railing Curved 6m"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_railing_6m_bend_001"
-      }
-    }
-    Assets {
-      Id: 17624276747670666460
-      Name: "Ball"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_001"
-      }
-    }
-    Assets {
       Id: 9077795533097890780
       Name: "Bone Human Skull 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
-    Assets {
-      Id: 4695482788857362628
-      Name: "Ring - Thick"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_torus_005"
-      }
-    }
-    Assets {
-      Id: 9747055709997790407
-      Name: "Curtains Tied"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_curtain_01"
       }
     }
     Assets {
@@ -3024,12 +3124,66 @@ Assets {
       }
     }
     Assets {
-      Id: 2682051035333449239
-      Name: "Arch Fancy Peaked 2m"
+      Id: 10765242685784547638
+      Name: "Teardrop - Truncated"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_arch_fancy_ogive_2m_001"
+        AssetId: "sm_truncated_teardrop_001"
+      }
+    }
+    Assets {
+      Id: 8728220210900530054
+      Name: "Cone - Truncated Concave"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_cone_truncated_concave_001"
+      }
+    }
+    Assets {
+      Id: 5866314305483512762
+      Name: "Curtains Straight"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_curtain_02"
+      }
+    }
+    Assets {
+      Id: 8595923131042039867
+      Name: "Stone Railing Curved 6m"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_railing_6m_bend_001"
+      }
+    }
+    Assets {
+      Id: 17624276747670666460
+      Name: "Ball"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_sphere_001"
+      }
+    }
+    Assets {
+      Id: 4695482788857362628
+      Name: "Ring - Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_torus_005"
+      }
+    }
+    Assets {
+      Id: 9747055709997790407
+      Name: "Curtains Tied"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_curtain_01"
       }
     }
     PrimaryAssetId {

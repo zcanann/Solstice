@@ -62,24 +62,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15959707335294739060
-  Name: "Fantasy Shield Strap 01"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_weap_fan_shield_strap_001"
-  }
-}
-Assets {
-  Id: 14385647837042242544
-  Name: "Cylinder - Chamfered Small Polished"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_cylinder_hq_003"
-  }
-}
-Assets {
   Id: 14095651682794233112
   Name: "Text 05: I"
   PlatformAssetType: 1
@@ -212,15 +194,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_cylinder_hq_002"
-  }
-}
-Assets {
-  Id: 5894435778720024101
-  Name: "Ring - Quarter Beveled Thick"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_quarter_ring_faceted_thick_001_ref"
   }
 }
 Assets {

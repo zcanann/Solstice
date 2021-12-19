@@ -1,18 +1,9 @@
 Assets {
-  Id: 6316521492804672545
-  Name: "Icon Bomb Blast"
+  Id: 5102476851655589481
+  Name: "Fantasy Ability Green 045"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Boom"
-  }
-}
-Assets {
-  Id: 5633478450180767832
-  Name: "Icon Fireball"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Fireball"
+    AssetId: "UI_Fantasy_Ability_Green_045"
   }
 }

@@ -12,6 +12,8 @@ local equipmentChangeWaistListeners = { }
 local equipmentChangeWristsListeners = { }
 local equipmentChangeLegsListeners = { }
 local equipmentChangeFeetListeners = { }
+local equipmentChangeMainhandListeners = { }
+local equipmentChangeOffhandListeners = { }
 
 local nextFrameModelRebuildQueue = { }
 
@@ -25,19 +27,30 @@ local allListeners = {
     ["hands"] = equipmentChangeHandsListeners,
     ["legs"] = equipmentChangeLegsListeners,
     ["feet"] = equipmentChangeFeetListeners,
+    ["mainhand"] = equipmentChangeMainhandListeners,
+    ["offhand"] = equipmentChangeOffhandListeners,
 }
 
  -- In theory we should be able to spawn the equipment template, iterate through children attaching them to proper slots
  -- And when we are done, we should be able to just delete the template and the slots should auto dispose?
 
 function DespawnAndUnequipModel(player, modelSlot)
-    if player.clientUserData.equipmentModels and Object.IsValid(player.clientUserData.equipmentModels [modelSlot]) then
-        player.clientUserData.equipmentModels[modelSlot]:Destroy()
-        player.clientUserData.equipmentModels[modelSlot] = nil
+    -- TODO: Revert any mesh overrides for the specified slot
+    -- Not important since we are still rebuilding the entire model when 
+    if player.clientUserData.equipmentModels and player.clientUserData.equipmentModels[modelSlot] then
+        for _, modelPiece in pairs(player.clientUserData.equipmentModels[modelSlot]) do
+            if Object.IsValid(modelPiece) then
+                modelPiece:Destroy()
+            end
+        end
     end
+    player.clientUserData.equipmentModels[modelSlot] = { }
 end
 
-function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
+function SpawnAndEquipModelToSlot(player, equipmentData, modelSlot)
+    if not Object.IsValid(player.clientUserData.model) then
+        return
+    end
     if not player.clientUserData.equipmentModels then
         player.clientUserData.equipmentModels = { }
     end
@@ -56,35 +69,28 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
         warn("No equipment model table found for character race/gender.")
     end
 
-    if equipmentTable[equipmentModelTemplateId] == nil then
-        warn("Unknown equipment id " .. equipmentModelTemplateId)
+    if equipmentTable[equipmentData.id] == nil then
+        warn("Unknown equipment id " .. equipmentData.id)
         return
     end
 
-    -- Spawn the entire equipment template as a child of this script, then iterate through all model slots and attach them to the player.
+    -- Spawn the entire equipment template, then iterate through all model slots and attach them to the player.
     -- For example, a model for pants can be spawned, and individual parts will be separately attached to the pelvis, both legs, and knees.
-    local equipmentModels = World.SpawnAsset(equipmentTable[equipmentModelTemplateId], { parent = script })
+    -- The remaining empty root template is then deleted once all of the needed model pieces have been reparented.
+    local equipmentModels = World.SpawnAsset(equipmentTable[equipmentData.id], { parent = player.clientUserData.model })
     local modelPeices = equipmentModels:GetChildren()
-    local originalStance = player.clientUserData.model.animationStance
-
-    -- TODO: This doesn't seem to work. If this is ever fixed, we can stop rebuilding the full model when one piece of equipment changes...
-    player.clientUserData.model.animationStance = "unarmed_bind_pose"
-
-    equipmentModels.cameraCollision = Collision.FORCE_OFF
-    equipmentModels:SetWorldPosition(player.clientUserData.model:GetWorldPosition())
-    equipmentModels:SetWorldRotation(player.clientUserData.model:GetWorldRotation())
 
     for _, modelPeice in ipairs(modelPeices) do
         if modelPeice and (modelPeice:IsA("Folder") or modelPeice:IsA("NetworkContext")) then
             local socketName = modelPeice.name
-            local pos = modelPeice:GetWorldPosition()
-            local rot = modelPeice:GetWorldRotation()
+            local templateTransform = modelPeice:GetWorldTransform()
 
-            modelPeice.cameraCollision = Collision.FORCE_OFF
             player.clientUserData.model:AttachCoreObject(modelPeice, socketName)
 
-            modelPeice:SetWorldPosition(pos)
-            modelPeice:SetWorldRotation(rot)
+            modelPeice:SetWorldTransform(templateTransform)
+            modelPeice.cameraCollision = Collision.FORCE_OFF
+            modelPeice.visibility = Collision.FORCE_ON
+            table.insert(player.clientUserData.equipmentModels[modelSlot], modelPeice)
         elseif modelPeice and modelPeice:IsA("AnimatedMesh") and modelPeice.name == "MeshOverrides" then
             -- Copy overrides from any animated meshes. We currently follow this format:
             -- Slot 1: Base animation mesh
@@ -100,10 +106,11 @@ function SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
         end
     end
 
-    player.clientUserData.model.animationStance = originalStance
+    -- We have already picked out all of the model pieces we want, we can delete the old root
+    equipmentModels:Destroy()
 end
 
-function OnModelChanged(playerId, equipmentModelTemplateId, modelSlot)
+function OnModelChanged(playerId, equipmentData, modelSlot)
     local player = nil
 
     if playerId then
@@ -114,47 +121,55 @@ function OnModelChanged(playerId, equipmentModelTemplateId, modelSlot)
         return
     end
 
-    if equipmentModelTemplateId == nil then
+    if equipmentData == nil or equipmentData.id == nil then
         DespawnAndUnequipModel(player, modelSlot)
     else
-        SpawnAndEquipModelToSlot(player, equipmentModelTemplateId, modelSlot)
+        SpawnAndEquipModelToSlot(player, equipmentData, modelSlot)
     end
 end
 
-function OnHeadModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "head")
+function OnHeadModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "head")
 end
 
-function OnHandsModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "hands")
+function OnHandsModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "hands")
 end
 
-function OnShouldersModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "shoulders")
+function OnShouldersModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "shoulders")
 end
 
-function OnBackModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "back")
+function OnBackModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "back")
 end
 
-function OnChestModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "chest")
+function OnChestModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "chest")
 end
 
-function OnWaistModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "waist")
+function OnWaistModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "waist")
 end
 
-function OnWristsModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "wrists")
+function OnWristsModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "wrists")
 end
 
-function OnLegsModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "legs")
+function OnLegsModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "legs")
 end
 
-function OnFeetModelChanged(playerId, equipmentModelTemplateId)
-    OnModelChanged(playerId, equipmentModelTemplateId, "feet")
+function OnFeetModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "feet")
+end
+
+function OnMainhandModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "mainhand")
+end
+
+function OnOffhandModelChanged(playerId, equipmentData)
+    OnModelChanged(playerId, equipmentData, "offhand")
 end
 
 function OnNearbyPlayerModelChanged(player)
@@ -167,6 +182,8 @@ function OnNearbyPlayerModelChanged(player)
     OnWristsModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS))
     OnLegsModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS))
     OnFeetModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET))
+    OnMainhandModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND))
+    OnOffhandModelChanged(player.id, Framework.Networking.GetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND))
 end
 
 function OnProximityObjectEnteredRange(proximityObjectId)
@@ -187,6 +204,8 @@ function OnProximityObjectEnteredRange(proximityObjectId)
     equipmentChangeWristsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, OnWristsModelChanged)
     equipmentChangeLegsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, OnLegsModelChanged)
     equipmentChangeFeetListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, OnFeetModelChanged)
+    equipmentChangeMainhandListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, OnMainhandModelChanged)
+    equipmentChangeOffhandListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, OnOffhandModelChanged)
     --]]
 
     -- When equipment changes for a player, add them to a list of players for which models will be rebuilt next frame.
@@ -204,6 +223,8 @@ function OnProximityObjectEnteredRange(proximityObjectId)
     equipmentChangeWristsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, rebuildModelFunc)
     equipmentChangeLegsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, rebuildModelFunc)
     equipmentChangeFeetListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, rebuildModelFunc)
+    equipmentChangeFeetListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, rebuildModelFunc)
+    equipmentChangeFeetListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, rebuildModelFunc)
 end
 
 function Tick(deltaSeconds)

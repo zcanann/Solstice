@@ -152,12 +152,8 @@ Assets {
         Name: "head"
         Transform {
           Location {
-            X: 4.36557422e-11
-            Y: 6.10351417e-05
-            Z: -105
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -166,8 +162,8 @@ Assets {
           }
         }
         ParentId: 16184228960173314641
-        ChildIds: 13394874877845556437
         ChildIds: 10790064129246453454
+        ChildIds: 13394874877845556437
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -185,14 +181,896 @@ Assets {
         }
       }
       Objects {
+        Id: 10790064129246453454
+        Name: "Mask"
+        Transform {
+          Location {
+            X: 0.000427245977
+            Y: -3.05590192e-10
+            Z: 84
+          }
+          Rotation {
+            Yaw: 11.2501011
+          }
+          Scale {
+            X: 0.4
+            Y: 0.4
+            Z: 0.4
+          }
+        }
+        ParentId: 1654539546463727705
+        ChildIds: 3288660166988660250
+        ChildIds: 13774953919793708297
+        ChildIds: 3795043367708665126
+        ChildIds: 14293136974288341702
+        ChildIds: 2654243219022252362
+        ChildIds: 7158186468826167586
+        ChildIds: 5760546213403913124
+        ChildIds: 4657629396831187774
+        ChildIds: 9313185169444672366
+        ChildIds: 12272809948611730220
+        ChildIds: 9244990053439864334
+        ChildIds: 16241324510139350791
+        ChildIds: 3323797023205847404
+        ChildIds: 15400381519097610387
+        ChildIds: 2946263311031364089
+        ChildIds: 10777132660874800438
+        ChildIds: 5308501848161551305
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3288660166988660250
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: -4.99999762
+            Y: 1.00001836
+          }
+          Rotation {
+            Yaw: -100.000008
+          }
+          Scale {
+            X: 1.9000001
+            Y: 1.9000001
+            Z: 1.9000001
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 13774953919793708297
+        Name: "Bone Human Femur 01"
+        Transform {
+          Location {
+            X: 16.4326229
+            Y: 7.37513351
+            Z: 35.0000038
+          }
+          Rotation {
+            Pitch: 29.9999371
+            Yaw: -100.000031
+            Roll: -1.97170471e-06
+          }
+          Scale {
+            X: 1.00000012
+            Y: 1.00000012
+            Z: 1.00000012
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8406463304856800769
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3795043367708665126
+        Name: "Bone Human Femur 01"
+        Transform {
+          Location {
+            X: 12.0914049
+            Y: -17.2450409
+            Z: 35.0000038
+          }
+          Rotation {
+            Pitch: -47.7263641
+            Yaw: -117.142326
+            Roll: 22.6289463
+          }
+          Scale {
+            X: 1.00000012
+            Y: 1.00000012
+            Z: 1.00000012
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8406463304856800769
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14293136974288341702
+        Name: "Bone Human Skull Pile 01"
+        Transform {
+          Location {
+            X: 4.84806347
+            Y: -0.736433685
+            Z: 30.0000038
+          }
+          Rotation {
+            Pitch: 6.83018879e-06
+            Yaw: -69.9999161
+          }
+          Scale {
+            X: 1.00000012
+            Y: 1.00000012
+            Z: 1.00000012
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2529228826343701035
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 2654243219022252362
+        Name: "Bone Human Skull Pile 01"
+        Transform {
+          Location {
+            X: -3.26350236
+            Y: 10.8481236
+            Z: 30.0000038
+          }
+          Rotation {
+            Pitch: 54.9997749
+            Yaw: -79.9998856
+            Roll: 5.95400479e-06
+          }
+          Scale {
+            X: 0.600000083
+            Y: 0.600000083
+            Z: 0.600000083
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2529228826343701035
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7158186468826167586
+        Name: "Bone Human Skull Pile 01"
+        Transform {
+          Location {
+            X: -1.81244087
+            Y: -9.71626854
+            Z: 30.0000038
+          }
+          Rotation {
+            Pitch: -59.999836
+            Yaw: -139.999939
+            Roll: 6.83016424e-06
+          }
+          Scale {
+            X: 0.600000083
+            Y: 0.600000083
+            Z: 0.600000083
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 2529228826343701035
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5760546213403913124
+        Name: "Bone Human Ribcage Half"
+        Transform {
+          Location {
+            X: -20.640337
+            Y: -1.31931305
+            Z: 29.9999809
+          }
+          Rotation {
+            Pitch: -14.477582
+            Yaw: 68.4345551
+            Roll: -26.5647888
+          }
+          Scale {
+            X: 0.400000036
+            Y: 0.400000036
+            Z: 0.400000036
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12583956054696501919
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4657629396831187774
+        Name: "Bone Human Pile Straight 02"
+        Transform {
+          Location {
+            X: -19.77211
+            Y: 3.60474014
+            Z: 24.9999809
+          }
+          Rotation {
+            Pitch: 28.0241756
+            Yaw: -81.1703568
+            Roll: -82.7954483
+          }
+          Scale {
+            X: 0.100000009
+            Y: 0.100000009
+            Z: 0.100000009
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9593217100690426884
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9313185169444672366
+        Name: "Bone Human Pile Straight 02"
+        Transform {
+          Location {
+            X: -20.640337
+            Y: -1.31931305
+            Z: 25.0000019
+          }
+          Rotation {
+            Pitch: 52.3142242
+            Yaw: 52.2213974
+            Roll: 65.4727249
+          }
+          Scale {
+            X: 0.100000009
+            Y: 0.100000009
+            Z: 0.100000009
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9593217100690426884
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 12272809948611730220
+        Name: "Bone Human Pile Straight 02"
+        Transform {
+          Location {
+            X: -20.640337
+            Y: -1.31931305
+            Z: 25.0000019
+          }
+          Rotation {
+            Pitch: -63.7624474
+            Yaw: 39.8712196
+            Roll: 125.194626
+          }
+          Scale {
+            X: 0.100000009
+            Y: 0.100000009
+            Z: 0.100000009
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9593217100690426884
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9244990053439864334
+        Name: "Bone Human Pile Straight 02"
+        Transform {
+          Location {
+            X: -19.77211
+            Y: 3.60474014
+            Z: 24.9999809
+          }
+          Rotation {
+            Pitch: 68.2226486
+            Yaw: 14.8210793
+            Roll: 40.0220413
+          }
+          Scale {
+            X: 0.100000009
+            Y: 0.100000009
+            Z: 0.100000009
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9593217100690426884
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 16241324510139350791
+        Name: "Bone Human Pile Straight 02"
+        Transform {
+          Location {
+            X: -13.3969994
+            Y: -17.8278351
+            Z: 25.0000019
+          }
+          Rotation {
+            Pitch: -63.7620201
+            Yaw: 114.87117
+            Roll: 125.194572
+          }
+          Scale {
+            X: 0.100000009
+            Y: 0.100000009
+            Z: 0.100000009
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9593217100690426884
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3323797023205847404
+        Name: "Bone Human Pile Straight 02"
+        Transform {
+          Location {
+            X: -2.39527631
+            Y: 15.7720909
+            Z: 25.0000019
+          }
+          Rotation {
+            Pitch: 68.2219162
+            Yaw: -55.1795578
+            Roll: 40.02108
+          }
+          Scale {
+            X: 0.100000009
+            Y: 0.100000009
+            Z: 0.100000009
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9593217100690426884
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 15400381519097610387
+        Name: "Bone Human Pelvis Half 01"
+        Transform {
+          Location {
+            X: 18.1691151
+            Y: 17.2231483
+            Z: 30.0000038
+          }
+          Rotation {
+            Yaw: -100.000008
+          }
+          Scale {
+            X: 0.400000036
+            Y: 0.400000036
+            Z: 0.400000036
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 18380098308927850537
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 2946263311031364089
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: 24.5442333
+            Y: -4.20942545
+            Z: 25.0000019
+          }
+          Rotation {
+            Pitch: -15.7626209
+            Yaw: -137.252075
+            Roll: -19.6574
+          }
+          Scale {
+            X: 0.50000006
+            Y: 0.50000006
+            Z: 0.50000006
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9077795533097890780
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10777132660874800438
+        Name: "Bottle 06"
+        Transform {
+          Location {
+            X: 31.2047386
+            Y: 4.77041101
+            Z: 10.000001
+          }
+          Rotation {
+            Yaw: -100.000015
+            Roll: -94.9998779
+          }
+          Scale {
+            X: 0.400000036
+            Y: 0.400000036
+            Z: 0.400000036
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13752168348218102703
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5308501848161551305
+        Name: "Bottle 06"
+        Transform {
+          Location {
+            X: 27.7317486
+            Y: -14.9257145
+            Z: 10.000001
+          }
+          Rotation {
+            Yaw: -100.000015
+            Roll: -94.9998779
+          }
+          Scale {
+            X: 0.400000036
+            Y: 0.400000036
+            Z: 0.400000036
+          }
+        }
+        ParentId: 10790064129246453454
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13752168348218102703
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 13394874877845556437
         Name: "Turban"
         Transform {
           Location {
-            X: 2
-            Z: 183
+            X: 1.99999952
+            Y: 5.96046302e-05
+            Z: 78
           }
           Rotation {
+            Yaw: -3.05175181e-05
           }
           Scale {
             X: 1
@@ -3608,886 +4486,6 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 10790064129246453454
-        Name: "Mask"
-        Transform {
-          Location {
-            X: 0.000427245977
-            Y: -6.10352145e-05
-            Z: 189
-          }
-          Rotation {
-            Yaw: 11.250103
-          }
-          Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
-          }
-        }
-        ParentId: 1654539546463727705
-        ChildIds: 3288660166988660250
-        ChildIds: 13774953919793708297
-        ChildIds: 3795043367708665126
-        ChildIds: 14293136974288341702
-        ChildIds: 2654243219022252362
-        ChildIds: 7158186468826167586
-        ChildIds: 5760546213403913124
-        ChildIds: 4657629396831187774
-        ChildIds: 9313185169444672366
-        ChildIds: 12272809948611730220
-        ChildIds: 9244990053439864334
-        ChildIds: 16241324510139350791
-        ChildIds: 3323797023205847404
-        ChildIds: 15400381519097610387
-        ChildIds: 2946263311031364089
-        ChildIds: 10777132660874800438
-        ChildIds: 5308501848161551305
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 3288660166988660250
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: -4.99999762
-            Y: 1.00001836
-          }
-          Rotation {
-            Yaw: -100.000008
-          }
-          Scale {
-            X: 1.9000001
-            Y: 1.9000001
-            Z: 1.9000001
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 13774953919793708297
-        Name: "Bone Human Femur 01"
-        Transform {
-          Location {
-            X: 16.4326229
-            Y: 7.37513351
-            Z: 35.0000038
-          }
-          Rotation {
-            Pitch: 29.9999371
-            Yaw: -100.000031
-            Roll: -1.97170471e-06
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1.00000012
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8406463304856800769
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 3795043367708665126
-        Name: "Bone Human Femur 01"
-        Transform {
-          Location {
-            X: 12.0914049
-            Y: -17.2450409
-            Z: 35.0000038
-          }
-          Rotation {
-            Pitch: -47.7263641
-            Yaw: -117.142326
-            Roll: 22.6289463
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1.00000012
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8406463304856800769
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 14293136974288341702
-        Name: "Bone Human Skull Pile 01"
-        Transform {
-          Location {
-            X: 4.84806347
-            Y: -0.736433685
-            Z: 30.0000038
-          }
-          Rotation {
-            Pitch: 6.83018879e-06
-            Yaw: -69.9999161
-          }
-          Scale {
-            X: 1.00000012
-            Y: 1.00000012
-            Z: 1.00000012
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2529228826343701035
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 2654243219022252362
-        Name: "Bone Human Skull Pile 01"
-        Transform {
-          Location {
-            X: -3.26350236
-            Y: 10.8481236
-            Z: 30.0000038
-          }
-          Rotation {
-            Pitch: 54.9997749
-            Yaw: -79.9998856
-            Roll: 5.95400479e-06
-          }
-          Scale {
-            X: 0.600000083
-            Y: 0.600000083
-            Z: 0.600000083
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2529228826343701035
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7158186468826167586
-        Name: "Bone Human Skull Pile 01"
-        Transform {
-          Location {
-            X: -1.81244087
-            Y: -9.71626854
-            Z: 30.0000038
-          }
-          Rotation {
-            Pitch: -59.999836
-            Yaw: -139.999939
-            Roll: 6.83016424e-06
-          }
-          Scale {
-            X: 0.600000083
-            Y: 0.600000083
-            Z: 0.600000083
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 2529228826343701035
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 5760546213403913124
-        Name: "Bone Human Ribcage Half"
-        Transform {
-          Location {
-            X: -20.640337
-            Y: -1.31931305
-            Z: 29.9999809
-          }
-          Rotation {
-            Pitch: -14.477582
-            Yaw: 68.4345551
-            Roll: -26.5647888
-          }
-          Scale {
-            X: 0.400000036
-            Y: 0.400000036
-            Z: 0.400000036
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12583956054696501919
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 4657629396831187774
-        Name: "Bone Human Pile Straight 02"
-        Transform {
-          Location {
-            X: -19.77211
-            Y: 3.60474014
-            Z: 24.9999809
-          }
-          Rotation {
-            Pitch: 28.0241756
-            Yaw: -81.1703568
-            Roll: -82.7954483
-          }
-          Scale {
-            X: 0.100000009
-            Y: 0.100000009
-            Z: 0.100000009
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9593217100690426884
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 9313185169444672366
-        Name: "Bone Human Pile Straight 02"
-        Transform {
-          Location {
-            X: -20.640337
-            Y: -1.31931305
-            Z: 25.0000019
-          }
-          Rotation {
-            Pitch: 52.3142242
-            Yaw: 52.2213974
-            Roll: 65.4727249
-          }
-          Scale {
-            X: 0.100000009
-            Y: 0.100000009
-            Z: 0.100000009
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9593217100690426884
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 12272809948611730220
-        Name: "Bone Human Pile Straight 02"
-        Transform {
-          Location {
-            X: -20.640337
-            Y: -1.31931305
-            Z: 25.0000019
-          }
-          Rotation {
-            Pitch: -63.7624474
-            Yaw: 39.8712196
-            Roll: 125.194626
-          }
-          Scale {
-            X: 0.100000009
-            Y: 0.100000009
-            Z: 0.100000009
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9593217100690426884
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 9244990053439864334
-        Name: "Bone Human Pile Straight 02"
-        Transform {
-          Location {
-            X: -19.77211
-            Y: 3.60474014
-            Z: 24.9999809
-          }
-          Rotation {
-            Pitch: 68.2226486
-            Yaw: 14.8210793
-            Roll: 40.0220413
-          }
-          Scale {
-            X: 0.100000009
-            Y: 0.100000009
-            Z: 0.100000009
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9593217100690426884
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 16241324510139350791
-        Name: "Bone Human Pile Straight 02"
-        Transform {
-          Location {
-            X: -13.3969994
-            Y: -17.8278351
-            Z: 25.0000019
-          }
-          Rotation {
-            Pitch: -63.7620201
-            Yaw: 114.87117
-            Roll: 125.194572
-          }
-          Scale {
-            X: 0.100000009
-            Y: 0.100000009
-            Z: 0.100000009
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9593217100690426884
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 3323797023205847404
-        Name: "Bone Human Pile Straight 02"
-        Transform {
-          Location {
-            X: -2.39527631
-            Y: 15.7720909
-            Z: 25.0000019
-          }
-          Rotation {
-            Pitch: 68.2219162
-            Yaw: -55.1795578
-            Roll: 40.02108
-          }
-          Scale {
-            X: 0.100000009
-            Y: 0.100000009
-            Z: 0.100000009
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9593217100690426884
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 15400381519097610387
-        Name: "Bone Human Pelvis Half 01"
-        Transform {
-          Location {
-            X: 18.1691151
-            Y: 17.2231483
-            Z: 30.0000038
-          }
-          Rotation {
-            Yaw: -100.000008
-          }
-          Scale {
-            X: 0.400000036
-            Y: 0.400000036
-            Z: 0.400000036
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 18380098308927850537
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 2946263311031364089
-        Name: "Bone Human Skull 01"
-        Transform {
-          Location {
-            X: 24.5442333
-            Y: -4.20942545
-            Z: 25.0000019
-          }
-          Rotation {
-            Pitch: -15.7626209
-            Yaw: -137.252075
-            Roll: -19.6574
-          }
-          Scale {
-            X: 0.50000006
-            Y: 0.50000006
-            Z: 0.50000006
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 9077795533097890780
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 10777132660874800438
-        Name: "Bottle 06"
-        Transform {
-          Location {
-            X: 31.2047386
-            Y: 4.77041101
-            Z: 10.000001
-          }
-          Rotation {
-            Yaw: -100.000015
-            Roll: -94.9998779
-          }
-          Scale {
-            X: 0.400000036
-            Y: 0.400000036
-            Z: 0.400000036
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 13752168348218102703
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 5308501848161551305
-        Name: "Bottle 06"
-        Transform {
-          Location {
-            X: 27.7317486
-            Y: -14.9257145
-            Z: 10.000001
-          }
-          Rotation {
-            Yaw: -100.000015
-            Roll: -94.9998779
-          }
-          Scale {
-            X: 0.400000036
-            Y: 0.400000036
-            Z: 0.400000036
-          }
-        }
-        ParentId: 10790064129246453454
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 13752168348218102703
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
     }
     Assets {
       Id: 13857943057331475071
@@ -4514,6 +4512,69 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
+      Id: 9077795533097890780
+      Name: "Bone Human Skull 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_skull_01_ref"
+      }
+    }
+    Assets {
+      Id: 8406463304856800769
+      Name: "Bone Human Femur 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_femur_01_ref"
+      }
+    }
+    Assets {
+      Id: 2529228826343701035
+      Name: "Bone Human Skull Pile 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_skull_pile_01_ref"
+      }
+    }
+    Assets {
+      Id: 12583956054696501919
+      Name: "Bone Human Ribcage Half"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_ribhalf_01_ref"
+      }
+    }
+    Assets {
+      Id: 9593217100690426884
+      Name: "Bone Human Pile Straight 02"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_pile_str_02_ref"
+      }
+    }
+    Assets {
+      Id: 18380098308927850537
+      Name: "Bone Human Pelvis Half 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_pelvis_01_ref"
+      }
+    }
+    Assets {
+      Id: 13752168348218102703
+      Name: "Bottle 06"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prop_fantasy_bottle_006"
       }
     }
     Assets {
@@ -4658,69 +4719,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_torus_005"
-      }
-    }
-    Assets {
-      Id: 9077795533097890780
-      Name: "Bone Human Skull 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_01_ref"
-      }
-    }
-    Assets {
-      Id: 8406463304856800769
-      Name: "Bone Human Femur 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_femur_01_ref"
-      }
-    }
-    Assets {
-      Id: 2529228826343701035
-      Name: "Bone Human Skull Pile 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_skull_pile_01_ref"
-      }
-    }
-    Assets {
-      Id: 12583956054696501919
-      Name: "Bone Human Ribcage Half"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_ribhalf_01_ref"
-      }
-    }
-    Assets {
-      Id: 9593217100690426884
-      Name: "Bone Human Pile Straight 02"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_pile_str_02_ref"
-      }
-    }
-    Assets {
-      Id: 18380098308927850537
-      Name: "Bone Human Pelvis Half 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_pelvis_01_ref"
-      }
-    }
-    Assets {
-      Id: 13752168348218102703
-      Name: "Bottle 06"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prop_fantasy_bottle_006"
       }
     }
     PrimaryAssetId {

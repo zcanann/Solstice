@@ -35,6 +35,24 @@ Assets {
   }
 }
 Assets {
+  Id: 17874755533036327682
+  Name: "Flare Billboard"
+  PlatformAssetType: 6
+  PrimaryAsset {
+    AssetType: "BlueprintAssetRef"
+    AssetId: "fxbp_flare_object"
+  }
+}
+Assets {
+  Id: 17853068409579443165
+  Name: "Energy Tube Glow"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "Energy_Tube_Glow"
+  }
+}
+Assets {
   Id: 17805596966460687004
   Name: "Weapon Guide 1hand_melee"
   PlatformAssetType: 6
@@ -62,6 +80,15 @@ Assets {
   }
 }
 Assets {
+  Id: 17534198401378161110
+  Name: "Ring - Beveled Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_ring_faceted_003"
+  }
+}
+Assets {
   Id: 17485881147669499682
   Name: "Cube - Rounded Bottom-Aligned"
   PlatformAssetType: 1
@@ -77,6 +104,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_head_staff_001"
+  }
+}
+Assets {
+  Id: 17075898096114733254
+  Name: "Sci-fi Ability Blue 008"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Ability_Blue_008"
   }
 }
 Assets {
@@ -107,12 +143,39 @@ Assets {
   }
 }
 Assets {
+  Id: 17007084601471328062
+  Name: "Cone - Truncated"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_truncated_001"
+  }
+}
+Assets {
   Id: 16941073319444071328
   Name: "Pipe - 6-Sided Thick"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_sixsided_003"
+  }
+}
+Assets {
+  Id: 16913431718403566970
+  Name: "Rusty Riveted Metal"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_rust_rivets_001_uv"
+  }
+}
+Assets {
+  Id: 16855822076773804978
+  Name: "Metal Chrome"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "chrome_001"
   }
 }
 Assets {
@@ -131,6 +194,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_tetrahedron_hq_001"
+  }
+}
+Assets {
+  Id: 16670625436285355397
+  Name: "Diamond - Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_diamond_hq_001"
   }
 }
 Assets {
@@ -161,6 +233,24 @@ Assets {
   }
 }
 Assets {
+  Id: 16607909878309355789
+  Name: "Emissive Glow Opaque"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxma_opaque_emissive"
+  }
+}
+Assets {
+  Id: 16598905272642319690
+  Name: "Prism - Asymmetrical Beveled - Large 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_corelogo_shape_002_half_bottom_01_ref"
+  }
+}
+Assets {
   Id: 16585282183739788606
   Name: "Water Jet VFX"
   PlatformAssetType: 8
@@ -176,6 +266,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_curve45_003"
+  }
+}
+Assets {
+  Id: 16570076526191053189
+  Name: "Ice Ground Transparent"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_ice_transparent_ground"
   }
 }
 Assets {
@@ -215,6 +314,24 @@ Assets {
   }
 }
 Assets {
+  Id: 16397364824818009701
+  Name: "Prism - 8-Sided Half"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half_octagon_001"
+  }
+}
+Assets {
+  Id: 16325962649651067789
+  Name: "Burning Wood"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_burning_erode"
+  }
+}
+Assets {
   Id: 16251115751092988459
   Name: "Fantasy Shield 02"
   PlatformAssetType: 1
@@ -239,6 +356,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_base_axe_001"
+  }
+}
+Assets {
+  Id: 16167019629586710493
+  Name: "Ambient Fire Volcano Lava Burning Loop 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_ambience_firey_volcano_lava_burning_loop_01_Cue_ref"
   }
 }
 Assets {
@@ -359,6 +485,15 @@ Assets {
   }
 }
 Assets {
+  Id: 15076015910339775634
+  Name: "Rope"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_rope_001"
+  }
+}
+Assets {
   Id: 15025737119366864047
   Name: "Pyramid - Corner"
   PlatformAssetType: 1
@@ -413,6 +548,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14508897462786803029
+  Name: "Rock 03"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_003"
+  }
+}
+Assets {
   Id: 14490525090780222776
   Name: "Pipe - 8-Sided Thin"
   PlatformAssetType: 1
@@ -440,6 +584,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14369512239823189628
+  Name: "Metal Old Beaten Gold 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_gold_002"
+  }
+}
+Assets {
   Id: 14330897391340087518
   Name: "Ember Volume VFX"
   PlatformAssetType: 8
@@ -455,6 +608,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_clear-coat_001"
+  }
+}
+Assets {
+  Id: 14221877079987477785
+  Name: "Magic Dark Beam Energy Loop 01 SFX"
+  PlatformAssetType: 7
+  PrimaryAsset {
+    AssetType: "AudioAssetRef"
+    AssetId: "sfx_magic_dark_beam_energy_loop_01_Cue_ref"
   }
 }
 Assets {
@@ -539,6 +701,24 @@ Assets {
   }
 }
 Assets {
+  Id: 13643579530601127256
+  Name: "Cone - Truncated Concave"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cone_truncated_concave_001"
+  }
+}
+Assets {
+  Id: 13638367828132947452
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
+  }
+}
+Assets {
   Id: 13489932826248377642
   Name: "Pyramid - 4-Sided"
   PlatformAssetType: 1
@@ -554,6 +734,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_ts_gen_whitebox_wall_001_triTop"
+  }
+}
+Assets {
+  Id: 13418844219886533335
+  Name: "Horn"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_horn_001"
   }
 }
 Assets {
@@ -611,6 +800,15 @@ Assets {
   }
 }
 Assets {
+  Id: 12610149741243116648
+  Name: "Urban Pipe Wrap 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prop_urb_pipes_acc_coupling_005_ref"
+  }
+}
+Assets {
   Id: 12510064410993333055
   Name: "Fantasy Pommel 04"
   PlatformAssetType: 1
@@ -620,12 +818,48 @@ Assets {
   }
 }
 Assets {
+  Id: 12467523517518383990
+  Name: "Rock 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
+  }
+}
+Assets {
+  Id: 12309417404639501175
+  Name: "Hand Cast VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_cast_hands"
+  }
+}
+Assets {
   Id: 12280540622150517531
   Name: "Plasma Ball Projectile VFX"
   PlatformAssetType: 8
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_plasmaball_projectile"
+  }
+}
+Assets {
+  Id: 12234371528907882459
+  Name: "Pipe - Spiral"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_pipe_spiral_001"
+  }
+}
+Assets {
+  Id: 12206536003707004612
+  Name: "Ice Opaque Ground"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_ice_opaque_ground"
   }
 }
 Assets {
@@ -692,6 +926,15 @@ Assets {
   }
 }
 Assets {
+  Id: 11406721084263744204
+  Name: "Fantasy Ability Purple 022"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Purple_022"
+  }
+}
+Assets {
   Id: 11292394934840136893
   Name: "Castle Part - Grate 01"
   PlatformAssetType: 1
@@ -725,6 +968,15 @@ Assets {
   PrimaryAsset {
     AssetType: "AnimatedMeshAssetRef"
     AssetId: "npc_dragonling_chubby_basic_001_ref"
+  }
+}
+Assets {
+  Id: 10889653663059980114
+  Name: "Snow Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_snow_volume"
   }
 }
 Assets {
@@ -779,6 +1031,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_gen_branches_big_001"
+  }
+}
+Assets {
+  Id: 10495790769690617632
+  Name: "Metal Chrome"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "chrome_001"
   }
 }
 Assets {
@@ -854,6 +1115,15 @@ Assets {
   }
 }
 Assets {
+  Id: 9686022029476961003
+  Name: "Rock 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_001"
+  }
+}
+Assets {
   Id: 9675776263369201294
   Name: "Fantasy Pommel 03"
   PlatformAssetType: 1
@@ -878,6 +1148,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_guard_sword_002"
+  }
+}
+Assets {
+  Id: 9530986134524773423
+  Name: "Donut"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_001"
   }
 }
 Assets {
@@ -926,12 +1205,39 @@ Assets {
   }
 }
 Assets {
+  Id: 9223391083233434823
+  Name: "Cylinder - Chamfered Small Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cylinder_hq_003"
+  }
+}
+Assets {
+  Id: 9217088275714087139
+  Name: "Ring - Thin"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_003"
+  }
+}
+Assets {
   Id: 9189972983815080179
   Name: "Wispy Fog Volume VFX"
   PlatformAssetType: 8
   PrimaryAsset {
     AssetType: "VfxBlueprintAssetRef"
     AssetId: "fxbp_fog_volume_vfx"
+  }
+}
+Assets {
+  Id: 8991245909321042927
+  Name: "Sphere - Inverted"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_inverted_001"
   }
 }
 Assets {
@@ -1043,6 +1349,24 @@ Assets {
   }
 }
 Assets {
+  Id: 8368945144623113933
+  Name: "Pipe - Half Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_half-pipe_003"
+  }
+}
+Assets {
+  Id: 8149258504406149460
+  Name: "Coral Table 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_coral_table_01"
+  }
+}
+Assets {
   Id: 8083818363977375279
   Name: "Fantasy Shield Strap 01"
   PlatformAssetType: 1
@@ -1058,6 +1382,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_hemisphere_002"
+  }
+}
+Assets {
+  Id: 8042450469285153729
+  Name: "Sphere - Half"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_hemisphere_001"
   }
 }
 Assets {
@@ -1106,6 +1439,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7554885950972287265
+  Name: "Rock Flat 02"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_rock_generic_005"
+  }
+}
+Assets {
   Id: 7221099063684312479
   Name: "Amethyst"
   PlatformAssetType: 2
@@ -1133,6 +1475,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7074573829751598541
+  Name: "Metal Steel Brushed"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_stainless-steel_001_uv"
+  }
+}
+Assets {
   Id: 7047937217195884949
   Name: "Pipe - 45-Degree"
   PlatformAssetType: 1
@@ -1142,12 +1493,30 @@ Assets {
   }
 }
 Assets {
+  Id: 7009243008104945347
+  Name: "Plasma Ball Projectile VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_plasmaball_projectile"
+  }
+}
+Assets {
   Id: 6837824394022989469
   Name: "Street Light Pole 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_urb_st_post_lights_pole_002"
+  }
+}
+Assets {
+  Id: 6803117072892112624
+  Name: "Metal Steel Hexagon 02"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_steel_hex_002"
   }
 }
 Assets {
@@ -1205,6 +1574,24 @@ Assets {
   }
 }
 Assets {
+  Id: 6664939228418531134
+  Name: "Asphalt 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_gen_asphault_001"
+  }
+}
+Assets {
+  Id: 6644934068115574865
+  Name: "Weapon Taser 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Military_Weapon_Taser_001"
+  }
+}
+Assets {
   Id: 6625168824555185097
   Name: "Bone Human Scapula 01"
   PlatformAssetType: 1
@@ -1220,6 +1607,15 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "mi_metal_iron_003"
+  }
+}
+Assets {
+  Id: 6498162076646250925
+  Name: "Metal Gold 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_gold_001"
   }
 }
 Assets {
@@ -1349,6 +1745,15 @@ Assets {
   }
 }
 Assets {
+  Id: 5134838904756083157
+  Name: "Cube - Chamfered Large Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_hq_002"
+  }
+}
+Assets {
   Id: 4854270377050611262
   Name: "Pipe"
   PlatformAssetType: 1
@@ -1364,6 +1769,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_blade_sword_003"
+  }
+}
+Assets {
+  Id: 4647033500953364697
+  Name: "Stone Basic"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "stone_001"
   }
 }
 Assets {
@@ -1412,6 +1826,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4289160600405295316
+  Name: "Metal Basic 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_metal_basic_001"
+  }
+}
+Assets {
   Id: 4094133437936316750
   Name: "Fantasy Staff Guard 02"
   PlatformAssetType: 1
@@ -1427,6 +1850,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_pipe_spiral_001"
+  }
+}
+Assets {
+  Id: 4033676801703259448
+  Name: "Fantasy Ability Yellow 025"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Yellow_025"
   }
 }
 Assets {
@@ -1484,6 +1916,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3595452028632495999
+  Name: "Ring - Thick"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_torus_005"
+  }
+}
+Assets {
   Id: 3386044444228864544
   Name: "Gem - Radiant Polished"
   PlatformAssetType: 1
@@ -1520,12 +1961,39 @@ Assets {
   }
 }
 Assets {
+  Id: 3188817009808501110
+  Name: "Ice Opaque"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "fxmi_ice_opaque"
+  }
+}
+Assets {
   Id: 3151394390577018450
   Name: "Rock 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_rock_generic_002_sm_rock_generic_002_LOD0"
+  }
+}
+Assets {
+  Id: 3090596827184957478
+  Name: "Rope"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_rope_001"
+  }
+}
+Assets {
+  Id: 2895250116225866729
+  Name: "Gem - Pear Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_gem_pear_polished_001"
   }
 }
 Assets {
@@ -1601,12 +2069,30 @@ Assets {
   }
 }
 Assets {
+  Id: 2208315345047780116
+  Name: "Wedge"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_wedge_001"
+  }
+}
+Assets {
   Id: 2168240361010595988
   Name: "Modern Weapon - Scope 02"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_modern_scope_002"
+  }
+}
+Assets {
+  Id: 2135057267605939120
+  Name: "Prism - 8-Sided Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_prism_octagon_hq_001"
   }
 }
 Assets {
@@ -1646,6 +2132,15 @@ Assets {
   }
 }
 Assets {
+  Id: 1768907166564551322
+  Name: "Metal Floor Panel 01"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_scf_simple_floor_panel_001_uv"
+  }
+}
+Assets {
   Id: 1681409655322179557
   Name: "Ring - Thick"
   PlatformAssetType: 1
@@ -1661,6 +2156,15 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_weap_fan_grip_cross_001"
+  }
+}
+Assets {
+  Id: 1544668520867250272
+  Name: "Bone Human Skull 01"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_bones_human_skull_01_ref"
   }
 }
 Assets {
@@ -1688,6 +2192,24 @@ Assets {
   PrimaryAsset {
     AssetType: "MaterialAssetRef"
     AssetId: "fxma_additive_axis_aligned_fresnel"
+  }
+}
+Assets {
+  Id: 1449740846108335684
+  Name: "Fairy Dot Volume VFX"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_Swirling_Magic_Column"
+  }
+}
+Assets {
+  Id: 1413196292823476264
+  Name: "Sphere"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_sphere_002"
   }
 }
 Assets {
@@ -1772,6 +2294,15 @@ Assets {
   }
 }
 Assets {
+  Id: 625035735719714076
+  Name: "Staff"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_icon_Staff"
+  }
+}
+Assets {
   Id: 527763958605568440
   Name: "Metal Steel Brushed"
   PlatformAssetType: 2
@@ -1826,6 +2357,15 @@ Assets {
   }
 }
 Assets {
+  Id: 181323337304413359
+  Name: "Bone Raw"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_bone_raw_001_uv_ref"
+  }
+}
+Assets {
   Id: 114029355338971604
   Name: "Snow Volume VFX"
   PlatformAssetType: 8
@@ -1844,12 +2384,30 @@ Assets {
   }
 }
 Assets {
+  Id: 47247266198634702
+  Name: "Signal Flare"
+  PlatformAssetType: 8
+  PrimaryAsset {
+    AssetType: "VfxBlueprintAssetRef"
+    AssetId: "fxbp_Signal_Flare"
+  }
+}
+Assets {
   Id: 46061843978868412
   Name: "Ring"
   PlatformAssetType: 1
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "sm_torus_004"
+  }
+}
+Assets {
+  Id: 37769953297644905
+  Name: "Cube - Polished"
+  PlatformAssetType: 1
+  PrimaryAsset {
+    AssetType: "StaticMeshAssetRef"
+    AssetId: "sm_cube_hq_test_001"
   }
 }
 Assets {

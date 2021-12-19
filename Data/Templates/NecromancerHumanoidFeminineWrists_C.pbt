@@ -42,12 +42,8 @@ Assets {
         Name: "left_elbow"
         Transform {
           Location {
-            X: 1.00341749
-            Y: -7.17700345e-07
-            Z: -105
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -78,14 +74,14 @@ Assets {
         Name: "Teardrop - Truncated"
         Transform {
           Location {
-            X: -10.837471
-            Y: -27.4574
-            Z: 152.427795
+            X: -9.83406162
+            Y: -27.4573822
+            Z: 47.4277954
           }
           Rotation {
-            Pitch: -20.3742886
-            Yaw: -178.009598
-            Roll: 151.371201
+            Pitch: -20.3742619
+            Yaw: -178.009628
+            Roll: 151.37117
           }
           Scale {
             X: 0.123425625
@@ -135,12 +131,8 @@ Assets {
         Name: "right_elbow"
         Transform {
           Location {
-            X: 1.0034126
-            Y: -6.75518703
-            Z: -105
           }
           Rotation {
-            Yaw: -3.05175436e-05
           }
           Scale {
             X: 1
@@ -172,14 +164,14 @@ Assets {
         Name: "Cone - Truncated Hollow Wide"
         Transform {
           Location {
-            X: -4.13851357
-            Y: 44.5341148
-            Z: 134.450439
+            X: -3.13507342
+            Y: 37.7788734
+            Z: 29.4504395
           }
           Rotation {
-            Pitch: 26.5505695
-            Yaw: 5.88855648
-            Roll: 154.906479
+            Pitch: 26.5505428
+            Yaw: 5.88853216
+            Roll: 154.906509
           }
           Scale {
             X: 0.121181324
@@ -229,13 +221,13 @@ Assets {
         Name: "Cone - Truncated Hollow Wide"
         Transform {
           Location {
-            X: -2.60936832
-            Y: 46.9863129
-            Z: 130.807846
+            X: -1.60592782
+            Y: 40.2310638
+            Z: 25.8078461
           }
           Rotation {
-            Pitch: 26.5505486
-            Yaw: 5.8885808
+            Pitch: 26.5505219
+            Yaw: 5.88855076
             Roll: 154.906509
           }
           Scale {

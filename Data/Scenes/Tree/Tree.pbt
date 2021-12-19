@@ -81,7 +81,7 @@ Objects {
   ChildIds: 1455615375424844719
   ChildIds: 10699215391895617769
   ChildIds: 5677766697951535980
-  ChildIds: 1387773479593972997
+  ChildIds: 14447810301620843261
   ChildIds: 8156512246076357322
   ChildIds: 4645215076396019458
   ChildIds: 10940698897104503836
@@ -962,8 +962,8 @@ Objects {
   }
 }
 Objects {
-  Id: 1387773479593972997
-  Name: "FrameworkAscendentMasculineVariantA"
+  Id: 14447810301620843261
+  Name: "FrameworkAscendentMasculineVariantB"
   Transform {
     Scale {
       X: 1
@@ -974,11 +974,11 @@ Objects {
   ParentId: 2073809368899518713
   TemplateInstance {
     ParameterOverrideMap {
-      key: 3786144584552121706
+      key: 3995227768644959029
       value {
         Overrides {
           Name: "Name"
-          String: "FrameworkAscendentMasculineVariantA"
+          String: "FrameworkAscendentMasculineVariantB"
         }
         Overrides {
           Name: "Position"
@@ -990,7 +990,7 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -179.999969
+            Yaw: -178.999985
           }
         }
         Overrides {
@@ -1004,11 +1004,8 @@ Objects {
       }
     }
     TemplateAsset {
-      Id: 5628769040671060772
+      Id: 16061080343895741245
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -5972,21 +5969,21 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:FrameworkAscendantMasculineVariantA"
-      ObjectReference {
-        SelfId: 5432189378820430282
-        SubObjectId: 3786144584552121706
-        InstanceId: 1387773479593972997
-        TemplateId: 5628769040671060772
-      }
-    }
-    Overrides {
       Name: "cs:AscendantRenderTarget"
       ObjectReference {
         SelfId: 8376841075964511735
         SubObjectId: 4738545747254556631
         InstanceId: 15118498325512468179
         TemplateId: 4895940294124353172
+      }
+    }
+    Overrides {
+      Name: "cs:FrameworkAscendantMasculineVariantA"
+      ObjectReference {
+        SelfId: 15935728351333520862
+        SubObjectId: 3995227768644959029
+        InstanceId: 14447810301620843261
+        TemplateId: 16061080343895741245
       }
     }
   }

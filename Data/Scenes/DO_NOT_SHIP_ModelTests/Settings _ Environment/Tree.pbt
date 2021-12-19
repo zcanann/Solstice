@@ -951,14 +951,14 @@ Objects {
   Name: "Default Floor"
   Transform {
     Location {
-      Z: -227
+      Z: -105
     }
     Rotation {
     }
     Scale {
       X: 115.900032
       Y: 115.900032
-      Z: 2.29999971
+      Z: 2.3
     }
   }
   ParentId: 15271318836729243312
@@ -975,7 +975,7 @@ Objects {
   }
   CoreMesh {
     MeshAsset {
-      Id: 12095835209017042614
+      Id: 4852828692228967462
     }
     Teams {
       IsTeamCollisionEnabled: true

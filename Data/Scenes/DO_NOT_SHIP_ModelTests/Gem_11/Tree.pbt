@@ -1,7 +1,7 @@
 Name: "Gem_11"
-RootId: 9879869798742954954
+RootId: 12938834171511465102
 Objects {
-  Id: 7320976276213842747
+  Id: 5958023919654917017
   Name: "Gem - Diamond 6-Sided Polished"
   Transform {
     Location {
@@ -19,12 +19,12 @@ Objects {
       Z: 0.506936193
     }
   }
-  ParentId: 9879869798742954954
+  ParentId: 12938834171511465102
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
       AssetReference {
-        Id: 13568184001667357480
+        Id: 14907885914598629429
       }
     }
   }
@@ -50,6 +50,12 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  InstanceHistory {
+    SelfId: 5958023919654917017
+    SubobjectId: 10438727334589457425
+    InstanceId: 2527284138914015236
+    TemplateId: 5838106527476150161
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
