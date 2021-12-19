@@ -96,7 +96,7 @@ function DrawDebugData()
 end
 
 function UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId)
-    if not Framework.ObjectAssert(player, "Player", "Object must be a player") then
+    if not Object.IsValid(player) or not Framework.ObjectAssert(player, "Player", "Object must be a player") then
         return
     end
 

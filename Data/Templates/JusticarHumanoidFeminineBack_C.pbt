@@ -51,6 +51,43 @@ Assets {
           }
         }
         ParentId: 702180752794778164
+        ChildIds: 10439859966050900833
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10439859966050900833
+        Name: "Cloak"
+        Transform {
+          Location {
+            X: -15
+            Z: -87
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7928292567916584096
         ChildIds: 12142660264777742957
         ChildIds: 13902806094888992222
         ChildIds: 208051250734248781
@@ -82,13 +119,14 @@ Assets {
         Name: "Scoop 03"
         Transform {
           Location {
-            X: -10.9999914
-            Y: 9.00001049
-            Z: 70
+            X: 4.00000572
+            Y: 8.99999332
+            Z: 157
           }
           Rotation {
-            Pitch: 16.9999161
-            Yaw: 10.00002
+            Pitch: 16.9999104
+            Yaw: 10.0000324
+            Roll: -1.11597949e-07
           }
           Scale {
             X: 0.2
@@ -96,7 +134,7 @@ Assets {
             Z: 0.4
           }
         }
-        ParentId: 7928292567916584096
+        ParentId: 10439859966050900833
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -158,14 +196,14 @@ Assets {
         Name: "Pyramid - 5-Sided Truncated Hollow Thin"
         Transform {
           Location {
-            X: -18.0386963
-            Y: 1.72030359e-05
-            Z: -87.0728378
+            X: -3.03869534
+            Y: 2.17344473e-06
+            Z: -0.0728378296
           }
           Rotation {
-            Pitch: -0.0871582
-            Yaw: 89.9998703
-            Roll: -0.996185303
+            Pitch: -0.087160036
+            Yaw: 89.9998474
+            Roll: -0.996184945
           }
           Scale {
             X: 0.7
@@ -173,7 +211,7 @@ Assets {
             Z: 1.6
           }
         }
-        ParentId: 7928292567916584096
+        ParentId: 10439859966050900833
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -235,14 +273,14 @@ Assets {
         Name: "Pyramid - 5-Sided Truncated Hollow Thin"
         Transform {
           Location {
-            X: -22.5783138
-            Y: -6.99997854
-            Z: -6.00000763
+            X: -7.57831097
+            Y: -6.99999285
+            Z: 80.9999924
           }
           Rotation {
-            Pitch: -0.24331665
-            Yaw: -87.0125122
-            Roll: -170.984726
+            Pitch: -0.243311822
+            Yaw: -87.0124664
+            Roll: -170.984711
           }
           Scale {
             X: 0.2
@@ -250,7 +288,7 @@ Assets {
             Z: 0.285
           }
         }
-        ParentId: 7928292567916584096
+        ParentId: 10439859966050900833
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -312,12 +350,12 @@ Assets {
         Name: "Pyramid - 5-Sided Truncated Hollow Thin"
         Transform {
           Location {
-            X: -22.7333679
-            Y: 7.01300049
-            Z: -6
+            X: -7.73336792
+            Y: 7.01306152
+            Z: 80.9999924
           }
           Rotation {
-            Pitch: -0.243286133
+            Pitch: -0.243284494
             Yaw: -87.0127563
             Roll: -170.98497
           }
@@ -327,7 +365,7 @@ Assets {
             Z: 0.285
           }
         }
-        ParentId: 7928292567916584096
+        ParentId: 10439859966050900833
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -389,12 +427,12 @@ Assets {
         Name: "Scoop 03"
         Transform {
           Location {
-            X: -16.0386963
-            Y: 1.52956873e-05
-            Z: 58
+            X: -1.03869581
+            Y: 7.42933366e-07
+            Z: 145
           }
           Rotation {
-            Pitch: 86.9976196
+            Pitch: 86.9972305
           }
           Scale {
             X: 0.3
@@ -402,7 +440,7 @@ Assets {
             Z: 0.1
           }
         }
-        ParentId: 7928292567916584096
+        ParentId: 10439859966050900833
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -464,12 +502,12 @@ Assets {
         Name: "Pyramid - 5-Sided Truncated Hollow Thin"
         Transform {
           Location {
-            X: -2.96105957
-            Y: 2.82388578e-06
-            Z: -42
+            X: 12.0389366
+            Y: -8.61092e-06
+            Z: 45
           }
           Rotation {
-            Yaw: -89.9998779
+            Yaw: -89.9998627
           }
           Scale {
             X: 0.325
@@ -477,7 +515,7 @@ Assets {
             Z: 0.16
           }
         }
-        ParentId: 7928292567916584096
+        ParentId: 10439859966050900833
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -539,14 +577,14 @@ Assets {
         Name: "Scoop 03"
         Transform {
           Location {
-            X: -11.0000095
-            Y: -9.99998951
-            Z: 70
+            X: 3.99999189
+            Y: -9.99999905
+            Z: 157
           }
           Rotation {
-            Pitch: 16.9998894
-            Yaw: -10.0000305
-            Roll: 3.3479381e-07
+            Pitch: 16.999876
+            Yaw: -10.000041
+            Roll: 5.57989665e-07
           }
           Scale {
             X: 0.2
@@ -554,7 +592,7 @@ Assets {
             Z: 0.4
           }
         }
-        ParentId: 7928292567916584096
+        ParentId: 10439859966050900833
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

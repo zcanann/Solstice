@@ -167,8 +167,8 @@ function UpdateCameraFromRace(race)
         localPlayer:SetOverrideCamera(propCameraVanara)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
     else
-        warn("Invalid race")
-        return;
+        warn("Invalid race: " .. (race or ""))
+        return
     end
 end
 
@@ -206,7 +206,9 @@ function UpdateEntryVisuals(characterId)
 end
 
 function CreateCharacterEntry(characterData)
-    if not characterData then return end
+    if Framework.Utils.Table.Count(characterData) <= 0 then
+        return
+    end
 
     local characterEntry = World.SpawnAsset(propCharacterEntryTemplate, { parent = propCharacterEntriesRoot })
 
@@ -219,7 +221,7 @@ function CreateCharacterEntry(characterData)
     propLevelClassText.text = "Level " .. tostring(level) .. " " .. characterData[Framework.Storage.Keys.Characters.CLASS]
     propZoneText.text = characterData[Framework.Storage.Keys.Characters.ZONE]
 
-    characterEntry.y = 32.0 + (characterData.sortIndex - 1) * 112.0
+    characterEntry.y = 32.0 + ((characterData.sortIndex or 5) - 1) * 112.0
     characterEntry.clickedEvent:Connect(OnEntryClicked)
 
     return characterEntry

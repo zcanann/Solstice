@@ -48,6 +48,45 @@ Assets {
           }
         }
         ParentId: 12393038544459772351
+        ChildIds: 780299782337080603
+        ChildIds: 1829393335477480599
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 780299782337080603
+        Name: "Skeletons"
+        Transform {
+          Location {
+            X: -31
+            Y: 1
+            Z: 31
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12700087379692095141
         ChildIds: 10665825588102261604
         ChildIds: 16615020918395527655
         ChildIds: 7050779614144068557
@@ -105,22 +144,22 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: -28.8819218
-            Y: 10.6131773
-            Z: 92.2418365
+            X: 2.11805511
+            Y: 9.61317348
+            Z: 61.2418365
           }
           Rotation {
             Pitch: 0.199660078
-            Yaw: -4.28689671
-            Roll: -96.5761108
+            Yaw: -4.2868948
+            Roll: -96.5760727
           }
           Scale {
-            X: 0.05217392
-            Y: 0.05217392
-            Z: 0.05217392
+            X: 0.0521739237
+            Y: 0.0521739237
+            Z: 0.0521739237
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         ChildIds: 371147728624112790
         ChildIds: 4036043484556457450
         ChildIds: 10224616164110363232
@@ -481,22 +520,22 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -19.811161
-            Y: 43.2186928
-            Z: 92.4183502
+            X: 11.1888151
+            Y: 42.2186813
+            Z: 61.4183502
           }
           Rotation {
-            Pitch: 40.1713409
-            Yaw: -36.5927773
-            Roll: -144.969727
+            Pitch: 40.1712875
+            Yaw: -36.5927315
+            Roll: -144.969681
           }
           Scale {
             X: 0.649145484
             Y: 0.663417637
-            Z: 0.869565189
+            Z: 0.869565248
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -530,22 +569,22 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -21.0269833
-            Y: -46.0721779
-            Z: 90.618515
+            X: 9.97299385
+            Y: -47.0721703
+            Z: 59.618515
           }
           Rotation {
-            Pitch: -54.9297867
-            Yaw: -137.959213
-            Roll: -147.660843
+            Pitch: -54.9297256
+            Yaw: -137.959152
+            Roll: -147.660782
           }
           Scale {
             X: 0.649144709
             Y: 0.663418412
-            Z: 0.869565189
+            Z: 0.869565248
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -579,22 +618,22 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -33.0502052
-            Y: 45.0198479
-            Z: 62.5938416
+            X: -2.05022645
+            Y: 44.0198441
+            Z: 31.5938435
           }
           Rotation {
-            Pitch: 74.0104752
-            Yaw: 22.3557472
-            Roll: -98.0962143
+            Pitch: 74.0103149
+            Yaw: 22.3556671
+            Roll: -98.096077
           }
           Scale {
             X: 0.649145663
             Y: 0.663417697
-            Z: 0.782608807
+            Z: 0.782608867
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -628,22 +667,22 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -33.4307594
-            Y: -43.636013
-            Z: 62.6846924
+            X: -2.43078136
+            Y: -44.6360168
+            Z: 31.6846943
           }
           Rotation {
-            Pitch: -81.3171539
-            Yaw: -69.1536179
-            Roll: 127.975594
+            Pitch: -81.3169098
+            Yaw: -69.1533813
+            Roll: 127.975372
           }
           Scale {
             X: 0.649145484
             Y: 0.663417637
-            Z: 0.782608747
+            Z: 0.782608807
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -677,14 +716,14 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -25.9118118
-            Y: 37.3551712
-            Z: 42.1859
+            X: 5.08816433
+            Y: 36.3551636
+            Z: 11.1859007
           }
           Rotation {
-            Pitch: 63.1281853
-            Yaw: 156.219772
-            Roll: 32.2037315
+            Pitch: 63.1281166
+            Yaw: 156.219757
+            Roll: 32.2037086
           }
           Scale {
             X: 0.649145663
@@ -692,7 +731,7 @@ Assets {
             Z: 0.652173877
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -726,14 +765,14 @@ Assets {
         Name: "Bone Human Spine 01"
         Transform {
           Location {
-            X: -25.4932842
-            Y: -33.6555481
-            Z: 40.0446053
+            X: 5.50669289
+            Y: -34.6555405
+            Z: 9.0446043
           }
           Rotation {
-            Pitch: -61.338913
-            Yaw: 49.9617119
-            Roll: 13.3277292
+            Pitch: -61.3388367
+            Yaw: 49.9616776
+            Roll: 13.3277235
           }
           Scale {
             X: 0.649145484
@@ -741,7 +780,7 @@ Assets {
             Z: 0.652173817
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -775,13 +814,13 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -30.6562023
-            Y: -61.7227478
-            Z: 100.671532
+            X: 0.34377414
+            Y: -62.7227554
+            Z: 69.6715317
           }
           Rotation {
-            Pitch: -58.3221779
-            Yaw: -97.800972
+            Pitch: -58.322113
+            Yaw: -97.8008957
             Roll: -2.5927453
           }
           Scale {
@@ -790,7 +829,7 @@ Assets {
             Z: 0.652173877
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -824,14 +863,14 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -48.0013809
-            Y: -56.711689
-            Z: 64.3042068
+            X: -17.0014057
+            Y: -57.7116928
+            Z: 33.304203
           }
           Rotation {
-            Pitch: -84.9319382
-            Yaw: -75.8791046
-            Roll: -54.5578461
+            Pitch: -84.9314728
+            Yaw: -75.878624
+            Roll: -54.5574913
           }
           Scale {
             X: 0.652173877
@@ -839,7 +878,7 @@ Assets {
             Z: 0.652173877
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -873,13 +912,13 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -35.1584167
-            Y: -39.3366928
-            Z: 33.9510574
+            X: -4.15843868
+            Y: -40.3367
+            Z: 2.95105577
           }
           Rotation {
-            Pitch: -64.5072403
-            Yaw: 63.8521957
+            Pitch: -64.5071182
+            Yaw: 63.8520889
             Roll: 173.508957
           }
           Scale {
@@ -888,7 +927,7 @@ Assets {
             Z: 0.652173877
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -922,14 +961,14 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -27.5890388
-            Y: 60.1096916
-            Z: 106.744835
+            X: 3.41093779
+            Y: 59.109684
+            Z: 75.7448349
           }
           Rotation {
-            Pitch: 45.0346107
-            Yaw: -95.7887802
-            Roll: -13.347126
+            Pitch: 45.0345726
+            Yaw: -95.7887192
+            Roll: -13.3471336
           }
           Scale {
             X: 0.652173877
@@ -937,7 +976,7 @@ Assets {
             Z: 0.652173877
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -971,14 +1010,14 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -47.6470413
-            Y: 59.2902489
-            Z: 64.0755386
+            X: -16.6470661
+            Y: 58.2902451
+            Z: 33.0755348
           }
           Rotation {
-            Pitch: 87.2355652
-            Yaw: 66.0346451
-            Roll: 118.304825
+            Pitch: 87.2346497
+            Yaw: 66.0337753
+            Roll: 118.303925
           }
           Scale {
             X: 0.652173877
@@ -986,7 +1025,7 @@ Assets {
             Z: 0.652173877
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1020,14 +1059,14 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -38.1360779
-            Y: 45.801651
-            Z: 36.4926491
+            X: -7.13609886
+            Y: 44.8016472
+            Z: 5.49264765
           }
           Rotation {
-            Pitch: 67.2585449
-            Yaw: 106.551765
-            Roll: 173.315048
+            Pitch: 67.2584229
+            Yaw: 106.551636
+            Roll: 173.315033
           }
           Scale {
             X: 0.652173877
@@ -1035,7 +1074,7 @@ Assets {
             Z: 0.652173877
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1069,9 +1108,9 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -41.4630928
-            Y: 53.2826157
-            Z: 35.1518135
+            X: -10.4631147
+            Y: 52.2826118
+            Z: 4.15181208
           }
           Rotation {
           }
@@ -1081,7 +1120,7 @@ Assets {
             Z: 4.347826
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:color"
@@ -1145,9 +1184,9 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -51.9254875
-            Y: 66.4901276
-            Z: 68.6684189
+            X: -20.9255123
+            Y: 65.4901428
+            Z: 37.6684151
           }
           Rotation {
           }
@@ -1157,7 +1196,7 @@ Assets {
             Z: 4.347826
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:color"
@@ -1221,9 +1260,9 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -29.2534
-            Y: 65.7196045
-            Z: 114.093666
+            X: 1.74657536
+            Y: 64.7196121
+            Z: 83.0936661
           }
           Rotation {
           }
@@ -1233,7 +1272,7 @@ Assets {
             Z: 4.347826
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:color"
@@ -1297,9 +1336,9 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -31.117815
-            Y: -67.9532623
-            Z: 105.875099
+            X: -0.11783883
+            Y: -68.9532547
+            Z: 74.8751
           }
           Rotation {
           }
@@ -1309,7 +1348,7 @@ Assets {
             Z: 4.347826
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:color"
@@ -1373,9 +1412,9 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -52.8019218
-            Y: -62.3437042
-            Z: 65.5664902
+            X: -21.8019447
+            Y: -63.343708
+            Z: 34.5664864
           }
           Rotation {
           }
@@ -1385,7 +1424,7 @@ Assets {
             Z: 4.347826
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:color"
@@ -1449,9 +1488,9 @@ Assets {
         Name: "Candle Flame VFX"
         Transform {
           Location {
-            X: -39.5852318
-            Y: -44.7879257
-            Z: 30.850975
+            X: -8.58525562
+            Y: -45.7879295
+            Z: -0.149024978
           }
           Rotation {
           }
@@ -1461,7 +1500,7 @@ Assets {
             Z: 4.347826
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Flame_A:color"
@@ -1525,14 +1564,14 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: -22.9678879
-            Y: 53.1735916
-            Z: 101.857491
+            X: 8.03208828
+            Y: 52.173584
+            Z: 70.8574905
           }
           Rotation {
-            Pitch: 17.6188
-            Yaw: -1.61410582
-            Roll: 39.7803841
+            Pitch: 17.6187801
+            Yaw: -1.61410439
+            Roll: 39.7803459
           }
           Scale {
             X: 0.0869565234
@@ -1540,7 +1579,7 @@ Assets {
             Z: 0.0652173758
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1582,14 +1621,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -23.4476833
-            Y: 55.9404373
-            Z: 99.4585
+            X: 7.55229378
+            Y: 54.9404297
+            Z: 68.4585
           }
           Rotation {
             Pitch: -1.33519268
-            Yaw: 0.558229923
-            Roll: 132.544785
+            Yaw: 0.558229506
+            Roll: 132.544754
           }
           Scale {
             X: 0.0347826071
@@ -1597,7 +1636,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1639,14 +1678,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -22.8446636
-            Y: 50.3749466
-            Z: 104.472649
+            X: 8.15531349
+            Y: 49.374939
+            Z: 73.4726486
           }
           Rotation {
             Pitch: -1.33525407
-            Yaw: 0.558247209
-            Roll: -47.4542656
+            Yaw: 0.558246851
+            Roll: -47.454216
           }
           Scale {
             X: 0.0347826071
@@ -1654,7 +1693,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1696,14 +1735,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -18.9993248
-            Y: 53.8202591
-            Z: 102.171822
+            X: 12.0006533
+            Y: 52.8202782
+            Z: 71.1718216
           }
           Rotation {
-            Pitch: 42.5301437
-            Yaw: -88.2160645
-            Roll: 91.8118057
+            Pitch: 42.5301056
+            Yaw: -88.2160187
+            Roll: 91.8117523
           }
           Scale {
             X: 0.0347826071
@@ -1711,7 +1750,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1753,14 +1792,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -26.9153404
-            Y: 52.7403069
-            Z: 101.728325
+            X: 4.08463669
+            Y: 51.7403
+            Z: 70.7283249
           }
           Rotation {
-            Pitch: 42.530098
-            Yaw: -88.2160873
-            Roll: -88.1875839
+            Pitch: 42.5300598
+            Yaw: -88.2160187
+            Roll: -88.1875076
           }
           Scale {
             X: 0.0347826071
@@ -1768,7 +1807,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1810,14 +1849,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -28.910717
-            Y: -55.4053078
-            Z: 96.8094864
+            X: 2.08925986
+            Y: -56.4053154
+            Z: 65.8094864
           }
           Rotation {
-            Pitch: -54.4593201
-            Yaw: -95.5069427
-            Roll: -93.2460251
+            Pitch: -54.4592552
+            Yaw: -95.5068817
+            Roll: -93.2459412
           }
           Scale {
             X: 0.0347826071
@@ -1825,7 +1864,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1867,14 +1906,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -21.2172985
-            Y: -57.2610855
-            Z: 97.9875717
+            X: 9.78268
+            Y: -58.2610931
+            Z: 66.9875717
           }
           Rotation {
-            Pitch: -54.4592171
-            Yaw: -95.5068665
-            Roll: 86.7534256
+            Pitch: -54.459156
+            Yaw: -95.5068054
+            Roll: 86.7533569
           }
           Scale {
             X: 0.0347826071
@@ -1882,7 +1921,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1924,14 +1963,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -25.2393341
-            Y: -58.4781837
-            Z: 94.2070618
+            X: 5.76064205
+            Y: -59.4781914
+            Z: 63.2070618
           }
           Rotation {
             Pitch: 1.8864162
-            Yaw: -8.15004349
-            Roll: -144.502075
+            Yaw: -8.15004635
+            Roll: -144.50206
           }
           Scale {
             X: 0.0347826071
@@ -1939,7 +1978,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1981,14 +2020,14 @@ Assets {
         Name: "Cone"
         Transform {
           Location {
-            X: -25.2563591
-            Y: -54.1277199
-            Z: 100.335106
+            X: 5.74361753
+            Y: -55.1277275
+            Z: 69.3351059
           }
           Rotation {
             Pitch: 1.88639569
-            Yaw: -8.15001297
-            Roll: 35.4965973
+            Yaw: -8.15001583
+            Roll: 35.4965782
           }
           Scale {
             X: 0.0347826071
@@ -1996,7 +2035,7 @@ Assets {
             Z: 0.0434782617
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2038,14 +2077,14 @@ Assets {
         Name: "Pipe"
         Transform {
           Location {
-            X: -25.0553722
-            Y: -56.2279396
-            Z: 97.3037949
+            X: 5.9446044
+            Y: -57.2279472
+            Z: 66.3037949
           }
           Rotation {
             Pitch: -2.55385542
-            Yaw: -26.7048874
-            Roll: -56.8452721
+            Yaw: -26.7048531
+            Roll: -56.8452148
           }
           Scale {
             X: 0.0869565234
@@ -2053,7 +2092,7 @@ Assets {
             Z: 0.0652173758
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -2095,21 +2134,21 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: -30.8324661
-            Y: -54.5041809
-            Z: 94.5705566
+            X: 0.167509571
+            Y: -55.5041885
+            Z: 63.5705566
           }
           Rotation {
-            Yaw: -9.77018119e-12
+            Yaw: -9.77268527e-12
             Roll: 178.118652
           }
           Scale {
-            X: 0.0521739163
-            Y: 0.0521739163
-            Z: 0.0521739163
+            X: 0.05217392
+            Y: 0.05217392
+            Z: 0.05217392
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         ChildIds: 15292902483596524185
         ChildIds: 3692232954455715370
         ChildIds: 726761064350057423
@@ -2586,22 +2625,22 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: -28.8131046
-            Y: 52.0948601
-            Z: 99.3872604
+            X: 2.18687177
+            Y: 51.0948524
+            Z: 68.3872604
           }
           Rotation {
-            Pitch: -2.67919612
-            Yaw: -69.7894516
+            Pitch: -2.67918944
+            Yaw: -69.7894058
             Roll: -172.934402
           }
           Scale {
-            X: 0.0521739163
-            Y: 0.0521739163
-            Z: 0.0521739163
+            X: 0.05217392
+            Y: 0.05217392
+            Z: 0.05217392
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         ChildIds: 17939599974604655542
         ChildIds: 10192100723609783574
         ChildIds: 600419432760117093
@@ -2848,20 +2887,20 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: -30.8325024
-            Y: -18.6576252
-            Z: 89.6466064
+            X: 0.167473182
+            Y: -19.6576252
+            Z: 58.6466064
           }
           Rotation {
-            Roll: -77.5546112
+            Roll: -77.5545502
           }
           Scale {
-            X: 0.05217392
-            Y: 0.05217392
-            Z: 0.05217392
+            X: 0.0521739237
+            Y: 0.0521739237
+            Z: 0.0521739237
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         ChildIds: 15112971228342173389
         ChildIds: 17153141644018729922
         ChildIds: 3179817051857342236
@@ -3338,21 +3377,21 @@ Assets {
         Name: "Chain"
         Transform {
           Location {
-            X: -28.8131084
-            Y: 48.3153191
-            Z: 101.610786
+            X: 2.18686819
+            Y: 47.3153076
+            Z: 70.6107864
           }
           Rotation {
-            Yaw: -7.14934448e-12
-            Roll: -104.913231
+            Yaw: -7.14934318e-12
+            Roll: -104.913216
           }
           Scale {
-            X: 0.05217392
-            Y: 0.05217392
-            Z: 0.05217392
+            X: 0.0521739237
+            Y: 0.0521739237
+            Z: 0.0521739237
           }
         }
-        ParentId: 12700087379692095141
+        ParentId: 780299782337080603
         ChildIds: 15909188312505080681
         ChildIds: 13825538308406654679
         ChildIds: 8256025408403400066
@@ -3822,6 +3861,583 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
+      Objects {
+        Id: 1829393335477480599
+        Name: "Cloak"
+        Transform {
+          Location {
+            X: -4.00000095
+            Y: 3.81469704e-06
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.00000012
+            Y: 1.00000012
+            Z: 1.00000012
+          }
+        }
+        ParentId: 12700087379692095141
+        ChildIds: 156090642119988774
+        ChildIds: 17284388999122600372
+        ChildIds: 848044817726211931
+        ChildIds: 6399257395796118302
+        ChildIds: 11995313483111052153
+        ChildIds: 17345663961240286904
+        ChildIds: 18096688411653738132
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 156090642119988774
+        Name: "Scoop 03"
+        Transform {
+          Location {
+            X: -10.9999914
+            Y: 9.00001049
+            Z: 70
+          }
+          Rotation {
+            Pitch: 16.9999161
+            Yaw: 10.00002
+          }
+          Scale {
+            X: 0.2
+            Y: 0.1
+            Z: 0.4
+          }
+        }
+        ParentId: 1829393335477480599
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0200666692
+              B: 0.043
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6455352905536845767
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17284388999122600372
+        Name: "Pyramid - 5-Sided Truncated Hollow Thin"
+        Transform {
+          Location {
+            X: -18.0386963
+            Y: 1.72030359e-05
+            Z: -87.0728378
+          }
+          Rotation {
+            Pitch: -0.0871582
+            Yaw: 89.9998703
+            Roll: -0.996185303
+          }
+          Scale {
+            X: 0.7
+            Y: 0.3
+            Z: 1.6
+          }
+        }
+        ParentId: 1829393335477480599
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0200666692
+              B: 0.043
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.37
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.747
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9925646027824972493
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 848044817726211931
+        Name: "Pyramid - 5-Sided Truncated Hollow Thin"
+        Transform {
+          Location {
+            X: -22.5783138
+            Y: -6.99997854
+            Z: -6.00000763
+          }
+          Rotation {
+            Pitch: -0.24331665
+            Yaw: -87.0125122
+            Roll: -170.984726
+          }
+          Scale {
+            X: 0.2
+            Y: 0.3
+            Z: 0.285
+          }
+        }
+        ParentId: 1829393335477480599
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0200666692
+              B: 0.043
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9747055709997790407
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 6399257395796118302
+        Name: "Pyramid - 5-Sided Truncated Hollow Thin"
+        Transform {
+          Location {
+            X: -22.7333679
+            Y: 7.01300049
+            Z: -6
+          }
+          Rotation {
+            Pitch: -0.243286133
+            Yaw: -87.0127563
+            Roll: -170.98497
+          }
+          Scale {
+            X: -0.2
+            Y: 0.3
+            Z: 0.285
+          }
+        }
+        ParentId: 1829393335477480599
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0200666692
+              B: 0.043
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 9747055709997790407
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 11995313483111052153
+        Name: "Scoop 03"
+        Transform {
+          Location {
+            X: -16.0386963
+            Y: 1.52956873e-05
+            Z: 58
+          }
+          Rotation {
+            Pitch: 86.9976196
+          }
+          Scale {
+            X: 0.3
+            Y: 0.3
+            Z: 0.1
+          }
+        }
+        ParentId: 1829393335477480599
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0200666692
+              B: 0.043
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6455352905536845767
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17345663961240286904
+        Name: "Pyramid - 5-Sided Truncated Hollow Thin"
+        Transform {
+          Location {
+            X: -2.96105957
+            Y: 2.82388578e-06
+            Z: -42
+          }
+          Rotation {
+            Yaw: -89.9998779
+          }
+          Scale {
+            X: 0.325
+            Y: 0.25
+            Z: 0.16
+          }
+        }
+        ParentId: 1829393335477480599
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0200666692
+              B: 0.043
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.35
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5866314305483512762
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 18096688411653738132
+        Name: "Scoop 03"
+        Transform {
+          Location {
+            X: -11.0000095
+            Y: -9.99998951
+            Z: 70
+          }
+          Rotation {
+            Pitch: 16.9998894
+            Yaw: -10.0000305
+            Roll: 3.3479381e-07
+          }
+          Scale {
+            X: 0.2
+            Y: 0.1
+            Z: 0.4
+          }
+        }
+        ParentId: 1829393335477480599
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 18326201903501436663
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0200666692
+              B: 0.043
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.75
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6455352905536845767
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
     }
     Assets {
       Id: 10025162284120957192
@@ -3875,6 +4491,51 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cone_001"
+      }
+    }
+    Assets {
+      Id: 6455352905536845767
+      Name: "Scoop 03"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_scoop_003_ref"
+      }
+    }
+    Assets {
+      Id: 18326201903501436663
+      Name: "Carpet 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_carpets_001_uv"
+      }
+    }
+    Assets {
+      Id: 9925646027824972493
+      Name: "Pyramid - 3-Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pyramid_threesided_001"
+      }
+    }
+    Assets {
+      Id: 9747055709997790407
+      Name: "Curtains Tied"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_curtain_01"
+      }
+    }
+    Assets {
+      Id: 5866314305483512762
+      Name: "Curtains Straight"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_curtain_02"
       }
     }
     PrimaryAssetId {

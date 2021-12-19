@@ -51,6 +51,44 @@ Assets {
           }
         }
         ParentId: 8189841188087566378
+        ChildIds: 1509217014058507413
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1509217014058507413
+        Name: "Cloak"
+        Transform {
+          Location {
+            X: -19
+            Y: -1.66893369e-06
+            Z: -87
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3058907977643645595
         ChildIds: 5245200551324413069
         ChildIds: 13344766046539268204
         Collidable_v2 {
@@ -77,9 +115,6 @@ Assets {
         Name: "Base"
         Transform {
           Location {
-            X: -15
-            Y: -9.53678864e-07
-            Z: -87
           }
           Rotation {
           }
@@ -89,7 +124,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3058907977643645595
+        ParentId: 1509217014058507413
         ChildIds: 14137923645102983693
         ChildIds: 5115280963225630870
         ChildIds: 8529587720984981882
@@ -655,8 +690,7 @@ Assets {
         Name: "Vines"
         Transform {
           Location {
-            X: -15
-            Z: -63
+            Z: 24
           }
           Rotation {
           }
@@ -666,7 +700,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3058907977643645595
+        ParentId: 1509217014058507413
         ChildIds: 2472389176660214801
         ChildIds: 16504363563534661062
         ChildIds: 6220537269318372447

@@ -77,14 +77,14 @@ Assets {
         Name: "Wings"
         Transform {
           Location {
-            X: -13.0365906
-            Y: 47.0028687
-            Z: 81.0022049
+            X: -27
+            Y: 48.0000916
+            Z: 81
           }
           Rotation {
-            Pitch: -23.0791931
-            Yaw: -90
-            Roll: -89.9999084
+            Pitch: -25
+            Yaw: -75
+            Roll: -90
           }
           Scale {
             X: 0.322199374
@@ -5510,14 +5510,14 @@ Assets {
         Name: "Wings"
         Transform {
           Location {
-            X: -13.0387573
-            Y: -47.9970703
+            X: -27
+            Y: -47.9999084
             Z: 81
           }
           Rotation {
-            Pitch: 23.0793648
-            Yaw: -89.999939
-            Roll: -89.999939
+            Pitch: 25
+            Yaw: -105
+            Roll: -90
           }
           Scale {
             X: -0.322199374

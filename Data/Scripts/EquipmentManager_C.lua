@@ -35,24 +35,26 @@ local allListeners = {
  -- And when we are done, we should be able to just delete the template and the slots should auto dispose?
 
 function DespawnAndUnequipModel(player, modelSlot)
+    if not player.clientUserData.equipmentModels then
+        player.clientUserData.equipmentModels = { }
+    end
+
     -- TODO: Revert any mesh overrides for the specified slot
-    -- Not important since we are still rebuilding the entire model when 
-    if player.clientUserData.equipmentModels and player.clientUserData.equipmentModels[modelSlot] then
+    -- Not important since we are still rebuilding the entire model when
+    if player.clientUserData.equipmentModels[modelSlot] then
         for _, modelPiece in pairs(player.clientUserData.equipmentModels[modelSlot]) do
             if Object.IsValid(modelPiece) then
                 modelPiece:Destroy()
             end
         end
     end
+
     player.clientUserData.equipmentModels[modelSlot] = { }
 end
 
 function SpawnAndEquipModelToSlot(player, equipmentData, modelSlot)
     if not Object.IsValid(player.clientUserData.model) then
         return
-    end
-    if not player.clientUserData.equipmentModels then
-        player.clientUserData.equipmentModels = { }
     end
 
     DespawnAndUnequipModel(player, modelSlot)

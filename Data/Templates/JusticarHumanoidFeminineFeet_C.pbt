@@ -42,14 +42,14 @@ Assets {
         Name: "right_ankle"
         Transform {
           Location {
-            X: -8.11622524
-            Y: 23.0544186
-            Z: -93.544
+            X: -8.11622143
+            Y: 23.0543804
+            Z: -92
           }
           Rotation {
-            Pitch: -7.46797132
-            Yaw: -0.61609304
-            Roll: -1.07537878
+            Pitch: -2.4682312
+            Yaw: -0.611450195
+            Roll: -1.12911987
           }
           Scale {
             X: 1
@@ -240,14 +240,14 @@ Assets {
         Name: "left_ankle"
         Transform {
           Location {
-            X: -8.11625767
-            Y: -23.0544071
-            Z: -93.544
+            X: -8.11625385
+            Y: -23.054369
+            Z: -92
           }
           Rotation {
-            Pitch: -7.46755457
-            Yaw: 0.615724325
-            Roll: 1.07542145
+            Pitch: -2.46789551
+            Yaw: 0.611067593
+            Roll: 1.12913668
           }
           Scale {
             X: 1

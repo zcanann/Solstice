@@ -1724,7 +1724,6 @@ Assets {
           }
         }
         ParentId: 9160399950431738910
-        ChildIds: 12117185147134691913
         ChildIds: 12339834933463028460
         ChildIds: 5006558163354545400
         ChildIds: 16273482105294854516
@@ -1739,8 +1738,6 @@ Assets {
         ChildIds: 17800312660979697778
         ChildIds: 9478530495569462977
         ChildIds: 8162306020275484273
-        ChildIds: 1413901449225854525
-        ChildIds: 18203579524273368322
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1755,71 +1752,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 12117185147134691913
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -16.1480083
-            Y: -7.99998665
-            Z: 94
-          }
-          Rotation {
-            Yaw: 178.376221
-            Roll: -179.999969
-          }
-          Scale {
-            X: 0.3
-            Y: 0.3
-            Z: 0.5
-          }
-        }
-        ParentId: 10897828692845349957
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15883340561898099110
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0177083015
-              G: 0.0177083015
-              B: 0.0177083015
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10765242685784547638
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -3010,137 +2942,6 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
-      Objects {
-        Id: 1413901449225854525
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -16.1479988
-            Y: 6.00000954
-            Z: 94
-          }
-          Rotation {
-            Yaw: 178.376221
-            Roll: -179.999954
-          }
-          Scale {
-            X: 0.3
-            Y: 0.3
-            Z: 0.5
-          }
-        }
-        ParentId: 10897828692845349957
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15883340561898099110
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0177083015
-              G: 0.0177083015
-              B: 0.0177083015
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10765242685784547638
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 18203579524273368322
-        Name: "Teardrop - Truncated"
-        Transform {
-          Location {
-            X: -10.1480074
-            Y: -0.99999249
-            Z: 90
-          }
-          Rotation {
-            Pitch: -6
-            Yaw: 178.367218
-            Roll: -179.82933
-          }
-          Scale {
-            X: 0.3
-            Y: 0.4
-            Z: 0.4
-          }
-        }
-        ParentId: 10897828692845349957
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 15883340561898099110
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0177083015
-              G: 0.0177083015
-              B: 0.0177083015
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 10765242685784547638
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
     }
     Assets {
       Id: 16794234107403285238
@@ -3239,15 +3040,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cylinder_hq_003"
-      }
-    }
-    Assets {
-      Id: 10765242685784547638
-      Name: "Teardrop - Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_truncated_teardrop_001"
       }
     }
     Assets {

@@ -11,7 +11,7 @@ SceneNameToSceneIdMap {
   value: "e6d9d5a34ad788da2941fe8c7577b83b"
 }
 SceneNameToSceneIdMap {
-  key: "TutorialIsland"
+  key: "Vernal"
   value: "1293756241b329b58c9271a7fb9cdaae"
 }
 SceneNameToSceneIdMap {

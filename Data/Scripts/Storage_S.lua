@@ -19,6 +19,7 @@ function OnPlayerJoined(player)
 	-- Debugging
 	-- Framework.Storage.WipePlayerData(player)
 
+	-- TODO: Move elsewhere. Storage shouldn't be hiding the unused player model.
 	player.isVisible = false
 
 	-- Create a dummy character if testing in a local environment, not on the character select screen, and no characters exists

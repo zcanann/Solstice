@@ -1294,6 +1294,12 @@ Objects {
     }
   }
   ParentId: 7354809377469680473
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 12943063977454150776
@@ -1307,6 +1313,11 @@ Objects {
           Vector {
             X: -0.000122070283
             Y: 8.73114844e-11
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -1754,6 +1765,12 @@ Objects {
     }
   }
   ParentId: 9993038830515636724
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 8507706574454695684
@@ -1761,6 +1778,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "PriestHumanoidMasculineShoulders_C"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }
@@ -8330,6 +8357,12 @@ Objects {
     }
   }
   ParentId: 12643833006656352311
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 10247826512767060117
@@ -8368,6 +8401,12 @@ Objects {
     }
   }
   ParentId: 12643833006656352311
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 13922226646642227619

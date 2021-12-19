@@ -269,13 +269,14 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 200
-          Height: 200
+          Width: 12
+          Height: 12
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          AddSizeToParentIfUsingParentSize: true
           UseParentWidth: true
           UseParentHeight: true
           Image {
@@ -346,8 +347,8 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: -4
-          Height: -4
+          Width: -8
+          Height: -8
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"

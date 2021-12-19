@@ -190,7 +190,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 6435866532900058359
+              Id: 841534158063459245
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -5933,15 +5933,6 @@ Assets {
       PrimaryAsset {
         AssetType: "SkeletonAssetRef"
         AssetId: "npc_gal_wireframe_001_ref"
-      }
-    }
-    Assets {
-      Id: 6435866532900058359
-      Name: "Humanoid 1 Nancy"
-      PlatformAssetType: 26
-      PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_head_basic_002_ref"
       }
     }
     Assets {

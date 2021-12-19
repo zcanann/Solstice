@@ -19,6 +19,7 @@ Objects {
   ChildIds: 5759790081542184607
   ChildIds: 666809739031886101
   ChildIds: 3342469659628388512
+  ChildIds: 4972651318658765433
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -31,6 +32,123 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4972651318658765433
+  Name: "Costume"
+  Transform {
+    Location {
+      X: -363
+      Y: -1260
+      Z: -105
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  ChildIds: 7135079458147139713
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Costume"
+      ObjectReference {
+        SelfId: 4972651318658765433
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7135079458147139713
+  Name: "left_shoulder"
+  Transform {
+    Location {
+      X: -6.05712891
+      Y: -23.618988
+      Z: 168.666
+    }
+    Rotation {
+      Pitch: -1.64797974
+      Yaw: -3.05700684
+      Roll: 30.1110249
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4972651318658765433
+  ChildIds: 3750945871591657777
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 3750945871591657777
+  Name: "Pauldron"
+  Transform {
+    Location {
+      X: -0.907095134
+      Y: -4.62054443
+      Z: -16.2436104
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.07974362
+      Y: 1.07974362
+      Z: 1.07974362
+    }
+  }
+  ParentId: 7135079458147139713
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Pauldron"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
