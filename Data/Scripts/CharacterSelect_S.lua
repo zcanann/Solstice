@@ -333,11 +333,13 @@ end
 
 function OnRequestAcceptCustomizations(player)
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
+    UpdatePreviewEquipment(player)
     SendCharacterSelectStateData(player)
 end
 
 function OnRequestCancelCustomizations(player)
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
+    UpdatePreviewEquipment(player)
     SendCharacterSelectStateData(player)
 end
 

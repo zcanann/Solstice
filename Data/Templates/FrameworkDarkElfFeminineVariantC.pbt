@@ -163,7 +163,7 @@ Assets {
           Overrides {
             Name: "cs:Rig"
             ObjectReference {
-              SelfId: 841534158063459245
+              SubObjectId: 13737233912980089865
             }
           }
         }

@@ -33,6 +33,14 @@ function OnCharacterSelectStateChanged(stateData)
     end
 
     DetermineSelectorLimits(stateData.race, stateData.gender)
+
+    -- Update selectors
+    RefreshSelector(BASE_MODEL_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID)
+    RefreshSelector(SKIN_COLOR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID)
+    RefreshSelector(DECAL_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.DECAL_ID)
+    RefreshSelector(HAIR_STYLE_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID)
+    RefreshSelector(HAIR_COLOR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID)
+    RefreshSelector(FACIAL_HAIR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID)
 end
 
 function AwaitServerResponse()
@@ -65,7 +73,21 @@ function DetermineSelectorLimits(race, gender)
     end
 end
 
-function ChangeCustomization(selectionDelta, customizationKey)
+function RefreshSelector(selector, customizationKey)
+    local customizations = allCustomizations[activeCustomizationKey]
+    local limit = activeLimits[customizationKey] or 1
+
+    if not customizations then
+        Framework.Warn("No customizations table found for active gender/race")
+        return
+    end
+
+    customizations[customizationKey] = CoreMath.Clamp((customizations[customizationKey] or 1), 1, limit)
+    selector:GetCustomProperty("LeftButton"):GetObject().isInteractable = customizations[customizationKey] > 1
+    selector:GetCustomProperty("RightButton"):GetObject().isInteractable = customizations[customizationKey] < limit
+end
+
+function ChangeCustomization(selector, selectionDelta, customizationKey)
     local customizations = allCustomizations[activeCustomizationKey]
     local limit = activeLimits[customizationKey] or 1
 
@@ -75,31 +97,33 @@ function ChangeCustomization(selectionDelta, customizationKey)
     end
 
     customizations[customizationKey] = CoreMath.Clamp((customizations[customizationKey] or 1) + selectionDelta, 1, limit)
+    RefreshSelector(selector, customizationKey)
+
     RequestChangeCustomizations()
 end
 
 function ChangeBaseModel(selectionDelta)
-    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID)
+    ChangeCustomization(BASE_MODEL_SELECTOR, selectionDelta, Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID)
 end
 
 function ChangeSkinColor(selectionDelta)
-    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID)
+    ChangeCustomization(SKIN_COLOR_SELECTOR, selectionDelta, Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID)
 end
 
 function ChangeDecal(selectionDelta)
-    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.DECAL_ID)
+    ChangeCustomization(DECAL_SELECTOR, selectionDelta, Framework.Storage.Keys.CharacterCustomizations.DECAL_ID)
 end
 
 function ChangeHairStyle(selectionDelta)
-    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID)
+    ChangeCustomization(HAIR_STYLE_SELECTOR, selectionDelta, Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID)
 end
 
 function ChangeHairColor(selectionDelta)
-    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID)
+    ChangeCustomization(HAIR_COLOR_SELECTOR, selectionDelta, Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID)
 end
 
 function ChangeFacialHair(selectionDelta)
-    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID)
+    ChangeCustomization(FACIAL_HAIR_SELECTOR, selectionDelta, Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID)
 end
 
 function RequestChangeCustomizations()

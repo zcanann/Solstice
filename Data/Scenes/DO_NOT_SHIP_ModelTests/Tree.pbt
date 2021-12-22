@@ -608,20 +608,6 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 4314697004951035995
-      value {
-        Overrides {
-          Name: "cs:Rig"
-          ObjectReference {
-            SelfId: 6602588187611839139
-            SubObjectId: 15068342354013334691
-            InstanceId: 10681155132822690672
-            TemplateId: 6411149018742534969
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
       key: 13737233912980089865
       value {
         Overrides {
@@ -639,14 +625,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -695,28 +673,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16341256764996479740
-      value {
-        Overrides {
-          Name: "cs:Rig"
-          ObjectReference {
-            SelfId: 6602588187611839139
-            SubObjectId: 15068342354013334691
-            InstanceId: 10681155132822690672
-            TemplateId: 6411149018742534969
           }
         }
       }
@@ -823,22 +779,11 @@ Objects {
           Rotator {
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 9510860519320597735
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -879,22 +824,11 @@ Objects {
           Rotator {
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 4853722859934104398
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {

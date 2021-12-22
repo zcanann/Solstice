@@ -15,8 +15,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
-        ChildIds: 5865388806172223855
+        ParentId: 12138717742109737789
+        ChildIds: 9396041385689391901
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:color"
@@ -81,7 +81,53 @@ Assets {
         }
       }
       Objects {
-        Id: 5865388806172223855
+        Id: 9396041385689391901
+        Name: "ObjectAttacher_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 2.04905609e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10696919728772896857
+        ChildIds: 13735681083467130701
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Rig"
+            ObjectReference {
+              SubObjectId: 10696919728772896857
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9584704415424499449
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 13735681083467130701
         Name: "head"
         Transform {
           Location {
@@ -94,9 +140,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10696919728772896857
-        ChildIds: 14950327184170389637
-        ChildIds: 16822928083599670175
+        ParentId: 9396041385689391901
+        ChildIds: 9192154100710158897
+        ChildIds: 3157987431360167611
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -114,13 +160,13 @@ Assets {
         }
       }
       Objects {
-        Id: 14950327184170389637
+        Id: 9192154100710158897
         Name: "Cone - Soft 01"
         Transform {
           Location {
-            X: -3
+            X: -2.99999547
             Y: 5
-            Z: 90
+            Z: 89
           }
           Rotation {
             Pitch: 30
@@ -132,7 +178,7 @@ Assets {
             Z: 0.125
           }
         }
-        ParentId: 5865388806172223855
+        ParentId: 13735681083467130701
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -187,13 +233,13 @@ Assets {
         }
       }
       Objects {
-        Id: 16822928083599670175
+        Id: 3157987431360167611
         Name: "Cone - Soft 01"
         Transform {
           Location {
-            X: -3
-            Y: -5
-            Z: 90
+            X: -3.00000262
+            Y: -4.99999619
+            Z: 89
           }
           Rotation {
             Pitch: 29.9999847
@@ -205,7 +251,7 @@ Assets {
             Z: 0.125
           }
         }
-        ParentId: 5865388806172223855
+        ParentId: 13735681083467130701
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

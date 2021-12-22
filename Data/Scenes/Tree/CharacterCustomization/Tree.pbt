@@ -1860,6 +1860,15 @@ Objects {
       }
     }
     ParameterOverrideMap {
+      key: 5305218615239389468
+      value {
+        Overrides {
+          Name: "UIEnabled"
+          Bool: true
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 13964586513088852558
       value {
         Overrides {
