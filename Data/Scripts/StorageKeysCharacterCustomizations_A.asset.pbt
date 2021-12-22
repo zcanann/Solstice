@@ -274,6 +274,18 @@ Assets {
           Id: 13929251522609491248
         }
       }
+      Overrides {
+        Name: "cs:StorageKeysRaces"
+        AssetReference {
+          Id: 5644412661524982846
+        }
+      }
+      Overrides {
+        Name: "cs:StorageKeysGenders"
+        AssetReference {
+          Id: 11986047811134497832
+        }
+      }
     }
     Assets {
       Id: 968683000654906430

@@ -1,8 +1,7 @@
 local CharacterCustomizationKeys = { }
 
-local MeshKey = "mesh"
-local HairColorsKey = "hair_colors"
-local SkinColorsKey = "skin_color"
+local RaceKeys = require(script:GetCustomProperty("StorageKeysRaces"))
+local GenderKeys = require(script:GetCustomProperty("StorageKeysGenders"))
 
 local BALD = ""
 local HUMANOID_FEMININE_HAIR_1 = script:GetCustomProperty("HumanoidFeminineHair1")
@@ -140,144 +139,272 @@ CharacterCustomizationKeys.HAIR_STYLE_ID = "hair_style"
 CharacterCustomizationKeys.HAIR_COLOR_ID = "hair_color"
 CharacterCustomizationKeys.FACIAL_HAIR_ID = "facial_hair"
 
-CharacterCustomizationKeys.COSMETIC_OPTIONS = { }
+CharacterCustomizationKeys.HAIR_OPTIONS = "hair_options"
+CharacterCustomizationKeys.HAIR_MESH = "mesh"
+CharacterCustomizationKeys.HAIR_COLORS = "hair_colors"
+CharacterCustomizationKeys.SKIN_COLORS = "skin_color"
+
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS = { }
 
 -- Human
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_3, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_5, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_6, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_7, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A]
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_C] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A]
 
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_3, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_5, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_7, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_8, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A]
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A]
 
 -- Ascendent
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_3, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_5, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_7, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_8, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A]
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_C] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A]
 
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_3, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_5, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_7, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_8, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A]
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A]
 
 -- Vanara
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A] =
 {
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_3, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_5, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_6, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_7, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A]
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_C] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A]
 
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_MASCULINE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_MASCULINE_VARIANT_A] =
 {
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_6, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
 
 -- Orc
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_A] =
 {
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_3, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_A]
 
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_MASCULINE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_MASCULINE_VARIANT_A] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
 
 -- Dark Elf
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A] =
 {
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_3, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A]
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_C] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A]
 
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A] =
 {
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_4, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_5, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_7, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_8, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A]
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A]
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A]
 
 -- Undead
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_FEMININE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_FEMININE_VARIANT_A] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_6, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_7, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_FEMININE_HAIR_8, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_FEMININE_VARIANT_B] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_FEMININE_VARIANT_B] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
 
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_MASCULINE_VARIANT_A] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_MASCULINE_VARIANT_A] =
 {
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_1, [HairColorsKey] = { }, [SkinColorsKey] = { } },
-    { [MeshKey] = HUMANOID_MASCULINE_HAIR_2, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
-CharacterCustomizationKeys.COSMETIC_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_MASCULINE_VARIANT_B] =
+CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_MASCULINE_VARIANT_B] =
 {
-    { [MeshKey] = BALD, [HairColorsKey] = { }, [SkinColorsKey] = { } },
+    [CharacterCustomizationKeys.HAIR_OPTIONS] =
+    {
+        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+    }
 }
+
+CharacterCustomizationKeys.GetModelTable = function(race, gender)
+    local modelTable = nil
+    if race == RaceKeys.ORC then
+        if gender == GenderKeys.MASCULINE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_ORC_MASCULINE_MODELS
+        elseif gender == GenderKeys.FEMININE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_MODELS
+        end
+    elseif race == RaceKeys.UNDEAD then
+        if gender == GenderKeys.MASCULINE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_UNDEAD_MASCULINE_MODELS
+        elseif gender == GenderKeys.FEMININE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_UNDEAD_FEMININE_MODELS
+        end
+    elseif race == RaceKeys.DARK_ELF then
+        if gender == GenderKeys.MASCULINE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_MODELS
+        elseif gender == GenderKeys.FEMININE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_MODELS
+        end
+    elseif race == RaceKeys.HUMAN then
+        if gender == GenderKeys.MASCULINE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_MODELS
+        elseif gender == GenderKeys.FEMININE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_MODELS
+        end
+    elseif race == RaceKeys.ASCENDANT then
+        if gender == GenderKeys.MASCULINE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_MODELS
+        elseif gender == GenderKeys.FEMININE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_MODELS
+        end
+    elseif race == RaceKeys.VANARA then
+        if gender == GenderKeys.MASCULINE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_VANARA_MASCULINE_MODELS
+        elseif gender == GenderKeys.FEMININE then
+            modelTable = CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_MODELS
+        end
+    end
+    return modelTable
+end
 
 return CharacterCustomizationKeys

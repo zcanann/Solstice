@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
+        ParentId: 12138717742109737789
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -50,10 +50,10 @@ Assets {
               Id: 12203642515467150374
             }
             SkinnedMeshes {
-              Id: 3884392704585919077
+              Id: 841534158063459245
             }
             SkinnedMeshes {
-              Id: 10643089342797101619
+              Id: 841534158063459245
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -81,24 +81,6 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_head_sport_001_ref"
-      }
-    }
-    Assets {
-      Id: 3884392704585919077
-      Name: "Humanoid 1 Peasant Pants"
-      PlatformAssetType: 26
-      PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_lower_fantasy_000_ref"
-      }
-    }
-    Assets {
-      Id: 10643089342797101619
-      Name: "Humanoid 1 Peasant Shirt"
-      PlatformAssetType: 26
-      PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_upper_fantasy_000_ref"
       }
     }
     PrimaryAssetId {

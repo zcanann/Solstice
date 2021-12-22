@@ -13,7 +13,9 @@ local FACIAL_HAIR_SELECTOR = script:GetCustomProperty("FacialHairSelector"):Wait
 
 local allCustomizations = { }
 local cancelCustomizatons = nil
+
 local activeCustomizationKey = nil
+local activeLimits = { }
 
 function OnCharacterSelectStateChanged(stateData)
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CUSTOMIZE_NEW_CHARACTER then
@@ -29,70 +31,75 @@ function OnCharacterSelectStateChanged(stateData)
             allCustomizations[activeCustomizationKey] = { }
         end
     end
+
+    DetermineSelectorLimits(stateData.race, stateData.gender)
 end
 
 function AwaitServerResponse()
     CHARACTER_CUSTOMIZE_SCREEN.visibility = Visibility.FORCE_OFF
 end
 
-function ChangeBaseModel(selectionDelta)
-    local customizations = allCustomizations[activeCustomizationKey]
-    if not customizations then return end
-    if not customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] then
-        customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] = 1
+function DetermineSelectorLimits(race, gender)
+    local modelTable = Framework.Storage.Keys.CharacterCustomizations.GetModelTable(race, gender)
+    if modelTable then
+        activeLimits[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] = Framework.Utils.Table.Count(modelTable)
+
+        local customizations = allCustomizations[activeCustomizationKey]
+        local modelId = customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] or 1
+
+        if modelTable[modelId] then
+            local modelTemplate = modelTable[modelId]
+            local customizationOptions = Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATION_OPTIONS[modelTemplate]
+            if customizationOptions then
+                activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = Framework.Utils.Table.Count(customizationOptions[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLORS])
+                activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] = Framework.Utils.Table.Count(customizationOptions[Framework.Storage.Keys.CharacterCustomizations.HAIR_OPTIONS])
+
+                if activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] <= 0 then
+                    activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = 1
+                end
+                if activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] <= 0 then
+                    activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] = 1
+                end
+            end
+        end
     end
-    customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] = customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] + selectionDelta
+end
+
+function ChangeCustomization(selectionDelta, customizationKey)
+    local customizations = allCustomizations[activeCustomizationKey]
+    local limit = activeLimits[customizationKey] or 1
+
+    if not customizations then
+        Framework.Warn("No customizations table found for active gender/race")
+        return
+    end
+
+    customizations[customizationKey] = CoreMath.Clamp((customizations[customizationKey] or 1) + selectionDelta, 1, limit)
     RequestChangeCustomizations()
+end
+
+function ChangeBaseModel(selectionDelta)
+    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID)
 end
 
 function ChangeSkinColor(selectionDelta)
-    local customizations = allCustomizations[activeCustomizationKey]
-    if not customizations then return end
-    if not customizations[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] then
-        customizations[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = 1
-    end
-    customizations[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = customizations[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] + selectionDelta
-    RequestChangeCustomizations()
+    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID)
 end
 
 function ChangeDecal(selectionDelta)
-    local customizations = allCustomizations[activeCustomizationKey]
-    if not customizations then return end
-    if not customizations[Framework.Storage.Keys.CharacterCustomizations.DECAL_ID] then
-        customizations[Framework.Storage.Keys.CharacterCustomizations.DECAL_ID] = 1
-    end
-    customizations[Framework.Storage.Keys.CharacterCustomizations.DECAL_ID] = customizations[Framework.Storage.Keys.CharacterCustomizations.DECAL_ID] + selectionDelta
-    RequestChangeCustomizations()
+    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.DECAL_ID)
 end
 
 function ChangeHairStyle(selectionDelta)
-    local customizations = allCustomizations[activeCustomizationKey]
-    if not customizations then return end
-    if not customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] then
-        customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] = 1
-    end
-    customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] + selectionDelta
-    RequestChangeCustomizations()
+    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID)
 end
 
 function ChangeHairColor(selectionDelta)
-    local customizations = allCustomizations[activeCustomizationKey]
-    if not customizations then return end
-    if not customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] then
-        customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] = 1
-    end
-    customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] + selectionDelta
-    RequestChangeCustomizations()
+    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID)
 end
 
 function ChangeFacialHair(selectionDelta)
-    local customizations = allCustomizations[activeCustomizationKey]
-    if not customizations then return end
-    if not customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] then
-        customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] = 1
-    end
-    customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] = customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] + selectionDelta
-    RequestChangeCustomizations()
+    ChangeCustomization(selectionDelta, Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID)
 end
 
 function RequestChangeCustomizations()
@@ -116,7 +123,7 @@ function OnBeginCustomizeCharacterClicked()
     -- TODO: Event for awaiting server response
 
     if activeCustomizationKey then
-        cancelCustomizatons = allCustomizations[activeCustomizationKey] 
+        cancelCustomizatons = allCustomizations[activeCustomizationKey]
     end
 end
 

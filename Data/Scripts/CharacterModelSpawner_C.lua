@@ -90,45 +90,7 @@ function RebuildModel(proximityObjectId)
     local hairColorId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] or 1
     local facialHairId = customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] or 1
 
-    local modelTable = nil
-
-    if race == Framework.Storage.Keys.Races.ORC then
-        if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_ORC_MASCULINE_MODELS
-        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_ORC_FEMININE_MODELS
-        end
-    elseif race == Framework.Storage.Keys.Races.UNDEAD then
-        if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_UNDEAD_MASCULINE_MODELS
-        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_UNDEAD_FEMININE_MODELS
-        end
-    elseif race == Framework.Storage.Keys.Races.DARK_ELF then
-        if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_DARK_ELF_MASCULINE_MODELS
-        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_DARK_ELF_FEMININE_MODELS
-        end
-    elseif race == Framework.Storage.Keys.Races.HUMAN then
-        if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_HUMAN_MASCULINE_MODELS
-        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_HUMAN_FEMININE_MODELS
-        end
-    elseif race == Framework.Storage.Keys.Races.ASCENDANT then
-        if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_ASCENDANT_MASCULINE_MODELS
-        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_ASCENDANT_FEMININE_MODELS
-        end
-    elseif race == Framework.Storage.Keys.Races.VANARA then
-        if gender == Framework.Storage.Keys.Genders.MASCULINE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_VANARA_MASCULINE_MODELS
-        elseif gender == Framework.Storage.Keys.Genders.FEMININE then
-            modelTable = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_VANARA_FEMININE_MODELS
-        end
-    end
+    local modelTable = Framework.Storage.Keys.CharacterCustomizations.GetModelTable(race, gender)
 
     if modelTable then
         local modelCount = Framework.Utils.Table.Count(modelTable)

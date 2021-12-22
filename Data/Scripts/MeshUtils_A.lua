@@ -28,8 +28,6 @@ MeshUtils.CopyMeshOverrides = function (animatedMesh, animatedMeshOverrides)
 			overridenIds[index] = true
 			-- Override the mesh if the slots are different
 			if animatedMesh:GetMeshForSlot(index) ~= meshOverrideId then
-				print(animatedMesh:GetMeshForSlot(index))
-				print(meshOverrideId)
 				animatedMesh:SetMeshForSlot(index, meshOverrideId)
 			end
 		end
