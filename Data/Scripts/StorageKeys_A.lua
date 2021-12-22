@@ -4,6 +4,7 @@ local StorageKeys = { }
 
 StorageKeys.STAMINA = "stamina"
 
+StorageKeys.CharacterCustomizations = require(script:GetCustomProperty("StorageKeysCharacterCustomizations"))
 StorageKeys.Characters = require(script:GetCustomProperty("StorageKeysCharacters"))
 StorageKeys.Classes = require(script:GetCustomProperty("StorageKeysClasses"))
 StorageKeys.Factions = require(script:GetCustomProperty("StorageKeysFactions"))

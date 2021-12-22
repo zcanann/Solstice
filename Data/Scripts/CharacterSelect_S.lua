@@ -74,18 +74,31 @@ function UpdatePreviewEquipment(player)
         Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, { ["id"] = class .. "_hands" })
         Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, { ["id"] = class .. "_legs" })
         Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, { ["id"] = class .. "_feet" })
+    elseif characterSelectScreenStates[player].state == Framework.Events.Keys.CharacterSelect.State.CUSTOMIZE_NEW_CHARACTER then
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, { nil })
     elseif characterSelectScreenStates[player].state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, nil)
-        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, nil)
+        -- TODO: Load models from saved equipment
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_MAINHAND, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_OFFHAND, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HEAD, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_BACK, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_SHOULDERS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_CHEST, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WRISTS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_WAIST, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_HANDS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_LEGS, { nil })
+        Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Equipment.MODEL_FEET, { nil })
     end
 end
 
@@ -111,7 +124,20 @@ function OnBeginCreateNewCharacterRequested(player)
         SetActiveRace(player, Framework.Storage.Keys.Races.ITHKUIL[math.random(raceCount)])
     end
 
+    SetActiveCustomizations(player, { })
+
     characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
+    UpdatePreviewEquipment(player)
+    SendCharacterSelectStateData(player)
+end
+
+function OnCustomizeCharacterRequested(player)
+    if characterSelectScreenStates[player].state ~= Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
+        warn("Attempted to customize character from invalid state")
+        return
+    end
+
+    characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.CUSTOMIZE_NEW_CHARACTER
     UpdatePreviewEquipment(player)
     SendCharacterSelectStateData(player)
 end
@@ -273,6 +299,14 @@ function SetActiveClass(player, class)
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CLASS, class)
 end
 
+function SetActiveCustomizations(player, customizations)
+    characterSelectScreenStates[player].customizations = customizations
+
+    UpdatePreviewEquipment(player)
+
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CUSTOMIZATIONS, customizations)
+end
+
 function SetActiveName(player, name)
     characterSelectScreenStates[player].name = name
 end
@@ -289,6 +323,21 @@ end
 
 function OnRequestSetActiveClass(player, class)
     SetActiveClass(player, class)
+    SendCharacterSelectStateData(player)
+end
+
+function OnRequestSetActiveCustomizations(player, customizations)
+    SetActiveCustomizations(player, customizations)
+    SendCharacterSelectStateData(player)
+end
+
+function OnRequestAcceptCustomizations(player)
+    characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
+    SendCharacterSelectStateData(player)
+end
+
+function OnRequestCancelCustomizations(player)
+    characterSelectScreenStates[player].state = Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER
     SendCharacterSelectStateData(player)
 end
 
@@ -337,6 +386,7 @@ Game.playerLeftEvent:Connect(OnPlayerLeft)
 
 Framework.Events.ListenForPlayer(Framework.Events.Keys.Networking.EVENT_CLIENT_READY_TO_RECEIVE_PROXIMITY_DATA, OnPlayerReadyToReceiveProximityData)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER, OnBeginCreateNewCharacterRequested)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CUSTOMIZE_CHARACTER, OnCustomizeCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_CREATE_NEW_CHARACTER, OnCancelCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER, OnFinalizeCreateNewCharacterRequested)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SELECT_CHARACTER, OnRequestSelectCharacter)
@@ -345,4 +395,7 @@ Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQ
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, OnRequestSetActiveRace)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_GENDER, OnRequestSetActiveGender)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CLASS, OnRequestSetActiveClass)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CUSTOMIZATIONS, OnRequestSetActiveCustomizations)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ACCEPT_CUSTOMIZATIONS, OnRequestAcceptCustomizations)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_CUSTOMIZATIONS, OnRequestCancelCustomizations)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, OnEnterWorldRequested)

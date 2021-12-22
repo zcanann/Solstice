@@ -1,7 +1,7 @@
 Name: "GenderButtons"
-RootId: 11863232996044764122
+RootId: 9401417775836168631
 Objects {
-  Id: 14503708672416969410
+  Id: 1174101774050743729
   Name: "ChangeGenderButton_C"
   Transform {
     Scale {
@@ -10,7 +10,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11863232996044764122
+  ParentId: 9401417775836168631
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -58,7 +58,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3493990222306988427
+  Id: 1541670592980411361
   Name: "ChangeGenderButton_C"
   Transform {
     Location {
@@ -75,7 +75,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11863232996044764122
+  ParentId: 9401417775836168631
   TemplateInstance {
     ParameterOverrideMap {
       key: 6131367025017027622

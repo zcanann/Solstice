@@ -125,15 +125,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15434877182000516094
-  Name: "Smoke Volume VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_smoke_volume_vfx"
-  }
-}
-Assets {
   Id: 15288970234502648924
   Name: "Rock Pile 002"
   PlatformAssetType: 1
@@ -350,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10294735921380463590
+  Name: "Emissive Glow Transparent"
+  PlatformAssetType: 2
+  PrimaryAsset {
+    AssetType: "MaterialAssetRef"
+    AssetId: "mi_basic_emissive_001"
+  }
+}
+Assets {
   Id: 10044604052345943309
   Name: "Humanoid 1 Core Shirt"
   PlatformAssetType: 26
@@ -527,15 +527,6 @@ Assets {
   PrimaryAsset {
     AssetType: "StaticMeshAssetRef"
     AssetId: "F1_Text_014"
-  }
-}
-Assets {
-  Id: 3764446791856130062
-  Name: "Fire Volume VFX"
-  PlatformAssetType: 8
-  PrimaryAsset {
-    AssetType: "VfxBlueprintAssetRef"
-    AssetId: "fxbp_fire_volume_vfx"
   }
 }
 Assets {

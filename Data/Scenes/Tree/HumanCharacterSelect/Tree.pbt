@@ -1098,7 +1098,7 @@ Objects {
           Vector {
             X: 105
             Y: 29260
-            Z: 105
+            Z: -255
           }
         }
         Overrides {
@@ -1120,112 +1120,6 @@ Objects {
     TemplateAsset {
       Id: 9388604537018251804
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 4510136718315167387
-  Name: "Fire Volume VFX"
-  Transform {
-    Location {
-      X: 185
-      Y: 29305
-      Z: 440
-    }
-    Rotation {
-      Yaw: 120.000008
-    }
-    Scale {
-      X: 11
-      Y: 28.5
-      Z: 5.5
-    }
-  }
-  ParentId: 17435930762379839603
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 3764446791856130062
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 11184223816214129555
-  Name: "Smoke Volume VFX"
-  Transform {
-    Location {
-      X: 200
-      Y: 29515
-      Z: 525
-    }
-    Rotation {
-      Yaw: 120.000008
-    }
-    Scale {
-      X: 20.5
-      Y: 32.5
-      Z: 12.5
-    }
-  }
-  ParentId: 17435930762379839603
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Density"
-      Float: 2
-    }
-    Overrides {
-      Name: "bp:Particle Scale Multiplier"
-      Float: 4
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 15434877182000516094
-    }
-    TeamSettings {
-    }
-    Vfx {
-      AutoPlay: true
-    }
-  }
-  Relevance {
-    Value: "mc:eproxyrelevance:critical"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -3065,7 +2959,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -3122,7 +3028,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -3178,7 +3096,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -3234,7 +3164,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -4041,7 +3983,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -4098,7 +4052,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -4154,7 +4120,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -4210,7 +4188,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -12542,7 +12532,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -12599,7 +12601,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -12655,7 +12669,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -12711,7 +12737,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -13519,7 +13557,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -13576,7 +13626,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -13632,7 +13694,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -13688,7 +13762,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -23934,7 +24020,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -23991,7 +24089,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -24047,7 +24157,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -24103,7 +24225,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -25118,7 +25252,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -25175,7 +25321,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -25231,7 +25389,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -25287,7 +25457,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -25852,7 +26034,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -25909,7 +26103,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -25965,7 +26171,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -26021,7 +26239,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -26119,7 +26349,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -26176,7 +26418,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -26232,7 +26486,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -26288,7 +26554,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -28805,7 +29083,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -28862,7 +29152,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -28918,7 +29220,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -28974,7 +29288,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -36512,7 +36838,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -36569,7 +36907,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -36625,7 +36975,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -36681,7 +37043,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -38484,7 +38858,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -38541,7 +38927,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -38597,7 +38995,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -38653,7 +39063,19 @@ Objects {
     Overrides {
       Name: "ma:Font.Bevel:id"
       AssetReference {
-        Id: 17273442372396686502
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Faces:id"
+      AssetReference {
+        Id: 10294735921380463590
+      }
+    }
+    Overrides {
+      Name: "ma:Font.Sides:id"
+      AssetReference {
+        Id: 10294735921380463590
       }
     }
   }
@@ -39637,12 +40059,6 @@ Objects {
   ParentId: 15355557793168884535
   UnregisteredParameters {
     Overrides {
-      Name: "ma:Shared_Trim:id"
-      AssetReference {
-        Id: 11595185737799982824
-      }
-    }
-    Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
       Bool: false
     }
@@ -39942,12 +40358,6 @@ Objects {
   }
   ParentId: 5611365033761794004
   UnregisteredParameters {
-    Overrides {
-      Name: "ma:Shared_Trim:id"
-      AssetReference {
-        Id: 11595185737799982824
-      }
-    }
     Overrides {
       Name: "ma:Shared_BaseMaterial:smart"
       Bool: false

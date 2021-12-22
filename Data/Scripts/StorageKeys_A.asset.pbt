@@ -5,6 +5,12 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:StorageKeysCharacterCustomizations"
+        AssetReference {
+          Id: 10449131562682306440
+        }
+      }
+      Overrides {
         Name: "cs:StorageKeysCharacters"
         AssetReference {
           Id: 7968127808294420178

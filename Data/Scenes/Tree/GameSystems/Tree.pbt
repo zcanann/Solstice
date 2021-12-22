@@ -71,7 +71,7 @@ Objects {
 }
 Objects {
   Id: 2411524562767423272
-  Name: "RaceSpawner_C"
+  Name: "CharacterModelSpawner_C"
   Transform {
     Location {
     }

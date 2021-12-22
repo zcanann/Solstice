@@ -48,6 +48,8 @@ function OnPlayerJoined(player)
 		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.TITLE))
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ZONE,
 		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.ZONE))
+	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CUSTOMIZATIONS,
+		Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATIONS))
 
 	-- HP should come from a stored key, max HP/SP should be computed
 	Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, 150)

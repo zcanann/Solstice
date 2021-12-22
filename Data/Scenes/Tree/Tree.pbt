@@ -23,6 +23,7 @@ Objects {
   ChildIds: 17798366900404206124
   ChildIds: 985119534114562754
   ChildIds: 2073809368899518713
+  ChildIds: 15371973278299898600
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -38,6 +39,46 @@ Objects {
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 15371973278299898600
+  Name: "FrameworkGraveSimple_A"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4040291059104990903
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkGraveSimple_A"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -33095
+            Y: -25419
+            Z: -1
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 75
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10544247313926624971
+    }
   }
 }
 Objects {

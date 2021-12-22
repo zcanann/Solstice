@@ -165,18 +165,15 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:0:Shared_Detail3:color"
-            Color {
-              R: 0.744
-              G: 0.744
-              B: 0.744
-              A: 1
-            }
-          }
-          Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
             AssetReference {
               Id: 11193898931303947221
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail3:id"
+            AssetReference {
+              Id: 17803366332466114312
             }
           }
         }
@@ -366,6 +363,15 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_wood_raw_001_uv"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {

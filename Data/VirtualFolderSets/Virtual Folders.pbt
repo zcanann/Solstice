@@ -276,58 +276,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Human"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Human"
-      VirtualFolderPath: "Walls"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Human"
-      VirtualFolderPath: "Floors"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Human"
-      VirtualFolderPath: "Decor"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Human"
-      VirtualFolderPath: "Stairs"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Orcish"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Orcish"
-      VirtualFolderPath: "Decor"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Orcish"
-      VirtualFolderPath: "Doors"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Buildings_Orcish"
-      VirtualFolderPath: "Walls"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "UI"
       VirtualFolderPath: "WorldSpace"
       PlatformAssetType: 3
@@ -438,15 +386,6 @@ Assets {
       PlatformAssetType: 13
     }
     Folders {
-      VirtualFolderPath: "Jordan"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Jordan"
-      VirtualFolderPath: "Spanish"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "EquipmentModels"
       VirtualFolderPath: "Sets"
       VirtualFolderPath: "Warrior"
@@ -486,6 +425,73 @@ Assets {
       VirtualFolderPath: "EquipmentModels"
       VirtualFolderPath: "Sets"
       VirtualFolderPath: "Necromancer"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "Props"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Graveyard"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Docks"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Orcish"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Orcish"
+      VirtualFolderPath: "Decor"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Orcish"
+      VirtualFolderPath: "Doors"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Orcish"
+      VirtualFolderPath: "Walls"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Human"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Human"
+      VirtualFolderPath: "Walls"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Human"
+      VirtualFolderPath: "Floors"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Human"
+      VirtualFolderPath: "Decor"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Human"
+      VirtualFolderPath: "Stairs"
       PlatformAssetType: 5
     }
   }

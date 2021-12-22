@@ -1,7 +1,7 @@
 Name: "Roof"
-RootId: 4901287462868873014
+RootId: 5529652243817519363
 Objects {
-  Id: 4795177945619457790
+  Id: 8905917530307807839
   Name: "Prop_LongBoneHorn"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 2.23454952
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -88,7 +88,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4657953985379460999
+  Id: 12630678390020021729
   Name: "Pyramid - 6-Sided Truncated Polished"
   Transform {
     Location {
@@ -104,7 +104,7 @@ Objects {
       Z: 2.52494144
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -154,7 +154,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12812077613381253712
+  Id: 5437113602770968748
   Name: "Pyramid - 6-Sided Truncated Polished"
   Transform {
     Location {
@@ -170,7 +170,7 @@ Objects {
       Z: 1.79481781
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -221,7 +221,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8389120708073941459
+  Id: 7936146184159786869
   Name: "Group"
   Transform {
     Location {
@@ -237,10 +237,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4901287462868873014
-  ChildIds: 1491131943807759847
-  ChildIds: 4171489968538654096
-  ChildIds: 15221948293739373336
+  ParentId: 5529652243817519363
+  ChildIds: 4407528850991938744
+  ChildIds: 5224151301463039317
+  ChildIds: 7661932867448633565
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -260,7 +260,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15221948293739373336
+  Id: 7661932867448633565
   Name: "Pyramid - 6-Sided Truncated Polished"
   Transform {
     Location {
@@ -278,7 +278,7 @@ Objects {
       Z: 18.75
     }
   }
-  ParentId: 8389120708073941459
+  ParentId: 7936146184159786869
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -328,7 +328,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4171489968538654096
+  Id: 5224151301463039317
   Name: "ClientContext"
   Transform {
     Location {
@@ -343,9 +343,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8389120708073941459
-  ChildIds: 6765807040105835917
-  ChildIds: 14401331387057518611
+  ParentId: 7936146184159786869
+  ChildIds: 1869061762401120486
+  ChildIds: 962671910479377950
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -364,7 +364,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14401331387057518611
+  Id: 962671910479377950
   Name: "Fire Volume VFX"
   Transform {
     Location {
@@ -383,7 +383,7 @@ Objects {
       Z: 5.40313339
     }
   }
-  ParentId: 4171489968538654096
+  ParentId: 5224151301463039317
   UnregisteredParameters {
     Overrides {
       Name: "bp:Density"
@@ -449,7 +449,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6765807040105835917
+  Id: 1869061762401120486
   Name: "Smoke Volume VFX"
   Transform {
     Location {
@@ -463,7 +463,7 @@ Objects {
       Z: 28.5630074
     }
   }
-  ParentId: 4171489968538654096
+  ParentId: 5224151301463039317
   UnregisteredParameters {
     Overrides {
       Name: "bp:Particle Scale Multiplier"
@@ -505,7 +505,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1491131943807759847
+  Id: 4407528850991938744
   Name: "Group"
   Transform {
     Location {
@@ -519,13 +519,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8389120708073941459
-  ChildIds: 4128729910823491353
-  ChildIds: 9212230002051331697
-  ChildIds: 17340842082743509648
-  ChildIds: 13156734925134868575
-  ChildIds: 5949577307335192966
-  ChildIds: 11763971135546375816
+  ParentId: 7936146184159786869
+  ChildIds: 739137986750699176
+  ChildIds: 16685554585011104487
+  ChildIds: 12504041735455088402
+  ChildIds: 13595365373930921327
+  ChildIds: 7993532306562618512
+  ChildIds: 1203168235232321201
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -545,7 +545,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11763971135546375816
+  Id: 1203168235232321201
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -564,7 +564,7 @@ Objects {
       Z: 6.08076239
     }
   }
-  ParentId: 1491131943807759847
+  ParentId: 4407528850991938744
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -614,7 +614,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5949577307335192966
+  Id: 7993532306562618512
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -633,7 +633,7 @@ Objects {
       Z: 6.08076239
     }
   }
-  ParentId: 1491131943807759847
+  ParentId: 4407528850991938744
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -683,7 +683,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13156734925134868575
+  Id: 13595365373930921327
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -702,7 +702,7 @@ Objects {
       Z: 6.08076239
     }
   }
-  ParentId: 1491131943807759847
+  ParentId: 4407528850991938744
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -752,7 +752,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17340842082743509648
+  Id: 12504041735455088402
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -771,7 +771,7 @@ Objects {
       Z: 6.08076239
     }
   }
-  ParentId: 1491131943807759847
+  ParentId: 4407528850991938744
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -821,7 +821,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9212230002051331697
+  Id: 16685554585011104487
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -840,7 +840,7 @@ Objects {
       Z: 6.08076239
     }
   }
-  ParentId: 1491131943807759847
+  ParentId: 4407528850991938744
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -890,7 +890,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4128729910823491353
+  Id: 739137986750699176
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -909,7 +909,7 @@ Objects {
       Z: 6.08076239
     }
   }
-  ParentId: 1491131943807759847
+  ParentId: 4407528850991938744
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -959,7 +959,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16949534794770368384
+  Id: 2403450357166335253
   Name: "Pyramid - 6-Sided Truncated Polished"
   Transform {
     Location {
@@ -975,7 +975,7 @@ Objects {
       Z: 1.12313616
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1025,7 +1025,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10934894182039774801
+  Id: 9131277871354324398
   Name: "MetalSupportRoof"
   Transform {
     Location {
@@ -1043,10 +1043,10 @@ Objects {
       Z: 0.538592219
     }
   }
-  ParentId: 4901287462868873014
-  ChildIds: 5255871952232900370
-  ChildIds: 17948767745541349780
-  ChildIds: 8298538534850626461
+  ParentId: 5529652243817519363
+  ChildIds: 2689831202821020838
+  ChildIds: 8394945890684109117
+  ChildIds: 13199245375005057337
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1066,7 +1066,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8298538534850626461
+  Id: 13199245375005057337
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1085,7 +1085,7 @@ Objects {
       Z: 5.77499628
     }
   }
-  ParentId: 10934894182039774801
+  ParentId: 9131277871354324398
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1135,7 +1135,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17948767745541349780
+  Id: 8394945890684109117
   Name: "Craftsman Wall Interior 02 Corner"
   Transform {
     Location {
@@ -1154,7 +1154,7 @@ Objects {
       Z: 4.04224968
     }
   }
-  ParentId: 10934894182039774801
+  ParentId: 9131277871354324398
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Trim:id"
@@ -1204,7 +1204,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5255871952232900370
+  Id: 2689831202821020838
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1223,7 +1223,7 @@ Objects {
       Z: 5.77499723
     }
   }
-  ParentId: 10934894182039774801
+  ParentId: 9131277871354324398
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1273,7 +1273,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1431930865635212843
+  Id: 16660002605979470359
   Name: "MetalSupportRoof"
   Transform {
     Location {
@@ -1291,10 +1291,10 @@ Objects {
       Z: 0.538592219
     }
   }
-  ParentId: 4901287462868873014
-  ChildIds: 10815415337762636866
-  ChildIds: 1676006871627755296
-  ChildIds: 4016062025182929212
+  ParentId: 5529652243817519363
+  ChildIds: 18155401593347643488
+  ChildIds: 1845066530447632574
+  ChildIds: 13278121780655991605
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1314,7 +1314,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4016062025182929212
+  Id: 13278121780655991605
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1333,7 +1333,7 @@ Objects {
       Z: 5.77499628
     }
   }
-  ParentId: 1431930865635212843
+  ParentId: 16660002605979470359
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1383,7 +1383,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1676006871627755296
+  Id: 1845066530447632574
   Name: "Craftsman Wall Interior 02 Corner"
   Transform {
     Location {
@@ -1402,7 +1402,7 @@ Objects {
       Z: 4.04224968
     }
   }
-  ParentId: 1431930865635212843
+  ParentId: 16660002605979470359
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Trim:id"
@@ -1452,7 +1452,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10815415337762636866
+  Id: 18155401593347643488
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1471,7 +1471,7 @@ Objects {
       Z: 5.77499723
     }
   }
-  ParentId: 1431930865635212843
+  ParentId: 16660002605979470359
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1521,7 +1521,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6290539876400223331
+  Id: 14993269512185695530
   Name: "MetalSupportRoof"
   Transform {
     Location {
@@ -1539,10 +1539,10 @@ Objects {
       Z: 0.538592219
     }
   }
-  ParentId: 4901287462868873014
-  ChildIds: 12941637826944231183
-  ChildIds: 12435006028397687261
-  ChildIds: 6784372322906092327
+  ParentId: 5529652243817519363
+  ChildIds: 11879275241264218714
+  ChildIds: 3363072001789813877
+  ChildIds: 7133377110829665626
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1562,7 +1562,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6784372322906092327
+  Id: 7133377110829665626
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1581,7 +1581,7 @@ Objects {
       Z: 5.77499628
     }
   }
-  ParentId: 6290539876400223331
+  ParentId: 14993269512185695530
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1631,7 +1631,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12435006028397687261
+  Id: 3363072001789813877
   Name: "Craftsman Wall Interior 02 Corner"
   Transform {
     Location {
@@ -1650,7 +1650,7 @@ Objects {
       Z: 4.04224968
     }
   }
-  ParentId: 6290539876400223331
+  ParentId: 14993269512185695530
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Trim:id"
@@ -1700,7 +1700,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12941637826944231183
+  Id: 11879275241264218714
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1719,7 +1719,7 @@ Objects {
       Z: 5.77499723
     }
   }
-  ParentId: 6290539876400223331
+  ParentId: 14993269512185695530
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1769,7 +1769,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17617589287955151942
+  Id: 11067208247980749551
   Name: "Pyramid - 6-Sided Truncated Polished"
   Transform {
     Location {
@@ -1785,7 +1785,7 @@ Objects {
       Z: 21.9427109
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1835,7 +1835,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5026667106602923538
+  Id: 14523568355939808177
   Name: "Pyramid - 6-Sided Truncated Polished"
   Transform {
     Location {
@@ -1851,7 +1851,7 @@ Objects {
       Z: 1.82116008
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1901,7 +1901,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14352229127996873506
+  Id: 1477428138167712081
   Name: "Pyramid - 6-Sided Truncated Polished"
   Transform {
     Location {
@@ -1917,7 +1917,7 @@ Objects {
       Z: 2.52677226
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1967,7 +1967,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7060528617931160983
+  Id: 18164066387380990935
   Name: "Prop_LongBoneHorn"
   Transform {
     Location {
@@ -1986,7 +1986,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2054,7 +2054,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2199902003441951497
+  Id: 9479688582227345949
   Name: "Prop_LongBoneHorn"
   Transform {
     Location {
@@ -2073,7 +2073,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2128,7 +2128,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3626361231256810037
+  Id: 15001978145086190337
   Name: "Prop_LongBoneHorn"
   Transform {
     Location {
@@ -2147,7 +2147,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2215,7 +2215,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10729365156098092822
+  Id: 9375222446558943277
   Name: "Prop_LongBoneHorn"
   Transform {
     Scale {
@@ -2224,7 +2224,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2271,7 +2271,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16051282625858533203
+  Id: 11900506368765880079
   Name: "Prop_LongBoneHorn"
   Transform {
     Location {
@@ -2290,7 +2290,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4901287462868873014
+  ParentId: 5529652243817519363
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2358,7 +2358,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5357605607406365333
+  Id: 13898953084417373912
   Name: "MetalSupportRoof"
   Transform {
     Location {
@@ -2376,10 +2376,10 @@ Objects {
       Z: 0.538592219
     }
   }
-  ParentId: 4901287462868873014
-  ChildIds: 3900951577253843071
-  ChildIds: 12332634160074755709
-  ChildIds: 9978790097201883351
+  ParentId: 5529652243817519363
+  ChildIds: 6431842389415789107
+  ChildIds: 2038083044009067958
+  ChildIds: 5307116225612451111
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2399,7 +2399,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9978790097201883351
+  Id: 5307116225612451111
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -2418,7 +2418,7 @@ Objects {
       Z: 5.77499628
     }
   }
-  ParentId: 5357605607406365333
+  ParentId: 13898953084417373912
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -2468,7 +2468,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12332634160074755709
+  Id: 2038083044009067958
   Name: "Craftsman Wall Interior 02 Corner"
   Transform {
     Location {
@@ -2487,7 +2487,7 @@ Objects {
       Z: 4.04224968
     }
   }
-  ParentId: 5357605607406365333
+  ParentId: 13898953084417373912
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Trim:id"
@@ -2537,7 +2537,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3900951577253843071
+  Id: 6431842389415789107
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -2556,7 +2556,7 @@ Objects {
       Z: 5.77499723
     }
   }
-  ParentId: 5357605607406365333
+  ParentId: 13898953084417373912
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

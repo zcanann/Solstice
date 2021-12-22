@@ -619,6 +619,6 @@ Assets {
   }
   SerializationVersion: 103
   VirtualFolderPath: "Framework"
-  VirtualFolderPath: "Buildings_Human"
+  VirtualFolderPath: "Environment_Human"
   VirtualFolderPath: "Stairs"
 }

@@ -5234,6 +5234,12 @@ Objects {
     }
   }
   ParentId: 12659626195236791824
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 10733850997921531801
@@ -5247,6 +5253,11 @@ Objects {
           Vector {
             X: -0.000122070283
             Y: 8.73114844e-11
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -5831,6 +5842,12 @@ Objects {
     }
   }
   ParentId: 4532231799289195737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 12306639980210807334
@@ -5838,6 +5855,16 @@ Objects {
         Overrides {
           Name: "Name"
           String: "DruidHumanoidMasculineHead_C"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

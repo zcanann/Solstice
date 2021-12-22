@@ -655,6 +655,12 @@ Objects {
     }
   }
   ParentId: 5250854901689189847
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 3534261496688628660
@@ -683,9 +689,6 @@ Objects {
       Id: 11609164602334197849
     }
   }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
 }
 Objects {
   Id: 11661409388867259367
@@ -698,6 +701,12 @@ Objects {
     }
   }
   ParentId: 5250854901689189847
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 9813487831248154703
@@ -725,9 +734,6 @@ Objects {
     TemplateAsset {
       Id: 8201025529106029590
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {

@@ -40,7 +40,7 @@ function DespawnAndUnequipModel(player, modelSlot)
     end
 
     -- TODO: Revert any mesh overrides for the specified slot
-    -- Not important since we are still rebuilding the entire model when
+    -- Not important since we are still rebuilding the entire model when changes are detected
     if player.clientUserData.equipmentModels[modelSlot] then
         for _, modelPiece in pairs(player.clientUserData.equipmentModels[modelSlot]) do
             if Object.IsValid(modelPiece) then

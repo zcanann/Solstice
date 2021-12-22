@@ -1717,6 +1717,6 @@ Assets {
   }
   SerializationVersion: 103
   VirtualFolderPath: "Framework"
-  VirtualFolderPath: "Buildings_Orcish"
+  VirtualFolderPath: "Environment_Orcish"
   VirtualFolderPath: "Decor"
 }

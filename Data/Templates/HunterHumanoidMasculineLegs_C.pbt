@@ -21,6 +21,8 @@ Assets {
         ChildIds: 2578520185593419581
         ChildIds: 9190089070926962209
         ChildIds: 6931040138131558627
+        ChildIds: 1747110871593302395
+        ChildIds: 1506062387864560599
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -156,8 +158,6 @@ Assets {
         ParentId: 10579301817723860522
         ChildIds: 18012819820121002228
         ChildIds: 8053498741930075674
-        ChildIds: 3000198479648877265
-        ChildIds: 17612259945093824447
         ChildIds: 1058563583658081518
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -276,105 +276,6 @@ Assets {
         }
       }
       Objects {
-        Id: 3000198479648877265
-        Name: "Urban Pipe Wrap 01"
-        Transform {
-          Location {
-            X: -8.99981213
-            Y: 1.0000062
-            Z: -32
-          }
-          Rotation {
-            Yaw: -3.41509644e-06
-            Roll: 15.0000458
-          }
-          Scale {
-            X: 0.75
-            Y: 0.75
-            Z: 0.75
-          }
-        }
-        ParentId: 4417839600865320519
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5642931240661247802
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 17612259945093824447
-        Name: "Bone Human Tibula 01"
-        Transform {
-          Location {
-            X: -19.9998093
-            Y: 1.00001407
-            Z: -42
-          }
-          Rotation {
-            Pitch: 9.19857
-            Yaw: -115.151627
-            Roll: -7.2279191
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 0.7
-          }
-        }
-        ParentId: 4417839600865320519
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17636451187442300607
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 1058563583658081518
         Name: "Bone Human Humerus 01"
         Transform {
@@ -441,11 +342,9 @@ Assets {
           }
         }
         ParentId: 10579301817723860522
-        ChildIds: 9065319483170233373
-        ChildIds: 4230006973588645953
-        ChildIds: 3910553716243291819
         ChildIds: 3810012378799036603
-        ChildIds: 1981690835762999094
+        ChildIds: 3000198479648877265
+        ChildIds: 17612259945093824447
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -460,152 +359,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 9065319483170233373
-        Name: "Urban Pipe Wrap 01"
-        Transform {
-          Location {
-            X: -1.99983358
-            Y: -23.9999905
-          }
-          Rotation {
-            Yaw: 44.9999123
-          }
-          Scale {
-            X: 0.55
-            Y: 0.55
-            Z: 0.55
-          }
-        }
-        ParentId: 2578520185593419581
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5642931240661247802
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 4230006973588645953
-        Name: "Urban Pipe Wrap 01"
-        Transform {
-          Location {
-            X: 2.00019431
-            Y: 16.9999905
-            Z: 46.0004959
-          }
-          Rotation {
-            Yaw: -3.41509531e-06
-            Roll: -13.0000324
-          }
-          Scale {
-            X: 0.75
-            Y: 0.75
-            Z: 0.75
-          }
-        }
-        ParentId: 2578520185593419581
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5642931240661247802
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 3910553716243291819
-        Name: "Bone Human Tibula 01"
-        Transform {
-          Location {
-            X: -6.99694824
-            Y: 19.9998779
-            Z: 32.0000648
-          }
-          Rotation {
-            Pitch: 8.03467846
-            Yaw: 107.128937
-            Roll: 12.6981535
-          }
-          Scale {
-            X: 1
-            Y: -1
-            Z: 0.7
-          }
-        }
-        ParentId: 2578520185593419581
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 17636451187442300607
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -660,22 +413,22 @@ Assets {
         }
       }
       Objects {
-        Id: 1981690835762999094
-        Name: "Bone Human Humerus 01"
+        Id: 3000198479648877265
+        Name: "Urban Pipe Wrap 01"
         Transform {
           Location {
-            X: -5.99932861
-            Y: 11.9988403
-            Z: 76.9999924
+            X: 3.00016332
+            Y: -20.9999943
+            Z: 46
           }
           Rotation {
-            Pitch: 4.99999857
-            Roll: -10.0000305
+            Yaw: -3.41509963e-06
+            Roll: 15.0000715
           }
           Scale {
-            X: 1
-            Y: -1
-            Z: 1
+            X: 0.75
+            Y: 0.75
+            Z: 0.75
           }
         }
         ParentId: 2578520185593419581
@@ -690,7 +443,57 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5865452260797397443
+            Id: 5642931240661247802
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17612259945093824447
+        Name: "Bone Human Tibula 01"
+        Transform {
+          Location {
+            X: -7.99982
+            Y: -20.9999866
+            Z: 36
+          }
+          Rotation {
+            Pitch: 9.19857
+            Yaw: -115.151543
+            Roll: -7.22792673
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 0.7
+          }
+        }
+        ParentId: 2578520185593419581
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17636451187442300607
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -728,6 +531,7 @@ Assets {
         ParentId: 10579301817723860522
         ChildIds: 8791595890051625927
         ChildIds: 17295562498745604071
+        ChildIds: 1981690835762999094
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -846,6 +650,56 @@ Assets {
         }
       }
       Objects {
+        Id: 1981690835762999094
+        Name: "Bone Human Humerus 01"
+        Transform {
+          Location {
+            X: -16.9993382
+            Y: -6.00115967
+            Z: -1.00000763
+          }
+          Rotation {
+            Pitch: 4.99999857
+            Yaw: 1.0712936e-07
+            Roll: -10.000061
+          }
+          Scale {
+            X: 1
+            Y: -1
+            Z: 1
+          }
+        }
+        ParentId: 9190089070926962209
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5865452260797397443
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
         Id: 6931040138131558627
         Name: "right_knee"
         Transform {
@@ -864,7 +718,8 @@ Assets {
         }
         ParentId: 10579301817723860522
         ChildIds: 11287268672381650224
-        ChildIds: 15898609373367855982
+        ChildIds: 4230006973588645953
+        ChildIds: 3910553716243291819
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -933,16 +788,152 @@ Assets {
         }
       }
       Objects {
-        Id: 15898609373367855982
+        Id: 4230006973588645953
         Name: "Urban Pipe Wrap 01"
         Transform {
           Location {
-            X: -2.99980092
-            Y: 20.9999943
-            Z: 2.28881836e-05
+            X: 2.0001924
+            Y: 16.9999905
+            Z: 46.0004959
           }
           Rotation {
-            Yaw: -44.999939
+            Yaw: -3.41509531e-06
+            Roll: -13.0000496
+          }
+          Scale {
+            X: 0.75
+            Y: 0.75
+            Z: 0.75
+          }
+        }
+        ParentId: 6931040138131558627
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5642931240661247802
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3910553716243291819
+        Name: "Bone Human Tibula 01"
+        Transform {
+          Location {
+            X: -6.99694824
+            Y: 19.9998779
+            Z: 32.0000648
+          }
+          Rotation {
+            Pitch: 8.03467846
+            Yaw: 107.128937
+            Roll: 12.6981688
+          }
+          Scale {
+            X: 1
+            Y: -1
+            Z: 0.7
+          }
+        }
+        ParentId: 6931040138131558627
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17636451187442300607
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1747110871593302395
+        Name: "left_ankle"
+        Transform {
+          Location {
+            X: -5.00292397
+            Y: -21.9999886
+            Z: -94
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10579301817723860522
+        ChildIds: 9065319483170233373
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9065319483170233373
+        Name: "Urban Pipe Wrap 01"
+        Transform {
+          Location {
+            X: 0.000165939273
+            Y: -1.18689045e-10
+          }
+          Rotation {
+            Yaw: 44.9999
           }
           Scale {
             X: 0.55
@@ -950,7 +941,93 @@ Assets {
             Z: 0.55
           }
         }
-        ParentId: 6931040138131558627
+        ParentId: 1747110871593302395
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5642931240661247802
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1506062387864560599
+        Name: "right_ankle"
+        Transform {
+          Location {
+            X: -6.00292397
+            Y: 22.9999962
+            Z: -94
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10579301817723860522
+        ChildIds: 15898609373367855982
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 15898609373367855982
+        Name: "Urban Pipe Wrap 01"
+        Transform {
+          Location {
+            X: 0.000199317874
+            Y: -1.42563281e-10
+            Z: 2.28881836e-05
+          }
+          Rotation {
+            Yaw: -44.9999275
+          }
+          Scale {
+            X: 0.55
+            Y: 0.55
+            Z: 0.55
+          }
+        }
+        ParentId: 1506062387864560599
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -1027,6 +1104,15 @@ Assets {
       }
     }
     Assets {
+      Id: 8406463304856800769
+      Name: "Bone Human Femur 01"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_bones_human_femur_01_ref"
+      }
+    }
+    Assets {
       Id: 5642931240661247802
       Name: "Urban Pipe Wrap 01"
       PlatformAssetType: 1
@@ -1042,15 +1128,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_bones_human_tib_01_ref"
-      }
-    }
-    Assets {
-      Id: 8406463304856800769
-      Name: "Bone Human Femur 01"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_bones_human_femur_01_ref"
       }
     }
     PrimaryAssetId {

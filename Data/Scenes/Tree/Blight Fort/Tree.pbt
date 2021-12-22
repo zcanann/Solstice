@@ -1,6 +1,44 @@
 Name: "Blight Fort"
 RootId: 4285806649304454613
 Objects {
+  Id: 16148842737733222562
+  Name: "BlightTower"
+  Transform {
+    Location {
+      X: 3113.26953
+      Y: 12527.2988
+      Z: 1049.19702
+    }
+    Rotation {
+      Yaw: -39.2631531
+    }
+    Scale {
+      X: 0.65
+      Y: 0.65
+      Z: 0.65
+    }
+  }
+  ParentId: 4285806649304454613
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "BlightTower"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 17839817650114102061
   Name: "OrcWall"
   Transform {
@@ -143,7 +181,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "BlightTower"
+    FilePartitionName: "BlightTower_1"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -318,7 +356,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "BlightTower_1"
+    FilePartitionName: "BlightTower_2"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

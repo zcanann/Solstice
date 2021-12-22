@@ -35,6 +35,33 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 16338726819620211473
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -1832.81543
+            Y: -63.2910156
+            Z: 66.7099609
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -89.999939
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 5.05978584
+            Y: -5.97974777
+            Z: 5.74975634
+          }
+        }
+      }
+    }
     TemplateAsset {
       Id: 18444013972859453356
     }

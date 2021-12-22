@@ -4,12 +4,16 @@ CharacterSelectEvents.EVENT_SEND_LAST_LOGGED_IN_CHARACTER = "event_send_last_log
 CharacterSelectEvents.EVENT_SEND_CHARACTER_SELECT_STATE = "event_send_character_select_state"
 
 CharacterSelectEvents.EVENT_REQUEST_BEGIN_CREATE_NEW_CHARACTER = "event_request_begin_create_new_character"
+CharacterSelectEvents.EVENT_REQUEST_CUSTOMIZE_CHARACTER = "event_request_customize_character"
 CharacterSelectEvents.EVENT_REQUEST_CANCEL_CREATE_NEW_CHARACTER = "event_request_cancel_create_new_character"
 CharacterSelectEvents.EVENT_REQUEST_FINALIZE_CREATE_NEW_CHARACTER = "event_request_finalize_create_new_character"
 CharacterSelectEvents.EVENT_REQUEST_SELECT_CHARACTER = "event_request_set_active_character"
 CharacterSelectEvents.EVENT_REQUEST_SET_ACTIVE_GENDER = "event_request_set_active_gender"
 CharacterSelectEvents.EVENT_REQUEST_SET_ACTIVE_RACE = "event_request_set_active_race"
 CharacterSelectEvents.EVENT_REQUEST_SET_ACTIVE_CLASS = "event_request_set_active_class"
+CharacterSelectEvents.EVENT_REQUEST_SET_ACTIVE_CUSTOMIZATIONS = "event_request_set_active_customizations"
+CharacterSelectEvents.EVENT_REQUEST_ACCEPT_CUSTOMIZATIONS = "event_request_accept_customizations"
+CharacterSelectEvents.EVENT_REQUEST_CANCEL_CUSTOMIZATIONS = "event_request_cancel_customizations"
 CharacterSelectEvents.EVENT_REQUEST_LOG_IN_TO_CHARACTER = "event_request_log_in_to_character"
 CharacterSelectEvents.EVENT_REQUEST_DELETE_CHARACTER = "event_request_delete_character"
 CharacterSelectEvents.EVENT_REQUEST_ENTER_WORLD = "event_request_enter_world"
@@ -18,7 +22,8 @@ CharacterSelectEvents.EVENT_REQUEST_ENTER_WORLD = "event_request_enter_world"
 CharacterSelectEvents.State = { }
 CharacterSelectEvents.State.CHARACTER_SELECT = 0
 CharacterSelectEvents.State.NEW_CHARACTER = 1
-CharacterSelectEvents.State.DELETE_SELECTED_CHARACTER = 2
-CharacterSelectEvents.State.CHARACTER_CREATE_PENDING = 3
+CharacterSelectEvents.State.CUSTOMIZE_NEW_CHARACTER = 2
+CharacterSelectEvents.State.DELETE_SELECTED_CHARACTER = 3
+CharacterSelectEvents.State.CHARACTER_CREATE_PENDING = 4
 
 return CharacterSelectEvents

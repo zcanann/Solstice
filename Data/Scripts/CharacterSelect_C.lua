@@ -56,6 +56,7 @@ local lastLoggedInCharacterId = nil
 local selectedCharacterId = nil
 local dragRotatePosition = nil
 local startRotation = nil
+local rotation = nil
 
 local defaultNameText = propCharacterNameTextBox.text
 
@@ -151,21 +152,27 @@ function UpdateCameraFromRace(race)
     if race == Framework.Storage.Keys.Races.ORC then
         localPlayer:SetOverrideCamera(propCameraOrc)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
+        propSunlight:SetSmartProperty("intensity", 4.0)
     elseif race == Framework.Storage.Keys.Races.UNDEAD then
         localPlayer:SetOverrideCamera(propCameraUndead)
         propSunlight:SetRotation(Rotation.New(0.0, -130.0, 20.0))
+        propSunlight:SetSmartProperty("intensity", 2.0)
     elseif race == Framework.Storage.Keys.Races.DARK_ELF then
         localPlayer:SetOverrideCamera(propCameraDarkElf)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
+        propSunlight:SetSmartProperty("intensity", 4.0)
     elseif race == Framework.Storage.Keys.Races.HUMAN then
         localPlayer:SetOverrideCamera(propCameraHuman)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 0.0))
+        propSunlight:SetSmartProperty("intensity", 4.0)
     elseif race == Framework.Storage.Keys.Races.ASCENDANT then
         localPlayer:SetOverrideCamera(propCameraAscendant)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, -100.0))
+        propSunlight:SetSmartProperty("intensity", 4.0)
     elseif race == Framework.Storage.Keys.Races.VANARA then
         localPlayer:SetOverrideCamera(propCameraVanara)
         propSunlight:SetRotation(Rotation.New(0.0, -50.0, 100.0))
+        propSunlight:SetSmartProperty("intensity", 4.0)
     else
         warn("Invalid race: " .. (race or ""))
         return
@@ -316,6 +323,10 @@ function ClearEntries()
 end
 
 function Tick(deltaSeconds)
+    UpdateLocalPlayerModelRotation()
+end
+
+function UpdateLocalPlayerModelRotation()
     if dragRotatePosition and localPlayer.clientUserData.model then
         local delta = UI.GetCursorPosition() - dragRotatePosition
 
@@ -323,7 +334,9 @@ function Tick(deltaSeconds)
             startRotation = localPlayer.clientUserData.model:GetRotation()
         end
 
-        local rotation = Rotation.New(startRotation.x, startRotation.y, startRotation.z - delta.x / 3.0)
+        rotation = Rotation.New(startRotation.x, startRotation.y, startRotation.z - delta.x / 3.0)
+    end
+    if rotation and localPlayer.clientUserData.model then
         localPlayer.clientUserData.model:SetRotation(rotation)
     end
 end

@@ -125,6 +125,7 @@ Objects {
   }
   ParentId: 1074741471842529722
   ChildIds: 7777679147152847942
+  ChildIds: 1842981592153592595
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -138,6 +139,122 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   NetworkContext {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 1842981592153592595
+  Name: "CharacterCustomize_C"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2874005056398548704
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:CharacterCustomizeScreen"
+      ObjectReference {
+        SelfId: 15420022136178869387
+      }
+    }
+    Overrides {
+      Name: "cs:BaseModelSelector"
+      ObjectReference {
+        SelfId: 15619019234481481533
+        SubObjectId: 13964586513088852558
+        InstanceId: 12149609478824512079
+        TemplateId: 14708100227964887981
+      }
+    }
+    Overrides {
+      Name: "cs:SkinColorSelector"
+      ObjectReference {
+        SelfId: 8977925635086600601
+        SubObjectId: 13964586513088852558
+        InstanceId: 8713053333115097790
+        TemplateId: 14708100227964887981
+      }
+    }
+    Overrides {
+      Name: "cs:DecalSelector"
+      ObjectReference {
+        SelfId: 12777684803316085853
+        SubObjectId: 13964586513088852558
+        InstanceId: 1896233229919148499
+        TemplateId: 14708100227964887981
+      }
+    }
+    Overrides {
+      Name: "cs:HairStyleSelector"
+      ObjectReference {
+        SelfId: 7211818732536707466
+        SubObjectId: 13964586513088852558
+        InstanceId: 6522491837051677599
+        TemplateId: 14708100227964887981
+      }
+    }
+    Overrides {
+      Name: "cs:HairColorSelector"
+      ObjectReference {
+        SelfId: 6704008979469152097
+        SubObjectId: 13964586513088852558
+        InstanceId: 17552389425542283735
+        TemplateId: 14708100227964887981
+      }
+    }
+    Overrides {
+      Name: "cs:FacialHairSelector"
+      ObjectReference {
+        SelfId: 5353170184922565439
+        SubObjectId: 13964586513088852558
+        InstanceId: 10185657404575083161
+        TemplateId: 14708100227964887981
+      }
+    }
+    Overrides {
+      Name: "cs:CharacterCustomizeButton"
+      ObjectReference {
+        SelfId: 18359147313928719395
+      }
+    }
+    Overrides {
+      Name: "cs:CancelChangesButton"
+      ObjectReference {
+        SelfId: 8632194007590615229
+      }
+    }
+    Overrides {
+      Name: "cs:AcceptChangesButton"
+      ObjectReference {
+        SelfId: 13613261303598770622
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2951166569164403918
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

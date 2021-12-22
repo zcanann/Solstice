@@ -49,32 +49,40 @@ Assets {
       Overrides {
         Name: "cmp:Material4"
         AssetReference {
-          Id: 16961013130569731941
+          Id: 5982506956527239957
         }
       }
       Overrides {
         Name: "cmp:Material4_Sides"
         AssetReference {
-          Id: 16961013130569731941
+          Id: 5982506956527239957
         }
       }
       Overrides {
         Name: "cmpc:Material4"
         Color {
-          R: 0.0990000069
-          G: 0.0990000069
-          B: 0.0990000069
+          R: 0.256
+          G: 0.256
+          B: 0.256
           A: 1
         }
       }
       Overrides {
         Name: "cmpc:Material4_Sides"
         Color {
-          R: 0.0980392247
-          G: 0.0980392247
-          B: 0.0980392247
+          R: 0.254901975
+          G: 0.254901975
+          B: 0.254901975
           A: 1
         }
+      }
+      Overrides {
+        Name: "material4_scale"
+        Float: 2
+      }
+      Overrides {
+        Name: "material4side_scale"
+        Float: 2
       }
     }
     Assets {
@@ -123,21 +131,21 @@ Assets {
       }
     }
     Assets {
-      Id: 16961013130569731941
-      Name: "Asphalt 01"
+      Id: 5982506956527239957
+      Name: "Forest Floor 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_asphault_001"
+        AssetId: "forest-floor_002"
       }
     }
     Assets {
-      Id: 16961013130569731941
-      Name: "Asphalt 01"
+      Id: 5982506956527239957
+      Name: "Forest Floor 02"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_gen_asphault_001"
+        AssetId: "forest-floor_002"
       }
     }
   }
