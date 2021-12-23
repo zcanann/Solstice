@@ -292,11 +292,13 @@ Objects {
   ChildIds: 15189180829826405353
   ChildIds: 9300517934393366163
   ChildIds: 14770768035816752644
-  ChildIds: 3527177655854813650
   ChildIds: 2795378453274946065
-  ChildIds: 10681155132822690672
-  ChildIds: 481235735115439163
+  ChildIds: 3527177655854813650
+  ChildIds: 1914605322508055547
   ChildIds: 11132585758906579708
+  ChildIds: 10681155132822690672
+  ChildIds: 6400578186032656828
+  ChildIds: 481235735115439163
   ChildIds: 11703611146730658530
   ChildIds: 17214865455092029466
   ChildIds: 8030070372661157032
@@ -304,8 +306,6 @@ Objects {
   ChildIds: 495860854068515201
   ChildIds: 6663407767276616049
   ChildIds: 14657387427026214062
-  ChildIds: 6400578186032656828
-  ChildIds: 1914605322508055547
   ChildIds: 10585001951394715839
   ChildIds: 4739900006122546568
   ChildIds: 9640761322261485980
@@ -488,101 +488,6 @@ Objects {
     }
     TemplateAsset {
       Id: 3961478734540321845
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 1914605322508055547
-  Name: "FrameworkReplicantMasculineVariantC"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12138717742109737789
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 11519152407027522013
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkReplicantMasculineVariantC"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -303
-            Y: -88
-            Z: 3
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13929251522609491248
-    }
-  }
-}
-Objects {
-  Id: 6400578186032656828
-  Name: "FrameworkReplicantFeminineVariantC"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12138717742109737789
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 7624929089460813867
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkReplicantFeminineVariantC"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -295
-            Y: -716
-            Z: 5
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3242651276054556474
     }
   }
   NetworkRelevanceDistance {
@@ -932,62 +837,6 @@ Objects {
   }
 }
 Objects {
-  Id: 11132585758906579708
-  Name: "FrameworkReplicantFeminineVariantA"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12138717742109737789
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 3884664389665251075
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkReplicantFeminineVariantA"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -295
-            Y: -448
-            Z: 5
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 10136783166237093130
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 481235735115439163
   Name: "FrameworkHumanFeminineVariantA"
   Transform {
@@ -1038,6 +887,51 @@ Objects {
   }
 }
 Objects {
+  Id: 6400578186032656828
+  Name: "FrameworkReplicantFeminineVariantC"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12138717742109737789
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 7624929089460813867
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkReplicantFeminineVariantC"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -294.994385
+            Y: -697.270264
+            Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3242651276054556474
+    }
+  }
+}
+Objects {
   Id: 10681155132822690672
   Name: "FrameworkReplicantFeminineVariantB"
   Transform {
@@ -1065,8 +959,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -290
-            Y: -560
+            X: -289.992889
+            Y: -575.000305
             Z: 5
           }
         }
@@ -1075,22 +969,157 @@ Objects {
           Rotator {
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 6411149018742534969
     }
   }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+}
+Objects {
+  Id: 11132585758906579708
+  Name: "FrameworkReplicantFeminineVariantA"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12138717742109737789
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3884664389665251075
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkReplicantFeminineVariantA"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -295
+            Y: -448
+            Z: 5
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13799693488953365454
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: 5
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10136783166237093130
+    }
+  }
+}
+Objects {
+  Id: 1914605322508055547
+  Name: "FrameworkReplicantMasculineVariantC"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12138717742109737789
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11519152407027522013
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkReplicantMasculineVariantC"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -284.992188
+            Y: -324.106323
+            Z: 3
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13929251522609491248
+    }
+  }
+}
+Objects {
+  Id: 3527177655854813650
+  Name: "FrameworkReplicantMasculineVariantB"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12138717742109737789
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 3995227768644959029
+      value {
+        Overrides {
+          Name: "Name"
+          String: "FrameworkReplicantMasculineVariantB"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -279.986755
+            Y: -194.427139
+            Z: 3
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16061080343895741245
+    }
   }
 }
 Objects {
@@ -1121,9 +1150,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -285
-            Y: -330
-            Z: 3
+            X: -284.977692
+            Y: -61.0136147
           }
         }
         Overrides {
@@ -1136,56 +1164,6 @@ Objects {
     TemplateAsset {
       Id: 5628769040671060772
     }
-  }
-}
-Objects {
-  Id: 3527177655854813650
-  Name: "FrameworkReplicantMasculineVariantB"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12138717742109737789
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 3995227768644959029
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkReplicantMasculineVariantB"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -280
-            Y: -213
-            Z: 3
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 16061080343895741245
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {

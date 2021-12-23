@@ -11,13 +11,7 @@ Assets {
     ParameterOverrides {
       Overrides {
         Name: "emissive_boost"
-        Float: 0
-      }
-      Overrides {
-        Name: "color_lights"
-        Color {
-          A: 1
-        }
+        Float: 15
       }
       Overrides {
         Name: "rotate_material"
@@ -28,12 +22,18 @@ Assets {
         Float: 1
       }
       Overrides {
-        Name: "u_tiles"
-        Float: 1.15
-      }
-      Overrides {
         Name: "roughness_multiplier"
         Float: 1
+      }
+      Overrides {
+        Name: "v_tiles"
+        Float: 1
+      }
+      Overrides {
+        Name: "color_lights"
+        Color {
+          A: 1
+        }
       }
     }
     Assets {

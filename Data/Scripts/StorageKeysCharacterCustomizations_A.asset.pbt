@@ -286,6 +286,12 @@ Assets {
           Id: 11986047811134497832
         }
       }
+      Overrides {
+        Name: "cs:InvisMaterial"
+        AssetReference {
+          Id: 17803366332466114312
+        }
+      }
     }
     Assets {
       Id: 968683000654906430
@@ -429,6 +435,15 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_hair_basic_001_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
   }

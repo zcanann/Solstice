@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
+        ParentId: 12138717742109737789
         ChildIds: 13430076729726980005
         ChildIds: 2895106744720824703
         UnregisteredParameters {
@@ -32,17 +32,21 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:0:Shared_Detail2:color"
-            Color {
-              R: 0.87
-              G: 0.587682128
-              A: 1
-            }
-          }
-          Overrides {
             Name: "ma:0:Shared_Detail1:id"
             AssetReference {
               Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect1"
+            ObjectReference {
+              SubObjectId: 2295498410059400086
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect2"
+            ObjectReference {
+              SubObjectId: 15486824307415444687
             }
           }
         }
@@ -298,7 +302,6 @@ Assets {
           }
         }
         ParentId: 2895106744720824703
-        ChildIds: 15865971497372969133
         ChildIds: 15486824307415444687
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -317,73 +320,6 @@ Assets {
         }
       }
       Objects {
-        Id: 15865971497372969133
-        Name: "Sphere"
-        Transform {
-          Location {
-            X: 5.00000191
-            Y: -3.00158405
-            Z: 88
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.025
-            Y: 0.055
-            Z: 0.035
-          }
-        }
-        ParentId: 152078920591573299
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13337077198413602857
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0199999809
-              G: 1
-              B: 0.84423852
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4871448386712350861
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 15486824307415444687
         Name: "Humanoid 2 Rig"
         Transform {
@@ -393,21 +329,13 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 0.94
-            Y: 0.94
-            Z: 0.94
+            X: 0.945
+            Y: 0.945
+            Z: 0.945
           }
         }
         ParentId: 152078920591573299
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:0:Shared_Detail2:color"
-            Color {
-              G: 0.455165148
-              B: 0.87
-              A: 1
-            }
-          }
           Overrides {
             Name: "ma:0:Shared_Detail1:id"
             AssetReference {
@@ -474,6 +402,42 @@ Assets {
               Id: 2018227301497757374
             }
           }
+          Overrides {
+            Name: "ma:0:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail4:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail3:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -507,13 +471,13 @@ Assets {
               Id: 9266868553966372263
             }
             SkinnedMeshes {
-              Id: 1619046284421263831
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 12027903393916433851
             }
             SkinnedMeshes {
               Id: 15858215164728204894
-            }
-            SkinnedMeshes {
-              Id: 841534158063459245
             }
           }
         }
@@ -568,21 +532,12 @@ Assets {
       }
     }
     Assets {
-      Id: 4871448386712350861
-      Name: "Sphere"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
-      }
-    }
-    Assets {
-      Id: 1619046284421263831
-      Name: "Humanoid 2 Trooper Armor"
+      Id: 12027903393916433851
+      Name: "Humanoid 2 Crisis Armor"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_upper_scifi_002_ref"
+        AssetId: "npc_human_guy_upper_scifi_003_ref"
       }
     }
     Assets {
@@ -592,6 +547,15 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_lower_scifi_003_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {

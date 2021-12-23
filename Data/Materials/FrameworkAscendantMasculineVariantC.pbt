@@ -1,5 +1,5 @@
 Assets {
-  Id: 19410885183799782
+  Id: 9889775764180899101
   Name: "FrameworkAscendantMasculineVariantC"
   PlatformAssetType: 13
   SerializationVersion: 103
@@ -20,16 +20,12 @@ Assets {
         }
       }
       Overrides {
-        Name: "rotate_material"
-        Float: 1
-      }
-      Overrides {
         Name: "material_scale"
         Float: 1
       }
       Overrides {
         Name: "u_tiles"
-        Float: 1.3
+        Float: 0.8
       }
     }
     Assets {

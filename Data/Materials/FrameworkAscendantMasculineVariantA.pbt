@@ -35,6 +35,18 @@ Assets {
         Name: "roughness_multiplier"
         Float: 1
       }
+      Overrides {
+        Name: "u_offset"
+        Float: 0.035
+      }
+      Overrides {
+        Name: "v_offset"
+        Float: 0.035
+      }
+      Overrides {
+        Name: "v_tiles"
+        Float: 1.3
+      }
     }
     Assets {
       Id: 17000753320705279156

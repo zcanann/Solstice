@@ -15,29 +15,32 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
+        ParentId: 12138717742109737789
         ChildIds: 1325478692464033966
         ChildIds: 7256770806696422810
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 6823151078516740555
-            }
-          }
-          Overrides {
-            Name: "ma:0:Shared_BaseMaterial:color"
-            Color {
-              R: 0.360784322
-              G: 1
-              B: 1
-              A: 1
+              Id: 8470166797310738032
             }
           }
           Overrides {
             Name: "ma:0:Shared_Detail2:id"
             AssetReference {
               Id: 13337077198413602857
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect1"
+            ObjectReference {
+              SubObjectId: 1590500840916951114
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect2"
+            ObjectReference {
+              SubObjectId: 10798389280526104601
             }
           }
         }
@@ -476,13 +479,13 @@ Assets {
               Id: 9288686309906252693
             }
             SkinnedMeshes {
-              Id: 256548928180637423
+              Id: 2979029195439978592
             }
             SkinnedMeshes {
               Id: 917273584169936355
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 256548928180637423
             }
           }
         }
@@ -492,7 +495,7 @@ Assets {
       }
       Objects {
         Id: 4760816872083009039
-        Name: "upper_spine"
+        Name: "neck"
         Transform {
           Location {
           }
@@ -633,12 +636,12 @@ Assets {
       }
     }
     Assets {
-      Id: 256548928180637423
-      Name: "Humanoid 1 Racer Jumpsuit Pants"
+      Id: 2979029195439978592
+      Name: "Humanoid 1 Sierra Hair"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_lower_sport_003_ref"
+        AssetId: "npc_human_gal_hair_scifi_002_ref"
       }
     }
     Assets {
@@ -648,6 +651,15 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_upper_sport_003_ref"
+      }
+    }
+    Assets {
+      Id: 256548928180637423
+      Name: "Humanoid 1 Racer Jumpsuit Pants"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_lower_sport_003_ref"
       }
     }
     Assets {

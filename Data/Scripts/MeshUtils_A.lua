@@ -8,7 +8,8 @@ Framework.Utils = { }
 Framework.Utils.Table = require(script:GetCustomProperty("TableUtils"))
 Framework.Dump = require(script:GetCustomProperty("Dump")).Dump
 
-MeshUtils.InvisMaterial = script:GetCustomProperty("InvisMaterial")
+MeshUtils.InvisMaterialId, _ = CoreString.Split(script:GetCustomProperty("InvisMaterial"), ":")
+local SkinMaterial = "Shared_BaseMaterial"
 
 function StartsWith(inString, startsWith)
 	return string.sub(inString, 1, string.len(startsWith)) == startsWith
@@ -36,21 +37,54 @@ MeshUtils.AssignSkinColor = function (animatedMesh, colorOverride)
 		return
 	end
 
-	local defaultsSet = GetMaterialSlotSet(animatedMesh:GetMaterialSlots())
-	for slotName, _ in pairs(defaultsSet) do
-		local index = tonumber(slotName.sub(slotName, 1, 1)) + 1
-		if index == 1 then
-			local modelMaterial = animatedMesh:GetMaterialSlot(slotName)
+	local meshTargets = nil
 
-			if modelMaterial then
-				modelMaterial:ResetIsSmartMaterial()
-				modelMaterial:ResetMaterialAssetId()
-				modelMaterial:ResetUVTiling()
-				modelMaterial:ResetColor()
-			end
+	-- Skin redirects allow us to have special character models where the main rig is not the skin color target
+	-- Note: If the main rig needs to be a skin color target in addition to any redirects, it is safe to make a self-referencing redirect on the main rig
+	local skinRedirects =
+	{
+		animatedMesh:GetCustomProperty("SkinRedirect1"),
+		animatedMesh:GetCustomProperty("SkinRedirect2"),
+		animatedMesh:GetCustomProperty("SkinRedirect3"),
+		animatedMesh:GetCustomProperty("SkinRedirect4"),
+	}
 
-			if colorOverride then
-				modelMaterial:SetColor(colorOverride)
+	-- Extract the actual underlying CoreObject list of skin redirects, if they exist
+	skinRedirects = Framework.Utils.Table.RemoveNils(skinRedirects)
+	for index, skinRedirect in ipairs(skinRedirects) do
+		skinRedirects[index] = skinRedirect:GetObject()
+	end
+	skinRedirects = Framework.Utils.Table.RemoveNils(skinRedirects)
+
+	if Framework.Utils.Table.Count(skinRedirects) > 0 then
+		meshTargets = skinRedirects
+	else
+		meshTargets = { animatedMesh }
+ 	end
+
+	for _, meshTarget in ipairs(meshTargets) do
+		local defaultsSet = GetMaterialSlotSet(meshTarget:GetMaterialSlots())
+		for slotName, _ in pairs(defaultsSet) do
+			local index = tonumber(slotName.sub(slotName, 1, 1)) + 1
+			if index == 1 then
+				local modelMaterial = meshTarget:GetMaterialSlot(slotName)
+				local _, modelSlotName = CoreString.Split(modelMaterial.slotName, ":")
+
+				-- Avoid overwriting any other details on the target rig, such as eye color
+				if modelSlotName == SkinMaterial then
+					if modelMaterial then
+						modelMaterial:ResetIsSmartMaterial()
+						modelMaterial:ResetMaterialAssetId()
+						modelMaterial:ResetUVTiling()
+						modelMaterial:ResetColor()
+					end
+
+					if modelMaterial.materialAssetId == MeshUtils.InvisMaterialId then
+						modelMaterial:SetColor(Color.TRANSPARENT)
+					elseif colorOverride then
+						modelMaterial:SetColor(colorOverride)
+					end
+				end
 			end
 		end
 	end
@@ -98,7 +132,9 @@ MeshUtils.AssignHairAsset = function (animatedMesh, hairAssetId, colorOverride, 
 				end
 			end
 
-			if colorOverride then
+			if modelMaterial.materialAssetId == MeshUtils.InvisMaterialId then
+				modelMaterial:SetColor(Color.TRANSPARENT)
+			elseif colorOverride then
 				modelMaterial:SetColor(colorOverride)
 			end
 		end
@@ -170,7 +206,11 @@ MeshUtils.CopyMeshOverrides = function (animatedMesh, animatedMeshOverrides)
 				-- Warning: 'AssetId is not valid' on this line means that you need to set a catalog-based material on the mesh.
 				-- Creating a custom material from the base material in the equipment template will work.
 				modelMaterial.isSmartMaterial = materialOverride.isSmartMaterial
-				modelMaterial:SetColor(materialOverride:GetColor())
+				if modelMaterial.materialAssetId == MeshUtils.InvisMaterialId then
+					modelMaterial:SetColor(Color.TRANSPARENT)
+				else
+					modelMaterial:SetColor(materialOverride:GetColor())
+				end
 				modelMaterial:SetUVTiling(materialOverride:GetUVTiling())
 			end
 		end

@@ -1499,6 +1499,12 @@ Objects {
             Value: "mc:euianchor:bottomright"
           }
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     TemplateAsset {

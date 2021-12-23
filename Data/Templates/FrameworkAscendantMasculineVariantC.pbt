@@ -26,23 +26,21 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:0:Shared_Detail2:id"
-            AssetReference {
-              Id: 13337077198413602857
-            }
-          }
-          Overrides {
-            Name: "ma:0:Shared_Detail2:color"
-            Color {
-              G: 0.455165148
-              B: 0.87
-              A: 1
-            }
-          }
-          Overrides {
             Name: "ma:0:Shared_Detail1:id"
             AssetReference {
               Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect1"
+            ObjectReference {
+              SubObjectId: 14279603620829628798
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect2"
+            ObjectReference {
+              SubObjectId: 14720848717658988057
             }
           }
         }
@@ -154,14 +152,6 @@ Assets {
         ParentId: 8385565825393831493
         UnregisteredParameters {
           Overrides {
-            Name: "ma:0:Shared_Detail2:color"
-            Color {
-              G: 0.455165148
-              B: 0.87
-              A: 1
-            }
-          }
-          Overrides {
             Name: "ma:1:Shared_BaseMaterial:id"
             AssetReference {
               Id: 2018227301497757374
@@ -189,6 +179,18 @@ Assets {
             Name: "ma:1:Shared_Detail4:id"
             AssetReference {
               Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
             }
           }
         }
@@ -298,7 +300,6 @@ Assets {
           }
         }
         ParentId: 7542642031899489562
-        ChildIds: 14252803174813394093
         ChildIds: 14720848717658988057
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -311,73 +312,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 14252803174813394093
-        Name: "Sphere"
-        Transform {
-          Location {
-            X: 5.00000191
-            Y: -3.00158405
-            Z: 88
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.025
-            Y: 0.055
-            Z: 0.035
-          }
-        }
-        ParentId: 6712097782558519324
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 13337077198413602857
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0199999809
-              G: 1
-              B: 0.84423852
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 4871448386712350861
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -400,14 +334,6 @@ Assets {
         }
         ParentId: 6712097782558519324
         UnregisteredParameters {
-          Overrides {
-            Name: "ma:0:Shared_Detail2:color"
-            Color {
-              G: 0.455165148
-              B: 0.87
-              A: 1
-            }
-          }
           Overrides {
             Name: "ma:0:Shared_Detail1:id"
             AssetReference {
@@ -474,6 +400,42 @@ Assets {
               Id: 2018227301497757374
             }
           }
+          Overrides {
+            Name: "ma:0:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail4:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail3:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "ma:3:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -507,13 +469,13 @@ Assets {
               Id: 14951614199189363308
             }
             SkinnedMeshes {
-              Id: 1619046284421263831
+              Id: 841534158063459245
+            }
+            SkinnedMeshes {
+              Id: 12027903393916433851
             }
             SkinnedMeshes {
               Id: 15858215164728204894
-            }
-            SkinnedMeshes {
-              Id: 841534158063459245
             }
           }
         }
@@ -541,15 +503,6 @@ Assets {
       }
     }
     Assets {
-      Id: 13337077198413602857
-      Name: "Additive Soft Edge"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "fxma_additive_edgefade"
-      }
-    }
-    Assets {
       Id: 2018227301497757374
       Name: "Invisible"
       PlatformAssetType: 2
@@ -568,21 +521,21 @@ Assets {
       }
     }
     Assets {
-      Id: 4871448386712350861
-      Name: "Sphere"
-      PlatformAssetType: 1
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
       PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_sphere_002"
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {
-      Id: 1619046284421263831
-      Name: "Humanoid 2 Trooper Armor"
+      Id: 12027903393916433851
+      Name: "Humanoid 2 Crisis Armor"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_upper_scifi_002_ref"
+        AssetId: "npc_human_guy_upper_scifi_003_ref"
       }
     }
     Assets {

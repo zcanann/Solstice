@@ -29,11 +29,19 @@ Assets {
       }
       Overrides {
         Name: "u_tiles"
-        Float: 1
+        Float: 1.15
       }
       Overrides {
         Name: "roughness_multiplier"
         Float: 1
+      }
+      Overrides {
+        Name: "u_offset"
+        Float: 0.03
+      }
+      Overrides {
+        Name: "v_offset"
+        Float: -0.02
       }
     }
     Assets {

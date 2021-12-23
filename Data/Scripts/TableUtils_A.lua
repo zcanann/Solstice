@@ -424,6 +424,19 @@ local function Contains(inTable, value)
 	return false
 end
 
+local function RemoveNils(inTable)
+	if not inTable then return nil end
+	local outTable = { }
+
+	for k, v in pairs(inTable) do
+		if v then
+			outTable[k] = v
+		end
+	end
+
+	return outTable
+end
+
 -------------------------------------------
 
 TableUtils.CondenseStringConstants = TableCondenseStringConstants
@@ -434,5 +447,6 @@ TableUtils.GetDiffKeys = TableDiffKeys
 TableUtils.Patch = TablePatch
 TableUtils.Count = Count
 TableUtils.Contains = Contains
+TableUtils.RemoveNils = RemoveNils
 
 return TableUtils

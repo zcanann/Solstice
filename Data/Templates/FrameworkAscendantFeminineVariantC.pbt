@@ -15,14 +15,14 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
+        ParentId: 12138717742109737789
         ChildIds: 586680212139232423
         ChildIds: 3959802424359758517
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 8470166797310738032
+              Id: 17821216603980038513
             }
           }
           Overrides {
@@ -41,18 +41,27 @@ Assets {
             }
           }
           Overrides {
-            Name: "ma:0:Shared_BaseMaterial:color"
-            Color {
-              R: 0.360784322
-              G: 1
-              B: 1
-              A: 1
-            }
-          }
-          Overrides {
             Name: "ma:0:Shared_Detail1:id"
             AssetReference {
               Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "ma:0:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect1"
+            ObjectReference {
+              SubObjectId: 3597369639792882137
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect2"
+            ObjectReference {
+              SubObjectId: 16409557010377837798
             }
           }
         }
@@ -211,6 +220,12 @@ Assets {
               Id: 2018227301497757374
             }
           }
+          Overrides {
+            Name: "ma:0:Shared_Detail2:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -327,6 +342,8 @@ Assets {
           }
         }
         ParentId: 3959802424359758517
+        ChildIds: 274253701418697401
+        ChildIds: 3877868547714017930
         ChildIds: 9797569372868954818
         ChildIds: 16409557010377837798
         Collidable_v2 {
@@ -346,12 +363,152 @@ Assets {
         }
       }
       Objects {
-        Id: 9797569372868954818
-        Name: "Sphere"
+        Id: 274253701418697401
+        Name: "NormalEye"
         Transform {
           Location {
-            X: 6.00000238
-            Y: -4.00158358
+            X: 4.84655666
+            Y: -3.68224788
+            Z: 87.9024658
+          }
+          Rotation {
+            Pitch: -0.637207031
+            Yaw: 85.493515
+            Roll: -8.03143311
+          }
+          Scale {
+            X: 0.025
+            Y: 0.025
+            Z: 0.05
+          }
+        }
+        ParentId: 4367749956240310558
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 6545229954070219214
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0199999809
+              G: 1
+              B: 0.84423852
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1445071720599688918
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 3877868547714017930
+        Name: "NormalEyeFill"
+        Transform {
+          Location {
+            X: 4.53173733
+            Y: -3.82519221
+            Z: 87.7733841
+          }
+          Rotation {
+            Pitch: 4.92935419
+            Yaw: -93.0936584
+            Roll: -8.3321228
+          }
+          Scale {
+            X: 0.035
+            Y: 0.025
+            Z: 0.05
+          }
+        }
+        ParentId: 4367749956240310558
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 6545229954070219214
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.0199999809
+              G: 1
+              B: 0.84423852
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1445071720599688918
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9797569372868954818
+        Name: "GlowingEye"
+        Transform {
+          Location {
+            X: 5.06786823
+            Y: 3.28308034
             Z: 88
           }
           Rotation {
@@ -368,15 +525,6 @@ Assets {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 13337077198413602857
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0199999809
-              G: 1
-              B: 0.84423852
-              A: 1
             }
           }
         }
@@ -565,13 +713,13 @@ Assets {
               Id: 13822615372482203236
             }
             SkinnedMeshes {
-              Id: 256548928180637423
+              Id: 5172911281595672315
             }
             SkinnedMeshes {
               Id: 917273584169936355
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 256548928180637423
             }
           }
         }
@@ -581,7 +729,7 @@ Assets {
       }
       Objects {
         Id: 10209140945798583864
-        Name: "upper_spine"
+        Name: "neck"
         Transform {
           Location {
             X: 1481.99976
@@ -725,12 +873,30 @@ Assets {
       }
     }
     Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
+      }
+    }
+    Assets {
       Id: 7155942901144560299
       Name: "Humanoid 1 Viper Helmet"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_hat_scifi_001_ref"
+      }
+    }
+    Assets {
+      Id: 1445071720599688918
+      Name: "Sphere Pinched - Horizontal"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prim_sphere_pinched_001_ref"
       }
     }
     Assets {
@@ -752,21 +918,21 @@ Assets {
       }
     }
     Assets {
-      Id: 256548928180637423
-      Name: "Humanoid 1 Racer Jumpsuit Pants"
-      PlatformAssetType: 26
-      PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_lower_sport_003_ref"
-      }
-    }
-    Assets {
       Id: 917273584169936355
       Name: "Humanoid 1 Racer Jumpsuit Top"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_upper_sport_003_ref"
+      }
+    }
+    Assets {
+      Id: 256548928180637423
+      Name: "Humanoid 1 Racer Jumpsuit Pants"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_lower_sport_003_ref"
       }
     }
     Assets {

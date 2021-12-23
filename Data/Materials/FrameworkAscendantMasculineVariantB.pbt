@@ -1,6 +1,6 @@
 Assets {
   Id: 15681535859029345503
-  Name: "FrameworkAscendentMasculineVariantB"
+  Name: "FrameworkAscendantMasculineVariantB"
   PlatformAssetType: 13
   SerializationVersion: 103
   VirtualFolderPath: "Models"
@@ -20,16 +20,20 @@ Assets {
         }
       }
       Overrides {
-        Name: "rotate_material"
-        Float: 1
-      }
-      Overrides {
         Name: "material_scale"
         Float: 1
       }
       Overrides {
         Name: "u_tiles"
         Float: 1
+      }
+      Overrides {
+        Name: "u_offset"
+        Float: 0.75
+      }
+      Overrides {
+        Name: "v_offset"
+        Float: 0.25
       }
     }
     Assets {
