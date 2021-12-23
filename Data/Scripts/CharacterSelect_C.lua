@@ -6,6 +6,7 @@ local propCharacterEntriesRoot = script:GetCustomProperty("CharacterEntriesRoot"
 
 local propCharacterSelectScreen = script:GetCustomProperty("CharacterSelectScreen"):WaitForObject()
 local propNewCharacterScreen = script:GetCustomProperty("NewCharacterScreen"):WaitForObject()
+local propNewCharacterScreenShared = script:GetCustomProperty("NewCharacterScreenShared"):WaitForObject()
 
 local propCreateNewCharacterButton = script:GetCustomProperty("CreateNewCharacterButton"):WaitForObject()
 local propFinalizeNewCharacterButton = script:GetCustomProperty("FinalizeNewCharacterButton"):WaitForObject()
@@ -68,15 +69,20 @@ function OnCharacterSelectStateChanged(stateData)
 
     propCharacterSelectScreen.visibility = Visibility.FORCE_OFF
     propNewCharacterScreen.visibility = Visibility.FORCE_OFF
+    propNewCharacterScreenShared.visibility = Visibility.FORCE_OFF
     propDecorColonist.visibility = Visibility.FORCE_OFF
     propDecorIthkuil.visibility = Visibility.FORCE_OFF
     local characterListCount = Framework.Utils.Table.Count(stateData.characterList)
+
+    if stateData.state == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER or stateData.state == Framework.Events.Keys.CharacterSelect.State.CUSTOMIZE_NEW_CHARACTER then
+        propNewCharacterScreenShared.visibility = Visibility.INHERIT
+    end
 
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
         OnCharactersLoaded(stateData.characterList)
         propCharacterSelectScreen.visibility = Visibility.INHERIT
         propCreateNewCharacterButton.isInteractable = characterListCount < Framework.Storage.CharacterCreateLimit
-    elseif stateData.state  == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
+    elseif stateData.state == Framework.Events.Keys.CharacterSelect.State.NEW_CHARACTER then
         propNewCharacterScreen.visibility = Visibility.INHERIT
         propCancelCreateCharacterButton.isInteractable = characterListCount > 0
         if CharacterNameValidator.IsNameValid(stateData.name) then

@@ -84,11 +84,6 @@ function RebuildModel(proximityObjectId)
     local playerModelAsset = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A
     local playerModel = nil
     local modelId = customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] or 1
-    local skinColorId = customizations[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] or 1
-    local decalId = customizations[Framework.Storage.Keys.CharacterCustomizations.DECAL_ID] or 1
-    local hairStyleId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] or 1
-    local hairColorId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] or 1
-    local facialHairId = customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] or 1
 
     local modelTable = Framework.Storage.Keys.CharacterCustomizations.GetModelTable(race, gender)
 
@@ -106,6 +101,8 @@ function RebuildModel(proximityObjectId)
 
     -- No need to destroy/respawn the model if it is already spawned
     if Object.IsValid(player.clientUserData.model) and player.clientUserData.model.sourceTemplateId == playerModelAssetId then
+        -- Customizations may have changed though
+        RebuildCustomizations(player.clientUserData.model, customizations, playerModelAsset)
         return
     end
 
@@ -127,8 +124,46 @@ function RebuildModel(proximityObjectId)
         playerModel:SetWorldRotation(previousRotation)
     end
     playerModels[player.id] = playerModel
+    RebuildCustomizations(playerModel, customizations, playerModelAsset)
 
     Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
+end
+
+function RebuildCustomizations(playerModel, customizations, playerModelAsset)
+    local skinColorId = customizations[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] or 1
+    local decalId = customizations[Framework.Storage.Keys.CharacterCustomizations.DECAL_ID] or 1
+    local hairStyleId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] or 1
+    local hairColorId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] or 1
+    local facialHairId = customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] or 1
+    local customizationOptions = Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATION_OPTIONS[playerModelAsset]
+
+    if customizationOptions then
+        local hairOptions = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.HAIR_OPTIONS]
+        local skinColorOptions = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLORS]
+
+        if hairOptions then
+            local hairOptionSet = hairOptions[hairStyleId]
+
+            if hairOptionSet then
+                local hairMeshAsset = hairOptionSet[Framework.Storage.Keys.CharacterCustomizations.HAIR_MESH]
+                local materialOverride = hairOptionSet[Framework.Storage.Keys.CharacterCustomizations.MATERIAL_OVERRIDE]
+                local hairColorsSet = hairOptionSet[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLORS]
+                local hairColorOverride = nil
+
+                if hairColorsSet then
+                    hairColorOverride = hairColorsSet[hairColorId]
+                end
+
+                if hairMeshAsset then
+                    Framework.Utils.Meshes.AssignHairAsset(playerModel, hairMeshAsset, hairColorOverride, materialOverride)
+                end
+            end
+        end
+
+        if skinColorOptions then
+            Framework.Utils.Meshes.AssignSkinColor(playerModel, skinColorOptions[skinColorId])
+        end
+    end
 end
 
 function DestroyModel(player)

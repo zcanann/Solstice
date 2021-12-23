@@ -30,6 +30,8 @@ function OnCharacterSelectStateChanged(stateData)
         if not allCustomizations[activeCustomizationKey] then
             allCustomizations[activeCustomizationKey] = { }
         end
+    else
+        activeCustomizationKey = nil
     end
 
     DetermineSelectorLimits(stateData.race, stateData.gender)
@@ -47,10 +49,18 @@ function AwaitServerResponse()
     CHARACTER_CUSTOMIZE_SCREEN.visibility = Visibility.FORCE_OFF
 end
 
+function CountOrDefault(table, default)
+    local count = Framework.Utils.Table.Count(table)
+    if count <= 0 then
+        count = default
+    end
+    return count
+end
+
 function DetermineSelectorLimits(race, gender)
     local modelTable = Framework.Storage.Keys.CharacterCustomizations.GetModelTable(race, gender)
     if modelTable then
-        activeLimits[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] = Framework.Utils.Table.Count(modelTable)
+        activeLimits[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] = CountOrDefault(modelTable, 1)
 
         local customizations = allCustomizations[activeCustomizationKey]
         local modelId = customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] or 1
@@ -58,17 +68,33 @@ function DetermineSelectorLimits(race, gender)
         if modelTable[modelId] then
             local modelTemplate = modelTable[modelId]
             local customizationOptions = Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATION_OPTIONS[modelTemplate]
-            if customizationOptions then
-                activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = Framework.Utils.Table.Count(customizationOptions[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLORS])
-                activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] = Framework.Utils.Table.Count(customizationOptions[Framework.Storage.Keys.CharacterCustomizations.HAIR_OPTIONS])
+            local skinColorsTable = nil
+            local hairOptionsTable = nil
+            local hairSubOptionsTable = nil
+            local hairColorsTable = nil
+            local activeHairId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] or 1
 
-                if activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] <= 0 then
-                    activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = 1
+            if customizationOptions then
+                skinColorsTable = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLORS]
+                hairOptionsTable = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.HAIR_OPTIONS]
+
+                if hairOptionsTable then
+                    hairSubOptionsTable = hairOptionsTable[activeHairId]
+                else
+                    warn("No hair sub-options found")
                 end
-                if activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] <= 0 then
-                    activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] = 1
-                end
+            else
+                Framework.Warn("No customization options found")
             end
+            if hairSubOptionsTable then
+                hairColorsTable = hairSubOptionsTable[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLORS]
+            else
+                Framework.Warn("No hair options found")
+            end
+
+            activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = CountOrDefault(skinColorsTable, 1)
+            activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] = CountOrDefault(hairOptionsTable, 1)
+            activeLimits[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] = CountOrDefault(hairColorsTable, 1)
         end
     end
 end
@@ -98,7 +124,6 @@ function ChangeCustomization(selector, selectionDelta, customizationKey)
 
     customizations[customizationKey] = CoreMath.Clamp((customizations[customizationKey] or 1) + selectionDelta, 1, limit)
     RefreshSelector(selector, customizationKey)
-
     RequestChangeCustomizations()
 end
 

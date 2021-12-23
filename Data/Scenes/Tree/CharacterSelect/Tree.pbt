@@ -402,6 +402,12 @@ Objects {
         SelfId: 6574011873009460602
       }
     }
+    Overrides {
+      Name: "cs:NewCharacterScreenShared"
+      ObjectReference {
+        SelfId: 1139410850627477304
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

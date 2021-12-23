@@ -38,6 +38,11 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:NewCharacterScreenShared"
+        ObjectReference {
+        }
+      }
+      Overrides {
         Name: "cs:CreateNewCharacterButton"
         ObjectReference {
         }

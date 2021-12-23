@@ -2,8 +2,8 @@ local CharacterCustomizationKeys = { }
 
 local RaceKeys = require(script:GetCustomProperty("StorageKeysRaces"))
 local GenderKeys = require(script:GetCustomProperty("StorageKeysGenders"))
+local INVIS_MATERIAL = script:GetCustomProperty("InvisMaterial")
 
-local BALD = ""
 local HUMANOID_FEMININE_HAIR_1 = script:GetCustomProperty("HumanoidFeminineHair1")
 local HUMANOID_FEMININE_HAIR_2 = script:GetCustomProperty("HumanoidFeminineHair2")
 local HUMANOID_FEMININE_HAIR_3 = script:GetCustomProperty("HumanoidFeminineHair3")
@@ -141,227 +141,261 @@ CharacterCustomizationKeys.FACIAL_HAIR_ID = "facial_hair"
 
 CharacterCustomizationKeys.HAIR_OPTIONS = "hair_options"
 CharacterCustomizationKeys.HAIR_MESH = "mesh"
+CharacterCustomizationKeys.MATERIAL_OVERRIDE = "material_override"
+CharacterCustomizationKeys.IS_BALD = "is_bald"
 CharacterCustomizationKeys.HAIR_COLORS = "hair_colors"
 CharacterCustomizationKeys.SKIN_COLORS = "skin_color"
 
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS = { }
 
--- Human
+function MakeBaldHumanoidFeminine()
+    return { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.MATERIAL_OVERRIDE] = INVIS_MATERIAL, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.TRANSPARENT } }
+end
+
+function MakeBaldHumanoidMasculine()
+    return { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.MATERIAL_OVERRIDE] = INVIS_MATERIAL, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.TRANSPARENT } }
+end
+
+-- Human (Fem)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidFeminine(),
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+    },
+    [CharacterCustomizationKeys.SKIN_COLORS] =
+    {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A]
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_FEMININE_VARIANT_A]
 
+-- Human (Masc)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidMasculine(),
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A]
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_HUMAN_MASCULINE_VARIANT_A]
 
--- Ascendent
+-- Ascendent (Fem)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidFeminine(),
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A]
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A]
 
+-- Ascendent (Masc)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidMasculine(),
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A]
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ASCENDANT_MASCULINE_VARIANT_A]
 
--- Vanara
+-- Vanara (Fem)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A]
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_FEMININE_VARIANT_A]
 
+-- Vanara (Masc)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_VANARA_MASCULINE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 
--- Orc
+-- Orc (Fem)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_FEMININE_VARIANT_A]
 
+-- Orc (Masc)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_ORC_MASCULINE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidMasculine(),
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 
--- Dark Elf
+-- Dark Elf (Fem)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_3, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A]
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_FEMININE_VARIANT_A]
 
+-- Dark Elf (Masc)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_4, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_5, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_B] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A]
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_C] = CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_DARK_ELF_MASCULINE_VARIANT_A]
 
--- Undead
+-- Undead (Fem)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_FEMININE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidFeminine(),
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_6, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_7, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_FEMININE_HAIR_8, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_FEMININE_VARIANT_B] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidFeminine(),
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 
+-- Undead (Masc)
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_MASCULINE_VARIANT_A] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
-        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidMasculine(),
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_1, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
+        { [CharacterCustomizationKeys.HAIR_MESH] = HUMANOID_MASCULINE_HAIR_2, [CharacterCustomizationKeys.HAIR_COLORS] = { Color.RED, Color.GREEN, Color.BLUE } },
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 CharacterCustomizationKeys.CUSTOMIZATION_OPTIONS[CharacterCustomizationKeys.FRAMEWORK_UNDEAD_MASCULINE_VARIANT_B] =
 {
     [CharacterCustomizationKeys.HAIR_OPTIONS] =
     {
-        { [CharacterCustomizationKeys.HAIR_MESH] = BALD, [CharacterCustomizationKeys.HAIR_COLORS] = { } },
+        MakeBaldHumanoidMasculine(),
     },
     [CharacterCustomizationKeys.SKIN_COLORS] =
     {
+        Color.ORANGE, Color.PURPLE, Color.YELLOW
     }
 }
 

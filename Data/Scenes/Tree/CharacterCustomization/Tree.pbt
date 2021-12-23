@@ -19,7 +19,6 @@ Objects {
     }
   }
   ParentId: 15420022136178869387
-  ChildIds: 9401417775836168631
   ChildIds: 865742444336099434
   ChildIds: 8632194007590615229
   ChildIds: 13613261303598770622
@@ -1914,45 +1913,6 @@ Objects {
     TemplateAsset {
       Id: 14708100227964887981
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 9401417775836168631
-  Name: "GenderButtons"
-  Transform {
-    Location {
-      X: -148203.625
-      Y: -108969.719
-      Z: -52530
-    }
-    Rotation {
-      Yaw: -83
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 9704043689867951439
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "GenderButtons"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

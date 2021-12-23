@@ -113,6 +113,7 @@ Objects {
   ParentId: 5628166357863187692
   ChildIds: 4164393759716768404
   ChildIds: 11133864095168411048
+  ChildIds: 1139410850627477304
   ChildIds: 15420022136178869387
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
@@ -168,6 +169,41 @@ Objects {
   }
 }
 Objects {
+  Id: 1139410850627477304
+  Name: "NewCharacterShared"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10429536637734832815
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "NewCharacterShared"
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 11133864095168411048
   Name: "NewCharacter"
   Transform {
@@ -217,10 +253,8 @@ Objects {
   }
   ParentId: 11133864095168411048
   ChildIds: 12446159501759509720
-  ChildIds: 15022815161956759828
-  ChildIds: 4721940148143912233
-  ChildIds: 11863232996044764122
   ChildIds: 18055793306275902885
+  ChildIds: 4721940148143912233
   ChildIds: 1636713729405553466
   ChildIds: 5301055616480901615
   ChildIds: 18359147313928719395
@@ -2218,85 +2252,12 @@ Objects {
   }
 }
 Objects {
-  Id: 18055793306275902885
-  Name: "InformationPanels"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1256500426707964891
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "InformationPanels"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 11863232996044764122
-  Name: "GenderButtons"
-  Transform {
-    Location {
-      X: -1140
-      Y: -1305
-      Z: 100
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1256500426707964891
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "GenderButtons_1"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 4721940148143912233
   Name: "ClassButtons"
   Transform {
     Location {
-      X: -1141
-      Y: -1304
+      X: -1141.00781
+      Y: -1304.03125
       Z: 100
     }
     Rotation {
@@ -2329,13 +2290,10 @@ Objects {
   }
 }
 Objects {
-  Id: 15022815161956759828
-  Name: "RaceButtons"
+  Id: 18055793306275902885
+  Name: "InformationPanels"
   Transform {
     Location {
-      X: -1140
-      Y: -1305
-      Z: 200
     }
     Rotation {
     }
@@ -2350,7 +2308,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2360,7 +2318,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "RaceButtons"
+    FilePartitionName: "InformationPanels"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
