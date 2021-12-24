@@ -63,7 +63,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 6414044829894743198
+              Id: 9266868553966372263
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -163,9 +163,9 @@ Assets {
         Name: "Cone - Soft 01"
         Transform {
           Location {
-            X: -2.99999762
-            Y: 4.00076199
-            Z: 88
+            X: -2.99999714
+            Y: 5.0002737
+            Z: 89
           }
           Rotation {
             Pitch: 30
@@ -236,9 +236,9 @@ Assets {
         Name: "Cone - Soft 01"
         Transform {
           Location {
-            X: -3.00000048
-            Y: -4
-            Z: 88
+            X: -3.00000072
+            Y: -4.99972248
+            Z: 89
           }
           Rotation {
             Pitch: 29.9999847
@@ -315,12 +315,12 @@ Assets {
       }
     }
     Assets {
-      Id: 6414044829894743198
-      Name: "Humanoid 2 Ramesh"
+      Id: 9266868553966372263
+      Name: "Humanoid 2 Kenton"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_basic_008_ref"
+        AssetId: "npc_human_guy_head_basic_003_ref"
       }
     }
     Assets {

@@ -292,6 +292,12 @@ Assets {
           Id: 17803366332466114312
         }
       }
+      Overrides {
+        Name: "cs:CharacterCustomizationPalette"
+        AssetReference {
+          Id: 14211435433380891242
+        }
+      }
     }
     Assets {
       Id: 968683000654906430

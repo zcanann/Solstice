@@ -80,16 +80,12 @@ function DetermineSelectorLimits(race, gender)
 
                 if hairOptionsTable then
                     hairSubOptionsTable = hairOptionsTable[activeHairId]
-                else
-                    warn("No hair sub-options found")
                 end
             else
                 Framework.Warn("No customization options found")
             end
             if hairSubOptionsTable then
                 hairColorsTable = hairSubOptionsTable[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLORS]
-            else
-                Framework.Warn("No hair options found")
             end
 
             activeLimits[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] = CountOrDefault(skinColorsTable, 1)

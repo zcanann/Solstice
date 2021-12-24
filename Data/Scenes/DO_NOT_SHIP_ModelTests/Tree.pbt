@@ -20,6 +20,10 @@ Objects {
   ChildIds: 666809739031886101
   ChildIds: 3342469659628388512
   ChildIds: 4972651318658765433
+  ChildIds: 3379891588245609502
+  ChildIds: 7406520793192637096
+  ChildIds: 4976664796164341562
+  ChildIds: 18191894532475031970
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -32,6 +36,207 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 18191894532475031970
+  Name: "Chain Root"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11551124631059328338
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Chain Root"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -816.313477
+            Y: 59.8820953
+            Z: -105
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 205792078501761293
+    }
+  }
+}
+Objects {
+  Id: 4976664796164341562
+  Name: "Costume - Wrist Chains"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 12759639595018676727
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Costume - Wrist Chains"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -813.353394
+            Y: -154.865707
+            Z: -105
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5098451263116761780
+    }
+  }
+}
+Objects {
+  Id: 7406520793192637096
+  Name: "Decal Stains Round 01"
+  Transform {
+    Location {
+      X: 1534.65369
+      Y: -965.700439
+      Z: 75.4000244
+    }
+    Rotation {
+      Pitch: -0.18737793
+      Yaw: 89.4586411
+      Roll: 91.7177048
+    }
+    Scale {
+      X: 0.0947938636
+      Y: 0.0947938636
+      Z: 0.0947938636
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Color"
+      Color {
+        R: 0.570000052
+        G: 2.71797205e-07
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 8684409065972012385
+    }
+    TeamSettings {
+    }
+    DecalBP {
+    }
+  }
+  Relevance {
+    Value: "mc:eproxyrelevance:medium"
+  }
+}
+Objects {
+  Id: 3379891588245609502
+  Name: "FrameworkUndeadMasculineVariantB"
+  Transform {
+    Location {
+      X: 1544.00024
+      Y: -967.025879
+      Z: 5
+    }
+    Rotation {
+      Yaw: -179.999954
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  UnregisteredParameters {
+    Overrides {
+      Name: "ma:0:Shared_BaseMaterial:color"
+      Color {
+        R: 0.39500007
+        G: 0.300000042
+        B: 0.45
+        A: 1
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  CoreMesh {
+    MeshAsset {
+      Id: 16794234107403285238
+    }
+    Teams {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    AnimatedMesh {
+      AnimationStance: "unarmed_bind_pose"
+      AnimationStancePlaybackRate: 1
+      AnimationStanceShouldLoop: true
+      AnimationPlaybackRateMultiplier: 1
+      PlayOnStartAnimation {
+        PlaybackRate: 1
+      }
+      SkinnedMeshes {
+        Id: 5412629239961359816
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+      SkinnedMeshes {
+        Id: 841534158063459245
+      }
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -684,6 +889,12 @@ Objects {
           Rotator {
           }
         }
+        Overrides {
+          Name: "AnimatedMesh.SkinnedMesh0"
+          AssetReference {
+            Id: 8532477695942616287
+          }
+        }
       }
     }
     TemplateAsset {
@@ -816,14 +1027,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -1253,22 +1456,11 @@ Objects {
           Rotator {
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
       Id: 8110821414250134388
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1299,22 +1491,8 @@ Objects {
           }
         }
         Overrides {
-          Name: "AnimatedMesh.SkinnedMesh1"
-          AssetReference {
-            Id: 3695172008212327780
-          }
-        }
-        Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -1338,6 +1516,12 @@ Objects {
     }
   }
   ParentId: 12138717742109737789
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
     ParameterOverrideMap {
       key: 4589093596228675304
@@ -1360,11 +1544,12 @@ Objects {
           }
         }
         Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
+          Name: "ma:0:Shared_BaseMaterial:color"
+          Color {
+            R: 0.606
+            G: 0.314484864
+            B: 0.303
+            A: 1
           }
         }
       }
@@ -1372,9 +1557,6 @@ Objects {
     TemplateAsset {
       Id: 11015913052092835113
     }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
@@ -1405,22 +1587,8 @@ Objects {
           }
         }
         Overrides {
-          Name: "AnimatedMesh.SkinnedMesh1"
-          AssetReference {
-            Id: 403499311418171517
-          }
-        }
-        Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }
@@ -1600,8 +1768,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -375
-            Y: 395
+            X: -390.278503
+            Y: 510.706207
             Z: 10
           }
         }
@@ -1616,6 +1784,15 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+        Overrides {
+          Name: "ma:0:Shared_BaseMaterial:color"
+          Color {
+            R: 0.307155788
+            G: 0.728000045
+            B: 0.133
+            A: 1
           }
         }
       }
@@ -1650,8 +1827,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: -350
-            Y: 293
+            X: -389.264374
+            Y: 425.392944
             Z: 10
           }
         }
@@ -1666,6 +1843,15 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+        Overrides {
+          Name: "ma:0:Shared_BaseMaterial:color"
+          Color {
+            R: 0.305882365
+            G: 0.729411781
+            B: 0.13333334
+            A: 1
           }
         }
       }

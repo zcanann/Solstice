@@ -7,7 +7,7 @@ Assets {
       RootId: 3101731870679369773
       Objects {
         Id: 3101731870679369773
-        Name: "FrameworkHumanMasculineVariantF"
+        Name: "FrameworkHumanMasculineVariantA"
         Transform {
           Scale {
             X: 1
@@ -45,7 +45,7 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 4262471157560748602
+              Id: 8532477695942616287
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -73,12 +73,12 @@ Assets {
       }
     }
     Assets {
-      Id: 4262471157560748602
-      Name: "Humanoid 2 Zack"
+      Id: 8532477695942616287
+      Name: "Humanoid 2 Minh"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_basic_001_ref"
+        AssetId: "npc_human_guy_head_basic_002_ref"
       }
     }
     PrimaryAssetId {

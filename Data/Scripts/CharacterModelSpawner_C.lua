@@ -140,6 +140,7 @@ function RebuildCustomizations(playerModel, customizations, playerModelAsset)
     if customizationOptions then
         local hairOptions = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.HAIR_OPTIONS]
         local skinColorOptions = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLORS]
+        local colorAdjustment = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.COLOR_ADJUSTMENT]
 
         if hairOptions then
             local hairOptionSet = hairOptions[hairStyleId]
@@ -160,8 +161,17 @@ function RebuildCustomizations(playerModel, customizations, playerModelAsset)
             end
         end
 
-        if skinColorOptions then
-            Framework.Utils.Meshes.AssignSkinColor(playerModel, skinColorOptions[skinColorId])
+        if skinColorOptions and skinColorOptions[skinColorId] then
+            local skinColor = Color.New(skinColorOptions[skinColorId])
+
+            -- Apply skin color adjustments, if any. This is needed to correct differences in skin materials for the same race, as not all skin materials honor colors the same.
+            if colorAdjustment then
+                skinColor.r = skinColor.r * colorAdjustment.x
+                skinColor.g = skinColor.g * colorAdjustment.y
+                skinColor.b = skinColor.b * colorAdjustment.z
+            end
+
+            Framework.Utils.Meshes.AssignSkinColor(playerModel, skinColor)
         end
     end
 end
