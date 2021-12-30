@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15010763861394408712
+        ParentId: 12138717742109737789
         ChildIds: 16341256764996479740
         UnregisteredParameters {
           Overrides {
@@ -85,6 +85,24 @@ Assets {
               G: 0.0313725509
               B: 0.0313725509
               A: 1
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect1"
+            ObjectReference {
+              SubObjectId: 7458903365779236526
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect2"
+            ObjectReference {
+              SubObjectId: 62986117566935217
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect3"
+            ObjectReference {
+              SubObjectId: 13207121084668075024
             }
           }
         }

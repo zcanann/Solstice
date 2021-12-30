@@ -16,6 +16,7 @@ local cancelCustomizatons = nil
 
 local activeCustomizationKey = nil
 local activeLimits = { }
+local lastRequestedCustomizations = nil
 
 function OnCharacterSelectStateChanged(stateData)
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CUSTOMIZE_NEW_CHARACTER then
@@ -23,6 +24,8 @@ function OnCharacterSelectStateChanged(stateData)
     else
         CHARACTER_CUSTOMIZE_SCREEN.visibility = Visibility.FORCE_OFF
     end
+
+    local previousCustomizationKey = activeCustomizationKey
 
     if stateData.race and stateData.gender then
         activeCustomizationKey = stateData.race .. "_" .. stateData.gender
@@ -35,6 +38,14 @@ function OnCharacterSelectStateChanged(stateData)
     end
 
     DetermineSelectorLimits(stateData.race, stateData.gender)
+    RandomizeInitialCustomizations()
+
+    -- If the active customizations have changed, request that the server apply the new changes
+    if activeCustomizationKey ~= previousCustomizationKey then
+        Framework.NextFrame(function ()
+            RequestChangeCustomizations()
+        end)
+    end
 
     -- Update selectors
     RefreshSelector(BASE_MODEL_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID)
@@ -55,6 +66,32 @@ function CountOrDefault(table, default)
         count = default
     end
     return count
+end
+
+function RandomizeInitialCustomizations()
+    local customizations = allCustomizations[activeCustomizationKey]
+    if not customizations then
+        Framework.Warn("No active customization key set")
+    end
+
+    -- No work to do, data already present
+    if Framework.Utils.Table.Count(customizations) > 0 then
+        return
+    end
+
+    local keysToInitialize =
+    {
+        Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID,
+        Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID,
+        Framework.Storage.Keys.CharacterCustomizations.DECAL_ID,
+        Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID,
+        Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID,
+        Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID,
+    }
+
+    for _, key in ipairs(keysToInitialize) do
+        customizations[key] = math.random(1, activeLimits[key] or 1)
+    end
 end
 
 function DetermineSelectorLimits(race, gender)
@@ -150,7 +187,15 @@ end
 function RequestChangeCustomizations()
     local customizations = allCustomizations[activeCustomizationKey]
     if not customizations then return end
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CUSTOMIZATIONS, { customizations})
+
+    local customizationsSerialized = Framework.Utils.Table.Serialize(customizations)
+    if lastRequestedCustomizations == customizationsSerialized then
+        -- No new changes to request
+        return
+    end
+    lastRequestedCustomizations = customizationsSerialized
+
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CUSTOMIZATIONS, { customizations })
 end
 
 function BindSelectorButtons(selector, callback, argsLeft, argsRight)

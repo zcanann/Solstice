@@ -15,7 +15,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1314884817738718373
+        ParentId: 12138717742109737789
         ChildIds: 12131030670623055792
         UnregisteredParameters {
           Overrides {
@@ -70,6 +70,18 @@ Assets {
             Name: "ma:3:Shared_Detail3:id"
             AssetReference {
               Id: 2018227301497757374
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect1"
+            ObjectReference {
+              SubObjectId: 9487123082128792598
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect2"
+            ObjectReference {
+              SubObjectId: 9915138135498311681
             }
           }
         }
@@ -183,15 +195,7 @@ Assets {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 4247430867898109902
-            }
-          }
-          Overrides {
-            Name: "ma:0:Shared_BaseMaterial:color"
-            Color {
-              R: 0.404
-              G: 0.141400009
-              A: 1
+              Id: 7821569636782604439
             }
           }
           Overrides {
@@ -410,15 +414,6 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_lower_casual_023_ref"
-      }
-    }
-    Assets {
-      Id: 4247430867898109902
-      Name: "Stucco Tintable"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_stucco_tint_001_uv"
       }
     }
     PrimaryAssetId {

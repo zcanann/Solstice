@@ -10,6 +10,8 @@ Framework.Dump = require(script:GetCustomProperty("Dump")).Dump
 
 MeshUtils.InvisMaterialId, _ = CoreString.Split(script:GetCustomProperty("InvisMaterial"), ":")
 local SkinMaterial = "Shared_BaseMaterial"
+local MeshKey = "redirect"
+local ColorAdjustmentKey = "color_adjustment"
 
 function StartsWith(inString, startsWith)
 	return string.sub(inString, 1, string.len(startsWith)) == startsWith
@@ -31,61 +33,94 @@ end
 --]]
 
 -- Assigns a hair asset to the hair slot of an animated mesh
-MeshUtils.AssignSkinColor = function (animatedMesh, colorOverride)
+MeshUtils.AssignSkinColor = function (animatedMesh, colorOverride, colorAdjustments)
 	if not animatedMesh then
 		warn("Invalid parameters passed to AssignSkinColor")
 		return
 	end
 
-	local meshTargets = nil
+	colorAdjustments = colorAdjustments or { }
+	local skinTargets = nil
 
 	-- Skin redirects allow us to have special character models where the main rig is not the skin color target
 	-- Note: If the main rig needs to be a skin color target in addition to any redirects, it is safe to make a self-referencing redirect on the main rig
+	-- Also, each of these may need their own color adjustments, as they can have different materials that display the same color differently
 	local skinRedirects =
 	{
-		animatedMesh:GetCustomProperty("SkinRedirect1"),
-		animatedMesh:GetCustomProperty("SkinRedirect2"),
-		animatedMesh:GetCustomProperty("SkinRedirect3"),
-		animatedMesh:GetCustomProperty("SkinRedirect4"),
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect1"), [ColorAdjustmentKey] = colorAdjustments[1] },
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect2"), [ColorAdjustmentKey] = colorAdjustments[2] },
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect3"), [ColorAdjustmentKey] = colorAdjustments[3] },
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect4"), [ColorAdjustmentKey] = colorAdjustments[4] },
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect5"), [ColorAdjustmentKey] = colorAdjustments[5] },
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect6"), [ColorAdjustmentKey] = colorAdjustments[6] },
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect7"), [ColorAdjustmentKey] = colorAdjustments[7] },
+		{ [MeshKey] = animatedMesh:GetCustomProperty("SkinRedirect8"), [ColorAdjustmentKey] = colorAdjustments[8] },
 	}
 
 	-- Extract the actual underlying CoreObject list of skin redirects, if they exist
-	skinRedirects = Framework.Utils.Table.RemoveNils(skinRedirects)
 	for index, skinRedirect in ipairs(skinRedirects) do
-		skinRedirects[index] = skinRedirect:GetObject()
+		if skinRedirect[MeshKey] then
+			skinRedirects[index][MeshKey] = skinRedirect[MeshKey]:GetObject()
+		end
+		-- Invalidate entries without any redirects
+		if not skinRedirects[index][MeshKey] then
+			skinRedirects[index] = nil
+		end
 	end
 	skinRedirects = Framework.Utils.Table.RemoveNils(skinRedirects)
 
 	if Framework.Utils.Table.Count(skinRedirects) > 0 then
-		meshTargets = skinRedirects
+		skinTargets = skinRedirects
 	else
-		meshTargets = { animatedMesh }
+		-- Default case for when there are no skin redirects. Color adjustments is often nil in this case.
+		skinTargets = { { [MeshKey] = animatedMesh, [ColorAdjustmentKey] = colorAdjustments[1] } }
  	end
 
-	for _, meshTarget in ipairs(meshTargets) do
-		local defaultsSet = GetMaterialSlotSet(meshTarget:GetMaterialSlots())
-		for slotName, _ in pairs(defaultsSet) do
-			local index = tonumber(slotName.sub(slotName, 1, 1)) + 1
-			if index == 1 then
-				local modelMaterial = meshTarget:GetMaterialSlot(slotName)
-				local _, modelSlotName = CoreString.Split(modelMaterial.slotName, ":")
+	for _, skinTarget in ipairs(skinTargets) do
+		local mesh = skinTarget[MeshKey]
+		if mesh:IsA("AnimatedMesh") then
+			local defaultsSet = GetMaterialSlotSet(mesh:GetMaterialSlots())
+			for slotName, _ in pairs(defaultsSet) do
+				local index = tonumber(slotName.sub(slotName, 1, 1)) + 1
+				if index == 1 then
+					local modelMaterial = mesh:GetMaterialSlot(slotName)
+					local _, modelSlotName = CoreString.Split(modelMaterial.slotName, ":")
 
-				-- Avoid overwriting any other details on the target rig, such as eye color
-				if modelSlotName == SkinMaterial then
-					if modelMaterial then
-						modelMaterial:ResetIsSmartMaterial()
-						modelMaterial:ResetMaterialAssetId()
-						modelMaterial:ResetUVTiling()
-						modelMaterial:ResetColor()
-					end
+					-- Avoid overwriting any other details on the target rig, such as eye color
+					if modelSlotName == SkinMaterial then
+						if modelMaterial then
+							modelMaterial:ResetIsSmartMaterial()
+							modelMaterial:ResetMaterialAssetId()
+							modelMaterial:ResetUVTiling()
+							modelMaterial:ResetColor()
+						end
 
-					if modelMaterial.materialAssetId == MeshUtils.InvisMaterialId then
-						modelMaterial:SetColor(Color.TRANSPARENT)
-					elseif colorOverride then
-						modelMaterial:SetColor(colorOverride)
+						if modelMaterial.materialAssetId == MeshUtils.InvisMaterialId then
+							modelMaterial:SetColor(Color.TRANSPARENT)
+						elseif colorOverride then
+							local colorAdjustment = skinTarget[ColorAdjustmentKey]
+							if colorAdjustment then
+								colorOverride = Color.New(colorOverride)
+								colorOverride.r = colorOverride.r * colorAdjustment.x
+								colorOverride.g = colorOverride.g * colorAdjustment.y
+								colorOverride.b = colorOverride.b * colorAdjustment.z
+							end
+							modelMaterial:SetColor(colorOverride)
+						end
 					end
 				end
 			end
+		elseif mesh:IsA("CoreMesh") then
+			local colorAdjustment = skinTarget[ColorAdjustmentKey]
+			if colorAdjustment then
+				colorOverride = Color.New(colorOverride)
+				colorOverride.r = colorOverride.r * colorAdjustment.x
+				colorOverride.g = colorOverride.g * colorAdjustment.y
+				colorOverride.b = colorOverride.b * colorAdjustment.z
+			end
+			mesh:SetColor(colorOverride)
+		else
+			Framework.Warn("Unsupported core object type passed as skin redirect")
 		end
 	end
 end

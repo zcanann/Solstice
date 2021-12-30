@@ -82,7 +82,7 @@ Assets {
               Id: 9266868553966372263
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 403499311418171517
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -502,6 +502,15 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_head_basic_003_ref"
+      }
+    }
+    Assets {
+      Id: 403499311418171517
+      Name: "Humanoid 2 Kenton Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_guy_hair_basic_003_ref"
       }
     }
     Assets {

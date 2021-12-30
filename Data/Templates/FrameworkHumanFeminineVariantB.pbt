@@ -17,6 +17,12 @@ Assets {
         }
         ParentId: 12138717742109737789
         UnregisteredParameters {
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50,7 +56,7 @@ Assets {
               Id: 12203642515467150374
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 6884167587482290709
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -81,6 +87,24 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_head_sport_001_ref"
+      }
+    }
+    Assets {
+      Id: 6884167587482290709
+      Name: "Humanoid 1 Sonia Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_hair_sport_001_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {

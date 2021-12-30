@@ -23,6 +23,12 @@ Assets {
               Id: 13327796119306530430
             }
           }
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 841534158063459245
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -56,7 +62,7 @@ Assets {
               Id: 6270525319424035150
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 1764174267377581126
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -87,6 +93,15 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_head_fantasy_008_ref"
+      }
+    }
+    Assets {
+      Id: 1764174267377581126
+      Name: "Humanoid 2 Wukong Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_guy_hair_fantasy_008_ref"
       }
     }
     PrimaryAssetId {

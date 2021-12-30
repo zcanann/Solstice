@@ -17,6 +17,12 @@ Assets {
         }
         ParentId: 15010763861394408712
         UnregisteredParameters {
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50,7 +56,7 @@ Assets {
               Id: 5969117110246292730
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 7441538282457928803
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -81,6 +87,24 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_head_basic_003_ref"
+      }
+    }
+    Assets {
+      Id: 7441538282457928803
+      Name: "Humanoid 1 Nalo Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_hair_basic_003_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {

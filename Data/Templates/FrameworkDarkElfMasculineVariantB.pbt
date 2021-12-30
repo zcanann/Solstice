@@ -33,6 +33,30 @@ Assets {
               Id: 6003250989474810368
             }
           }
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect1"
+            ObjectReference {
+              SubObjectId: 10696919728772896857
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect2"
+            ObjectReference {
+              SubObjectId: 9192154100710158897
+            }
+          }
+          Overrides {
+            Name: "cs:SkinRedirect3"
+            ObjectReference {
+              SubObjectId: 3157987431360167611
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -63,10 +87,10 @@ Assets {
               PlaybackRate: 1
             }
             SkinnedMeshes {
-              Id: 3912533876295843450
+              Id: 8532477695942616287
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 14737140527766289275
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -316,12 +340,30 @@ Assets {
       }
     }
     Assets {
-      Id: 3912533876295843450
-      Name: "Humanoid 2 Xavier"
+      Id: 8532477695942616287
+      Name: "Humanoid 2 Minh"
       PlatformAssetType: 26
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_guy_head_basic_006_ref"
+        AssetId: "npc_human_guy_head_basic_002_ref"
+      }
+    }
+    Assets {
+      Id: 14737140527766289275
+      Name: "Humanoid 2 Minh Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_guy_hair_basic_002_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {

@@ -494,5 +494,17 @@ Assets {
       VirtualFolderPath: "Stairs"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      VirtualFolderPath: "Orc"
+      PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Models"
+      VirtualFolderPath: "PlayerSkins"
+      VirtualFolderPath: "Human"
+      PlatformAssetType: 13
+    }
   }
 }

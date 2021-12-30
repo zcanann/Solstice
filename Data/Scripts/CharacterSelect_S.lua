@@ -103,11 +103,6 @@ function UpdatePreviewEquipment(player)
 end
 
 function OnBeginCreateNewCharacterRequested(player)
-    if characterSelectScreenStates[player].state ~= Framework.Events.Keys.CharacterSelect.State.CHARACTER_SELECT then
-        warn("Attempted to begin creating character from invalid state")
-        return
-    end
-
     local factionRng = math.random()
     local genderCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Genders.GENDERS)
     local classCount = Framework.Utils.Table.Count(Framework.Storage.Keys.Classes.CLASSES)

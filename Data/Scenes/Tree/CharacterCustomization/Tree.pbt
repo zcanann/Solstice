@@ -1860,7 +1860,7 @@ Objects {
       value {
         Overrides {
           Name: "Label"
-          String: "Base"
+          String: "Face/Body"
         }
       }
     }

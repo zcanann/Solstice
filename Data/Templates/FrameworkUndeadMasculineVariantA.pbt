@@ -23,6 +23,12 @@ Assets {
               Id: 13664557142589026396
             }
           }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -56,7 +62,7 @@ Assets {
               Id: 9052587894103723134
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 14742868643503469330
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -87,6 +93,24 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_head_basic_005_ref"
+      }
+    }
+    Assets {
+      Id: 14742868643503469330
+      Name: "Humanoid 2 Xavier Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_guy_hair_basic_006_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {

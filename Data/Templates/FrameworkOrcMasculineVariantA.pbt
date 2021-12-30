@@ -17,6 +17,12 @@ Assets {
         }
         ParentId: 15010763861394408712
         UnregisteredParameters {
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -50,7 +56,7 @@ Assets {
               Id: 2840047087931825568
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 3695172008212327780
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -81,6 +87,24 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_guy_head_fantasy_004_ref"
+      }
+    }
+    Assets {
+      Id: 3695172008212327780
+      Name: "Humanoid 2 Drahkzen Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_guy_hair_fantasy_004_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {

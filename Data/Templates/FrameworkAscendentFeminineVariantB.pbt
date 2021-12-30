@@ -43,6 +43,12 @@ Assets {
               SubObjectId: 10798389280526104601
             }
           }
+          Overrides {
+            Name: "ma:0:Shared_Detail1:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -76,7 +82,7 @@ Assets {
               Id: 9288686309906252693
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 2979029195439978592
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -609,12 +615,30 @@ Assets {
       }
     }
     Assets {
+      Id: 2979029195439978592
+      Name: "Humanoid 1 Sierra Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_hair_scifi_002_ref"
+      }
+    }
+    Assets {
       Id: 13337077198413602857
       Name: "Additive Soft Edge"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "fxma_additive_edgefade"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {
@@ -633,15 +657,6 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "mi_invisible_001"
-      }
-    }
-    Assets {
-      Id: 2979029195439978592
-      Name: "Humanoid 1 Sierra Hair"
-      PlatformAssetType: 26
-      PrimaryAsset {
-        AssetType: "SkinnedMeshAssetRef"
-        AssetId: "npc_human_gal_hair_scifi_002_ref"
       }
     }
     Assets {

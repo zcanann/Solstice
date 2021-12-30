@@ -26,6 +26,12 @@ Assets {
               A: 1
             }
           }
+          Overrides {
+            Name: "ma:1:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -59,7 +65,7 @@ Assets {
               Id: 16819068458455097482
             }
             SkinnedMeshes {
-              Id: 841534158063459245
+              Id: 968683000654906430
             }
             SkinnedMeshes {
               Id: 841534158063459245
@@ -90,6 +96,24 @@ Assets {
       PrimaryAsset {
         AssetType: "SkinnedMeshAssetRef"
         AssetId: "npc_human_gal_head_basic_004_ref"
+      }
+    }
+    Assets {
+      Id: 968683000654906430
+      Name: "Humanoid 1 Aparna Hair"
+      PlatformAssetType: 26
+      PrimaryAsset {
+        AssetType: "SkinnedMeshAssetRef"
+        AssetId: "npc_human_gal_hair_basic_008_ref"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {
