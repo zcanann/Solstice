@@ -159,12 +159,13 @@ function OnFinalizeCreateNewCharacterRequested(player)
 
     local initialData = { }
 
-    -- TOOD: Validation
+    -- TOOD: Double check server-side validation exists for all of these
     initialData[Framework.Storage.Keys.Characters.CLASS] = characterSelectScreenStates[player].class
     initialData[Framework.Storage.Keys.Characters.GENDER] = characterSelectScreenStates[player].gender
     initialData[Framework.Storage.Keys.Characters.RACE] = characterSelectScreenStates[player].race
     initialData[Framework.Storage.Keys.Characters.NAME] = characterSelectScreenStates[player].name
     initialData[Framework.Storage.Keys.Characters.ZONE] = Framework.Storage.Keys.Zones.UNKNOWN
+    initialData[Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATIONS] = characterSelectScreenStates[player].customizations
 
     -- Determine the faction from the provided race
     if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, initialData[Framework.Storage.Keys.Characters.RACE]) then
@@ -221,6 +222,7 @@ function OnRequestSelectCharacter(player, characterIdToSelect)
     SetActiveGender(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.GENDER))
     SetActiveRace(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.RACE))
     SetActiveName(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.NAME))
+    SetActiveCustomizations(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATIONS))
     SendCharacterSelectStateData(player)
 end
 

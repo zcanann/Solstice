@@ -16,9 +16,8 @@ Assets {
           }
         }
         ParentId: 9292959906759754007
-        ChildIds: 10593117386948768209
-        ChildIds: 5695778125440435204
-        ChildIds: 9418320252529426939
+        ChildIds: 17705382337046113550
+        ChildIds: 18226837625215454919
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -38,12 +37,13 @@ Assets {
         }
       }
       Objects {
-        Id: 10593117386948768209
-        Name: "Floor1"
+        Id: 17705382337046113550
+        Name: "ClientContext"
         Transform {
           Location {
             X: -1650
             Y: -1240
+            Z: 600
           }
           Rotation {
           }
@@ -54,7 +54,991 @@ Assets {
           }
         }
         ParentId: 10193260367702185647
+        ChildIds: 12369680589927417643
+        ChildIds: 5658725892157009340
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 12369680589927417643
+        Name: "FloorController_C"
+        Transform {
+          Location {
+            X: -0.000116889161
+            Y: 9.80815457e-05
+          }
+          Rotation {
+            Yaw: -2.73207552e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17705382337046113550
+        ChildIds: 14740769314542458617
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:FloorTrigger"
+            ObjectReference {
+              SubObjectId: 14740769314542458617
+            }
+          }
+          Overrides {
+            Name: "cs:Floor"
+            ObjectReference {
+              SubObjectId: 5695778125440435204
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3248722107925924090
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14740769314542458617
+        Name: "FloorTrigger"
+        Transform {
+          Location {
+            X: 402.90033
+            Y: 434.393921
+            Z: 987.5
+          }
+          Rotation {
+          }
+          Scale {
+            X: 27.5
+            Y: 34.3
+            Z: 19.3000069
+          }
+        }
+        ParentId: 12369680589927417643
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:box"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 5658725892157009340
+        Name: "FloorController_C"
+        Transform {
+          Location {
+            X: -0.000116889161
+            Y: 9.80815457e-05
+          }
+          Rotation {
+            Yaw: -3.41509476e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17705382337046113550
+        ChildIds: 10727632965599542803
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:FloorTrigger"
+            ObjectReference {
+              SubObjectId: 10727632965599542803
+            }
+          }
+          Overrides {
+            Name: "cs:Floor"
+            ObjectReference {
+              SubObjectId: 9418320252529426939
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 3248722107925924090
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10727632965599542803
+        Name: "FloorTrigger"
+        Transform {
+          Location {
+            X: 402.900146
+            Y: 434.39325
+            Z: 1543.75
+          }
+          Rotation {
+          }
+          Scale {
+            X: 27.5
+            Y: 34.3000031
+            Z: 19.3000069
+          }
+        }
+        ParentId: 5658725892157009340
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:box"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 18226837625215454919
+        Name: "StaticContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -3.75660384e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10193260367702185647
+        ChildIds: 10593117386948768209
+        ChildIds: 5695778125440435204
+        ChildIds: 9418320252529426939
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          Type: RuntimeStatic
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10593117386948768209
+        Name: "Floor1"
+        Transform {
+          Location {
+            X: -1649.99939
+            Y: -1240.00085
+          }
+          Rotation {
+            Yaw: 2.049057e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18226837625215454919
         ChildIds: 731652932373817064
+        ChildIds: 12380444610759951143
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 731652932373817064
+        Name: "Floor"
+        Transform {
+          Location {
+            X: -0.000158548224
+            Y: -0.000663719606
+            Z: -4.74041
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10593117386948768209
+        ChildIds: 7747834980791145595
+        ChildIds: 11741776194702796559
+        ChildIds: 7196565229014560456
+        ChildIds: 17507725578468433842
+        ChildIds: 15243614442488072583
+        ChildIds: 9826058800685768235
+        ChildIds: 14683650302209369546
+        ChildIds: 9577362846368387530
+        ChildIds: 1588812805782457743
+        ChildIds: 4193136522866468530
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7747834980791145595
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: -799.999695
+            Y: -399.999756
+            Z: -80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 11741776194702796559
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: -0.000429153442
+            Y: -394.776978
+            Z: -80.2596283
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7196565229014560456
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: 799.999878
+            Y: -399.999695
+            Z: -80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17507725578468433842
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: 799.999695
+            Y: 399.999756
+            Z: -80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 15243614442488072583
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: 799.999878
+            Y: 1199.99976
+            Z: -80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9826058800685768235
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: -0.000152587891
+            Y: 1205.22314
+            Z: -80.2595901
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14683650302209369546
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: 0.000410079956
+            Y: 405.223328
+            Z: -80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 9577362846368387530
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: 799.998169
+            Y: 2000.22461
+            Z: -80
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1588812805782457743
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: -0.00179290771
+            Y: 2005.22314
+            Z: -80.2595901
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 10147187455114148516
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7755721473406107898
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4193136522866468530
+        Name: "Craftsman Floor 01 8m x 8m"
+        Transform {
+          Location {
+            X: -794.999695
+            Y: 2005.22241
+            Z: -80.2595901
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 4
+          }
+        }
+        ParentId: 731652932373817064
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Building_Floor:id"
+            AssetReference {
+              Id: 4897753264114917836
+            }
+          }
+          Overrides {
+            Name: "ma:Building_Floor:color"
+            Color {
+              R: 0.270497799
+              G: 0.149959758
+              B: 0.0561284833
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 13467998343991381121
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 12380444610759951143
+        Name: "Walls"
+        Transform {
+          Location {
+            X: 444
+            Y: 269
+            Z: -40
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10593117386948768209
         ChildIds: 8098506902081509146
         ChildIds: 6208164996001375021
         ChildIds: 7288514931234519179
@@ -126,9 +1110,15 @@ Assets {
         ChildIds: 11639059367448026449
         ChildIds: 8022794437357351005
         ChildIds: 11863855128317664833
-        ChildIds: 2769909975148138083
         ChildIds: 14932240520312534232
         ChildIds: 6224098547600116175
+        ChildIds: 17868969258848676262
+        ChildIds: 8820842003497206737
+        ChildIds: 7201123030064554236
+        ChildIds: 14963402163749519635
+        ChildIds: 7138467004746197958
+        ChildIds: 4032809440939189855
+        ChildIds: 6327518867406762333
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -149,618 +1139,13 @@ Assets {
         }
       }
       Objects {
-        Id: 731652932373817064
-        Name: "Floor"
-        Transform {
-          Location {
-            Y: -0.000534057617
-            Z: -4.74041748
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10593117386948768209
-        ChildIds: 7747834980791145595
-        ChildIds: 11741776194702796559
-        ChildIds: 7196565229014560456
-        ChildIds: 17507725578468433842
-        ChildIds: 15243614442488072583
-        ChildIds: 9826058800685768235
-        ChildIds: 14683650302209369546
-        ChildIds: 9577362846368387530
-        ChildIds: 1588812805782457743
-        UnregisteredParameters {
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Folder {
-          IsGroup: true
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7747834980791145595
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: -800
-            Y: -400
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 11741776194702796559
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: -0.000270646531
-            Y: -394.776855
-            Z: -0.259613037
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7196565229014560456
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: 800
-            Y: -400
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 17507725578468433842
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: 800
-            Y: 400
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 15243614442488072583
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: 800
-            Y: 1200
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 9826058800685768235
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: -0.00020198198
-            Y: 1205.22314
-            Z: -0.25958252
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 14683650302209369546
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: 0.000251967
-            Y: 405.223145
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 9577362846368387530
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: 799.998352
-            Y: 2000.22461
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 1588812805782457743
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: -0.00163249345
-            Y: 2005.22314
-            Z: -0.25958252
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 731652932373817064
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 10147187455114148516
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7755721473406107898
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 8098506902081509146
         Name: "Group"
         Transform {
           Location {
-            X: 280
-            Y: -720.000488
-            Z: -24.7404175
+            X: -164.000061
+            Y: -989.000183
+            Z: 15.2595901
           }
           Rotation {
           }
@@ -770,7 +1155,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         ChildIds: 6607301613828480469
         ChildIds: 18271401103672407540
         ChildIds: 4777383624796485687
@@ -4183,14 +4568,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: -790
-            Y: -360.432129
-            Z: 10
+            X: -1234.00012
+            Y: -629.432
+            Z: 50
           }
           Rotation {
-            Pitch: 88.9571228
-            Yaw: -90
-            Roll: -90
+            Pitch: 88.9561844
+            Yaw: -89.9990616
+            Roll: -89.9990616
           }
           Scale {
             X: 0.800000072
@@ -4198,7 +4583,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4240,12 +4625,12 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: -825
-            Y: -375.24765
-            Z: -0.0909729
+            X: -1269.00037
+            Y: -644.247681
+            Z: 39.9090195
           }
           Rotation {
-            Roll: -1.04229736
+            Roll: -1.04229712
           }
           Scale {
             X: 1
@@ -4253,7 +4638,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4295,13 +4680,11 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: -832.005
-            Y: -1216.13574
-            Z: -0.233154297
+            X: -1276.00513
+            Y: -1485.13562
+            Z: 39.7668457
           }
           Rotation {
-            Pitch: 0.552432477
-            Roll: -6.01535416
           }
           Scale {
             X: 1
@@ -4309,7 +4692,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4351,13 +4734,13 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: 1652.24243
-            Y: 1231.12354
-            Z: 10.5145464
+            X: 1208.24243
+            Y: 962.123962
+            Z: 50.5145454
           }
           Rotation {
-            Pitch: 88.5152206
-            Yaw: 179.999985
+            Pitch: 88.5146942
+            Yaw: 179.999969
             Roll: -179.999969
           }
           Scale {
@@ -4366,7 +4749,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4408,12 +4791,14 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: 1630
-            Y: 1216.12354
-            Z: 7.62969285e-06
+            X: 1185.99963
+            Y: 947.123474
+            Z: 40
           }
           Rotation {
             Pitch: 1.48390627
+            Yaw: -6.91210145e-10
+            Roll: -5.33742721e-08
           }
           Scale {
             X: 1
@@ -4421,7 +4806,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4463,14 +4848,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: -790
-            Y: -1207.94
-            Z: -30.1657104
+            X: -1234
+            Y: -1476.9397
+            Z: 9.83429
           }
           Rotation {
-            Pitch: 89.296669
-            Yaw: 89.9988861
-            Roll: 89.9988861
+            Pitch: 89.2955627
+            Yaw: 89.9969406
+            Roll: 89.9969406
           }
           Scale {
             X: 0.800000072
@@ -4478,7 +4863,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4520,11 +4905,12 @@ Assets {
         Name: "Whitebox Wall 01 Window Slot 1x"
         Transform {
           Location {
-            X: 1600
-            Y: -394.774475
+            X: 1155.99951
+            Y: -663.774658
+            Z: 40
           }
           Rotation {
-            Yaw: -89.999939
+            Yaw: -89.9999313
           }
           Scale {
             X: 1
@@ -4532,7 +4918,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner2:id"
@@ -4580,9 +4966,9 @@ Assets {
         Name: "Whitebox Wall 01 Window Slot 1x"
         Transform {
           Location {
-            X: -0.775146484
-            Y: -1206.69482
-            Z: -4.74029541
+            X: -444.775421
+            Y: -1475.69482
+            Z: 35.2597046
           }
           Rotation {
             Yaw: -179.999634
@@ -4593,7 +4979,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner2:id"
@@ -4641,9 +5027,9 @@ Assets {
         Name: "Whitebox Wall 01 Window Slot 1x"
         Transform {
           Location {
-            X: -800
-            Y: -400
-            Z: -5.00003052
+            X: -1244
+            Y: -668.999634
+            Z: 34.9999619
           }
           Rotation {
             Yaw: 0.00024247168
@@ -4654,7 +5040,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner2:id"
@@ -4702,12 +5088,13 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: -825
-            Y: -1222.57129
-            Z: -0.119037613
+            X: -1269
+            Y: -1491.57104
+            Z: 39.8809624
           }
           Rotation {
-            Roll: 0.701482832
+            Yaw: -3.41486702e-06
+            Roll: 0.701482773
           }
           Scale {
             X: 1
@@ -4715,7 +5102,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4757,14 +5144,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: -789.869385
-            Y: 1230.22412
-            Z: 9.84008884
+            X: -1233.86963
+            Y: 961.224365
+            Z: 49.8400879
           }
           Rotation {
             Pitch: 89.5424194
-            Yaw: 1.47812713e-07
-            Roll: 1.47808024e-07
+            Yaw: -0.000303581619
+            Roll: -0.000301166758
           }
           Scale {
             X: 0.800000072
@@ -4772,7 +5159,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4814,14 +5201,11 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: -835
-            Y: 1215.22412
-            Z: 55.0000076
+            X: -1278.99951
+            Y: 946.224243
+            Z: 46.25
           }
           Rotation {
-            Pitch: 19.5429382
-            Yaw: 2.0214351e-05
-            Roll: -5.00000525
           }
           Scale {
             X: 1
@@ -4829,7 +5213,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4871,14 +5255,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: -789.998169
-            Y: 405.221191
-            Z: 15.0000086
+            X: -1233.99817
+            Y: 136.221436
+            Z: 55
           }
           Rotation {
             Pitch: 90
-            Yaw: 0.105503529
-            Roll: 0.105524033
+            Yaw: 9.1069187e-06
+            Roll: 2.8425613e-05
           }
           Scale {
             X: 0.800000072
@@ -4886,7 +5270,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4928,12 +5312,11 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: -824.998169
-            Y: 390.221191
-            Z: 7.62939453e-06
+            X: -1268.99841
+            Y: 121.221161
+            Z: 40
           }
           Rotation {
-            Roll: -5.00000525
           }
           Scale {
             X: 1
@@ -4941,7 +5324,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -4983,8 +5366,9 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: 1650
-            Y: 385.225769
+            X: 1205.99988
+            Y: 116.225815
+            Z: 40
           }
           Rotation {
           }
@@ -4994,7 +5378,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5036,14 +5420,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: 1652.50793
-            Y: 400.225586
-            Z: 10.0000086
+            X: 1208.50806
+            Y: 131.225891
+            Z: 50
           }
           Rotation {
             Pitch: 90
-            Yaw: -5.05115509
-            Roll: -5.05114746
+            Yaw: 6.72137403
+            Roll: 6.72138357
           }
           Scale {
             X: 0.800000072
@@ -5051,7 +5435,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5093,14 +5477,14 @@ Assets {
         Name: "Craftsman Roof 01 Eaves"
         Transform {
           Location {
-            X: 1617.7948
-            Y: -1224.88879
-            Z: 560.501
+            X: 1173.79443
+            Y: -1493.88892
+            Z: 600.501
           }
           Rotation {
             Pitch: 1.5857923
-            Yaw: -179.99968
-            Roll: 4.78122183e-06
+            Yaw: -179.999664
+            Roll: 4.76428477e-06
           }
           Scale {
             X: 1
@@ -5108,7 +5492,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -5169,14 +5553,14 @@ Assets {
         Name: "Large Wood Beam 8m"
         Transform {
           Location {
-            X: 852.791138
-            Y: -1309.92786
-            Z: 500.503357
+            X: 408.791168
+            Y: -1578.92725
+            Z: 540.503418
           }
           Rotation {
             Pitch: -89.2619171
-            Yaw: 179.988937
-            Roll: -179.990631
+            Yaw: 179.989029
+            Roll: -179.990723
           }
           Scale {
             X: 0.6
@@ -5184,7 +5568,7 @@ Assets {
             Z: 0.900000036
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -5229,14 +5613,14 @@ Assets {
         Name: "Large Wood Beam 8m"
         Transform {
           Location {
-            X: 1547.66418
-            Y: -1309.91895
-            Z: 500.501953
+            X: 1103.66406
+            Y: -1578.91907
+            Z: 540.502
           }
           Rotation {
-            Pitch: -89.2320328
-            Yaw: -179.9935
-            Roll: 179.99115
+            Pitch: -89.2307587
+            Yaw: -179.993423
+            Roll: 179.991074
           }
           Scale {
             X: 0.6
@@ -5244,7 +5628,7 @@ Assets {
             Z: 0.900000036
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -5289,14 +5673,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: 1652.60376
-            Y: -1205.354
-            Z: 9.80635
+            X: 1208.60376
+            Y: -1474.354
+            Z: 49.8063469
           }
           Rotation {
-            Pitch: 89.4460831
-            Yaw: -1.95322127e-06
-            Roll: 1.01397536e-05
+            Pitch: 89.4450226
+            Yaw: 0.000243741
+            Roll: 0.000255815132
           }
           Scale {
             X: 0.800000072
@@ -5304,7 +5688,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5346,12 +5730,14 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: 1617.50793
-            Y: -1220.354
-            Z: 0.144848153
+            X: 1173.50781
+            Y: -1489.35364
+            Z: 40.1448441
           }
           Rotation {
             Pitch: -0.553368211
+            Yaw: -6.44232792e-11
+            Roll: 1.33406788e-08
           }
           Scale {
             X: 1
@@ -5359,7 +5745,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5401,14 +5787,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: 1652.50793
-            Y: -389.359894
-            Z: 9.99997711
+            X: 1208.50793
+            Y: -658.359741
+            Z: 49.9999809
           }
           Rotation {
             Pitch: 90
-            Yaw: 0.105503529
-            Roll: 0.105524033
+            Yaw: 9.1069187e-06
+            Roll: 2.8425613e-05
           }
           Scale {
             X: 0.800000072
@@ -5416,7 +5802,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5458,9 +5844,9 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: 1645.00366
-            Y: -404.359894
-            Z: -2.28881836e-05
+            X: 1201.00366
+            Y: -673.359497
+            Z: 39.9999809
           }
           Rotation {
           }
@@ -5470,7 +5856,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5512,9 +5898,9 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 1624.99817
-            Y: 510.225067
-            Z: 7.62939453e-06
+            X: 1180.99805
+            Y: 241.225357
+            Z: 40
           }
           Rotation {
           }
@@ -5524,7 +5910,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5575,14 +5961,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: 1652.24
-            Y: 2020
-            Z: 10
+            X: 1208.23962
+            Y: 1750.99988
+            Z: 50
           }
           Rotation {
-            Pitch: 88.5150909
-            Yaw: -179.999985
-            Roll: -179.999985
+            Pitch: 88.5143
+            Yaw: 179.999893
+            Roll: 179.999893
           }
           Scale {
             X: 0.800000072
@@ -5590,7 +5976,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5632,13 +6018,14 @@ Assets {
         Name: "Square Column Base 01"
         Transform {
           Location {
-            X: 1629.99756
-            Y: 2018.66553
+            X: 1185.99719
+            Y: 1749.66565
+            Z: 40
           }
           Rotation {
             Pitch: -2.2699585
-            Yaw: 1.68913331e-07
-            Roll: 7.60343028e-06
+            Yaw: -1.51264345e-07
+            Roll: 7.63509524e-06
           }
           Scale {
             X: 1
@@ -5646,7 +6033,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -5688,9 +6075,9 @@ Assets {
         Name: "Wood 2x4 4m"
         Transform {
           Location {
-            X: -67.7307129
-            Y: -151.956024
-            Z: -0.239250198
+            X: -509.910431
+            Y: -422.483185
+            Z: 39.7607422
           }
           Rotation {
             Yaw: 89.9999084
@@ -5701,7 +6088,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -5737,9 +6124,9 @@ Assets {
         Name: "Craftsman Part - Doorway"
         Transform {
           Location {
-            X: -5
-            Y: -5
-            Z: 14.9999771
+            X: -449.000092
+            Y: -273.999756
+            Z: 40
           }
           Rotation {
             Yaw: -90.0000229
@@ -5750,7 +6137,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -5792,12 +6179,12 @@ Assets {
         Name: "Craftsman Part - Doorway"
         Transform {
           Location {
-            X: 1609.99878
-            Y: 811.956177
-            Z: -12.5
+            X: 1165.99866
+            Y: 542.956238
+            Z: 27.5
           }
           Rotation {
-            Yaw: -90.0000305
+            Yaw: -90.0000229
           }
           Scale {
             X: 1
@@ -5805,7 +6192,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -5847,12 +6234,12 @@ Assets {
         Name: "Craftsman Part - Window 03"
         Transform {
           Location {
-            X: 1605
-            Y: -799.774658
-            Z: 139.999969
+            X: 1160.99976
+            Y: -1068.77429
+            Z: 179.999969
           }
           Rotation {
-            Yaw: -90.0000229
+            Yaw: -90.0000076
           }
           Scale {
             X: 1
@@ -5860,7 +6247,7 @@ Assets {
             Z: 1.5
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -5902,12 +6289,12 @@ Assets {
         Name: "Craftsman Part - Window 03"
         Transform {
           Location {
-            X: -399.996948
-            Y: -390
-            Z: 114.999969
+            X: -843.99707
+            Y: -658.999756
+            Z: 154.999969
           }
           Rotation {
-            Yaw: 1.92099069e-05
+            Yaw: 2.04905646e-05
           }
           Scale {
             X: 1
@@ -5915,7 +6302,7 @@ Assets {
             Z: 1.5
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -5957,13 +6344,13 @@ Assets {
         Name: "Craftsman Part - Doorway"
         Transform {
           Location {
-            X: -407.006165
-            Y: -1206.14746
-            Z: 487.5
+            X: -851.006348
+            Y: -1475.14722
+            Z: 527.5
           }
           Rotation {
-            Pitch: -6.10351562e-05
-            Yaw: -179.999802
+            Pitch: -6.14717e-05
+            Yaw: -179.999786
             Roll: -179.999954
           }
           Scale {
@@ -5972,7 +6359,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -6014,13 +6401,13 @@ Assets {
         Name: "Craftsman Part - Doorway"
         Transform {
           Location {
-            X: -805
-            Y: -810
-            Z: 487.5
+            X: -1249.00012
+            Y: -1078.99988
+            Z: 527.5
           }
           Rotation {
-            Pitch: -6.10351562e-05
-            Yaw: 90.0000076
+            Pitch: -6.14717e-05
+            Yaw: 89.9999847
             Roll: -179.999954
           }
           Scale {
@@ -6029,7 +6416,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Trim:id"
@@ -6071,12 +6458,12 @@ Assets {
         Name: "Craftsman Stairs 01 Railing"
         Transform {
           Location {
-            X: -3.60290527
-            Y: 826.296387
-            Z: 625
+            X: -447.602905
+            Y: 557.296753
+            Z: 665
           }
           Rotation {
-            Yaw: -89.999939
+            Yaw: -89.9999313
           }
           Scale {
             X: 1.1
@@ -6084,7 +6471,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -6126,13 +6513,13 @@ Assets {
         Name: "Trim Crenellated 4m 01"
         Transform {
           Location {
-            X: -799.94812
-            Y: 1605.22021
-            Z: 565
+            X: -1243.948
+            Y: 1336.22058
+            Z: 605
           }
           Rotation {
             Yaw: 89.9998169
-            Roll: 1.3628488e-05
+            Roll: 1.36284862e-05
           }
           Scale {
             X: 1
@@ -6140,7 +6527,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -6186,12 +6573,12 @@ Assets {
         Name: "Trim Crenellated 4m 01"
         Transform {
           Location {
-            X: -799.949341
-            Y: 1205.2207
-            Z: 565
+            X: -1243.94934
+            Y: 936.220825
+            Z: 605
           }
           Rotation {
-            Yaw: 89.999939
+            Yaw: 89.9999313
           }
           Scale {
             X: 1
@@ -6199,7 +6586,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -6245,14 +6632,14 @@ Assets {
         Name: "Trim Large Brick 8m"
         Transform {
           Location {
-            X: -753.493042
-            Y: 2021.96716
-            Z: 9.84008789
+            X: -1197.49316
+            Y: 1752.96729
+            Z: 49.8400879
           }
           Rotation {
             Pitch: 90
-            Yaw: -6.83018879e-05
-            Roll: -6.10351562e-05
+            Yaw: 1.13836484e-06
+            Roll: 5.96803829e-06
           }
           Scale {
             X: 0.800000072
@@ -6260,7 +6647,7 @@ Assets {
             Z: 1.2
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -6302,12 +6689,12 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: 1610.00305
-            Y: -395.000153
-            Z: -5
+            X: 1166.00293
+            Y: -664.000122
+            Z: 35
           }
           Rotation {
-            Yaw: 90.000145
+            Yaw: 90.0001373
           }
           Scale {
             X: 1
@@ -6315,7 +6702,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -6363,12 +6750,12 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -794.998779
-            Y: 404.995575
-            Z: -5
+            X: -1238.9989
+            Y: 135.995605
+            Z: 35
           }
           Rotation {
-            Yaw: 90.000145
+            Yaw: 90.0001373
           }
           Scale {
             X: 1
@@ -6376,7 +6763,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -6424,12 +6811,12 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -0.860595703
-            Y: -1207.66382
-            Z: -5
+            X: -444.86084
+            Y: -1476.66382
+            Z: 35
           }
           Rotation {
-            Yaw: 0.000314188655
+            Yaw: 0.000310773554
           }
           Scale {
             X: 1
@@ -6437,7 +6824,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -6485,13 +6872,14 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: 5.00854492
-            Y: 379.999634
+            X: -438.99176
+            Y: 110.999664
+            Z: 40
           }
           Rotation {
             Pitch: 6.83018879e-06
             Yaw: -179.999756
-            Roll: 1.59519076
+            Roll: 1.59519053
           }
           Scale {
             X: 1
@@ -6499,7 +6887,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -6547,9 +6935,8 @@ Assets {
         Name: "destruction"
         Transform {
           Location {
-            X: -535.001221
-            Y: 1854.99609
-            Z: -40
+            X: -979.001465
+            Y: 1585.99634
           }
           Rotation {
             Yaw: -179.999893
@@ -6560,7 +6947,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         ChildIds: 6338391958203143703
         ChildIds: 15792969385168168554
         ChildIds: 6813910441790100077
@@ -6885,13 +7272,14 @@ Assets {
         Name: "Decal Dirt Patch"
         Transform {
           Location {
-            X: -843.75
-            Y: 1057.55054
-            Z: 618.637573
+            X: -1287.75
+            Y: 788.550903
+            Z: 658.637573
           }
           Rotation {
-            Yaw: 89.9999237
-            Roll: 89.9999619
+            Pitch: 6.83018879e-06
+            Yaw: 89.9999084
+            Roll: 89.9999466
           }
           Scale {
             X: 1
@@ -6899,7 +7287,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -6930,12 +7318,12 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -781.880493
-            Y: 1195.52686
-            Z: -31.25
+            X: -1225.88086
+            Y: 926.527
+            Z: 8.75
           }
           Rotation {
-            Yaw: 90.0002
+            Yaw: 90.0001831
           }
           Scale {
             X: 1
@@ -6943,7 +7331,7 @@ Assets {
             Z: 1.30000007
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -6991,9 +7379,9 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: 45.5749512
-            Y: 1976.38806
-            Z: -25
+            X: -398.425293
+            Y: 1707.38794
+            Z: 15
           }
           Rotation {
             Yaw: -179.999878
@@ -7004,7 +7392,7 @@ Assets {
             Z: 1.30000007
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -7052,12 +7440,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1689.23706
-            Y: 182.556381
-            Z: 668.75
+            X: 1245.23706
+            Y: -86.4433289
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7065,7 +7453,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7101,12 +7489,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1688.75183
-            Y: 1826.35376
-            Z: 668.75
+            X: 1244.75122
+            Y: 1557.35364
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7114,7 +7502,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7150,12 +7538,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1690.40833
-            Y: -162.609253
-            Z: 668.75
+            X: 1246.40796
+            Y: -431.609161
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7163,7 +7551,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7199,12 +7587,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1705.90027
-            Y: -559.21875
-            Z: 668.75
+            X: 1261.9
+            Y: -828.218506
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7212,7 +7600,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7248,12 +7636,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1691.58508
-            Y: -1009.68506
-            Z: 668.75
+            X: 1247.58521
+            Y: -1278.68457
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7261,7 +7649,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7297,12 +7685,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1703.24158
-            Y: 557.76355
-            Z: 668.75
+            X: 1259.24133
+            Y: 288.76355
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7310,7 +7698,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7346,12 +7734,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1695.92041
-            Y: 1047.76624
-            Z: 668.75
+            X: 1251.92029
+            Y: 778.766235
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7359,7 +7747,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7395,12 +7783,12 @@ Assets {
         Name: "Long Banner Manticore"
         Transform {
           Location {
-            X: 1693.65967
-            Y: 1380.47949
-            Z: 668.75
+            X: 1249.6593
+            Y: 1111.47949
+            Z: 708.75
           }
           Rotation {
-            Yaw: 84.9999771
+            Yaw: 84.9999542
           }
           Scale {
             X: 1.125
@@ -7408,7 +7796,7 @@ Assets {
             Z: 1.125
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7444,9 +7832,9 @@ Assets {
         Name: "Craftsman End Table"
         Transform {
           Location {
-            X: 1461.33972
-            Y: 1808.60669
-            Z: 18.75
+            X: 1017.33948
+            Y: 1539.60669
+            Z: 58.75
           }
           Rotation {
             Yaw: 84.9999542
@@ -7457,7 +7845,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7493,12 +7881,12 @@ Assets {
         Name: "Craftsman Coffee Table"
         Transform {
           Location {
-            X: 493.75
-            Y: 1646.25
-            Z: 18.75
+            X: 49.7499466
+            Y: 1377.25024
+            Z: 58.75
           }
           Rotation {
-            Yaw: -179.999985
+            Yaw: -179.999969
           }
           Scale {
             X: 1.25
@@ -7506,7 +7894,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -7554,12 +7942,12 @@ Assets {
         Name: "Craftsman Dining Chair"
         Transform {
           Location {
-            X: 181.25
-            Y: 1646.25
-            Z: 18.75
+            X: -262.75
+            Y: 1377.25037
+            Z: 58.75
           }
           Rotation {
-            Yaw: -89.9998398
+            Yaw: -89.9998245
           }
           Scale {
             X: 1.25
@@ -7567,7 +7955,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -7603,9 +7991,9 @@ Assets {
         Name: "Dresser 01"
         Transform {
           Location {
-            X: -690.125732
-            Y: 1552.5
-            Z: 18.75
+            X: -1134.12561
+            Y: 1283.5
+            Z: 58.75
           }
           Rotation {
             Yaw: -90.0000534
@@ -7616,7 +8004,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -7664,9 +8052,9 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -443.75
-            Y: 802.5
-            Z: 12.5
+            X: -887.750244
+            Y: 533.500061
+            Z: 52.5
           }
           Rotation {
           }
@@ -7676,7 +8064,7 @@ Assets {
             Z: 0.900000036
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -7724,12 +8112,12 @@ Assets {
         Name: "Craftsman Coffee Table"
         Transform {
           Location {
-            X: 1429.84863
-            Y: -917.773438
-            Z: 18.75
+            X: 985.848511
+            Y: -1186.77307
+            Z: 58.75
           }
           Rotation {
-            Yaw: 89.9999619
+            Yaw: 89.9999466
           }
           Scale {
             X: 1.25
@@ -7737,7 +8125,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -7785,12 +8173,12 @@ Assets {
         Name: "Craftsman Coffee Table"
         Transform {
           Location {
-            X: 1430.31189
-            Y: -553.929443
-            Z: 18.75
+            X: 986.31189
+            Y: -822.929077
+            Z: 58.75
           }
           Rotation {
-            Yaw: 89.9999619
+            Yaw: 89.9999466
           }
           Scale {
             X: 1.25
@@ -7798,7 +8186,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -7846,12 +8234,12 @@ Assets {
         Name: "Craftsman Coffee Table"
         Transform {
           Location {
-            X: 1428.05115
-            Y: -221.216125
-            Z: 18.75
+            X: 984.051
+            Y: -490.215912
+            Z: 58.75
           }
           Rotation {
-            Yaw: 89.9999619
+            Yaw: 89.9999466
           }
           Scale {
             X: 1.25
@@ -7859,7 +8247,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -7907,12 +8295,12 @@ Assets {
         Name: "Craftsman Coffee Table"
         Transform {
           Location {
-            X: 163.360596
-            Y: -1051.65039
-            Z: 18.75
+            X: -280.639526
+            Y: -1320.65015
+            Z: 58.75
           }
           Rotation {
-            Yaw: 179.999802
+            Yaw: 179.999786
           }
           Scale {
             X: 1.25
@@ -7920,7 +8308,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -7968,12 +8356,12 @@ Assets {
         Name: "Craftsman Coffee Table"
         Transform {
           Location {
-            X: 496.075439
-            Y: -1049.39014
-            Z: 18.75
+            X: 52.0751953
+            Y: -1318.39014
+            Z: 58.75
           }
           Rotation {
-            Yaw: 179.999802
+            Yaw: 179.999786
           }
           Scale {
             X: 1.25
@@ -7981,7 +8369,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -8029,12 +8417,12 @@ Assets {
         Name: "Craftsman Coffee Table"
         Transform {
           Location {
-            X: 859.918823
-            Y: -1049.85339
-            Z: 18.75
+            X: 415.918579
+            Y: -1318.85315
+            Z: 58.75
           }
           Rotation {
-            Yaw: 179.999802
+            Yaw: 179.999786
           }
           Scale {
             X: 1.25
@@ -8042,7 +8430,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -8090,9 +8478,9 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -787.5
-            Y: 1177.5
-            Z: 12.5
+            X: -1231.50012
+            Y: 908.500122
+            Z: 52.5
           }
           Rotation {
           }
@@ -8102,7 +8490,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -8150,12 +8538,12 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: -6.25
-            Y: 771.25
-            Z: 12.5
+            X: -450.250061
+            Y: 502.250214
+            Z: 52.5
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 89.9999771
           }
           Scale {
             X: 0.5
@@ -8163,7 +8551,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -8211,12 +8599,12 @@ Assets {
         Name: "Craftsman Dining Chair"
         Transform {
           Location {
-            X: 775
-            Y: 1646.25
-            Z: 18.75
+            X: 330.999725
+            Y: 1377.24988
+            Z: 58.75
           }
           Rotation {
-            Yaw: 89.9999924
+            Yaw: 89.9999771
           }
           Scale {
             X: 1.25
@@ -8224,7 +8612,7 @@ Assets {
             Z: 1.25
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -8260,9 +8648,9 @@ Assets {
         Name: "Craftsman Floor 01 8m x 8m"
         Transform {
           Location {
-            X: -794.998169
-            Y: 1200.22363
-            Z: -5
+            X: -1238.99854
+            Y: 931.223633
+            Z: 35
           }
           Rotation {
           }
@@ -8272,7 +8660,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_Floor:id"
@@ -8323,9 +8711,9 @@ Assets {
         Name: "Whitebox Wall 01 Window Slot 1x"
         Transform {
           Location {
-            X: -800
-            Y: -1203.21924
-            Z: -4.74041
+            X: -1244.00012
+            Y: -1472.21875
+            Z: 35.2595901
           }
           Rotation {
             Yaw: 90.000267
@@ -8336,7 +8724,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner2:id"
@@ -8384,9 +8772,9 @@ Assets {
         Name: "Whitebox Wall 01"
         Transform {
           Location {
-            X: 39.3493652
-            Y: 1976.93298
-            Z: -25
+            X: -404.650604
+            Y: 1707.93311
+            Z: 15
           }
           Rotation {
           }
@@ -8396,7 +8784,7 @@ Assets {
             Z: 1.30000007
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Building_WallInner:id"
@@ -8440,78 +8828,16 @@ Assets {
         }
       }
       Objects {
-        Id: 2769909975148138083
-        Name: "Craftsman Floor 01 8m x 8m"
-        Transform {
-          Location {
-            X: -795
-            Y: 2005.22156
-            Z: -5
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 10593117386948768209
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Building_Floor:id"
-            AssetReference {
-              Id: 4897753264114917836
-            }
-          }
-          Overrides {
-            Name: "ma:Building_Floor:color"
-            Color {
-              R: 0.270497799
-              G: 0.149959758
-              B: 0.0561284833
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 13467998343991381121
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
         Id: 14932240520312534232
         Name: "Craftsman Stairs 01 U"
         Transform {
           Location {
-            X: -11.4581299
-            Y: 795.222717
+            X: -455.458221
+            Y: 526.223
+            Z: 40
           }
           Rotation {
-            Yaw: -89.9999542
+            Yaw: -89.9999466
           }
           Scale {
             X: 1
@@ -8519,7 +8845,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -8561,8 +8887,112 @@ Assets {
         Name: "Wood 2x4 4m"
         Transform {
           Location {
-            X: 1607.23328
-            Y: 663.975525
+            X: 1163.23303
+            Y: 394.975586
+            Z: 40
+          }
+          Rotation {
+            Yaw: 89.9998703
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380444610759951143
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5046386588038465824
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 17868969258848676262
+        Name: "Square Column Base 01"
+        Transform {
+          Location {
+            X: -1224.16943
+            Y: 1721.06445
+            Z: 46.25
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380444610759951143
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 6010357979766632427
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 8495661798145976707
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 8820842003497206737
+        Name: "Wood 2x4 4m"
+        Transform {
+          Location {
+            X: -535.242432
+            Y: -423.502869
+            Z: 21.25
           }
           Rotation {
             Yaw: 89.9998856
@@ -8573,7 +9003,252 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10593117386948768209
+        ParentId: 12380444610759951143
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5046386588038465824
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7201123030064554236
+        Name: "Wood 2x4 4m"
+        Transform {
+          Location {
+            X: -548.835449
+            Y: -420.255798
+            Z: 2.5
+          }
+          Rotation {
+            Yaw: 89.9998703
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380444610759951143
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5046386588038465824
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 14963402163749519635
+        Name: "Wood 2x4 4m"
+        Transform {
+          Location {
+            X: -575.251
+            Y: -422.566864
+            Z: -16.25
+          }
+          Rotation {
+            Yaw: 89.9998474
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380444610759951143
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5046386588038465824
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7138467004746197958
+        Name: "Wood 2x4 4m"
+        Transform {
+          Location {
+            X: 1194.43628
+            Y: 393.269409
+            Z: 21.25
+          }
+          Rotation {
+            Yaw: 89.9998474
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380444610759951143
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5046386588038465824
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4032809440939189855
+        Name: "Wood 2x4 4m"
+        Transform {
+          Location {
+            X: 1225.63989
+            Y: 391.562958
+            Z: 2.5
+          }
+          Rotation {
+            Yaw: 89.9998245
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380444610759951143
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5046386588038465824
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          InteractWithTriggers: true
+          StaticMesh {
+            Physics {
+            }
+            BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 6327518867406762333
+        Name: "Wood 2x4 4m"
+        Transform {
+          Location {
+            X: 1256.84338
+            Y: 389.856567
+            Z: -16.25
+          }
+          Rotation {
+            Yaw: 89.9998169
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12380444610759951143
         UnregisteredParameters {
         }
         Collidable_v2 {
@@ -8609,11 +9284,12 @@ Assets {
         Name: "Floor2"
         Transform {
           Location {
-            X: -1650
-            Y: -1240
+            X: -1649.99939
+            Y: -1240.00085
             Z: 600
           }
           Rotation {
+            Yaw: 2.049057e-05
           }
           Scale {
             X: 1
@@ -8621,7 +9297,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10193260367702185647
+        ParentId: 18226837625215454919
         ChildIds: 2984097839462585221
         ChildIds: 1845366869807519291
         ChildIds: 14713907305024606335
@@ -10815,12 +11491,12 @@ Assets {
         Name: "Craftsman Part - Doorway"
         Transform {
           Location {
-            X: 404.494965
-            Y: 236.166489
-            Z: 619.90033
+            X: 404.494629
+            Y: 236.166412
+            Z: 592.240417
           }
           Rotation {
-            Yaw: -89.9997482
+            Yaw: -89.9997559
           }
           Scale {
             X: 1
@@ -11583,9 +12259,9 @@ Assets {
         Name: "Craftsman Part - Doorway"
         Transform {
           Location {
-            X: 496.418152
-            Y: -854.226624
-            Z: 875.159912
+            X: 496.418091
+            Y: -854.226685
+            Z: 847.5
           }
           Rotation {
             Yaw: -179.999664
@@ -13333,6 +14009,7 @@ Assets {
           Location {
           }
           Rotation {
+            Yaw: 2.049057e-05
           }
           Scale {
             X: 1
@@ -13340,7 +14017,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10193260367702185647
+        ParentId: 18226837625215454919
         ChildIds: 9811898412391259891
         ChildIds: 16240956974438201899
         ChildIds: 8709751813358680360
@@ -14416,6 +15093,15 @@ Assets {
       }
     }
     Assets {
+      Id: 13467998343991381121
+      Name: "Craftsman Floor 01 8m x 8m"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_urb_sub_craftsman_floor_001_8x8"
+      }
+    }
+    Assets {
       Id: 831638702062843835
       Name: "Whitebox Wall 01 Doorway 01"
       PlatformAssetType: 1
@@ -14710,15 +15396,6 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_urb_chair_dining_001"
-      }
-    }
-    Assets {
-      Id: 13467998343991381121
-      Name: "Craftsman Floor 01 8m x 8m"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_urb_sub_craftsman_floor_001_8x8"
       }
     }
     Assets {

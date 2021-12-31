@@ -61,7 +61,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowNavMesh"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {
@@ -145,7 +145,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowNavMesh"
-      Bool: false
+      Bool: true
     }
   }
   Collidable_v2 {

@@ -2,7 +2,6 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 function CreateTestingCharacter(player)
     local initialData = {
-		-- TODO: Reference the appropriate keys
         [ Framework.Storage.Keys.Characters.NAME ] = "Lothlorian",
         [ Framework.Storage.Keys.Characters.RACE ] = Framework.Storage.Keys.Races.UNDEAD,
         [ Framework.Storage.Keys.Characters.GENDER ] = Framework.Storage.Keys.Genders.MASCULINE,
@@ -10,6 +9,7 @@ function CreateTestingCharacter(player)
         [ Framework.Storage.Keys.Characters.CLASS ] = Framework.Storage.Keys.Classes.MAGE,
         [ Framework.Storage.Keys.Characters.GUILD ] = "",
         [ Framework.Storage.Keys.Characters.ZONE ] = Framework.Storage.Keys.Zones.VERNAL,
+        [ Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATIONS ] = { },
     }
     local characterId = Framework.Storage.CreateNewCharacter(player, initialData)
 	Framework.Storage.SetActiveCharacterId(player, characterId)

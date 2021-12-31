@@ -21,39 +21,39 @@ local lastRequestedCustomizations = nil
 function OnCharacterSelectStateChanged(stateData)
     if stateData.state == Framework.Events.Keys.CharacterSelect.State.CUSTOMIZE_NEW_CHARACTER then
         CHARACTER_CUSTOMIZE_SCREEN.visibility = Visibility.INHERIT
+
+        local previousCustomizationKey = activeCustomizationKey
+
+        if stateData.race and stateData.gender then
+            activeCustomizationKey = stateData.race .. "_" .. stateData.gender
+
+            if not allCustomizations[activeCustomizationKey] then
+                allCustomizations[activeCustomizationKey] = { }
+            end
+        else
+            activeCustomizationKey = nil
+        end
+
+        DetermineSelectorLimits(stateData.race, stateData.gender)
+        RandomizeInitialCustomizations()
+
+        -- If the active customizations have changed, request that the server apply the new changes
+        if activeCustomizationKey ~= previousCustomizationKey then
+            Framework.NextFrame(function ()
+                RequestChangeCustomizations()
+            end)
+        end
+
+        -- Update selectors
+        RefreshSelector(BASE_MODEL_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID)
+        RefreshSelector(SKIN_COLOR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID)
+        RefreshSelector(DECAL_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.DECAL_ID)
+        RefreshSelector(HAIR_STYLE_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID)
+        RefreshSelector(HAIR_COLOR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID)
+        RefreshSelector(FACIAL_HAIR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID)
     else
         CHARACTER_CUSTOMIZE_SCREEN.visibility = Visibility.FORCE_OFF
     end
-
-    local previousCustomizationKey = activeCustomizationKey
-
-    if stateData.race and stateData.gender then
-        activeCustomizationKey = stateData.race .. "_" .. stateData.gender
-
-        if not allCustomizations[activeCustomizationKey] then
-            allCustomizations[activeCustomizationKey] = { }
-        end
-    else
-        activeCustomizationKey = nil
-    end
-
-    DetermineSelectorLimits(stateData.race, stateData.gender)
-    RandomizeInitialCustomizations()
-
-    -- If the active customizations have changed, request that the server apply the new changes
-    if activeCustomizationKey ~= previousCustomizationKey then
-        Framework.NextFrame(function ()
-            RequestChangeCustomizations()
-        end)
-    end
-
-    -- Update selectors
-    RefreshSelector(BASE_MODEL_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID)
-    RefreshSelector(SKIN_COLOR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID)
-    RefreshSelector(DECAL_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.DECAL_ID)
-    RefreshSelector(HAIR_STYLE_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID)
-    RefreshSelector(HAIR_COLOR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID)
-    RefreshSelector(FACIAL_HAIR_SELECTOR, Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID)
 end
 
 function AwaitServerResponse()
