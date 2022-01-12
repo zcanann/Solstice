@@ -3225,4 +3225,5 @@ Assets {
   SerializationVersion: 103
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Environment_Docks"
+  VirtualFolderPath: "PropsStatic"
 }

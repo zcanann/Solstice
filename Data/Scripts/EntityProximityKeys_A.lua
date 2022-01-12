@@ -43,7 +43,6 @@ EntityProximityKeys.HEALING_POWER = "healing_power"
 EntityProximityKeys.SPELL_PENETRATION = "spell_penetration"
 
 -- Runtime
-EntityProximityKeys.IS_ALIVE = "is_alive"
 EntityProximityKeys.ENGAGEMENT_SESSION = "engagement_session"
 
 return EntityProximityKeys

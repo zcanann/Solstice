@@ -18,7 +18,7 @@ function OnProximityObjectEnteredRange(proximityObjectId)
     if not player.clientUserData.animationSet then
         -- Spawn client-side animaton sets (which are just several 'abilities' inside a template)
         player.clientUserData.animationSet = World.SpawnAsset(propPlayerAnimationsTemplate)
-        player.clientUserData.animationSet:AttachToPlayer(player, "nameplate")
+        player.clientUserData.animationSet:AttachToPlayer(player, "root")
     end
 end
 

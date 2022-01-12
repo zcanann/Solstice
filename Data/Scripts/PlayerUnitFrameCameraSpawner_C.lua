@@ -5,7 +5,7 @@ local propUnitFrameCaptureTemplate = script:GetCustomProperty("UnitFrameCaptureT
 
 function SpawnUnitFrameCamera(player)
     -- Bind the equipment to the player's model (if it is ready)
-    if Object.IsValid(player.clientUserData.model) and not Object.IsValid(player.clientUserData.unitFrameCamera) then
+    if Object.IsValid(player) and Object.IsValid(player.clientUserData.model) and not Object.IsValid(player.clientUserData.unitFrameCamera) then
         player.clientUserData.unitFrameCamera = World.SpawnAsset(propUnitFrameCaptureTemplate)
         player.clientUserData.model:AttachCoreObject(player.clientUserData.unitFrameCamera, "head")
         -- player.clientUserData.unitFrameCamera:AttachToPlayer(player, "head")

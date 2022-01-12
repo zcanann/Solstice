@@ -2,7 +2,6 @@ local FLOOR_TRIGGER = script:GetCustomProperty("FloorTrigger"):WaitForObject() -
 local FLOOR = script:GetCustomProperty("Floor"):WaitForObject() ---@type Folder
 local localPlayer = Game.GetLocalPlayer()
 
-
 function OnBeginOverlap(trigger, object)
     if object == localPlayer then
         FLOOR.visibility = Visibility.INHERIT

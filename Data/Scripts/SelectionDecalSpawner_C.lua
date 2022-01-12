@@ -16,7 +16,7 @@ function OnEntityEnteredRange(proximityObjectId)
 
     if objectInstance:IsA("Player") then
         selectionDecal = World.SpawnAsset(propRadiusDecalTemplate)
-        selectionDecal:AttachToPlayer(objectInstance, "nameplate")
+        selectionDecal:AttachToPlayer(objectInstance, "root")
     else
         selectionDecal = World.SpawnAsset(propRadiusDecalTemplate, { parent = objectInstance })
     end

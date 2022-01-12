@@ -24,4 +24,14 @@ RaceKeys.ITHKUIL =
     RaceKeys.DARK_ELF,
 }
 
+RaceKeys.RACES =
+{
+    RaceKeys.HUMAN,
+    RaceKeys.ASCENDANT,
+    RaceKeys.VANARA,
+    RaceKeys.ORC,
+    RaceKeys.UNDEAD,
+    RaceKeys.DARK_ELF,
+}
+
 return RaceKeys

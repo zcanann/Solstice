@@ -4,6 +4,7 @@ local Framework = { }
 
 Framework.DataStructures = require(script:GetCustomProperty("DataStructures"))
 Framework.Debug = require(script:GetCustomProperty("Debug"))
+Framework.Dialog = require(script:GetCustomProperty("Dialog"))
 Framework.Events = require(script:GetCustomProperty("Events"))
 Framework.Math = require(script:GetCustomProperty("Math"))
 Framework.Networking = require(script:GetCustomProperty("Networking"))

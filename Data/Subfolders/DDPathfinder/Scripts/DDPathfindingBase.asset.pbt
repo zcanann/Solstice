@@ -14,7 +14,7 @@ Assets {
       }
       Overrides {
         Name: "cs:MaxPathSearchTime"
-        Float: 0.5
+        Float: 0.05
       }
       Overrides {
         Name: "cs:DDPerfTimer"

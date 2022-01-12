@@ -117,9 +117,9 @@ function RebuildModel(proximityObjectId)
 
     player.clientUserData.model = playerModel
 
-    playerModel:AttachToPlayer(player, "nameplate")
+    playerModel:AttachToPlayer(player, "root")
     playerModel.visibility = Visibility.FORCE_ON
-    playerModel:SetPosition(Vector3.New(0.0, 0.0, -(height or 0.0) - 32.0))
+    playerModel:SetPosition(Vector3.New(0.0, 0.0, height))
     if previousRotation then
         playerModel:SetWorldRotation(previousRotation)
     end
@@ -170,11 +170,12 @@ function RebuildCustomizations(playerModel, customizations, playerModelAsset)
 end
 
 function DestroyModel(player)
-    if Object.IsValid(player.clientUserData.model) then
-        player.clientUserData.model:Destroy()
+    if Object.IsValid(player) then
+        if Object.IsValid(player.clientUserData.model) then
+            player.clientUserData.model:Destroy()
+        end
+        player.clientUserData.model = nil
     end
-
-    player.clientUserData.model = nil
 end
 
 function OnEntityRaceChanged(proximityObjectId, race)

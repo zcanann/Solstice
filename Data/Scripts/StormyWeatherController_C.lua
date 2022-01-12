@@ -64,12 +64,12 @@ function ResetTimer()
 end
 
 if propRainFollowPlayer then
-    propRainVolume:AttachToPlayer(localPlayer, "nameplate")
+    propRainVolume:AttachToPlayer(localPlayer, "root")
     propRainVolume.visibility = Visibility.FORCE_ON
 end
 
 if propLightningFollowPlayer then
-    propLightningLight:AttachToPlayer(localPlayer, "nameplate")
+    propLightningLight:AttachToPlayer(localPlayer, "root")
     propLightningLight.visibility = Visibility.FORCE_ON
 end
 propLightningLight:SetPosition(Vector3.New(0.0, 0.0, 1500.0))

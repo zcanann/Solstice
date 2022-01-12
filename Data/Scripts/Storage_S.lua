@@ -3,10 +3,10 @@ local Framework = require(script:GetCustomProperty("Framework"))
 function CreateTestingCharacter(player)
     local initialData = {
         [ Framework.Storage.Keys.Characters.NAME ] = "Lothlorian",
-        [ Framework.Storage.Keys.Characters.RACE ] = Framework.Storage.Keys.Races.UNDEAD,
-        [ Framework.Storage.Keys.Characters.GENDER ] = Framework.Storage.Keys.Genders.MASCULINE,
+        [ Framework.Storage.Keys.Characters.RACE ] = Framework.Storage.Keys.Races.RACES[math.random(#Framework.Storage.Keys.Races.RACES)],
+        [ Framework.Storage.Keys.Characters.GENDER ] = Framework.Storage.Keys.Genders.GENDERS[math.random(#Framework.Storage.Keys.Genders.GENDERS)],
         [ Framework.Storage.Keys.Characters.FACTION ] = Framework.Storage.Keys.Factions.ITHKUIL,
-        [ Framework.Storage.Keys.Characters.CLASS ] = Framework.Storage.Keys.Classes.MAGE,
+        [ Framework.Storage.Keys.Characters.CLASS ] = Framework.Storage.Keys.Classes.CLASSES[math.random(#Framework.Storage.Keys.Classes.CLASSES)],
         [ Framework.Storage.Keys.Characters.GUILD ] = "",
         [ Framework.Storage.Keys.Characters.ZONE ] = Framework.Storage.Keys.Zones.VERNAL,
         [ Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATIONS ] = { },

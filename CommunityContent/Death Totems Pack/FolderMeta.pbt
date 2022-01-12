@@ -1,0 +1,87 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "3247884e02634d99ac5338d5475c3b32"
+  OwnerAccountId: "3e7337255deb48d09ffcb7452479e989"
+  OwnerName: "Amonbeaufils"
+  Version: "1.2.0"
+}
+AssetIdsOriginalToNew {
+  key: 1713723085769023935
+  value: 15812859735265707471
+}
+AssetIdsOriginalToNew {
+  key: 2156828231559185819
+  value: 12491557633505574804
+}
+AssetIdsOriginalToNew {
+  key: 4459986736875593969
+  value: 13478949936528661341
+}
+AssetIdsOriginalToNew {
+  key: 5110743822706215759
+  value: 15625925122438488543
+}
+AssetIdsOriginalToNew {
+  key: 6341498305858064968
+  value: 17190859323961600656
+}
+AssetIdsOriginalToNew {
+  key: 7396264325515418462
+  value: 12923449971038832065
+}
+AssetIdsOriginalToNew {
+  key: 8349261901124429774
+  value: 7400758386903134493
+}
+AssetIdsOriginalToNew {
+  key: 8647296327336747511
+  value: 13005107967857660502
+}
+AssetIdsOriginalToNew {
+  key: 9822822981672262666
+  value: 14357464202677855104
+}
+AssetIdsOriginalToNew {
+  key: 11953389379031039887
+  value: 6692210936234832207
+}
+AssetIdsOriginalToNew {
+  key: 12918966302650468625
+  value: 16374778476780460790
+}
+AssetIdsOriginalToNew {
+  key: 14251219617432881350
+  value: 1729369380737390283
+}
+AssetIdsOriginalToNew {
+  key: 14416694839521016216
+  value: 13324208788353441091
+}
+AssetIdsOriginalToNew {
+  key: 14920617884434880013
+  value: 13686772860476329085
+}
+AssetIdsOriginalToNew {
+  key: 14989863593209268630
+  value: 14410416288017229321
+}
+AssetIdsOriginalToNew {
+  key: 15084450645064794561
+  value: 6626693704364992356
+}
+AssetIdsOriginalToNew {
+  key: 15110685197664643087
+  value: 11874091293815790471
+}
+AssetIdsOriginalToNew {
+  key: 15749222398019572341
+  value: 8310434069992765286
+}
+AssetIdsOriginalToNew {
+  key: 16423141919564039011
+  value: 15067365415488986167
+}
+AssetIdsOriginalToNew {
+  key: 18258710189584322727
+  value: 10550365676750999382
+}

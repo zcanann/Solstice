@@ -66,7 +66,7 @@ function Tick(deltaSeconds)
 	end
 
 	for race, model in pairs(modelSet) do
-		model:AttachCoreObject(propUnitFrameCapture, "nameplate")
+		model:AttachCoreObject(propUnitFrameCapture, "camera")
 		if not raceCaptures[race] then
 			backPlane.visibility = Visibility.FORCE_OFF
 			raceCaptures[race] = Framework.Utils.CameraCapture.Capture(captureCamera, renderTargets[race], CameraCaptureResolution.SMALL)

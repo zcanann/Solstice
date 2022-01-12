@@ -450,12 +450,6 @@ Assets {
     Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Environment_Orcish"
-      VirtualFolderPath: "Decor"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Environment_Orcish"
       VirtualFolderPath: "Doors"
       PlatformAssetType: 5
     }
@@ -485,12 +479,6 @@ Assets {
     Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Environment_Human"
-      VirtualFolderPath: "Decor"
-      PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Environment_Human"
       VirtualFolderPath: "Stairs"
       PlatformAssetType: 5
     }
@@ -505,6 +493,102 @@ Assets {
       VirtualFolderPath: "PlayerSkins"
       VirtualFolderPath: "Human"
       PlatformAssetType: 13
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Ruins"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Snow"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Snow"
+      VirtualFolderPath: "Folliage"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Human"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Orcish"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Ruins"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Docks"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Graveyard"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Ascendant"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Ascendant"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Desert"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Desert"
+      VirtualFolderPath: "StaticProps"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Undead"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Undead"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Goblin"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Goblin"
+      VirtualFolderPath: "PropsStatic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Graveyard"
+      VirtualFolderPath: "Buildings"
+      PlatformAssetType: 5
     }
   }
 }

@@ -16,7 +16,7 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:DefaultDialog"
+        Name: "cs:DefaultDialogKey"
         String: ""
       }
       Overrides {

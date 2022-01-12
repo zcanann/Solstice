@@ -3006,4 +3006,5 @@ Assets {
   SerializationVersion: 103
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Environment_Graveyard"
+  VirtualFolderPath: "PropsStatic"
 }
