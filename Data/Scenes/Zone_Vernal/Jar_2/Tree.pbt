@@ -1,7 +1,7 @@
 Name: "Jar_2"
-RootId: 9890433557088510028
+RootId: 4331168300792042597
 Objects {
-  Id: 5513869903320747632
+  Id: 10272127190111761945
   Name: "Fantasy Shield Strap 01"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.562544882
     }
   }
-  ParentId: 9890433557088510028
+  ParentId: 4331168300792042597
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Trim:id"
@@ -39,7 +39,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -56,18 +56,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 5513869903320747632
-    SubobjectId: 7492333069763916540
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 18422792331827584143
+  Id: 6334834433874493265
   Name: "Pipe"
   Transform {
     Location {
@@ -83,7 +77,7 @@ Objects {
       Z: 0.0257726144
     }
   }
-  ParentId: 9890433557088510028
+  ParentId: 4331168300792042597
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -99,7 +93,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -116,18 +110,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18422792331827584143
-    SubobjectId: 15336382122953383939
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 1177320426962384775
+  Id: 12737566093230783075
   Name: "Pipe"
   Transform {
     Location {
@@ -143,7 +131,7 @@ Objects {
       Z: 0.0257726144
     }
   }
-  ParentId: 9890433557088510028
+  ParentId: 4331168300792042597
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -159,7 +147,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -176,18 +164,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 1177320426962384775
-    SubobjectId: 4263080347688848139
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 12650071674344616910
+  Id: 4266076096755966843
   Name: "Pipe"
   Transform {
     Location {
@@ -203,7 +185,7 @@ Objects {
       Z: 0.0257726144
     }
   }
-  ParentId: 9890433557088510028
+  ParentId: 4331168300792042597
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -219,7 +201,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -236,18 +218,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 12650071674344616910
-    SubobjectId: 9579503198974807874
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 8007871662238605501
+  Id: 10563304085806904876
   Name: "Cylinder"
   Transform {
     Location {
@@ -263,7 +239,7 @@ Objects {
       Z: 0.00837103743
     }
   }
-  ParentId: 9890433557088510028
+  ParentId: 4331168300792042597
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -279,7 +255,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -296,18 +272,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 8007871662238605501
-    SubobjectId: 4926518618544413745
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 12192778787889759890
+  Id: 6576260141861471069
   Name: "Pipe"
   Transform {
     Location {
@@ -322,7 +292,7 @@ Objects {
       Z: 0.313381433
     }
   }
-  ParentId: 9890433557088510028
+  ParentId: 4331168300792042597
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -338,7 +308,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -354,12 +324,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 12192778787889759890
-    SubobjectId: 9388419695524215326
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

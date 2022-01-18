@@ -237,7 +237,7 @@ Objects {
       BrakingDecelerationFlying: 600
       MaxFlightSpeed: 600
       MovementControlMode {
-        Value: "mc:emovementcontrolmode:none"
+        Value: "mc:emovementcontrolmode:viewrelative"
       }
       LookControlMode {
         Value: "mc:elookcontrolmode:relative"
@@ -252,9 +252,15 @@ Objects {
       }
       HeadVisibleToSelf: true
       IsSlideEnabled: true
+      CanMoveForward: true
+      CanMoveBackward: true
+      CanMoveLeft: true
+      CanMoveRight: true
       AbilityAimMode {
         Value: "mc:eabilityaimmode:lookrelative"
       }
+      CanMoveUp: true
+      CanMoveDown: true
       MaxHitpoints: 100
       PlayerMasterVolumeMultiplier: 1
     }

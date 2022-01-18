@@ -154,14 +154,6 @@ Objects {
             Yaw: -44.9999924
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
@@ -352,14 +344,6 @@ Objects {
             Yaw: -44.9999924
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 2.25897861
-            Y: 2.25897861
-            Z: 2.25897861
-          }
-        }
       }
     }
     TemplateAsset {
@@ -368,12 +352,12 @@ Objects {
   }
 }
 Objects {
-  Id: 9747767959705719628
-  Name: "FrameworkInn_A"
+  Id: 522681343499777378
+  Name: "Inn"
   Transform {
     Location {
-      X: -4015.39697
-      Y: -27534.2598
+      X: -4015
+      Y: -27535
       Z: -95
     }
     Rotation {
@@ -394,16 +378,12 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "FrameworkInn_A"
-  }
-  InstanceHistory {
-    SelfId: 9747767959705719628
-    SubobjectId: 12409713980839800768
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-    WasRoot: true
+    FilePartitionName: "Inn"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -446,14 +426,6 @@ Objects {
           Name: "Rotation"
           Rotator {
             Yaw: -134.999969
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 3.5
-            Y: 3.5
-            Z: 3.5
           }
         }
       }

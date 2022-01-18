@@ -8,24 +8,6 @@ Assets {
   }
 }
 Assets {
-  Id: 15363960962711120915
-  Name: "Craftsman Floor 01 8m x 8m"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_sub_craftsman_floor_001_8x8"
-  }
-}
-Assets {
-  Id: 14932985524474599200
-  Name: "Cabinet - Upper"
-  PlatformAssetType: 1
-  PrimaryAsset {
-    AssetType: "StaticMeshAssetRef"
-    AssetId: "sm_urb_cabinet_001"
-  }
-}
-Assets {
   Id: 11726412152896518431
   Name: "Wooden Bucket"
   PlatformAssetType: 1

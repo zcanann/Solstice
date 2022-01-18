@@ -20,6 +20,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -46,6 +57,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -78,6 +100,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -104,6 +137,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -136,6 +180,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -162,6 +217,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -194,6 +260,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -220,6 +297,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -253,6 +341,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -279,6 +378,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -312,6 +422,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -338,6 +459,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -370,6 +502,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -396,6 +539,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -428,6 +582,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -454,6 +619,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }
@@ -486,6 +662,17 @@ Objects {
   ParentId: 11678724069612889
   TemplateInstance {
     ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 3950158810115809548
       value {
         Overrides {
@@ -516,6 +703,17 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
     TemplateAsset {
       Id: 7919380413326499278
     }
@@ -536,6 +734,17 @@ Objects {
   }
   ParentId: 11678724069612889
   TemplateInstance {
+    ParameterOverrideMap {
+      key: 1055670447084456426
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
+          }
+        }
+      }
+    }
     ParameterOverrideMap {
       key: 3950158810115809548
       value {
@@ -563,6 +772,17 @@ Objects {
             X: 1
             Y: 1
             Z: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6607558790428140254
+      value {
+        Overrides {
+          Name: "CoreProxy.CameraCollidable"
+          Enum {
+            Value: "mc:ecollisionsetting:inheritfromparent"
           }
         }
       }

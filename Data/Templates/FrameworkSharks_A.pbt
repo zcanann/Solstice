@@ -9,13 +9,6 @@ Assets {
         Id: 8508168070675064633
         Name: "Sharks"
         Transform {
-          Location {
-            X: -2183.0647
-            Y: -8032.68457
-            Z: 175.000122
-          }
-          Rotation {
-          }
           Scale {
             X: 1
             Y: 1

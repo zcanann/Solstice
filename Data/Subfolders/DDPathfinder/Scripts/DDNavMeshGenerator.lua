@@ -25,16 +25,29 @@ local FOLIAGE_NAVMESH_GENERATION_FIX = ROOT:GetCustomProperty("FoliageNavMeshGen
 
 local DD_NAVMESH_GLOBAL_ACCESS = "darkdev.navmeshgenerator"
 local DD_PATHFINDER_GLOBAL_ACCESS = "darkdev.pathfinder"
+local OCEAN_LEVEL = script:GetCustomProperty("OceanLevel")
 
 if not(NAV_MESH_AREA:GetWorldRotation() == Rotation.ZERO) then
     warn(string.format("%s NavMeshArea has been rotated, which is not allowed (it must be an axis align bounding box). Forcing it to zero rotation.", ROOT.id, NAV_MESH_AREA.name))
     NAV_MESH_AREA:SetWorldRotation(Rotation.ZERO)
 end
 
+if not(NAV_MESH_AREA:GetWorldPosition().z == 0.0) then
+    warn(string.format("%s NavMeshArea is not positioned at the origin. Forcing it to zero position.", ROOT.id, NAV_MESH_AREA.name))
+    NAV_MESH_AREA:SetWorldPosition(Vector3.ZERO)
+end
+
+-- Adjust trigger to only include the area above 0.0. Shrink the trigger to keep the same upper bound, but force a 0.0 lower bound.
+local navMeshAreaOriginalScale = NAV_MESH_AREA:GetWorldScale()
+local navMeshAreaOriginalPos = NAV_MESH_AREA:GetWorldPosition()
+NAV_MESH_AREA:SetWorldPosition(Vector3.New(navMeshAreaOriginalPos.x, navMeshAreaOriginalPos.y, navMeshAreaOriginalPos.z + navMeshAreaOriginalScale.z / 4.0 * 100 + OCEAN_LEVEL))
+NAV_MESH_AREA:SetWorldScale(Vector3.New(navMeshAreaOriginalScale.x, navMeshAreaOriginalScale.y, navMeshAreaOriginalScale.z / 2.0))
+
 local HALF_TILE_SIZE = TILE_SIZE * 0.5
 AREA_REAL_SIZE = NAV_MESH_AREA:GetWorldScale() * 100.0
-HALF_AREA_REAL_SIZE = AREA_REAL_SIZE * 0.5
 AREA_ORIGIN = NAV_MESH_AREA:GetWorldPosition()
+
+HALF_AREA_REAL_SIZE = AREA_REAL_SIZE * 0.5
 START_GRID_POSITION = AREA_ORIGIN - HALF_AREA_REAL_SIZE
 local NUM_TILES = {
     X = math.ceil(AREA_REAL_SIZE.x / TILE_SIZE.x),

@@ -1,7 +1,7 @@
 Name: "Shelf_1"
-RootId: 9372617295536497778
+RootId: 10371715666668381044
 Objects {
-  Id: 9732412594432896043
+  Id: 13505810731988022374
   Name: "Craftsman Roof 01 Bracket"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 0.25010255
     }
   }
-  ParentId: 9372617295536497778
+  ParentId: 10371715666668381044
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Trim:id"
@@ -33,7 +33,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -50,18 +50,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 9732412594432896043
-    SubobjectId: 12425246641842540711
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 3298513754671708848
+  Id: 5200814385440382872
   Name: "Craftsman Roof 01 Bracket"
   Transform {
     Location {
@@ -77,7 +71,7 @@ Objects {
       Z: 0.25010255
     }
   }
-  ParentId: 9372617295536497778
+  ParentId: 10371715666668381044
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Trim:id"
@@ -93,7 +87,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -110,18 +104,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 3298513754671708848
-    SubobjectId: 484561943179576892
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17434189120480556368
+  Id: 16777052769799893701
   Name: "Craftsman Floor 01 4m x 4m"
   Transform {
     Location {
@@ -137,7 +125,7 @@ Objects {
       Z: 0.139029592
     }
   }
-  ParentId: 9372617295536497778
+  ParentId: 10371715666668381044
   UnregisteredParameters {
     Overrides {
       Name: "ma:Building_Floor:id"
@@ -153,7 +141,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -169,12 +157,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 17434189120480556368
-    SubobjectId: 15748385236073777628
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

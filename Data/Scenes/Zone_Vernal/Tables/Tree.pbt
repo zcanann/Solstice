@@ -1,7 +1,7 @@
 Name: "Tables"
-RootId: 3952149627290333959
+RootId: 6143161627774639896
 Objects {
-  Id: 7662396203585359616
+  Id: 9923604006744553585
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -17,7 +17,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -25,7 +25,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -42,18 +42,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 7662396203585359616
-    SubobjectId: 4695392446456525708
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 8642802789860700485
+  Id: 14949842930254570999
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -69,7 +63,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -77,7 +71,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -94,18 +88,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 8642802789860700485
-    SubobjectId: 6669348452967697865
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 7373442833885742259
+  Id: 16082267217397959983
   Name: "Craftsman Floor 01 8m x 8m"
   Transform {
     Location {
@@ -121,7 +109,7 @@ Objects {
       Z: 0.585658312
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   UnregisteredParameters {
     Overrides {
       Name: "ma:Building_Floor:id"
@@ -143,7 +131,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -160,18 +148,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 7373442833885742259
-    SubobjectId: 5560984005920094271
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 5436643800591981968
+  Id: 16733520495486798920
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -187,7 +169,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -195,7 +177,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -212,18 +194,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 5436643800591981968
-    SubobjectId: 6921461941802852636
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 7827279363980991065
+  Id: 17213411202552646539
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -239,7 +215,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -247,7 +223,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -264,18 +240,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 7827279363980991065
-    SubobjectId: 5178923319214417621
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 3893818263667954462
+  Id: 5509905579253536715
   Name: "Table"
   Transform {
     Location {
@@ -290,20 +260,20 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3952149627290333959
-  ChildIds: 71238942108165380
-  ChildIds: 12767232308027612271
-  ChildIds: 4428895242067415847
-  ChildIds: 12170194077566579746
-  ChildIds: 11540645521075101207
-  ChildIds: 2850093901500285061
-  ChildIds: 17636732218979050830
-  ChildIds: 5561808098184945577
-  ChildIds: 3307383884297080676
-  ChildIds: 13084040962020575947
-  ChildIds: 4128353103711739577
-  ChildIds: 15497586853200165886
-  ChildIds: 14132237998867543613
+  ParentId: 6143161627774639896
+  ChildIds: 13755093068912695898
+  ChildIds: 12102722067253798297
+  ChildIds: 5232020724056209835
+  ChildIds: 16327715149516870039
+  ChildIds: 1097310565607953412
+  ChildIds: 11068595613655358388
+  ChildIds: 6789878483771619618
+  ChildIds: 4708468167368129007
+  ChildIds: 12617339031099135062
+  ChildIds: 18316692646712182750
+  ChildIds: 15947104111395361457
+  ChildIds: 15049794997642443372
+  ChildIds: 9125366042108320632
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -319,18 +289,12 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 3893818263667954462
-    SubobjectId: 2123079270678753170
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 14132237998867543613
+  Id: 9125366042108320632
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -346,7 +310,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -354,7 +318,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -371,18 +335,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14132237998867543613
-    SubobjectId: 17249039288919706289
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15497586853200165886
+  Id: 15049794997642443372
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -398,7 +356,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -406,7 +364,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -423,18 +381,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 15497586853200165886
-    SubobjectId: 18189286208840157042
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 4128353103711739577
+  Id: 15947104111395361457
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -450,7 +402,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -458,7 +410,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -475,18 +427,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 4128353103711739577
-    SubobjectId: 1312224297683034677
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 13084040962020575947
+  Id: 18316692646712182750
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -502,7 +448,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -510,7 +456,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -527,18 +473,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13084040962020575947
-    SubobjectId: 11451800233037772359
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 3307383884297080676
+  Id: 12617339031099135062
   Name: "Table Assembled"
   Transform {
     Location {
@@ -554,7 +494,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -562,7 +502,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -579,18 +519,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 3307383884297080676
-    SubobjectId: 475444577771664360
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 5561808098184945577
+  Id: 4708468167368129007
   Name: "Table Assembled"
   Transform {
     Location {
@@ -606,7 +540,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -614,7 +548,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -631,18 +565,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 5561808098184945577
-    SubobjectId: 7372582474370671397
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17636732218979050830
+  Id: 6789878483771619618
   Name: "Fantasy Candle Lit - Holder 03 (Prop)"
   Transform {
     Location {
@@ -658,9 +586,9 @@ Objects {
       Z: 0.68643415
     }
   }
-  ParentId: 3893818263667954462
-  ChildIds: 15182491623523299827
-  ChildIds: 4419571911635854668
+  ParentId: 5509905579253536715
+  ChildIds: 1712573246614450012
+  ChildIds: 7278555137327169410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -673,18 +601,12 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 17636732218979050830
-    SubobjectId: 16122161881564109250
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 4419571911635854668
+  Id: 7278555137327169410
   Name: "ClientContext"
   Transform {
     Location {
@@ -698,13 +620,13 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17636732218979050830
-  ChildIds: 15239442739757099060
-  ChildIds: 17025364257920813810
-  ChildIds: 17325555272479202433
-  ChildIds: 7780167569216392571
-  ChildIds: 17775702136340731679
-  ChildIds: 13805063978584009946
+  ParentId: 6789878483771619618
+  ChildIds: 15339349826268403244
+  ChildIds: 15210320356452747527
+  ChildIds: 1146410770048565721
+  ChildIds: 15714136344498245931
+  ChildIds: 8369597008460907145
+  ChildIds: 10606159730469709911
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -716,18 +638,12 @@ Objects {
   }
   NetworkContext {
   }
-  InstanceHistory {
-    SelfId: 4419571911635854668
-    SubobjectId: 1597185162231110080
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 13805063978584009946
+  Id: 10606159730469709911
   Name: "Candle Flame VFX"
   Transform {
     Location {
@@ -744,7 +660,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4419571911635854668
+  ParentId: 7278555137327169410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -752,7 +668,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -769,18 +685,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13805063978584009946
-    SubobjectId: 10730493268104859734
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17775702136340731679
+  Id: 8369597008460907145
   Name: "Candle Flame VFX"
   Transform {
     Location {
@@ -796,7 +706,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4419571911635854668
+  ParentId: 7278555137327169410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -804,7 +714,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -821,18 +731,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 17775702136340731679
-    SubobjectId: 15983508879630396307
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 7780167569216392571
+  Id: 15714136344498245931
   Name: "Candle Flame VFX"
   Transform {
     Location {
@@ -848,7 +752,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4419571911635854668
+  ParentId: 7278555137327169410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -856,7 +760,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -873,18 +777,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 7780167569216392571
-    SubobjectId: 4649855991519539703
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17325555272479202433
+  Id: 1146410770048565721
   Name: "Candle Flame VFX"
   Transform {
     Location {
@@ -901,7 +799,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4419571911635854668
+  ParentId: 7278555137327169410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -909,7 +807,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -926,18 +824,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 17325555272479202433
-    SubobjectId: 15784996796827361293
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17025364257920813810
+  Id: 15210320356452747527
   Name: "Point Light"
   Transform {
     Location {
@@ -952,7 +844,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 4419571911635854668
+  ParentId: 7278555137327169410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -988,18 +880,12 @@ Objects {
       MaxDistanceFadeRange: 1000
     }
   }
-  InstanceHistory {
-    SelfId: 17025364257920813810
-    SubobjectId: 14355523820441745022
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15239442739757099060
+  Id: 15339349826268403244
   Name: "Candle Flame VFX"
   Transform {
     Location {
@@ -1015,7 +901,7 @@ Objects {
       Z: 3
     }
   }
-  ParentId: 4419571911635854668
+  ParentId: 7278555137327169410
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1023,7 +909,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1040,18 +926,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 15239442739757099060
-    SubobjectId: 17870932185758209208
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15182491623523299827
+  Id: 1712573246614450012
   Name: "Floor Candle Holder 03"
   Transform {
     Location {
@@ -1064,7 +944,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 17636732218979050830
+  ParentId: 6789878483771619618
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_Detail1:id"
@@ -1086,7 +966,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1103,18 +983,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 15182491623523299827
-    SubobjectId: 17999803581370535295
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 2850093901500285061
+  Id: 11068595613655358388
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1130,7 +1004,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1138,7 +1012,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1155,18 +1029,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 2850093901500285061
-    SubobjectId: 933018079682149385
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 11540645521075101207
+  Id: 1097310565607953412
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1182,7 +1050,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1190,7 +1058,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1207,18 +1075,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 11540645521075101207
-    SubobjectId: 10040693701987295899
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 12170194077566579746
+  Id: 16327715149516870039
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1234,7 +1096,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1242,7 +1104,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1259,18 +1121,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 12170194077566579746
-    SubobjectId: 9482919753820211374
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 4428895242067415847
+  Id: 5232020724056209835
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1286,7 +1142,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1294,7 +1150,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1311,18 +1167,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 4428895242067415847
-    SubobjectId: 1588001057744531371
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 12767232308027612271
+  Id: 12102722067253798297
   Name: "Table Assembled"
   Transform {
     Location {
@@ -1338,7 +1188,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1346,7 +1196,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1363,18 +1213,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 12767232308027612271
-    SubobjectId: 11119805768788238563
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 71238942108165380
+  Id: 13755093068912695898
   Name: "Table Assembled"
   Transform {
     Location {
@@ -1390,7 +1234,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3893818263667954462
+  ParentId: 5509905579253536715
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1398,7 +1242,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1415,18 +1259,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 71238942108165380
-    SubobjectId: 3135131225725737352
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 10375394964817649113
+  Id: 12399909546098033388
   Name: "Bench Tile Right"
   Transform {
     Location {
@@ -1443,7 +1281,7 @@ Objects {
       Z: 2.00935435
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1459,7 +1297,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1476,18 +1314,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 10375394964817649113
-    SubobjectId: 11854565975586447701
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 13727190617689034008
+  Id: 11449148080290596268
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1503,7 +1335,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1511,7 +1343,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1528,18 +1360,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13727190617689034008
-    SubobjectId: 10808614291859059092
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 5163951788510643097
+  Id: 9235380137700117233
   Name: "Table Assembled"
   Transform {
     Location {
@@ -1555,7 +1381,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1563,7 +1389,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1580,18 +1406,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 5163951788510643097
-    SubobjectId: 7842214489188318997
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 18103371293446688299
+  Id: 3237647062386384351
   Name: "Table Assembled"
   Transform {
     Location {
@@ -1607,7 +1427,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1615,7 +1435,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1632,18 +1452,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18103371293446688299
-    SubobjectId: 15006897804368081575
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 18307312670472019835
+  Id: 10968771685584603575
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1659,7 +1473,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1667,7 +1481,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1684,18 +1498,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 18307312670472019835
-    SubobjectId: 15379667027273196535
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 4124356909642883818
+  Id: 9539287325474524739
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1711,7 +1519,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1719,7 +1527,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1736,18 +1544,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 4124356909642883818
-    SubobjectId: 1316043453740031590
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 14728691003585479654
+  Id: 1860801676477247319
   Name: "Table Assembled"
   Transform {
     Location {
@@ -1763,7 +1565,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1771,7 +1573,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1788,18 +1590,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14728691003585479654
-    SubobjectId: 16652618324636761962
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 12421205815887778865
+  Id: 7692139294270862472
   Name: "Table Assembled"
   Transform {
     Location {
@@ -1815,7 +1611,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1823,7 +1619,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1840,18 +1636,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 12421205815887778865
-    SubobjectId: 9736732558075881661
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 14881749770561723056
+  Id: 8319653385613451430
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1867,7 +1657,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1875,7 +1665,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1892,18 +1682,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14881749770561723056
-    SubobjectId: 16571477360994625084
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 1865636769324000529
+  Id: 12762223998601662253
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1919,7 +1703,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1927,7 +1711,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1944,18 +1728,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 1865636769324000529
-    SubobjectId: 3646574896695269789
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 11326463039171080242
+  Id: 16287096908789604893
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -1971,7 +1749,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1979,7 +1757,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -1996,18 +1774,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 11326463039171080242
-    SubobjectId: 13137141203729648830
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 1279298111874035040
+  Id: 4156387297565828758
   Name: "Table Assembled"
   Transform {
     Location {
@@ -2023,7 +1795,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2031,7 +1803,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2048,18 +1820,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 1279298111874035040
-    SubobjectId: 4233335921216475628
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15013567961885843614
+  Id: 8098595320550587527
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2075,7 +1841,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2083,7 +1849,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2100,18 +1866,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 15013567961885843614
-    SubobjectId: 18097089246873656338
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 6477453991787520591
+  Id: 8724547376698566757
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2127,7 +1887,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2135,7 +1895,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2152,18 +1912,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 6477453991787520591
-    SubobjectId: 8258375055188713155
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 10354317991462831534
+  Id: 10669593443273870937
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2179,7 +1933,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2187,7 +1941,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2204,18 +1958,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 10354317991462831534
-    SubobjectId: 11875643771167324450
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17988596669489316530
+  Id: 14773962134087379220
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2231,7 +1979,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2239,7 +1987,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2256,18 +2004,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 17988596669489316530
-    SubobjectId: 15193873082884931134
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 2145800028482076828
+  Id: 6902736025830855238
   Name: "Table Assembled"
   Transform {
     Location {
@@ -2283,7 +2025,7 @@ Objects {
       Z: 1.09136844
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2291,7 +2033,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2308,18 +2050,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 2145800028482076828
-    SubobjectId: 3942980141720058896
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 13226718185121544378
+  Id: 316137898783572824
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2335,7 +2071,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2343,7 +2079,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2360,18 +2096,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13226718185121544378
-    SubobjectId: 11308978821153702966
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 4405130726621429442
+  Id: 8966903069782210930
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2387,7 +2117,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2395,7 +2125,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2412,18 +2142,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 4405130726621429442
-    SubobjectId: 1611450031057633870
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 10139660378213541773
+  Id: 4643332510143440678
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2441,7 +2165,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2449,7 +2173,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2466,18 +2190,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 10139660378213541773
-    SubobjectId: 12090020031846636289
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 4378164757419684993
+  Id: 795650776187412682
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2493,7 +2211,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2501,7 +2219,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2518,18 +2236,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 4378164757419684993
-    SubobjectId: 1710650890806118413
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 6705162618706479429
+  Id: 1799010086495116184
   Name: "Craftsman Floor 01 8m x 8m"
   Transform {
     Location {
@@ -2545,7 +2257,7 @@ Objects {
       Z: 0.585658312
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   UnregisteredParameters {
     Overrides {
       Name: "ma:Building_Floor:id"
@@ -2567,7 +2279,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2584,18 +2296,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 6705162618706479429
-    SubobjectId: 8535073006931441097
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 9542743966267827843
+  Id: 258082512014184720
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2612,7 +2318,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2620,7 +2326,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2637,18 +2343,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 9542743966267827843
-    SubobjectId: 12615019467801582095
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15827516956039564060
+  Id: 15448854250183886370
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2667,7 +2367,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2675,7 +2375,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2692,18 +2392,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 15827516956039564060
-    SubobjectId: 17355057248579352464
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17051527435785811438
+  Id: 15008490191041589127
   Name: "Bench Tile Right"
   Transform {
     Location {
@@ -2720,7 +2414,7 @@ Objects {
       Z: 2.00935435
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -2736,7 +2430,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2753,18 +2447,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 17051527435785811438
-    SubobjectId: 14401420418751727970
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 9869374298937699243
+  Id: 10186524569570964791
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2780,7 +2468,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2788,7 +2476,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2805,18 +2493,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 9869374298937699243
-    SubobjectId: 11783705739633825575
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 649519131148996964
+  Id: 5346475861754053558
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2832,7 +2514,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2840,7 +2522,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2857,18 +2539,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 649519131148996964
-    SubobjectId: 2485037535313718760
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 5065155248123837541
+  Id: 6934024958944323849
   Name: "Craftsman Floor 01 8m x 8m"
   Transform {
     Location {
@@ -2884,7 +2560,7 @@ Objects {
       Z: 0.585658312
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   UnregisteredParameters {
     Overrides {
       Name: "ma:Building_Floor:id"
@@ -2906,7 +2582,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2923,18 +2599,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 5065155248123837541
-    SubobjectId: 7868955754289840361
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 14045919706332604053
+  Id: 4827851290736078571
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -2950,7 +2620,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -2958,7 +2628,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -2975,18 +2645,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14045919706332604053
-    SubobjectId: 16830532076499048985
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 6086864785746864461
+  Id: 6136135599418654794
   Name: "Craftsman Dining Chair"
   Transform {
     Location {
@@ -3002,7 +2666,7 @@ Objects {
       Z: 1.48302794
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -3010,7 +2674,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -3027,18 +2691,12 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 6086864785746864461
-    SubobjectId: 9153510203529926081
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 16134648743169812486
+  Id: 506179597454706574
   Name: "Bench Tile Right"
   Transform {
     Location {
@@ -3055,7 +2713,7 @@ Objects {
       Z: 2.00935435
     }
   }
-  ParentId: 3952149627290333959
+  ParentId: 6143161627774639896
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -3071,7 +2729,7 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:forceon"
+    Value: "mc:ecollisionsetting:inheritfromparent"
   }
   CoreMesh {
     MeshAsset {
@@ -3087,12 +2745,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 16134648743169812486
-    SubobjectId: 17624529010144892042
-    InstanceId: 9734034217330749005
-    TemplateId: 1955721074568749451
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

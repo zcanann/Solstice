@@ -590,5 +590,10 @@ Assets {
       VirtualFolderPath: "Buildings"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Gameplay"
+      VirtualFolderPath: "Navigation"
+      PlatformAssetType: 3
+    }
   }
 }

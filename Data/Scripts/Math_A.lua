@@ -43,4 +43,12 @@ UtilsMath.RoundToIncrement = function(num, increment)
     return rounded
 end
 
+UtilsMath.RoundDownToNearest = function(num, multiple)
+    return math.floor(num / multiple + 0.5) * multiple
+end
+
+UtilsMath.RoundUpToNearest = function(num, multiple)
+    return math.ceil(num / multiple - 0.5) * multiple
+end
+
 return UtilsMath

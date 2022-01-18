@@ -44,6 +44,10 @@ Assets {
           Id: 2555396189476888989
         }
       }
+      Overrides {
+        Name: "cs:OceanLevel"
+        Float: -100
+      }
     }
   }
   SerializationVersion: 103
