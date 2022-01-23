@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "An small stone bridge."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

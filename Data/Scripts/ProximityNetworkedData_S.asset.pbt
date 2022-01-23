@@ -23,7 +23,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Infrastructure"
   VirtualFolderPath: "Networking"
 }

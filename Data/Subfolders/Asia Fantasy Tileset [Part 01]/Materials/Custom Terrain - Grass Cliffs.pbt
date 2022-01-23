@@ -2,7 +2,7 @@ Assets {
   Id: 4369181622451152382
   Name: "Custom Terrain - Grass Cliffs"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 6293171627245844021
     ParameterOverrides {

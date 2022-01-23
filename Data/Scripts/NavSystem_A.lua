@@ -18,13 +18,17 @@ local boxDrawDuration = 0.5
 local boxDrawUpdate = 0.0
 
 local verticalClearance = 250.0
-local connectivityClearance = 24.0
+local connectivityClearanceSource = 16.0
+local connectivityClearanceDest = 2.0
+local connectivityClearanceTerrain = 16.0
 local maxOperationsPerUpdate = 16
 
+-- All valid raycasted z coordinates, and any metadata associated with the hit result
 if not _G.rainTables then
     _G.rainTables = { }
 end
 
+-- All valid paths between nodes
 if not _G.edgeTables then
     _G.edgeTables = { }
 end
@@ -46,6 +50,10 @@ function GetSearchGrid()
     return origin, searchStart, searchEnd
 end
 
+function AddEdge()
+    
+end
+
 function FindEdge(x, y, targetX, targetY)
     if not _G.rainTables[x] or not _G.rainTables[x][y] or not _G.rainTables[targetX] or not _G.rainTables[targetX][targetY] then
         return
@@ -56,26 +64,44 @@ function FindEdge(x, y, targetX, targetY)
         return
     end
 
-    for _, z in pairs(_G.rainTables[x][y]) do
-        local sourcePosition = Vector3.New(x * GRID_SIZE, y * GRID_SIZE, z + connectivityClearance)
-        for _, candidateZ in pairs(_G.rainTables[targetX][targetY]) do
-            local destinationPosition = Vector3.New(targetX * GRID_SIZE, targetY * GRID_SIZE, candidateZ + connectivityClearance)
-            -- Quick and cheap exclusion based on z difference between two grid cells
-            if math.abs(sourcePosition.z - destinationPosition.z) < allowedHeightDifference then
-                local angle = math.acos((sourcePosition .. destinationPosition) / (sourcePosition.size * destinationPosition.size))
-                if angle < allowedSlope then
-                    local hitResult = World.Raycast(sourcePosition, destinationPosition,
+    for _, sourceData in pairs(_G.rainTables[x][y]) do
+        for _, targetData in pairs(_G.rainTables[targetX][targetY]) do
+            -- Common case: For terrain <=> terrain, use a cheap / simple test
+            if sourceData.isTerrain and targetData.isTerrain then
+                local sourcePosition = Vector3.New(x * GRID_SIZE, y * GRID_SIZE, sourceData.z + connectivityClearanceTerrain)
+                local destinationPosition = Vector3.New(targetX * GRID_SIZE, targetY * GRID_SIZE, targetData.z + connectivityClearanceTerrain)
+
+                if math.abs(sourcePosition.z - destinationPosition.z) < allowedHeightDifference then
+                    _G.edgeTables[x][y][sourceData.z] = true
+                    CoreDebug.DrawLine(sourcePosition, destinationPosition,
                     {
-                        ignorePlayers = true,
+                        duration = 255,
+                        color = Color.GREEN,
+                        thickness = 4,
                     })
-                    if not hitResult then
-                        _G.edgeTables[x][y][z] = true
-                        CoreDebug.DrawLine(sourcePosition, destinationPosition,
+                end
+            -- Complex case: Use more expensive test
+            else
+                local sourcePosition = Vector3.New(x * GRID_SIZE, y * GRID_SIZE, sourceData.z + connectivityClearanceSource)
+                local destinationPosition = Vector3.New(targetX * GRID_SIZE, targetY * GRID_SIZE, targetData.z + connectivityClearanceDest)
+
+                -- Quick and cheap exclusion based on z difference between two grid cells
+                if math.abs(sourcePosition.z - destinationPosition.z) < allowedHeightDifference then
+                    local angle = math.acos((sourcePosition .. destinationPosition) / (sourcePosition.size * destinationPosition.size))
+                    if angle < allowedSlope then
+                        local hitResult = World.Raycast(sourcePosition, destinationPosition,
                         {
-                            duration = 255,
-                            color = Color.MAGENTA,
-                            thickness = 4,
+                            ignorePlayers = true,
                         })
+                        if not hitResult then
+                            _G.edgeTables[x][y][sourceData.z] = true
+                            CoreDebug.DrawLine(sourcePosition, destinationPosition,
+                            {
+                                duration = 255,
+                                color = Color.MAGENTA,
+                                thickness = 4,
+                            })
+                        end
                     end
                 end
             end
@@ -147,13 +173,14 @@ function ProbeZ(x, y)
         for _, hitResult in pairs(allHitResults) do
             if hitResult:GetImpactNormal() .. Vector3.UP > allowedSlope then
                 local z = hitResult:GetImpactPosition().z
-                if Framework.Utils.Table.Count(allHitResults) > 1 then
-                    print(z)
-                end
+                local isTerrain = hitResult.other:IsA("Terrain")
+                -- if not isTerrain and (not previousZ or previousZ - z > verticalClearance) then
                 if not previousZ or previousZ - z > verticalClearance then
-                    table.insert(_G.rainTables[x][y], z)
-                else
-                    print("rejected")
+                    table.insert(_G.rainTables[x][y],
+                    {
+                        z = z,
+                        isTerrain = isTerrain
+                    })
                 end
                 previousZ = z
             end
@@ -209,25 +236,33 @@ function DebugDraw(deltaSeconds)
             boxDrawUpdate = boxDrawUpdate + deltaSeconds
             if boxDrawUpdate > boxDrawDuration and _G.rainTables[x] and _G.rainTables[x][y] then
                 boxDrawUpdate = 0.0
-                for _, z in pairs(_G.rainTables[x][y]) do
-                    CoreDebug.DrawBox(Vector3.New(x * GRID_SIZE, y * GRID_SIZE, z), impactVisualSize,
+                for _, data in pairs(_G.rainTables[x][y]) do
+                    local debugColor = Color.CYAN
+
+                    if data.isTerrain then
+                        debugColor = Color.GREEN
+                    end
+
+                    CoreDebug.DrawBox(Vector3.New(x * GRID_SIZE, y * GRID_SIZE, data.z), impactVisualSize,
                     {
                         duration = boxDrawDuration,
-                        color = Color.CYAN,
+                        color = debugColor,
                         thickness = 4,
                     })
                 end
             end
         end
     end
+
 end
 
 function Tick(deltaSeconds)
-    UpdateNavGrid(deltaSeconds)
-    DebugDraw(deltaSeconds)
+    -- UpdateNavGrid(deltaSeconds)
+    -- DebugDraw(deltaSeconds)
 end
 
 function FindPath(startPoint, endPoint)
+    --[[
     local searchStart, searchEnd = GetSearchGrid()
 
     for x = searchStart.x, searchEnd.x, GRID_SIZE do
@@ -236,6 +271,9 @@ function FindPath(startPoint, endPoint)
         for y = searchStart.y, searchEnd.y, GRID_SIZE do
         end
     end
+    --]]
+
+    return { startPoint, endPoint }
 end
 
 if not _G.NavMesh then

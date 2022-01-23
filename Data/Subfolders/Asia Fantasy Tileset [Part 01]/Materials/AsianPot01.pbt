@@ -2,7 +2,7 @@ Assets {
   Id: 15669027866934808094
   Name: "AsianPot01"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 7844337386753141251
     ParameterOverrides {

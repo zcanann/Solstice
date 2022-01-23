@@ -9587,6 +9587,6 @@ Assets {
   Marketplace {
     Description: "Broken stone archway with rocks at its base, covered with moss and fern. "
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

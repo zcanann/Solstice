@@ -2,7 +2,7 @@ Assets {
   Id: 15560069333174739373
   Name: "Custom Bark Thin"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 9728495127137008342
     ParameterOverrides {

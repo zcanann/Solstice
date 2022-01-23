@@ -63,6 +63,10 @@ Objects {
       Name: "cs:ShowNavMesh"
       Bool: true
     }
+    Overrides {
+      Name: "cs:ShowEngagments"
+      Bool: true
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -145,6 +149,10 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowNavMesh"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ShowEngagments"
       Bool: true
     }
   }

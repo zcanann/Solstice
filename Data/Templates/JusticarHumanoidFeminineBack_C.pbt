@@ -700,7 +700,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "EquipmentModels"
   VirtualFolderPath: "Sets"
   VirtualFolderPath: "Justicar"

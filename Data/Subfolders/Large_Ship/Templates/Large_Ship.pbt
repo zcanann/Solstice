@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "large ship with cannons and treasures "
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

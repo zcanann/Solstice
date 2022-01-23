@@ -430,7 +430,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "CharacterModels"
   VirtualFolderPath: "Vanara"

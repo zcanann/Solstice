@@ -59,7 +59,7 @@ Objects {
     }
     Overrides {
       Name: "cs:GridSize"
-      Int: 150
+      Int: 75
     }
   }
   Collidable_v2 {

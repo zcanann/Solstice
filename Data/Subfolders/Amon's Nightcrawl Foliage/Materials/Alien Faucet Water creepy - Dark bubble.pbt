@@ -2,7 +2,7 @@ Assets {
   Id: 18103383184973150873
   Name: "Alien Faucet Water creepy - Dark bubble"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 1699895661322077824
     ParameterOverrides {

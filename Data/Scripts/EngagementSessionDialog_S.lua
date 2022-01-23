@@ -36,7 +36,7 @@ function Connect(player)
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
+    -- Set the engagement session on the player's proximity data
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,

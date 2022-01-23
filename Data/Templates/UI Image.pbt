@@ -80,7 +80,7 @@ Assets {
   Marketplace {
     Description: "Default UI Image, templatized"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "UI"
   VirtualFolderPath: "EmptyTemplates"
 }

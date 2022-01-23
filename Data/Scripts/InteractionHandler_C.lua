@@ -44,7 +44,7 @@ function Tick(deltaTime)
 end
 
 local function OnMouseDown(cursorPosition, primary)
-    local probeHitResult = UI.GetCursorHitResult()
+    local probeHitResult = UI.GetHitResult(UI.GetCursorPosition())
 
     if probeHitResult == nil or probeHitResult.other == nil then
         return

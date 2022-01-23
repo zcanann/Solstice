@@ -2,7 +2,7 @@ Assets {
   Id: 6823151078516740555
   Name: "FrameworkAscendantFeminineVariantA"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   VirtualFolderPath: "Replicant"

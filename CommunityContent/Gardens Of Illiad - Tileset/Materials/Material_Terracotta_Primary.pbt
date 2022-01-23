@@ -2,7 +2,7 @@ Assets {
   Id: 4179330050182411661
   Name: "Material_Terracotta_Primary"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 12827967762201292547
     ParameterOverrides {

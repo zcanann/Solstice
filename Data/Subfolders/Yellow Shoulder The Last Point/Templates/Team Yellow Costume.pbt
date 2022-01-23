@@ -1742,6 +1742,6 @@ Assets {
   Marketplace {
     Description: "The Yellow Shoulder from the game The Last Point"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

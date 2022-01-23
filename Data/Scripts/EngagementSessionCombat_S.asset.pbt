@@ -11,8 +11,21 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Object"
-        ObjectReference {
+        Name: "cs:EngagementVisualizer"
+        AssetReference {
+          Id: 15724300102369226823
+        }
+      }
+      Overrides {
+        Name: "cs:NpcMovementPathing"
+        AssetReference {
+          Id: 2263876175624442119
+        }
+      }
+      Overrides {
+        Name: "cs:NpcEnums"
+        AssetReference {
+          Id: 12101908598748837153
         }
       }
       Overrides {
@@ -42,7 +55,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Engagement"
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 16335350336695431524
   Name: "Wood Raw - Village Dark 90"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 16567018797244727981
     ParameterOverrides {

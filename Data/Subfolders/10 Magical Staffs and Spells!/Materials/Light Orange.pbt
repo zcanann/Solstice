@@ -2,7 +2,7 @@ Assets {
   Id: 5380187266235546129
   Name: "Light Orange"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 10184847056121543272
     ParameterOverrides {

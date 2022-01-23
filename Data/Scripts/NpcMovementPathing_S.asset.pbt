@@ -1,6 +1,6 @@
 Assets {
   Id: 2263876175624442119
-  Name: "NpcPathingWander_S"
+  Name: "NpcMovementPathing_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -8,6 +8,12 @@ Assets {
         Name: "cs:Framework"
         AssetReference {
           Id: 14480759715348141780
+        }
+      }
+      Overrides {
+        Name: "cs:NpcEnums"
+        AssetReference {
+          Id: 12101908598748837153
         }
       }
       Overrides {
@@ -22,7 +28,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Entities"
   VirtualFolderPath: "Npcs"

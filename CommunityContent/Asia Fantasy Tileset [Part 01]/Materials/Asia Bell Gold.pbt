@@ -2,7 +2,7 @@ Assets {
   Id: 4780660006816263450
   Name: "Asia Bell Gold"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 7197574413582915927
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 3264822255705986571
   Name: "Asia Lantern Metal"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 13384560797568300258
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 9289305701179092049
   Name: "Stucco Molding "
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 13174009668515209438
     ParameterOverrides {

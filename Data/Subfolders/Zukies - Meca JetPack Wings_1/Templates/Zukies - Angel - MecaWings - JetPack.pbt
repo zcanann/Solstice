@@ -12665,6 +12665,6 @@ Assets {
   Marketplace {
     Description: "Tezuki ArtWork (Zukies)\r\n\r\nThose wings were in my \"Sci-Fi Building Challenge 2021\" in CC As Bonus in the MAP.\r\nNow i send them to you as separate object for who wold like to get ONLY the wings as Jetpack to add into your projects. \r\n\r\nThe script as been took in CC to made the wings. \r\nThe visual ArtWork and costume settings as been made By Tezuki (Zukies)\r\n\r\nEnjoy The Fly :)"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

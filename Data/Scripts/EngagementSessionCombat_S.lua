@@ -1,20 +1,28 @@
 -- Defines the engagement session between the player and an object or enemy, such as during mining, cooking, or fighting
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
-local propDropTable = script:GetCustomProperty("DropTable")
-local propRespawnTimeMin = script:GetCustomProperty("RespawnTimeMin")
-local propRespawnTimeMax = script:GetCustomProperty("RespawnTimeMax")
+local ENGAGEMENT_VISUALIZER = require(script:GetCustomProperty("EngagementVisualizer"))
+local NPC_MOVEMENT_PATHING = require(script:GetCustomProperty("NpcMovementPathing"))
+local NPC_ENUMS = require(script:GetCustomProperty("NpcEnums"))
+local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
+local MAX_ENGAGEMENTS = script:GetCustomProperty("MaxEngagements")
+local DROP_TABLE = script:GetCustomProperty("DropTable")
+local RESPAWN_TIME_MIN = script:GetCustomProperty("RespawnTimeMin")
+local RESPAWN_TIME_MAX = script:GetCustomProperty("RespawnTimeMax")
+local IS_AGRESSIVE = script:GetCustomProperty("IsAgressive")
 
 local engagedPlayers = { }
 
+-- Set the server-side reference to the engaged player table
+FRAMEWORK.Networking.SetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+{
+    engagedPlayers = engagedPlayers,
+})
+
 -- Combat state
 local attackTimer = 0.0
-
-local respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
-
+local respawnTimer = math.random(RESPAWN_TIME_MIN, RESPAWN_TIME_MAX)
 local animationMap = {
     [ "dagger" ]            = "DaggerAnimations",
     [ "sword_1h" ]          = "MiningAnimation",
@@ -33,19 +41,19 @@ local animationMap = {
 }
 
 function IsPlayerConnected(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
     return engagedPlayers[player] ~= nil
 end
 
 function Connect(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
     -- Deny the request if at our engagement limit
-    if propMaxEngagements >= 0 and #engagedPlayers >= propMaxEngagements then
+    if MAX_ENGAGEMENTS >= 0 and #engagedPlayers >= MAX_ENGAGEMENTS then
         return
     end
 
@@ -74,23 +82,26 @@ function Connect(player)
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    -- Set the engagement session on the PLAYERS proximity networked data -- not the npc
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+    -- Set the engagement session on the player's proximity data
+    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
-        objectId = propProximityNetworkedObject.id,
-        animationName = "MiningAnimation"
+        objectId = PROXIMITY_NETWORKED_OBJECT.id,
+        movementMode = NPC_ENUMS.MOVEMENT_STATE.IDLE,
+        pathingMode = NPC_ENUMS.ENGAGEMENT_PATHING_MODE.MELEE,
+        -- Remove, probably
+        animationName = "MiningAnimation",
     })
 end
 
 function Disconnect(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
+    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function DisconnectAllPlayers()
@@ -99,21 +110,8 @@ function DisconnectAllPlayers()
     end
 end
 
-function Tick(deltaSeconds)
-    Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
-
-    for player, _ in pairs(engagedPlayers) do
-        CheckForInterruption(player)
-        CheckForPlayerAutoAttack(player, deltaSeconds)
-    end
-
-    -- Check enemy attack after players, to give the player same-frame advantage
-    CheckForEnemyAutoAttack(deltaSeconds)
-    CheckForRespawn(deltaSeconds)
-end
-
 function CheckForPlayerAutoAttack(player, deltaSeconds)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return
     end
 
@@ -131,7 +129,7 @@ function CheckForPlayerAutoAttack(player, deltaSeconds)
     if duration > playerAttackSpeedBase then
         -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, playerAttackSpeedBase)
-        Framework.Skills.AddSkillExp(player, propWeaponSkill, exp)
+        FRAMEWORK.Skills.AddSkillExp(player, propWeaponSkill, exp)
 
         -- Apply damage
         SetEnemyHealth(GetEnemyHealth() - playerDamageBase)
@@ -147,7 +145,7 @@ function CheckForEnemyAutoAttack(deltaSeconds)
 end
 
 function CheckForInterruption(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return
     end
 
@@ -159,14 +157,14 @@ end
 
 function SetEnemyHealth(newHealth)
     local health = GetEnemyHealth()
-    local maxHealth = Framework.Networking.GetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH)
+    local maxHealth = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH)
 
     -- if not isAlive then return end
     if health == nil then return end
     if maxHealth == nil then return end
 
     health = CoreMath.Clamp(newHealth, 0, maxHealth)
-    Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, health)
+    FRAMEWORK.Networking.SetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, health)
 
     if health <= 0 then
         DisconnectAllPlayers()
@@ -174,7 +172,7 @@ function SetEnemyHealth(newHealth)
 end
 
 function GetEnemyHealth()
-    return Framework.Networking.GetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH)
+    return FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH)
 end
 
 function IsAlive()
@@ -195,9 +193,34 @@ function Respawn()
         return
     end
 
-    SetEnemyHealth(Framework.Networking.GetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH))
+    SetEnemyHealth(FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH))
 
-    respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
+    respawnTimer = math.random(RESPAWN_TIME_MIN, RESPAWN_TIME_MAX)
 end
 
-Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id, Connect)
+function Tick(deltaSeconds)
+    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
+    local toDisconnect = { }
+
+    for player, _ in pairs(engagedPlayers) do
+        if CheckForInterruption(player) then
+            toDisconnect[player] = true
+        else
+            CheckForPlayerAutoAttack(player, deltaSeconds)
+        end
+    end
+
+    for player, _ in pairs(toDisconnect) do
+        Disconnect(player)
+    end
+
+    -- Check enemy attack after players, to give the player same-frame advantage
+    CheckForEnemyAutoAttack(deltaSeconds)
+    CheckForRespawn(deltaSeconds)
+
+    -- Update combat componenets
+    NPC_MOVEMENT_PATHING.Tick(deltaSeconds)
+    ENGAGEMENT_VISUALIZER.Tick(deltaSeconds)
+end
+
+FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, Connect)

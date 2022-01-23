@@ -2,7 +2,7 @@ Assets {
   Id: 5185636341020836871
   Name: "FrameworkUndeadFeminineVariantA"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   VirtualFolderPath: "Undead"

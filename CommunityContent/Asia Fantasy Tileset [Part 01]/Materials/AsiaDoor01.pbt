@@ -2,7 +2,7 @@ Assets {
   Id: 13518268742104794018
   Name: "AsiaDoor01"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 18033297229984528543
     ParameterOverrides {

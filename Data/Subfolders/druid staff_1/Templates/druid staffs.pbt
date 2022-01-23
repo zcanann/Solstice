@@ -1550,6 +1550,6 @@ Assets {
   Marketplace {
     Description: "druid staff"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

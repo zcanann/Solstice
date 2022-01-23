@@ -2821,6 +2821,6 @@ Assets {
   Marketplace {
     Description: "some thing I made a while ago but did not know what to use it for"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

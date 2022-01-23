@@ -4170,6 +4170,6 @@ Assets {
   Marketplace {
     Description: "An small stone bridge."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

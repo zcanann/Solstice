@@ -2,7 +2,7 @@ Assets {
   Id: 12579190551872106281
   Name: "SoniaHairCustom"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   CustomMaterialAsset {

@@ -52,5 +52,5 @@ Assets {
     Version: "1.0.0"
     Description: "Alona\'s Staff from Breakaway!"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

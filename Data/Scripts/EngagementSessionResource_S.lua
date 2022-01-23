@@ -1,4 +1,4 @@
--- Defines the engagement session between the player and an object or enemy, such as during mining, cooking, or fighting
+-- Defines the engagement session between the player and an object, such as during mining, cooking, or woodcutting
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
 local Framework = require(script:GetCustomProperty("Framework"))
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
@@ -14,6 +14,13 @@ local propRespawnTimeMin = script:GetCustomProperty("RespawnTimeMin")
 local propRespawnTimeMax = script:GetCustomProperty("RespawnTimeMax")
 
 local engagedPlayers = { }
+
+-- Set the server-side reference to the engaged player table
+Framework.Networking.SetServerOnlyData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+{
+    engagedPlayers = engagedPlayers,
+})
+
 local remainingResources = 0
 local respawnTimer = 0.0
 
@@ -53,6 +60,10 @@ function Connect(player)
         end
     end
 
+    if not CheckForRequiredItems(player) then
+        return
+    end
+
     if not player.serverUserData.engagement then
         player.serverUserData.engagement = { }
     end
@@ -62,7 +73,7 @@ function Connect(player)
     player.serverUserData.engagement.session = script.context
     engagedPlayers[player] = true
 
-    -- Set the engagement session on the PLAYERS proximity networked data -- not the resource itself
+    -- Set the engagement session on the player's proximity data
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
@@ -81,14 +92,8 @@ function Disconnect(player)
     Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
-function Tick(deltaSeconds)
-    Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
-
-    for player, _ in pairs(engagedPlayers) do
-        CheckForInterruption(player)
-        CheckForResourceExtracted(player, deltaSeconds)
-    end
-    CheckForRespawn(deltaSeconds)
+function CheckForRequiredItems(player)
+    return true
 end
 
 function CheckForResourceExtracted(player, deltaSeconds)
@@ -118,12 +123,14 @@ end
 
 function CheckForInterruption(player)
     if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
-        return
+        return false
     end
 
     if (player.serverUserData.engagement.startLocation - player:GetWorldPosition()).size > 100.0 then
-        Disconnect(player)
+        return true
     end
+
+    return false
 end
 
 function CheckForRespawn(deltaSeconds)
@@ -144,6 +151,27 @@ function SetRemainingResources(newRemainingResources)
     if remainingResources == 0.0 then
         respawnTimer = math.random(propRespawnTimeMin, propRespawnTimeMax)
     end
+end
+
+function Tick(deltaSeconds)
+    Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
+    local toDisconnect = { }
+
+    for player, _ in pairs(engagedPlayers) do
+        if not CheckForRequiredItems(player) then
+            toDisconnect[player] = true
+        elseif CheckForInterruption(player) then
+            toDisconnect[player] = true
+        else
+            CheckForResourceExtracted(player, deltaSeconds)
+        end
+    end
+
+    for player, _ in pairs(toDisconnect) do
+        Disconnect(player)
+    end
+
+    CheckForRespawn(deltaSeconds)
 end
 
 Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id, Connect)

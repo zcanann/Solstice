@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Necromancer Orc with spell attack animation!"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

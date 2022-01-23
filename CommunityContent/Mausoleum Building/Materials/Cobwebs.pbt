@@ -2,7 +2,7 @@ Assets {
   Id: 184989605217486641
   Name: "Cobwebs"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 2755534836090291559
     ParameterOverrides {

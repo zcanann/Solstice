@@ -2,7 +2,7 @@ Assets {
   Id: 18378027752189419050
   Name: "FrameworkWorldMapOceanBlight"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "WorldMap"
   CustomMaterialAsset {
     BaseMaterialId: 1082809058784319555

@@ -2,7 +2,7 @@ Assets {
   Id: 7821569636782604439
   Name: "VanaraSkin"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   VirtualFolderPath: "Vanara"

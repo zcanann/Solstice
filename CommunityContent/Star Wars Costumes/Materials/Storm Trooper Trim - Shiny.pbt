@@ -2,7 +2,7 @@ Assets {
   Id: 8013699108638058111
   Name: "Storm Trooper Trim - Shiny"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 10175711656923249913
     ParameterOverrides {

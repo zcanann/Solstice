@@ -2,7 +2,7 @@ Assets {
   Id: 13264318085209938412
   Name: "Material_Roof_2"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 8309164412785203963
     ParameterOverrides {

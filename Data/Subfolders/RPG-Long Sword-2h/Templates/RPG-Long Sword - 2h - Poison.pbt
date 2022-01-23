@@ -4260,6 +4260,6 @@ Assets {
   Marketplace {
     Description: "Buck\'s weapon\'s made to work on NPC\'s.\r\n"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

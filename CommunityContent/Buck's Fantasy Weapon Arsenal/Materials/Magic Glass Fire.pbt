@@ -2,7 +2,7 @@ Assets {
   Id: 13170911115268007611
   Name: "Magic Glass Fire"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 14065635217134112544
     ParameterOverrides {

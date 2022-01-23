@@ -6,7 +6,7 @@ Assets {
     CustomParameters {
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Interactions"
 }

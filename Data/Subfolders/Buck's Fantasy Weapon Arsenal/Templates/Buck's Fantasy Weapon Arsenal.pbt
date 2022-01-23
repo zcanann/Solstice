@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Welcome to something that started as a few weapons for my hero kit project and ended up me also grabbing @Breadman\'s updated spellshock weapons and theming them all.\r\n\r\nThese are still WIP and while they have a decent set of abilities and animations set to them still need some final polish.\r\n\r\nThanks to @Mucusinator for his amazing castle as a backdrop for the screenshots.\r\n\r\n"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

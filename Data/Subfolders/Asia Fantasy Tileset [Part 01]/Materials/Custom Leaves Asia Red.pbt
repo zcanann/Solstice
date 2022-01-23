@@ -2,7 +2,7 @@ Assets {
   Id: 9403518744847492013
   Name: "Custom Leaves Asia Red"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 10992947835938048322
     ParameterOverrides {

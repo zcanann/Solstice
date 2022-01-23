@@ -2,7 +2,7 @@ Assets {
   Id: 14077326576178303780
   Name: "Edgeline Red"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952
     ParameterOverrides {

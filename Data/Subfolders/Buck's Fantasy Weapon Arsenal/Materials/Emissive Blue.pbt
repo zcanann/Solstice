@@ -2,7 +2,7 @@ Assets {
   Id: 13568184001667357480
   Name: "Emissive Blue"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 10294735921380463590
     ParameterOverrides {

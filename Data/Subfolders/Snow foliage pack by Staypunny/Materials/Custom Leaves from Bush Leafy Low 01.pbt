@@ -2,7 +2,7 @@ Assets {
   Id: 2056939594577597304
   Name: "Custom Leaves from Bush Leafy Low 01"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 14976933513343280496
     ParameterOverrides {

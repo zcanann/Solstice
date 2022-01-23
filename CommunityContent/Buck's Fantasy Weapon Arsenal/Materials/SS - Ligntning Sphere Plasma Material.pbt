@@ -2,7 +2,7 @@ Assets {
   Id: 652415155212608029
   Name: "SS - Ligntning Sphere Plasma Material"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 1951593977860928200
     ParameterOverrides {

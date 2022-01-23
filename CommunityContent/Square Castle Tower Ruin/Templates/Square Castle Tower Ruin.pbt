@@ -25428,6 +25428,6 @@ Assets {
   Marketplace {
     Description: "A ruined stone tower with a tree growing out of it and decorated with additional rubble and overgrown foliage.  Climable up to the first floor with jump."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

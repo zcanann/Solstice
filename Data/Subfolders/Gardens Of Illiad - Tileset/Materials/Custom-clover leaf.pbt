@@ -2,7 +2,7 @@ Assets {
   Id: 8093391858048966753
   Name: "Custom-clover leaf"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 9037751557728754304
     ParameterOverrides {

@@ -15134,6 +15134,6 @@ Assets {
   Marketplace {
     Description: "Cosmonaut Character (costume) for your game.\r\n\r\nCredits: Sobchak for Manequin CC\r\n                 WitcherSilver for SpaceBody parts CC"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

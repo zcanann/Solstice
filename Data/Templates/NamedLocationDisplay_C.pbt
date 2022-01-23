@@ -562,6 +562,6 @@ Assets {
       AssetId: "Named_Location_Display"
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "UI"
 }

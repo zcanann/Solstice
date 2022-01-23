@@ -2,7 +2,7 @@ Assets {
   Id: 14044435441856686296
   Name: "NIghtcrawl Coral spike"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 17276644527847293540
     ParameterOverrides {

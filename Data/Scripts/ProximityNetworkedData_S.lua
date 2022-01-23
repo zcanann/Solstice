@@ -9,7 +9,22 @@ local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworke
 local propProximityObjectDebugTemplate = script:GetCustomProperty("ProximityObjectDebugTemplate")
 
 local playersInRange = { }
-local currentData = { }
+local networkedData = { }
+local serverOnlyData = { }
+
+function SetServerOnlyData(key, data)
+    if not key then
+        Framework.Warn("Invalid proximity data key supplied")
+        Framework.DumpStackTrace()
+        return
+    end
+
+    serverOnlyData[key] = data
+end
+
+function GetServerOnlyData(key)
+    return serverOnlyData[key]
+end
 
 function SetProximityData(key, data)
     if not key then
@@ -18,7 +33,7 @@ function SetProximityData(key, data)
         return
     end
 
-    currentData[key] = data
+    networkedData[key] = data
     for player, _ in pairs(playersInRange) do
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
             propProximityNetworkedObject.id,
@@ -30,7 +45,7 @@ function SetProximityData(key, data)
 end
 
 function GetProximityData(key)
-    return currentData[key]
+    return networkedData[key]
 end
 
 function OnPlayerEnteredRange(player)
@@ -101,12 +116,12 @@ function UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectI
     end
 
     if player.serverUserData.readyToReceiveProximityData then
-        player:SetPrivateNetworkedData(proximityNetworkedObjectId, currentData)
+        player:SetPrivateNetworkedData(proximityNetworkedObjectId, networkedData)
     else
         Task.Spawn(function ()
             while true do
                 if player.serverUserData.readyToReceiveProximityData then
-                    player:SetPrivateNetworkedData(proximityNetworkedObjectId, currentData)
+                    player:SetPrivateNetworkedData(proximityNetworkedObjectId, networkedData)
                     return
                 end
 

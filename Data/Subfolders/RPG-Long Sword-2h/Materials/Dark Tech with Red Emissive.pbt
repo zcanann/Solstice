@@ -2,7 +2,7 @@ Assets {
   Id: 7372052601119712364
   Name: "Dark Tech with Red Emissive"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 1487738039921823588
     ParameterOverrides {

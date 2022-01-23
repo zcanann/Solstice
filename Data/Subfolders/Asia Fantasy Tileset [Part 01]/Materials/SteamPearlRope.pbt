@@ -2,7 +2,7 @@ Assets {
   Id: 17449657420802867205
   Name: "SteamPearlRope"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 3090596827184957478
     ParameterOverrides {

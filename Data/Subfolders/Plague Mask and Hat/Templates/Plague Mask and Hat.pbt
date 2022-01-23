@@ -52,5 +52,5 @@ Assets {
     Version: "1.0.0"
     Description: "Cosmetic equipment that comes in two pieces: Mask and Hat."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

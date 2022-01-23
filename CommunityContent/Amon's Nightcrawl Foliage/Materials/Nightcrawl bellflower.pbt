@@ -2,7 +2,7 @@ Assets {
   Id: 314681574205852119
   Name: "Nightcrawl bellflower"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 12890286751312409221
     ParameterOverrides {

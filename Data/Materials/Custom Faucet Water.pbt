@@ -2,7 +2,7 @@ Assets {
   Id: 12821687663063300998
   Name: "Custom Faucet Water"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 17419483763861453498

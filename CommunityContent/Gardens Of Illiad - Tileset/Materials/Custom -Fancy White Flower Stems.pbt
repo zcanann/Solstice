@@ -2,7 +2,7 @@ Assets {
   Id: 12911773970007546917
   Name: "Custom -Fancy White Flower Stems"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 18150388475437336645
     ParameterOverrides {

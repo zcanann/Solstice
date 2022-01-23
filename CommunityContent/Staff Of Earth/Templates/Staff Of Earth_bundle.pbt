@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Staff Of Earth, boom boom !!"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

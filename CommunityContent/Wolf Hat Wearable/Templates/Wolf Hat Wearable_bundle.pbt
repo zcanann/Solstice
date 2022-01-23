@@ -52,5 +52,5 @@ Assets {
     Version: "1.0.0"
     Description: "Wearable Wolf Hat requested by @DesTroyer  From an example tower for the All-Mid MOBA Community Jam!"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

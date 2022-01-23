@@ -2,7 +2,7 @@ Assets {
   Id: 11037836992833398282
   Name: "Shield Hex Blue"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 3837738088711724917
     ParameterOverrides {

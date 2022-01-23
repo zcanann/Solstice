@@ -2,7 +2,7 @@ Assets {
   Id: 7331522281711909425
   Name: "Custom Base Material from Humanoid 2 Minh Hair_1"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 18281346407324621721
     ParameterOverrides {

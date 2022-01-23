@@ -644,7 +644,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Behavior"
+    FilePartitionName: "Behavior_2"
   }
   InstanceHistory {
     SelfId: 7638561735005604453
@@ -674,7 +674,7 @@ Objects {
     }
   }
   ParentId: 2391379352691100431
-  ChildIds: 5647532920008066189
+  ChildIds: 13626580166256593768
   ChildIds: 8122824522787217022
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -766,11 +766,11 @@ Objects {
   }
 }
 Objects {
-  Id: 5647532920008066189
-  Name: "ClientContext"
+  Id: 13626580166256593768
+  Name: "Humanoid 1 Rig"
   Transform {
     Location {
-      Z: 90
+      Z: 85
     }
     Rotation {
     }
@@ -781,48 +781,7 @@ Objects {
     }
   }
   ParentId: 13835430714945944515
-  ChildIds: 13626580166256593768
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  NetworkContext {
-  }
-  InstanceHistory {
-    SelfId: 5024734396285441280
-    SubobjectId: 12509239061899240200
-    InstanceId: 14678979447342944233
-    TemplateId: 17256152977790581857
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 13626580166256593768
-  Name: "Humanoid 1 Rig"
-  Transform {
-    Location {
-      Z: -5
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5647532920008066189
-  ChildIds: 5662034450042746113
+  ChildIds: 5647532920008066189
   UnregisteredParameters {
     Overrides {
       Name: "ma:0:Shared_BaseMaterial:id"
@@ -902,20 +861,17 @@ Objects {
     TemplateId: 10306104113743518505
   }
   NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+    Value: "mc:eproxyrelevance:low"
   }
 }
 Objects {
-  Id: 5662034450042746113
-  Name: "ObjectAttacher_C"
+  Id: 5647532920008066189
+  Name: "ClientContext"
   Transform {
     Location {
-      X: -159.416138
-      Y: 1195.44324
       Z: 5
     }
     Rotation {
-      Yaw: -5.00002289
     }
     Scale {
       X: 1
@@ -924,6 +880,49 @@ Objects {
     }
   }
   ParentId: 13626580166256593768
+  ChildIds: 5662034450042746113
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  NetworkContext {
+  }
+  InstanceHistory {
+    SelfId: 5024734396285441280
+    SubobjectId: 12509239061899240200
+    InstanceId: 14678979447342944233
+    TemplateId: 17256152977790581857
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 5662034450042746113
+  Name: "ObjectAttacher_C"
+  Transform {
+    Location {
+      X: -159.416199
+      Y: 1195.44324
+    }
+    Rotation {
+      Yaw: -5.00002766
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5647532920008066189
   ChildIds: 11738853937919419794
   UnregisteredParameters {
     Overrides {
@@ -1155,7 +1154,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Behavior_2"
+    FilePartitionName: "Behavior_3"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

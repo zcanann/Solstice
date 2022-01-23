@@ -2,7 +2,7 @@ Assets {
   Id: 9889775764180899101
   Name: "FrameworkAscendantMasculineVariantC"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   VirtualFolderPath: "Replicant"

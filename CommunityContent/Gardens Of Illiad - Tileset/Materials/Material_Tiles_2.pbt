@@ -2,7 +2,7 @@ Assets {
   Id: 17214493010264113708
   Name: "Material_Tiles_2"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 7299073358033178236
     ParameterOverrides {

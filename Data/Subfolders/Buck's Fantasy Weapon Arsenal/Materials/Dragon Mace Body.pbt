@@ -2,7 +2,7 @@ Assets {
   Id: 9654564866404745250
   Name: "Dragon Mace Body"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 10657227543465871079
     ParameterOverrides {

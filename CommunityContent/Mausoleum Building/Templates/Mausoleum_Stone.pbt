@@ -52485,6 +52485,6 @@ Assets {
   Marketplace {
     Description: "Stone Mausoleum Building with a gargoyle on top. Comes with double doors, sound, and lighting."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

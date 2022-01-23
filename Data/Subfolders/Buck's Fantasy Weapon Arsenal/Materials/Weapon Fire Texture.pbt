@@ -2,7 +2,7 @@ Assets {
   Id: 15611847250115006160
   Name: "Weapon Fire Texture"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 1086226001191148640
     ParameterOverrides {

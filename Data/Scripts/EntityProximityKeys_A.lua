@@ -43,6 +43,12 @@ EntityProximityKeys.HEALING_POWER = "healing_power"
 EntityProximityKeys.SPELL_PENETRATION = "spell_penetration"
 
 -- Runtime
+EntityProximityKeys.POSITION = "position"
+EntityProximityKeys.WAYPOINT_POSITION = "waypoint_position"
 EntityProximityKeys.ENGAGEMENT_SESSION = "engagement_session"
+
+-- Server-only
+EntityProximityKeys.MOVEMENT_STATE = "movement_state"
+EntityProximityKeys.ENGAGEMENT_PATHING_MODE = "engagement_pathing_mode"
 
 return EntityProximityKeys

@@ -2262,6 +2262,6 @@ Assets {
   Marketplace {
     Description: "Makeshift Armor made from bones"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 8441419868779568592
   Name: "FrameworkWetDirt"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Floors"
   CustomMaterialAsset {
     BaseMaterialId: 13827080947084456746

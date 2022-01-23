@@ -226,7 +226,7 @@ Objects {
   Settings {
     IsDefault: true
     PlayerMovementSettings {
-      WalkSpeed: 450
+      WalkSpeed: 640
       MaxAcceleration: 1800
       WalkableFloorAngle: 50
       GroundFriction: 8
@@ -237,7 +237,7 @@ Objects {
       BrakingDecelerationFlying: 600
       MaxFlightSpeed: 600
       MovementControlMode {
-        Value: "mc:emovementcontrolmode:viewrelative"
+        Value: "mc:emovementcontrolmode:none"
       }
       LookControlMode {
         Value: "mc:elookcontrolmode:relative"
@@ -252,15 +252,9 @@ Objects {
       }
       HeadVisibleToSelf: true
       IsSlideEnabled: true
-      CanMoveForward: true
-      CanMoveBackward: true
-      CanMoveLeft: true
-      CanMoveRight: true
       AbilityAimMode {
         Value: "mc:eabilityaimmode:lookrelative"
       }
-      CanMoveUp: true
-      CanMoveDown: true
       MaxHitpoints: 100
       PlayerMasterVolumeMultiplier: 1
     }
@@ -375,6 +369,7 @@ Objects {
       PlayerStorageMode {
         Value: "mc:eplayerstoragemode:none"
       }
+      EnableNetworkedEventsQueuing: true
     }
   }
   NetworkRelevanceDistance {

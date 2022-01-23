@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "It uses standartcombo\'s ai system."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
 }

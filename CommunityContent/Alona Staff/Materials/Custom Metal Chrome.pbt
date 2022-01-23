@@ -2,7 +2,7 @@ Assets {
   Id: 1430749428464082554
   Name: "Custom Metal Chrome"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 16855822076773804978
     ParameterOverrides {

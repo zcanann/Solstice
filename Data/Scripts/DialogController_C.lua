@@ -13,7 +13,7 @@ local capture = nil
 -- Speaker networked object
 local proximityNetworkedObject = nil
 
-function OnDialogOpened(newDialogData)
+function OnDefaultDialogOpened(newDialogData)
     CloseDialog()
 
     DIALOG_CONTAINER.visibility = Visibility.INHERIT
@@ -60,4 +60,4 @@ function Tick()
 end
 
 CloseDialog()
-Framework.Events.Listen(Framework.Events.Keys.Dialog.EVENT_PLAYER_REQUESTS_DEFAULT_DIALOG, OnDialogOpened)
+Framework.Events.Listen(Framework.Events.Keys.Dialog.EVENT_PLAYER_REQUESTS_DEFAULT_DIALOG, OnDefaultDialogOpened)

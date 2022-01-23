@@ -2,7 +2,7 @@ Assets {
   Id: 17805072347362332536
   Name: "Cms Custom Tech Panel 04"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 10064289398540731518
     ParameterOverrides {

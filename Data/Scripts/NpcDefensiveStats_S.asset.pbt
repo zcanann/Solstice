@@ -62,7 +62,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Entities"
   VirtualFolderPath: "Npcs"

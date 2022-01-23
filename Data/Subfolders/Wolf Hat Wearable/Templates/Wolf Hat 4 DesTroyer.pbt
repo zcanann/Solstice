@@ -6340,6 +6340,6 @@ Assets {
   Marketplace {
     Description: "Wearable Wolf Hat requested by @DesTroyer  From an example tower for the All-Mid MOBA Community Jam!"
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

@@ -2373,6 +2373,6 @@ Assets {
   Marketplace {
     Description: "It uses standartcombo\'s ai system."
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   DirectlyPublished: true
 }

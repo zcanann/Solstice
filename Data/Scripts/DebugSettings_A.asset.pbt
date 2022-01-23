@@ -22,8 +22,12 @@ Assets {
         Name: "cs:ShowNavMesh"
         Bool: false
       }
+      Overrides {
+        Name: "cs:ShowEngagments"
+        Bool: false
+      }
     }
   }
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Debug"
 }

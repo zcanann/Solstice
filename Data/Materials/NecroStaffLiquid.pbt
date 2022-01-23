@@ -2,7 +2,7 @@ Assets {
   Id: 12048603110272087860
   Name: "NecroStaffLiquid"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 18280303351516875622

@@ -2,7 +2,7 @@ Assets {
   Id: 11405369544221484989
   Name: "Custom Base Material from Humanoid 1 Peasant Shirt"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 5032963945628244566

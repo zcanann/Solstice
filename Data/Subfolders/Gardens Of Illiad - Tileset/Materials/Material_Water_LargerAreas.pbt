@@ -2,7 +2,7 @@ Assets {
   Id: 9661062520852834517
   Name: "Material_Water_LargerAreas"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 6085804773307457701
     ParameterOverrides {

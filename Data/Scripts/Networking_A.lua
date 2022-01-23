@@ -63,4 +63,24 @@ Networking.GetProximityData = function(id, key)
     return nil
 end
 
+Networking.SetServerOnlyData = function(id, key, data)
+    if id and key and Environment.IsServer() then
+        local script = Networking.GetProximityDataScript(id)
+        if script then
+            script.SetServerOnlyData(key, data)
+        end
+    end
+end
+
+Networking.GetServerOnlyData = function(id, key)
+    -- Only the server is capable of unresolving an id
+    if id and key and Environment.IsServer() then
+        local script = Networking.GetProximityDataScript(id)
+        if script then
+            return script.GetServerOnlyData(key)
+        end
+    end
+    return nil
+end
+
 return Networking

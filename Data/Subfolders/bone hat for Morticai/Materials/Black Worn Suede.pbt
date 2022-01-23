@@ -2,7 +2,7 @@ Assets {
   Id: 1696919549866854348
   Name: "Black Worn Suede"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 14582790818618070150
     ParameterOverrides {

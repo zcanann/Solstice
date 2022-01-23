@@ -2,7 +2,7 @@ Assets {
   Id: 5656259816364734336
   Name: "POWER WATER - EMISSIVE"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 17807525145969780484
     ParameterOverrides {

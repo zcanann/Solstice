@@ -2,7 +2,7 @@ Assets {
   Id: 8796660590624094965
   Name: "Bamboo"
   PlatformAssetType: 13
-  SerializationVersion: 103
+  SerializationVersion: 104
   CustomMaterialAsset {
     BaseMaterialId: 18033297229984528543
     ParameterOverrides {
