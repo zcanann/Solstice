@@ -2,23 +2,12 @@
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local ENGAGEMENT_VISUALIZER = require(script:GetCustomProperty("EngagementVisualizer"))
-local NPC_MOVEMENT_PATHING = require(script:GetCustomProperty("NpcMovementPathing"))
 local NPC_ENUMS = require(script:GetCustomProperty("NpcEnums"))
 local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local MAX_ENGAGEMENTS = script:GetCustomProperty("MaxEngagements")
 local DROP_TABLE = script:GetCustomProperty("DropTable")
 local RESPAWN_TIME_MIN = script:GetCustomProperty("RespawnTimeMin")
 local RESPAWN_TIME_MAX = script:GetCustomProperty("RespawnTimeMax")
 local IS_AGRESSIVE = script:GetCustomProperty("IsAgressive")
-
-local engagedPlayers = { }
-
--- Set the server-side reference to the engaged player table
-FRAMEWORK.Networking.SetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
-{
-    engagedPlayers = engagedPlayers,
-})
 
 -- Combat state
 local attackTimer = 0.0
@@ -40,77 +29,10 @@ local animationMap = {
     [ "shield" ]            = "ShieldAnimations",
 }
 
-function IsPlayerConnected(player)
-    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
-        return
-    end
-    return engagedPlayers[player] ~= nil
-end
-
-function Connect(player)
-    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
-        return
-    end
-
-    -- Deny the request if at our engagement limit
-    if MAX_ENGAGEMENTS >= 0 and #engagedPlayers >= MAX_ENGAGEMENTS then
-        return
-    end
-
-    -- Deny requests for attacking dead enemies
-    if not IsAlive() then
-        return
-    end
-
-    if not player.serverUserData.engagement then
-        player.serverUserData.engagement = { }
-    end
-
-    player.serverUserData.engagement.startLocation = player:GetWorldPosition()
-
-    -- Disconnect from any existing sessions. This is important, as each object tracks the number of players engaged to it.
-    if player.serverUserData.engagement.session then
-        if player.serverUserData.engagement.session == script.context then
-            -- Early exit if already engaged to this object -- no need to reengage
-            return
-        else
-            -- Otherwise, we are trying to engage a new object. Disconnect from the current one.
-            player.serverUserData.engagement.session.Disconnect(player)
-        end
-    end
-
-    player.serverUserData.engagement.session = script.context
-    engagedPlayers[player] = true
-
-    -- Set the engagement session on the player's proximity data
-    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
-    {
-        playerId = player.id,
-        objectId = PROXIMITY_NETWORKED_OBJECT.id,
-        movementMode = NPC_ENUMS.MOVEMENT_STATE.IDLE,
-        pathingMode = NPC_ENUMS.ENGAGEMENT_PATHING_MODE.MELEE,
-        -- Remove, probably
-        animationName = "MiningAnimation",
-    })
-end
-
-function Disconnect(player)
-    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
-        return
-    end
-
-    engagedPlayers[player] = nil
-    player.serverUserData.engagement = nil
-    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
-end
-
-function DisconnectAllPlayers()
-    for player, _ in pairs(engagedPlayers) do
-        Disconnect(player)
-    end
-end
-
 function CheckForPlayerAutoAttack(player, deltaSeconds)
+    -- TODO: Either move this out of this class entirely, or check the inverse-session data
+    -- Should consider the PVP case and the implications
+
     if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return
     end
@@ -198,29 +120,31 @@ function Respawn()
     respawnTimer = math.random(RESPAWN_TIME_MIN, RESPAWN_TIME_MAX)
 end
 
-function Tick(deltaSeconds)
-    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
+function GetPlayersToDisconnect()
+    local engagedPlayers = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION).engagedPlayers
     local toDisconnect = { }
 
     for player, _ in pairs(engagedPlayers) do
         if CheckForInterruption(player) then
             toDisconnect[player] = true
-        else
-            CheckForPlayerAutoAttack(player, deltaSeconds)
         end
     end
 
-    for player, _ in pairs(toDisconnect) do
-        Disconnect(player)
+    return toDisconnect
+end
+
+function TickExternal(deltaSeconds)
+    local engagedPlayers = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION).engagedPlayers
+
+    for player, _ in pairs(engagedPlayers) do
+        CheckForPlayerAutoAttack(player, deltaSeconds)
     end
 
     -- Check enemy attack after players, to give the player same-frame advantage
     CheckForEnemyAutoAttack(deltaSeconds)
     CheckForRespawn(deltaSeconds)
-
-    -- Update combat componenets
-    NPC_MOVEMENT_PATHING.Tick(deltaSeconds)
-    ENGAGEMENT_VISUALIZER.Tick(deltaSeconds)
 end
 
-FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, Connect)
+function CanAcceptSession(player)
+    return IsAlive()
+end

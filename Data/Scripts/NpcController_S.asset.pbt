@@ -1,6 +1,6 @@
 Assets {
   Id: 15675711774597794884
-  Name: "EngagementSessionCombat_S"
+  Name: "NpcController_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,15 +11,18 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:EngagementVisualizer"
-        AssetReference {
-          Id: 15724300102369226823
+        Name: "cs:NpcCombat"
+        ObjectReference {
         }
       }
       Overrides {
         Name: "cs:NpcMovementPathing"
-        AssetReference {
-          Id: 2263876175624442119
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:NpcEngagementVisualizer"
+        ObjectReference {
         }
       }
       Overrides {
@@ -37,25 +40,10 @@ Assets {
         Name: "cs:MaxEngagements"
         Int: 1
       }
-      Overrides {
-        Name: "cs:DropTable"
-        String: ""
-      }
-      Overrides {
-        Name: "cs:RespawnTimeMin"
-        Float: 60
-      }
-      Overrides {
-        Name: "cs:RespawnTimeMax"
-        Float: 85
-      }
-      Overrides {
-        Name: "cs:IsAgressive"
-        Bool: false
-      }
     }
   }
   SerializationVersion: 104
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Engagement"
+  VirtualFolderPath: "Entities"
+  VirtualFolderPath: "Npcs"
 }

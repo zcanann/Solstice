@@ -16,9 +16,7 @@ Objects {
   }
   ParentId: 7638561735005604453
   ChildIds: 11720403345238794616
-  ChildIds: 10761033644566255605
-  ChildIds: 8107538581745505398
-  ChildIds: 17919622044604892020
+  ChildIds: 1281779727989077239
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -45,8 +43,8 @@ Objects {
   }
 }
 Objects {
-  Id: 17919622044604892020
-  Name: "EngagementVisualizer_S"
+  Id: 1281779727989077239
+  Name: "NpcController_S"
   Transform {
     Location {
     }
@@ -59,114 +57,9 @@ Objects {
     }
   }
   ParentId: 1581303511237811900
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 9896911443865818310
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 15724300102369226823
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 8107538581745505398
-  Name: "NpcMovementPathing_S"
-  Transform {
-    Location {
-      X: 1439.01794
-      Y: -1450.94019
-      Z: 70
-    }
-    Rotation {
-      Yaw: 129.999969
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1581303511237811900
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 8456854035221219726
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 9896911443865818310
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 2263876175624442119
-    }
-  }
-  InstanceHistory {
-    SelfId: 8107538581745505398
-    SubobjectId: 10998085558906987134
-    InstanceId: 14678979447342944233
-    TemplateId: 17256152977790581857
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 10761033644566255605
-  Name: "EngagementSessionCombat_S"
-  Transform {
-    Location {
-      X: 1439.01794
-      Y: -1450.94019
-      Z: 70
-    }
-    Rotation {
-      Yaw: 129.999969
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 1581303511237811900
+  ChildIds: 14712279258143566377
+  ChildIds: 16478330114108334696
+  ChildIds: 2212130132366139526
   UnregisteredParameters {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
@@ -175,9 +68,21 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Object"
+      Name: "cs:NpcCombat"
       ObjectReference {
-        SelfId: 8456854035221219726
+        SelfId: 2212130132366139526
+      }
+    }
+    Overrides {
+      Name: "cs:NpcMovementPathing"
+      ObjectReference {
+        SelfId: 16478330114108334696
+      }
+    }
+    Overrides {
+      Name: "cs:NpcEngagementVisualizer"
+      ObjectReference {
+        SelfId: 14712279258143566377
       }
     }
   }
@@ -203,6 +108,140 @@ Objects {
     SubobjectId: 9039869026889638397
     InstanceId: 14678979447342944233
     TemplateId: 17256152977790581857
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 2212130132366139526
+  Name: "NpcComponentCombat_S"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1281779727989077239
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9896911443865818310
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15217503047716351748
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 16478330114108334696
+  Name: "NpcComponentMovementPathing_S"
+  Transform {
+    Location {
+    }
+    Rotation {
+      Yaw: -6.83018879e-06
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1281779727989077239
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9896911443865818310
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2263876175624442119
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14712279258143566377
+  Name: "NpcComponentEngagementVisualizer_S"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1281779727989077239
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 9896911443865818310
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15724300102369226823
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

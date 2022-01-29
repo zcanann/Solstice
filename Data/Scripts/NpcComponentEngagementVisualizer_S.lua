@@ -4,9 +4,7 @@ local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedO
 
 local drawOffset = Vector3.New(0.0, 0.0, 25.0)
 
-local EngagementVisualizer = { }
-
-EngagementVisualizer.Tick = function(deltaSeconds)
+function TickExternal(deltaSeconds)
     -- Early exit if debug flag not set
     if not FRAMEWORK.Debug.GetFlag(FRAMEWORK.Debug.Flags.SHOW_ENGAGEMENTS) then return end
     local engagementData = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION)
@@ -22,5 +20,3 @@ EngagementVisualizer.Tick = function(deltaSeconds)
         end
     end
 end
-
-return EngagementVisualizer

@@ -1,6 +1,6 @@
 Assets {
   Id: 122282557685199821
-  Name: "EngagementVisualizer_C"
+  Name: "NpcComponentEngagementVisualizer_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -14,5 +14,6 @@ Assets {
   }
   SerializationVersion: 104
   VirtualFolderPath: "Gameplay"
-  VirtualFolderPath: "Engagement"
+  VirtualFolderPath: "Entities"
+  VirtualFolderPath: "Npcs"
 }

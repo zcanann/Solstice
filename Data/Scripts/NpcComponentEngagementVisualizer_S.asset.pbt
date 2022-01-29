@@ -1,6 +1,6 @@
 Assets {
   Id: 15724300102369226823
-  Name: "EngagementVisualizer_S"
+  Name: "NpcComponentEngagementVisualizer_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

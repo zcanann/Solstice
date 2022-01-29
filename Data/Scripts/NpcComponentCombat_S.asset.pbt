@@ -1,6 +1,6 @@
 Assets {
-  Id: 2263876175624442119
-  Name: "NpcMovementPathing_S"
+  Id: 15217503047716351748
+  Name: "NpcComponentCombat_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -17,14 +17,25 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Npc"
+        Name: "cs:ProximityNetworkedObject"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
+        Name: "cs:DropTable"
+        String: ""
+      }
+      Overrides {
+        Name: "cs:RespawnTimeMin"
+        Float: 60
+      }
+      Overrides {
+        Name: "cs:RespawnTimeMax"
+        Float: 85
+      }
+      Overrides {
+        Name: "cs:IsAgressive"
+        Bool: false
       }
     }
   }

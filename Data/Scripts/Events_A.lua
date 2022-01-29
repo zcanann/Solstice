@@ -73,6 +73,11 @@ EventsAPI.ListenForPlayer = function (key, callback, ...)
         warn(CoreDebug.GetStackTrace())
         warn("====================================")
     end
+    if not callback then
+        warn("Invalid listener callback provided:")
+        warn(CoreDebug.GetStackTrace())
+        warn("====================================")
+    end
     return Events.ConnectForPlayer(key, callback, ...)
 end
 
