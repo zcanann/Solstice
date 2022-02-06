@@ -32,12 +32,6 @@ Objects {
     Model {
     }
   }
-  InstanceHistory {
-    SelfId: 16375894357845590739
-    SubobjectId: 3035360762930597733
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -70,12 +64,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "[Alchemi] Rock n Moss Garden"
-  }
-  InstanceHistory {
-    SelfId: 1189101079454157042
-    SubobjectId: 15698862816380372292
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -120,12 +108,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 10092007204459012462
-    SubobjectId: 4995365800893263064
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -186,12 +168,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13148768072046618745
-    SubobjectId: 9161684258585109967
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -250,12 +226,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 2762054523127938520
-    SubobjectId: 17224527343215439982
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -316,12 +286,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 4101107902052940188
-    SubobjectId: 17417414578588841002
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -381,12 +345,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 8526098541242903731
-    SubobjectId: 13767452232156225797
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -445,12 +403,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 16216377652194911214
-    SubobjectId: 2905169350950383192
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -521,12 +473,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14403783075985328961
-    SubobjectId: 1061052683381982967
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -585,12 +531,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 9375981222230743429
-    SubobjectId: 5423236174780896307
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -660,12 +600,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 5468985425679231412
-    SubobjectId: 9419459951252792322
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -725,12 +659,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 3277951494920911114
-    SubobjectId: 16438286163249099964
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -789,12 +717,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 699451079662590009
-    SubobjectId: 13900899708711966095
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

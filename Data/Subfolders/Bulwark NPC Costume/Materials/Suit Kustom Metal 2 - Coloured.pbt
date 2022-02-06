@@ -2,7 +2,7 @@ Assets {
   Id: 1622889315261314453
   Name: "Suit Kustom Metal 2 - Coloured"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 6777447344140592468
     ParameterOverrides {

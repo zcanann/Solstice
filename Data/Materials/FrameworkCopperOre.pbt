@@ -2,7 +2,7 @@ Assets {
   Id: 14041097035908655724
   Name: "FrameworkCopperOre"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Models"
   VirtualFolderPath: "Resources"
   CustomMaterialAsset {

@@ -4732,6 +4732,6 @@ Assets {
   Marketplace {
     Description: "Cosmetic equipment that comes in two pieces: Mask and Hat."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

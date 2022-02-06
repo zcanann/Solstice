@@ -2,7 +2,7 @@ Assets {
   Id: 17254997473362295227
   Name: "ChineseRoofFrame"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 2441707628016867841
     ParameterOverrides {

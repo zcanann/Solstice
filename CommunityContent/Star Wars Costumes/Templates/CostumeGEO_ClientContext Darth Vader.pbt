@@ -14594,7 +14594,7 @@ Assets {
   Marketplace {
     Description: "This is my rendition of Darth Vader & a Storm Trooper. They are to be used with my Power Armor MKI Suit Module. These are just the client context geometry groups."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
   VirtualFolderPath: "Star Wars Costumes"
 }

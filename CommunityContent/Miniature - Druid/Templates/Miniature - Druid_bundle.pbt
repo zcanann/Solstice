@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "miniature druid with staff and cape\r\nfor your project diorama or strategy boardgame"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

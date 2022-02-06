@@ -2,7 +2,7 @@ Assets {
   Id: 14683259201869684252
   Name: "Chines-Light-Gold"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 7197574413582915927
     ParameterOverrides {

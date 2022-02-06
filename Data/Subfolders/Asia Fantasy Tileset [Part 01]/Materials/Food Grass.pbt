@@ -2,7 +2,7 @@ Assets {
   Id: 11283022956737801137
   Name: "Food Grass"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 5883619928131213374
     ParameterOverrides {

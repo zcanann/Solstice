@@ -2,7 +2,7 @@ Assets {
   Id: 5630379337616722202
   Name: "LanternHolderRope"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 3090596827184957478
     ParameterOverrides {

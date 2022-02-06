@@ -7,10 +7,10 @@ local drawOffset = Vector3.New(0.0, 0.0, 25.0)
 function TickExternal(deltaSeconds)
     -- Early exit if debug flag not set
     if not FRAMEWORK.Debug.GetFlag(FRAMEWORK.Debug.Flags.SHOW_ENGAGEMENTS) then return end
-    local engagementData = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION)
+    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
 
-    if engagementData and engagementData.engagedPlayers then
-        for player, _ in pairs(engagementData.engagedPlayers) do
+    if aggroData and aggroData.aggroList then
+        for player, _ in pairs(aggroData.aggroList) do
             CoreDebug.DrawLine(player:GetWorldPosition() + drawOffset, PROXIMITY_NETWORKED_OBJECT:GetWorldPosition() + drawOffset,
             {
                 duration = 0.1,

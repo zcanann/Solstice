@@ -47,12 +47,6 @@ Objects {
     }
     IsLit: true
   }
-  InstanceHistory {
-    SelfId: 15074491749627583281
-    SubobjectId: 1760419061944882823
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -149,12 +143,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 14853825812183522409
-    SubobjectId: 540003485247918559
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

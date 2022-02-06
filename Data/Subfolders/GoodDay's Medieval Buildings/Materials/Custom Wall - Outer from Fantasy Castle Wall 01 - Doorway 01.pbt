@@ -2,7 +2,7 @@ Assets {
   Id: 4893002255089490169
   Name: "Custom Wall - Outer from Fantasy Castle Wall 01 - Doorway 01"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 13620659519661902313
     ParameterOverrides {

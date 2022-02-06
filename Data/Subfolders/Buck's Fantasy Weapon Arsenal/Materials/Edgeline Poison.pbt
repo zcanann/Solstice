@@ -2,7 +2,7 @@ Assets {
   Id: 17228617405793439303
   Name: "Edgeline Poison"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952
     ParameterOverrides {

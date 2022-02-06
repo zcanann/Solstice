@@ -152474,6 +152474,6 @@ Assets {
   Marketplace {
     Description: "This is a little weapon collection which has Staff\'s and some Melee wepaons such as Hammer and a Sword in it.\r\nHope you guys like it.\r\nPlease use the READ ME <3\r\nEach weapon is equipable and does Damage."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

@@ -9,7 +9,7 @@ local name = "Unknown"
 
 -- TODO: Take a source and StopRadius param, which
 function GetWalkableDestination()
-    return script:GetWorldPosition()
+    return Framework.Networking.GetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.POSITION) or propProximityNetworkedObject:GetWorldPosition()
 end
 
 function Interact(callback)

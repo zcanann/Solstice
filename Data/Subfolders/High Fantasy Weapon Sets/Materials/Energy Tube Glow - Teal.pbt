@@ -2,7 +2,7 @@ Assets {
   Id: 11853285376781824211
   Name: "Energy Tube Glow - Teal"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 7201854569654805805
     ParameterOverrides {

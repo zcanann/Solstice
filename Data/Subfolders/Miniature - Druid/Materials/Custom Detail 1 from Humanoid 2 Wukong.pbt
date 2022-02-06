@@ -2,7 +2,7 @@ Assets {
   Id: 14462784000126469281
   Name: "Custom Detail 1 from Humanoid 2 Wukong"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 9010413098736466416
     ParameterOverrides {

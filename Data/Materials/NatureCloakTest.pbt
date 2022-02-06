@@ -2,7 +2,7 @@ Assets {
   Id: 14367038280743575964
   Name: "NatureCloakTest"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952

@@ -2,7 +2,7 @@ Assets {
   Id: 17467576139713651013
   Name: "FrameworkOceanGrim"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Water"
   CustomMaterialAsset {
     BaseMaterialId: 15472391135026288383

@@ -2,7 +2,7 @@ Assets {
   Id: 15865425221655395144
   Name: "Darth Vader Grey"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 132672053610873933
     ParameterOverrides {

@@ -1,6 +1,5 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propNpc = script:GetCustomProperty("Npc"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 
 local propFrostResistance = script:GetCustomProperty("FrostResistance")

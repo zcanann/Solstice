@@ -2,7 +2,7 @@ Assets {
   Id: 11308929197056447076
   Name: "Weapon - Plasma Purple"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 12789658363081938200
     ParameterOverrides {

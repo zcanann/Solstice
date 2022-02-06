@@ -72188,6 +72188,6 @@ Assets {
   Marketplace {
     Description: "A little dungeon, fairy and magical.\r\n1298 objects."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

@@ -34,12 +34,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "[Alchemi] Rose 2_120"
   }
-  InstanceHistory {
-    SelfId: 1430010717442786306
-    SubobjectId: 9315764563451014177
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -78,12 +72,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "[Alchemi] Rose 2_121"
   }
-  InstanceHistory {
-    SelfId: 9133854425903033408
-    SubobjectId: 17028582558831658083
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -121,12 +109,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "[Alchemi] Rose 2_122"
-  }
-  InstanceHistory {
-    SelfId: 12273126663964740583
-    SubobjectId: 4090027143893410756
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -185,12 +167,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 9065318682934795931
-    SubobjectId: 17248275193781876408
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

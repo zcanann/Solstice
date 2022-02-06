@@ -53195,6 +53195,6 @@ Assets {
   Marketplace {
     Description: "Inn just for eating and drinking"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

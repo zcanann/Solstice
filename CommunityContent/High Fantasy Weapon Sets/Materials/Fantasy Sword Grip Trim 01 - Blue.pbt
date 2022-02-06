@@ -2,7 +2,7 @@ Assets {
   Id: 9625340191769429395
   Name: "Fantasy Sword Grip Trim 01 - Blue"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 7652987068680178667
     ParameterOverrides {

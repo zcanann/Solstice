@@ -1,7 +1,7 @@
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local propHumanoidRig = script:GetCustomProperty("HumanoidRig"):WaitForObject()
+local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
+local HUMANOID_RIG = script:GetCustomProperty("HumanoidRig"):WaitForObject()
 
 local health = nil
 
@@ -35,19 +35,19 @@ function OnEntityHealthChanged(proximityDataId, healthNew)
 end
 
 function ReturnToStance()
-    propHumanoidRig.animationStance = "unarmed_idle_relaxed"
-    propHumanoidRig.playbackRateMultiplier = 1.0
+    HUMANOID_RIG.animationStance = "unarmed_idle_relaxed"
+    HUMANOID_RIG.playbackRateMultiplier = 1.0
 end
 
 function PlayDeathAnimation()
     Task.Spawn(function ()
-        propHumanoidRig:PlayAnimation("unarmed_death")
+        HUMANOID_RIG:PlayAnimation("unarmed_death")
         Task.Wait(1.96)
         local isAlive = health and health > 0
         -- Check again for isAlive since some time has passed, and this could have changed
         if not isAlive then
             -- Prevents the animation from looping or returning to stance
-            propHumanoidRig.playbackRateMultiplier = 0
+            HUMANOID_RIG.playbackRateMultiplier = 0
         end
     end)
 end
@@ -55,5 +55,5 @@ end
 ReturnToStance()
 
 -- Runtime combat (move these?)
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)
+FRAMEWORK.Events.ListenForProximityEvent(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
+FRAMEWORK.Events.ListenForProximityEvent(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)

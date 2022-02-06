@@ -32,12 +32,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "sword2"
   }
-  InstanceHistory {
-    SelfId: 11757642621150278888
-    SubobjectId: 11725897763419678476
-    InstanceId: 17909359844424501320
-    TemplateId: 5383680171275151051
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -73,12 +67,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "sword1"
-  }
-  InstanceHistory {
-    SelfId: 1955600933266547846
-    SubobjectId: 1923873739125864290
-    InstanceId: 17909359844424501320
-    TemplateId: 5383680171275151051
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

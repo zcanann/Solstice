@@ -51,12 +51,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 15670570277265328020
-    SubobjectId: 15148508569409810214
-    InstanceId: 9840409930962787564
-    TemplateId: 3440124462059005860
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }

@@ -2,7 +2,7 @@ Assets {
   Id: 14584739704852370805
   Name: "Noble Regalia - Gem"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 6999947224317793532
     ParameterOverrides {

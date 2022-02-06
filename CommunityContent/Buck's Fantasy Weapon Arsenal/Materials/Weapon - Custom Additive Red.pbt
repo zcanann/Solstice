@@ -2,7 +2,7 @@ Assets {
   Id: 9266437046509300363
   Name: "Weapon - Custom Additive Red"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 1459665689432866853
     ParameterOverrides {

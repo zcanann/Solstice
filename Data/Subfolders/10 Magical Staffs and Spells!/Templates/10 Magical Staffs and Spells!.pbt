@@ -70,5 +70,5 @@ Assets {
     Version: "1.2.0"
     Description: "This package includes the following:\r\n-Dark Meteor Staff\r\n-Healing Staff\r\n-Portal Staff\r\n-Fire Staff \r\n-Ward Staff\r\n-Hell Staff\r\n-Earth Staff\r\n-Gaia Ball Equipment\r\n-Energy Blast Equipment\r\n-MagicalBeamEyes Equipment"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

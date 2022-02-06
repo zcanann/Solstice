@@ -2,7 +2,7 @@ Assets {
   Id: 9551442048740239630
   Name: "Custom Moss 01"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 7701793897174892987
     ParameterOverrides {

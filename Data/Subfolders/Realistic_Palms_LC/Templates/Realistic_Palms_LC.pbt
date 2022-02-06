@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "This CC contains 5 models of palms :)\r\nEnjoy"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

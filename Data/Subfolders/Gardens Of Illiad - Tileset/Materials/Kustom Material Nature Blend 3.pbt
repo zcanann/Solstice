@@ -2,7 +2,7 @@ Assets {
   Id: 7127781533930717423
   Name: "Kustom Material Nature Blend 3"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 16485899958035862466
     ParameterOverrides {

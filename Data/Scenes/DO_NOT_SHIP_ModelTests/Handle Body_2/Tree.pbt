@@ -32,12 +32,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Gem_2"
   }
-  InstanceHistory {
-    SelfId: 7944380213018157435
-    SubobjectId: 9469767230515893332
-    InstanceId: 16509691763945587881
-    TemplateId: 17751349606664973084
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }

@@ -52,12 +52,6 @@ Objects {
       Id: 7176044301864371697
     }
   }
-  InstanceHistory {
-    SelfId: 17828331649208671220
-    SubobjectId: 10627451406211454148
-    InstanceId: 7357280010519363474
-    TemplateId: 12772606542651901003
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -113,12 +107,6 @@ Objects {
       Id: 7176044301864371697
     }
   }
-  InstanceHistory {
-    SelfId: 10667989537782095665
-    SubobjectId: 17301405234896015361
-    InstanceId: 7357280010519363474
-    TemplateId: 12772606542651901003
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -159,12 +147,6 @@ Objects {
     ScriptAsset {
       Id: 16328286363460166679
     }
-  }
-  InstanceHistory {
-    SelfId: 17418717740076181934
-    SubobjectId: 10785286498402133662
-    InstanceId: 7357280010519363474
-    TemplateId: 12772606542651901003
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

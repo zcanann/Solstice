@@ -2,7 +2,7 @@ Assets {
   Id: 2126901289066917790
   Name: "Custom Terrain - Moss_2"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 4716386476625350982
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 17343126748962310670
   Name: "Custom Wicker Basket 02_10"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 12522072114101463422
     ParameterOverrides {

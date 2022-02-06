@@ -34,12 +34,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_36"
   }
-  InstanceHistory {
-    SelfId: 3238169507884693776
-    SubobjectId: 13717999281828352307
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -77,12 +71,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_37"
-  }
-  InstanceHistory {
-    SelfId: 2459838026447520107
-    SubobjectId: 12732604195910297928
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -122,12 +110,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_38"
   }
-  InstanceHistory {
-    SelfId: 12847993836331505969
-    SubobjectId: 2368167701550215442
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -165,12 +147,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_39"
-  }
-  InstanceHistory {
-    SelfId: 9534894687985459527
-    SubobjectId: 1640037710651935076
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -210,12 +186,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_40"
   }
-  InstanceHistory {
-    SelfId: 2463098937413997426
-    SubobjectId: 12735892525948255057
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -249,12 +219,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_41"
-  }
-  InstanceHistory {
-    SelfId: 12727335341349901036
-    SubobjectId: 2463681919979174607
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

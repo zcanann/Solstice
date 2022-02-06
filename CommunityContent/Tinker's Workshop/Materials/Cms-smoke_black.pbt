@@ -2,7 +2,7 @@ Assets {
   Id: 11659532890465180293
   Name: "Cms-smoke_black"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 5639941382620150291
     ParameterOverrides {

@@ -28,20 +28,28 @@ function BindToPlayer(player)
     propDiscardTrigger.endOverlapEvent:Connect(OnEndOverlap)
 end
 
+function IsValidForTriggerOverlap(object)
+    local success, result = pcall(function ()
+        return object:IsA("Player") or (Object.IsValid(object) and object:GetCustomProperty("IsProximityNetworkCollider"))
+    end)
+
+    return success and result
+end
+
 function OnBeginOverlap(trigger, object)
     if trigger == propReplicationTrigger then
         -- Bug: For some reason the ProximityNetworkedData from one player fails to trigger events when intersecting another player's interactor
         -- Maybe this is due to the networked data being attached to the player? As a work-around, we can just add an IsA("Player") check
-        if object:IsA("Player") or (object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider")) then
-            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_RANGE_PREFIX .. object.id, { owningPlayer })
+        if IsValidForTriggerOverlap(object) then
+            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE_PREFIX .. object.id, { owningPlayer })
         end
     end
 end
 
 function OnEndOverlap(trigger, object)
     if trigger == propDiscardTrigger then
-        if object:IsA("Player") or (object:IsA("CoreObject") and object:GetCustomProperty("IsProximityNetworkCollider")) then
-            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_RANGE_PREFIX .. object.id, { owningPlayer })
+        if IsValidForTriggerOverlap(object) then
+            Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE_PREFIX .. object.id, { owningPlayer })
         end
     end
 end
@@ -49,12 +57,7 @@ end
 -- This seems to be a limitation of Core, but the trigger does not pick up objects it spawns on top of
 -- So we manually call BeginOverlap on those. Needs to be done on the next frame due to timing issues.
 function InitializeObjectsInRange()
-    local nearbyObjects = World.FindObjectsOverlappingSphere(propInteractor:GetWorldPosition(), triggerRadius)
-    local nearbyPlayers = Game.FindPlayersInSphere(propInteractor:GetWorldPosition(), triggerRadius)
-    for _, object in ipairs(nearbyObjects) do
-        OnBeginOverlap(propReplicationTrigger, object)
-    end
-    for _, object in ipairs(nearbyPlayers) do
+    for _, object in ipairs(propReplicationTrigger:GetOverlappingObjects()) do
         OnBeginOverlap(propReplicationTrigger, object)
     end
 end

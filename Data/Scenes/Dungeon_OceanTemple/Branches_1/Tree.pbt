@@ -34,12 +34,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_6"
   }
-  InstanceHistory {
-    SelfId: 865224545657121171
-    SubobjectId: 14221519402758677541
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -77,12 +71,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_7"
-  }
-  InstanceHistory {
-    SelfId: 3798007429550437334
-    SubobjectId: 18295910929544724064
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -122,12 +110,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_8"
   }
-  InstanceHistory {
-    SelfId: 1796241000628111275
-    SubobjectId: 15109750488980556317
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -165,12 +147,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_9"
-  }
-  InstanceHistory {
-    SelfId: 11893990629242213783
-    SubobjectId: 7805557128409143329
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -210,12 +186,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_10"
   }
-  InstanceHistory {
-    SelfId: 11885191963084956779
-    SubobjectId: 7903173793203841501
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -249,12 +219,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_11"
-  }
-  InstanceHistory {
-    SelfId: 12246810964510873198
-    SubobjectId: 6964939969199692760
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

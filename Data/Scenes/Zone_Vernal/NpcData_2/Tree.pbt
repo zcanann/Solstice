@@ -1,6 +1,50 @@
 Name: "NpcData_2"
 RootId: 2862309105971316705
 Objects {
+  Id: 14763865607361313132
+  Name: "NpcPositionalStats_S"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 2862309105971316705
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 17346586940929461580
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 347275619744489737
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 6719554274237472629
   Name: "NpcOffensiveStats_S"
   Transform {
@@ -25,7 +69,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 9348038341760866652
+        SelfId: 17346586940929461580
       }
     }
   }
@@ -75,7 +119,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 9348038341760866652
+        SelfId: 17346586940929461580
       }
     }
   }
@@ -129,7 +173,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 9348038341760866652
+        SelfId: 17346586940929461580
       }
     }
   }
@@ -191,7 +235,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 9348038341760866652
+        SelfId: 17346586940929461580
       }
     }
   }

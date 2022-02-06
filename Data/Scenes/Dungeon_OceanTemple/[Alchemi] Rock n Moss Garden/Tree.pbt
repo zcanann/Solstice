@@ -30,12 +30,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Moss"
   }
-  InstanceHistory {
-    SelfId: 8723248052210972813
-    SubobjectId: 12705264009615635771
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -70,12 +64,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Garden Rocks"
-  }
-  InstanceHistory {
-    SelfId: 14217410590689339824
-    SubobjectId: 870173522993669126
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

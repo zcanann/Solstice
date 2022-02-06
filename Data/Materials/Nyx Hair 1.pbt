@@ -2,7 +2,7 @@ Assets {
   Id: 6143957187983076601
   Name: "Nyx Hair 1"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 5982506956527239957
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 16601328368521382499
   Name: "CherryBlossom leavepatch"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 7058128419227163594
     ParameterOverrides {

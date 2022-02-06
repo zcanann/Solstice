@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "White ship"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

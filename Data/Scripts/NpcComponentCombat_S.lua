@@ -2,7 +2,6 @@
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local NPC_ENUMS = require(script:GetCustomProperty("NpcEnums"))
 local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local DROP_TABLE = script:GetCustomProperty("DropTable")
 local RESPAWN_TIME_MIN = script:GetCustomProperty("RespawnTimeMin")
@@ -94,7 +93,7 @@ function SetEnemyHealth(newHealth)
 end
 
 function GetEnemyHealth()
-    return FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH)
+    return FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH) or 0
 end
 
 function IsAlive()
@@ -120,24 +119,34 @@ function Respawn()
     respawnTimer = math.random(RESPAWN_TIME_MIN, RESPAWN_TIME_MAX)
 end
 
-function GetPlayersToDisconnect()
-    local engagedPlayers = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION).engagedPlayers
-    local toDisconnect = { }
+function GetPlayersToDeaggro()
+    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
 
-    for player, _ in pairs(engagedPlayers) do
+    if not aggroData then
+        return
+    end
+
+    local aggroList = aggroData.aggroList
+    local toDeaggro = { }
+
+    for player, _ in pairs(aggroList) do
         if CheckForInterruption(player) then
-            toDisconnect[player] = true
+            toDeaggro[player] = true
         end
     end
 
-    return toDisconnect
+    return toDeaggro
 end
 
 function TickExternal(deltaSeconds)
-    local engagedPlayers = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION).engagedPlayers
-
-    for player, _ in pairs(engagedPlayers) do
-        CheckForPlayerAutoAttack(player, deltaSeconds)
+    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
+    if aggroData then
+        local aggroList = aggroData.aggroList
+        if aggroList then
+            for player, _ in pairs(aggroList) do
+                CheckForPlayerAutoAttack(player, deltaSeconds)
+            end
+        end
     end
 
     -- Check enemy attack after players, to give the player same-frame advantage

@@ -2,7 +2,7 @@ Assets {
   Id: 7863614222087898170
   Name: "Darth Vader Black Matte"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 132672053610873933
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 14134483684111362443
   Name: "Custom Concrete Basic 01"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 5868465374856696904
     ParameterOverrides {

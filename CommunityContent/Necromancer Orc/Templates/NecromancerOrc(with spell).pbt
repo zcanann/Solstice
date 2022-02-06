@@ -14755,6 +14755,6 @@ Assets {
   Marketplace {
     Description: "Necromancer Orc with spell attack animation!"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

@@ -46,5 +46,5 @@ Assets {
     Version: "1.3.0"
     Description: "LMB has 2 different slash animations, RMB has a magical animation\r\n\r\n-updated idle stance so it\'s not going through the floor"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

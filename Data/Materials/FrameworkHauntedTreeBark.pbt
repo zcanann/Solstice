@@ -2,7 +2,7 @@ Assets {
   Id: 14388969366671763480
   Name: "FrameworkHauntedTreeBark"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Models"
   VirtualFolderPath: "Props"
   CustomMaterialAsset {

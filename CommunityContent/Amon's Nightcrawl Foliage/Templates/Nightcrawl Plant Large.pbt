@@ -2517,6 +2517,6 @@ Assets {
   Marketplace {
     Description: "Three creepy plants that could work both in a alin sci-fi or a fantasy environment. The pack contains one small, medium and large plant but these sizes are only an indication, feel free to scale them as you want."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

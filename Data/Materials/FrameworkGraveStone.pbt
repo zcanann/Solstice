@@ -2,7 +2,7 @@ Assets {
   Id: 2200500296133501796
   Name: "FrameworkGraveStone"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Models"
   CustomMaterialAsset {
     BaseMaterialId: 6410075130270581424

@@ -16,6 +16,44 @@ Assets {
           }
         }
         ParentId: 17246289419149383775
+        ChildIds: 283076409659159478
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 283076409659159478
+        Name: "Model"
+        Transform {
+          Location {
+            X: 10
+            Y: 25
+            Z: -5
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9063372567969894117
         ChildIds: 16083387272699882120
         ChildIds: 13592511557852978364
         ChildIds: 4696707200574029953
@@ -79,20 +117,21 @@ Assets {
         Name: "Wall End Fancy 6m"
         Transform {
           Location {
-            X: 61.5830078
-            Y: 87.2431641
-            Z: 161.315781
+            X: 51.5828171
+            Y: 62.2429504
+            Z: 166.315796
           }
           Rotation {
+            Yaw: 3.41509372e-06
             Roll: -179.999954
           }
           Scale {
             X: 0.149
-            Y: 0.271
-            Z: 0.278610796
+            Y: 0.271000028
+            Z: 0.278610826
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -100,7 +139,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -125,19 +164,19 @@ Assets {
         Name: "Arch Fancy 3m"
         Transform {
           Location {
-            X: 61.5644531
-            Y: -75.3261719
-            Z: 161.283371
+            X: 51.5641327
+            Y: -100.327194
+            Z: 166.283386
           }
           Rotation {
           }
           Scale {
             X: 0.149
-            Y: 0.271
-            Z: 0.252163708
+            Y: 0.271000028
+            Z: 0.252163738
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -145,7 +184,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -170,19 +209,19 @@ Assets {
         Name: "Wall End Fancy 6m"
         Transform {
           Location {
-            X: 61.5830078
-            Y: -75.3486328
-            Z: -5.88735962
+            X: 51.5828247
+            Y: -100.349472
+            Z: -0.887362957
           }
           Rotation {
           }
           Scale {
             X: 0.149
-            Y: 0.271
-            Z: 0.278610796
+            Y: 0.271000028
+            Z: 0.278610826
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -190,7 +229,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -215,22 +254,22 @@ Assets {
         Name: "Foundation"
         Transform {
           Location {
-            X: -33.1123047
-            Y: 5.84375
-            Z: -5.88743591
+            X: -43.1124687
+            Y: -19.1566639
+            Z: -0.887435257
           }
           Rotation {
             Pitch: 1.36603776e-05
-            Yaw: 89.9999924
-            Roll: 89.9996185
+            Yaw: 89.9999695
+            Roll: 89.9996109
           }
           Scale {
-            X: 1.2
+            X: 1.20000017
             Y: 1.19999862
-            Z: 1.2
+            Z: 1.20000017
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -255,7 +294,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -280,22 +319,22 @@ Assets {
         Name: "Foundation Curve"
         Transform {
           Location {
-            X: 61.3632812
-            Y: 6.5078125
-            Z: -5.88735962
+            X: 51.3629951
+            Y: -18.4933262
+            Z: -0.887362957
           }
           Rotation {
-            Pitch: 0.000218566041
-            Yaw: 89.9999619
-            Roll: 89.9999619
+            Pitch: 0.00022539623
+            Yaw: 89.9999466
+            Roll: 89.9999466
           }
           Scale {
-            X: 1.2
-            Y: 1.19999945
-            Z: 1.84439254
+            X: 1.20000017
+            Y: 1.19999957
+            Z: 1.84439278
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -324,7 +363,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -349,19 +388,19 @@ Assets {
         Name: "Cube - Bottom-Aligned"
         Transform {
           Location {
-            X: -33.0996094
-            Y: 77.2900391
-            Z: 60.1999969
+            X: -43.0998878
+            Y: 52.2890816
+            Z: 65.2
           }
           Rotation {
           }
           Scale {
-            X: 1.8
+            X: 1.80000007
             Y: 0.370803267
-            Z: 1.79368556
+            Z: 1.79368567
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -394,7 +433,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -419,19 +458,19 @@ Assets {
         Name: "Cube - Bottom-Aligned"
         Transform {
           Location {
-            X: -33.0996094
-            Y: -65.6103516
-            Z: 60.3999939
+            X: -43.0998535
+            Y: -90.6108
+            Z: 65.4
           }
           Rotation {
           }
           Scale {
-            X: 1.8
+            X: 1.80000007
             Y: 0.370803267
-            Z: 1.79176676
+            Z: 1.79176688
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -464,7 +503,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -489,20 +528,20 @@ Assets {
         Name: "Cube - Bottom-Aligned"
         Transform {
           Location {
-            X: -116.946953
-            Y: 8.36366463
-            Z: 50.0001183
+            X: -126.947105
+            Y: -16.6368294
+            Z: 55.0001259
           }
           Rotation {
-            Yaw: 89.9999542
+            Yaw: 89.9999466
           }
           Scale {
-            X: 1.7
-            Y: 0.2
-            Z: 1.9
+            X: 1.70000017
+            Y: 0.200000018
+            Z: 1.9000001
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -535,7 +574,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -560,21 +599,21 @@ Assets {
         Name: "Arch"
         Transform {
           Location {
-            X: 42.6411514
-            Y: 6.49839401
-            Z: 144.736938
+            X: 32.6409454
+            Y: -18.5022316
+            Z: 149.736938
           }
           Rotation {
-            Yaw: 89.9999695
-            Roll: 89.9999542
+            Yaw: 89.9999619
+            Roll: 89.9999466
           }
           Scale {
-            X: 1.1
-            Y: 1.2
-            Z: 0.2
+            X: 1.10000014
+            Y: 1.20000017
+            Z: 0.200000018
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -611,7 +650,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -636,19 +675,19 @@ Assets {
         Name: "Inner"
         Transform {
           Location {
-            X: 46.9238281
-            Y: 54.1191406
-            Z: 84.1123352
+            X: 36.9235611
+            Y: 29.1182251
+            Z: 89.1123428
           }
           Rotation {
           }
           Scale {
-            X: 0.2
-            Y: 0.110148929
-            Z: 0.751019597
+            X: 0.200000018
+            Y: 0.110148937
+            Z: 0.751019657
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -677,7 +716,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -703,19 +742,19 @@ Assets {
         Name: "Inner"
         Transform {
           Location {
-            X: 46.9238281
-            Y: -42.4589844
-            Z: 84.1123352
+            X: 36.9236946
+            Y: -67.4592209
+            Z: 89.1123428
           }
           Rotation {
           }
           Scale {
-            X: 0.2
-            Y: 0.109023429
-            Z: 0.74899286
+            X: 0.200000018
+            Y: 0.109023437
+            Z: 0.74899292
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -744,7 +783,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -770,21 +809,21 @@ Assets {
         Name: "Pipe - Half"
         Transform {
           Location {
-            X: 56.9345703
-            Y: 5.87011719
-            Z: 158.887787
+            X: 46.9343719
+            Y: -19.1305294
+            Z: 163.887802
           }
           Rotation {
-            Yaw: 89.9999695
-            Roll: 89.9999542
+            Yaw: 89.9999619
+            Roll: 89.9999466
           }
           Scale {
-            X: 1.07369983
-            Y: 1.074
-            Z: 0.200000033
+            X: 1.0737
+            Y: 1.07400012
+            Z: 0.200000048
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -813,7 +852,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -839,19 +878,19 @@ Assets {
         Name: "Bottom Chimney"
         Transform {
           Location {
-            X: -33
-            Y: 5.84082031
-            Z: 239.611206
+            X: -43.000309
+            Y: -19.1602859
+            Z: 244.611221
           }
           Rotation {
           }
           Scale {
-            X: 1.79797208
-            Y: 1.79957604
-            Z: 1.55438185
+            X: 1.7979722
+            Y: 1.79957616
+            Z: 1.55438197
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
@@ -884,7 +923,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -909,9 +948,9 @@ Assets {
         Name: "Smoke Puff Radial VFX"
         Transform {
           Location {
-            X: -36.9587
-            Y: 3.95874882
-            Z: 276.316803
+            X: -46.9589081
+            Y: -21.0417957
+            Z: 281.316833
           }
           Rotation {
           }
@@ -921,7 +960,7 @@ Assets {
             Z: 1.0000006
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "bp:Burst"
@@ -988,19 +1027,20 @@ Assets {
         Name: "Basic Sparks"
         Transform {
           Location {
-            X: -44.8447266
-            Y: 1.45019531
-            Z: 95.219635
+            X: -54.8448486
+            Y: -23.5507812
+            Z: 100.219635
           }
           Rotation {
+            Yaw: -7.38811832e-06
           }
           Scale {
-            X: 0.586178
+            X: 0.586178064
             Y: 0.598755836
-            Z: -0.31291905
+            Z: -0.31291908
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "bp:density"
@@ -1050,19 +1090,19 @@ Assets {
         Name: "Point Light"
         Transform {
           Location {
-            X: -52.5635338
-            Y: 7.42321348
-            Z: 107.992775
+            X: -62.5638084
+            Y: -17.5776825
+            Z: 112.99279
           }
           Rotation {
           }
           Scale {
-            X: 1.00000024
-            Y: 1.00000024
-            Z: 1.00000024
+            X: 1.00000036
+            Y: 1.00000036
+            Z: 1.00000036
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -1108,22 +1148,22 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 46.5507584
-            Y: 83.7193527
-            Z: 55.2631874
+            X: 36.5504684
+            Y: 58.7185669
+            Z: 60.2631912
           }
           Rotation {
             Pitch: 90
-            Yaw: -13.2627563
-            Roll: 166.737457
+            Yaw: -160.528946
+            Roll: 19.4712677
           }
           Scale {
-            X: 0.263158
-            Y: 0.263158
-            Z: 0.263158
+            X: 0.263158023
+            Y: 0.263158023
+            Z: 0.263158023
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1169,22 +1209,22 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 46.5507584
-            Y: 83.7193527
-            Z: 71.052681
+            X: 36.5504684
+            Y: 58.7185669
+            Z: 76.052681
           }
           Rotation {
             Pitch: 90
-            Yaw: -25.2394104
-            Roll: 154.760712
+            Yaw: -13.26264
+            Roll: 166.737473
           }
           Scale {
-            X: 0.263158
-            Y: 0.263158
-            Z: 0.263158
+            X: 0.263158023
+            Y: 0.263158023
+            Z: 0.263158023
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1234,22 +1274,22 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 46.5507584
-            Y: 83.7193527
-            Z: 86.8421478
+            X: 36.5504684
+            Y: 58.7185669
+            Z: 91.8421478
           }
           Rotation {
             Pitch: 90
-            Yaw: -13.2626953
-            Roll: 166.737381
+            Yaw: 1.82138374e-05
+            Roll: -179.999924
           }
           Scale {
-            X: 0.263158
-            Y: 0.263158
-            Z: 0.263158
+            X: 0.263158023
+            Y: 0.263158023
+            Z: 0.263158023
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1303,22 +1343,22 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 46.5507584
-            Y: 83.7193527
-            Z: 102.631615
+            X: 36.5504684
+            Y: 58.7185669
+            Z: 107.631622
           }
           Rotation {
             Pitch: 90
-            Yaw: -25.2393799
-            Roll: 154.760651
+            Yaw: 9.1069187e-06
+            Roll: -179.999969
           }
           Scale {
-            X: 0.263158
-            Y: 0.263158
-            Z: 0.263158
+            X: 0.263158023
+            Y: 0.263158023
+            Z: 0.263158023
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1372,22 +1412,22 @@ Assets {
         Name: "Arch Fancy Peaked 6m"
         Transform {
           Location {
-            X: 46.5507584
-            Y: 83.7193527
-            Z: 118.42112
+            X: 36.5504684
+            Y: 58.7185669
+            Z: 123.421127
           }
           Rotation {
             Pitch: 90
-            Yaw: -13.2626953
-            Roll: 166.737305
+            Yaw: 13.2626944
+            Roll: -166.737305
           }
           Scale {
-            X: 0.263158
-            Y: 0.263158
-            Z: 0.263158
+            X: 0.263158023
+            Y: 0.263158023
+            Z: 0.263158023
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1437,13 +1477,13 @@ Assets {
         Name: "Cube - Arched"
         Transform {
           Location {
-            X: 47.154068
-            Y: 5.21412563
-            Z: 78.9473801
+            X: 37.1538887
+            Y: -19.7865524
+            Z: 83.9473877
           }
           Rotation {
-            Yaw: 89.9999847
-            Roll: -89.9999924
+            Yaw: 89.9999619
+            Roll: -89.9999771
           }
           Scale {
             X: 1.10526335
@@ -1451,7 +1491,7 @@ Assets {
             Z: 0.789473772
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1497,21 +1537,21 @@ Assets {
         Name: "Cube - Arched"
         Transform {
           Location {
-            X: 65.6913376
-            Y: 3.59232092
-            Z: 78.9473801
+            X: 55.6910934
+            Y: -21.4083538
+            Z: 83.9473877
           }
           Rotation {
-            Yaw: 90.0000153
-            Roll: -90
+            Yaw: 89.9999924
+            Roll: -89.9999847
           }
           Scale {
-            X: 0.578947484
+            X: 0.578947544
             Y: 0.789473772
             Z: 0.789473772
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1557,21 +1597,21 @@ Assets {
         Name: "Cube - Arched"
         Transform {
           Location {
-            X: 47.2108192
-            Y: 5.86236334
-            Z: 78.9474
+            X: 37.2106
+            Y: -19.1383305
+            Z: 83.9474106
           }
           Rotation {
-            Yaw: 90.0000153
-            Roll: -90
+            Yaw: 89.9999924
+            Roll: -89.9999847
           }
           Scale {
             X: 1.42105269
             Y: 0.789473772
-            Z: 0.526316
+            Z: 0.526316047
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1617,20 +1657,20 @@ Assets {
         Name: "Cube"
         Transform {
           Location {
-            X: -27.3193588
-            Y: 7.99388409
-            Z: 81.5789566
+            X: -37.3195152
+            Y: -17.0063725
+            Z: 86.5789566
           }
           Rotation {
             Yaw: 179.999985
           }
           Scale {
             X: 1.57894754
-            Y: 1.05263174
-            Z: 0.736842155
+            Y: 1.05263186
+            Z: 0.736842215
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -1676,9 +1716,9 @@ Assets {
         Name: "Anvil Station"
         Transform {
           Location {
-            X: 178.630844
-            Y: -114.627731
-            Z: 44.7368469
+            X: 168.630676
+            Y: -139.62825
+            Z: 49.7368507
           }
           Rotation {
             Yaw: 129.999969
@@ -1689,7 +1729,7 @@ Assets {
             Z: 0.526316047
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         ChildIds: 9389509722398853890
         ChildIds: 185286035500691356
         ChildIds: 16617032164168536957
@@ -1790,7 +1830,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -1845,7 +1885,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -1902,7 +1942,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -1957,7 +1997,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2013,7 +2053,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2071,7 +2111,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2126,7 +2166,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2180,7 +2220,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2235,7 +2275,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2290,7 +2330,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2345,7 +2385,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2400,7 +2440,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2455,7 +2495,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2544,7 +2584,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2673,7 +2713,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2728,7 +2768,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2822,7 +2862,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2876,7 +2916,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2932,7 +2972,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -2987,7 +3027,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3042,7 +3082,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3097,7 +3137,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3226,7 +3266,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3280,7 +3320,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3334,7 +3374,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3388,7 +3428,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3442,7 +3482,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3496,7 +3536,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3550,7 +3590,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3604,7 +3644,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3658,7 +3698,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3712,7 +3752,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3766,7 +3806,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3820,7 +3860,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3874,7 +3914,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3928,7 +3968,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -3982,7 +4022,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4036,7 +4076,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4090,7 +4130,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4144,7 +4184,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4198,7 +4238,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4252,7 +4292,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4306,7 +4346,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4360,7 +4400,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4414,7 +4454,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4468,7 +4508,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4522,7 +4562,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4576,7 +4616,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4630,7 +4670,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4684,7 +4724,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4738,7 +4778,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4792,7 +4832,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4846,7 +4886,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4900,7 +4940,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -4954,7 +4994,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5008,7 +5048,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5062,7 +5102,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5116,7 +5156,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5141,20 +5181,20 @@ Assets {
         Name: "SharpeningWheel"
         Transform {
           Location {
-            X: 37.9291801
-            Y: 241.37854
-            Z: 65.2850113
+            X: 27.9289856
+            Y: 216.377502
+            Z: 70.2850113
           }
           Rotation {
             Yaw: -131.638031
           }
           Scale {
-            X: 0.526315868
-            Y: 0.526315868
-            Z: 0.526315868
+            X: 0.526315928
+            Y: 0.526315928
+            Z: 0.526315928
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         ChildIds: 13962679128224877280
         ChildIds: 17690256535579696344
         ChildIds: 17358106095542986775
@@ -5223,7 +5263,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5278,7 +5318,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5334,7 +5374,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5391,7 +5431,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5448,7 +5488,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5505,7 +5545,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5562,7 +5602,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5618,7 +5658,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5676,7 +5716,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5734,7 +5774,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5792,7 +5832,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5850,7 +5890,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5905,7 +5945,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -5963,7 +6003,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6018,7 +6058,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6043,22 +6083,22 @@ Assets {
         Name: "Blacksmith Hammer 1"
         Transform {
           Location {
-            X: 161.945633
-            Y: 36.2652817
-            Z: 128.947388
+            X: 151.945465
+            Y: 11.2643127
+            Z: 133.947403
           }
           Rotation {
             Pitch: -90
-            Yaw: -26.565033
-            Roll: 80.3134613
+            Yaw: 14.0362635
+            Roll: 39.7121315
           }
           Scale {
-            X: 0.526315868
-            Y: 0.526315868
-            Z: 0.526315868
+            X: 0.526315928
+            Y: 0.526315928
+            Z: 0.526315928
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         ChildIds: 13578245990010776625
         ChildIds: 15479516062106592521
         ChildIds: 15231642997344983179
@@ -6110,7 +6150,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6163,7 +6203,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6225,7 +6265,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6250,20 +6290,20 @@ Assets {
         Name: "Torch Metal"
         Transform {
           Location {
-            X: 37.8149796
-            Y: 136.753555
-            Z: 31.605423
+            X: 27.8148251
+            Y: 111.75309
+            Z: 36.6054268
           }
           Rotation {
             Yaw: 129.999969
           }
           Scale {
-            X: 1.05263174
-            Y: 1.05263174
-            Z: 1.05263174
+            X: 1.05263186
+            Y: 1.05263186
+            Z: 1.05263186
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6271,7 +6311,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6296,20 +6336,20 @@ Assets {
         Name: "Torch Fire VFX"
         Transform {
           Location {
-            X: 39.9694328
-            Y: 136.596802
-            Z: 79.3593369
+            X: 29.9692612
+            Y: 111.596581
+            Z: 84.3593445
           }
           Rotation {
             Yaw: 129.999969
           }
           Scale {
-            X: 1.05263174
-            Y: 1.05263174
-            Z: 1.05263174
+            X: 1.05263186
+            Y: 1.05263186
+            Z: 1.05263186
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6341,20 +6381,20 @@ Assets {
         Name: "Reinforced Crate 150cm"
         Transform {
           Location {
-            X: -188.410355
-            Y: 216.350754
-            Z: 66.1536407
+            X: -198.410507
+            Y: 191.350464
+            Z: 71.1536484
           }
           Rotation {
             Yaw: 129.999969
           }
           Scale {
-            X: 0.526315868
-            Y: 0.526315868
-            Z: 0.526315868
+            X: 0.526315928
+            Y: 0.526315928
+            Z: 0.526315928
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6362,7 +6402,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6387,20 +6427,20 @@ Assets {
         Name: "Reinforced Crate 150cm"
         Transform {
           Location {
-            X: -118.297974
-            Y: 275.171295
-            Z: 66.1536407
+            X: -128.298187
+            Y: 250.170578
+            Z: 71.1536484
           }
           Rotation {
             Yaw: 90.201889
           }
           Scale {
-            X: 0.473684281
-            Y: 0.421052694
-            Z: 0.473684281
+            X: 0.473684341
+            Y: 0.421052724
+            Z: 0.473684341
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6408,7 +6448,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6433,20 +6473,20 @@ Assets {
         Name: "Reinforced Crate 150cm"
         Transform {
           Location {
-            X: -130.739304
-            Y: 153.487015
-            Z: 66.1536407
+            X: -140.739609
+            Y: 128.48616
+            Z: 71.1536484
           }
           Rotation {
-            Yaw: -152.4189
+            Yaw: -152.418884
           }
           Scale {
-            X: 0.421052694
-            Y: 0.421052694
-            Z: 0.421052694
+            X: 0.421052724
+            Y: 0.421052724
+            Z: 0.421052724
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6454,7 +6494,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6479,20 +6519,20 @@ Assets {
         Name: "Reinforced Crate 150cm"
         Transform {
           Location {
-            X: -68.9458389
-            Y: 188.044678
-            Z: 66.1536407
+            X: -78.9460678
+            Y: 163.043854
+            Z: 71.1536484
           }
           Rotation {
-            Yaw: -2.07650852
+            Yaw: -2.07650495
           }
           Scale {
-            X: 0.263157934
-            Y: 0.526315868
-            Z: 0.263157934
+            X: 0.263157964
+            Y: 0.526315928
+            Z: 0.263157964
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6500,7 +6540,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6525,20 +6565,20 @@ Assets {
         Name: "Wooden Barrel"
         Transform {
           Location {
-            X: -83.4070282
-            Y: -115.331856
-            Z: 66.1536407
+            X: -93.4073
+            Y: -140.332977
+            Z: 71.1536484
           }
           Rotation {
-            Yaw: 89.9999847
+            Yaw: 89.9999619
           }
           Scale {
-            X: 0.526315868
-            Y: 0.526315868
-            Z: 0.526315868
+            X: 0.526315928
+            Y: 0.526315928
+            Z: 0.526315928
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6546,7 +6586,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6571,20 +6611,20 @@ Assets {
         Name: "Wooden Barrel"
         Transform {
           Location {
-            X: -30.7686939
-            Y: -116.312195
-            Z: 66.1536407
+            X: -40.7689133
+            Y: -141.313217
+            Z: 71.1536484
           }
           Rotation {
             Yaw: 157.584061
           }
           Scale {
-            X: 0.526315868
-            Y: 0.526315868
-            Z: 0.526315868
+            X: 0.526315928
+            Y: 0.526315928
+            Z: 0.526315928
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6592,7 +6632,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6617,20 +6657,20 @@ Assets {
         Name: "Wooden Barrel"
         Transform {
           Location {
-            X: -65.1333847
-            Y: -168.017731
-            Z: 66.1536407
+            X: -75.1335678
+            Y: -193.018387
+            Z: 71.1536484
           }
           Rotation {
-            Yaw: 35.0971909
+            Yaw: 35.0972
           }
           Scale {
-            X: 0.526315868
-            Y: 0.526315868
-            Z: 0.526315868
+            X: 0.526315928
+            Y: 0.526315928
+            Z: 0.526315928
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6638,7 +6678,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -6663,20 +6703,20 @@ Assets {
         Name: "Torch Fire VFX"
         Transform {
           Location {
-            X: 56.4931679
-            Y: -126.325287
-            Z: 79.3593369
+            X: 46.4929428
+            Y: -151.326202
+            Z: 84.3593445
           }
           Rotation {
             Yaw: 129.999969
           }
           Scale {
-            X: 1.05263174
-            Y: 1.05263174
-            Z: 1.05263174
+            X: 1.05263186
+            Y: 1.05263186
+            Z: 1.05263186
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6708,20 +6748,20 @@ Assets {
         Name: "Torch Metal"
         Transform {
           Location {
-            X: 54.338707
-            Y: -126.168556
-            Z: 31.605423
+            X: 44.3383942
+            Y: -151.169693
+            Z: 36.6054268
           }
           Rotation {
             Yaw: 129.999969
           }
           Scale {
-            X: 1.05263174
-            Y: 1.05263174
-            Z: 1.05263174
+            X: 1.05263186
+            Y: 1.05263186
+            Z: 1.05263186
           }
         }
-        ParentId: 9063372567969894117
+        ParentId: 283076409659159478
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -6729,7 +6769,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:forceon"
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         CoreMesh {
           MeshAsset {
@@ -7151,7 +7191,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Interactables"
 }

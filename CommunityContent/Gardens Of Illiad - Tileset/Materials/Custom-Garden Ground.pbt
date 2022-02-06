@@ -2,7 +2,7 @@ Assets {
   Id: 9627821698102350990
   Name: "Custom-Garden Ground"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 5053944409392500314
     ParameterOverrides {

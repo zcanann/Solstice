@@ -2,7 +2,7 @@ Assets {
   Id: 11769523987462008650
   Name: "MilitaryHex"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 9076279142089718718

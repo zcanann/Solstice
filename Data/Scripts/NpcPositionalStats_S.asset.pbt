@@ -1,6 +1,6 @@
 Assets {
-  Id: 7867712670032685259
-  Name: "NpcStats_S"
+  Id: 347275619744489737
+  Name: "NpcPositionalStats_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,50 +11,29 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Npc"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:ProximityNetworkedObject"
         ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:Health"
-        Int: 100
-      }
-      Overrides {
-        Name: "cs:Mana"
-        Int: 100
-      }
-      Overrides {
-        Name: "cs:Rage"
-        Int: 100
-      }
-      Overrides {
-        Name: "cs:Stamina"
-        Float: 100
-      }
-      Overrides {
-        Name: "cs:Experience"
-        Int: 0
-      }
-      Overrides {
-        Name: "cs:AgroRadius"
+        Name: "cs:AggroRadius"
         Float: 1500
       }
       Overrides {
         Name: "cs:MeleeRadius"
-        Float: 200
+        Float: 75
       }
       Overrides {
         Name: "cs:Height"
         Float: 200
       }
+      Overrides {
+        Name: "cs:MovementSpeed"
+        Float: 640
+      }
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Entities"
   VirtualFolderPath: "Npcs"

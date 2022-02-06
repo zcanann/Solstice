@@ -31,12 +31,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "tree top"
   }
-  InstanceHistory {
-    SelfId: 5890958900999859162
-    SubobjectId: 10997221048789984876
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -83,12 +77,6 @@ Objects {
     Model {
     }
   }
-  InstanceHistory {
-    SelfId: 17359184246661476470
-    SubobjectId: 4158282293666299328
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -126,12 +114,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine"
-  }
-  InstanceHistory {
-    SelfId: 14263526685907325189
-    SubobjectId: 913984831385853107
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -171,12 +153,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_1"
   }
-  InstanceHistory {
-    SelfId: 2287538795488898016
-    SubobjectId: 15484468183177143894
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -214,12 +190,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_2"
-  }
-  InstanceHistory {
-    SelfId: 17264469129897419104
-    SubobjectId: 2795238504885218518
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -259,12 +229,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_3"
   }
-  InstanceHistory {
-    SelfId: 742542968180607799
-    SubobjectId: 14056600073216214657
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -303,12 +267,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "vine_4"
   }
-  InstanceHistory {
-    SelfId: 8046033669912028273
-    SubobjectId: 12030338711740131783
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -343,12 +301,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "vine_5"
-  }
-  InstanceHistory {
-    SelfId: 6496611573779646632
-    SubobjectId: 10625540053503640862
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -409,12 +361,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14915111706880513651
-    SubobjectId: 549446565387099077
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -474,12 +420,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 9458556334352311715
-    SubobjectId: 5340868320642066453
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -544,12 +484,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 15715548355779711749
-    SubobjectId: 1388742939977424563
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -618,12 +552,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14652087938332461179
-    SubobjectId: 147411481372214733
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -686,12 +614,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 17403162665716837407
-    SubobjectId: 4096425812242375081
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

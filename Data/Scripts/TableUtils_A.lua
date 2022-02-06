@@ -32,8 +32,9 @@ local function TableDiff (A, B)
 	B = B or { }
 
 	for k,v in pairs(A) do
-		if type(A[k]) == "function" or type(A[k]) == "userdata" then
-			error ("TableDiff only supports diffs of tables!")
+		if type(A[k]) == "function" then
+			warn ("TableDiff only supports diffs of tables!")
+			warn(CoreDebug.GetStackTrace())
 		elseif B[k] ~= nil and type(A[k]) == "table" and type(B[k]) == "table" then
 			diff.s[k] = TableDiff(A[k], B[k])
 
@@ -48,7 +49,7 @@ local function TableDiff (A, B)
 	end
 
 	for k,v in pairs(B) do
-		if type(B[k]) == "function" or type(B[k]) == "userdata" then
+		if type(B[k]) == "function" then
 			warn("TableDiff only supports diffs of tables!")
 			warn(CoreDebug.GetStackTrace())
 			return nil

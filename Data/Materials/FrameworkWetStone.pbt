@@ -2,7 +2,7 @@ Assets {
   Id: 12861633764301884441
   Name: "FrameworkWetStone"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Floors"
   CustomMaterialAsset {
     BaseMaterialId: 7980884533482195323

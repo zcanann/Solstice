@@ -199,6 +199,6 @@ Assets {
       AssetId: "Named_Location"
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Triggers"
 }

@@ -2,7 +2,7 @@ Assets {
   Id: 14438246837221722711
   Name: "Custom Base Material from Humanoid 2 Drahkzen"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 401754016534424912
     ParameterOverrides {

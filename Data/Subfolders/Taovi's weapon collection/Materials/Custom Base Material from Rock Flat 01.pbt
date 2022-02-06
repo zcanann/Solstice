@@ -2,7 +2,7 @@ Assets {
   Id: 8679164153547422432
   Name: "Custom Base Material from Rock Flat 01"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 18115525400101979413
     ParameterOverrides {

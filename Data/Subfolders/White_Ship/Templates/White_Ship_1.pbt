@@ -12646,6 +12646,6 @@ Assets {
   Marketplace {
     Description: "White ship"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

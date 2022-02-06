@@ -31,12 +31,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Leaves_1"
   }
-  InstanceHistory {
-    SelfId: 9611345391047269095
-    SubobjectId: 5494182751460595537
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -112,12 +106,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 155595835619610839
-    SubobjectId: 14660853105604025697
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

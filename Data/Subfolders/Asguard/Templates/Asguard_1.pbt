@@ -50766,6 +50766,6 @@ Assets {
   Marketplace {
     Description: "This took forever lol\r\nNot 100 percent accurate, kinda rushed this. Does have an inside!"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

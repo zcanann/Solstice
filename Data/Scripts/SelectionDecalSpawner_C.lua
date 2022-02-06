@@ -1,24 +1,24 @@
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local propRadiusDecalTemplate = script:GetCustomProperty("RadiusDecalTemplate")
+local RADIUS_DECAL_TEMPLATE = script:GetCustomProperty("RadiusDecalTemplate")
 
 -- Variables
 local selectionDecals = { }
 
 function OnEntityEnteredRange(proximityObjectId)
-    local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
+    local objectInstance = FRAMEWORK.Networking.GetProximityInstance(proximityObjectId)
 
-    if not Framework.IsEntity(objectInstance) then
+    if not FRAMEWORK.IsEntity(objectInstance) then
         return
     end
 
     local selectionDecal = nil
 
     if objectInstance:IsA("Player") then
-        selectionDecal = World.SpawnAsset(propRadiusDecalTemplate)
+        selectionDecal = World.SpawnAsset(RADIUS_DECAL_TEMPLATE)
         selectionDecal:AttachToPlayer(objectInstance, "root")
     else
-        selectionDecal = World.SpawnAsset(propRadiusDecalTemplate, { parent = objectInstance })
+        selectionDecal = World.SpawnAsset(RADIUS_DECAL_TEMPLATE, { parent = objectInstance })
     end
 
     selectionDecal.context.SetProximityObject(objectInstance)
@@ -32,5 +32,5 @@ function OnEntityLeftRange(proximityObjectId)
     selectionDecals[proximityObjectId] = nil
 end
 
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnEntityEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnEntityLeftRange)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnEntityEnteredRange)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnEntityLeftRange)

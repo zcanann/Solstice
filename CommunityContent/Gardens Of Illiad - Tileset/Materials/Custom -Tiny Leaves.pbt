@@ -2,7 +2,7 @@ Assets {
   Id: 11161716336828131415
   Name: "Custom -Tiny Leaves"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 5188935448973077052
     ParameterOverrides {

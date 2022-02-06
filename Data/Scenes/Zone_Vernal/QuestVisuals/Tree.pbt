@@ -221,7 +221,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 9348038341760866652
+        SelfId: 17346586940929461580
       }
     }
   }

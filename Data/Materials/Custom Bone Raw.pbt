@@ -2,7 +2,7 @@ Assets {
   Id: 12864027499352893140
   Name: "Custom Bone Raw"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 8363341854360369298
     ParameterOverrides {

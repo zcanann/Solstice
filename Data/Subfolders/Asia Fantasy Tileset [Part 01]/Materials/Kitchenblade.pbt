@@ -2,7 +2,7 @@ Assets {
   Id: 16818807191858097064
   Name: "Kitchenblade"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 4855960652393685277
     ParameterOverrides {

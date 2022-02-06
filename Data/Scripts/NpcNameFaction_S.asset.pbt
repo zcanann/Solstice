@@ -11,11 +11,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Npc"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:ProximityNetworkedObject"
         ObjectReference {
         }
@@ -38,7 +33,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Entities"
   VirtualFolderPath: "Npcs"

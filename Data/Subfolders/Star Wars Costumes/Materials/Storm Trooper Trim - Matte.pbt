@@ -2,7 +2,7 @@ Assets {
   Id: 2748833326164746286
   Name: "Storm Trooper Trim - Matte"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 132672053610873933
     ParameterOverrides {

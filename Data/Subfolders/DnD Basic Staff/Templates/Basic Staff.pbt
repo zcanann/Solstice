@@ -1058,6 +1058,6 @@ Assets {
   Marketplace {
     Description: "Basic Staff from the DnD Template.  I did not create it."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

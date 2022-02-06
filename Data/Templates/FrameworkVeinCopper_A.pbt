@@ -16,7 +16,7 @@ Assets {
           }
         }
         ParentId: 17246289419149383775
-        ChildIds: 16803602812192200373
+        ChildIds: 16131660400359032423
         ChildIds: 12971064613990579146
         ChildIds: 3936958111886977860
         UnregisteredParameters {
@@ -47,25 +47,109 @@ Assets {
         }
       }
       Objects {
-        Id: 16803602812192200373
-        Name: "HitTestCollision"
+        Id: 16131660400359032423
+        Name: "Networking"
+        Transform {
+          Location {
+            Z: 55
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 18361376657929626207
+        ChildIds: 7867632560177745383
+        ChildIds: 4232056097359707309
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 7867632560177745383
+        Name: "LocalContext"
         Transform {
           Location {
           }
           Rotation {
           }
           Scale {
-            X: 1.25
-            Y: 1.25
-            Z: 1.25
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 18361376657929626207
+        ParentId: 16131660400359032423
+        ChildIds: 11237173423235480384
+        NetworkContext {
+          Type: Local
+        }
+      }
+      Objects {
+        Id: 11237173423235480384
+        Name: "ProximityNetworkedObject"
+        Transform {
+          Location {
+            Z: 0.0289917
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7867632560177745383
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsProximityNetworkCollider"
+            Bool: true
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 17803366332466114312
+            }
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedDataScript"
+            ObjectReference {
+              SubObjectId: 1456006550158431919
+            }
+          }
+          Overrides {
+            Name: "cs:ObjectType"
+            String: "Resource"
+          }
+        }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceon"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
           Value: "mc:ecollisionsetting:forceoff"
@@ -75,18 +159,94 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 1266200099515413851
+            Id: 12095835209017042614
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
+          InteractWithTriggers: true
           StaticMesh {
             Physics {
               Mass: 100
               LinearDamping: 0.01
             }
             BoundsScale: 1
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4232056097359707309
+        Name: "ServerContext"
+        Transform {
+          Location {
+            Z: 0.0289917
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 16131660400359032423
+        ChildIds: 1456006550158431919
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          Type: Server
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1456006550158431919
+        Name: "ProximityNetworkedData_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4232056097359707309
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 11237173423235480384
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5474629016980680411
           }
         }
         NetworkRelevanceDistance {
@@ -1807,7 +1967,6 @@ Assets {
           }
         }
         ParentId: 18361376657929626207
-        ChildIds: 11237173423235480384
         ChildIds: 14124416398978196639
         ChildIds: 9283846334413927800
         Collidable_v2 {
@@ -1825,156 +1984,6 @@ Assets {
         Folder {
           IsFilePartition: true
           FilePartitionName: "Behavior"
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 11237173423235480384
-        Name: "ProximityNetworkedObject"
-        Transform {
-          Location {
-            Z: 55.0289917
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 3936958111886977860
-        ChildIds: 4232056097359707309
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsProximityNetworkCollider"
-            Bool: true
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17803366332466114312
-            }
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedDataScript"
-            ObjectReference {
-              SubObjectId: 1456006550158431919
-            }
-          }
-          Overrides {
-            Name: "cs:ObjectType"
-            String: "Resource"
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12095835209017042614
-          }
-          Teams {
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 4232056097359707309
-        Name: "ServerContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 11237173423235480384
-        ChildIds: 1456006550158431919
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        NetworkContext {
-          Type: Server
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 1456006550158431919
-        Name: "ProximityNetworkedData_S"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4232056097359707309
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 11237173423235480384
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5474629016980680411
-          }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -2237,6 +2246,7 @@ Assets {
         ParentId: 3936958111886977860
         ChildIds: 7601481592159493201
         ChildIds: 15792647630309582845
+        ChildIds: 8446509606642371741
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2498,14 +2508,67 @@ Assets {
           Value: "mc:eproxyrelevance:critical"
         }
       }
+      Objects {
+        Id: 8446509606642371741
+        Name: "EngagementVisualizer_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9283846334413927800
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ProximityNetworkedObject"
+            ObjectReference {
+              SubObjectId: 11237173423235480384
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15724300102369226823
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
     }
     Assets {
-      Id: 1266200099515413851
-      Name: "Cube - Bottom-Aligned"
+      Id: 12095835209017042614
+      Name: "Cube"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_001"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     Assets {
@@ -2544,30 +2607,12 @@ Assets {
         AssetId: "mi_metal_basic_001"
       }
     }
-    Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 17803366332466114312
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
-      }
-    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Interactables"
 }

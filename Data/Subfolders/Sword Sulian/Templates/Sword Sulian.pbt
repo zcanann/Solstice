@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "High fantasy weapon with plasma vfx!"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

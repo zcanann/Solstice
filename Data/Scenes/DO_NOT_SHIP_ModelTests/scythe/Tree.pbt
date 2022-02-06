@@ -30,12 +30,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "staff"
   }
-  InstanceHistory {
-    SelfId: 13896553066552010300
-    SubobjectId: 2624449958572244640
-    InstanceId: 1823421961262436918
-    TemplateId: 12969925410271066374
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -72,12 +66,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "blade"
   }
-  InstanceHistory {
-    SelfId: 12178942557946319569
-    SubobjectId: 5599620910564313677
-    InstanceId: 1823421961262436918
-    TemplateId: 12969925410271066374
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -112,12 +100,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "top"
-  }
-  InstanceHistory {
-    SelfId: 16925401106103787553
-    SubobjectId: 1032037449882138813
-    InstanceId: 1823421961262436918
-    TemplateId: 12969925410271066374
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

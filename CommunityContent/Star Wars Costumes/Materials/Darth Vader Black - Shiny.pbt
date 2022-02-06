@@ -2,7 +2,7 @@ Assets {
   Id: 7622799804807311349
   Name: "Darth Vader Black - Shiny"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 10175711656923249913
     ParameterOverrides {

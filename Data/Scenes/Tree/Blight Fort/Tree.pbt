@@ -313,13 +313,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "BlightWall"
   }
-  InstanceHistory {
-    SelfId: 14119571086794134933
-    SubobjectId: 12905691303589374391
-    InstanceId: 4789433216096858821
-    TemplateId: 4305411352690016132
-    WasRoot: true
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }

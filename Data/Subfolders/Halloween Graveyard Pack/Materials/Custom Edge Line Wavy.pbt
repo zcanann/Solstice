@@ -2,7 +2,7 @@ Assets {
   Id: 12930389946873320061
   Name: "Custom Edge Line Wavy"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 14376594335412317557
     ParameterOverrides {

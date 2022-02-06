@@ -6,32 +6,41 @@ local NPC_COMBAT = script:GetCustomProperty("NpcCombat"):WaitForObject().context
 local NPC_MOVEMENT_PATHING = script:GetCustomProperty("NpcMovementPathing"):WaitForObject().context
 local NPC_ENGAGEMENT_VISUALIZER = script:GetCustomProperty("NpcEngagementVisualizer"):WaitForObject().context
 
-local NPC_ENUMS = require(script:GetCustomProperty("NpcEnums"))
 local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local MAX_ENGAGEMENTS = script:GetCustomProperty("MaxEngagements")
 
-local engagedPlayers = { }
+local aggroList = { }
+local playersInRange = { }
 
--- Set the server-side reference to the engaged player table. Note that the npc => player schema is not the same as player => npc.
-FRAMEWORK.Networking.SetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+-- Set the server-side reference to the list of aggro'd players/npcs.
+FRAMEWORK.Networking.SetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S,
 {
-    engagedPlayers = engagedPlayers,
+    aggroList = aggroList,
 })
 
-function IsPlayerConnected(player)
+function PlayerEnteredNetworkingRange(newPlayer, _)
+    playersInRange[newPlayer] = true
+end
+
+function PlayerLeftNetworkingRange(removedPlayer, _)
+    playersInRange[removedPlayer] = nil
+    Deaggro(removedPlayer)
+end
+
+function IsPlayerAggrod(player)
     if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
-    return engagedPlayers[player] ~= nil
+    return aggroList[player] ~= nil
 end
 
-function Connect(player)
+function Aggro(player)
     if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
     -- Deny the request if at our engagement limit
-    if MAX_ENGAGEMENTS >= 0 and #engagedPlayers >= MAX_ENGAGEMENTS then
+    if MAX_ENGAGEMENTS >= 0 and #aggroList >= MAX_ENGAGEMENTS then
         return
     end
 
@@ -40,6 +49,26 @@ function Connect(player)
         return
     end
 
+    aggroList[player] = true
+end
+
+function Deaggro(player)
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
+        return
+    end
+
+    aggroList[player] = nil
+    -- player.serverUserData.engagement = nil
+    -- FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
+end
+
+function DeaggroAllPlayers()
+    for player, _ in pairs(aggroList) do
+        Deaggro(player)
+    end
+end
+
+function PlayerEngageNpc(player)
     if not player.serverUserData.engagement then
         player.serverUserData.engagement = { }
     end
@@ -58,7 +87,6 @@ function Connect(player)
     end
 
     player.serverUserData.engagement.session = script.context
-    engagedPlayers[player] = true
 
     -- Set the engagement session on the player's proximity data
     FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
@@ -69,27 +97,29 @@ function Connect(player)
     })
 end
 
-function Disconnect(player)
-    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
-        return
-    end
-
-    engagedPlayers[player] = nil
-    player.serverUserData.engagement = nil
-    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
-end
-
-function DisconnectAllPlayers()
-    for player, _ in pairs(engagedPlayers) do
-        Disconnect(player)
-    end
-end
-
 function Tick(deltaSeconds)
-    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
+    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(aggroList)
 
-    for player, _ in pairs(NPC_COMBAT.GetPlayersToDisconnect()) do
-        Disconnect(player)
+    local toDeaggro = NPC_COMBAT.GetPlayersToDeaggro()
+    if toDeaggro then
+        for player, _ in pairs(NPC_COMBAT.GetPlayersToDeaggro()) do
+            Deaggro(player)
+        end
+    end
+
+    -- Agro the first player within range
+    if FRAMEWORK.Utils.Table.Count(aggroList) <= 0 then
+        local selfPosition = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION) or PROXIMITY_NETWORKED_OBJECT:GetWorldPosition()
+        local aggroRadius = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_RADIUS) or 0.0
+        for player, _ in pairs(playersInRange) do
+            if Object.IsValid(player) and not aggroList[player] then
+                local delta = player:GetWorldPosition() - selfPosition
+                local distance = delta.size
+                if distance <= aggroRadius then
+                    Aggro(player)
+                end
+            end
+        end
     end
 
     -- Update components
@@ -98,4 +128,6 @@ function Tick(deltaSeconds)
     NPC_ENGAGEMENT_VISUALIZER.TickExternal(deltaSeconds)
 end
 
-FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, Connect)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_ENTERED_PROXIMITY_OBJECT_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, PlayerEnteredNetworkingRange)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_LEFT_PROXIMITY_OBJECT_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, PlayerLeftNetworkingRange)
+FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, PlayerEngageNpc)

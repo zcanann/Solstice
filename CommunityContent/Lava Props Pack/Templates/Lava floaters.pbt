@@ -915,7 +915,7 @@ Assets {
   Marketplace {
     Description: "This asset pack contains 21 lava based props to build a volcanic environment, including:\r\n\t- 2 large volcanoes\r\n\t- 2 floating lava rocks\r\n\t- 4 lava falls\r\n\t- 5 lava fountains\r\n\t- 5 lava pools including 2 boiling ones\r\n\t- 1 lava lake, 1 straight river and 1 delta\r\n \r\n Apart from the 2 volcanoes, the rest are regrouped in serperate group templates. Simply drag and drop the group \r\n template you want in your project, find it in you hierarchy and pull out or copy the asset you want to use. \r\n \r\n There is no damage zone or SFX included in this pack\r\n\r\n Thanks to Johnhenderson1963 and Basilisk whose CCs \"Volcano Crater\" and \"Lava Ball\" were used to create this pack"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
   VirtualFolderPath: "New Folder"
 }

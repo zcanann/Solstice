@@ -1,6 +1,5 @@
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local NPC_ENUMS = require(script:GetCustomProperty("NpcEnums"))
 local NPC = script:GetCustomProperty("Npc"):WaitForObject()
 local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 
@@ -9,12 +8,12 @@ end
 
 function Tick(deltaSeconds)
     local engagementSession = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION)
+    local movementSpeed = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.MOVEMENT_SPEED)
+    local serverPosition = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION)
 
-    if engagementSession then
-        if engagementSession.serverPosition then
-            NPC:SetWorldPosition(engagementSession.serverPosition)
-        end
-    else
+    if serverPosition then
+        PROXIMITY_NETWORKED_OBJECT:SetWorldPosition(serverPosition)
+        NPC:SetWorldPosition(serverPosition)
     end
 end
 

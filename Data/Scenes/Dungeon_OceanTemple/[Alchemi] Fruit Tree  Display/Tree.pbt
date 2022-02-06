@@ -34,12 +34,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 2601139501868265237
-    SubobjectId: 17096793624140505763
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -76,12 +70,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "White iron_8"
-  }
-  InstanceHistory {
-    SelfId: 11726915662043173883
-    SubobjectId: 7774134374195961421
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -120,12 +108,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "White iron_9"
   }
-  InstanceHistory {
-    SelfId: 6626535802410813605
-    SubobjectId: 10568600992235652371
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -160,12 +142,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Sign_4"
-  }
-  InstanceHistory {
-    SelfId: 4825711471908139130
-    SubobjectId: 10062526645074034124
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -204,12 +180,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 10889356211140171915
-    SubobjectId: 6792512803294074173
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -267,12 +237,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 5575090469582274326
-    SubobjectId: 9512634381694087840
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -329,12 +293,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 9440542905640889551
-    SubobjectId: 5358881610724401529
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -390,12 +348,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 6595983709189737014
-    SubobjectId: 10580289863986333568
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -461,12 +413,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 6347516101800047219
-    SubobjectId: 10469727754882121669
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -523,12 +469,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 11709292218417159643
-    SubobjectId: 7719973042253123693
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -565,12 +505,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "[Alchemi] Small Fruit  Tree-B"
   }
-  InstanceHistory {
-    SelfId: 10491765736715298987
-    SubobjectId: 6397122434995152157
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -606,12 +540,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "[Alchemi] Small Fruit Tree- A"
-  }
-  InstanceHistory {
-    SelfId: 371490057825169707
-    SubobjectId: 14734323957684829341
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

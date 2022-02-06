@@ -2,7 +2,7 @@ Assets {
   Id: 2783732507378246625
   Name: "FrameworkVanaraFeminineVariantB"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   VirtualFolderPath: "Wukong"

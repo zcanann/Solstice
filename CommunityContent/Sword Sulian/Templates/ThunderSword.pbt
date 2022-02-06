@@ -4185,6 +4185,6 @@ Assets {
   Marketplace {
     Description: "High fantasy weapon with plasma vfx!"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

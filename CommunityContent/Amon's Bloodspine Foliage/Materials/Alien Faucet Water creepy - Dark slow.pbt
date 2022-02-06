@@ -2,7 +2,7 @@ Assets {
   Id: 4866545186326122211
   Name: "Alien Faucet Water creepy - Dark slow"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 1699895661322077824
     ParameterOverrides {

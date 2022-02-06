@@ -34,12 +34,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 11489220677093113023
-    SubobjectId: 6209602946211246345
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -95,12 +89,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 15243913795987040942
-    SubobjectId: 1932144825951135512
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -158,12 +146,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 13663637114339317568
-    SubobjectId: 8413819356644842230
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -219,12 +201,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 9070828839916705530
-    SubobjectId: 13024154395112921932
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -290,12 +266,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 6686711080069629616
-    SubobjectId: 10779051123939396358
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -352,12 +322,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 8583043260450305391
-    SubobjectId: 13708959401654991065
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -396,12 +360,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 14011612370105958832
-    SubobjectId: 805623823456291846
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -436,12 +394,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Sign_11"
-  }
-  InstanceHistory {
-    SelfId: 3237359667628290306
-    SubobjectId: 16550852706793684148
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -480,12 +432,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "White iron_22"
   }
-  InstanceHistory {
-    SelfId: 11939031471193299833
-    SubobjectId: 7850597073014052559
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -523,12 +469,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "White iron_23"
   }
-  InstanceHistory {
-    SelfId: 10675992333071404298
-    SubobjectId: 6734473368597495996
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -563,12 +503,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Astilbe Flowers White"
-  }
-  InstanceHistory {
-    SelfId: 14702964335419826102
-    SubobjectId: 384624037864231424
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -605,12 +539,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Astilbe Flowers Red"
   }
-  InstanceHistory {
-    SelfId: 4591541441916859600
-    SubobjectId: 17790756963150641510
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -645,12 +573,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Astilbe Flowers Purple"
-  }
-  InstanceHistory {
-    SelfId: 1198484308947697669
-    SubobjectId: 15707647916076420531
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

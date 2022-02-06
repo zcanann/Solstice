@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "druid staff"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

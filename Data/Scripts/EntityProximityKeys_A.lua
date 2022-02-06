@@ -17,9 +17,6 @@ EntityProximityKeys.MAX_HEALTH = "max_health"
 EntityProximityKeys.MANA = "mana"
 EntityProximityKeys.MAX_MANA = "max_mana"
 EntityProximityKeys.EXPERIENCE = "experience"
-EntityProximityKeys.AGRO_RADIUS = "agro_radius"
-EntityProximityKeys.MELEE_RADIUS = "melee_radius"
-EntityProximityKeys.HEIGHT = "height"
 
 -- Defensive
 EntityProximityKeys.FROST_RESISTANCE = "frost_resistance"
@@ -42,13 +39,20 @@ EntityProximityKeys.SPELL_POWER = "spell_power"
 EntityProximityKeys.HEALING_POWER = "healing_power"
 EntityProximityKeys.SPELL_PENETRATION = "spell_penetration"
 
--- Runtime
+-- Spatial
+EntityProximityKeys.AGGRO_RADIUS = "aggro_radius"
+EntityProximityKeys.MELEE_RADIUS = "melee_radius"
+EntityProximityKeys.HEIGHT = "height"
+EntityProximityKeys.MOVEMENT_SPEED = "movement_speed"
+
+-- Runtime spatial
 EntityProximityKeys.POSITION = "position"
 EntityProximityKeys.WAYPOINT_POSITION = "waypoint_position"
 EntityProximityKeys.ENGAGEMENT_SESSION = "engagement_session"
 
--- Server-only
-EntityProximityKeys.MOVEMENT_STATE = "movement_state"
-EntityProximityKeys.ENGAGEMENT_PATHING_MODE = "engagement_pathing_mode"
+-- Server-side runtime
+EntityProximityKeys.AGGRO_DATA_S = "aggro_data"
+EntityProximityKeys.MOVEMENT_STATE_S = "movement_state"
+EntityProximityKeys.ENGAGEMENT_PATHING_MODE_S = "engagement_pathing_mode"
 
 return EntityProximityKeys

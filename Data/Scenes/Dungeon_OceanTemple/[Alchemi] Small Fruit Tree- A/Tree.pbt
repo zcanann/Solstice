@@ -31,12 +31,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Tree Top_1"
   }
-  InstanceHistory {
-    SelfId: 3930840114471265029
-    SubobjectId: 18433303568057151155
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -75,12 +69,6 @@ Objects {
     Model {
     }
   }
-  InstanceHistory {
-    SelfId: 9722819067157266091
-    SubobjectId: 5743072222279070493
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -117,12 +105,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Fruit_3"
   }
-  InstanceHistory {
-    SelfId: 6467601647228655261
-    SubobjectId: 10420362800506166059
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -158,12 +140,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Branches_1"
   }
-  InstanceHistory {
-    SelfId: 10737302073670196373
-    SubobjectId: 6656204763794477347
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -197,12 +173,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Tree Trunk"
-  }
-  InstanceHistory {
-    SelfId: 3478817290282847310
-    SubobjectId: 17949699170467906040
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

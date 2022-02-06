@@ -2,7 +2,7 @@ Assets {
   Id: 9866575369215118499
   Name: " Alien Coral Table creepy - bright"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 17511815629531257735
     ParameterOverrides {

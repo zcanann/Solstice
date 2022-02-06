@@ -1311,6 +1311,6 @@ Assets {
   Marketplace {
     Description: "Example and implementation of navigation mesh pathfinding"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

@@ -1,6 +1,5 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
-local propNpc = script:GetCustomProperty("Npc"):WaitForObject()
 local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 
 local propHealth = script:GetCustomProperty("Health")
@@ -15,6 +14,6 @@ Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework
 Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.MANA, propMana)
 Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.MAX_MANA, propMana)
 Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.EXPERIENCE, propExperience)
-Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.AGRO_RADIUS, propAgroRadius)
+Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.AGGRO_RADIUS, propAgroRadius)
 Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.MELEE_RADIUS, propMeleeRadius)
 Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, propHeight)

@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Basic Staff from the DnD Template.  I did not create it."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

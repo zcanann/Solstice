@@ -2,7 +2,7 @@ Assets {
   Id: 10260458217391861041
   Name: "Custom Detail 3 from Humanoid 2 Military Pants"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 14484607236688614715

@@ -8758,5 +8758,5 @@ Assets {
       AssetId: "Castle_Gatehouse"
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

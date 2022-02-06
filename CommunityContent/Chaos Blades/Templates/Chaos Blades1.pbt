@@ -2549,6 +2549,6 @@ Assets {
   Marketplace {
     Description: "Blades of Chaos from God of War."
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

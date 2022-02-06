@@ -2,7 +2,7 @@ Assets {
   Id: 7977457313222069235
   Name: "FrameworkWetBricks"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Floors"
   CustomMaterialAsset {
     BaseMaterialId: 6889857363993128864

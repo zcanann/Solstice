@@ -2,7 +2,7 @@ Assets {
   Id: 9637982866240054468
   Name: "Tot Obsidian green"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 800921879308005468
     ParameterOverrides {

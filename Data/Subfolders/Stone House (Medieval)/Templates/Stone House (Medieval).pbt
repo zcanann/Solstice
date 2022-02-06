@@ -46,5 +46,5 @@ Assets {
     Version: "1.1.0"
     Description: "A small furnished house (furniture sets can removed seperatly)"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
 }

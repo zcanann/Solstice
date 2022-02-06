@@ -2,7 +2,7 @@ Assets {
   Id: 17190859323961600656
   Name: "Tot Bone Raw"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 9311190295826444241
     ParameterOverrides {

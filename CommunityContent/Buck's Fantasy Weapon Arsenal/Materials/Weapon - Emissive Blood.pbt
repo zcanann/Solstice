@@ -2,7 +2,7 @@ Assets {
   Id: 6669259446745166142
   Name: "Weapon - Emissive Blood"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 18280303351516875622
     ParameterOverrides {

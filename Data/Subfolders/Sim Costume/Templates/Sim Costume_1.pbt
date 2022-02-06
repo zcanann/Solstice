@@ -3643,6 +3643,6 @@ Assets {
   Marketplace {
     Description: "Ever wanted to be a sim? Now you can! The costume is attached to the player using the script from Dracowolfie\'s \"Buffshroom Suit\" in Community Content. To use, just walk up to the mannequin and press F to wear"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

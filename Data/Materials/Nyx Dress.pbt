@@ -2,7 +2,7 @@ Assets {
   Id: 15883340561898099110
   Name: "Nyx Dress"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 10184847056121543272
     ParameterOverrides {

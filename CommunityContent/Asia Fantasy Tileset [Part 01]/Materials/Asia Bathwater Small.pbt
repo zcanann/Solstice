@@ -2,7 +2,7 @@ Assets {
   Id: 15696712106830508505
   Name: "Asia Bathwater Small"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 6339793752492826231
     ParameterOverrides {

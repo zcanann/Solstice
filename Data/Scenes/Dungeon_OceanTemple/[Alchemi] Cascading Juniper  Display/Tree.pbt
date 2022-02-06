@@ -32,12 +32,6 @@ Objects {
     Model {
     }
   }
-  InstanceHistory {
-    SelfId: 17417721644084786848
-    SubobjectId: 4099740360607578902
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -73,12 +67,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Cascading Juniper - R"
   }
-  InstanceHistory {
-    SelfId: 14610502158947979085
-    SubobjectId: 261199855043134203
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -113,12 +101,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Cascading Juniper- L"
-  }
-  InstanceHistory {
-    SelfId: 15927608812173044268
-    SubobjectId: 1465678119768844186
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -158,12 +140,6 @@ Objects {
   Folder {
     IsGroup: true
   }
-  InstanceHistory {
-    SelfId: 9536770570108669643
-    SubobjectId: 5549688053962687357
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -200,12 +176,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "White iron_16"
-  }
-  InstanceHistory {
-    SelfId: 4285862608382668387
-    SubobjectId: 17449030704788792277
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -244,12 +214,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "White iron_17"
   }
-  InstanceHistory {
-    SelfId: 6324523263691379980
-    SubobjectId: 11427921205165955258
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -284,12 +248,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Sign_8"
-  }
-  InstanceHistory {
-    SelfId: 5882789870990610939
-    SubobjectId: 11024468392386993229
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -328,12 +286,6 @@ Objects {
   }
   Folder {
     IsGroup: true
-  }
-  InstanceHistory {
-    SelfId: 13607581899993265439
-    SubobjectId: 8469808599088298153
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -391,12 +343,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 14326794202379414209
-    SubobjectId: 1121368562731427703
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -453,12 +399,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 17091228433430561636
-    SubobjectId: 2624793857899466450
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -514,12 +454,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 12029684645040223372
-    SubobjectId: 8047686094298364218
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -585,12 +519,6 @@ Objects {
       BoundsScale: 1
     }
   }
-  InstanceHistory {
-    SelfId: 17155592014137661854
-    SubobjectId: 2831059533682627624
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -646,12 +574,6 @@ Objects {
       }
       BoundsScale: 1
     }
-  }
-  InstanceHistory {
-    SelfId: 7440974973261439354
-    SubobjectId: 12546675618466966732
-    InstanceId: 11031230522236672431
-    TemplateId: 2584939508418169661
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

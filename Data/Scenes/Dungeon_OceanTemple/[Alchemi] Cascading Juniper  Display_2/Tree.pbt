@@ -32,12 +32,6 @@ Objects {
     Model {
     }
   }
-  InstanceHistory {
-    SelfId: 5972727074740111479
-    SubobjectId: 13867487092163518548
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -74,12 +68,6 @@ Objects {
     IsFilePartition: true
     FilePartitionName: "Cascading Juniper - R_2"
   }
-  InstanceHistory {
-    SelfId: 14616903630296637012
-    SubobjectId: 6361890555398747767
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -114,12 +102,6 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Cascading Juniper- L_2"
-  }
-  InstanceHistory {
-    SelfId: 10845400991593565306
-    SubobjectId: 293524615489922137
-    InstanceId: 12215635910025303464
-    TemplateId: 9583955875861938247
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

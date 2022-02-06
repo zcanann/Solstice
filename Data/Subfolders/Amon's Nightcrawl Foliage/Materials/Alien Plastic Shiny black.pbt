@@ -2,7 +2,7 @@ Assets {
   Id: 2724104988368416984
   Name: "Alien Plastic Shiny black"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 1778446291070997431
     ParameterOverrides {

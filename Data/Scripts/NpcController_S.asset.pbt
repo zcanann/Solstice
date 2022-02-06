@@ -26,12 +26,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:NpcEnums"
-        AssetReference {
-          Id: 12101908598748837153
-        }
-      }
-      Overrides {
         Name: "cs:ProximityNetworkedObject"
         ObjectReference {
         }
@@ -42,7 +36,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Entities"
   VirtualFolderPath: "Npcs"

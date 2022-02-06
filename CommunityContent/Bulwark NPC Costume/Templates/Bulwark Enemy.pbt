@@ -10733,6 +10733,6 @@ Assets {
   Marketplace {
     Description: "StandardCombo\'s NPC With the Bulwark armour slapped over\r\n*Note to have gear for npc\'s in folders to work\r\n\r\n"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

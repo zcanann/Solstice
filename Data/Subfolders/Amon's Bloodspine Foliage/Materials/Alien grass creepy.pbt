@@ -2,7 +2,7 @@ Assets {
   Id: 11836589361506587342
   Name: "Alien grass creepy"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 1844215725814698786
     ParameterOverrides {

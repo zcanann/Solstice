@@ -2,7 +2,7 @@ Assets {
   Id: 2492337671770735356
   Name: "Tot green Amethyst"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 552968362047900815
     ParameterOverrides {

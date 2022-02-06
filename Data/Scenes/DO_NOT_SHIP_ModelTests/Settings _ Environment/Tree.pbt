@@ -1157,12 +1157,6 @@ Objects {
     TeamSettings {
     }
   }
-  InstanceHistory {
-    SelfId: 6531410529570140778
-    SubobjectId: 4894793636806916643
-    InstanceId: 10660522009245120420
-    TemplateId: 1437426229254830500
-  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }

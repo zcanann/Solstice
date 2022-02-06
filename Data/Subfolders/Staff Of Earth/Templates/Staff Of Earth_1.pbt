@@ -981,6 +981,6 @@ Assets {
   Marketplace {
     Description: "Staff Of Earth, boom boom !!"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

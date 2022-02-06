@@ -2,7 +2,7 @@ Assets {
   Id: 16794545872487483516
   Name: "Weapon - Burnt Skelly Top"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 4266267393531286666
     ParameterOverrides {

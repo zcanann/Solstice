@@ -2,7 +2,7 @@ Assets {
   Id: 4457162231510505654
   Name: "Custom -Lillies Vibrant"
   PlatformAssetType: 13
-  SerializationVersion: 104
+  SerializationVersion: 105
   CustomMaterialAsset {
     BaseMaterialId: 12243836034658870352
     ParameterOverrides {

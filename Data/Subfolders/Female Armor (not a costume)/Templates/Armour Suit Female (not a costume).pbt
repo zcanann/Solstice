@@ -15852,6 +15852,6 @@ Assets {
   Marketplace {
     Description: "This is a simple, basic female armor made of Equipments (I did this before finding out about costumes).\r\nPlease, feel free to modify, improve and republish it as your own! (It\'s quite a bit messy, but hey!)"
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   DirectlyPublished: true
 }

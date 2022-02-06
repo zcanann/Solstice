@@ -179,7 +179,7 @@ Assets {
       AssetId: "Military_Fence_-_End_Pole_Template"
     }
   }
-  SerializationVersion: 104
+  SerializationVersion: 105
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Props"
 }
