@@ -3,6 +3,7 @@ local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local startPosition = proximityNetworkedObject:GetWorldPosition()
 local engagePosition = nil
+local waypointStopDistance = 24.0
 
 function OnEngagementDataChanged(proximityDataId, data)
 end
@@ -30,13 +31,47 @@ function MoveTowardsAggroTarget(deltaSeconds, targetPlayer)
         FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Combat.REQUEST_DEAGGRO_PLAYER .. proximityNetworkedObject.id, { targetPlayer })
     elseif (targetPosition - npcPosition).size > meleeRadius then
         -- Update server-side NPC position
-        local movementVector = (targetPosition - npcPosition):GetNormalized() * movementSpeed * deltaSeconds
+        local delta = targetPosition - npcPosition
+        local movementVector = delta:GetNormalized() * movementSpeed * deltaSeconds
         npcPosition = npcPosition + movementVector
         FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION, npcPosition)
 
         -- Update waypoint position for movement prediction
         if not waypointPosition or targetPosition ~= waypointPosition then
             FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION, targetPosition)
+        end
+    end
+end
+
+function MoveTowardsPathingTarget(deltaSeconds)
+    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
+    local movementSpeed = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.MOVEMENT_SPEED)
+    local npcPosition = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION)
+    local waypointPosition = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION)
+
+    if not npcPosition then
+        npcPosition = proximityNetworkedObject:GetWorldPosition()
+    end
+
+    if aggroData and aggroData.recentlyDeaggroed then
+        if engagePosition then
+            -- Update server-side NPC position
+            local delta = engagePosition - npcPosition
+
+            if delta.size > waypointStopDistance then
+                local movementVector = delta:GetNormalized() * movementSpeed * deltaSeconds
+                npcPosition = npcPosition + movementVector
+                FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION, npcPosition)
+
+                -- Update waypoint position for movement prediction
+                if not waypointPosition or engagePosition ~= waypointPosition then
+                    FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION, engagePosition)
+                end
+            else
+                aggroData.recentlyDeaggroed = false
+            end
+        else
+            aggroData.recentlyDeaggroed = false
         end
     end
 end
@@ -49,6 +84,8 @@ function TickExternal(deltaSeconds)
             MoveTowardsAggroTarget(deltaSeconds, targetPlayer)
             break
         end
+    else
+        MoveTowardsPathingTarget(deltaSeconds)
     end
 end
 
