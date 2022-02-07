@@ -11,17 +11,16 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:AggroRadius"
         Float: 1500
       }
       Overrides {
+        Name: "cs:TetherRadius"
+        Float: 3000
+      }
+      Overrides {
         Name: "cs:MeleeRadius"
-        Float: 75
+        Float: 200
       }
       Overrides {
         Name: "cs:Height"

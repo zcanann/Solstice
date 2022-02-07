@@ -2,11 +2,12 @@
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local DROP_TABLE = script:GetCustomProperty("DropTable")
 local RESPAWN_TIME_MIN = script:GetCustomProperty("RespawnTimeMin")
 local RESPAWN_TIME_MAX = script:GetCustomProperty("RespawnTimeMax")
 local IS_AGRESSIVE = script:GetCustomProperty("IsAgressive")
+
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 
 -- Combat state
 local attackTimer = 0.0
@@ -78,14 +79,14 @@ end
 
 function SetEnemyHealth(newHealth)
     local health = GetEnemyHealth()
-    local maxHealth = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH)
+    local maxHealth = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH)
 
     -- if not isAlive then return end
     if health == nil then return end
     if maxHealth == nil then return end
 
     health = CoreMath.Clamp(newHealth, 0, maxHealth)
-    FRAMEWORK.Networking.SetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, health)
+    FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, health)
 
     if health <= 0 then
         DisconnectAllPlayers()
@@ -93,7 +94,7 @@ function SetEnemyHealth(newHealth)
 end
 
 function GetEnemyHealth()
-    return FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH) or 0
+    return FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH) or 0
 end
 
 function IsAlive()
@@ -114,13 +115,13 @@ function Respawn()
         return
     end
 
-    SetEnemyHealth(FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH))
+    SetEnemyHealth(FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH))
 
     respawnTimer = math.random(RESPAWN_TIME_MIN, RESPAWN_TIME_MAX)
 end
 
 function GetPlayersToDeaggro()
-    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
+    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
 
     if not aggroData then
         return
@@ -139,7 +140,7 @@ function GetPlayersToDeaggro()
 end
 
 function TickExternal(deltaSeconds)
-    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
+    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
     if aggroData then
         local aggroList = aggroData.aggroList
         if aggroList then

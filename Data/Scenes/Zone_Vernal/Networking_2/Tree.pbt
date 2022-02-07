@@ -1,24 +1,20 @@
 Name: "Networking_2"
-RootId: 18403497720307036111
+RootId: 6662944982781387592
 Objects {
-  Id: 11765038470458309184
+  Id: 7312723628135635094
   Name: "ServerContext"
   Transform {
     Location {
-      X: 5.96046448e-08
-      Y: 0.999999881
-      Z: -25
+      X: -0.0207160208
+      Y: 0.020716019
     }
     Rotation {
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
     }
   }
-  ParentId: 18403497720307036111
-  ChildIds: 918561679083319262
+  ParentId: 6662944982781387592
+  ChildIds: 10270788841086290699
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -34,12 +30,18 @@ Objects {
   NetworkContext {
     Type: Server
   }
+  InstanceHistory {
+    SelfId: 7312723628135635094
+    SubobjectId: 17780172340576486708
+    InstanceId: 7415420476799049711
+    TemplateId: 2465263127880219465
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 918561679083319262
+  Id: 10270788841086290699
   Name: "ProximityNetworkedData_S"
   Transform {
     Location {
@@ -52,12 +54,12 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11765038470458309184
+  ParentId: 7312723628135635094
   UnregisteredParameters {
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 17346586940929461580
+        SelfId: 7490631845461396168
       }
     }
   }
@@ -78,12 +80,18 @@ Objects {
       Id: 5474629016980680411
     }
   }
+  InstanceHistory {
+    SelfId: 10270788841086290699
+    SubobjectId: 2110767552414504617
+    InstanceId: 7415420476799049711
+    TemplateId: 2465263127880219465
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 110440362269105589
+  Id: 11749243369440527673
   Name: "LocalContext"
   Transform {
     Location {
@@ -96,17 +104,26 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18403497720307036111
-  ChildIds: 17346586940929461580
+  ParentId: 6662944982781387592
+  ChildIds: 7490631845461396168
   NetworkContext {
     Type: Local
   }
+  InstanceHistory {
+    SelfId: 11749243369440527673
+    SubobjectId: 3516868717998053531
+    InstanceId: 7415420476799049711
+    TemplateId: 2465263127880219465
+  }
 }
 Objects {
-  Id: 17346586940929461580
+  Id: 7490631845461396168
   Name: "ProximityNetworkedObject"
   Transform {
     Location {
+      X: -2344.49536
+      Y: 2310.78906
+      Z: 335
     }
     Rotation {
     }
@@ -116,8 +133,14 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 110440362269105589
+  ParentId: 11749243369440527673
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:Object"
+      ObjectReference {
+        SelfId: 16279939153616643214
+      }
+    }
     Overrides {
       Name: "cs:IsProximityNetworkCollider"
       Bool: true
@@ -125,20 +148,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedDataScript"
       ObjectReference {
-        SelfId: 918561679083319262
-      }
-    }
-    Overrides {
-      Name: "cs:ObjectType"
-      String: "Entity"
-    }
-    Overrides {
-      Name: "cs:UnitFrameCapture"
-      ObjectReference {
-        SelfId: 16787673979791816283
-        SubObjectId: 14725643823824657908
-        InstanceId: 11344967336301048707
-        TemplateId: 7662072430726303162
+        SelfId: 10270788841086290699
       }
     }
     Overrides {
@@ -150,19 +160,11 @@ Objects {
       Bool: false
     }
     Overrides {
-      Name: "cs:ObjectType:isrep"
+      Name: "cs:Object:isrep"
       Bool: false
     }
     Overrides {
-      Name: "cs:ObjectType:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:UnitFrameCapture:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:UnitFrameCapture:ml"
+      Name: "cs:Object:ml"
       Bool: false
     }
   }

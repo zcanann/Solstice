@@ -1,22 +1,22 @@
 -- IMPORTANT: The location of this script in world space is used as the move position
 
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local propStopRadius = script:GetCustomProperty("StopRadius")
+local STOP_RADIUS = script:GetCustomProperty("StopRadius")
 
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local name = "Unknown"
 
 -- TODO: Take a source and StopRadius param, which
 function GetWalkableDestination()
-    return Framework.Networking.GetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.POSITION) or propProximityNetworkedObject:GetWorldPosition()
+    return FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION) or proximityNetworkedObject:GetWorldPosition()
 end
 
 function Interact(callback)
-    if propProximityNetworkedObject then
+    if proximityNetworkedObject then
         Chat.LocalMessage("Walking to " .. name .. "...")
     end
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Movement.EVENT_REQUEST_MOVE_NEAR_LOCATION, { GetWalkableDestination(), propStopRadius, callback })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Movement.EVENT_REQUEST_MOVE_NEAR_LOCATION, { GetWalkableDestination(), STOP_RADIUS, callback })
 end
 
 function WalkForInteraction(callback)
@@ -28,13 +28,13 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk to " .. name, callback })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk to " .. name, callback })
 end
 
 function OnNameChanged(proximityDataId, newName)
     name = newName or "Unknown"
 end
 
-Framework.Events.ListenForProximityEvent(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.NAME, OnNameChanged)
-Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. propProximityNetworkedObject.id, WalkForInteraction)
-Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. propProximityNetworkedObject.id, ShowOption)
+FRAMEWORK.Events.ListenForProximityEvent(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.NAME, OnNameChanged)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. proximityNetworkedObject.id, WalkForInteraction)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. proximityNetworkedObject.id, ShowOption)

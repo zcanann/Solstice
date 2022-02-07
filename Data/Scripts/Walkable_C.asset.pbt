@@ -14,11 +14,6 @@ Assets {
         Name: "cs:StopRadius"
         Float: 100
       }
-      Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
-      }
     }
   }
   SerializationVersion: 105

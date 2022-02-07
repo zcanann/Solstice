@@ -10,19 +10,6 @@ Assets {
           Id: 14480759715348141780
         }
       }
-      Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:ProximityNetworkedObject:isrep"
-        Bool: false
-      }
-      Overrides {
-        Name: "cs:ProximityNetworkedObject:ml"
-        Bool: false
-      }
     }
   }
   SerializationVersion: 105

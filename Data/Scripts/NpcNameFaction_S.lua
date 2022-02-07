@@ -1,12 +1,13 @@
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
-local propName = script:GetCustomProperty("Name")
-local propFaction = script:GetCustomProperty("Faction")
-local propRace = script:GetCustomProperty("Race")
-local propTitle = script:GetCustomProperty("Title")
+local NAME = script:GetCustomProperty("Name")
+local FACTION = script:GetCustomProperty("Faction")
+local RACE = script:GetCustomProperty("Race")
+local TITLE = script:GetCustomProperty("Title")
 
-Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.NAME, propName)
-Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.FACTION, propFaction)
-Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.RACE, propRace)
-Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.TITLE, propTitle)
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
+
+FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.NAME, NAME)
+FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.FACTION, FACTION)
+FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.RACE, RACE)
+FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.TITLE, TITLE)

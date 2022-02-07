@@ -3,6 +3,7 @@ local TableUtils = require(script:GetCustomProperty("TableUtils"))
 local EventKeysAPI = { }
 
 EventKeysAPI.Animations = require(script:GetCustomProperty("AnimationEvents"))
+EventKeysAPI.Combat = require(script:GetCustomProperty("CombatEvents"))
 EventKeysAPI.CharacterSelect = require(script:GetCustomProperty("CharacterSelectEvents"))
 EventKeysAPI.Chat = require(script:GetCustomProperty("ChatCommandEvents"))
 EventKeysAPI.Storage = require(script:GetCustomProperty("StorageEvents"))

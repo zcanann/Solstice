@@ -11,11 +11,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:FrostResistance"
         Int: 0
       }

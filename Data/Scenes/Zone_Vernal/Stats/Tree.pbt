@@ -1,7 +1,7 @@
-Name: "NpcData_2"
-RootId: 2862309105971316705
+Name: "Stats"
+RootId: 5236876213986502251
 Objects {
-  Id: 14763865607361313132
+  Id: 10222847960794158459
   Name: "NpcPositionalStats_S"
   Transform {
     Location {
@@ -14,14 +14,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2862309105971316705
+  ParentId: 5236876213986502251
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -45,7 +39,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6719554274237472629
+  Id: 7528667926306098584
   Name: "NpcOffensiveStats_S"
   Transform {
     Location {
@@ -58,20 +52,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2862309105971316705
+  ParentId: 5236876213986502251
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -95,7 +77,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5414038384375960982
+  Id: 15314705163409894404
   Name: "NpcDefensiveStats_S"
   Transform {
     Location {
@@ -108,20 +90,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2862309105971316705
+  ParentId: 5236876213986502251
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -145,61 +115,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1203551570909611507
-  Name: "NpcStats_S"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 2862309105971316705
-  UnregisteredParameters {
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
-    Overrides {
-      Name: "cs:MeleeRadius"
-      Float: 200
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Script {
-    ScriptAsset {
-      Id: 7867712670032685259
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 394624392561640551
+  Id: 4372120763134250693
   Name: "NpcNameFaction_S"
   Transform {
     Location {
@@ -212,31 +128,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2862309105971316705
+  ParentId: 5236876213986502251
   UnregisteredParameters {
     Overrides {
       Name: "cs:Name"
-      String: "Eldia"
+      String: "Lost Soul"
     }
     Overrides {
       Name: "cs:Race"
-      String: "Orc"
-    }
-    Overrides {
-      Name: "cs:Npc"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
-    Overrides {
-      Name: "cs:Faction"
-      String: "Ithkuil"
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
+      String: "Undead"
     }
   }
   Collidable_v2 {
@@ -254,6 +154,44 @@ Objects {
   Script {
     ScriptAsset {
       Id: 4891227166975548473
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14910068884589071874
+  Name: "NpcBaseStats_S"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5236876213986502251
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7867712670032685259
     }
   }
   NetworkRelevanceDistance {

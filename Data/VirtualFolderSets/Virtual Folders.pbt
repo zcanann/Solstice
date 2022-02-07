@@ -29,10 +29,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Triggers"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Utils"
       PlatformAssetType: 3
     }
@@ -597,6 +593,10 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Selection"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Triggers"
       PlatformAssetType: 5
     }
   }

@@ -4,11 +4,6 @@ Assets {
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
-      Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
-      }
     }
   }
   SerializationVersion: 105

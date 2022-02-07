@@ -1,12 +1,12 @@
 Assets {
-  Id: 8030600426270198785
+  Id: 12484271512640405953
   Name: "HitTestObject_C"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 17657545858899555500
+      RootId: 11506194768157927954
       Objects {
-        Id: 17657545858899555500
+        Id: 11506194768157927954
         Name: "HitTestObject_C"
         Transform {
           Scale {
@@ -15,8 +15,43 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13691755317420737223
-        ChildIds: 16995028790461838616
+        ParentId: 17493249929402542544
+        ChildIds: 16594420887398586026
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 16594420887398586026
+        Name: "Hitbox"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 2.2
+          }
+        }
+        ParentId: 11506194768157927954
+        ChildIds: 17914603689580173086
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -25,7 +60,7 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 841534158063459245
+              Id: 17803366332466114312
             }
           }
         }
@@ -63,7 +98,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16995028790461838616
+        Id: 17914603689580173086
         Name: "HitTestable_C"
         Transform {
           Location {
@@ -76,12 +111,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17657545858899555500
+        ParentId: 16594420887398586026
         UnregisteredParameters {
           Overrides {
             Name: "cs:MouseHitTestCollision"
             ObjectReference {
-              SubObjectId: 17657545858899555500
+              SubObjectId: 16594420887398586026
             }
           }
         }
@@ -114,6 +149,15 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 17803366332466114312
+      Name: "Invisible"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_invisible_001"
       }
     }
     PrimaryAssetId {

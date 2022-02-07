@@ -42,6 +42,7 @@ EntityProximityKeys.SPELL_PENETRATION = "spell_penetration"
 -- Spatial
 EntityProximityKeys.AGGRO_RADIUS = "aggro_radius"
 EntityProximityKeys.MELEE_RADIUS = "melee_radius"
+EntityProximityKeys.TETHER_RADIUS = "tether_radius"
 EntityProximityKeys.HEIGHT = "height"
 EntityProximityKeys.MOVEMENT_SPEED = "movement_speed"
 

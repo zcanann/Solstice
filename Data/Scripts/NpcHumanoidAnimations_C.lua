@@ -1,8 +1,8 @@
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local HUMANOID_RIG = script:GetCustomProperty("HumanoidRig"):WaitForObject()
 
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local health = nil
 
 function OnNetworkDataChanged(key)
@@ -55,5 +55,5 @@ end
 ReturnToStance()
 
 -- Runtime combat (move these?)
-FRAMEWORK.Events.ListenForProximityEvent(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
-FRAMEWORK.Events.ListenForProximityEvent(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)
+FRAMEWORK.Events.ListenForProximityEvent(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
+FRAMEWORK.Events.ListenForProximityEvent(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, OnNetworkDataChanged)

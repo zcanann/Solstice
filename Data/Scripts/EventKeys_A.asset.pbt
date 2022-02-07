@@ -29,6 +29,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:CombatEvents"
+        AssetReference {
+          Id: 7592399729258243532
+        }
+      }
+      Overrides {
         Name: "cs:DialogEvents"
         AssetReference {
           Id: 3170869226745027241

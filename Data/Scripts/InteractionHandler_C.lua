@@ -10,8 +10,6 @@ function TryInteractRecursive(target, primary)
 
     local proximityNetworkedObjectId = nil
 
-    print(target)
-
     if target:IsA("Player") then
         proximityNetworkedObjectId = target.id
     else

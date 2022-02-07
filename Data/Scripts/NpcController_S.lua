@@ -5,18 +5,17 @@ local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 local NPC_COMBAT = script:GetCustomProperty("NpcCombat"):WaitForObject().context
 local NPC_MOVEMENT_PATHING = script:GetCustomProperty("NpcMovementPathing"):WaitForObject().context
 local NPC_ENGAGEMENT_VISUALIZER = script:GetCustomProperty("NpcEngagementVisualizer"):WaitForObject().context
-
-local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local MAX_ENGAGEMENTS = script:GetCustomProperty("MaxEngagements")
 
-local aggroList = { }
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local playersInRange = { }
-
--- Set the server-side reference to the list of aggro'd players/npcs.
-FRAMEWORK.Networking.SetServerOnlyData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S,
+local aggroData =
 {
-    aggroList = aggroList,
-})
+    aggroList = { },
+    recentlyDeaggroed = false,
+}
+
+FRAMEWORK.Networking.SetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S, aggroData)
 
 function PlayerEnteredNetworkingRange(newPlayer, _)
     playersInRange[newPlayer] = true
@@ -27,11 +26,11 @@ function PlayerLeftNetworkingRange(removedPlayer, _)
     Deaggro(removedPlayer)
 end
 
-function IsPlayerAggrod(player)
+function IsPlayerAggroed(player)
     if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
-    return aggroList[player] ~= nil
+    return aggroData.aggroList[player] ~= nil
 end
 
 function Aggro(player)
@@ -40,7 +39,12 @@ function Aggro(player)
     end
 
     -- Deny the request if at our engagement limit
-    if MAX_ENGAGEMENTS >= 0 and #aggroList >= MAX_ENGAGEMENTS then
+    if MAX_ENGAGEMENTS >= 0 and #aggroData.aggroList >= MAX_ENGAGEMENTS then
+        return
+    end
+
+    -- Deny the request if recently deaggroed
+    if aggroData.recentlyDeaggroed then
         return
     end
 
@@ -49,7 +53,10 @@ function Aggro(player)
         return
     end
 
-    aggroList[player] = true
+    aggroData.aggroList[player] = true
+    FRAMEWORK.Print("AGGROED")
+
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Combat.AGGRO_PLAYER .. proximityNetworkedObject.id, { player })
 end
 
 function Deaggro(player)
@@ -57,13 +64,22 @@ function Deaggro(player)
         return
     end
 
-    aggroList[player] = nil
+    if not aggroData.aggroList[player] then
+        return
+    end
+
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Combat.DEAGGRO_PLAYER .. proximityNetworkedObject.id, { player })
+
+    aggroData.aggroList[player] = nil
+    aggroData.recentlyDeaggroed = true
+
+    FRAMEWORK.Print("DEAGGROED")
     -- player.serverUserData.engagement = nil
     -- FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function DeaggroAllPlayers()
-    for player, _ in pairs(aggroList) do
+    for player, _ in pairs(aggroData.aggroList) do
         Deaggro(player)
     end
 end
@@ -92,13 +108,13 @@ function PlayerEngageNpc(player)
     FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
-        objectId = PROXIMITY_NETWORKED_OBJECT.id,
+        objectId = proximityNetworkedObject.id,
         animationName = "MiningAnimation", -- Remove, probably
     })
 end
 
 function Tick(deltaSeconds)
-    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(aggroList)
+    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(aggroData.aggroList)
 
     local toDeaggro = NPC_COMBAT.GetPlayersToDeaggro()
     if toDeaggro then
@@ -108,11 +124,11 @@ function Tick(deltaSeconds)
     end
 
     -- Agro the first player within range
-    if FRAMEWORK.Utils.Table.Count(aggroList) <= 0 then
-        local selfPosition = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION) or PROXIMITY_NETWORKED_OBJECT:GetWorldPosition()
-        local aggroRadius = FRAMEWORK.Networking.GetProximityData(PROXIMITY_NETWORKED_OBJECT.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_RADIUS) or 0.0
+    if FRAMEWORK.Utils.Table.Count(aggroData.aggroList) <= 0 then
+        local selfPosition = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION) or proximityNetworkedObject:GetWorldPosition()
+        local aggroRadius = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_RADIUS) or 0.0
         for player, _ in pairs(playersInRange) do
-            if Object.IsValid(player) and not aggroList[player] then
+            if Object.IsValid(player) and not aggroData.aggroList[player] then
                 local delta = player:GetWorldPosition() - selfPosition
                 local distance = delta.size
                 if distance <= aggroRadius then
@@ -128,6 +144,7 @@ function Tick(deltaSeconds)
     NPC_ENGAGEMENT_VISUALIZER.TickExternal(deltaSeconds)
 end
 
-FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_ENTERED_PROXIMITY_OBJECT_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, PlayerEnteredNetworkingRange)
-FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_LEFT_PROXIMITY_OBJECT_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, PlayerLeftNetworkingRange)
-FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, PlayerEngageNpc)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Combat.REQUEST_DEAGGRO_PLAYER .. proximityNetworkedObject.id, Deaggro)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_ENTERED_PROXIMITY_OBJECT_RANGE_PREFIX .. proximityNetworkedObject.id, PlayerEnteredNetworkingRange)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_LEFT_PROXIMITY_OBJECT_RANGE_PREFIX .. proximityNetworkedObject.id, PlayerLeftNetworkingRange)
+FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. proximityNetworkedObject.id, PlayerEngageNpc)

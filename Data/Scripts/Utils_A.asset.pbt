@@ -17,6 +17,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:HierarchyUtils"
+        AssetReference {
+          Id: 16394335841951525673
+        }
+      }
+      Overrides {
         Name: "cs:ObjectsUtils"
         AssetReference {
           Id: 12711822042249602293

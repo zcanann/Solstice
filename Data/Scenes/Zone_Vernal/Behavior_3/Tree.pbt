@@ -1,7 +1,7 @@
 Name: "Behavior_3"
-RootId: 2058956127506152909
+RootId: 6828916265317003058
 Objects {
-  Id: 15265514686607499560
+  Id: 1480309694032107779
   Name: "ServerContext"
   Transform {
     Location {
@@ -14,10 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2058956127506152909
-  ChildIds: 2862309105971316705
-  ChildIds: 4999244393636055979
-  ChildIds: 14460312518976504560
+  ParentId: 6828916265317003058
+  ChildIds: 2567685587979568615
+  ChildIds: 18250575685733604421
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -33,13 +32,19 @@ Objects {
   NetworkContext {
     Type: Server
   }
+  InstanceHistory {
+    SelfId: 1480309694032107779
+    SubobjectId: 9247258854874242901
+    InstanceId: 16754664220148089149
+    TemplateId: 7175104089856678757
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 14460312518976504560
-  Name: "QuestGiver_S"
+  Id: 18250575685733604421
+  Name: "EngagementSessionResource_S"
   Transform {
     Location {
     }
@@ -51,22 +56,46 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15265514686607499560
+  ParentId: 1480309694032107779
   UnregisteredParameters {
+    Overrides {
+      Name: "cs:SkillId"
+      String: "woodcutting"
+    }
+    Overrides {
+      Name: "cs:Exp"
+      Int: 18
+    }
+    Overrides {
+      Name: "cs:MinResources"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:MaxResources"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:RequiredItemType"
+      String: "hatchet"
+    }
+    Overrides {
+      Name: "cs:ResourceItem"
+      String: "birch_wood"
+    }
     Overrides {
       Name: "cs:Object"
       ObjectReference {
-        SelfId: 17351291876623604907
+        SelfId: 18381909490888779215
       }
     }
     Overrides {
-      Name: "cs:QuestKey"
-      String: "TUTORIAL_MINE_COPPER"
+      Name: "cs:BaseDuration"
+      Float: 3.2
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 17346586940929461580
+        SelfId: 13168546176446186785
       }
     }
   }
@@ -84,16 +113,22 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 7380580963784353904
+      Id: 15725608099489840980
     }
+  }
+  InstanceHistory {
+    SelfId: 18250575685733604421
+    SubobjectId: 7609061222847928851
+    InstanceId: 16754664220148089149
+    TemplateId: 7175104089856678757
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 4999244393636055979
-  Name: "EngagementSessionDialog_S"
+  Id: 2567685587979568615
+  Name: "ResourceData_S"
   Transform {
     Location {
     }
@@ -105,19 +140,45 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 15265514686607499560
+  ParentId: 1480309694032107779
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
+      Name: "cs:RequiredItemType"
+      String: "hatchet"
+    }
+    Overrides {
+      Name: "cs:ResourceItem"
+      String: "birch_wood"
+    }
+    Overrides {
+      Name: "cs:SkillId"
+      String: "woodcutting"
+    }
+    Overrides {
+      Name: "cs:Exp"
+      Int: 18
+    }
+    Overrides {
+      Name: "cs:BaseDuration"
+      Float: 3.2
+    }
+    Overrides {
+      Name: "cs:MinResources"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:MaxResources"
+      Int: 4
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 17346586940929461580
+        SelfId: 13168546176446186785
       }
+    }
+    Overrides {
+      Name: "cs:Name"
+      String: "Birch Tree"
     }
   }
   Collidable_v2 {
@@ -134,51 +195,21 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 8987297397785865558
+      Id: 2139436041507685068
     }
+  }
+  InstanceHistory {
+    SelfId: 2567685587979568615
+    SubobjectId: 13221866252213748657
+    InstanceId: 16754664220148089149
+    TemplateId: 7175104089856678757
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 2862309105971316705
-  Name: "NpcData"
-  Transform {
-    Location {
-    }
-    Rotation {
-      Yaw: 6.83018834e-06
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15265514686607499560
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "NpcData_2"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 12299963393686506760
+  Id: 3942879787667709141
   Name: "ClientContext"
   Transform {
     Location {
@@ -191,11 +222,10 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2058956127506152909
-  ChildIds: 9287987596664656546
-  ChildIds: 14589941801162997866
-  ChildIds: 15594024896408941852
-  ChildIds: 2342025470382023138
+  ParentId: 6828916265317003058
+  ChildIds: 13794504851419128905
+  ChildIds: 6287846431746492151
+  ChildIds: 12312841247752294353
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -210,21 +240,23 @@ Objects {
   }
   NetworkContext {
   }
+  InstanceHistory {
+    SelfId: 3942879787667709141
+    SubobjectId: 11702653638974691971
+    InstanceId: 16754664220148089149
+    TemplateId: 7175104089856678757
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 2342025470382023138
-  Name: "NpcHumanoidAnimations_C"
+  Id: 12312841247752294353
+  Name: "ResourceDepletionVisuals_C"
   Transform {
     Location {
-      X: 180.403076
-      Y: -980.999878
-      Z: 5
     }
     Rotation {
-      Yaw: 89.9999924
     }
     Scale {
       X: 1
@@ -232,18 +264,60 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12299963393686506760
+  ParentId: 3942879787667709141
   UnregisteredParameters {
     Overrides {
-      Name: "cs:HumanoidRig"
+      Name: "cs:BaseHasResources"
       ObjectReference {
-        SelfId: 17493249929402542544
+        SelfId: 15569523476864549604
+      }
+    }
+    Overrides {
+      Name: "cs:BaseFullDepletion"
+      ObjectReference {
+        SelfId: 9580032928316921864
+      }
+    }
+    Overrides {
+      Name: "cs:DepletableResource1"
+      ObjectReference {
+        SelfId: 8158299594943919293
+      }
+    }
+    Overrides {
+      Name: "cs:DepletableResource2"
+      ObjectReference {
+        SelfId: 4054200876105874662
+      }
+    }
+    Overrides {
+      Name: "cs:DepletableResource3"
+      ObjectReference {
+        SelfId: 2538148462690452866
+      }
+    }
+    Overrides {
+      Name: "cs:DepletableResource4"
+      ObjectReference {
+        SelfId: 18342984586006787790
+      }
+    }
+    Overrides {
+      Name: "cs:DepletableResource5"
+      ObjectReference {
+        SelfId: 17959323340049716429
+      }
+    }
+    Overrides {
+      Name: "cs:DepletableResource6"
+      ObjectReference {
+        SelfId: 7531506031105686129
       }
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 17346586940929461580
+        SelfId: 13168546176446186785
       }
     }
   }
@@ -261,50 +335,21 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 16576816505681894369
+      Id: 11102507718474275295
     }
+  }
+  InstanceHistory {
+    SelfId: 12312841247752294353
+    SubobjectId: 4467639949336316295
+    InstanceId: 16754664220148089149
+    TemplateId: 7175104089856678757
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15594024896408941852
-  Name: "QuestVisuals"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 12299963393686506760
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "QuestVisuals"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 14589941801162997866
+  Id: 6287846431746492151
   Name: "Walkable_C"
   Transform {
     Location {
@@ -317,30 +362,16 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12299963393686506760
+  ParentId: 3942879787667709141
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
     Overrides {
       Name: "cs:StopRadius"
       Float: 200
     }
     Overrides {
-      Name: "cs:Object:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Object:ml"
-      Bool: false
-    }
-    Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 17346586940929461580
+        SelfId: 13168546176446186785
       }
     }
   }
@@ -361,15 +392,23 @@ Objects {
       Id: 13256092117753200766
     }
   }
+  InstanceHistory {
+    SelfId: 6287846431746492151
+    SubobjectId: 14095468854766567585
+    InstanceId: 16754664220148089149
+    TemplateId: 7175104089856678757
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 9287987596664656546
-  Name: "Talkable_C"
+  Id: 13794504851419128905
+  Name: "Choppable_C"
   Transform {
     Location {
+      X: 0.000690533896
+      Y: 0.000690534
     }
     Rotation {
     }
@@ -379,16 +418,20 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 12299963393686506760
+  ParentId: 3942879787667709141
   UnregisteredParameters {
     Overrides {
-      Name: "cs:DefaultDialogKey"
-      String: "welcome_human"
+      Name: "cs:InteractText"
+      String: "Chop %s"
+    }
+    Overrides {
+      Name: "cs:InteractingText"
+      String: "Chopping..."
     }
     Overrides {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
-        SelfId: 17346586940929461580
+        SelfId: 13168546176446186785
       }
     }
   }
@@ -406,8 +449,14 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 15932647530187038661
+      Id: 10607008671878214838
     }
+  }
+  InstanceHistory {
+    SelfId: 13794504851419128905
+    SubobjectId: 3148064718191190559
+    InstanceId: 16754664220148089149
+    TemplateId: 7175104089856678757
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
