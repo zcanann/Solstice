@@ -15,7 +15,9 @@ Objects {
     }
   }
   ParentId: 2309398194259210379
+  ChildIds: 707944285633386635
   ChildIds: 11248217384249929736
+  ChildIds: 4960418599785708086
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -36,6 +38,53 @@ Objects {
     SubobjectId: 4252052493131208959
     InstanceId: 7415420476799049711
     TemplateId: 2465263127880219465
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4960418599785708086
+  Name: "EngagementVisualizer_S"
+  Transform {
+    Location {
+      X: 717.709717
+      Y: 2711.78711
+      Z: 380
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12160155335558858077
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 13585970696264302414
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15724300102369226823
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -120,6 +169,173 @@ Objects {
     SubobjectId: 1142346345642716586
     InstanceId: 7415420476799049711
     TemplateId: 2465263127880219465
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 707944285633386635
+  Name: "ResourceData_S"
+  Transform {
+    Location {
+      X: 717.709717
+      Y: 2711.78711
+      Z: 380
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12160155335558858077
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:ProximityNetworkedObject:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MaxEngagements"
+      Int: -1
+    }
+    Overrides {
+      Name: "cs:MaxEngagements:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MaxEngagements:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RequiredItemType"
+      String: "fishing_pole"
+    }
+    Overrides {
+      Name: "cs:RequiredItemType:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RequiredItemType:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ResourceItem"
+      String: "shrimp"
+    }
+    Overrides {
+      Name: "cs:ResourceItem:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ResourceItem:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SkillId"
+      String: "fishing"
+    }
+    Overrides {
+      Name: "cs:SkillId:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:SkillId:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RequiredSkillLevel"
+      Int: 0
+    }
+    Overrides {
+      Name: "cs:RequiredSkillLevel:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:RequiredSkillLevel:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Exp"
+      Int: 18
+    }
+    Overrides {
+      Name: "cs:Exp:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Exp:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:BaseDuration"
+      Float: 3.2
+    }
+    Overrides {
+      Name: "cs:BaseDuration:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:BaseDuration:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MinResources"
+      Int: 4
+    }
+    Overrides {
+      Name: "cs:MinResources:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MinResources:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MaxResources"
+      Int: 6
+    }
+    Overrides {
+      Name: "cs:MaxResources:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:MaxResources:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:Name"
+      String: "School of Shrimp"
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedObject"
+      ObjectReference {
+        SelfId: 13585970696264302414
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 2139436041507685068
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
