@@ -120,9 +120,6 @@ Objects {
   Name: "ProximityNetworkedObject"
   Transform {
     Location {
-      X: -3062.20508
-      Y: -400.997925
-      Z: -60
     }
     Rotation {
     }

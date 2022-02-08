@@ -57800,12 +57800,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Terrain"
-      ObjectReference {
-        SelfId: 8110563828106138299
-      }
-    }
-    Overrides {
       Name: "cs:CameraCaptureImage"
       ObjectReference {
         SelfId: 3844671263496439342

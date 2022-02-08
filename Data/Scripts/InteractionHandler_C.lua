@@ -55,24 +55,28 @@ local function OnMouseDown(cursorPosition, primary)
     local probePosition = probeHitResult:GetImpactPosition()
     local newProbePosition = probePosition + (probePosition - viewPosition):GetNormalized() * maxProbeDistance
 
-    -- TODO: This is a lazy approach to use the previous hit result, steal the destination coordinates, and perform another hit test that includes players
-    -- Ideally, we would just do one hit test in the first place.
+    -- This approach does a probe hit test, then uses the destination coordinates, and perform another hit test that includes players
+    -- TODO: Ideally, we would just do one hit test in the first place.
     -- TODO: This should only be checking nearby players, which should be determinable from received proxyimityNetworkedData
-    -- Also, this should not hit-test the player themselves, but instead a spawned attached hit test object with a larger click hitbox
+    -- TODO: This should not hit-test the player themselves, but instead a spawned attached hit test object with a larger click hitbox
     local allHitResults = World.RaycastAll(viewPosition, newProbePosition, { ignorePlayers = { localPlayer } })
 
     -- Initialize hit result to the initial probe
     local localPlayerZ = localPlayer:GetWorldPosition().z
     local hitResult = probeHitResult
-    local hitResultZDelta = math.abs(localPlayerZ - probePosition.z)
+    local hitResultZDelta = nil
 
-    -- Iterate through all raycast hit results, and find the one with the closest Z position to the player
+    -- Iterate through all raycast hit results, and find the closest valid target. Prioritize targets with the most similar vertical height to the player.
     for _, nextHitResult in pairs(allHitResults) do
-        local zDelta = math.abs(localPlayerZ - nextHitResult:GetImpactPosition().z)
-        if zDelta < hitResultZDelta then
-            hitResult = nextHitResult
-            hitResultZDelta = zDelta
+        local ignoreHitTest, exists = nextHitResult.other:GetCustomProperty("IgnoreHitTest")
+        if not exists or not ignoreHitTest then
+            local zDelta = math.abs(localPlayerZ - nextHitResult:GetImpactPosition().z)
+            if not hitResultZDelta or zDelta < hitResultZDelta then
+                hitResult = nextHitResult
+                hitResultZDelta = zDelta
+            end
         end
+        print(nextHitResult.other)
     end
 
     if hitResult ~= nil and hitResult.other ~= nil then
