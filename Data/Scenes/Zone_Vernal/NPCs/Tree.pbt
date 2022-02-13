@@ -28,6 +28,15 @@ Objects {
         SelfId: 12038562727714009760
       }
     }
+    Overrides {
+      Name: "cs:UnitFrameCapture"
+      ObjectReference {
+        SelfId: 10651486915064555815
+        SubObjectId: 14725643823824657908
+        InstanceId: 18003901280300978659
+        TemplateId: 7662072430726303162
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -554,7 +563,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Networking"
+    FilePartitionName: "Networking_1"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -587,6 +596,15 @@ Objects {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
         SelfId: 4645175322474296769
+      }
+    }
+    Overrides {
+      Name: "cs:UnitFrameCapture"
+      ObjectReference {
+        SelfId: 1434551936447509813
+        SubObjectId: 14725643823824657908
+        InstanceId: 14400036959122027
+        TemplateId: 7662072430726303162
       }
     }
   }
@@ -1028,7 +1046,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Networking_1"
+    FilePartitionName: "Networking_5"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -1065,6 +1083,15 @@ Objects {
       Name: "cs:ProximityNetworkedObject"
       ObjectReference {
         SelfId: 17346586940929461580
+      }
+    }
+    Overrides {
+      Name: "cs:UnitFrameCapture"
+      ObjectReference {
+        SelfId: 16787673979791816283
+        SubObjectId: 14725643823824657908
+        InstanceId: 11344967336301048707
+        TemplateId: 7662072430726303162
       }
     }
     Overrides {
@@ -2930,7 +2957,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Networking_5"
+    FilePartitionName: "Networking_6"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

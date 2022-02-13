@@ -1,5 +1,7 @@
 local CameraCapture = { }
 
+local HIERARCHY_UTILS = require(script:GetCustomProperty("HierarchyUtils"))
+
 function HideEquipmentForCapture(entity)
 	if Object.IsValid(entity) then
 		if entity:IsA("Player") then
@@ -40,8 +42,8 @@ CameraCapture.GetCaptureCamera = function (objectInstance)
 			return GetCaptureCameraFromRoot(objectInstance.clientUserData.unitFrameCamera)
 		end
 	else
-		local captureRootRef = objectInstance:GetCustomProperty("UnitFrameCapture")
-		return GetCaptureCameraFromRoot(captureRootRef:GetObject())
+		local captureRoot = HIERARCHY_UTILS.WalkParentStackForCustomProperty(objectInstance, "UnitFrameCapture")
+		return GetCaptureCameraFromRoot(captureRoot)
 	end
     return nil
 end

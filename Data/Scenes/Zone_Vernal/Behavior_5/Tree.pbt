@@ -107,18 +107,6 @@ Objects {
   }
   ParentId: 15265514686607499560
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -269,28 +257,8 @@ Objects {
   ParentId: 12299963393686506760
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 17351291876623604907
-      }
-    }
-    Overrides {
       Name: "cs:StopRadius"
       Float: 200
-    }
-    Overrides {
-      Name: "cs:Object:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Object:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
     }
   }
   Collidable_v2 {
@@ -333,12 +301,6 @@ Objects {
     Overrides {
       Name: "cs:DefaultDialogKey"
       String: "welcome_human"
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
     }
   }
   Collidable_v2 {
@@ -386,12 +348,6 @@ Objects {
       Name: "cs:HumanoidRig"
       ObjectReference {
         SelfId: 17493249929402542544
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
       }
     }
   }

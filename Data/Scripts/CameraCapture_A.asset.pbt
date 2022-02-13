@@ -5,13 +5,10 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Rig"
-        ObjectReference {
+        Name: "cs:HierarchyUtils"
+        AssetReference {
+          Id: 16394335841951525673
         }
-      }
-      Overrides {
-        Name: "cs:Slot"
-        String: ""
       }
     }
   }

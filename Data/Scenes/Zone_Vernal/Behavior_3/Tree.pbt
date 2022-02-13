@@ -17,6 +17,7 @@ Objects {
   ParentId: 6828916265317003058
   ChildIds: 2567685587979568615
   ChildIds: 18250575685733604421
+  ChildIds: 4981348511668452586
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -37,6 +38,44 @@ Objects {
     SubobjectId: 9247258854874242901
     InstanceId: 16754664220148089149
     TemplateId: 7175104089856678757
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 4981348511668452586
+  Name: "EngagementVisualizer_S"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1480309694032107779
+  UnregisteredParameters {
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 15724300102369226823
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -91,12 +130,6 @@ Objects {
     Overrides {
       Name: "cs:BaseDuration"
       Float: 3.2
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13168546176446186785
-      }
     }
   }
   Collidable_v2 {

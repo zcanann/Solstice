@@ -1,19 +1,19 @@
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject() ---@type StaticMesh
 local DEFAULT_DIALOG_KEY = script:GetCustomProperty("DefaultDialogKey")
 local DIALOG_RANGE = script:GetCustomProperty("DialogRange")
 
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local name = "Unknown"
 
 function BeginTalk()
-    Framework.Print("Talking...")
+    FRAMEWORK.Print("Talking...")
     local data = {
-        proximityNetworkedObject = PROXIMITY_NETWORKED_OBJECT,
+        proximityNetworkedObject = proximityNetworkedObject,
         range = DIALOG_RANGE,
         dialogKey = DEFAULT_DIALOG_KEY,
     }
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Dialog.EVENT_PLAYER_REQUESTS_DEFAULT_DIALOG, { data })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Dialog.EVENT_PLAYER_REQUESTS_DEFAULT_DIALOG, { data })
 end
 
 function StopTalk()
@@ -24,7 +24,7 @@ function Interact()
         BeginTalk()
     end
 
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, { callback })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. proximityNetworkedObject.id, { callback })
 end
 
 function ShowOption()
@@ -32,13 +32,13 @@ function ShowOption()
         Interact()
     end
 
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Talk to " .. name, callback })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Talk to " .. name, callback })
 end
 
 function OnNameChanged(proximityDataId, newName)
     name = newName or "Unknown"
 end
 
-Framework.Events.ListenForProximityEvent(PROXIMITY_NETWORKED_OBJECT.id, Framework.Networking.ProximityKeys.Entity.NAME, OnNameChanged)
-Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, Interact)
-Framework.Events.Listen(Framework.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, ShowOption)
+FRAMEWORK.Events.ListenForProximityEvent(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.NAME, OnNameChanged)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Interaction.EVENT_DEFAULT_INTERACTION_PREFIX .. proximityNetworkedObject.id, Interact)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Interaction.EVENT_QUERY_INTERACT_OPTIONS_PREFIX .. proximityNetworkedObject.id, ShowOption)

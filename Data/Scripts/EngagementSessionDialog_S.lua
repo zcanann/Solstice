@@ -1,18 +1,18 @@
 -- Handles the dialog engagement session between a player and an NPC
-local Framework = require(script:GetCustomProperty("Framework"))
-local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local engagedPlayers = { }
 
 function IsPlayerConnected(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
     return engagedPlayers[player] ~= nil
 end
 
 function Connect(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
@@ -37,27 +37,27 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the player's proximity data
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
-        objectId = propProximityNetworkedObject.id,
+        objectId = proximityNetworkedObject.id,
         animationName = ""
     })
 end
 
 function Disconnect(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
+    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function Tick(deltaSeconds)
-    Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
+    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
 end
 
 -- TODO: Should probably move away from the standard engagement session for this, instead having a separate dialog session.
-Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id, Connect)
+FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. proximityNetworkedObject.id, Connect)

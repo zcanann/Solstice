@@ -586,7 +586,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Networking_6"
+    FilePartitionName: "Networking_7"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

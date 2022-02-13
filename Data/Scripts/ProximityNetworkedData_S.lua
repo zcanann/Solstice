@@ -5,18 +5,18 @@
 
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
 
-local PROXIMITY_NETWORKED_OBJECT = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
 local PROXIMITY_OBJECT_DEBUG_TEMPLATE = script:GetCustomProperty("ProximityObjectDebugTemplate")
 
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local playersInRange = { }
 local networkedData = { }
 local serverOnlyData = { }
 
-if not PROXIMITY_NETWORKED_OBJECT then
+if not proximityNetworkedObject then
     FRAMEWORK.Warn("No proximity networked object referenced")
-elseif not PROXIMITY_NETWORKED_OBJECT:GetCustomProperty("IsProximityNetworkCollider") or
-        not PROXIMITY_NETWORKED_OBJECT:GetCustomProperty("ProximityNetworkedDataScript") then
-        FRAMEWORK.Warn("Invalid or missing properties on proximity networked object: " .. PROXIMITY_NETWORKED_OBJECT.id)
+elseif not proximityNetworkedObject:GetCustomProperty("IsProximityNetworkCollider") or
+        not proximityNetworkedObject:GetCustomProperty("ProximityNetworkedDataScript") then
+        FRAMEWORK.Warn("Invalid or missing properties on proximity networked object: " .. proximityNetworkedObject.id)
 end
 
 function SetServerOnlyData(key, data)
@@ -43,7 +43,7 @@ function SetProximityData(key, data)
     networkedData[key] = data
     for player, _ in pairs(playersInRange) do
         FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
-            PROXIMITY_NETWORKED_OBJECT.id,
+            proximityNetworkedObject.id,
             function (proximityNetworkedObjectId)
                 UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId)
             end
@@ -61,10 +61,10 @@ function OnPlayerEnteredRange(player)
     end
     playersInRange[player] = true
     FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
-        PROXIMITY_NETWORKED_OBJECT.id,
+        proximityNetworkedObject.id,
         function (proximityNetworkedObjectId)
             UpdateProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId)
-            FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_ENTERED_PROXIMITY_OBJECT_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, { player, playersInRange })
+            FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_ENTERED_PROXIMITY_OBJECT_RANGE_PREFIX .. proximityNetworkedObject.id, { player, playersInRange })
         end
     })
 end
@@ -75,10 +75,10 @@ function OnPlayerLeftRange(player)
     end
     playersInRange[player] = nil
     FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID, {
-        PROXIMITY_NETWORKED_OBJECT.id,
+        proximityNetworkedObject.id,
         function (proximityNetworkedObjectId)
             ClearProximityNetworkedDataForPlayer(player, proximityNetworkedObjectId)
-            FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_LEFT_PROXIMITY_OBJECT_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, { player, playersInRange })
+            FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PLAYER_LEFT_PROXIMITY_OBJECT_RANGE_PREFIX .. proximityNetworkedObject.id, { player, playersInRange })
         end
     })
 end
@@ -86,8 +86,8 @@ end
 function DrawDebugData()
     if FRAMEWORK.Debug.GetFlag(FRAMEWORK.Debug.Flags.SERVER_SHOW_PROXIMITY_OBJECTS) then
         local proximityObjectDebug = nil
-        proximityObjectDebug = World.SpawnAsset(PROXIMITY_OBJECT_DEBUG_TEMPLATE, { parent = PROXIMITY_NETWORKED_OBJECT })
-        proximityObjectDebug:SetWorldPosition(PROXIMITY_NETWORKED_OBJECT:GetWorldPosition())
+        proximityObjectDebug = World.SpawnAsset(PROXIMITY_OBJECT_DEBUG_TEMPLATE, { parent = proximityNetworkedObject })
+        proximityObjectDebug:SetWorldPosition(proximityNetworkedObject:GetWorldPosition())
         proximityObjectDebug.visibility = Visibility.FORCE_ON
 
         local propUIContainer = proximityObjectDebug:GetCustomProperty("UIContainer"):WaitForObject()
@@ -97,8 +97,8 @@ function DrawDebugData()
         local propPlayersInRangeText4 = proximityObjectDebug:GetCustomProperty("PlayersInRangeText4"):WaitForObject()
 
         Task.Spawn(function()
-            while Object.IsValid(PROXIMITY_NETWORKED_OBJECT) do
-                local pos = PROXIMITY_NETWORKED_OBJECT:GetWorldPosition();
+            while Object.IsValid(proximityNetworkedObject) do
+                local pos = proximityNetworkedObject:GetWorldPosition();
                 CoreDebug.DrawSphere(pos, 100, {
                     duration = 0.01,
                     color = Color.GREEN
@@ -150,12 +150,12 @@ end
 -- TODO: Look into the timing issue that requires delaying this by a tick, and solve it more appropriately
 Task.Spawn(function ()
 FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Networking.EVENT_RESOLVE_PROXIMITY_OBJECT_ID,
-{ PROXIMITY_NETWORKED_OBJECT.id,
+{ proximityNetworkedObject.id,
     function (proximityNetworkedObjectId)
         -- It's easier to just listen for both the resolved and unresolved ids for players
-        if PROXIMITY_NETWORKED_OBJECT.id ~= proximityNetworkedObjectId then
-            FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, OnPlayerEnteredRange)
-            FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE_PREFIX .. PROXIMITY_NETWORKED_OBJECT.id, OnPlayerLeftRange)
+        if proximityNetworkedObject.id ~= proximityNetworkedObjectId then
+            FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE_PREFIX .. proximityNetworkedObject.id, OnPlayerEnteredRange)
+            FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE_PREFIX .. proximityNetworkedObject.id, OnPlayerLeftRange)
         end
         FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE_PREFIX .. proximityNetworkedObjectId, OnPlayerEnteredRange)
         FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_SERVER_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE_PREFIX .. proximityNetworkedObjectId, OnPlayerLeftRange)

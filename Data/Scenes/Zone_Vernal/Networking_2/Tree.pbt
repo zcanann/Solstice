@@ -56,12 +56,6 @@ Objects {
   }
   ParentId: 7312723628135635094
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 7490631845461396168
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

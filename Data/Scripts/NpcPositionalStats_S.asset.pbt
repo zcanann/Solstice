@@ -16,7 +16,7 @@ Assets {
       }
       Overrides {
         Name: "cs:TetherRadius"
-        Float: 3000
+        Float: 4500
       }
       Overrides {
         Name: "cs:MeleeRadius"

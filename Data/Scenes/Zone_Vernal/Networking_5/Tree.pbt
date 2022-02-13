@@ -1,24 +1,19 @@
 Name: "Networking_5"
-RootId: 18403497720307036111
+RootId: 12565355718142865267
 Objects {
-  Id: 11765038470458309184
+  Id: 6200254772030545452
   Name: "ServerContext"
   Transform {
     Location {
-      X: 5.96046448e-08
-      Y: 0.999999881
-      Z: -25
     }
     Rotation {
+      Yaw: -50.0000191
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
     }
   }
-  ParentId: 18403497720307036111
-  ChildIds: 918561679083319262
+  ParentId: 12565355718142865267
+  ChildIds: 27481280642421095
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -39,7 +34,7 @@ Objects {
   }
 }
 Objects {
-  Id: 918561679083319262
+  Id: 27481280642421095
   Name: "ProximityNetworkedData_S"
   Transform {
     Location {
@@ -52,14 +47,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11765038470458309184
+  ParentId: 6200254772030545452
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 17346586940929461580
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -83,7 +72,7 @@ Objects {
   }
 }
 Objects {
-  Id: 110440362269105589
+  Id: 3778224287321343217
   Name: "LocalContext"
   Transform {
     Location {
@@ -96,14 +85,14 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 18403497720307036111
-  ChildIds: 17346586940929461580
+  ParentId: 12565355718142865267
+  ChildIds: 4645175322474296769
   NetworkContext {
     Type: Local
   }
 }
 Objects {
-  Id: 17346586940929461580
+  Id: 4645175322474296769
   Name: "ProximityNetworkedObject"
   Transform {
     Location {
@@ -116,7 +105,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 110440362269105589
+  ParentId: 3778224287321343217
   UnregisteredParameters {
     Overrides {
       Name: "cs:IsProximityNetworkCollider"
@@ -125,7 +114,7 @@ Objects {
     Overrides {
       Name: "cs:ProximityNetworkedDataScript"
       ObjectReference {
-        SelfId: 918561679083319262
+        SelfId: 27481280642421095
       }
     }
     Overrides {
@@ -135,9 +124,9 @@ Objects {
     Overrides {
       Name: "cs:UnitFrameCapture"
       ObjectReference {
-        SelfId: 16787673979791816283
+        SelfId: 1434551936447509813
         SubObjectId: 14725643823824657908
-        InstanceId: 11344967336301048707
+        InstanceId: 14400036959122027
         TemplateId: 7662072430726303162
       }
     }

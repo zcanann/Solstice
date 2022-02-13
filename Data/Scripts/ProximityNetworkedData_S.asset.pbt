@@ -11,11 +11,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ProximityNetworkedObject"
-        ObjectReference {
-        }
-      }
-      Overrides {
         Name: "cs:ProximityObjectDebugTemplate"
         AssetReference {
           Id: 8895404341119502081

@@ -27,6 +27,11 @@ Framework.DumpStackTrace = function (object)
     Framework.Dump(CoreDebug.GetStackTrace())
 end
 
+Framework.GetEstimatedServerTime = function()
+    -- TODO: Add latency in ms to this
+    return time()
+end
+
 Framework.Await = function(predicate, callback, maxTicks)
     if predicate() then
         callback()
@@ -54,6 +59,15 @@ Framework.AwaitOnce = function(predicate, callback)
             end
         end)
     end
+end
+
+Framework.TickEvery = function (deltaSeconds, callback)
+    Task.Spawn(function ()
+        while (true) do
+            Task.Wait(deltaSeconds)
+            callback(deltaSeconds)
+        end
+    end)
 end
 
 Framework.NextFrame = function(callback)

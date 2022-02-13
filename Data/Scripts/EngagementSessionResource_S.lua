@@ -1,7 +1,7 @@
 -- Defines the engagement session between the player and an object, such as during mining, cooking, or woodcutting
 -- A server engagement session can have multiple connections. For example, many players (clients) mining one rock (server)
-local Framework = require(script:GetCustomProperty("Framework"))
-local propProximityNetworkedObject = script:GetCustomProperty("ProximityNetworkedObject"):WaitForObject()
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+
 local propMaxEngagements = script:GetCustomProperty("MaxEngagements")
 local propRequiredItemType = script:GetCustomProperty("RequiredItemType")
 local propResourceItem = script:GetCustomProperty("ResourceItem")
@@ -13,10 +13,11 @@ local propMaxResources = script:GetCustomProperty("MaxResources")
 local propRespawnTimeMin = script:GetCustomProperty("RespawnTimeMin")
 local propRespawnTimeMax = script:GetCustomProperty("RespawnTimeMax")
 
+local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local engagedPlayers = { }
 
 -- Set the server-side reference to the engaged player table
-Framework.Networking.SetServerOnlyData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+FRAMEWORK.Networking.SetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
 {
     engagedPlayers = engagedPlayers,
 })
@@ -33,14 +34,14 @@ local animationMap = {
 }
 
 function IsPlayerConnected(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
     return engagedPlayers[player] ~= nil
 end
 
 function Connect(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
@@ -74,22 +75,22 @@ function Connect(player)
     engagedPlayers[player] = true
 
     -- Set the engagement session on the player's proximity data
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
+    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION,
     {
         playerId = player.id,
-        objectId = propProximityNetworkedObject.id,
+        objectId = proximityNetworkedObject.id,
         animationName = animationMap[propRequiredItemType]
     })
 end
 
 function Disconnect(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") then
         return
     end
 
     engagedPlayers[player] = nil
     player.serverUserData.engagement = nil
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
+    FRAMEWORK.Networking.SetProximityData(player.id, FRAMEWORK.Networking.ProximityKeys.Entity.ENGAGEMENT_SESSION, { nil })
 end
 
 function CheckForRequiredItems(player)
@@ -97,7 +98,7 @@ function CheckForRequiredItems(player)
 end
 
 function CheckForResourceExtracted(player, deltaSeconds)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return
     end
 
@@ -115,14 +116,14 @@ function CheckForResourceExtracted(player, deltaSeconds)
 
         -- Give the player exp, reset their engagement duration
         player.serverUserData.engagement.duration = math.fmod(duration, propBaseDuration)
-        Framework.Skills.AddSkillExp(player, propSkillId, propExp)
+        FRAMEWORK.Skills.AddSkillExp(player, propSkillId, propExp)
     else
         player.serverUserData.engagement.duration = duration
     end
 end
 
 function CheckForInterruption(player)
-    if not Framework.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
+    if not FRAMEWORK.ObjectAssert(player, "Player", "Invalid player object") or not player.serverUserData.engagement then
         return false
     end
 
@@ -145,7 +146,7 @@ end
 function SetRemainingResources(newRemainingResources)
     remainingResources = newRemainingResources
 
-    Framework.Networking.SetProximityData(propProximityNetworkedObject.id, Framework.Networking.ProximityKeys.Resources.AMOUNT,
+    FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Resources.AMOUNT,
         { remainingResources = remainingResources })
 
     if remainingResources == 0.0 then
@@ -154,7 +155,7 @@ function SetRemainingResources(newRemainingResources)
 end
 
 function Tick(deltaSeconds)
-    Framework.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
+    FRAMEWORK.Utils.Objects.RemoveInvalidEntriesFromSet(engagedPlayers)
     local toDisconnect = { }
 
     for player, _ in pairs(engagedPlayers) do
@@ -174,4 +175,4 @@ function Tick(deltaSeconds)
     CheckForRespawn(deltaSeconds)
 end
 
-Framework.Events.ListenForPlayer(Framework.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. propProximityNetworkedObject.id, Connect)
+FRAMEWORK.Events.ListenForPlayer(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. proximityNetworkedObject.id, Connect)

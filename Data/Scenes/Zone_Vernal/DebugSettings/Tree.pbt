@@ -38,7 +38,7 @@ Objects {
   UnregisteredParameters {
     Overrides {
       Name: "cs:ServerShowProximityObjects"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:ShowAgroRadius"
@@ -46,11 +46,11 @@ Objects {
     }
     Overrides {
       Name: "cs:ShowNavMesh"
-      Bool: true
+      Bool: false
     }
     Overrides {
       Name: "cs:ShowEngagments"
-      Bool: true
+      Bool: false
     }
   }
   Collidable_v2 {

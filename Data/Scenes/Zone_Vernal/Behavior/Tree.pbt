@@ -62,12 +62,6 @@ Objects {
   }
   ParentId: 12160155335558858077
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13585970696264302414
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -140,12 +134,6 @@ Objects {
       Name: "cs:BaseDuration"
       Float: 3.2
     }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 7490631845461396168
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -193,14 +181,6 @@ Objects {
   }
   ParentId: 12160155335558858077
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:ProximityNetworkedObject:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject:ml"
-      Bool: false
-    }
     Overrides {
       Name: "cs:MaxEngagements"
       Int: -1
@@ -312,12 +292,6 @@ Objects {
     Overrides {
       Name: "cs:Name"
       String: "School of Shrimp"
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 13585970696264302414
-      }
     }
   }
   Collidable_v2 {
@@ -447,12 +421,6 @@ Objects {
         SelfId: 830644953861639781
       }
     }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 7490631845461396168
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -498,28 +466,8 @@ Objects {
   ParentId: 7209349080325517979
   UnregisteredParameters {
     Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 16279939153616643214
-      }
-    }
-    Overrides {
       Name: "cs:StopRadius"
       Float: 200
-    }
-    Overrides {
-      Name: "cs:Object:isrep"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:Object:ml"
-      Bool: false
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 7490631845461396168
-      }
     }
   }
   Collidable_v2 {
@@ -565,18 +513,6 @@ Objects {
   }
   ParentId: 7209349080325517979
   UnregisteredParameters {
-    Overrides {
-      Name: "cs:Object"
-      ObjectReference {
-        SelfId: 16279939153616643214
-      }
-    }
-    Overrides {
-      Name: "cs:ProximityNetworkedObject"
-      ObjectReference {
-        SelfId: 7490631845461396168
-      }
-    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

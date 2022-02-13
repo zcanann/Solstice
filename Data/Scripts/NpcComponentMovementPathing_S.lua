@@ -15,45 +15,46 @@ end
 function OnPlayerDeaggrod(player)
 end
 
-function MoveTowardsAggroTarget(deltaSeconds, targetPlayer)
+function MoveTowardsAggroTarget(deltaSeconds)
+    local targetId = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.TARGET_ID)
+    local currentTarget = FRAMEWORK.Networking.GetProximityInstance(targetId)
+
+    if not currentTarget then
+        return
+    end
+
     local movementSpeed = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.MOVEMENT_SPEED)
     local meleeRadius = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.MELEE_RADIUS)
     local tetherRadius = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.TETHER_RADIUS)
     local npcPosition = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION)
-    local waypointPosition = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION)
-    local targetPosition = targetPlayer:GetWorldPosition()
+    local targetPosition = currentTarget:GetWorldPosition()
 
     if not npcPosition then
         npcPosition = proximityNetworkedObject:GetWorldPosition()
     end
 
     if engagePosition and ((targetPosition - engagePosition).size > tetherRadius) then
-        FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Combat.REQUEST_DEAGGRO_PLAYER .. proximityNetworkedObject.id, { targetPlayer })
+        FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Combat.REQUEST_DEAGGRO_PLAYER .. proximityNetworkedObject.id, { currentTarget })
     elseif (targetPosition - npcPosition).size > meleeRadius then
         -- Update server-side NPC position
         local delta = targetPosition - npcPosition
         local movementVector = delta:GetNormalized() * movementSpeed * deltaSeconds
         npcPosition = npcPosition + movementVector
         FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION, npcPosition)
-
-        -- Update waypoint position for movement prediction
-        if not waypointPosition or targetPosition ~= waypointPosition then
-            FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION, targetPosition)
-        end
     end
 end
 
-function MoveTowardsPathingTarget(deltaSeconds)
-    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
+function MoveTowardsWaypoint(deltaSeconds)
+    local serverAggroData = FRAMEWORK.Networking.GetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
     local movementSpeed = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.MOVEMENT_SPEED)
     local npcPosition = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION)
-    local waypointPosition = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION)
+    local waypoint = FRAMEWORK.Networking.GetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION)
 
     if not npcPosition then
         npcPosition = proximityNetworkedObject:GetWorldPosition()
     end
 
-    if aggroData and aggroData.recentlyDeaggroed then
+    if serverAggroData and serverAggroData.recentlyDeaggroed then
         if engagePosition then
             -- Update server-side NPC position
             local delta = engagePosition - npcPosition
@@ -63,29 +64,32 @@ function MoveTowardsPathingTarget(deltaSeconds)
                 npcPosition = npcPosition + movementVector
                 FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.POSITION, npcPosition)
 
-                -- Update waypoint position for movement prediction
-                if not waypointPosition or engagePosition ~= waypointPosition then
+                -- Set waypoint position to where the npc was when combat started
+                if not waypoint or engagePosition ~= waypoint then
                     FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.WAYPOINT_POSITION, engagePosition)
                 end
             else
-                aggroData.recentlyDeaggroed = false
+                serverAggroData.recentlyDeaggroed = false
             end
         else
-            aggroData.recentlyDeaggroed = false
+            serverAggroData.recentlyDeaggroed = false
         end
     end
 end
 
 function TickExternal(deltaSeconds)
-    local aggroData = FRAMEWORK.Networking.GetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
+    local serverAggroData = FRAMEWORK.Networking.GetServerOnlyData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.AGGRO_DATA_S)
 
-    if aggroData and FRAMEWORK.Utils.Table.Count(aggroData.aggroList) > 0 then
-        for targetPlayer, _ in pairs(aggroData.aggroList) do
-            MoveTowardsAggroTarget(deltaSeconds, targetPlayer)
+    -- The agro list is sorted by threat. The first entry is the current target.
+    if serverAggroData and FRAMEWORK.Utils.Table.Count(serverAggroData.aggroList) > 0 then
+        for targetPlayer, _ in pairs(serverAggroData.aggroList) do
+            -- Update agro target
+            FRAMEWORK.Networking.SetProximityData(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.TARGET_ID, targetPlayer.id)
+            MoveTowardsAggroTarget(deltaSeconds)
             break
         end
     else
-        MoveTowardsPathingTarget(deltaSeconds)
+        MoveTowardsWaypoint(deltaSeconds)
     end
 end
 

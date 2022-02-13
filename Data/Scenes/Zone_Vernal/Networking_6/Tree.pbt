@@ -1,10 +1,13 @@
 Name: "Networking_6"
-RootId: 2308143338953339694
+RootId: 18403497720307036111
 Objects {
-  Id: 9518407338903576871
+  Id: 11765038470458309184
   Name: "ServerContext"
   Transform {
     Location {
+      X: 5.96046448e-08
+      Y: 0.999999881
+      Z: -25
     }
     Rotation {
     }
@@ -14,8 +17,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2308143338953339694
-  ChildIds: 16354401455209085190
+  ParentId: 18403497720307036111
+  ChildIds: 918561679083319262
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -36,8 +39,8 @@ Objects {
   }
 }
 Objects {
-  Id: 16354401455209085190
-  Name: "ProximityNetworkBinder_S"
+  Id: 918561679083319262
+  Name: "ProximityNetworkedData_S"
   Transform {
     Location {
     }
@@ -49,7 +52,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 9518407338903576871
+  ParentId: 11765038470458309184
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -66,7 +69,7 @@ Objects {
   }
   Script {
     ScriptAsset {
-      Id: 13672869650105321002
+      Id: 5474629016980680411
     }
   }
   NetworkRelevanceDistance {
@@ -74,8 +77,8 @@ Objects {
   }
 }
 Objects {
-  Id: 8367285921454407612
-  Name: "ClientContext"
+  Id: 110440362269105589
+  Name: "LocalContext"
   Transform {
     Location {
     }
@@ -87,29 +90,15 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 2308143338953339694
-  ChildIds: 2496196032000322162
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
+  ParentId: 18403497720307036111
+  ChildIds: 17346586940929461580
   NetworkContext {
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+    Type: Local
   }
 }
 Objects {
-  Id: 2496196032000322162
-  Name: "NetworkedDataHandler_C"
+  Id: 17346586940929461580
+  Name: "ProximityNetworkedObject"
   Transform {
     Location {
     }
@@ -121,9 +110,41 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 8367285921454407612
+  ParentId: 110440362269105589
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:IsProximityNetworkCollider"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedDataScript"
+      ObjectReference {
+        SelfId: 918561679083319262
+      }
+    }
+    Overrides {
+      Name: "cs:ObjectType"
+      String: "Entity"
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedDataScript:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ProximityNetworkedDataScript:ml"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ObjectType:isrep"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:ObjectType:ml"
+      Bool: false
+    }
+  }
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceon"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
@@ -134,9 +155,13 @@ Objects {
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  Script {
-    ScriptAsset {
-      Id: 9297472468919606062
+  Trigger {
+    TeamSettings {
+      IsTeamCollisionEnabled: true
+      IsEnemyCollisionEnabled: true
+    }
+    TriggerShape_v2 {
+      Value: "mc:etriggershape:box"
     }
   }
   NetworkRelevanceDistance {

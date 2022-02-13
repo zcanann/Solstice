@@ -47,8 +47,9 @@ EntityProximityKeys.HEIGHT = "height"
 EntityProximityKeys.MOVEMENT_SPEED = "movement_speed"
 
 -- Runtime spatial
+EntityProximityKeys.TARGET_ID = "target_id"
 EntityProximityKeys.POSITION = "position"
-EntityProximityKeys.WAYPOINT_POSITION = "waypoint_position"
+EntityProximityKeys.WAYPOINT_POSITION = "waypoint"
 EntityProximityKeys.ENGAGEMENT_SESSION = "engagement_session"
 
 -- Server-side runtime
