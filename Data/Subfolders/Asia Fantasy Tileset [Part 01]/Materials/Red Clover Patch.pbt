@@ -2,7 +2,7 @@ Assets {
   Id: 14875473516021939562
   Name: "Red Clover Patch"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 7058128419227163594
     ParameterOverrides {

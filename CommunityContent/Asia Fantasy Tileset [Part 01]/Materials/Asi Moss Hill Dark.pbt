@@ -2,7 +2,7 @@ Assets {
   Id: 14599081177941842018
   Name: "Asi Moss Hill Dark"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 6293171627245844021
     ParameterOverrides {

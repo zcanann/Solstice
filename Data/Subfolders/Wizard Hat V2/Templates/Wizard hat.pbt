@@ -901,6 +901,6 @@ Assets {
   Marketplace {
     Description: "wizard cosmetic\r\n(Original by Veille)\r\n-I added a strap and fixed the back point"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

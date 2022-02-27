@@ -2,7 +2,7 @@ Assets {
   Id: 14967072886882360038
   Name: "CherryBlossomepatch 02"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 7058128419227163594
     ParameterOverrides {

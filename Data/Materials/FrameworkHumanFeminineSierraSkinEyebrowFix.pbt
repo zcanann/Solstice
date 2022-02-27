@@ -2,7 +2,7 @@ Assets {
   Id: 18342960107038280119
   Name: "FrameworkHumanFeminineSierraSkinEyebrowFix"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   VirtualFolderPath: "Human"

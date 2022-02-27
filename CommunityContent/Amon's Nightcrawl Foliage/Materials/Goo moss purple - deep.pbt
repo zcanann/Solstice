@@ -2,7 +2,7 @@ Assets {
   Id: 7412059614343900968
   Name: "Goo moss purple - deep"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 2727688967788134169
     ParameterOverrides {

@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Makeshift Armor made from bones"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

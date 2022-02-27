@@ -2,7 +2,7 @@ Assets {
   Id: 4822589975939944768
   Name: "Metal Steel - Dark"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 16219589455898320337
     ParameterOverrides {

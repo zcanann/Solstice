@@ -1,6 +1,12 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 function CreateTestingCharacter(player)
+	--[[
+	Framework.Storage.WritePlayerSchemaData(player, Framework.Storage.StorageSchema,
+	{
+		Framework.Storage.StorageSchema.RootKeys.CHARACTERS, 
+	})
+	--]]
     local initialData = {
         [ Framework.Storage.Keys.Characters.NAME ] = "Lothlorian",
         [ Framework.Storage.Keys.Characters.RACE ] = Framework.Storage.Keys.Races.RACES[math.random(#Framework.Storage.Keys.Races.RACES)],
@@ -17,7 +23,7 @@ end
 
 function OnPlayerJoined(player)
 	-- Debugging
-	-- Framework.Storage.WipePlayerData(player)
+	Framework.Storage.WipePlayerData(player)
 
 	-- TODO: Move elsewhere. Storage shouldn't be hiding the unused player model.
 	player.isVisible = false

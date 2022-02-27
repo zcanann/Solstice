@@ -39362,6 +39362,6 @@ Assets {
   Marketplace {
     Description: "Boss Room for your RPG game or dungeon game! Created for Challenge with Staypunny.\r\n\r\nNote: It contains own lighting folder. It\'s only interior, not exterior.\r\n\r\nUse it in your game and feel free to edit it to suit your needs. \r\n\r\nDon\'t forget to check Staypunny Boss Room as well! - Dark Crystal boss room"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

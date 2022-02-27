@@ -1,7 +1,7 @@
 Name: "AllBeams"
-RootId: 14007245583672320326
+RootId: 6629646979904334547
 Objects {
-  Id: 12002453094856888226
+  Id: 423574116260989308
   Name: "BeamRopes"
   Transform {
     Location {
@@ -20,10 +20,10 @@ Objects {
       Z: 0.721626461
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 1710835971905199823
-  ChildIds: 10991888784601708702
-  ChildIds: 16530737906063050079
+  ParentId: 6629646979904334547
+  ChildIds: 15754525964480601601
+  ChildIds: 12332980324415791033
+  ChildIds: 4564927956428657588
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -43,7 +43,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16530737906063050079
+  Id: 4564927956428657588
   Name: "Rope"
   Transform {
     Location {
@@ -61,7 +61,7 @@ Objects {
       Z: 3.8479619
     }
   }
-  ParentId: 12002453094856888226
+  ParentId: 423574116260989308
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -120,7 +120,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10991888784601708702
+  Id: 12332980324415791033
   Name: "Rope"
   Transform {
     Location {
@@ -137,7 +137,7 @@ Objects {
       Z: 3.8479619
     }
   }
-  ParentId: 12002453094856888226
+  ParentId: 423574116260989308
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -196,7 +196,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1710835971905199823
+  Id: 15754525964480601601
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -215,7 +215,7 @@ Objects {
       Z: 5.49999857
     }
   }
-  ParentId: 12002453094856888226
+  ParentId: 423574116260989308
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -261,7 +261,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17919874295572964530
+  Id: 6189082754145874685
   Name: "BeamRopes"
   Transform {
     Location {
@@ -280,11 +280,11 @@ Objects {
       Z: 0.720216513
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 13104982535503600341
-  ChildIds: 16862515576721642614
-  ChildIds: 17082361744040189491
-  ChildIds: 6539568903606473342
+  ParentId: 6629646979904334547
+  ChildIds: 156325321922800399
+  ChildIds: 9340242818528984376
+  ChildIds: 7531167093183181244
+  ChildIds: 10818100011107278820
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -304,7 +304,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6539568903606473342
+  Id: 10818100011107278820
   Name: "Rope"
   Transform {
     Location {
@@ -321,7 +321,7 @@ Objects {
       Z: 3.35750699
     }
   }
-  ParentId: 17919874295572964530
+  ParentId: 6189082754145874685
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -380,7 +380,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17082361744040189491
+  Id: 7531167093183181244
   Name: "Rope"
   Transform {
     Location {
@@ -398,7 +398,7 @@ Objects {
       Z: 3.35750699
     }
   }
-  ParentId: 17919874295572964530
+  ParentId: 6189082754145874685
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -457,7 +457,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16862515576721642614
+  Id: 9340242818528984376
   Name: "Rope"
   Transform {
     Location {
@@ -474,7 +474,7 @@ Objects {
       Z: 3.35750699
     }
   }
-  ParentId: 17919874295572964530
+  ParentId: 6189082754145874685
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -533,7 +533,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13104982535503600341
+  Id: 156325321922800399
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -551,7 +551,7 @@ Objects {
       Z: 5.49999428
     }
   }
-  ParentId: 17919874295572964530
+  ParentId: 6189082754145874685
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -597,7 +597,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4114266886238471369
+  Id: 14973208154415650030
   Name: "BeamRopes"
   Transform {
     Location {
@@ -614,8 +614,8 @@ Objects {
       Z: 0.721626461
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 15723386159908385714
+  ParentId: 6629646979904334547
+  ChildIds: 8448341901804705642
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -635,7 +635,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15723386159908385714
+  Id: 8448341901804705642
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -653,7 +653,7 @@ Objects {
       Z: 5.42520428
     }
   }
-  ParentId: 4114266886238471369
+  ParentId: 14973208154415650030
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -699,7 +699,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6579462822137596615
+  Id: 11420732316651473305
   Name: "BeamRopes"
   Transform {
     Location {
@@ -718,9 +718,9 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 592766961979770085
-  ChildIds: 3184452474604983357
+  ParentId: 6629646979904334547
+  ChildIds: 9774544907069123683
+  ChildIds: 8325099698566730733
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -740,7 +740,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3184452474604983357
+  Id: 8325099698566730733
   Name: "Rope"
   Transform {
     Location {
@@ -759,7 +759,7 @@ Objects {
       Z: 4
     }
   }
-  ParentId: 6579462822137596615
+  ParentId: 11420732316651473305
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -818,7 +818,7 @@ Objects {
   }
 }
 Objects {
-  Id: 592766961979770085
+  Id: 9774544907069123683
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -836,7 +836,7 @@ Objects {
       Z: 5.5
     }
   }
-  ParentId: 6579462822137596615
+  ParentId: 11420732316651473305
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -882,7 +882,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17114184407526537438
+  Id: 17650796953001892365
   Name: "BeamRopes"
   Transform {
     Location {
@@ -899,9 +899,9 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 9387418171713235081
-  ChildIds: 4026462295986229718
+  ParentId: 6629646979904334547
+  ChildIds: 11667997285876448288
+  ChildIds: 17720065028616148693
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -921,7 +921,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4026462295986229718
+  Id: 17720065028616148693
   Name: "Rope"
   Transform {
     Location {
@@ -939,7 +939,7 @@ Objects {
       Z: 2.7039659
     }
   }
-  ParentId: 17114184407526537438
+  ParentId: 17650796953001892365
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -998,7 +998,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9387418171713235081
+  Id: 11667997285876448288
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -1014,7 +1014,7 @@ Objects {
       Z: 9.53191566
     }
   }
-  ParentId: 17114184407526537438
+  ParentId: 17650796953001892365
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1060,7 +1060,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9961621947353673281
+  Id: 16005727103257905267
   Name: "BeamRopes"
   Transform {
     Location {
@@ -1077,9 +1077,9 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 7462892547865498322
-  ChildIds: 10666960576263451075
+  ParentId: 6629646979904334547
+  ChildIds: 2263086583789054387
+  ChildIds: 4677684936549013864
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1099,7 +1099,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10666960576263451075
+  Id: 4677684936549013864
   Name: "Rope"
   Transform {
     Location {
@@ -1117,7 +1117,7 @@ Objects {
       Z: 2.70397
     }
   }
-  ParentId: 9961621947353673281
+  ParentId: 16005727103257905267
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1176,7 +1176,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7462892547865498322
+  Id: 2263086583789054387
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -1194,7 +1194,7 @@ Objects {
       Z: 5.42521191
     }
   }
-  ParentId: 9961621947353673281
+  ParentId: 16005727103257905267
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1240,7 +1240,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9537703495363128263
+  Id: 8526840218505322890
   Name: "BeamRopes"
   Transform {
     Location {
@@ -1257,11 +1257,11 @@ Objects {
       Z: 0.720216513
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 6911515152551084002
-  ChildIds: 6641430617609093357
-  ChildIds: 3521368134389169302
-  ChildIds: 18213012437575280961
+  ParentId: 6629646979904334547
+  ChildIds: 5015819560570419163
+  ChildIds: 13736069622057211689
+  ChildIds: 16739960021328991096
+  ChildIds: 8939812686509731907
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1281,7 +1281,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18213012437575280961
+  Id: 8939812686509731907
   Name: "Rope"
   Transform {
     Location {
@@ -1298,7 +1298,7 @@ Objects {
       Z: 3.35750699
     }
   }
-  ParentId: 9537703495363128263
+  ParentId: 8526840218505322890
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1357,7 +1357,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3521368134389169302
+  Id: 16739960021328991096
   Name: "Rope"
   Transform {
     Location {
@@ -1375,7 +1375,7 @@ Objects {
       Z: 3.35750699
     }
   }
-  ParentId: 9537703495363128263
+  ParentId: 8526840218505322890
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1434,7 +1434,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6641430617609093357
+  Id: 13736069622057211689
   Name: "Rope"
   Transform {
     Location {
@@ -1451,7 +1451,7 @@ Objects {
       Z: 3.35750699
     }
   }
-  ParentId: 9537703495363128263
+  ParentId: 8526840218505322890
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1510,7 +1510,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6911515152551084002
+  Id: 5015819560570419163
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -1528,7 +1528,7 @@ Objects {
       Z: 5.49999428
     }
   }
-  ParentId: 9537703495363128263
+  ParentId: 8526840218505322890
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1574,7 +1574,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4936278936015200773
+  Id: 642235200377262999
   Name: "BeamRopes"
   Transform {
     Location {
@@ -1591,10 +1591,10 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 1545764600504656363
-  ChildIds: 12941073474787679140
-  ChildIds: 2995474756733738616
+  ParentId: 6629646979904334547
+  ChildIds: 5310276575214128924
+  ChildIds: 5809775446771249549
+  ChildIds: 10030853465967767222
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1614,7 +1614,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2995474756733738616
+  Id: 10030853465967767222
   Name: "Rope"
   Transform {
     Location {
@@ -1632,7 +1632,7 @@ Objects {
       Z: 3.8479619
     }
   }
-  ParentId: 4936278936015200773
+  ParentId: 642235200377262999
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1691,7 +1691,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12941073474787679140
+  Id: 5809775446771249549
   Name: "Rope"
   Transform {
     Location {
@@ -1708,7 +1708,7 @@ Objects {
       Z: 3.8479619
     }
   }
-  ParentId: 4936278936015200773
+  ParentId: 642235200377262999
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1767,7 +1767,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1545764600504656363
+  Id: 5310276575214128924
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -1785,7 +1785,7 @@ Objects {
       Z: 5.5
     }
   }
-  ParentId: 4936278936015200773
+  ParentId: 642235200377262999
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1831,7 +1831,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10482980104074111483
+  Id: 15120107629727797502
   Name: "BeamRopes"
   Transform {
     Location {
@@ -1848,11 +1848,11 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 9914520905032076817
-  ChildIds: 9358829943680616763
-  ChildIds: 8990423442895795114
-  ChildIds: 11002971762467506144
+  ParentId: 6629646979904334547
+  ChildIds: 4828706071871498456
+  ChildIds: 2382706656056293740
+  ChildIds: 15602686124205689851
+  ChildIds: 8312935602393061359
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1872,7 +1872,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11002971762467506144
+  Id: 8312935602393061359
   Name: "Rope"
   Transform {
     Location {
@@ -1889,7 +1889,7 @@ Objects {
       Z: 2.93764138
     }
   }
-  ParentId: 10482980104074111483
+  ParentId: 15120107629727797502
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -1948,7 +1948,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8990423442895795114
+  Id: 15602686124205689851
   Name: "Rope"
   Transform {
     Location {
@@ -1966,7 +1966,7 @@ Objects {
       Z: 2.93764138
     }
   }
-  ParentId: 10482980104074111483
+  ParentId: 15120107629727797502
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2025,7 +2025,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9358829943680616763
+  Id: 2382706656056293740
   Name: "Rope"
   Transform {
     Location {
@@ -2042,7 +2042,7 @@ Objects {
       Z: 2.93764138
     }
   }
-  ParentId: 10482980104074111483
+  ParentId: 15120107629727797502
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2101,7 +2101,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9914520905032076817
+  Id: 4828706071871498456
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -2119,7 +2119,7 @@ Objects {
       Z: 5.49999809
     }
   }
-  ParentId: 10482980104074111483
+  ParentId: 15120107629727797502
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2165,7 +2165,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1469038768367766691
+  Id: 17910708317477430336
   Name: "BeamRopes"
   Transform {
     Location {
@@ -2182,11 +2182,11 @@ Objects {
       Z: 0.721626461
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 17327100949861115494
-  ChildIds: 12413688126103308497
-  ChildIds: 8135167311557245799
-  ChildIds: 3451429950689513404
+  ParentId: 6629646979904334547
+  ChildIds: 13730968998608584209
+  ChildIds: 15026514289099512995
+  ChildIds: 16516422522891660631
+  ChildIds: 6828514373425704559
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2206,7 +2206,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3451429950689513404
+  Id: 6828514373425704559
   Name: "Rope"
   Transform {
     Location {
@@ -2224,7 +2224,7 @@ Objects {
       Z: 3.75438261
     }
   }
-  ParentId: 1469038768367766691
+  ParentId: 17910708317477430336
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2283,7 +2283,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8135167311557245799
+  Id: 16516422522891660631
   Name: "Rope"
   Transform {
     Location {
@@ -2300,7 +2300,7 @@ Objects {
       Z: 3.75438237
     }
   }
-  ParentId: 1469038768367766691
+  ParentId: 17910708317477430336
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2359,7 +2359,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12413688126103308497
+  Id: 15026514289099512995
   Name: "Rope"
   Transform {
     Location {
@@ -2376,7 +2376,7 @@ Objects {
       Z: 3.75438237
     }
   }
-  ParentId: 1469038768367766691
+  ParentId: 17910708317477430336
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2435,7 +2435,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17327100949861115494
+  Id: 13730968998608584209
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -2453,7 +2453,7 @@ Objects {
       Z: 5.4252224
     }
   }
-  ParentId: 1469038768367766691
+  ParentId: 17910708317477430336
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2499,7 +2499,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15065585535797402598
+  Id: 3234270858123045697
   Name: "BeamRopes"
   Transform {
     Location {
@@ -2517,10 +2517,10 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 4724122101877895188
-  ChildIds: 8364991526116474931
-  ChildIds: 14652112616622274282
+  ParentId: 6629646979904334547
+  ChildIds: 2275230499573011256
+  ChildIds: 14298733876119054003
+  ChildIds: 5443280907852575547
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2540,7 +2540,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14652112616622274282
+  Id: 5443280907852575547
   Name: "Rope"
   Transform {
     Location {
@@ -2558,7 +2558,7 @@ Objects {
       Z: 2.70397
     }
   }
-  ParentId: 15065585535797402598
+  ParentId: 3234270858123045697
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2617,7 +2617,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8364991526116474931
+  Id: 14298733876119054003
   Name: "Rope"
   Transform {
     Location {
@@ -2635,7 +2635,7 @@ Objects {
       Z: 2.70397
     }
   }
-  ParentId: 15065585535797402598
+  ParentId: 3234270858123045697
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2694,7 +2694,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4724122101877895188
+  Id: 2275230499573011256
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -2712,7 +2712,7 @@ Objects {
       Z: 5.42520428
     }
   }
-  ParentId: 15065585535797402598
+  ParentId: 3234270858123045697
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2758,7 +2758,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7980695551397307238
+  Id: 9051806406587885715
   Name: "BeamRopes"
   Transform {
     Location {
@@ -2775,8 +2775,8 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 6113203166200689233
+  ParentId: 6629646979904334547
+  ChildIds: 3878097526954448784
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2796,7 +2796,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6113203166200689233
+  Id: 3878097526954448784
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -2814,7 +2814,7 @@ Objects {
       Z: 11.1736383
     }
   }
-  ParentId: 7980695551397307238
+  ParentId: 9051806406587885715
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2860,7 +2860,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17402952920220066356
+  Id: 7746388446005558524
   Name: "BeamRopes"
   Transform {
     Location {
@@ -2879,9 +2879,9 @@ Objects {
       Z: 0.721626461
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 11082864343650248239
-  ChildIds: 5581787144675632772
+  ParentId: 6629646979904334547
+  ChildIds: 10738694794533004027
+  ChildIds: 7263135721107135791
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -2901,7 +2901,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5581787144675632772
+  Id: 7263135721107135791
   Name: "Rope"
   Transform {
     Location {
@@ -2918,7 +2918,7 @@ Objects {
       Z: 3.08189273
     }
   }
-  ParentId: 17402952920220066356
+  ParentId: 7746388446005558524
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -2977,7 +2977,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11082864343650248239
+  Id: 10738694794533004027
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -2994,7 +2994,7 @@ Objects {
       Z: 5.42520905
     }
   }
-  ParentId: 17402952920220066356
+  ParentId: 7746388446005558524
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3040,7 +3040,7 @@ Objects {
   }
 }
 Objects {
-  Id: 173716869617758718
+  Id: 13560303413694498621
   Name: "BeamRopes"
   Transform {
     Location {
@@ -3057,8 +3057,8 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 1239228703743698982
+  ParentId: 6629646979904334547
+  ChildIds: 11426620204623075281
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -3078,7 +3078,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1239228703743698982
+  Id: 11426620204623075281
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -3095,7 +3095,7 @@ Objects {
       Z: 11.2168131
     }
   }
-  ParentId: 173716869617758718
+  ParentId: 13560303413694498621
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3141,7 +3141,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5288534695905164870
+  Id: 11137871381793214932
   Name: "BeamRopes"
   Transform {
     Location {
@@ -3160,11 +3160,11 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 18199249436639630162
-  ChildIds: 17245260653055668053
-  ChildIds: 17611426163686877001
-  ChildIds: 11651287349154792961
+  ParentId: 6629646979904334547
+  ChildIds: 17076727139106956757
+  ChildIds: 786075142115469672
+  ChildIds: 13061353965347826848
+  ChildIds: 12551518607777895186
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -3184,7 +3184,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11651287349154792961
+  Id: 12551518607777895186
   Name: "Rope"
   Transform {
     Location {
@@ -3202,7 +3202,7 @@ Objects {
       Z: 2.70397
     }
   }
-  ParentId: 5288534695905164870
+  ParentId: 11137871381793214932
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3261,7 +3261,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17611426163686877001
+  Id: 13061353965347826848
   Name: "Rope"
   Transform {
     Location {
@@ -3279,7 +3279,7 @@ Objects {
       Z: 2.70397
     }
   }
-  ParentId: 5288534695905164870
+  ParentId: 11137871381793214932
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3338,7 +3338,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17245260653055668053
+  Id: 786075142115469672
   Name: "Rope"
   Transform {
     Location {
@@ -3356,7 +3356,7 @@ Objects {
       Z: 2.70397
     }
   }
-  ParentId: 5288534695905164870
+  ParentId: 11137871381793214932
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3415,7 +3415,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18199249436639630162
+  Id: 17076727139106956757
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -3433,7 +3433,7 @@ Objects {
       Z: 5.42520571
     }
   }
-  ParentId: 5288534695905164870
+  ParentId: 11137871381793214932
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3479,7 +3479,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15477373998935295624
+  Id: 11730301466701902542
   Name: "BeamRopes"
   Transform {
     Location {
@@ -3496,11 +3496,11 @@ Objects {
       Z: 0.72162652
     }
   }
-  ParentId: 14007245583672320326
-  ChildIds: 12785236320469220199
-  ChildIds: 15070057883082301810
-  ChildIds: 16983128766439599761
-  ChildIds: 3517609042548405411
+  ParentId: 6629646979904334547
+  ChildIds: 4976839203178170983
+  ChildIds: 11849073708009778218
+  ChildIds: 12173134835023780873
+  ChildIds: 7672301666843267594
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -3520,7 +3520,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3517609042548405411
+  Id: 7672301666843267594
   Name: "Rope"
   Transform {
     Location {
@@ -3538,7 +3538,7 @@ Objects {
       Z: 2.87966442
     }
   }
-  ParentId: 15477373998935295624
+  ParentId: 11730301466701902542
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3597,7 +3597,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16983128766439599761
+  Id: 12173134835023780873
   Name: "Rope"
   Transform {
     Location {
@@ -3615,7 +3615,7 @@ Objects {
       Z: 2.87966442
     }
   }
-  ParentId: 15477373998935295624
+  ParentId: 11730301466701902542
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3674,7 +3674,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15070057883082301810
+  Id: 11849073708009778218
   Name: "Rope"
   Transform {
     Location {
@@ -3692,7 +3692,7 @@ Objects {
       Z: 2.87966442
     }
   }
-  ParentId: 15477373998935295624
+  ParentId: 11730301466701902542
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"
@@ -3751,7 +3751,7 @@ Objects {
   }
 }
 Objects {
-  Id: 12785236320469220199
+  Id: 4976839203178170983
   Name: "Craftsman Roof 01 Beam"
   Transform {
     Location {
@@ -3769,7 +3769,7 @@ Objects {
       Z: 5.42521048
     }
   }
-  ParentId: 15477373998935295624
+  ParentId: 11730301466701902542
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:utile"

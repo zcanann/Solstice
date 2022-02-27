@@ -2,7 +2,7 @@ Assets {
   Id: 6648231058643579232
   Name: "pipe paint red"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 7971943517990840047
     ParameterOverrides {

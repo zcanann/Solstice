@@ -14,9 +14,9 @@ Objects {
       Z: 1
     }
   }
-  ChildIds: 2654916338316290302
-  ChildIds: 16844910628275373465
-  ChildIds: 5628166357863187692
+  ChildIds: 9947782121604346707
+  ChildIds: 5037510193580358099
+  ChildIds: 6959106778732694990
   ChildIds: 9292959906759754007
   ChildIds: 4832425986776598078
   UnregisteredParameters {
@@ -112,8 +112,8 @@ Objects {
   }
 }
 Objects {
-  Id: 5628166357863187692
-  Name: "UI"
+  Id: 6959106778732694990
+  Name: "UI_A"
   Transform {
     Location {
     }
@@ -126,31 +126,43 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9869906567946650923
+      value {
+        Overrides {
+          Name: "Name"
+          String: "UI_A"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10779387828834219691
+    }
   }
 }
 Objects {
-  Id: 16844910628275373465
-  Name: "GameSystems"
+  Id: 5037510193580358099
+  Name: "GameSystems_A"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -158,29 +170,24 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "GameSystems"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18088340275980657657
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GameSystems_A"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1167388389768785005
+    }
   }
 }
 Objects {
-  Id: 2654916338316290302
-  Name: "Settings"
+  Id: 9947782121604346707
+  Name: "Settings_A"
   Transform {
     Location {
     }
@@ -199,14 +206,36 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Settings"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14209675969168667736
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Settings_A"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13323968786186980506
+    }
   }
 }

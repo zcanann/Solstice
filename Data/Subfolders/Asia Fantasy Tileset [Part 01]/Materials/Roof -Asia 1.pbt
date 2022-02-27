@@ -2,7 +2,7 @@ Assets {
   Id: 15351205412553777173
   Name: "Roof -Asia 1"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 7233854527796611062
     ParameterOverrides {

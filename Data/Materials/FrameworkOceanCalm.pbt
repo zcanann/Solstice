@@ -2,7 +2,7 @@ Assets {
   Id: 9727657217286684267
   Name: "FrameworkOceanCalm"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Water"
   CustomMaterialAsset {
     BaseMaterialId: 15472391135026288383

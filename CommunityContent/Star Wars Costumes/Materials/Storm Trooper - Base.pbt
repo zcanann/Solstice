@@ -2,7 +2,7 @@ Assets {
   Id: 10002685410067521668
   Name: "Storm Trooper - Base"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 10175711656923249913
     ParameterOverrides {

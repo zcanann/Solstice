@@ -2,7 +2,7 @@ Assets {
   Id: 13427951812375653945
   Name: "Stucco White - Village"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 4586850360570615697
     ParameterOverrides {

@@ -2,7 +2,7 @@ Assets {
   Id: 17422069512410597167
   Name: "Tot Flesh Pale "
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 532575097750415901
     ParameterOverrides {

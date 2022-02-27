@@ -5,6 +5,18 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
+        Name: "cs:Schema"
+        AssetReference {
+          Id: 5433941360175035573
+        }
+      }
+      Overrides {
+        Name: "cs:StorageSchema"
+        AssetReference {
+          Id: 17209841294078955987
+        }
+      }
+      Overrides {
         Name: "cs:StorageKeys"
         AssetReference {
           Id: 12431212582313590712
@@ -18,7 +30,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 105
-  VirtualFolderPath: "Infrastructure"
+  SerializationVersion: 107
+  VirtualFolderPath: "Framework"
   VirtualFolderPath: "Storage"
 }

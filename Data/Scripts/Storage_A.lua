@@ -6,9 +6,12 @@ Framework.Dump = require(script:GetCustomProperty("Dump")).Dump
 
 StorageAPI.CharacterCreateLimit = 3
 StorageAPI.Keys = require(script:GetCustomProperty("StorageKeys"))
+StorageAPI.StorageSchema = require(script:GetCustomProperty("StorageSchema"))
 StorageAPI.CharacterDataKey = "characters"
 StorageAPI.GlobalDataKey = "global"
 StorageAPI.KeyLastLoggedInCharacterId = "last_logged_in_character_id"
+
+local StorageSchema = require(script:GetCustomProperty("StorageSchema"))
 
 function GenerateCharacterId()
 	-- The character format is an 8 letter random string. This only needs to be unique for a Core account, not globally.
@@ -262,6 +265,42 @@ StorageAPI.SetGlobalKey = function (player, key, value)
 	playerData[StorageAPI.GlobalDataKey][key] = value
 
 	return SetPlayerDataWrapper(player, playerData)
+end
+
+StorageAPI.WritePlayerSchemaData = function (player, ...)
+	local playerData = Storage.GetPlayerData(player) or { }
+	playerData = Schema.Write(playerData, StorageSchema, ...)
+	Storage.SetPlayerData(player, playerData)
+end
+
+StorageAPI.CreateNewCharacterV2 = function (player)
+	-- What should this function look like?
+	-- Schema rights are pretty shit
+	-- Ideally we would actually just schemaAlloc a player, then call several write functions for subschema
+	-- Maybe even just wrap these, like SetPlayerRace()
+	StorageAPI.WritePlayerSchemaData(player, initialData)
+	local playerData = GetPlayerDataWrapper(player)
+	local characterCount = StorageAPI.GetCharacterCount(player)
+
+	if characterCount >= StorageAPI.CharacterCreateLimit then
+		warn("Cannot create another character! Limit reached.")
+		return
+	end
+
+	local characterId = GenerateCharacterId()
+
+	if playerData[StorageAPI.CharacterDataKey][characterId] then
+		error("Generated conflicting character id: " .. characterId)
+		return nil
+	end
+
+	initialData.sortIndex = StorageAPI.GetCharacterCount(player) + 1
+
+	playerData[StorageAPI.CharacterDataKey][characterId] = initialData or { }
+	SetPlayerDataWrapper(player, playerData)
+	StorageAPI.SetActiveCharacterId(player, characterId)
+
+	return characterId
 end
 
 return StorageAPI

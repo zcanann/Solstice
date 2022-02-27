@@ -5681,6 +5681,6 @@ Assets {
   Marketplace {
     Description: "A small furnished house (furniture sets can removed seperatly)"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

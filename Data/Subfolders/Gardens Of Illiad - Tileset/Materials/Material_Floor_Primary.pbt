@@ -2,7 +2,7 @@ Assets {
   Id: 12632506850464872752
   Name: "Material_Floor_Primary"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 11901168055485249797
     ParameterOverrides {

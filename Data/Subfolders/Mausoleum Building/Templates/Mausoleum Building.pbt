@@ -54,5 +54,5 @@ Assets {
     Version: "1.0.0"
     Description: "Stone Mausoleum Building with a gargoyle on top. Comes with double doors, sound, and lighting."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

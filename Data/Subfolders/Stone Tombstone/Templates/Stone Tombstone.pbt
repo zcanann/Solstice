@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Just a basic stone tombstone with a bit of decoration. Nothing too fancy."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

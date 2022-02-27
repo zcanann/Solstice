@@ -2,7 +2,7 @@ Assets {
   Id: 15681535117411795644
   Name: "FrameworkStormCloud"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "WorldMap"
   CustomMaterialAsset {
     BaseMaterialId: 1082809058784319555

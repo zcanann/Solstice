@@ -2,7 +2,7 @@ Assets {
   Id: 17878128685866040179
   Name: "FrameworkInvisibleWall"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Walls"
   CustomMaterialAsset {
     BaseMaterialId: 16711686277122895017

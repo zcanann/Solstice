@@ -2,7 +2,7 @@ Assets {
   Id: 12935706457506651339
   Name: "Crypt Glow"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 8919871824294249785
     ParameterOverrides {

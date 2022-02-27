@@ -18,7 +18,7 @@ Objects {
   }
   ParentId: 4097215413434550099
   ChildIds: 18161273998595133225
-  ChildIds: 11183276327902597004
+  ChildIds: 15607375524677316832
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -36,15 +36,16 @@ Objects {
   }
 }
 Objects {
-  Id: 11183276327902597004
-  Name: "RoseBedB Merged Variant"
+  Id: 15607375524677316832
+  Name: "[Alchemi] Rose Bed- B"
   Transform {
     Location {
-      X: -14.3779287
-      Y: -25
-      Z: 75
+      X: -13.1054659
+      Y: -17.772459
+      Z: 66.5402832
     }
     Rotation {
+      Yaw: 41.3621559
     }
     Scale {
       X: 1
@@ -53,44 +54,6 @@ Objects {
     }
   }
   ParentId: 9161106350890166433
-  ChildIds: 15607375524677316832
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:forceoff"
-  }
-  Folder {
-    Model {
-      AggressiveMerge: true
-    }
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 15607375524677316832
-  Name: "[Alchemi] Rose Bed- B"
-  Transform {
-    Location {
-      X: 1.27246094
-      Y: 7.22753906
-      Z: -8.4597168
-    }
-    Rotation {
-      Yaw: 41.3621483
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11183276327902597004
   ChildIds: 1977633442914273268
   ChildIds: 8377255257890786650
   ChildIds: 529148493088922090

@@ -2,7 +2,7 @@ Assets {
   Id: 13272910761782066979
   Name: "Custom -Ornamental Leaf"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 2760686857148238251
     ParameterOverrides {

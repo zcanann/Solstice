@@ -2,7 +2,7 @@ Assets {
   Id: 9623139758172952527
   Name: "Mace - Ice Ball Spikes"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 13776493345656580306
     ParameterOverrides {

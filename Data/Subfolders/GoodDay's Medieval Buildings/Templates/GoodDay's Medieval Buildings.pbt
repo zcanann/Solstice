@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "A Medieval Buildings set to get up and running with a small village quickly.\r\n\r\nComes Arranged in a small town.\r\n\r\nThis set includes:\r\n1. Church\r\n2. Tavern\r\n3. XL House\r\n4. Large House\r\n5. Medium House\r\n6. Small House\r\n7. Built Market Stall - Open\r\n8. Built Market Stall - Closed\r\n9. Fabric Stall Grey/Red & Black/White\r\n10. Dilapidated Stalls 3 Variants\r\n"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

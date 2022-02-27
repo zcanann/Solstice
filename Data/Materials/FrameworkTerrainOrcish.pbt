@@ -2,7 +2,7 @@ Assets {
   Id: 6829442250202245359
   Name: "FrameworkTerrainOrcish"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Terrain"
   CustomMaterialAsset {
     BaseMaterialId: 3169360956294553894
@@ -16,7 +16,7 @@ Assets {
       Overrides {
         Name: "cmp:Material3"
         AssetReference {
-          Id: 18152046462523842666
+          Id: 7359719428093778954
         }
       }
       Overrides {
@@ -26,31 +26,31 @@ Assets {
         }
       }
       Overrides {
-        Name: "cmp:Material4"
-        AssetReference {
-          Id: 11699072315830502684
-        }
-      }
-      Overrides {
-        Name: "cmp:Material4_Sides"
-        AssetReference {
-          Id: 490602501798595542
-        }
-      }
-      Overrides {
-        Name: "cmpc:Material4"
-        Color {
-          R: 1
-          G: 0.139072657
-          A: 1
-        }
-      }
-      Overrides {
         Name: "cmpc:Material2"
         Color {
           R: 0.735
           G: 0.204437241
           A: 1
+        }
+      }
+      Overrides {
+        Name: "cmpc:Material1"
+        Color {
+          R: 1
+          G: 0.137254909
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "cmp:Material1"
+        AssetReference {
+          Id: 5053944409392500314
+        }
+      }
+      Overrides {
+        Name: "cmp:Material1_Sides"
+        AssetReference {
+          Id: 490602501798595542
         }
       }
     }
@@ -73,16 +73,16 @@ Assets {
       }
     }
     Assets {
-      Id: 18152046462523842666
-      Name: "Sand Waves 01"
+      Id: 7359719428093778954
+      Name: "Fabric Burlap New 01"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_sand_waves_001_uv_ref"
+        AssetId: "mi_fan_fabric_burlap_002_uv"
       }
     }
     Assets {
-      Id: 11699072315830502684
+      Id: 5053944409392500314
       Name: "Moss 01"
       PlatformAssetType: 2
       PrimaryAsset {

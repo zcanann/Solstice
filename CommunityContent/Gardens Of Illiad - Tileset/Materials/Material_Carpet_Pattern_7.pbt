@@ -2,7 +2,7 @@ Assets {
   Id: 15024066140721256646
   Name: "Material_Carpet_Pattern_7"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 1000068266567313185
     ParameterOverrides {

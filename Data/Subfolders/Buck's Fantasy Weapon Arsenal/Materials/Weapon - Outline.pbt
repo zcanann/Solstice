@@ -2,7 +2,7 @@ Assets {
   Id: 17152802514034313759
   Name: "Weapon - Outline"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 16900862763789147978
     ParameterOverrides {

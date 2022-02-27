@@ -2,7 +2,7 @@ Assets {
   Id: 14699406946120428445
   Name: "lava glow"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Volcano materials"
   CustomMaterialAsset {
     BaseMaterialId: 9951331313782863746

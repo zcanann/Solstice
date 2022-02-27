@@ -1,12 +1,12 @@
 Assets {
-  Id: 17256152977790581857
+  Id: 870776088258320720
   Name: "FrameworkNPC_LostSoul_A"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11348517016719245190
+      RootId: 8689405352783667422
       Objects {
-        Id: 11348517016719245190
+        Id: 8689405352783667422
         Name: "FrameworkNPC_LostSoul"
         Transform {
           Scale {
@@ -16,16 +16,60 @@ Assets {
           }
         }
         ParentId: 11394908061270319408
-        ChildIds: 10692578985468426304
-        ChildIds: 9377427379436174445
+        ChildIds: 12019974289916544335
+        ChildIds: 435836314850681671
+        ChildIds: 433943363553811557
         UnregisteredParameters {
           Overrides {
             Name: "cs:ProximityNetworkedObject"
             ObjectReference {
-              SubObjectId: 7023974313349407438
+              SubObjectId: 4591050820132539414
+            }
+          }
+          Overrides {
+            Name: "cs:UnitFrameCapture"
+            ObjectReference {
+              SubObjectId: 826005412024571793
             }
           }
         }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 12019974289916544335
+        Name: "Networking"
+        Transform {
+          Location {
+            Z: 90
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8689405352783667422
+        ChildIds: 11356823205063520950
+        ChildIds: 10537646767351289147
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -39,14 +83,191 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Folder {
-          IsGroup: true
+          IsFilePartition: true
+          FilePartitionName: "Networking_1"
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
-        Id: 10692578985468426304
+        Id: 11356823205063520950
+        Name: "LocalContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 12019974289916544335
+        ChildIds: 4591050820132539414
+        NetworkContext {
+          Type: Local
+        }
+      }
+      Objects {
+        Id: 4591050820132539414
+        Name: "ProximityNetworkedObject"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11356823205063520950
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:IsProximityNetworkCollider"
+            Bool: true
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedDataScript"
+            ObjectReference {
+              SubObjectId: 4910582114728688019
+            }
+          }
+          Overrides {
+            Name: "cs:ObjectType"
+            String: "Entity"
+          }
+          Overrides {
+            Name: "cs:UnitFrameCapture"
+            ObjectReference {
+              SubObjectId: 826005412024571793
+            }
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedDataScript:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ProximityNetworkedDataScript:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ObjectType:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:ObjectType:ml"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:UnitFrameCapture:isrep"
+            Bool: false
+          }
+          Overrides {
+            Name: "cs:UnitFrameCapture:ml"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceon"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Trigger {
+          TeamSettings {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          TriggerShape_v2 {
+            Value: "mc:etriggershape:box"
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10537646767351289147
+        Name: "ServerContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+          }
+        }
+        ParentId: 12019974289916544335
+        ChildIds: 4910582114728688019
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          Type: Server
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4910582114728688019
+        Name: "ProximityNetworkedData_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10537646767351289147
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5474629016980680411
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 435836314850681671
         Name: "Model"
         Transform {
           Location {
@@ -59,9 +280,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11348517016719245190
-        ChildIds: 12509239061899240200
-        ChildIds: 626143090792127046
+        ParentId: 8689405352783667422
+        ChildIds: 14048301189498974120
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -82,7 +302,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12509239061899240200
+        Id: 14048301189498974120
         Name: "ClientContext"
         Transform {
           Location {
@@ -96,8 +316,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 10692578985468426304
-        ChildIds: 10655239108442292697
+        ParentId: 435836314850681671
+        ChildIds: 2784846945260108913
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -117,7 +337,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10655239108442292697
+        Id: 2784846945260108913
         Name: "Humanoid 2 Rig"
         Transform {
           Location {
@@ -130,7 +350,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12509239061899240200
+        ParentId: 14048301189498974120
+        ChildIds: 7393075196102134514
+        ChildIds: 17657398149344608021
         UnregisteredParameters {
           Overrides {
             Name: "ma:0:Shared_BaseMaterial:id"
@@ -149,12 +371,12 @@ Assets {
           Overrides {
             Name: "ma:0:Shared_Detail2:id"
             AssetReference {
-              Id: 2334612471939404507
+              Id: 463582121298734788
             }
           }
         }
         Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
@@ -170,11 +392,9 @@ Assets {
             Id: 14578359379967352238
           }
           Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
           }
           AnimatedMesh {
-            AnimationStance: "unarmed_death"
+            AnimationStance: "unarmed_bind_pose"
             AnimationStancePlaybackRate: 1
             AnimationStanceShouldLoop: true
             AnimationPlaybackRateMultiplier: 1
@@ -200,51 +420,275 @@ Assets {
         }
       }
       Objects {
-        Id: 626143090792127046
-        Name: "MouseHitTestCollision"
+        Id: 7393075196102134514
+        Name: "HitTestObject_C"
         Transform {
           Location {
+            X: 18230
+            Y: 2577.40308
             Z: 100
           }
           Rotation {
-            Yaw: 129.999939
+            Yaw: -89.9999847
           }
           Scale {
-            X: 1.5
-            Y: 1.5
-            Z: 2.5
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
-        ParentId: 10692578985468426304
+        ParentId: 2784846945260108913
+        TemplateInstance {
+          ParameterOverrideMap {
+            key: 11506194768157927954
+            value {
+              Overrides {
+                Name: "Name"
+                String: "HitTestObject_C"
+              }
+              Overrides {
+                Name: "Position"
+                Vector {
+                }
+              }
+              Overrides {
+                Name: "Rotation"
+                Rotator {
+                }
+              }
+            }
+          }
+          TemplateAsset {
+            Id: 12484271512640405953
+          }
+        }
+      }
+      Objects {
+        Id: 17657398149344608021
+        Name: "ObjectAttacher_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 2784846945260108913
+        ChildIds: 4364472266117563420
         UnregisteredParameters {
           Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
+            Name: "cs:Rig"
+            ObjectReference {
+              SubObjectId: 2784846945260108913
+            }
           }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
+          Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9584704415424499449
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 4364472266117563420
+        Name: "head"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 6.83018789e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17657398149344608021
+        ChildIds: 700321174305730690
+        ChildIds: 1810354110413445691
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Folder {
+          IsGroup: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 700321174305730690
+        Name: "UnitFrameCapture_C"
+        Transform {
+          Location {
+            X: 18243
+            Y: 2556.40308
+            Z: 181
+          }
+          Rotation {
+            Yaw: -89.9999924
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 4364472266117563420
+        Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        TemplateInstance {
+          ParameterOverrideMap {
+            key: 6096349905810140646
+            value {
+              Overrides {
+                Name: "Position"
+                Vector {
+                  X: 71
+                  Y: 42
+                  Z: 27
+                }
+              }
+              Overrides {
+                Name: "cs:BackPlane"
+                ObjectReference {
+                  SubObjectId: 17686985720539102788
+                }
+              }
+            }
+          }
+          ParameterOverrideMap {
+            key: 14725643823824657908
+            value {
+              Overrides {
+                Name: "Name"
+                String: "UnitFrameCapture_C"
+              }
+              Overrides {
+                Name: "Position"
+                Vector {
+                  Z: 76
+                }
+              }
+              Overrides {
+                Name: "Rotation"
+                Rotator {
+                  Yaw: -5.00003386
+                }
+              }
+              Overrides {
+                Name: "Scale"
+                Vector {
+                  X: 1
+                  Y: 1
+                  Z: 1
+                }
+              }
+              Overrides {
+                Name: "cs:CaptureCamera"
+                ObjectReference {
+                  SubObjectId: 10644228524450555779
+                }
+              }
+            }
+          }
+          TemplateAsset {
+            Id: 7662072430726303162
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 1810354110413445691
+        Name: "Bone Human Skull 01"
+        Transform {
+          Location {
+            X: -6.5461421
+            Y: -1
+            Z: 86
+          }
+          Rotation {
+            Yaw: -89.9998703
+          }
+          Scale {
+            X: 0.65
+            Y: 0.65
+            Z: 0.65
+          }
+        }
+        ParentId: 4364472266117563420
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 15539191591784739318
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1.026
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              G: 0.806622565
+              B: 0.840000033
+              A: 0.781
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
         }
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         CoreMesh {
           MeshAsset {
-            Id: 1137112816547272582
+            Id: 9077795533097890780
           }
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
-          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -258,7 +702,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9377427379436174445
+        Id: 433943363553811557
         Name: "Behavior"
         Transform {
           Location {
@@ -271,10 +715,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11348517016719245190
-        ChildIds: 7023974313349407438
-        ChildIds: 4848759869157782196
-        ChildIds: 18290002934284314804
+        ParentId: 8689405352783667422
+        ChildIds: 6033240230953676626
+        ChildIds: 7896606510767469921
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -296,163 +739,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7023974313349407438
-        Name: "ProximityNetworkedObject"
-        Transform {
-          Location {
-            Z: 90
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9377427379436174445
-        ChildIds: 9215983193715055051
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:IsProximityNetworkCollider"
-            Bool: true
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 17803366332466114312
-            }
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedDataScript"
-            ObjectReference {
-              SubObjectId: 7758815865985091230
-            }
-          }
-          Overrides {
-            Name: "cs:ObjectType"
-            String: "Entity"
-          }
-          Overrides {
-            Name: "cs:UnitFrameCapture"
-            ObjectReference {
-              SubObjectId: 7192784538913353112
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceon"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 12095835209017042614
-          }
-          Teams {
-          }
-          InteractWithTriggers: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 9215983193715055051
-        Name: "ServerContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-          }
-        }
-        ParentId: 7023974313349407438
-        ChildIds: 7758815865985091230
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        NetworkContext {
-          Type: Server
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 7758815865985091230
-        Name: "ProximityNetworkedData_S"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 9215983193715055051
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 5474629016980680411
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 4848759869157782196
+        Id: 6033240230953676626
         Name: "ClientContext"
         Transform {
           Location {
@@ -465,12 +752,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9377427379436174445
-        ChildIds: 7192784538913353112
-        ChildIds: 10159321667435830933
-        ChildIds: 1191209439160521628
-        ChildIds: 4454967224019093893
-        ChildIds: 8564753907370798047
+        ParentId: 433943363553811557
+        ChildIds: 7529187676509049817
+        ChildIds: 4725770541899476279
+        ChildIds: 1722343459926899881
+        ChildIds: 13439708009536381281
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -490,184 +776,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7192784538913353112
-        Name: "UnitFrameCapture_C"
-        Transform {
-          Location {
-            X: 23.2236271
-            Y: 13.0254793
-            Z: 175
-          }
-          Rotation {
-            Yaw: -5.00003052
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 4848759869157782196
-        ChildIds: 8843280415189380362
-        ChildIds: 14189300426048271433
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:CaptureCamera"
-            ObjectReference {
-              SubObjectId: 8843280415189380362
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        NetworkContext {
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 8843280415189380362
-        Name: "CaptureCamera"
-        Transform {
-          Location {
-            X: 53
-            Y: 28.9999943
-            Z: 20
-          }
-          Rotation {
-            Pitch: -9.99996948
-            Yaw: -149.999954
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7192784538913353112
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:BackPlane"
-            ObjectReference {
-              SubObjectId: 14189300426048271433
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:alwaysvisible"
-        }
-        Camera {
-          PositionOffset {
-          }
-          RotationOffset {
-          }
-          FieldOfView: 25
-          ViewWidth: 1200
-          RotationMode {
-            Value: "mc:erotationmode:default"
-          }
-          MinPitch: -89
-          MaxPitch: 89
-          DoesPositionOffsetSpring: true
-          AudioListenerOffset {
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 14189300426048271433
-        Name: "BackPlane"
-        Transform {
-          Location {
-            X: -50.5046387
-            Y: -28.0820274
-            Z: 0.449356079
-          }
-          Rotation {
-            Pitch: 79.999527
-            Yaw: -149.999664
-            Roll: 5.89978263e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 7192784538913353112
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 16248465704105362888
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:forceoff"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:forceoff"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 7280120439921138985
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          DisableDistanceFieldLighting: true
-          DisableCastShadows: true
-          DisableReceiveDecals: true
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 10159321667435830933
+        Id: 7529187676509049817
         Name: "Attackable_C"
         Transform {
           Location {
@@ -680,20 +789,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4848759869157782196
+        ParentId: 6033240230953676626
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -717,7 +814,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1191209439160521628
+        Id: 4725770541899476279
         Name: "Walkable_C"
         Transform {
           Location {
@@ -730,31 +827,11 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4848759869157782196
+        ParentId: 6033240230953676626
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Object"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
-          }
           Overrides {
             Name: "cs:StopRadius"
             Float: 200
-          }
-          Overrides {
-            Name: "cs:Object:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Object:ml"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
           }
         }
         Collidable_v2 {
@@ -779,7 +856,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4454967224019093893
+        Id: 1722343459926899881
         Name: "NpcHumanoidAnimations_C"
         Transform {
           Location {
@@ -792,18 +869,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4848759869157782196
+        ParentId: 6033240230953676626
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
-          }
           Overrides {
             Name: "cs:HumanoidRig"
             ObjectReference {
-              SubObjectId: 10655239108442292697
+              SubObjectId: 2784846945260108913
             }
           }
         }
@@ -829,13 +900,12 @@ Assets {
         }
       }
       Objects {
-        Id: 8564753907370798047
-        Name: "EntityVisuals_C"
+        Id: 13439708009536381281
+        Name: "NpcMovementPathing_C"
         Transform {
           Location {
           }
           Rotation {
-            Yaw: 65.0000229
           }
           Scale {
             X: 1
@@ -843,12 +913,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4848759869157782196
+        ParentId: 6033240230953676626
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ProximityNetworkedObject"
+            Name: "cs:Npc"
             ObjectReference {
-              SubObjectId: 7023974313349407438
+              SubObjectId: 2784846945260108913
             }
           }
         }
@@ -866,7 +936,7 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 15922954283188355462
+            Id: 2002217237009478837
           }
         }
         NetworkRelevanceDistance {
@@ -874,7 +944,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18290002934284314804
+        Id: 7896606510767469921
         Name: "ServerContext"
         Transform {
           Location {
@@ -887,10 +957,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 9377427379436174445
-        ChildIds: 5369965685880657776
-        ChildIds: 9039869026889638397
-        ChildIds: 10998085558906987134
+        ParentId: 433943363553811557
+        ChildIds: 14990862798600870109
+        ChildIds: 997965202084463397
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -911,16 +980,12 @@ Assets {
         }
       }
       Objects {
-        Id: 5369965685880657776
-        Name: "NpcData"
+        Id: 14990862798600870109
+        Name: "Stats"
         Transform {
           Location {
-            X: 1439.01794
-            Y: -1450.94019
-            Z: 70
           }
           Rotation {
-            Yaw: 129.999969
           }
           Scale {
             X: 1
@@ -928,11 +993,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18290002934284314804
-        ChildIds: 2714040742517067537
-        ChildIds: 17970792969519094315
-        ChildIds: 1269044833450421434
-        ChildIds: 335534710826489481
+        ParentId: 7896606510767469921
+        ChildIds: 6218369128372891828
+        ChildIds: 11820759120919179379
+        ChildIds: 5489855327107125938
+        ChildIds: 17355767915294012206
+        ChildIds: 1547544402742012877
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -947,13 +1013,52 @@ Assets {
         }
         Folder {
           IsFilePartition: true
+          FilePartitionName: "Stats"
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
       }
       Objects {
-        Id: 2714040742517067537
+        Id: 6218369128372891828
+        Name: "NpcBaseStats_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14990862798600870109
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 7867712670032685259
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 11820759120919179379
         Name: "NpcNameFaction_S"
         Transform {
           Location {
@@ -966,7 +1071,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5369965685880657776
+        ParentId: 14990862798600870109
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
@@ -975,18 +1080,6 @@ Assets {
           Overrides {
             Name: "cs:Race"
             String: "Undead"
-          }
-          Overrides {
-            Name: "cs:Npc"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
           }
         }
         Collidable_v2 {
@@ -1011,61 +1104,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17970792969519094315
-        Name: "NpcStats_S"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 5369965685880657776
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Npc"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
-          }
-          Overrides {
-            Name: "cs:MeleeRadius"
-            Float: 200
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 7867712670032685259
-          }
-        }
-        NetworkRelevanceDistance {
-          Value: "mc:eproxyrelevance:critical"
-        }
-      }
-      Objects {
-        Id: 1269044833450421434
+        Id: 5489855327107125938
         Name: "NpcDefensiveStats_S"
         Transform {
           Location {
@@ -1078,20 +1117,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5369965685880657776
+        ParentId: 14990862798600870109
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Npc"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1115,7 +1142,7 @@ Assets {
         }
       }
       Objects {
-        Id: 335534710826489481
+        Id: 17355767915294012206
         Name: "NpcOffensiveStats_S"
         Transform {
           Location {
@@ -1128,20 +1155,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5369965685880657776
+        ParentId: 14990862798600870109
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Npc"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
-          }
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1165,16 +1180,12 @@ Assets {
         }
       }
       Objects {
-        Id: 9039869026889638397
-        Name: "EngagementSessionCombat_S"
+        Id: 1547544402742012877
+        Name: "NpcPositionalStats_S"
         Transform {
           Location {
-            X: 1439.01794
-            Y: -1450.94019
-            Z: 70
           }
           Rotation {
-            Yaw: 129.999969
           }
           Scale {
             X: 1
@@ -1182,18 +1193,65 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18290002934284314804
+        ParentId: 14990862798600870109
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 347275619744489737
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 997965202084463397
+        Name: "NpcController_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 7896606510767469921
+        ChildIds: 145530108830132320
+        ChildIds: 6585464356542007879
+        ChildIds: 10508342395959799508
         UnregisteredParameters {
           Overrides {
-            Name: "cs:ProximityNetworkedObject"
+            Name: "cs:NpcCombat"
             ObjectReference {
-              SubObjectId: 7023974313349407438
+              SubObjectId: 10508342395959799508
             }
           }
           Overrides {
-            Name: "cs:Object"
+            Name: "cs:NpcMovementPathing"
             ObjectReference {
-              SubObjectId: 11348517016719245190
+              SubObjectId: 6585464356542007879
+            }
+          }
+          Overrides {
+            Name: "cs:NpcEngagementVisualizer"
+            ObjectReference {
+              SubObjectId: 145530108830132320
             }
           }
         }
@@ -1219,16 +1277,12 @@ Assets {
         }
       }
       Objects {
-        Id: 10998085558906987134
-        Name: "NpcPathingWander_S"
+        Id: 145530108830132320
+        Name: "NpcComponentEngagementVisualizer_S"
         Transform {
           Location {
-            X: 1439.01794
-            Y: -1450.94019
-            Z: 70
           }
           Rotation {
-            Yaw: 129.999969
           }
           Scale {
             X: 1
@@ -1236,20 +1290,47 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 18290002934284314804
+        ParentId: 997965202084463397
         UnregisteredParameters {
-          Overrides {
-            Name: "cs:Npc"
-            ObjectReference {
-              SubObjectId: 11348517016719245190
-            }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15724300102369226823
           }
-          Overrides {
-            Name: "cs:ProximityNetworkedObject"
-            ObjectReference {
-              SubObjectId: 7023974313349407438
-            }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 6585464356542007879
+        Name: "NpcComponentMovementPathing_S"
+        Transform {
+          Location {
           }
+          Rotation {
+            Yaw: -6.83018879e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 997965202084463397
+        UnregisteredParameters {
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1266,6 +1347,45 @@ Assets {
         Script {
           ScriptAsset {
             Id: 2263876175624442119
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+      }
+      Objects {
+        Id: 10508342395959799508
+        Name: "NpcComponentCombat_S"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -6.83018879e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 997965202084463397
+        UnregisteredParameters {
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 15217503047716351748
           }
         }
         NetworkRelevanceDistance {
@@ -1292,48 +1412,30 @@ Assets {
       }
     }
     Assets {
-      Id: 1137112816547272582
-      Name: "Cylinder"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cylinder_002"
-      }
-    }
-    Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
-      }
-    }
-    Assets {
-      Id: 17803366332466114312
-      Name: "Invisible"
+      Id: 463582121298734788
+      Name: "Electric Surface"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
+        AssetId: "fxma_electrical_surface"
       }
     }
     Assets {
-      Id: 7280120439921138985
-      Name: "Plane 1m - One Sided"
+      Id: 9077795533097890780
+      Name: "Bone Human Skull 01"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_plane_1m_001"
+        AssetId: "sm_bones_human_skull_01_ref"
       }
     }
     Assets {
-      Id: 16248465704105362888
-      Name: "Rock Obsidian 01"
+      Id: 15539191591784739318
+      Name: "Screen Overlay 04"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_fresnel_rock_obsidian_001_uv"
+        AssetId: "fxmi_screen_overlay_04"
       }
     }
     PrimaryAssetId {
@@ -1341,7 +1443,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "NPCs"
 }

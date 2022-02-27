@@ -2,7 +2,7 @@ Assets {
   Id: 4215395476909088343
   Name: "Custom  Wood 9 Slice Crate 02"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 6945782701966584714
     ParameterOverrides {

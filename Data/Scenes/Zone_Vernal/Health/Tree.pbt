@@ -101,6 +101,12 @@ Objects {
       }
     }
   }
+  InstanceHistory {
+    SelfId: 5872393324614417324
+    SubobjectId: 10924992025585023595
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -177,6 +183,12 @@ Objects {
       }
     }
   }
+  InstanceHistory {
+    SelfId: 3199021584942990132
+    SubobjectId: 16899341909450392307
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -251,6 +263,12 @@ Objects {
       }
     }
   }
+  InstanceHistory {
+    SelfId: 12240273205005093411
+    SubobjectId: 8015738148199042020
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -323,6 +341,12 @@ Objects {
         }
       }
     }
+  }
+  InstanceHistory {
+    SelfId: 12096802481128160849
+    SubobjectId: 6990652062946639766
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -398,6 +422,12 @@ Objects {
         }
       }
     }
+  }
+  InstanceHistory {
+    SelfId: 17467360289702656605
+    SubobjectId: 3786180812668517274
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -487,6 +517,12 @@ Objects {
       }
     }
   }
+  InstanceHistory {
+    SelfId: 10172252821772559214
+    SubobjectId: 5460802338430902953
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -534,6 +570,12 @@ Objects {
     ScriptAsset {
       Id: 17133579673521530760
     }
+  }
+  InstanceHistory {
+    SelfId: 5034227574293021083
+    SubobjectId: 9457167305366192220
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

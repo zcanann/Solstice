@@ -2,7 +2,7 @@ Assets {
   Id: 12236264927120487519
   Name: "Custom Base Material from Humanoid 1 Torn Pants"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 14933728572098226007

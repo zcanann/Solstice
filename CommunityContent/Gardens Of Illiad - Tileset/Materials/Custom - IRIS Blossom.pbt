@@ -2,7 +2,7 @@ Assets {
   Id: 14382606396975896608
   Name: "Custom - IRIS Blossom"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 6680195500458450980
     ParameterOverrides {

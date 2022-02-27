@@ -2,7 +2,7 @@ Assets {
   Id: 16015693831478857747
   Name: "Custom Detail 1 from Fantasy Axe Blade 01"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 5107913394006182853
     ParameterOverrides {

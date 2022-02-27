@@ -1,7 +1,7 @@
 Name: "Armor Plates_2"
-RootId: 11211976126347965258
+RootId: 6775926526695290085
 Objects {
-  Id: 8756026475484640501
+  Id: 5306712226200902813
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 1.61151254
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -71,7 +71,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17234053508621274735
+  Id: 7093888846090106033
   Name: "Nails"
   Transform {
     Location {
@@ -87,7 +87,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -108,7 +108,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10477479959061071683
+  Id: 11537860862511751118
   Name: "Rock Block 02"
   Transform {
     Location {
@@ -126,7 +126,7 @@ Objects {
       Z: 6.49999857
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -176,7 +176,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14430626133148191435
+  Id: 12432000903649329886
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -194,7 +194,7 @@ Objects {
       Z: 7.05726337
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -244,7 +244,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11054947834376070079
+  Id: 6386038708188829412
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -261,7 +261,7 @@ Objects {
       Z: 5.15123892
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -311,7 +311,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17290467867502982343
+  Id: 9118835989415018135
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -330,7 +330,7 @@ Objects {
       Z: 0.731569052
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -381,7 +381,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7229058388099601932
+  Id: 9070980226028971184
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -400,7 +400,7 @@ Objects {
       Z: 1.27961898
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -450,7 +450,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13844377232352742869
+  Id: 17024611087110137428
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -469,7 +469,7 @@ Objects {
       Z: 2.17277932
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -519,7 +519,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15142300790071363464
+  Id: 6973450400599039119
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -538,7 +538,7 @@ Objects {
       Z: 1.6115154
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -589,7 +589,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14299596831134274298
+  Id: 3294349243546384024
   Name: "Rock Block 02"
   Transform {
     Location {
@@ -608,7 +608,7 @@ Objects {
       Z: 0.38641414
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -658,7 +658,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4657626239283932003
+  Id: 4471656787771393225
   Name: "Rock Block 01"
   Transform {
     Location {
@@ -677,7 +677,7 @@ Objects {
       Z: 5.68217468
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -727,7 +727,7 @@ Objects {
   }
 }
 Objects {
-  Id: 4489752769760407214
+  Id: 13795883426474258545
   Name: "Rock Block 02"
   Transform {
     Location {
@@ -746,7 +746,7 @@ Objects {
       Z: 7.28233767
     }
   }
-  ParentId: 11211976126347965258
+  ParentId: 6775926526695290085
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -764,7 +764,7 @@ Objects {
     }
     Overrides {
       Name: "ma:Shared_BaseMaterial:vtile"
-      Float: 1
+      Float: 0.7
     }
   }
   Collidable_v2 {

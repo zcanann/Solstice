@@ -2,7 +2,7 @@ Assets {
   Id: 2366058067106665052
   Name: "Lava_active"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Volcano materials"
   CustomMaterialAsset {
     BaseMaterialId: 1082809058784319555

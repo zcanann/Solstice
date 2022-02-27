@@ -14,14 +14,12 @@ Objects {
       Z: 1
     }
   }
-  ChildIds: 2654916338316290302
-  ChildIds: 16844910628275373465
-  ChildIds: 5628166357863187692
+  ChildIds: 7172054231727396979
+  ChildIds: 3393625550016490369
+  ChildIds: 3637267788313867522
   ChildIds: 9292959906759754007
-  ChildIds: 5017729835122668969
-  ChildIds: 3724155668220439742
-  ChildIds: 4028461058118790185
   ChildIds: 7012653820854187372
+  ChildIds: 762320804053797678
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -37,6 +35,39 @@ Objects {
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 762320804053797678
+  Name: "SwampDomeHut"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15861819947134992889
+      value {
+        Overrides {
+          Name: "Name"
+          String: "SwampDomeHut"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -240
+            Y: -33380
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 12460798387821098949
+    }
   }
 }
 Objects {
@@ -80,110 +111,6 @@ Objects {
   }
 }
 Objects {
-  Id: 4028461058118790185
-  Name: "03 Asia Fantasy Advanced Tileset"
-  Transform {
-    Location {
-      X: 16710
-      Y: -48560
-    }
-    Rotation {
-      Yaw: -90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "03 Asia Fantasy Advanced Tileset"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 3724155668220439742
-  Name: "01 Asia Fantasy Tileset"
-  Transform {
-    Location {
-      X: -16905
-      Y: -51555
-      Z: 125
-    }
-    Rotation {
-      Yaw: -90
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "01 Asia Fantasy Tileset"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
-  Id: 5017729835122668969
-  Name: "02 Asia Fantasy Props & Nature"
-  Transform {
-    Location {
-      X: -330
-      Y: -2645
-      Z: 685
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "02 Asia Fantasy Props _ Nature"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
-  }
-}
-Objects {
   Id: 9292959906759754007
   Name: "Map"
   Transform {
@@ -219,13 +146,9 @@ Objects {
   }
 }
 Objects {
-  Id: 5628166357863187692
-  Name: "UI"
+  Id: 3637267788313867522
+  Name: "UI_A"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -233,31 +156,25 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9869906567946650923
+      value {
+        Overrides {
+          Name: "Name"
+          String: "UI_A"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10779387828834219691
+    }
   }
 }
 Objects {
-  Id: 16844910628275373465
-  Name: "GameSystems"
+  Id: 3393625550016490369
+  Name: "GameSystems_A"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -265,34 +182,25 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "GameSystems"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18088340275980657657
+      value {
+        Overrides {
+          Name: "Name"
+          String: "GameSystems_A"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1167388389768785005
+    }
   }
 }
 Objects {
-  Id: 2654916338316290302
-  Name: "Settings"
+  Id: 7172054231727396979
+  Name: "Settings_A"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -300,20 +208,18 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "Settings"
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 14209675969168667736
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Settings_A"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13323968786186980506
+    }
   }
 }

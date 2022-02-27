@@ -2,7 +2,7 @@ Assets {
   Id: 15097205755131057161
   Name: "FrameworkGoldfishTail"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Models"
   VirtualFolderPath: "Resources"
   CustomMaterialAsset {

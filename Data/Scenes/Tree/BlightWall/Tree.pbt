@@ -2626,7 +2626,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "Armor Plates_2"
+    FilePartitionName: "Armor Plates_3"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -2663,7 +2663,7 @@ Objects {
   }
   Folder {
     IsFilePartition: true
-    FilePartitionName: "AllBeams"
+    FilePartitionName: "AllBeams_3"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

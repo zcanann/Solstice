@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "Broken stone archway with rocks at its base, covered with moss and fern. "
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

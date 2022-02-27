@@ -2,7 +2,7 @@ Assets {
   Id: 8082545275294950442
   Name: "Custom -Pendant Globe"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 307864259269648426
     ParameterOverrides {

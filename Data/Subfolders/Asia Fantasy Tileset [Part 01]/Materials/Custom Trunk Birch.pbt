@@ -2,7 +2,7 @@ Assets {
   Id: 1539925758115750840
   Name: "Custom Trunk Birch"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 9978036843561029941
     ParameterOverrides {

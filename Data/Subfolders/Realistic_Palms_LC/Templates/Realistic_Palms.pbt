@@ -4524,6 +4524,6 @@ Assets {
   Marketplace {
     Description: "This CC contains 5 models of palms :)\r\nEnjoy"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

@@ -3481,6 +3481,6 @@ Assets {
   Marketplace {
     Description: "LMB has 2 different slash animations, RMB has a magical animation\r\n\r\n-updated idle stance so it\'s not going through the floor"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

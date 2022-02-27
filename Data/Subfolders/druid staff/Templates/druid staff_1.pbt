@@ -931,6 +931,6 @@ Assets {
   Marketplace {
     Description: "a druid staff made of branch wood"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

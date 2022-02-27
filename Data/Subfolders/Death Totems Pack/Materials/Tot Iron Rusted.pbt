@@ -2,7 +2,7 @@ Assets {
   Id: 6890928162075041735
   Name: "Tot Iron Rusted "
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 1550569900168609970
     ParameterOverrides {

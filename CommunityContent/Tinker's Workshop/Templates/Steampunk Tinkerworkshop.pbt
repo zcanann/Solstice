@@ -83212,6 +83212,6 @@ Assets {
   Marketplace {
     Description: "Hello there!\r\n\r\nA steampunk style building!\r\nThis building includes:\r\n- Animated gears\r\n- Steampunk weapon\r\n- Custom steampunk materials\r\n- Small steampunk assets"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

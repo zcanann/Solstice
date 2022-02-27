@@ -2,7 +2,7 @@ Assets {
   Id: 6256154243781920668
   Name: "Custom -Wishy"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 5053944409392500314
     ParameterOverrides {

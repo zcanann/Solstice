@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "This is a little weapon collection which has Staff\'s and some Melee wepaons such as Hammer and a Sword in it.\r\nHope you guys like it.\r\nPlease use the READ ME <3\r\nEach weapon is equipable and does Damage."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

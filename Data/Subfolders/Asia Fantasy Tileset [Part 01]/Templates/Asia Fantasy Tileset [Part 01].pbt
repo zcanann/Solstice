@@ -52,5 +52,5 @@ Assets {
     Version: "1.4.0"
     Description: "--- PERFORMANCE UPDATE & BUG FIXES!! ---\r\n\r\nAsian Fantasy Enviroment Art [Part 01]\r\nNOTE: This Tileset is splitted into 2 parts! Showcases are in Part 02!\r\n---------------------------------\r\nThis huge bundle contains:\r\n\r\nPrefabricated Buildings\r\nProps & Nature\r\nBuildingparts for custom buildings.\r\n--------------------------------------------------\r\nIt is sorted between:\r\n\r\n[Part 01]\r\nAsia Fantasy Tileset (Start here)\r\nAsia Fantasy Props & Nature\r\nAsia Fantasy Advanced Tileset\r\n\r\n[Part 02]\r\nAsia Fantasy Showcase Park\r\nAsia Fantasy Showcase Monastery\r\n--------------------------------------------------\r\nDue to meshmerging the object count is drastically reduced at runtime!\r\nLet me know if you find any issues!\r\n\r\n\r\n"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

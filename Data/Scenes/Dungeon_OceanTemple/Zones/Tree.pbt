@@ -183,15 +183,16 @@ Objects {
   }
 }
 Objects {
-  Id: 14941386982392477555
+  Id: 15495496960866464898
   Name: "Spawn Point"
   Transform {
     Location {
-      X: 15350.2051
-      Y: -11513.1133
-      Z: 534
+      X: 582.261475
+      Y: 2909.74438
+      Z: 650
     }
     Rotation {
+      Yaw: -90
     }
     Scale {
       X: 1
@@ -212,6 +213,8 @@ Objects {
   PlayerSpawnPoint {
     TeamInt: 1
     PlayerScaleMultiplier: 1
+    SpawnEffectsTemplate {
+    }
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

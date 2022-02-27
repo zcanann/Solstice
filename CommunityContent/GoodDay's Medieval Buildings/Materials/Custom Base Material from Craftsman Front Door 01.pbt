@@ -2,7 +2,7 @@ Assets {
   Id: 10213423302851075179
   Name: "Custom Base Material from Craftsman Front Door 01"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 11702310874459144432
     ParameterOverrides {

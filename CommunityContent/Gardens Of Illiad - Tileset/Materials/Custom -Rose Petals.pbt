@@ -2,7 +2,7 @@ Assets {
   Id: 3653718183483308145
   Name: "Custom -Rose Petals"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 12086838446430996153
     ParameterOverrides {

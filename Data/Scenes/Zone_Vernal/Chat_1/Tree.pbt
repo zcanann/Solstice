@@ -64,6 +64,12 @@ Objects {
       }
     }
   }
+  InstanceHistory {
+    SelfId: 5114926172174919196
+    SubobjectId: 9230248933893711835
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
@@ -102,7 +108,7 @@ Objects {
     Width: 824
     Height: 55
     UIX: 12
-    UIY: -22
+    UIY: -68
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -135,6 +141,12 @@ Objects {
         }
       }
     }
+  }
+  InstanceHistory {
+    SelfId: 3980072258683105746
+    SubobjectId: 17428858408694280213
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -173,7 +185,7 @@ Objects {
     Width: 824
     Height: 215
     UIX: 12
-    UIY: -77
+    UIY: -123
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -206,6 +218,12 @@ Objects {
         }
       }
     }
+  }
+  InstanceHistory {
+    SelfId: 3835175923580734243
+    SubobjectId: 17571630598933777124
+    InstanceId: 13113358172542972096
+    TemplateId: 10779387828834219691
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

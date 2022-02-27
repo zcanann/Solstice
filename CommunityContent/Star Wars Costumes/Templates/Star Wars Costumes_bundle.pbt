@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "This is my rendition of Darth Vader & a Storm Trooper. They are to be used with my Power Armor MKI Suit Module. These are just the client context geometry groups."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

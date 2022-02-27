@@ -25,8 +25,12 @@ Assets {
         Name: "cs:ShadowSize"
         Int: 2
       }
+      Overrides {
+        Name: "cs:Recursive"
+        Bool: true
+      }
     }
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "UI"
 }

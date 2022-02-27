@@ -2,7 +2,7 @@ Assets {
   Id: 4725668615195329717
   Name: "Custom Magic Gem_scyth"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 1205133024444304745
     ParameterOverrides {

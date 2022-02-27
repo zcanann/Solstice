@@ -18667,6 +18667,6 @@ Assets {
   Marketplace {
     Description: "Big building made of stone and wood. Made from sniper alley house set."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "The Yellow Shoulder from the game The Last Point"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

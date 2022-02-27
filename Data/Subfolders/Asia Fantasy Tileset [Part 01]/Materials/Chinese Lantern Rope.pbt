@@ -2,7 +2,7 @@ Assets {
   Id: 8445857990792393557
   Name: "Chinese Lantern Rope"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 3090596827184957478
     ParameterOverrides {

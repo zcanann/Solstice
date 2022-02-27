@@ -46,5 +46,5 @@ Assets {
     Version: "1.0.0"
     Description: "A little dungeon, fairy and magical.\r\n1298 objects."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

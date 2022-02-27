@@ -2,7 +2,7 @@ Assets {
   Id: 4897753264114917836
   Name: "FrameworkTileFloorCeramic"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Floors"
   CustomMaterialAsset {
     BaseMaterialId: 7482999541819034351

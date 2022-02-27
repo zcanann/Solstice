@@ -39,16 +39,16 @@ Objects {
   }
 }
 Objects {
-  Id: 17839817650114102061
-  Name: "OrcWall"
+  Id: 10939730513922435605
+  Name: "FrameworkWallSpiked"
   Transform {
     Location {
-      X: 11988.8496
-      Y: 10484.6729
-      Z: 1021.47412
+      X: -1610.79834
+      Y: 7885.69092
+      Z: 1021.47437
     }
     Rotation {
-      Yaw: -39.263195
+      Yaw: -70.8309326
     }
     Scale {
       X: 1
@@ -68,42 +68,26 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 12905691303589374391
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkWallSpiked"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -1610.79834
-            Y: 7885.69092
-            Z: 1021.47437
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -70.8309326
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 4305411352690016132
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "FrameworkWallSpiked"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 16694590863029366288
-  Name: "BlightWall"
+  Id: 11403914485764059207
+  Name: "FrameworkWallSpiked"
   Transform {
+    Location {
+      X: 7375.89941
+      Y: 774.498047
+      Z: 1021.47412
+    }
+    Rotation {
+      Yaw: -9.22570801
+    }
     Scale {
       X: 1
       Y: 1
@@ -111,39 +95,20 @@ Objects {
     }
   }
   ParentId: 4285806649304454613
+  UnregisteredParameters {
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 12905691303589374391
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkWallSpiked"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 7375.89941
-            Y: 774.498047
-            Z: 1021.47412
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -9.22570801
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 4305411352690016132
-    }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "FrameworkWallSpiked_1"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -188,9 +153,17 @@ Objects {
   }
 }
 Objects {
-  Id: 6671615642987056520
-  Name: "OrcWallRight"
+  Id: 751572397653962220
+  Name: "FrameworkWallSpiked"
   Transform {
+    Location {
+      X: 688.010742
+      Y: 5360.22949
+      Z: 1021.47412
+    }
+    Rotation {
+      Yaw: -39.263195
+    }
     Scale {
       X: 1
       Y: 1
@@ -209,33 +182,9 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 6071083836256647928
-      value {
-        Overrides {
-          Name: "Name"
-          String: "FrameworkWallSpiked"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 688.010742
-            Y: 5360.22949
-            Z: 1021.47412
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -39.263195
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 2418048523852605265
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "FrameworkWallSpiked_2"
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

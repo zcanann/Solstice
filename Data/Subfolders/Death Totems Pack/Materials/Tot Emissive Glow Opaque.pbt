@@ -2,7 +2,7 @@ Assets {
   Id: 5047286914352995367
   Name: "Tot Emissive Glow Opaque"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 12827530473249900764
     ParameterOverrides {

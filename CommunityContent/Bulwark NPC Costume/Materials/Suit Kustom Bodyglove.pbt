@@ -2,7 +2,7 @@ Assets {
   Id: 4654763961864384333
   Name: "Suit Kustom Bodyglove"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 5125920567861989514
     ParameterOverrides {

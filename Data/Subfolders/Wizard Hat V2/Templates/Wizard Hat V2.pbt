@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "wizard cosmetic\r\n(Original by Veille)\r\n-I added a strap and fixed the back point"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

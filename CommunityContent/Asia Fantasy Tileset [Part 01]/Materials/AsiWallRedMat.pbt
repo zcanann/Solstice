@@ -2,7 +2,7 @@ Assets {
   Id: 210062123252524381
   Name: "AsiWallRedMat"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 3509338855656373937
     ParameterOverrides {

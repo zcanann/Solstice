@@ -79,5 +79,5 @@ Assets {
     Version: "1.0.0"
     Description: "Buck\'s weapon\'s made to work on NPC\'s.\r\n"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

@@ -4562,6 +4562,6 @@ Assets {
   Marketplace {
     Description: "This is my first template so it\'s not great but I neede a king so I made a king"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

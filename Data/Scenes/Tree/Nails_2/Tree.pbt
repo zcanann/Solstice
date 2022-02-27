@@ -1,7 +1,7 @@
 Name: "Nails_2"
-RootId: 17234053508621274735
+RootId: 7093888846090106033
 Objects {
-  Id: 5118300130820975333
+  Id: 9393662046804159494
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -20,7 +20,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -70,7 +70,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18296438832080982127
+  Id: 5176175548473625018
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -89,7 +89,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -139,7 +139,7 @@ Objects {
   }
 }
 Objects {
-  Id: 16424038443749200361
+  Id: 3125236183235951145
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -158,7 +158,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -208,7 +208,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5735692395734816823
+  Id: 3783090275258132477
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -227,7 +227,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -277,7 +277,7 @@ Objects {
   }
 }
 Objects {
-  Id: 531471936930120890
+  Id: 11101039068098957893
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -296,7 +296,7 @@ Objects {
       Z: 1.03547883
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -346,7 +346,7 @@ Objects {
   }
 }
 Objects {
-  Id: 8664019307290507050
+  Id: 863580147667975464
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -365,7 +365,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -415,7 +415,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6748369634702880147
+  Id: 5564133540770599731
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -434,7 +434,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -484,7 +484,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5176401901088077013
+  Id: 3429056636747151387
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -503,7 +503,7 @@ Objects {
       Z: 0.911866844
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -553,7 +553,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9727983462040448341
+  Id: 6851707637025591576
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -572,7 +572,7 @@ Objects {
       Z: 0.911866844
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -622,7 +622,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2546888192011510517
+  Id: 12641641550940705818
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -641,7 +641,7 @@ Objects {
       Z: 0.911866844
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -691,7 +691,7 @@ Objects {
   }
 }
 Objects {
-  Id: 10569723963526425205
+  Id: 444483424531121177
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -710,7 +710,7 @@ Objects {
       Z: 0.911866844
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -760,7 +760,7 @@ Objects {
   }
 }
 Objects {
-  Id: 17215214175997432253
+  Id: 18309248675787463580
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -779,7 +779,7 @@ Objects {
       Z: 1.03547883
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -829,7 +829,7 @@ Objects {
   }
 }
 Objects {
-  Id: 18154700597833428299
+  Id: 13215520055117023317
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -848,7 +848,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -898,7 +898,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13667732819452979411
+  Id: 528963621570907859
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -917,7 +917,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -967,7 +967,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13313953690044123447
+  Id: 10783799861031609704
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -986,7 +986,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1036,7 +1036,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13746569114880589789
+  Id: 9627189565831456579
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1055,7 +1055,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1105,7 +1105,7 @@ Objects {
   }
 }
 Objects {
-  Id: 585815809675959048
+  Id: 16196240171226821077
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1124,7 +1124,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1174,7 +1174,7 @@ Objects {
   }
 }
 Objects {
-  Id: 3468423499337173532
+  Id: 7961678114636170191
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1193,7 +1193,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1243,7 +1243,7 @@ Objects {
   }
 }
 Objects {
-  Id: 6454702766912947808
+  Id: 2905102601435285504
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1262,7 +1262,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1312,7 +1312,7 @@ Objects {
   }
 }
 Objects {
-  Id: 2464116837568521655
+  Id: 988247006864944976
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1331,7 +1331,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1381,7 +1381,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13190533688134166497
+  Id: 10692307172099228905
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1400,7 +1400,7 @@ Objects {
       Z: 1.0995779
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1450,7 +1450,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13817963130310876903
+  Id: 3119868519693362448
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1469,7 +1469,7 @@ Objects {
       Z: 1.03547883
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1519,7 +1519,7 @@ Objects {
   }
 }
 Objects {
-  Id: 7720376562717992854
+  Id: 15901434641377368560
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1538,7 +1538,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1588,7 +1588,7 @@ Objects {
   }
 }
 Objects {
-  Id: 5847256118463695095
+  Id: 17531322603767061285
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1607,7 +1607,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1657,7 +1657,7 @@ Objects {
   }
 }
 Objects {
-  Id: 15110374365582327866
+  Id: 6272647543969597471
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1676,7 +1676,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1726,7 +1726,7 @@ Objects {
   }
 }
 Objects {
-  Id: 11256023765509586902
+  Id: 18379517144028964225
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1745,7 +1745,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1795,7 +1795,7 @@ Objects {
   }
 }
 Objects {
-  Id: 1101754229718875683
+  Id: 3384740139540025228
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1814,7 +1814,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1864,7 +1864,7 @@ Objects {
   }
 }
 Objects {
-  Id: 9750076131311644234
+  Id: 6051863078158829595
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1883,7 +1883,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -1933,7 +1933,7 @@ Objects {
   }
 }
 Objects {
-  Id: 13090334423339210042
+  Id: 11114917644501150635
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -1952,7 +1952,7 @@ Objects {
       Z: 0.911866903
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -2002,7 +2002,7 @@ Objects {
   }
 }
 Objects {
-  Id: 14432881580790597850
+  Id: 6147043994853258961
   Name: "Pyramid - 4-Sided Polished"
   Transform {
     Location {
@@ -2021,7 +2021,7 @@ Objects {
       Z: 1.03547883
     }
   }
-  ParentId: 17234053508621274735
+  ParentId: 7093888846090106033
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"

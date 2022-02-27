@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "A collection of 10 fantasy weapons in 4 different color palettes. \r\n\r\nWeapons included:\r\n- axe\r\n- dagger\r\n- mace\r\n- scepter\r\n- 1-hand sword\r\n- shield\r\n- 2-hand sword\r\n- 2-hand hammer\r\n- 2-hand staff\r\n- 2-hand rifle"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

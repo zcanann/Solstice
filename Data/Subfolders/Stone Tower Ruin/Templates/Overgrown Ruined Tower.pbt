@@ -12508,6 +12508,6 @@ Assets {
   Marketplace {
     Description: "Collapsed ruin of an old stone tower, overgrown with ivy, moss and fern."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

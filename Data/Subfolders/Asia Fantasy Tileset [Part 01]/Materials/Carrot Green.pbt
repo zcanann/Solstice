@@ -2,7 +2,7 @@ Assets {
   Id: 6102804754860727348
   Name: "Carrot Green"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 11323547447285354358
     ParameterOverrides {

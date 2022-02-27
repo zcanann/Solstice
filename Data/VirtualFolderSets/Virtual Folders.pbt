@@ -2,7 +2,7 @@ Assets {
   Id: 11237267171393895703
   Name: "Virtual Folders"
   PlatformAssetType: 30
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderSetAsset {
     Folders {
       VirtualFolderPath: "UI"
@@ -51,20 +51,6 @@ Assets {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Interactables"
       PlatformAssetType: 5
-    }
-    Folders {
-      VirtualFolderPath: "Infrastructure"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Infrastructure"
-      VirtualFolderPath: "Storage"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Infrastructure"
-      VirtualFolderPath: "Networking"
-      PlatformAssetType: 3
     }
     Folders {
       VirtualFolderPath: "Networking"
@@ -135,18 +121,8 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Infrastructure"
-      VirtualFolderPath: "Input"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Equipment"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Infrastructure"
-      VirtualFolderPath: "Audio"
       PlatformAssetType: 3
     }
     Folders {
@@ -157,11 +133,6 @@ Assets {
     Folders {
       VirtualFolderPath: "Gameplay"
       VirtualFolderPath: "Engagement"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Infrastructure"
-      VirtualFolderPath: "Events"
       PlatformAssetType: 3
     }
     Folders {
@@ -235,11 +206,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "UI"
-      VirtualFolderPath: "HUD"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Models"
       VirtualFolderPath: "QuestIndicators"
       PlatformAssetType: 13
@@ -304,11 +270,6 @@ Assets {
       VirtualFolderPath: "PlayerSkins"
       VirtualFolderPath: "Undead"
       PlatformAssetType: 13
-    }
-    Folders {
-      VirtualFolderPath: "Infrastructure"
-      VirtualFolderPath: "Animations"
-      PlatformAssetType: 3
     }
     Folders {
       VirtualFolderPath: "Framework"
@@ -597,6 +558,88 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Triggers"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Generic"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Resources"
+      PlatformAssetType: 33
+    }
+    Folders {
+      VirtualFolderPath: "Items"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "HUD"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "Inventory"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "UI"
+      VirtualFolderPath: "Inventory"
+      VirtualFolderPath: "ItemIcons"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Equipment"
+      PlatformAssetType: 33
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Storage"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Networking"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Input"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Audio"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Events"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Animations"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Storage"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Schema"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Environment_Generic"
+      VirtualFolderPath: "PropsStatic"
       PlatformAssetType: 5
     }
   }

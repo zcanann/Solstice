@@ -2,7 +2,7 @@ Assets {
   Id: 17800206448400529705
   Name: "CherryBlossomTrunk"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 16090699673501562747
     ParameterOverrides {

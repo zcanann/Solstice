@@ -2464,6 +2464,6 @@ Assets {
   Marketplace {
     Description: "Three gore looking plants animated with blood-like effects, made for a horror or alien environment. The pack contains a small, a medium and a large plant but these sizes are only indications, feel free to scale them as you wish. However, if you do, be careful as some animated materials may change a bit."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

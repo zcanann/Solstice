@@ -2,7 +2,7 @@ Assets {
   Id: 12754100442717475735
   Name: "Material_Crystal_Primary"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 18220827854970164330
     ParameterOverrides {

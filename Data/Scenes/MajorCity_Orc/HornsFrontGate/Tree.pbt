@@ -1,7 +1,7 @@
 Name: "HornsFrontGate"
-RootId: 14902560760785003311
+RootId: 641123424133113216
 Objects {
-  Id: 4730230966389679634
+  Id: 17135489239651522950
   Name: "Group"
   Transform {
     Location {
@@ -15,8 +15,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14902560760785003311
-  ChildIds: 3554334025214359923
+  ParentId: 641123424133113216
+  ChildIds: 1264162841473349360
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -31,12 +31,18 @@ Objects {
   Folder {
     IsGroup: true
   }
+  InstanceHistory {
+    SelfId: 17135489239651522950
+    SubobjectId: 3736634865861529530
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 3554334025214359923
+  Id: 1264162841473349360
   Name: "Peak"
   Transform {
     Location {
@@ -50,9 +56,9 @@ Objects {
       Z: 2.04617953
     }
   }
-  ParentId: 4730230966389679634
-  ChildIds: 8182264096537771613
-  ChildIds: 5094481421627207782
+  ParentId: 17135489239651522950
+  ChildIds: 5003357744906381931
+  ChildIds: 10874277437954733673
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -67,12 +73,18 @@ Objects {
   Folder {
     IsGroup: true
   }
+  InstanceHistory {
+    SelfId: 1264162841473349360
+    SubobjectId: 14960245856659661004
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 5094481421627207782
+  Id: 10874277437954733673
   Name: "Diamond - Polished"
   Transform {
     Location {
@@ -87,7 +99,7 @@ Objects {
       Z: 1.5
     }
   }
-  ParentId: 3554334025214359923
+  ParentId: 1264162841473349360
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -132,12 +144,18 @@ Objects {
       BoundsScale: 1
     }
   }
+  InstanceHistory {
+    SelfId: 10874277437954733673
+    SubobjectId: 5260059809870717013
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 8182264096537771613
+  Id: 5003357744906381931
   Name: "Diamond - Polished"
   Transform {
     Location {
@@ -152,7 +170,7 @@ Objects {
       Z: 0.602446318
     }
   }
-  ParentId: 3554334025214359923
+  ParentId: 1264162841473349360
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -197,12 +215,18 @@ Objects {
       BoundsScale: 1
     }
   }
+  InstanceHistory {
+    SelfId: 5003357744906381931
+    SubobjectId: 11203040988499622999
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 14882237149274427585
+  Id: 1645332118860875243
   Name: "Group"
   Transform {
     Location {
@@ -216,8 +240,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14902560760785003311
-  ChildIds: 15733237035609080938
+  ParentId: 641123424133113216
+  ChildIds: 15090592337860266412
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -232,12 +256,18 @@ Objects {
   Folder {
     IsGroup: true
   }
+  InstanceHistory {
+    SelfId: 1645332118860875243
+    SubobjectId: 14466452505876190167
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15733237035609080938
+  Id: 15090592337860266412
   Name: "Peak"
   Transform {
     Location {
@@ -251,9 +281,9 @@ Objects {
       Z: 2.04617953
     }
   }
-  ParentId: 14882237149274427585
-  ChildIds: 3824943339493950833
-  ChildIds: 5056702558341971948
+  ParentId: 1645332118860875243
+  ChildIds: 12907047758944067137
+  ChildIds: 4212215429275159697
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -268,12 +298,18 @@ Objects {
   Folder {
     IsGroup: true
   }
+  InstanceHistory {
+    SelfId: 15090592337860266412
+    SubobjectId: 1115416025665740688
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 5056702558341971948
+  Id: 4212215429275159697
   Name: "Diamond - Polished"
   Transform {
     Location {
@@ -288,7 +324,7 @@ Objects {
       Z: 1.5
     }
   }
-  ParentId: 15733237035609080938
+  ParentId: 15090592337860266412
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -333,12 +369,18 @@ Objects {
       BoundsScale: 1
     }
   }
+  InstanceHistory {
+    SelfId: 4212215429275159697
+    SubobjectId: 16456864068329577133
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 3824943339493950833
+  Id: 12907047758944067137
   Name: "Diamond - Polished"
   Transform {
     Location {
@@ -353,7 +395,7 @@ Objects {
       Z: 0.602446318
     }
   }
-  ParentId: 15733237035609080938
+  ParentId: 15090592337860266412
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -398,12 +440,18 @@ Objects {
       BoundsScale: 1
     }
   }
+  InstanceHistory {
+    SelfId: 12907047758944067137
+    SubobjectId: 7856888804436461693
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 16333136029641881464
+  Id: 10589461462114400207
   Name: "Prism - 8-Sided Polished"
   Transform {
     Location {
@@ -417,7 +465,7 @@ Objects {
       Z: 3.50000024
     }
   }
-  ParentId: 14902560760785003311
+  ParentId: 641123424133113216
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -462,12 +510,18 @@ Objects {
       BoundsScale: 1
     }
   }
+  InstanceHistory {
+    SelfId: 10589461462114400207
+    SubobjectId: 5540305124732527091
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 3934557027679087273
+  Id: 12080072977612592916
   Name: "Group"
   Transform {
     Location {
@@ -481,7 +535,7 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14902560760785003311
+  ParentId: 641123424133113216
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -496,12 +550,18 @@ Objects {
   Folder {
     IsGroup: true
   }
+  InstanceHistory {
+    SelfId: 12080072977612592916
+    SubobjectId: 8769431440775823656
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 7656754286080979417
+  Id: 14140252197271932205
   Name: "Group"
   Transform {
     Location {
@@ -514,8 +574,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 14902560760785003311
-  ChildIds: 17847809269748026390
+  ParentId: 641123424133113216
+  ChildIds: 3020336582850310030
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -530,12 +590,18 @@ Objects {
   Folder {
     IsGroup: true
   }
+  InstanceHistory {
+    SelfId: 14140252197271932205
+    SubobjectId: 1885329584122338065
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17847809269748026390
+  Id: 3020336582850310030
   Name: "Peak"
   Transform {
     Location {
@@ -549,9 +615,9 @@ Objects {
       Z: 2.04617953
     }
   }
-  ParentId: 7656754286080979417
-  ChildIds: 14789147386269010680
-  ChildIds: 17319717601003998333
+  ParentId: 14140252197271932205
+  ChildIds: 17451169793213692802
+  ChildIds: 3058644557718319671
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -566,12 +632,18 @@ Objects {
   Folder {
     IsGroup: true
   }
+  InstanceHistory {
+    SelfId: 3020336582850310030
+    SubobjectId: 17869202702066121138
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 17319717601003998333
+  Id: 3058644557718319671
   Name: "Diamond - Polished"
   Transform {
     Location {
@@ -586,7 +658,7 @@ Objects {
       Z: 2.42945147
     }
   }
-  ParentId: 17847809269748026390
+  ParentId: 3020336582850310030
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -631,12 +703,18 @@ Objects {
       BoundsScale: 1
     }
   }
+  InstanceHistory {
+    SelfId: 3058644557718319671
+    SubobjectId: 17610253447151117323
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 14789147386269010680
+  Id: 17451169793213692802
   Name: "Diamond - Polished"
   Transform {
     Location {
@@ -651,7 +729,7 @@ Objects {
       Z: 0.602446318
     }
   }
-  ParentId: 17847809269748026390
+  ParentId: 3020336582850310030
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -696,12 +774,18 @@ Objects {
       BoundsScale: 1
     }
   }
+  InstanceHistory {
+    SelfId: 17451169793213692802
+    SubobjectId: 3186665379337760190
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 16237346137015743544
+  Id: 5429604775825834071
   Name: "Prop_LargeBoneHorn"
   Transform {
     Location {
@@ -719,7 +803,7 @@ Objects {
       Z: 3.50000024
     }
   }
-  ParentId: 14902560760785003311
+  ParentId: 641123424133113216
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -766,12 +850,18 @@ Objects {
       Id: 7938026664820810443
     }
   }
+  InstanceHistory {
+    SelfId: 5429604775825834071
+    SubobjectId: 6748858422286568807
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 15640804529774702125
+  Id: 13041219161211165038
   Name: "Prop_LargeBoneHorn"
   Transform {
     Location {
@@ -790,7 +880,7 @@ Objects {
       Z: 3.50000024
     }
   }
-  ParentId: 14902560760785003311
+  ParentId: 641123424133113216
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -838,12 +928,18 @@ Objects {
       Id: 7938026664820810443
     }
   }
+  InstanceHistory {
+    SelfId: 13041219161211165038
+    SubobjectId: 11676322587387106398
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
+  }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 2357301225832895522
+  Id: 7691095747305532694
   Name: "Prism - 8-Sided Polished"
   Transform {
     Location {
@@ -857,7 +953,7 @@ Objects {
       Z: 3.50000024
     }
   }
-  ParentId: 14902560760785003311
+  ParentId: 641123424133113216
   UnregisteredParameters {
     Overrides {
       Name: "ma:Shared_BaseMaterial:id"
@@ -901,6 +997,12 @@ Objects {
       }
       BoundsScale: 1
     }
+  }
+  InstanceHistory {
+    SelfId: 7691095747305532694
+    SubobjectId: 13018235149783464746
+    InstanceId: 1653126988901535024
+    TemplateId: 18444013972859453356
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"

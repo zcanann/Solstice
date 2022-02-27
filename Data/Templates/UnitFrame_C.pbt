@@ -2651,25 +2651,25 @@ Assets {
           Overrides {
             Name: "cs:N"
             ObjectReference {
-              SelfId: 9852364252298057203
+              SelfId: 841534158063459245
             }
           }
           Overrides {
             Name: "cs:S"
             ObjectReference {
-              SelfId: 16736628780040224410
+              SelfId: 841534158063459245
             }
           }
           Overrides {
             Name: "cs:W"
             ObjectReference {
-              SelfId: 2082208489737898848
+              SelfId: 841534158063459245
             }
           }
           Overrides {
             Name: "cs:E"
             ObjectReference {
-              SelfId: 8721151376072675074
+              SelfId: 841534158063459245
             }
           }
         }
@@ -2964,7 +2964,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "UI"
   VirtualFolderPath: "HUD"
 }

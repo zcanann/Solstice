@@ -43,5 +43,5 @@ Assets {
     Version: "1.0.0"
     Description: "Blades of Chaos from God of War."
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
 }

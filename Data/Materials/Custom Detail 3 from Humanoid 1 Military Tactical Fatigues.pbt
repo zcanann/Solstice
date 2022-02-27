@@ -2,7 +2,7 @@ Assets {
   Id: 16104719890204285654
   Name: "Custom Detail 3 from Humanoid 1 Military Tactical Fatigues"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 4187531702936014897

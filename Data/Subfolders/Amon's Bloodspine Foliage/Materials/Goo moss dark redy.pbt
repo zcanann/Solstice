@@ -2,7 +2,7 @@ Assets {
   Id: 1772700254588967739
   Name: "Goo moss dark redy"
   PlatformAssetType: 13
-  SerializationVersion: 105
+  SerializationVersion: 107
   CustomMaterialAsset {
     BaseMaterialId: 2727688967788134169
     ParameterOverrides {

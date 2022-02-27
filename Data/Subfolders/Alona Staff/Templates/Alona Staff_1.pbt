@@ -7142,6 +7142,6 @@ Assets {
   Marketplace {
     Description: "Alona\'s Staff from Breakaway!"
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   DirectlyPublished: true
 }

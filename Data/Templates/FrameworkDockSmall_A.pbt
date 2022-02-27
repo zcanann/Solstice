@@ -4565,7 +4565,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 105
+  SerializationVersion: 107
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Environment_Docks"
   VirtualFolderPath: "PropsStatic"

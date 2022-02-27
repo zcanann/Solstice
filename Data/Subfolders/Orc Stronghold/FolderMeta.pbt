@@ -1,0 +1,83 @@
+MetaVersion: 1
+MarketplaceDetails {
+  Id: "b812d489d6cd4a64882ad129d47f385c"
+  OwnerAccountId: "e7a0f98ad4844052905212bfce9d2f05"
+  OwnerName: "PatrickWalker"
+  Version: "1.0.0"
+}
+AssetIdsOriginalToNew {
+  key: 1553829093085063154
+  value: 4806296012039071901
+}
+AssetIdsOriginalToNew {
+  key: 1728169629546756652
+  value: 14653114360459073720
+}
+AssetIdsOriginalToNew {
+  key: 1914581762845884436
+  value: 5732429996663763556
+}
+AssetIdsOriginalToNew {
+  key: 3546602945470723710
+  value: 10508559306990874378
+}
+AssetIdsOriginalToNew {
+  key: 4023482044603555653
+  value: 18130202081781274600
+}
+AssetIdsOriginalToNew {
+  key: 4817410883071545483
+  value: 13629612788614164280
+}
+AssetIdsOriginalToNew {
+  key: 5504964539873660546
+  value: 7500739003121611121
+}
+AssetIdsOriginalToNew {
+  key: 5709833886585479088
+  value: 429010201738376263
+}
+AssetIdsOriginalToNew {
+  key: 6755401575482628867
+  value: 17649721144307373811
+}
+AssetIdsOriginalToNew {
+  key: 9555182650425747772
+  value: 11403582011875620834
+}
+AssetIdsOriginalToNew {
+  key: 10573213045739833785
+  value: 5701615257525848061
+}
+AssetIdsOriginalToNew {
+  key: 10905323667878893373
+  value: 15517895554059023704
+}
+AssetIdsOriginalToNew {
+  key: 11016918993724998896
+  value: 3638523379272874133
+}
+AssetIdsOriginalToNew {
+  key: 11676030462827182641
+  value: 15657739533953473082
+}
+AssetIdsOriginalToNew {
+  key: 11842315062378576562
+  value: 7277008884909339023
+}
+AssetIdsOriginalToNew {
+  key: 14083155941327722773
+  value: 10202177778139042421
+}
+AssetIdsOriginalToNew {
+  key: 14711815232014229438
+  value: 1185535993936068264
+}
+AssetIdsOriginalToNew {
+  key: 14892968445430621844
+  value: 3936596569957711615
+}
+AssetIdsOriginalToNew {
+  key: 15485461571455219026
+  value: 5687997811940843786
+}
