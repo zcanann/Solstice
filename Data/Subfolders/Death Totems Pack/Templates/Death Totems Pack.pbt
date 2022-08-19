@@ -35,6 +35,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -49,5 +50,5 @@ Assets {
     Version: "1.2.0"
     Description: "A pack of 9 dark fantasy totem props divided in 3 different styles: \r\n   - Skeleton Totems\r\n   - Blackskull Totems\r\n   - Beastbone Totems\r\n\r\nIs there an area in your game where you want to tell the players: \"this is not a place you want to be\"? These props should help. Perfect for fantasy environments, dark dungeons, ravaged villages, castles or battlefields, evil caves and anything you can thik of that needs a gloomy ambiance."
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

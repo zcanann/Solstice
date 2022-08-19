@@ -2,7 +2,7 @@ Assets {
   Id: 10326973736563436591
   Name: "FrameworkTerrainBlight"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Terrain"
   CustomMaterialAsset {
     BaseMaterialId: 3169360956294553894

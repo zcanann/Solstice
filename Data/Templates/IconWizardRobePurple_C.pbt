@@ -75,6 +75,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 7501037070714075627
@@ -116,6 +117,8 @@ Assets {
           Panel {
             IsClipping: true
             Opacity: 1
+            OpacityMaskBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -130,6 +133,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12415023235587157806
@@ -178,6 +182,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 15155684249408756169
@@ -226,6 +231,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 9239440233375183843
@@ -266,6 +272,8 @@ Assets {
           Panel {
             IsClipping: true
             Opacity: 1
+            OpacityMaskBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -280,6 +288,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 15012502629123541160
@@ -349,6 +358,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 11665315433227846169
@@ -390,6 +400,8 @@ Assets {
           Panel {
             IsClipping: true
             Opacity: 1
+            OpacityMaskBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -404,6 +416,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12522860372061724410
@@ -472,6 +485,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 8980997685697521994
@@ -512,6 +526,8 @@ Assets {
           Panel {
             IsClipping: true
             Opacity: 1
+            OpacityMaskBrush {
+            }
           }
           AnchorLayout {
             SelfAnchor {
@@ -526,6 +542,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 951935978239171799
@@ -574,6 +591,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 3159140496403083919
@@ -643,6 +661,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     Assets {
@@ -686,7 +705,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "UI"
   VirtualFolderPath: "Inventory"
   VirtualFolderPath: "ItemIcons"

@@ -70,6 +70,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 11607551846351155104
@@ -114,6 +115,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 1566775002196840315
@@ -183,6 +185,7 @@ Assets {
             }
           }
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     Assets {
@@ -208,7 +211,7 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "UI"
   VirtualFolderPath: "Inventory"
   VirtualFolderPath: "ItemIcons"

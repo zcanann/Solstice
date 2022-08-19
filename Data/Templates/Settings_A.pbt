@@ -20,6 +20,7 @@ Assets {
         ChildIds: 12433244146646042881
         ChildIds: 12882668146526361291
         ChildIds: 14864323502495053046
+        ChildIds: 1581044415335652260
         ChildIds: 12450840989666614884
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -37,6 +38,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 9787928747324106682
@@ -76,7 +78,7 @@ Assets {
               }
               ChatPosition {
                 X: 24
-                Y: -24
+                Y: -72
               }
               ChatSize {
                 X: 800
@@ -95,6 +97,22 @@ Assets {
             }
             RelevanceSettings {
               key: "decal"
+              value {
+                LowDistance: 4500
+                MediumDistance: 7000
+                HighDistance: 9000
+              }
+            }
+            RelevanceSettings {
+              key: "mergedmesh"
+              value {
+                LowDistance: 4500
+                MediumDistance: 7000
+                HighDistance: 9000
+              }
+            }
+            RelevanceSettings {
+              key: "mesh"
               value {
                 LowDistance: 4500
                 MediumDistance: 7000
@@ -151,6 +169,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12433244146646042881
@@ -212,11 +231,13 @@ Assets {
             }
             MaxHitpoints: 100
             PlayerMasterVolumeMultiplier: 1
+            ComplexCollision: true
           }
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12882668146526361291
@@ -254,6 +275,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 14864323502495053046
@@ -293,6 +315,44 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 1581044415335652260
+        Name: "BindingSettings"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14209675969168667736
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        BindingSet {
+          BindingSetAsset {
+            Id: 736360303936294653
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12450840989666614884
@@ -313,6 +373,7 @@ Assets {
         NetworkContext {
           Type: Local
         }
+        IsReplicationEnabledByDefault: true
       }
       Objects {
         Id: 12386548947922130237
@@ -367,6 +428,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -374,6 +436,6 @@ Assets {
       AssetId: "None"
     }
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Framework"
 }

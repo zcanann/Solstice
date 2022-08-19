@@ -2,7 +2,7 @@ Assets {
   Id: 13881133094732371184
   Name: "Custom Trim - Inner from Fantasy Castle Wall 01 - Doorway 01"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 2804794256381495568
     ParameterOverrides {

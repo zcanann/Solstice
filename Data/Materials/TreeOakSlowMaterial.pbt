@@ -2,7 +2,7 @@ Assets {
   Id: 3735086062202190651
   Name: "TreeOakSlowMaterial"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 7934041411275608545

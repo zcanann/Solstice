@@ -912,6 +912,7 @@ Objects {
       Id: 17937740888209046791
     }
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 3304632187976573008
@@ -3396,6 +3397,7 @@ Objects {
       Id: 16980997414674921505
     }
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 9499242283745073857
@@ -7873,6 +7875,7 @@ Objects {
       Id: 8401227182091654443
     }
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 401540272944665375
@@ -9516,4 +9519,5 @@ Objects {
       Id: 8015852824194658697
     }
   }
+  IsReplicationEnabledByDefault: true
 }

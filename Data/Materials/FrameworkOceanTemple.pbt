@@ -2,7 +2,7 @@ Assets {
   Id: 10176237582214837393
   Name: "FrameworkOceanTemple"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Water"
   CustomMaterialAsset {
     BaseMaterialId: 15472391135026288383

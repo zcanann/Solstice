@@ -32,6 +32,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -46,5 +47,5 @@ Assets {
     Version: "1.0.0"
     Description: "This House is a building that you can\'t go inside.  The object count is 500 unmerged, and the trianlges count is low.  "
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

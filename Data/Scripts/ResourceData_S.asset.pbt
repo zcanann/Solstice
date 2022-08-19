@@ -60,7 +60,7 @@ Assets {
       }
     }
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Gameplay"
   VirtualFolderPath: "Resources"
 }

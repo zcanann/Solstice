@@ -2,7 +2,7 @@ Assets {
   Id: 10318298681443579626
   Name: "Metal Gold - Smooth"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 16219589455898320337
     ParameterOverrides {

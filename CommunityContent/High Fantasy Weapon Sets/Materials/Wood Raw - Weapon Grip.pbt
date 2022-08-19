@@ -2,7 +2,7 @@ Assets {
   Id: 2862124641147339573
   Name: "Wood Raw - Weapon Grip"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 4050437425243511619
     ParameterOverrides {

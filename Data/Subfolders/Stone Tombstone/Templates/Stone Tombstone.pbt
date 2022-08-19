@@ -32,6 +32,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -46,5 +47,5 @@ Assets {
     Version: "1.0.0"
     Description: "Just a basic stone tombstone with a bit of decoration. Nothing too fancy."
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

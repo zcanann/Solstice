@@ -68,6 +68,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -82,5 +83,5 @@ Assets {
     Version: "1.5.0"
     Description: "The Gardens of Illiad Tileset - Heart of the Kingdom\r\n\r\nA Medieval Fantasy Royal Garden Tileset-\r\nIncludes Walls, Floors, Plants, Roofs, Pillars, More Pillars, Arches, A couple lanterns, A few statues, More ponds/water features than there should be, Components for making your own box and/or garden bed, and a bunch more stuff!\r\n\r\nSpecial thanks to NyaAlchemi for Fancy Plant contributions - they\'re organic! -ish\r\n\r\nUpdated - Organisation up by 150%! Additional Prefabs!"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

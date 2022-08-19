@@ -2,7 +2,7 @@ Assets {
   Id: 11926814731748515203
   Name: "Lava bubble"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Volcano materials"
   CustomMaterialAsset {
     BaseMaterialId: 14642172239283615186

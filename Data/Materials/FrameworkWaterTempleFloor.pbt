@@ -2,7 +2,7 @@ Assets {
   Id: 13611643853793213926
   Name: "FrameworkWaterTempleFloor"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Floors"
   CustomMaterialAsset {
     BaseMaterialId: 11901168055485249797

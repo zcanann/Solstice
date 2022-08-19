@@ -2,7 +2,7 @@ Assets {
   Id: 11525107361266229054
   Name: "Sun"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 1082809058784319555
     ParameterOverrides {

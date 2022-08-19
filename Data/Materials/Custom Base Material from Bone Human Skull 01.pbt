@@ -2,7 +2,7 @@ Assets {
   Id: 6691540671581173625
   Name: "Custom Base Material from Bone Human Skull 01"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 11245751117333798220
     ParameterOverrides {

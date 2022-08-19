@@ -25,14 +25,11 @@ function OnPlayerJoined(player)
 	-- Debugging
 	Framework.Storage.WipePlayerData(player)
 
-	-- TODO: Move elsewhere. Storage shouldn't be hiding the unused player model.
-	player.isVisible = false
-
 	-- Create a dummy character if testing in a local environment, not on the character select screen, and no characters exists
 	if not Environment.IsHostedGame() and Game.GetCurrentSceneName() ~= "Main" then
 		local characterId = Framework.Storage.GetActiveCharacterId(player)
 		if not characterId then
-			warn("Creating a new generated character. Prior warnings for a missing active character can be ignored.")
+			warn("Creating a new generated character for testing. Any prior warnings for a missing active character can be ignored.")
 			CreateTestingCharacter(player)
 		end
 	end

@@ -29,6 +29,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -43,5 +44,5 @@ Assets {
     Version: "1.0.0"
     Description: "Cosmonaut Character (costume) for your game.\r\n\r\nCredits: Sobchak for Manequin CC\r\n                 WitcherSilver for SpaceBody parts CC"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

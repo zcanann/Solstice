@@ -2,7 +2,7 @@ Assets {
   Id: 16614697124464130850
   Name: "Chinese Lantern Mat"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 6152067766362877092
     ParameterOverrides {

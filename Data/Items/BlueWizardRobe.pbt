@@ -2,7 +2,7 @@ Assets {
   Id: 13296084680566654093
   Name: "BlueWizardRobe"
   PlatformAssetType: 33
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Equipment"
   ItemAsset {
     CustomName: "BLUE_MAGE_ROBE"

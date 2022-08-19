@@ -2,7 +2,7 @@ Assets {
   Id: 12799735335173377382
   Name: "Custom Base Material from Humanoid 1 Military Fatigues"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 17617549527790195977

@@ -2,32 +2,31 @@ local Framework = require(script:GetCustomProperty("Framework"))
 
 local localPlayer = Game.GetLocalPlayer()
 
-local inventoryTabBinding = "ability_extra_43"
-local inventoryTabBindingAlt = "ability_extra_27"
-local equipmentTabBinding = "ability_extra_22"
-local soulTabBinding = "ability_extra_23"
-local combatTabBinding = "ability_extra_41"
-local skillsTabBinding = "ability_extra_33"
+local inventoryTabAction = "MenuInventory"
+local equipmentTabAction = "MenuEquipment"
+local soulTabAction = "MenuSoul"
+local combatTabAction = "MenuCombat"
+local skillsTabAction = "MenuSkills"
 
-function OnBindingPressed(player, binding)
-    if binding == inventoryTabBinding or binding == inventoryTabBindingAlt then
+function OnActionPressed(player, action, value)
+    if action == inventoryTabAction then
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_INVENTORY_TAB)
     end
-    if binding == soulTabBinding then
+    if action == soulTabAction then
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_SOUL_TAB)
     end
-    if binding == skillsTabBinding then
+    if action == skillsTabAction then
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_SKILLS_TAB)
     end
-    if binding == combatTabBinding then
+    if action == combatTabAction then
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_COMBAT_TAB)
     end
-    if binding == equipmentTabBinding then
+    if action == equipmentTabAction then
         Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Input.EVENT_TOGGLE_EQUIPMENT_TAB)
     end
 end
 
-function OnBindingReleased(player, binding)
+function OnActionReleased(player, action, value)
 end
 
 function OnEscape(localPlayer, params)
@@ -50,5 +49,5 @@ end
 
 Input.escapeHook:Connect(OnEscape)
 
-localPlayer.bindingPressedEvent:Connect(OnBindingPressed)
-localPlayer.bindingReleasedEvent:Connect(OnBindingReleased)
+Input.actionPressedEvent:Connect(OnActionPressed)
+Input.actionPressedEvent:Connect(OnActionReleased)

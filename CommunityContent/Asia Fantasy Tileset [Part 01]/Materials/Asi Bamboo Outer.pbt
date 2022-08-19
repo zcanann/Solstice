@@ -2,7 +2,7 @@ Assets {
   Id: 6425505519148368705
   Name: "Asi Bamboo Outer"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 3605030238014728915
     ParameterOverrides {

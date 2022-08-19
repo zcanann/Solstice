@@ -2,7 +2,7 @@ Assets {
   Id: 16264726996378157602
   Name: "Custom -Pine Leaf"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 10429772325125277138
     ParameterOverrides {

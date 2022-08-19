@@ -29,6 +29,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -43,5 +44,5 @@ Assets {
     Version: "1.0.0"
     Description: "This CC contains 5 models of palms :)\r\nEnjoy"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

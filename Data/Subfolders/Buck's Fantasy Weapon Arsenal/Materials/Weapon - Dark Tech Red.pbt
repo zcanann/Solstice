@@ -2,7 +2,7 @@ Assets {
   Id: 17335914366265823702
   Name: "Weapon - Dark Tech Red"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 18269867738968131863
     ParameterOverrides {

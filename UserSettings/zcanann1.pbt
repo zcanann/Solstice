@@ -1,1 +1,1 @@
-LastSavedScene: "Main"
+LastSavedScene: "Zone_Vernal"

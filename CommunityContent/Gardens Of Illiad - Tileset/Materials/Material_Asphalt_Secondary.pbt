@@ -2,7 +2,7 @@ Assets {
   Id: 14056548987246297875
   Name: "Material_Asphalt_Secondary"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 4401043141372615469
     ParameterOverrides {

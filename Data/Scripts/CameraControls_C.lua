@@ -15,22 +15,14 @@ local rotationSpeed = 96.0
 function Tick(deltaTime)
     local currentRotation = propCamera:GetWorldRotation()
     local currentDistance = propCamera.currentDistance
+    
+    local cameraMovement = Input.GetActionValue(localPlayer, "MoveCamera")
 
     -- Apply input horizontal rotations
-    if localPlayer.IsBindingPressed(localPlayer, "ability_extra_48") or localPlayer.IsBindingPressed(localPlayer, "ability_extra_30") then -- LEFT/A
-        currentRotation.z = currentRotation.z + rotationSpeed * deltaTime
-    end
-    if localPlayer.IsBindingPressed(localPlayer, "ability_extra_49") or localPlayer.IsBindingPressed(localPlayer, "ability_extra_32") then -- RIGHT/D
-        currentRotation.z = currentRotation.z + -rotationSpeed * deltaTime
-    end
-
+    currentRotation.z = currentRotation.z + rotationSpeed * deltaTime * -cameraMovement.x
+    
     -- Apply input zoom
-    if localPlayer.IsBindingPressed(localPlayer, "ability_extra_46") or localPlayer.IsBindingPressed(localPlayer, "ability_extra_21") then -- UP/W
-        currentDistance = currentDistance + zoomSpeed * propCameraZoomSpeed * deltaTime
-    end
-    if localPlayer.IsBindingPressed(localPlayer, "ability_extra_47") or localPlayer.IsBindingPressed(localPlayer, "ability_extra_31") then -- DOWN/S
-        currentDistance = currentDistance + -zoomSpeed * propCameraZoomSpeed * deltaTime
-    end
+    currentDistance = currentDistance + zoomSpeed * propCameraZoomSpeed * deltaTime * cameraMovement.y
 
     local distanceRatio = (currentDistance - minDistance) / (maxDistance - minDistance)
 

@@ -2,7 +2,7 @@ Assets {
   Id: 11744994237672853482
   Name: "Weapon - Burnt Skelly Dark"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 4266267393531286666
     ParameterOverrides {

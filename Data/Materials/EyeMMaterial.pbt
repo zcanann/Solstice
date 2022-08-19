@@ -2,7 +2,7 @@ Assets {
   Id: 8699898665836289714
   Name: "EyeMMaterial"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Models"
   VirtualFolderPath: "PlayerSkins"
   CustomMaterialAsset {

@@ -32,6 +32,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -46,5 +47,5 @@ Assets {
     Version: "1.0.0"
     Description: "Collapsed ruin of an old stone tower, overgrown with ivy, moss and fern."
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

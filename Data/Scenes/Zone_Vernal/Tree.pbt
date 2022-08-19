@@ -16,7 +16,7 @@ Objects {
   }
   ChildIds: 16576303987803472213
   ChildIds: 14535832203876865362
-  ChildIds: 5628166357863187692
+  ChildIds: 13113358172542972096
   ChildIds: 9292959906759754007
   ChildIds: 16810963713302352713
   UnregisteredParameters {
@@ -35,6 +35,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 16810963713302352713
@@ -76,6 +77,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 9292959906759754007
@@ -111,15 +113,12 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
-  Id: 5628166357863187692
+  Id: 13113358172542972096
   Name: "UI_A"
   Transform {
-    Location {
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -133,22 +132,29 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsFilePartition: true
-    FilePartitionName: "UI"
-  }
-  InstanceHistory {
-    SelfId: 5628166357863187692
-    SubobjectId: 9869906567946650923
-    InstanceId: 13113358172542972096
-    TemplateId: 10779387828834219691
-    WasRoot: true
-  }
-  NetworkRelevanceDistance {
-    Value: "mc:eproxyrelevance:critical"
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9869906567946650923
+      value {
+        Overrides {
+          Name: "Name"
+          String: "UI_A"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 10779387828834219691
+    }
   }
 }
 Objects {
@@ -192,6 +198,7 @@ Objects {
       Id: 1167388389768785005
     }
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 16576303987803472213
@@ -204,25 +211,29 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
-    ParameterOverrideMap {
-      key: 9787928747324106682
-      value {
-        Overrides {
-          Name: "GameSettings.ChatPosition"
-          Vector2 {
-            X: 24
-            Y: -72
-          }
-        }
-      }
-    }
     ParameterOverrideMap {
       key: 14209675969168667736
       value {
         Overrides {
           Name: "Name"
           String: "Settings_A"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
         }
       }
     }

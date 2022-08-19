@@ -2,7 +2,7 @@ Assets {
   Id: 2764909344384260025
   Name: "FrameworkQuestIndicatorYellow_Mat"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Models"
   VirtualFolderPath: "QuestIndicators"
   CustomMaterialAsset {

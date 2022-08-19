@@ -2,7 +2,7 @@ Assets {
   Id: 1664861883564057420
   Name: "Dull Metal Dark"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 4500830083388106535
     ParameterOverrides {

@@ -40,6 +40,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -54,5 +55,5 @@ Assets {
     Version: "1.2.0"
     Description: "Ever wanted to be a sim? Now you can! The costume is attached to the player using the script from Dracowolfie\'s \"Buffshroom Suit\" in Community Content. To use, just walk up to the mannequin and press F to wear"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

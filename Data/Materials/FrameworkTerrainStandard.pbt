@@ -2,7 +2,7 @@ Assets {
   Id: 10643404576603957552
   Name: "FrameworkTerrainStandard"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Terrain"
   CustomMaterialAsset {
     BaseMaterialId: 3169360956294553894

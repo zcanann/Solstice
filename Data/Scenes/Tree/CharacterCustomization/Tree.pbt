@@ -51,6 +51,7 @@ Objects {
         Y: 1024
       }
       RedrawTime: 30
+      UseSafeZoneAdjustment: true
     }
     AnchorLayout {
       SelfAnchor {
@@ -65,6 +66,7 @@ Objects {
       }
     }
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 13613261303598770622
@@ -110,6 +112,7 @@ Objects {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    IsHittable: true
     Button {
       FontColor {
         A: 1
@@ -170,6 +173,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 366092272794748010
@@ -215,6 +219,8 @@ Objects {
     UseParentHeight: true
     Panel {
       Opacity: 1
+      OpacityMaskBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -232,6 +238,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 8071202430543698023
@@ -276,6 +283,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 10494481065282932579
@@ -362,6 +370,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 4922894235130319187
@@ -438,6 +447,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 7385519272758775515
@@ -484,6 +494,8 @@ Objects {
     Panel {
       IsClipping: true
       Opacity: 1
+      OpacityMaskBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -501,6 +513,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 437481515741205567
@@ -576,6 +589,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 6693145993510395784
@@ -622,6 +636,8 @@ Objects {
     Panel {
       IsClipping: true
       Opacity: 1
+      OpacityMaskBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -639,6 +655,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 10507934130385758168
@@ -714,6 +731,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 8632194007590615229
@@ -759,6 +777,7 @@ Objects {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    IsHittable: true
     Button {
       FontColor {
         A: 1
@@ -819,6 +838,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 10309341764623581766
@@ -864,6 +884,8 @@ Objects {
     UseParentHeight: true
     Panel {
       Opacity: 1
+      OpacityMaskBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -881,6 +903,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 13383807319325836268
@@ -925,6 +948,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 9508753391169411132
@@ -1011,6 +1035,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 6453925614906107666
@@ -1087,6 +1112,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 9282195588844883863
@@ -1133,6 +1159,8 @@ Objects {
     Panel {
       IsClipping: true
       Opacity: 1
+      OpacityMaskBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1150,6 +1178,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 12711465344906623776
@@ -1225,6 +1254,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 2926230727851666449
@@ -1271,6 +1301,8 @@ Objects {
     Panel {
       IsClipping: true
       Opacity: 1
+      OpacityMaskBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1288,6 +1320,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 6833184586671791589
@@ -1363,6 +1396,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 865742444336099434
@@ -1411,6 +1445,8 @@ Objects {
     }
     Panel {
       Opacity: 1
+      OpacityMaskBrush {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -1428,6 +1464,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 10185657404575083161
@@ -1514,6 +1551,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 17552389425542283735
@@ -1594,6 +1632,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 6522491837051677599
@@ -1674,6 +1713,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 1896233229919148499
@@ -1762,6 +1802,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 8713053333115097790
@@ -1842,6 +1883,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 12149609478824512079
@@ -1923,4 +1965,5 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }

@@ -29,6 +29,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -43,5 +44,5 @@ Assets {
     Version: "1.0.0"
     Description: "Hello there!\r\n\r\nA steampunk style building!\r\nThis building includes:\r\n- Animated gears\r\n- Steampunk weapon\r\n- Custom steampunk materials\r\n- Small steampunk assets"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

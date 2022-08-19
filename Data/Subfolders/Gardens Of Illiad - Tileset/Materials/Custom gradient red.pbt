@@ -2,7 +2,7 @@ Assets {
   Id: 9325281570896051573
   Name: "Custom gradient red"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 13284729577923712496
     ParameterOverrides {

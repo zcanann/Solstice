@@ -2,7 +2,7 @@ Assets {
   Id: 10633711601950230839
   Name: "Cms-Custom Emissive Container Liquid"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 5882979262185004224
     ParameterOverrides {

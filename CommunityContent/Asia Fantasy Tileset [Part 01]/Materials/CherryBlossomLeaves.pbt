@@ -2,7 +2,7 @@ Assets {
   Id: 9135834889929628658
   Name: "CherryBlossomLeaves"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 8270290165227268621
     ParameterOverrides {

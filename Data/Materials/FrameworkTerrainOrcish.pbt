@@ -2,7 +2,7 @@ Assets {
   Id: 6829442250202245359
   Name: "FrameworkTerrainOrcish"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Terrain"
   CustomMaterialAsset {
     BaseMaterialId: 3169360956294553894

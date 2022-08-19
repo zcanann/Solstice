@@ -2,7 +2,7 @@ Assets {
   Id: 768144742596456870
   Name: "Gold Flat"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 14629909211943041809
     ParameterOverrides {

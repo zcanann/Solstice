@@ -2,7 +2,7 @@ Assets {
   Id: 13899464455203683334
   Name: "Tot Custom Rope - red"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 9376620373317289136
     ParameterOverrides {

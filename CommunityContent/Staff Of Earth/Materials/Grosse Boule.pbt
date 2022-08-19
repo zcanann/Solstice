@@ -2,7 +2,7 @@ Assets {
   Id: 16503742502743355322
   Name: "Grosse Boule"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 506737420805942888
     ParameterOverrides {

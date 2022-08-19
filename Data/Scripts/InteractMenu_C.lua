@@ -17,8 +17,8 @@ end
 function AddEntry(entryName, callback)
     if #entries <= 0 then
         SetVisible(true)
-        propInteractMenu.x = UI.GetCursorPosition().x
-        propInteractMenu.y = UI.GetCursorPosition().y
+        propInteractMenu.x = Input.GetCursorPosition().x
+        propInteractMenu.y = Input.GetCursorPosition().y
     end
 
     local entry = World.SpawnAsset(propInteractEntry, {parent = propEntryHost})

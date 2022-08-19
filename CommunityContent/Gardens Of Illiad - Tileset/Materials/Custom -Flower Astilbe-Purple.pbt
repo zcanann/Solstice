@@ -2,7 +2,7 @@ Assets {
   Id: 12532329742630024892
   Name: "Custom -Flower Astilbe-Purple"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 10429772325125277138
     ParameterOverrides {

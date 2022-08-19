@@ -2,7 +2,7 @@ Assets {
   Id: 14095795574631907790
   Name: "Weapon - Blood Amethyst"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 4266267393531286666
     ParameterOverrides {

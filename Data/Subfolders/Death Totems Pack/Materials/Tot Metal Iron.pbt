@@ -2,7 +2,7 @@ Assets {
   Id: 2218744836541972008
   Name: "Tot Metal Iron "
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 15610797113222205011
     ParameterOverrides {

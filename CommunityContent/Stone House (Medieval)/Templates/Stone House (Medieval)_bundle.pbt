@@ -32,6 +32,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -46,5 +47,5 @@ Assets {
     Version: "1.1.0"
     Description: "A small furnished house (furniture sets can removed seperatly)"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

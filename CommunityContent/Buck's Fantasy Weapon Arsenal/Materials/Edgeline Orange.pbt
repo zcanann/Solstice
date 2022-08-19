@@ -2,7 +2,7 @@ Assets {
   Id: 2148681494662796636
   Name: "Edgeline Orange"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 6186751883754370952
     ParameterOverrides {

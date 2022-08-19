@@ -2,7 +2,7 @@ Assets {
   Id: 4748314673001092049
   Name: "Weapon - Blood"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 16026325358961582790
     ParameterOverrides {

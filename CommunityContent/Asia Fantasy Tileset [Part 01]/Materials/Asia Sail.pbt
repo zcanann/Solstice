@@ -2,7 +2,7 @@ Assets {
   Id: 14661776253676126983
   Name: "Asia Sail"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 3090596827184957478
     ParameterOverrides {

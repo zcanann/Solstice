@@ -1,8 +1,8 @@
 Assets {
   Id: 736360303936294653
-  Name: "Default Bindings"
+  Name: "BindingSettings"
   PlatformAssetType: 29
-  SerializationVersion: 107
+  SerializationVersion: 118
   BindingSetAsset {
     Bindings {
       BindingType {
@@ -26,6 +26,7 @@ Assets {
       CoreBehavior {
         Value: "mc:ecorebehavior:jump"
       }
+      IsEnabledOnStart: true
     }
     Bindings {
       BindingType {
@@ -49,52 +50,7 @@ Assets {
       CoreBehavior {
         Value: "mc:ecorebehavior:crouch"
       }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:basic"
-      }
-      BasicBindingData {
-        BasicInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:g"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:dpadup"
-          }
-        }
-      }
-      Action: "Mount"
-      Description: "Enter mount mode."
-      CoreBehavior {
-        Value: "mc:ecorebehavior:mount"
-      }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:basic"
-      }
-      BasicBindingData {
-        BasicInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:f"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:x"
-          }
-        }
-      }
-      Action: "Interact"
-      Description: "Interact with triggers"
-      CoreBehavior {
-        Value: "mc:ecorebehavior:interact"
-      }
+      IsEnabledOnStart: true
     }
     Bindings {
       BindingType {
@@ -117,29 +73,7 @@ Assets {
       CoreBehavior {
         Value: "mc:ecorebehavior:chat"
       }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:basic"
-      }
-      BasicBindingData {
-        BasicInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:tilde"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:middleclick"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:view"
-          }
-        }
-      }
-      Action: "SlotPicker"
-      Description: "Reopens last opened picker menu"
-      CoreBehavior {
-        Value: "mc:ecorebehavior:slotpicker"
-      }
+      IsEnabledOnStart: true
     }
     Bindings {
       BindingType {
@@ -151,7 +85,7 @@ Assets {
             Value: "mc:ebindingkeyboard:w"
           }
           KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
+            Value: "mc:ebindingkeyboard:up"
           }
           Controller {
             Value: "mc:ebindinggamepad:leftstickup"
@@ -162,7 +96,7 @@ Assets {
             Value: "mc:ebindingkeyboard:a"
           }
           KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
+            Value: "mc:ebindingkeyboard:left"
           }
           Controller {
             Value: "mc:ebindinggamepad:leftstickleft"
@@ -173,7 +107,7 @@ Assets {
             Value: "mc:ebindingkeyboard:s"
           }
           KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
+            Value: "mc:ebindingkeyboard:down"
           }
           Controller {
             Value: "mc:ebindinggamepad:leftstickdown"
@@ -184,18 +118,19 @@ Assets {
             Value: "mc:ebindingkeyboard:d"
           }
           KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
+            Value: "mc:ebindingkeyboard:right"
           }
           Controller {
             Value: "mc:ebindinggamepad:leftstickright"
           }
         }
       }
-      Action: "Move"
-      Description: "Moves the character."
+      Action: "MoveCamera"
+      Description: "Moves the camera."
       CoreBehavior {
         Value: "mc:ecorebehavior:move"
       }
+      IsEnabledOnStart: true
     }
     Bindings {
       BindingType {
@@ -230,62 +165,7 @@ Assets {
       CoreBehavior {
         Value: "mc:ecorebehavior:movevertically"
       }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:directional"
-      }
-      DirectionalBindingData {
-        UpInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:mouseup"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:rightstickup"
-          }
-        }
-        LeftInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:mouseleft"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:rightstickleft"
-          }
-        }
-        DownInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:mousedown"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:rightstickdown"
-          }
-        }
-        RightInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:mouseright"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:rightstickright"
-          }
-        }
-      }
-      Action: "Look"
-      Description: "Controls the camera."
-      CoreBehavior {
-        Value: "mc:ecorebehavior:look"
-      }
+      IsEnabledOnStart: true
     }
     Bindings {
       BindingType {
@@ -320,132 +200,7 @@ Assets {
       CoreBehavior {
         Value: "mc:ecorebehavior:zoom"
       }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:basic"
-      }
-      BasicBindingData {
-        BasicInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:w"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:righttrigger"
-          }
-        }
-      }
-      Action: "VehicleAccelerate"
-      Description: "When driving, accelerate forward."
-      CoreBehavior {
-        Value: "mc:ecorebehavior:vehicleaccelerate"
-      }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:basic"
-      }
-      BasicBindingData {
-        BasicInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:s"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:lefttrigger"
-          }
-        }
-      }
-      Action: "VehicleReverse"
-      Description: "When driving, stop the vehicle and reverse."
-      CoreBehavior {
-        Value: "mc:ecorebehavior:vehiclereverse"
-      }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:axis"
-      }
-      AxisBindingData {
-        IncreaseInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:d"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:leftstickright"
-          }
-        }
-        DecreaseInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:a"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:leftstickleft"
-          }
-        }
-      }
-      Action: "VehicleTurn"
-      Description: "When driving, turn the vehicle."
-      CoreBehavior {
-        Value: "mc:ecorebehavior:vehicleturn"
-      }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:basic"
-      }
-      BasicBindingData {
-        BasicInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:spacebar"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:b"
-          }
-        }
-      }
-      Action: "VehicleHandbrake"
-      Description: "When driving, apply the handbrake."
-      CoreBehavior {
-        Value: "mc:ecorebehavior:vehiclehandbrake"
-      }
-    }
-    Bindings {
-      BindingType {
-        Value: "mc:ebindingtype:basic"
-      }
-      BasicBindingData {
-        BasicInputs {
-          KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:f"
-          }
-          KeyboardSecondary {
-            Value: "mc:ebindingkeyboard:none"
-          }
-          Controller {
-            Value: "mc:ebindinggamepad:x"
-          }
-        }
-      }
-      Action: "VehicleExit"
-      Description: "When driving, exit the vehicle."
-      CoreBehavior {
-        Value: "mc:ecorebehavior:vehicleexit"
-      }
+      IsEnabledOnStart: true
     }
     Bindings {
       BindingType {
@@ -468,6 +223,175 @@ Assets {
       CoreBehavior {
         Value: "mc:ecorebehavior:pushtotalk"
       }
+      IsEnabledOnStart: true
+    }
+    Bindings {
+      BindingType {
+        Value: "mc:ebindingtype:basic"
+      }
+      BasicBindingData {
+        BasicInputs {
+          KeyboardPrimary {
+            Value: "mc:ebindingkeyboard:leftclick"
+          }
+          KeyboardSecondary {
+            Value: "mc:ebindingkeyboard:none"
+          }
+          Controller {
+            Value: "mc:ebindinggamepad:none"
+          }
+        }
+      }
+      Action: "Interact"
+      Description: "Interacts with the target object."
+      CoreBehavior {
+        Value: "mc:ecorebehavior:none"
+      }
+      IsEnabledOnStart: true
+    }
+    Bindings {
+      BindingType {
+        Value: "mc:ebindingtype:basic"
+      }
+      BasicBindingData {
+        BasicInputs {
+          KeyboardPrimary {
+            Value: "mc:ebindingkeyboard:rightclick"
+          }
+          KeyboardSecondary {
+            Value: "mc:ebindingkeyboard:none"
+          }
+          Controller {
+            Value: "mc:ebindinggamepad:none"
+          }
+        }
+      }
+      Action: "Options"
+      Description: "Gets additional interaction options for the target object."
+      CoreBehavior {
+        Value: "mc:ecorebehavior:none"
+      }
+      IsEnabledOnStart: true
+    }
+    Bindings {
+      BindingType {
+        Value: "mc:ebindingtype:basic"
+      }
+      BasicBindingData {
+        BasicInputs {
+          KeyboardPrimary {
+            Value: "mc:ebindingkeyboard:b"
+          }
+          KeyboardSecondary {
+            Value: "mc:ebindingkeyboard:i"
+          }
+          Controller {
+            Value: "mc:ebindinggamepad:none"
+          }
+        }
+      }
+      Action: "MenuInventory"
+      Description: "Opens the inventory menu."
+      CoreBehavior {
+        Value: "mc:ecorebehavior:none"
+      }
+      IsEnabledOnStart: true
+    }
+    Bindings {
+      BindingType {
+        Value: "mc:ebindingtype:basic"
+      }
+      BasicBindingData {
+        BasicInputs {
+          KeyboardPrimary {
+            Value: "mc:ebindingkeyboard:e"
+          }
+          KeyboardSecondary {
+            Value: "mc:ebindingkeyboard:none"
+          }
+          Controller {
+            Value: "mc:ebindinggamepad:none"
+          }
+        }
+      }
+      Action: "MenuEquipment"
+      Description: "Opens the equipment menu."
+      CoreBehavior {
+        Value: "mc:ecorebehavior:none"
+      }
+      IsEnabledOnStart: true
+    }
+    Bindings {
+      BindingType {
+        Value: "mc:ebindingtype:basic"
+      }
+      BasicBindingData {
+        BasicInputs {
+          KeyboardPrimary {
+            Value: "mc:ebindingkeyboard:r"
+          }
+          KeyboardSecondary {
+            Value: "mc:ebindingkeyboard:none"
+          }
+          Controller {
+            Value: "mc:ebindinggamepad:none"
+          }
+        }
+      }
+      Action: "MenuSoul"
+      Description: "Opens the soul menu."
+      CoreBehavior {
+        Value: "mc:ecorebehavior:none"
+      }
+      IsEnabledOnStart: true
+    }
+    Bindings {
+      BindingType {
+        Value: "mc:ebindingtype:basic"
+      }
+      BasicBindingData {
+        BasicInputs {
+          KeyboardPrimary {
+            Value: "mc:ebindingkeyboard:c"
+          }
+          KeyboardSecondary {
+            Value: "mc:ebindingkeyboard:none"
+          }
+          Controller {
+            Value: "mc:ebindinggamepad:none"
+          }
+        }
+      }
+      Action: "MenuCombat"
+      Description: "Opens the combat menu."
+      CoreBehavior {
+        Value: "mc:ecorebehavior:none"
+      }
+      IsEnabledOnStart: true
+    }
+    Bindings {
+      BindingType {
+        Value: "mc:ebindingtype:basic"
+      }
+      BasicBindingData {
+        BasicInputs {
+          KeyboardPrimary {
+            Value: "mc:ebindingkeyboard:f"
+          }
+          KeyboardSecondary {
+            Value: "mc:ebindingkeyboard:none"
+          }
+          Controller {
+            Value: "mc:ebindinggamepad:none"
+          }
+        }
+      }
+      Action: "MenuSkills"
+      Description: "Opens the skills menu."
+      CoreBehavior {
+        Value: "mc:ecorebehavior:none"
+      }
+      IsEnabledOnStart: true
     }
   }
 }

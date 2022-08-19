@@ -2,7 +2,7 @@ Assets {
   Id: 2079543711533336804
   Name: "Nightcrawl kelp"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 4725582776372432956
     ParameterOverrides {

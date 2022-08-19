@@ -2,7 +2,7 @@ Assets {
   Id: 11891381492705318643
   Name: "Iron Blight Fortress"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 17789466444063350813
     ParameterOverrides {

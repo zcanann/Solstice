@@ -2,7 +2,7 @@ Assets {
   Id: 1644023378336163778
   Name: "Sloan Custom Rope"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 10613300414682810643
     ParameterOverrides {

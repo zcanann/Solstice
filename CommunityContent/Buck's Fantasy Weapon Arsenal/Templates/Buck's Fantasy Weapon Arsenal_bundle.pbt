@@ -32,6 +32,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -41,10 +42,10 @@ Assets {
   }
   Marketplace {
     Id: "6b6cc44dd4d74100a0186a3d325eceed"
-    OwnerAccountId: "901b7628983c4c8db4282f24afeda57a"
-    OwnerName: "Buckmonster"
+    OwnerAccountId: "deaddeadcafecafedeaddeadcafecafe"
+    OwnerName: "_UnknownCreator"
     Version: "1.0.0"
     Description: "Welcome to something that started as a few weapons for my hero kit project and ended up me also grabbing @Breadman\'s updated spellshock weapons and theming them all.\r\n\r\nThese are still WIP and while they have a decent set of abilities and animations set to them still need some final polish.\r\n\r\nThanks to @Mucusinator for his amazing castle as a backdrop for the screenshots.\r\n\r\n"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

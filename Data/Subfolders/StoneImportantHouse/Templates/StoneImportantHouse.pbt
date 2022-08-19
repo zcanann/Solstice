@@ -40,6 +40,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -54,5 +55,5 @@ Assets {
     Version: "1.1.0"
     Description: "Big building made of stone and wood. Made from sniper alley house set."
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

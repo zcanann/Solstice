@@ -2,7 +2,7 @@ Assets {
   Id: 18149665554345908923
   Name: "Weapon Tech Panel 01"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 909486713862098938
     ParameterOverrides {

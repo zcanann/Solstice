@@ -2,7 +2,7 @@ Assets {
   Id: 5860146404392810783
   Name: "NIghtcrawl bush leaves"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 18005898910954762674
     ParameterOverrides {

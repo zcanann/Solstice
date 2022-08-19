@@ -2,7 +2,7 @@ Assets {
   Id: 13433006200756602915
   Name: "WarglaiveGlow"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 6560176572561870850

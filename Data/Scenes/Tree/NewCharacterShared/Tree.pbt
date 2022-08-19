@@ -50,6 +50,7 @@ Objects {
         Y: 1024
       }
       RedrawTime: 30
+      UseSafeZoneAdjustment: true
     }
     AnchorLayout {
       SelfAnchor {
@@ -64,6 +65,7 @@ Objects {
       }
     }
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 15022815161956759828
@@ -103,6 +105,7 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }
 Objects {
   Id: 3933482438019490024
@@ -142,4 +145,5 @@ Objects {
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
+  IsReplicationEnabledByDefault: true
 }

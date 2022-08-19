@@ -2,7 +2,7 @@ Assets {
   Id: 1831411378723833467
   Name: "Emissive Orange"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 10294735921380463590
     ParameterOverrides {

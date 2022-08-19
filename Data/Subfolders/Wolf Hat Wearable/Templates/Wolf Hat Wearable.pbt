@@ -38,6 +38,7 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+        IsReplicationEnabledByDefault: true
       }
     }
     PrimaryAssetId {
@@ -47,10 +48,10 @@ Assets {
   }
   Marketplace {
     Id: "500b547787164aa2b393c78c444ea9a7"
-    OwnerAccountId: "901b7628983c4c8db4282f24afeda57a"
-    OwnerName: "Buckmonster"
+    OwnerAccountId: "deaddeadcafecafedeaddeadcafecafe"
+    OwnerName: "_UnknownCreator"
     Version: "1.0.0"
     Description: "Wearable Wolf Hat requested by @DesTroyer  From an example tower for the All-Mid MOBA Community Jam!"
   }
-  SerializationVersion: 107
+  SerializationVersion: 118
 }

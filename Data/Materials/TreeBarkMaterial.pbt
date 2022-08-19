@@ -2,7 +2,7 @@ Assets {
   Id: 3301699299468232310
   Name: "TreeBarkMaterial"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   VirtualFolderPath: "Equipment"
   CustomMaterialAsset {
     BaseMaterialId: 5513903435321384876

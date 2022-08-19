@@ -2,7 +2,7 @@ Assets {
   Id: 8519201996895966877
   Name: "Tot Wood Raw"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 13711677265034246201
     ParameterOverrides {

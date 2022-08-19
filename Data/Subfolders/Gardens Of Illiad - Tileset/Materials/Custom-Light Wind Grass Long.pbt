@@ -2,7 +2,7 @@ Assets {
   Id: 9799243219985852236
   Name: "Custom-Light Wind Grass Long"
   PlatformAssetType: 13
-  SerializationVersion: 107
+  SerializationVersion: 118
   CustomMaterialAsset {
     BaseMaterialId: 6786320184079655535
     ParameterOverrides {
