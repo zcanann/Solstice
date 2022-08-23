@@ -1,7 +1,7 @@
-local Framework = require(script:GetCustomProperty("Framework"))
-
-local propPlayerUnitFrame = script:GetCustomProperty("PlayerUnitFrame"):WaitForObject()
-local propTargetUnitFrame = script:GetCustomProperty("TargetUnitFrame"):WaitForObject()
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+local LOCALIZATION_TABLE_OBJECT_NAMES = require(script:GetCustomProperty("LocalizationTable_ObjectNames"))
+local PLAYER_UNIT_FRAME = script:GetCustomProperty("PlayerUnitFrame"):WaitForObject()
+local TARGET_UNIT_FRAME = script:GetCustomProperty("TargetUnitFrame"):WaitForObject()
 
 local localPlayer = Game.GetLocalPlayer()
 
@@ -23,14 +23,14 @@ local selectedTarget = nil
 local playerUnitFrameCapture = nil
 local targetUnitFrameCapture = nil
 
-local playerAvatarImage = propPlayerUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject()
-local targetAvatarImage = propTargetUnitFrame:GetCustomProperty("AvatarImage"):WaitForObject()
+local playerAvatarImage = PLAYER_UNIT_FRAME:GetCustomProperty("AvatarImage"):WaitForObject()
+local targetAvatarImage = TARGET_UNIT_FRAME:GetCustomProperty("AvatarImage"):WaitForObject()
 
 function OnTargetSelected(proximityObjectId)
-    local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
+    local objectInstance = FRAMEWORK.Networking.GetProximityInstance(proximityObjectId)
 
 	-- Note that we do not early-exit on a nil target, as this is equivalent to deselecting
-	if objectInstance and not Framework.IsEntity(objectInstance) then
+	if objectInstance and not FRAMEWORK.IsEntity(objectInstance) then
 		return
 	end
 
@@ -51,73 +51,73 @@ function OnTargetSelected(proximityObjectId)
 		targetUnitFrameCapture = nil
 	end
 
-	local currentTarget = Framework.RuntimeDataStore.GetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET_ID)
+	local currentTarget = FRAMEWORK.RuntimeDataStore.GetKey(FRAMEWORK.RuntimeDataStore.Keys.SELECTED_TARGET_ID)
 	if currentTarget then
-		Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
+		FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Interaction.EVENT_DESELECT_TARGET_PREFIX .. currentTarget)
 	end
-	Framework.RuntimeDataStore.SetKey(Framework.RuntimeDataStore.Keys.SELECTED_TARGET_ID, proximityObjectId)
+	FRAMEWORK.RuntimeDataStore.SetKey(FRAMEWORK.RuntimeDataStore.Keys.SELECTED_TARGET_ID, proximityObjectId)
 
 	-- Now it is safe to early-exit if the target is nil, since we have finished deselecting
 	if not objectInstance or not Object.IsValid(objectInstance) then
 		return
 	end
 
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEALTH, OnTargetHealthChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnTargetMaxHealthChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MANA, OnTargetManaChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.MAX_MANA, OnTargetMaxManaChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.NAME, OnTargetNameChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.CLASS, OnTargetClassChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.FACTION, OnTargetFactionChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnTargetRaceChanged))
-	table.insert(targetListeners, Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.GENDER, OnTargetGenderChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, OnTargetHealthChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH, OnTargetMaxHealthChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.MANA, OnTargetManaChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_MANA, OnTargetMaxManaChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.NAME, OnTargetNameChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.CLASS, OnTargetClassChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.FACTION, OnTargetFactionChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.RACE, OnTargetRaceChanged))
+	table.insert(targetListeners, FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.GENDER, OnTargetGenderChanged))
 
-	targetUnitFrameCamera = Framework.Utils.CameraCapture.GetCaptureCamera(objectInstance)
+	targetUnitFrameCamera = FRAMEWORK.Utils.CameraCapture.GetCaptureCamera(objectInstance)
 
 	selectedTarget = objectInstance
-	Framework.Events.Broadcast.Local(Framework.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. proximityObjectId)
+	FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Interaction.EVENT_SELECT_TARGET_PREFIX .. proximityObjectId)
 end
 
 function Tick(deltaSeconds)
 	if not playerUnitFrameCamera then
-		playerUnitFrameCamera = Framework.Utils.CameraCapture.GetCaptureCamera(localPlayer)
+		playerUnitFrameCamera = FRAMEWORK.Utils.CameraCapture.GetCaptureCamera(localPlayer)
 	end
 
 	if not playerUnitFrameCapture or not playerUnitFrameCapture:IsValid() then
-		playerUnitFrameCapture = Framework.Utils.CameraCapture.UnitFrameImageCapture(playerUnitFrameCamera, localPlayer, playerAvatarImage, CameraCaptureResolution.MEDIUM)
+		playerUnitFrameCapture = FRAMEWORK.Utils.CameraCapture.UnitFrameImageCapture(playerUnitFrameCamera, localPlayer, playerAvatarImage, CameraCaptureResolution.MEDIUM)
 	else
-		Framework.Utils.CameraCapture.UnitFrameImageRecapture(playerUnitFrameCamera, localPlayer, playerUnitFrameCapture)
+		FRAMEWORK.Utils.CameraCapture.UnitFrameImageRecapture(playerUnitFrameCamera, localPlayer, playerUnitFrameCapture)
 	end
 
 	if not targetUnitFrameCapture or not targetUnitFrameCapture:IsValid() then
-		targetUnitFrameCapture = Framework.Utils.CameraCapture.UnitFrameImageCapture(targetUnitFrameCamera, selectedTarget, targetAvatarImage, CameraCaptureResolution.MEDIUM)
+		targetUnitFrameCapture = FRAMEWORK.Utils.CameraCapture.UnitFrameImageCapture(targetUnitFrameCamera, selectedTarget, targetAvatarImage, CameraCaptureResolution.MEDIUM)
 	else
-		Framework.Utils.CameraCapture.UnitFrameImageRecapture(targetUnitFrameCamera, selectedTarget, targetUnitFrameCapture)
+		FRAMEWORK.Utils.CameraCapture.UnitFrameImageRecapture(targetUnitFrameCamera, selectedTarget, targetUnitFrameCapture)
 	end
 end
 
 function OnPlayerHealthChanged(proximityDataId, health)
 	cachedPlayerHealth = health or 100
-	UpdateHealthBar(propPlayerUnitFrame, cachedPlayerHealth, cachedPlayerMaxHealth)
+	UpdateHealthBar(PLAYER_UNIT_FRAME, cachedPlayerHealth, cachedPlayerMaxHealth)
 end
 
 function OnPlayerMaxHealthChanged(proximityDataId, maxHealth)
 	cachedPlayerMaxHealth = maxHealth or 100
-	UpdateHealthBar(propPlayerUnitFrame, cachedPlayerHealth, cachedPlayerMaxHealth)
+	UpdateHealthBar(PLAYER_UNIT_FRAME, cachedPlayerHealth, cachedPlayerMaxHealth)
 end
 
 function OnPlayerManaChanged(proximityDataId, mana)
 	cachedPlayerMana = mana or 100
-	UpdateSpecialBar(propPlayerUnitFrame, cachedPlayerMana, cachedPlayerMaxMana)
+	UpdateSpecialBar(PLAYER_UNIT_FRAME, cachedPlayerMana, cachedPlayerMaxMana)
 end
 
 function OnPlayerMaxManaChanged(proximityDataId, maxMana)
 	cachedPlayerMaxMana = maxMana or 100
-	UpdateSpecialBar(propPlayerUnitFrame, cachedPlayerMana, cachedPlayerMaxMana)
+	UpdateSpecialBar(PLAYER_UNIT_FRAME, cachedPlayerMana, cachedPlayerMaxMana)
 end
 
 function OnPlayerNameChanged(proximityDataId, name)
-	propPlayerUnitFrame:GetCustomProperty("NameText"):GetObject().text = name or ""
+	PLAYER_UNIT_FRAME:GetCustomProperty("NameText"):GetObject().text = name or ""
 end
 
 function OnPlayerClassChanged(proximityDataId, class)
@@ -134,26 +134,31 @@ end
 
 function OnTargetHealthChanged(proximityDataId, health)
 	cachedTargetHealth = health or 100
-	UpdateHealthBar(propTargetUnitFrame, cachedTargetHealth, cachedTargetMaxHealth)
+	UpdateHealthBar(TARGET_UNIT_FRAME, cachedTargetHealth, cachedTargetMaxHealth)
 end
 
 function OnTargetMaxHealthChanged(proximityDataId, maxHealth)
 	cachedTargetMaxHealth = maxHealth or 100
-	UpdateHealthBar(propTargetUnitFrame, cachedTargetHealth, cachedTargetMaxHealth)
+	UpdateHealthBar(TARGET_UNIT_FRAME, cachedTargetHealth, cachedTargetMaxHealth)
 end
 
 function OnTargetManaChanged(proximityDataId, mana)
 	cachedTargetMana = mana or 100
-	UpdateSpecialBar(propTargetUnitFrame, cachedTargetMana, cachedTargetMaxMana)
+	UpdateSpecialBar(TARGET_UNIT_FRAME, cachedTargetMana, cachedTargetMaxMana)
 end
 
 function OnTargetMaxManaChanged(proximityDataId, maxMana)
 	cachedTargetMaxMana = maxMana or 100
-	UpdateSpecialBar(propTargetUnitFrame, cachedTargetMana, cachedTargetMaxMana)
+	UpdateSpecialBar(TARGET_UNIT_FRAME, cachedTargetMana, cachedTargetMaxMana)
 end
 
 function OnTargetNameChanged(proximityDataId, name)
-	propTargetUnitFrame:GetCustomProperty("NameText"):GetObject().text = name or ""
+	local IsPlayer = Object.IsValid(Game.FindPlayer(proximityDataId))
+	if IsPlayer then
+		TARGET_UNIT_FRAME:GetCustomProperty("NameText"):GetObject().text = name
+	else
+		TARGET_UNIT_FRAME:GetCustomProperty("NameText"):GetObject().text = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_OBJECT_NAMES, name, { }).ToString()
+	end
 
 	ToggleTargetFrameVisibility(name)
 end
@@ -172,9 +177,9 @@ end
 
 function ToggleTargetFrameVisibility(isVisible)
 	if isVisible then
-		propTargetUnitFrame.visibility = Visibility.INHERIT
+		TARGET_UNIT_FRAME.visibility = Visibility.INHERIT
 	else
-		propTargetUnitFrame.visibility = Visibility.FORCE_OFF
+		TARGET_UNIT_FRAME.visibility = Visibility.FORCE_OFF
 	end
 end
 
@@ -190,13 +195,13 @@ end
 
 ToggleTargetFrameVisibility(false)
 
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.HEALTH, OnPlayerHealthChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnPlayerMaxHealthChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.MANA, OnPlayerManaChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.MAX_MANA, OnPlayerMaxManaChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.NAME, OnPlayerNameChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.CLASS, OnPlayerClassChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.FACTION, OnPlayerFactionChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.RACE, OnPlayerRaceChanged)
-Framework.Events.ListenForProximityEvent(localPlayer.id, Framework.Networking.ProximityKeys.Entity.GENDER, OnPlayerGenderChanged)
-Framework.Events.Listen(Framework.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, OnTargetSelected)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, OnPlayerHealthChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH, OnPlayerMaxHealthChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.MANA, OnPlayerManaChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_MANA, OnPlayerMaxManaChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.NAME, OnPlayerNameChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.CLASS, OnPlayerClassChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.FACTION, OnPlayerFactionChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.RACE, OnPlayerRaceChanged)
+FRAMEWORK.Events.ListenForProximityEvent(localPlayer.id, FRAMEWORK.Networking.ProximityKeys.Entity.GENDER, OnPlayerGenderChanged)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.UI.EVENT_SET_TARGET_SELECTION, OnTargetSelected)

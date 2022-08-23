@@ -29,7 +29,7 @@ Assets {
           Overrides {
             Name: "cs:UnitFrameCapture"
             ObjectReference {
-              SubObjectId: 826005412024571793
+              SubObjectId: 6289964940616236553
             }
           }
         }
@@ -146,7 +146,7 @@ Assets {
           Overrides {
             Name: "cs:UnitFrameCapture"
             ObjectReference {
-              SubObjectId: 826005412024571793
+              SubObjectId: 6289964940616236553
             }
           }
           Overrides {
@@ -551,7 +551,7 @@ Assets {
           }
         }
         ParentId: 17657398149344608021
-        ChildIds: 700321174305730690
+        ChildIds: 6289964940616236553
         ChildIds: 1810354110413445691
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -571,16 +571,16 @@ Assets {
         IsReplicationEnabledByDefault: true
       }
       Objects {
-        Id: 700321174305730690
+        Id: 6289964940616236553
         Name: "UnitFrameCapture_C"
         Transform {
           Location {
-            X: 18243
-            Y: 2556.40308
-            Z: 181
+            X: -18.3447208
+            Y: 50.5996132
+            Z: 52.7954254
           }
           Rotation {
-            Yaw: -89.9999924
+            Yaw: -5.00003052
           }
           Scale {
             X: 1
@@ -589,70 +589,201 @@ Assets {
           }
         }
         ParentId: 4364472266117563420
+        ChildIds: 6718188398781010782
+        ChildIds: 919069684061834134
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:CaptureCamera"
+            ObjectReference {
+              SubObjectId: 6718188398781010782
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
         Visible_v2 {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
-        TemplateInstance {
-          ParameterOverrideMap {
-            key: 6096349905810140646
-            value {
-              Overrides {
-                Name: "Position"
-                Vector {
-                  X: 71
-                  Y: 42
-                  Z: 27
-                }
-              }
-              Overrides {
-                Name: "cs:BackPlane"
-                ObjectReference {
-                  SubObjectId: 17686985720539102788
-                }
-              }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+          MinDetailLevel {
+            Value: "mc:edetaillevel:low"
+          }
+          MaxDetailLevel {
+            Value: "mc:edetaillevel:ultra"
+          }
+        }
+        InstanceHistory {
+          SelfId: 826005412024571793
+          SubobjectId: 14725643823824657908
+          InstanceId: 700321174305730690
+          TemplateId: 7662072430726303162
+          WasRoot: true
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 6718188398781010782
+        Name: "CaptureCamera"
+        Transform {
+          Location {
+            X: 71
+            Y: 42
+            Z: 27
+          }
+          Rotation {
+            Pitch: -9.99998379
+            Yaw: -149.999954
+            Roll: -4.33472167e-07
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6289964940616236553
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:BackPlane"
+            ObjectReference {
+              SubObjectId: 919069684061834134
             }
           }
-          ParameterOverrideMap {
-            key: 14725643823824657908
-            value {
-              Overrides {
-                Name: "Name"
-                String: "UnitFrameCapture_C"
-              }
-              Overrides {
-                Name: "Position"
-                Vector {
-                  Z: 76
-                }
-              }
-              Overrides {
-                Name: "Rotation"
-                Rotator {
-                  Yaw: -5.00003386
-                }
-              }
-              Overrides {
-                Name: "Scale"
-                Vector {
-                  X: 1
-                  Y: 1
-                  Z: 1
-                }
-              }
-              Overrides {
-                Name: "cs:CaptureCamera"
-                ObjectReference {
-                  SubObjectId: 10644228524450555779
-                }
-              }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:alwaysvisible"
+        }
+        Camera {
+          PositionOffset {
+          }
+          RotationOffset {
+          }
+          FieldOfView: 25
+          ViewWidth: 1200
+          RotationMode {
+            Value: "mc:erotationmode:default"
+          }
+          MinPitch: -89
+          MaxPitch: 89
+          DoesPositionOffsetSpring: true
+          AudioListenerOffset {
+          }
+          IsCameraCollisionEnabled: true
+        }
+        InstanceHistory {
+          SelfId: 10644228524450555779
+          SubobjectId: 6096349905810140646
+          InstanceId: 700321174305730690
+          TemplateId: 7662072430726303162
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 919069684061834134
+        Name: "BackPlane"
+        Transform {
+          Location {
+            X: -50
+            Y: -28
+          }
+          Rotation {
+            Pitch: 80
+            Yaw: -149.999664
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6289964940616236553
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 16248465704105362888
             }
           }
-          TemplateAsset {
-            Id: 7662072430726303162
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              A: 1
+            }
           }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:forceoff"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7280120439921138985
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          DisableDistanceFieldLighting: true
+          DisableCastShadows: true
+          DisableReceiveDecals: true
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+        InstanceHistory {
+          SelfId: 17686985720539102788
+          SubobjectId: 3628136925310465057
+          InstanceId: 700321174305730690
+          TemplateId: 7662072430726303162
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:critical"
         }
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
@@ -664,12 +795,12 @@ Assets {
         Name: "Bone Human Skull 01"
         Transform {
           Location {
-            X: -6.5461421
-            Y: -1
-            Z: 86
+            X: -24.8906193
+            Y: 49.5996132
+            Z: 62.7954254
           }
           Rotation {
-            Yaw: -89.9998703
+            Yaw: -89.9998779
           }
           Scale {
             X: 0.65
@@ -1512,6 +1643,24 @@ Assets {
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
         AssetId: "fxma_electrical_surface"
+      }
+    }
+    Assets {
+      Id: 7280120439921138985
+      Name: "Plane 1m - One Sided"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_plane_1m_001"
+      }
+    }
+    Assets {
+      Id: 16248465704105362888
+      Name: "Rock Obsidian 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_fresnel_rock_obsidian_001_uv"
       }
     }
     Assets {

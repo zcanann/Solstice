@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:LocalizationTable_ObjectNames"
+        AssetReference {
+          Id: 14181648158741106409
+        }
+      }
+      Overrides {
         Name: "cs:Nameplate"
         ObjectReference {
         }

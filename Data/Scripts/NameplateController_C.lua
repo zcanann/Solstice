@@ -1,8 +1,8 @@
 local NamePlateController = { }
 
-local Framework = require(script:GetCustomProperty("Framework"))
-
-local propNameplate = script:GetCustomProperty("Nameplate"):WaitForObject()
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+local LOCALIZATION_TABLE_OBJECT_NAMES = require(script:GetCustomProperty("LocalizationTable_ObjectNames"))
+local NAMEPLATE = script:GetCustomProperty("Nameplate"):WaitForObject()
 
 local FriendlyNameColor = Color.New(0.0, 1.0, 0.0)
 local EnemyNameColor = Color.New(1.0, 1.0, 0.0)
@@ -27,13 +27,13 @@ local cachedMaxHealth = 100
 
 local nameplateData = { }
 
-nameplateData.templateRoot = propNameplate
-nameplateData.borderPiece = propNameplate:GetCustomProperty("BorderPiece"):WaitForObject()
-nameplateData.backgroundPiece = propNameplate:GetCustomProperty("BackgroundPiece"):WaitForObject()
-nameplateData.healthPiece = propNameplate:GetCustomProperty("HealthPiece"):WaitForObject()
-nameplateData.healthText = propNameplate:GetCustomProperty("HealthText"):WaitForObject()
-nameplateData.nameText = propNameplate:GetCustomProperty("NameText"):WaitForObject()
-nameplateData.chatText = propNameplate:GetCustomProperty("ChatText"):WaitForObject()
+nameplateData.templateRoot = NAMEPLATE
+nameplateData.borderPiece = NAMEPLATE:GetCustomProperty("BorderPiece"):WaitForObject()
+nameplateData.backgroundPiece = NAMEPLATE:GetCustomProperty("BackgroundPiece"):WaitForObject()
+nameplateData.healthPiece = NAMEPLATE:GetCustomProperty("HealthPiece"):WaitForObject()
+nameplateData.healthText = NAMEPLATE:GetCustomProperty("HealthText"):WaitForObject()
+nameplateData.nameText = NAMEPLATE:GetCustomProperty("NameText"):WaitForObject()
+nameplateData.chatText = NAMEPLATE:GetCustomProperty("ChatText"):WaitForObject()
 
 -- Static properties on pieces
 nameplateData.borderPiece:SetScale(Vector3.New(NameplateLayerThickness, HealthBarWidth + 2.0 * BorderWidth, HealthBarHeight + 2.0 * BorderWidth))
@@ -62,7 +62,7 @@ function Tick(deltaTime)
 end
 
 function SetDisplayedHealth(health, maxHealth)
-	if not Object.IsValid(propNameplate) then
+	if not Object.IsValid(NAMEPLATE) then
 		return
 	end
 
@@ -95,7 +95,7 @@ function SetDisplayedHealth(health, maxHealth)
 end
 
 function PlayerChatHandler(player, params)
-	if not Object.IsValid(propNameplate) then
+	if not Object.IsValid(NAMEPLATE) then
 		return
 	end
 
@@ -127,19 +127,19 @@ function OnEntityMaxHealthChanged(proximityDataId, maxHealth)
 end
 
 function OnEntityHeightChanged(proximityDataId, height)
-	if not Object.IsValid(propNameplate) then
+	if not Object.IsValid(NAMEPLATE) then
 		return
 	end
 
 	if height then
 		-- Player nameplates are attached differently, so these use a different height adjustment
 		if Object.IsValid(proximityObject) and proximityObject:IsA("Player") then
-			propNameplate:SetPosition(Vector3.New(0.0, 0.0, 48.0))
+			NAMEPLATE:SetPosition(Vector3.New(0.0, 0.0, 48.0))
 		else
-			propNameplate:SetPosition(Vector3.New(0.0, 0.0, height / 2.0 + 64.0))
+			NAMEPLATE:SetPosition(Vector3.New(0.0, 0.0, height / 2.0 + 64.0))
 		end
 	else
-		propNameplate:SetPosition(Vector3.ZERO)
+		NAMEPLATE:SetPosition(Vector3.ZERO)
 	end
 end
 
@@ -149,7 +149,12 @@ function OnEntityNameChanged(proximityDataId, name)
 	end
 
 	if name then
-		nameplateData.nameText.text = name
+		local IsPlayer = Object.IsValid(Game.FindPlayer(proximityDataId))
+		if IsPlayer then
+			nameplateData.nameText.text = name
+		else
+			nameplateData.nameText.text = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_OBJECT_NAMES, name, { }).ToString()
+		end
 	else
 		nameplateData.nameText.text = "Unknown"
 	end
@@ -175,14 +180,14 @@ function SetProximityObject(newProximityObject)
 	proximityObject = newProximityObject
 
 	if Object.IsValid(proximityObject) then
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.MAX_HEALTH, OnEntityMaxHealthChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.NAME, OnEntityNameChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.CLASS, OnEntityClassChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.FACTION, OnEntityFactionChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
-		Framework.Events.ListenForProximityEvent(proximityObject.id, Framework.Networking.ProximityKeys.Entity.GENDER, OnEntityGenderChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEALTH, OnEntityHealthChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.MAX_HEALTH, OnEntityMaxHealthChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.NAME, OnEntityNameChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.CLASS, OnEntityClassChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.FACTION, OnEntityFactionChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
+		FRAMEWORK.Events.ListenForProximityEvent(proximityObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.GENDER, OnEntityGenderChanged)
 
 		-- TODO: This needs to run off of replicated data, not a command hook. The reasoning is that messages should work for NPCs as well.
 		-- Chat.receiveMessageHook:Connect(PlayerChatHandler)

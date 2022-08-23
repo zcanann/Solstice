@@ -1,37 +1,32 @@
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
+local LOCALIZATION_TABLE = require(script:GetCustomProperty("LocalizationTable"))
+local NAME = script:GetCustomProperty("Name")
+local TEXT_COLOR = script:GetCustomProperty("TextColor")
+local BACKGROUND_COLOR = script:GetCustomProperty("BackgroundColor")
 
--- Internal custom properties
-local propComponentRoot = script:GetCustomProperty("ComponentRoot"):WaitForObject()
-local propZoneTrigger = script:GetCustomProperty("ZoneTrigger"):WaitForObject()
-
--- User exposed properties
-local NAME = propComponentRoot:GetCustomProperty("Name")
-local TEXT_COLOR = propComponentRoot:GetCustomProperty("TextColor")
-local BACKGROUND_COLOR = propComponentRoot:GetCustomProperty("BackgroundColor")
-
--- Constants
 local localPlayer = Game.GetLocalPlayer()
-
 local locationProperties = {}
 locationProperties.name = NAME
+locationProperties.localizationTable = LOCALIZATION_TABLE
 locationProperties.textColor = TEXT_COLOR
 locationProperties.backgroundColor = BACKGROUND_COLOR
 
 function OnBeginOverlap(trigger, other)
     if other == localPlayer then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Zone.EVENT_ENTERED_ZONE, { trigger.id, locationProperties })
+        FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Zone.EVENT_ENTERED_ZONE, { trigger.id, locationProperties })
     end
 end
 
 function OnEndOverlap(trigger, other)
     if other == localPlayer then
-        Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Zone.EVENT_LEFT_ZONE, { trigger.id, locationProperties })
+        FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Zone.EVENT_LEFT_ZONE, { trigger.id, locationProperties })
     end
 end
 
-if propZoneTrigger:IsOverlapping(localPlayer) then
-    OnBeginOverlap(propZoneTrigger, localPlayer)
+if TRIGGER:IsOverlapping(localPlayer) then
+    OnBeginOverlap(TRIGGER, localPlayer)
 end
 
-propZoneTrigger.beginOverlapEvent:Connect(OnBeginOverlap)
-propZoneTrigger.endOverlapEvent:Connect(OnEndOverlap)
+TRIGGER.beginOverlapEvent:Connect(OnBeginOverlap)
+TRIGGER.endOverlapEvent:Connect(OnEndOverlap)

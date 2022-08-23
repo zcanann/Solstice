@@ -34,16 +34,19 @@ local overlappedLocations = { }
 
 function OnLocationEntered(locationId, properties)
     overlappedLocations[locationId] = properties
+    
+    local localizedText = Framework.Localization.BuildText(properties.localizationTable, properties.name).ToString()
+    
     -- Only show popup when receiving a new name
     if propPopupText.text ~= properties.name then
         propPopupPanel.visibility = Visibility.INHERIT
-        propPopupText.text = properties.name
+        propPopupText.text = localizedText
         propPopupText:SetColor(properties.textColor)
         propPopupBackground:SetColor(properties.backgroundColor)
         popupTime = time()
     end
     propStaticPanel.visibility = Visibility.INHERIT
-    propStaticText.text = properties.name
+    propStaticText.text = localizedText
     propStaticText:SetColor(properties.textColor)
 end
 
