@@ -642,5 +642,33 @@ Assets {
       VirtualFolderPath: "PropsStatic"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Resources"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Localization"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Localization"
+      VirtualFolderPath: "Items"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Localization"
+      VirtualFolderPath: "Resources"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Localization"
+      VirtualFolderPath: "HUD"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Localization"
+      VirtualFolderPath: "Zones"
+      PlatformAssetType: 31
+    }
   }
 }

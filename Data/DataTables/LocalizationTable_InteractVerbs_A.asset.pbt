@@ -1,9 +1,9 @@
 Assets {
-  Id: 14275434308708419065
-  Name: "FactionTable"
+  Id: 15192946055157967676
+  Name: "LocalizationTable_InteractVerbs_A"
   PlatformAssetType: 31
   SerializationVersion: 118
-  VirtualFolderPath: "Storage"
+  VirtualFolderPath: "Localization"
   DataTableAsset {
     HasKeyColumn: true
   }

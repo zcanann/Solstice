@@ -11,6 +11,16 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Resources"
+        AssetReference {
+          Id: 10113894749910826336
+        }
+      }
+      Overrides {
+        Name: "cs:ResourceKey"
+        String: ""
+      }
+      Overrides {
         Name: "cs:Name"
         String: ""
       }

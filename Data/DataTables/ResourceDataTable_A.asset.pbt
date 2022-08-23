@@ -1,9 +1,9 @@
 Assets {
-  Id: 5385200799694997555
-  Name: "ClassTable"
+  Id: 10113894749910826336
+  Name: "ResourceDataTable_A"
   PlatformAssetType: 31
   SerializationVersion: 118
-  VirtualFolderPath: "Storage"
+  VirtualFolderPath: "Resources"
   DataTableAsset {
     HasKeyColumn: true
   }

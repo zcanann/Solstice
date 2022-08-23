@@ -1,0 +1,4 @@
+"Key[String]","LocalizationKey[String]","ResourcePoolId[String]","MaxEngagements[Int]","RequiredItemType[String]","SkillId[String]","RequiredSkillLevel[Int]","Exp[Int]","BaseDuration[Float]","MinResources[Int]","MaxResources[Int]","RespawnTimeMin[Int]","RespawnTimeMax[Int]"
+"copper_vein","copper_vein","copper_vein","-1","pickaxe","mining","0","18","3.2","4","6","25","25"
+"birch_tree","birch_tree","birch_tree","-1","hatchet","woodcutting","0","18","3.2","4","4","25","25"
+"shrimp_school","shrimp_school","shrimp_school","-1","fishing_pole","fishing","0","18","3.2","4","6","25","25"
