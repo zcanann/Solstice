@@ -7,7 +7,7 @@ Assets {
       RootId: 1813318225365599821
       Objects {
         Id: 1813318225365599821
-        Name: "FrameworkNPC_FrailSkeleton"
+        Name: "FrameworkNPC_FrailSkeleton_A"
         Transform {
           Scale {
             X: 1
@@ -695,6 +695,7 @@ Assets {
         ParentId: 12903453405564532242
         ChildIds: 18334022984593864032
         ChildIds: 1351245798274982911
+        ChildIds: 9536314434776763986
         ChildIds: 8294959521378931395
         ChildIds: 7522517455030519986
         Collidable_v2 {
@@ -797,6 +798,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 13256092117753200766
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 9536314434776763986
+        Name: "Inspectable_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: 3.4150944e-06
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10136087043255323858
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13077436450551210500
           }
         }
         NetworkRelevanceDistance {
@@ -1158,7 +1197,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
-            String: "Frail Skeleton"
+            String: "frail_skeleton"
           }
           Overrides {
             Name: "cs:Race"

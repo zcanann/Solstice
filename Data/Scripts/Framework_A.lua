@@ -8,6 +8,7 @@ Framework.Dialog = require(script:GetCustomProperty("Dialog"))
 Framework.Events = require(script:GetCustomProperty("Events"))
 Framework.Math = require(script:GetCustomProperty("Math"))
 Framework.Networking = require(script:GetCustomProperty("Networking"))
+Framework.Localization = require(script:GetCustomProperty("Localization"))
 Framework.Logger = require(script:GetCustomProperty("Logger"))
 Framework.Quests = require(script:GetCustomProperty("Quests"))
 Framework.RuntimeDataStore = require(script:GetCustomProperty("RuntimeDataStore"))
@@ -25,11 +26,6 @@ Framework.Dump = function (object)
 end
 Framework.DumpStackTrace = function (object)
     Framework.Dump(CoreDebug.GetStackTrace())
-end
-
-Framework.GetEstimatedServerTime = function()
-    -- TODO: Add latency in ms to this
-    return time()
 end
 
 Framework.Await = function(predicate, callback, maxTicks)

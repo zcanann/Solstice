@@ -81,7 +81,7 @@ function RebuildModel(proximityObjectId)
     end
 
     -- TODO: Pick a default "invalid" player model
-    local playerModelAsset = Framework.Storage.Keys.CharacterCustomizations.FRAMEWORK_ASCENDANT_FEMININE_VARIANT_A
+    local playerModelAsset = Framework.Storage.Keys.CharacterCustomizations.Framework_ASCENDANT_FEMININE_VARIANT_A
     local playerModel = nil
     local modelId = customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] or 1
 

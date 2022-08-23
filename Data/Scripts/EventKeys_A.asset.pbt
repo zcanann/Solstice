@@ -65,6 +65,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:LocalizationEvents"
+        AssetReference {
+          Id: 17738163525933919121
+        }
+      }
+      Overrides {
         Name: "cs:NetworkingEvents"
         AssetReference {
           Id: 1725569184759797556

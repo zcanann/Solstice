@@ -7,7 +7,7 @@ Assets {
       RootId: 8547866490496526025
       Objects {
         Id: 8547866490496526025
-        Name: "FrameworkNPC_Lianna"
+        Name: "FrameworkNPC_Lianna_A"
         Transform {
           Scale {
             X: 1
@@ -2194,6 +2194,7 @@ Assets {
         ChildIds: 12028191627992259456
         ChildIds: 471115226380085440
         ChildIds: 5482518518106061320
+        ChildIds: 14250599322377129330
         ChildIds: 6774865516177297278
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -2348,6 +2349,44 @@ Assets {
         Script {
           ScriptAsset {
             Id: 13256092117753200766
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 14250599322377129330
+        Name: "Inspectable_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+            Yaw: -1.02452814e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3233035630719661930
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13077436450551210500
           }
         }
         NetworkRelevanceDistance {
@@ -2789,7 +2828,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
-            String: "Eldia"
+            String: "eldia"
           }
           Overrides {
             Name: "cs:Race"

@@ -10,17 +10,17 @@ Assets {
         Name: "Named Location"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.33333337
+            Y: 1.33333337
+            Z: 1.33333337
           }
         }
-        ParentId: 3765684858975843531
+        ParentId: 829938797616784092
         ChildIds: 11547596356089379165
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
-            String: "Castle Valgrind"
+            String: "Town Name"
           }
           Overrides {
             Name: "cs:TextColor"
@@ -125,12 +125,6 @@ Assets {
         ParentId: 11547596356089379165
         UnregisteredParameters {
           Overrides {
-            Name: "cs:API"
-            AssetReference {
-              Id: 3875830725285389341
-            }
-          }
-          Overrides {
             Name: "cs:ComponentRoot"
             ObjectReference {
               SubObjectId: 12084009895330886478
@@ -167,14 +161,17 @@ Assets {
         Name: "ZoneTrigger"
         Transform {
           Location {
+            X: -1466.89441
+            Y: 3595.98633
             Z: 170
           }
           Rotation {
+            Yaw: -45
           }
           Scale {
-            X: 30.9
-            Y: 47.3
-            Z: 2.99999976
+            X: 210.500031
+            Y: 181
+            Z: 3
           }
         }
         ParentId: 11547596356089379165

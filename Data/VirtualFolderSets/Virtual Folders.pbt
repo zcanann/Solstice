@@ -633,11 +633,6 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Schema"
-      PlatformAssetType: 3
-    }
-    Folders {
-      VirtualFolderPath: "Framework"
       VirtualFolderPath: "Environment_Generic"
       VirtualFolderPath: "PropsStatic"
       PlatformAssetType: 5
@@ -657,17 +652,28 @@ Assets {
     }
     Folders {
       VirtualFolderPath: "Localization"
-      VirtualFolderPath: "Resources"
-      PlatformAssetType: 31
-    }
-    Folders {
-      VirtualFolderPath: "Localization"
       VirtualFolderPath: "HUD"
       PlatformAssetType: 31
     }
     Folders {
       VirtualFolderPath: "Localization"
       VirtualFolderPath: "Zones"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Localization"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Framework"
+      VirtualFolderPath: "Storage"
+      VirtualFolderPath: "Schema"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Localization"
+      VirtualFolderPath: "Objects"
       PlatformAssetType: 31
     }
   }

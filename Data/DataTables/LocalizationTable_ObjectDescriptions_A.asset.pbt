@@ -1,10 +1,10 @@
 Assets {
-  Id: 14181648158741106409
-  Name: "LocalizationTable_ResourceNames_A"
+  Id: 15562987363623902694
+  Name: "LocalizationTable_ObjectDescriptions_A"
   PlatformAssetType: 31
   SerializationVersion: 118
   VirtualFolderPath: "Localization"
-  VirtualFolderPath: "Resources"
+  VirtualFolderPath: "Objects"
   DataTableAsset {
     HasKeyColumn: true
   }

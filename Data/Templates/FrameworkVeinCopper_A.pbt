@@ -2231,6 +2231,7 @@ Assets {
         ParentId: 3936958111886977860
         ChildIds: 9849424123738372637
         ChildIds: 17178747362843569272
+        ChildIds: 10997301459856873169
         ChildIds: 3247827138737285980
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -2364,6 +2365,43 @@ Assets {
         Script {
           ScriptAsset {
             Id: 13256092117753200766
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 10997301459856873169
+        Name: "Inspectable_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 14124416398978196639
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13077436450551210500
           }
         }
         NetworkRelevanceDistance {
@@ -2636,13 +2674,17 @@ Assets {
           }
           Overrides {
             Name: "cs:Name"
-            String: "Copper Ore"
+            String: "copper_vein"
           }
           Overrides {
             Name: "cs:ProximityNetworkedObject"
             ObjectReference {
               SubObjectId: 5282707310967958557
             }
+          }
+          Overrides {
+            Name: "cs:ResourceKey"
+            String: "copper_ore"
           }
         }
         Collidable_v2 {

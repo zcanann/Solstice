@@ -10,6 +10,12 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:LocalizationTable_InteractVerbs"
+        AssetReference {
+          Id: 15192946055157967676
+        }
+      }
     }
   }
   SerializationVersion: 118

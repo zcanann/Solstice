@@ -1,6 +1,6 @@
 Assets {
-  Id: 14198657364326515833
-  Name: "Mineable_C"
+  Id: 13077436450551210500
+  Name: "Inspectable_C"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

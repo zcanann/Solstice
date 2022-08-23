@@ -11,12 +11,22 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:InteractText"
-        String: ""
+        Name: "cs:LocalizationTable_InteractVerbs"
+        AssetReference {
+          Id: 15192946055157967676
+        }
       }
       Overrides {
-        Name: "cs:InteractingText"
-        String: ""
+        Name: "cs:LocalizationTable_ObjectDescriptions"
+        AssetReference {
+          Id: 15562987363623902694
+        }
+      }
+      Overrides {
+        Name: "cs:LocalizationTable_ObjectNames"
+        AssetReference {
+          Id: 14181648158741106409
+        }
       }
     }
   }

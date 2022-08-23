@@ -1,4 +1,4 @@
-local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+local Framework = require(script:GetCustomProperty("Framework"))
 
 local RADIUS_DECAL_TEMPLATE = script:GetCustomProperty("RadiusDecalTemplate")
 
@@ -6,9 +6,9 @@ local RADIUS_DECAL_TEMPLATE = script:GetCustomProperty("RadiusDecalTemplate")
 local selectionDecals = { }
 
 function OnEntityEnteredRange(proximityObjectId)
-    local objectInstance = FRAMEWORK.Networking.GetProximityInstance(proximityObjectId)
+    local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
 
-    if not FRAMEWORK.IsEntity(objectInstance) then
+    if not Framework.IsEntity(objectInstance) then
         return
     end
 
@@ -32,5 +32,5 @@ function OnEntityLeftRange(proximityObjectId)
     selectionDecals[proximityObjectId] = nil
 end
 
-FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnEntityEnteredRange)
-FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnEntityLeftRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnEntityEnteredRange)
+Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnEntityLeftRange)

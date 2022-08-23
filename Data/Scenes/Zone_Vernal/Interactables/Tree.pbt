@@ -155,15 +155,6 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 7601481592159493201
-      value {
-        Overrides {
-          Name: "cs:ResourceKey"
-          String: "copper_ore"
-        }
-      }
-    }
-    ParameterOverrideMap {
       key: 18361376657929626207
       value {
         Overrides {

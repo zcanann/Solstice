@@ -1,4 +1,4 @@
-local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+local Framework = require(script:GetCustomProperty("Framework"))
 
 local propBaseHasResources = script:GetCustomProperty("BaseHasResources"):WaitForObject()
 local propBaseFullDepletion = script:GetCustomProperty("BaseFullDepletion"):WaitForObject()
@@ -9,23 +9,23 @@ local propDepletableResource4 = script:GetCustomProperty("DepletableResource4"):
 local propDepletableResource5 = script:GetCustomProperty("DepletableResource5"):WaitForObject()
 local propDepletableResource6 = script:GetCustomProperty("DepletableResource6"):WaitForObject()
 
-local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
+local proximityNetworkedObject = Framework.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 
 function OnResourceAmountChanged(proximityDataId, data)
     local remainingResources = data and data.remainingResources or 0
 
-    propBaseFullDepletion.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources == 0)
-    propBaseHasResources.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources > 0)
+    propBaseFullDepletion.visibility = Framework.Utils.BoolToVisibility(remainingResources == 0)
+    propBaseHasResources.visibility = Framework.Utils.BoolToVisibility(remainingResources > 0)
 
-    propDepletableResource1.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources >= 1)
-    propDepletableResource2.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources >= 2)
-    propDepletableResource3.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources >= 3)
-    propDepletableResource4.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources >= 4)
-    propDepletableResource5.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources >= 5)
-    propDepletableResource6.visibility = FRAMEWORK.Utils.BoolToVisibility(remainingResources >= 6)
+    propDepletableResource1.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 1)
+    propDepletableResource2.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 2)
+    propDepletableResource3.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 3)
+    propDepletableResource4.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 4)
+    propDepletableResource5.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 5)
+    propDepletableResource6.visibility = Framework.Utils.BoolToVisibility(remainingResources >= 6)
 end
 
 -- Default to fully extracted until we get an update from the server
 OnResourceAmountChanged({ remainingResources = 0 })
 
-FRAMEWORK.Events.ListenForProximityEvent(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Resources.AMOUNT, OnResourceAmountChanged)
+Framework.Events.ListenForProximityEvent(proximityNetworkedObject.id, Framework.Networking.ProximityKeys.Resources.AMOUNT, OnResourceAmountChanged)

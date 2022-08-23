@@ -21,26 +21,10 @@ Assets {
         ChildIds: 12956713755740695849
         UnregisteredParameters {
           Overrides {
-            Name: "cs:Interactable"
-            Bool: true
-          }
-          Overrides {
-            Name: "cs:Name"
-            String: "School of Shrimp"
-          }
-          Overrides {
             Name: "cs:ProximityNetworkedObject"
             ObjectReference {
               SubObjectId: 12373192044606897631
             }
-          }
-          Overrides {
-            Name: "cs:Name:isrep"
-            Bool: false
-          }
-          Overrides {
-            Name: "cs:Name:ml"
-            Bool: false
           }
         }
         Collidable_v2 {
@@ -12653,6 +12637,7 @@ Assets {
         ParentId: 12956713755740695849
         ChildIds: 4717947140553083440
         ChildIds: 937474107790770280
+        ChildIds: 16436034994530152080
         ChildIds: 3789667057306159679
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -12754,6 +12739,43 @@ Assets {
         Script {
           ScriptAsset {
             Id: 13256092117753200766
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 16436034994530152080
+        Name: "Inspectable_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 17856525294886694713
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13077436450551210500
           }
         }
         NetworkRelevanceDistance {
@@ -13015,7 +13037,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Name"
-            String: "School of Shrimp"
+            String: "shrimp_school"
           }
         }
         Collidable_v2 {

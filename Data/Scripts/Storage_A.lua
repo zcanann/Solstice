@@ -68,6 +68,8 @@ function SetPlayerDataWrapper(player, playerData)
 	return false, errorMessage
 end
 
+--------------------------------------------------------------------------------
+
 StorageAPI.WipePlayerData = function (player)
 	if Environment.IsLocalGame() then
 		SetPlayerDataWrapper(player, {
@@ -89,6 +91,11 @@ end
 
 StorageAPI.GetActiveCharacterId = function (player)
 	return StorageAPI.GetGlobalKey(player, StorageAPI.KeyLastLoggedInCharacterId)
+end
+
+StorageAPI.GetActiveLanguage = function ()
+	-- TODO
+	return "en"
 end
 
 StorageAPI.IsValidCharacterId = function (player, characterId)
@@ -273,7 +280,8 @@ StorageAPI.WritePlayerSchemaData = function (player, ...)
 	Storage.SetPlayerData(player, playerData)
 end
 
-StorageAPI.CreateNewCharacterV2 = function (player)
+-- Unused? Forgot where I was going with this
+StorageAPI.CreateNewCharacterV2 = function (player, initialData)
 	-- What should this function look like?
 	-- Schema rights are pretty shit
 	-- Ideally we would actually just schemaAlloc a player, then call several write functions for subschema

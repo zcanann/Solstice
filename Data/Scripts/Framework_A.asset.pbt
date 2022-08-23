@@ -35,6 +35,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:Localization"
+        AssetReference {
+          Id: 6861943516668417454
+        }
+      }
+      Overrides {
         Name: "cs:Logger"
         AssetReference {
           Id: 4739618440715284858
@@ -91,4 +97,5 @@ Assets {
     }
   }
   SerializationVersion: 118
+  VirtualFolderPath: "Framework"
 }

@@ -95,8 +95,6 @@ function EnumArray(defaultArray)
     }
 end
 
---------------------------------------------------------
-
 StorageSchema.TaskProgressKeys = { }
 StorageSchema.TaskProgressKeys.CURRENT_PROGRESS = "current_progress"
 StorageSchema.TaskProgressKeys.REQUIRED_AMOUNT  = "required_progress"

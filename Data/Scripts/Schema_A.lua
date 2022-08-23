@@ -1,12 +1,11 @@
 -- This class defines operations that can be used to read/write data from a table while enforcing a specific schema
 
-local SchemaAPI = { }
-
-local SCHEMA_KEYS = require(script:GetCustomProperty("SchemaKeys"))
-
--- We can't access the full Framework, but we can expose the Framework.Dump() function for debugging
+-- Partial framework includes
 local Framework = { }
 Framework.Dump = require(script:GetCustomProperty("Dump")).Dump
+
+local SchemaAPI = { }
+local SCHEMA_KEYS = require(script:GetCustomProperty("SchemaKeys"))
 
 function GetOrAllocLeafRef(data, schema, ...)
 	if not schema or not schema[SCHEMA_KEYS.Type] then

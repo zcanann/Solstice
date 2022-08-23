@@ -944,6 +944,7 @@ Assets {
         ParentId: 14563214116528318820
         ChildIds: 3148064718191190559
         ChildIds: 14095468854766567585
+        ChildIds: 17487321999834967587
         ChildIds: 4467639949336316295
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -1067,6 +1068,45 @@ Assets {
         Script {
           ScriptAsset {
             Id: 13256092117753200766
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 17487321999834967587
+        Name: "Inspectable_C"
+        Transform {
+          Location {
+            X: 0.00155370124
+            Y: 0.00155370159
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11702653638974691971
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13077436450551210500
           }
         }
         NetworkRelevanceDistance {
@@ -1257,7 +1297,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Name"
-            String: "Birch Tree"
+            String: "birch_tree"
           }
         }
         Collidable_v2 {

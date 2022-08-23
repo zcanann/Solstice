@@ -6,20 +6,10 @@ local LOCALIZATION_TABLE_OBJECT_NAMES = require(script:GetCustomProperty("Locali
 local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
 local name = "unknown"
 
-function BeginFish()
-    FRAMEWORK.Print("Fishing...")
-    FRAMEWORK.Events.Broadcast.ClientToServerReliable(FRAMEWORK.Events.Keys.Engagement.EVENT_PLAYER_REQUESTS_ENGAGEMENT_PREFIX .. proximityNetworkedObject.id)
-end
-
-function StopFish()
-end
-
 function Interact()
-    local callback = function ()
-        BeginFish()
-    end
-
-    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_WALK_FOR_INTERACTION_PREFIX .. proximityNetworkedObject.id, { callback })
+    local descriptionText = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_OBJECT_DESCRIPTIONS, name, { })
+    FRAMEWORK.Print(descriptionText.ToString())
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_CLEAR_INTERACT_OPTIONS)
 end
 
 function ShowOption()
@@ -28,7 +18,7 @@ function ShowOption()
     end
 
     local nameText = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_OBJECT_NAMES, name, { })
-    local interactText = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_INTERACT_VERBS, "fish", { nameText })
+    local interactText = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_INTERACT_VERBS, "inspect", { nameText })
     FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { interactText.ToString(), callback })
 end
 

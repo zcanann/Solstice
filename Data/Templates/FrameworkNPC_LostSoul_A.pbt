@@ -7,7 +7,7 @@ Assets {
       RootId: 8689405352783667422
       Objects {
         Id: 8689405352783667422
-        Name: "FrameworkNPC_LostSoul"
+        Name: "FrameworkNPC_LostSoul_A"
         Transform {
           Scale {
             X: 1
@@ -537,6 +537,9 @@ Assets {
         Name: "head"
         Transform {
           Location {
+            X: 20.0654297
+            Y: -50
+            Z: 25.5852661
           }
           Rotation {
             Yaw: 6.83018789e-06
@@ -786,6 +789,7 @@ Assets {
         ParentId: 433943363553811557
         ChildIds: 7529187676509049817
         ChildIds: 4725770541899476279
+        ChildIds: 14237427566606567000
         ChildIds: 1722343459926899881
         ChildIds: 13439708009536381281
         Collidable_v2 {
@@ -888,6 +892,43 @@ Assets {
         Script {
           ScriptAsset {
             Id: 13256092117753200766
+          }
+        }
+        NetworkRelevanceDistance {
+          Value: "mc:eproxyrelevance:critical"
+        }
+        IsReplicationEnabledByDefault: true
+      }
+      Objects {
+        Id: 14237427566606567000
+        Name: "Inspectable_C"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6033240230953676626
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13077436450551210500
           }
         }
         NetworkRelevanceDistance {
@@ -1120,7 +1161,7 @@ Assets {
         UnregisteredParameters {
           Overrides {
             Name: "cs:Name"
-            String: "Lost Soul"
+            String: "lost_soul"
           }
           Overrides {
             Name: "cs:Race"

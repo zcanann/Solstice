@@ -1,11 +1,13 @@
 -- IMPORTANT: The location of this script in world space is used as the move position
 
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
-
+local LOCALIZATION_TABLE_INTERACT_VERBS = require(script:GetCustomProperty("LocalizationTable_InteractVerbs"))
+local LOCALIZATION_TABLE_OBJECT_DESCRIPTIONS = require(script:GetCustomProperty("LocalizationTable_ObjectDescriptions"))
+local LOCALIZATION_TABLE_OBJECT_NAMES = require(script:GetCustomProperty("LocalizationTable_ObjectNames"))
 local STOP_RADIUS = script:GetCustomProperty("StopRadius")
 
 local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
-local name = "Unknown"
+local name = "unknown"
 
 -- TODO: Take a source and StopRadius param, which
 function GetWalkableDestination()
@@ -14,7 +16,7 @@ end
 
 function Interact(callback)
     if proximityNetworkedObject then
-        Chat.LocalMessage("Walking to " .. name .. "...")
+        FRAMEWORK.Print("Walking to " .. name .. "...")
     end
     FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Movement.EVENT_REQUEST_MOVE_NEAR_LOCATION, { GetWalkableDestination(), STOP_RADIUS, callback })
 end
@@ -28,11 +30,13 @@ function ShowOption()
         Interact()
     end
 
-    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { "Walk to " .. name, callback })
+    local nameText = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_OBJECT_NAMES, name, { })
+    local interactText = FRAMEWORK.Localization.BuildText(LOCALIZATION_TABLE_INTERACT_VERBS, "walk", { nameText })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Interaction.EVENT_ADD_INTERACT_OPTION, { interactText.ToString(), callback })
 end
 
 function OnNameChanged(proximityDataId, newName)
-    name = newName or "Unknown"
+    name = newName or "unknown"
 end
 
 FRAMEWORK.Events.ListenForProximityEvent(proximityNetworkedObject.id, FRAMEWORK.Networking.ProximityKeys.Entity.NAME, OnNameChanged)

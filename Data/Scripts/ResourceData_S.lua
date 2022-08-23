@@ -1,5 +1,4 @@
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
-
 local NAME = script:GetCustomProperty("Name")
 
 local proximityNetworkedObject = FRAMEWORK.Utils.Hierarchy.WalkParentStackForCustomProperty(script, "ProximityNetworkedObject")
