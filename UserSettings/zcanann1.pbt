@@ -3700,6 +3700,11 @@ ObjectSettings {
     }
   }
   ObjectStates {
+    key: 16810963713302352713
+    value {
+    }
+  }
+  ObjectStates {
     key: 16815530929606460444
     value {
     }
@@ -4050,4 +4055,4 @@ ObjectSettings {
     }
   }
 }
-LastSavedScene: "Zone_Vernal"
+LastSavedScene: "Main"

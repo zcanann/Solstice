@@ -1,9 +1,9 @@
 Assets {
-  Id: 16364366005652708862
-  Name: "ItemTable"
+  Id: 12993534644155679804
+  Name: "LocalizationTable_OptionsMenu_A"
   PlatformAssetType: 31
   SerializationVersion: 118
-  VirtualFolderPath: "Items"
+  VirtualFolderPath: "HUD"
   DataTableAsset {
     HasKeyColumn: true
   }

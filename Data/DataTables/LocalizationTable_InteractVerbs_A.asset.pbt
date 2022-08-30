@@ -4,6 +4,7 @@ Assets {
   PlatformAssetType: 31
   SerializationVersion: 118
   VirtualFolderPath: "Localization"
+  VirtualFolderPath: "Objects"
   DataTableAsset {
     HasKeyColumn: true
   }

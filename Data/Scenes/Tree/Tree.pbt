@@ -6105,7 +6105,7 @@ Objects {
 }
 Objects {
   Id: 12099298330841461512
-  Name: "CharacterSelectUnitFrameController_C"
+  Name: "23"
   Transform {
     Location {
       X: 33325

@@ -1,9 +1,9 @@
 Assets {
-  Id: 12436008423460161727
-  Name: "LocalizationTable_Races_A"
+  Id: 16364366005652708862
+  Name: "ItemTable_A"
   PlatformAssetType: 31
   SerializationVersion: 118
-  VirtualFolderPath: "Localization"
+  VirtualFolderPath: "Inventory"
   DataTableAsset {
     HasKeyColumn: true
   }

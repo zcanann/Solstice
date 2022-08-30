@@ -1,6 +1,6 @@
 Assets {
   Id: 16061080343895741245
-  Name: "FrameworkAscendentMasculineVariantB"
+  Name: "FrameworkAscendantMasculineVariantB"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

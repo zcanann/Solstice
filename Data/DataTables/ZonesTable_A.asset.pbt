@@ -1,9 +1,9 @@
 Assets {
-  Id: 6075858859204485552
-  Name: "LocalizationTable_Factions_A"
+  Id: 4268167177031945256
+  Name: "ZonesTable_A"
   PlatformAssetType: 31
   SerializationVersion: 118
-  VirtualFolderPath: "Localization"
+  VirtualFolderPath: "Zones"
   DataTableAsset {
     HasKeyColumn: true
   }

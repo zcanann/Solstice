@@ -1,12 +1,11 @@
 Assets {
-  Id: 10888900338405074968
-  Name: "GenderTable_A"
+  Id: 13394283143404681574
+  Name: "SkinColorsTable_A"
   PlatformAssetType: 31
   SerializationVersion: 118
   VirtualFolderPath: "Storage"
   VirtualFolderPath: "Schema"
   VirtualFolderPath: "Character"
   DataTableAsset {
-    HasKeyColumn: true
   }
 }

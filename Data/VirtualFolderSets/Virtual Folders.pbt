@@ -570,10 +570,6 @@ Assets {
       PlatformAssetType: 33
     }
     Folders {
-      VirtualFolderPath: "Items"
-      PlatformAssetType: 31
-    }
-    Folders {
       VirtualFolderPath: "UI"
       VirtualFolderPath: "HUD"
       PlatformAssetType: 5
@@ -651,16 +647,6 @@ Assets {
       PlatformAssetType: 31
     }
     Folders {
-      VirtualFolderPath: "Localization"
-      VirtualFolderPath: "HUD"
-      PlatformAssetType: 31
-    }
-    Folders {
-      VirtualFolderPath: "Localization"
-      VirtualFolderPath: "Zones"
-      PlatformAssetType: 31
-    }
-    Folders {
       VirtualFolderPath: "Framework"
       VirtualFolderPath: "Localization"
       PlatformAssetType: 3
@@ -674,6 +660,35 @@ Assets {
     Folders {
       VirtualFolderPath: "Localization"
       VirtualFolderPath: "Objects"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Storage"
+      VirtualFolderPath: "Schema"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "HUD"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Zones"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Inventory"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Storage"
+      VirtualFolderPath: "Schema"
+      VirtualFolderPath: "Inventory"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Storage"
+      VirtualFolderPath: "Schema"
+      VirtualFolderPath: "Character"
       PlatformAssetType: 31
     }
   }

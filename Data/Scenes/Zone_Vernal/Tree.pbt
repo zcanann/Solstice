@@ -19,6 +19,7 @@ Objects {
   ChildIds: 13113358172542972096
   ChildIds: 9292959906759754007
   ChildIds: 16810963713302352713
+  ChildIds: 11385036079578546668
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -31,6 +32,41 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 11385036079578546668
+  Name: "Group"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Folder {
+    IsGroup: true
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
@@ -133,6 +169,17 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   TemplateInstance {
+    ParameterOverrideMap {
+      key: 9491731780685343333
+      value {
+        Overrides {
+          Name: "Position"
+          Vector {
+            Z: -100
+          }
+        }
+      }
+    }
     ParameterOverrideMap {
       key: 9869906567946650923
       value {
