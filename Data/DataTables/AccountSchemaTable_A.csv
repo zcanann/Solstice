@@ -1,2 +1,2 @@
-"MigrationVersion[Int]","CharactersArray[Asset Reference]","DeletedCharactersArray[Asset Reference]","LastLoggedInCharacterId[String]","Locale[String]"
-"0","B9A2C105D3603D55","B9A2C105D3603D55","","en"
+"version[Int]","lastLoggedInCharacterId[String]","characters_ArrayMax3[Asset Reference]","deletedCharacters_ArrayMax2[Asset Reference]","accountOptions[Asset Reference]","Achievements[Asset Reference]"
+"0","","B9A2C105D3603D55","B9A2C105D3603D55","A10969E2F0D0740D","17379B5923EF6611"

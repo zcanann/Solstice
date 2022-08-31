@@ -8,7 +8,8 @@ Framework.Storage = require(script:GetCustomProperty("Storage"))
 local LocalizationAPI = { }
 
 LocalizationAPI.BuildText = function (localizationTable, key, replacementParams)
-	local activeLanguage = Framework.Storage.GetActiveLanguage()
+	-- TODO: STORAGE REFACTOR
+	local activeLanguage = "en" -- Framework.Storage.GetActiveLanguage()
 	
     local localizedText = { }
     localizedText.ToString = function()

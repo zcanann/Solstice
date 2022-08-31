@@ -9,18 +9,27 @@ Skills.IsValidSkill = function (skillId)
 	if not Skills.ExpTable.IsValidSkill(skillId) then
 		return false
 	end
-
-    if Storage.Keys.Skills.SkillIdMap[skillId] then
-        return true
-    end
+	
+	-- TODO: STORAGE REFACTOR
+    -- if Storage.Keys.Skills.SkillIdMap[skillId] then
+    --     return true
+    -- end
 
     return false
 end
 
 Skills.GetSkillKeys = function (skillId)
-	assert(Skills.IsValidSkill(skillId), "Invalid skill provided " .. skillId)
+	-- TODO: STORAGE REFACTOR
+	-- assert(Skills.IsValidSkill(skillId), "Invalid skill provided " .. skillId)
 
-	return Storage.Keys.Skills.SkillIdMap[skillId]
+	-- TODO: STORAGE REFACTOR
+	-- Storage.Keys.Skills.SkillIdMap[skillId]
+	return
+	{
+		EFFECTIVE_LEVEL = 0,
+		LEVEL = 0,
+		EXP = 0,
+	}
 end
 
 -- [Resource] Effective skill level

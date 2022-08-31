@@ -4,7 +4,6 @@ Assets {
   PlatformAssetType: 31
   SerializationVersion: 118
   VirtualFolderPath: "Storage"
-  VirtualFolderPath: "Schema"
   DataTableAsset {
   }
 }

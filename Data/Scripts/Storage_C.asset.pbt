@@ -10,6 +10,12 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:CharacterStorage_S"
+        AssetReference {
+          Id: 18213606394671849019
+        }
+      }
     }
   }
   SerializationVersion: 118

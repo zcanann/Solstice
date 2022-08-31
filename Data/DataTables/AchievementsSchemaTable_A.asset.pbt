@@ -1,10 +1,10 @@
 Assets {
-  Id: 13394283143404681574
-  Name: "SkinColorsTable_A"
+  Id: 1672976593748715025
+  Name: "AchievementsSchemaTable_A"
   PlatformAssetType: 31
   SerializationVersion: 118
   VirtualFolderPath: "Storage"
-  VirtualFolderPath: "Character"
+  VirtualFolderPath: "Quests"
   DataTableAsset {
   }
 }

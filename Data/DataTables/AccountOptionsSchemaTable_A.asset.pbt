@@ -1,10 +1,9 @@
 Assets {
-  Id: 13394283143404681574
-  Name: "SkinColorsTable_A"
+  Id: 11603922338320512013
+  Name: "AccountOptionsSchemaTable_A"
   PlatformAssetType: 31
   SerializationVersion: 118
   VirtualFolderPath: "Storage"
-  VirtualFolderPath: "Character"
   DataTableAsset {
   }
 }

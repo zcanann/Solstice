@@ -2420,6 +2420,7 @@ Objects {
     }
   }
   ParentId: 1256500426707964891
+  ChildIds: 13352567411837319766
   ChildIds: 16831574936188867883
   ChildIds: 2204542871266170372
   Collidable_v2 {
@@ -2913,6 +2914,108 @@ Objects {
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
+  }
+  IsReplicationEnabledByDefault: true
+}
+Objects {
+  Id: 13352567411837319766
+  Name: "UI Text Entry Box"
+  Transform {
+    Location {
+      X: -1722.7406
+      Y: 186.217285
+      Z: -300
+    }
+    Rotation {
+      Yaw: 125.000038
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 12446159501759509720
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    IsHittable: true
+    EditableText {
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Font {
+        Id: 841534158063459245
+      }
+      OutlineColor {
+        A: 1
+      }
+      Size: 20
+      BackgroundColor {
+        A: 1
+      }
+      HoveredColor {
+        R: 0.010329823
+        G: 0.0129830325
+        B: 0.0202885624
+        A: 1
+      }
+      FocusedColor {
+        R: 0.010329823
+        G: 0.0129830325
+        B: 0.0202885624
+        A: 1
+      }
+      DisabledColor {
+        R: 0.0193823613
+        G: 0.0221738853
+        B: 0.0318960324
+        A: 1
+      }
+      SelectionHighlightColor {
+        R: 0.00856812578
+        G: 0.361306787
+        B: 0.799102724
+        A: 1
+      }
+      IsEnabled: true
+      Brush {
+        Id: 841534158063459245
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
   }
   IsReplicationEnabledByDefault: true
 }

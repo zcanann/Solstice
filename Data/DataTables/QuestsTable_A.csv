@@ -1,0 +1,2 @@
+"Key[Int]","DescriptionInternal[String]","IsAcceptable[Bool]","IsRepeatable[Bool]","IsDaily[Bool]","IsWeekly[Bool]","NameTableRowRef[Asset Reference]","DescriptionTableRowRef[Asset Reference]","PrereqTableRowRef[Asset Reference]","Objective1TableRowRef[Asset Reference]"
+"1","Kill souls and skeletons","False","False","False","False","0BADBADBADBADBAD","0BADBADBADBADBAD","0BADBADBADBADBAD","1EFCD2FCB1FECA38"

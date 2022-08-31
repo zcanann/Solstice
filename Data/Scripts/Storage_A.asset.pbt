@@ -5,27 +5,21 @@ Assets {
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Schema"
-        AssetReference {
-          Id: 5433941360175035573
-        }
-      }
-      Overrides {
-        Name: "cs:StorageSchema"
-        AssetReference {
-          Id: 17209841294078955987
-        }
-      }
-      Overrides {
-        Name: "cs:StorageKeys"
-        AssetReference {
-          Id: 12431212582313590712
-        }
-      }
-      Overrides {
         Name: "cs:Dump"
         AssetReference {
           Id: 10375159350874936932
+        }
+      }
+      Overrides {
+        Name: "cs:AccountSchemaTable"
+        AssetReference {
+          Id: 5927156727079214317
+        }
+      }
+      Overrides {
+        Name: "cs:TableUtils"
+        AssetReference {
+          Id: 11279245430205585369
         }
       }
     }

@@ -10,6 +10,12 @@ Assets {
           Id: 14480759715348141780
         }
       }
+      Overrides {
+        Name: "cs:SchemaTable"
+        AssetReference {
+          Id: 5927156727079214317
+        }
+      }
     }
   }
   SerializationVersion: 118

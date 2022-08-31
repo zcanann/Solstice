@@ -1,10 +1,10 @@
 Assets {
-  Id: 13394283143404681574
-  Name: "SkinColorsTable_A"
+  Id: 15463475998768572664
+  Name: "BankIconsSchemaTable_A"
   PlatformAssetType: 31
   SerializationVersion: 118
   VirtualFolderPath: "Storage"
-  VirtualFolderPath: "Character"
+  VirtualFolderPath: "Inventory"
   DataTableAsset {
   }
 }

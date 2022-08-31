@@ -1,12 +1,45 @@
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+local SCHEMA_TABLE = require(script:GetCustomProperty("SchemaTable"))
 
+function ReadPlayerData(player)
+	local playerData = Storage.GetPlayerData(player) or { }
+	
+	return playerData
+end
+
+function WritePlayerData(player, playerData)
+	if not playerData then
+		return
+	end
+
+	local retryCount = 3
+	local resultCode = nil
+	local errorMessage = nil
+
+	-- Retry a few times before giving up. TODO: Maybe offloaded to a reliable queue with a callback.
+	repeat
+		resultCode, errorMessage = Storage.SetPlayerData(player, playerData)
+		if resultCode == StorageResultCode.SUCCESS then
+			StorageAPI.ReplicateReadOnlyData(player)
+			return true, errorMessage
+		end
+		retryCount = retryCount - 1
+	until retryCount <= 0
+
+	error(errorMessage)
+	return false, errorMessage
+end
+
+function ReplicateReadOnlyData(player)
+	local playerData = ReadPlayerData(player)
+
+	-- Replicate all stored data to the client. If this has perf issues in the future, we may need to limit what we send here.
+	player:SetPrivateNetworkedData("storage", playerData)
+end
+
+--[[
 function CreateTestingCharacter(player)
-	--[[
-	Framework.Storage.WritePlayerSchemaData(player, Framework.Storage.StorageSchema,
-	{
-		Framework.Storage.StorageSchema.RootKeys.CHARACTERS, 
-	})
-	--]]
+
     local initialData = {
         [ Framework.Storage.Keys.Characters.NAME ] = "Lothlorian",
         [ Framework.Storage.Keys.Characters.RACE ] = Framework.Storage.Keys.Races.RACES[math.random(#Framework.Storage.Keys.Races.RACES)],
@@ -66,3 +99,4 @@ function OnPlayerJoined(player)
 end
 
 Game.playerJoinedEvent:Connect(OnPlayerJoined)
+--]]

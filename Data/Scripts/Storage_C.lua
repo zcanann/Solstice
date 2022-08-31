@@ -1,18 +1,12 @@
 local Framework = require(script:GetCustomProperty("Framework"))
 
 local localPlayer = Game.GetLocalPlayer()
-local characterDataLoaded = false
-local globalDataLoaded = false
 local dataLoadedEventSent = false
 
+-- All player storage data is replicated to the client such that the data can be retrieved easily for client-side use
+-- This only shares the data with the user that owns it. If data is needed to be made available to nearby players, it must be proximity networked
 function OnPrivateNetworkedDataChanged(player, key)
-    if key == Framework.Storage.CharacterDataKey then
-        characterDataLoaded = true
-	elseif key == Framework.Storage.GlobalDataKey then
-		globalDataLoaded = true
-    end
-
-	if not dataLoadedEventSent and characterDataLoaded and globalDataLoaded then
+	if key == "storage" and not dataLoadedEventSent then
         dataLoadedEventSent = true
 		Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Storage.EVENT_CLIENT_INITIAL_PLAYER_DATA_LOADED)
 	end

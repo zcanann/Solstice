@@ -652,19 +652,8 @@ Assets {
       PlatformAssetType: 3
     }
     Folders {
-      VirtualFolderPath: "Framework"
-      VirtualFolderPath: "Storage"
-      VirtualFolderPath: "Schema"
-      PlatformAssetType: 3
-    }
-    Folders {
       VirtualFolderPath: "Localization"
       VirtualFolderPath: "Objects"
-      PlatformAssetType: 31
-    }
-    Folders {
-      VirtualFolderPath: "Storage"
-      VirtualFolderPath: "Schema"
       PlatformAssetType: 31
     }
     Folders {
@@ -680,14 +669,31 @@ Assets {
       PlatformAssetType: 31
     }
     Folders {
+      VirtualFolderPath: "Framework"
       VirtualFolderPath: "Storage"
-      VirtualFolderPath: "Schema"
+      VirtualFolderPath: "Indexers"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Quests"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Achievements"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Storage"
+      VirtualFolderPath: "Quests"
+      PlatformAssetType: 31
+    }
+    Folders {
+      VirtualFolderPath: "Storage"
       VirtualFolderPath: "Inventory"
       PlatformAssetType: 31
     }
     Folders {
       VirtualFolderPath: "Storage"
-      VirtualFolderPath: "Schema"
       VirtualFolderPath: "Character"
       PlatformAssetType: 31
     }

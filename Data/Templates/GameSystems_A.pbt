@@ -2554,7 +2554,7 @@ Assets {
       }
       Objects {
         Id: 16852030386545078177
-        Name: "Database_C"
+        Name: "Storage_C"
         Transform {
           Location {
           }
@@ -2627,7 +2627,7 @@ Assets {
       }
       Objects {
         Id: 18320782319034405437
-        Name: "Database_S"
+        Name: "Storage_S"
         Transform {
           Location {
           }

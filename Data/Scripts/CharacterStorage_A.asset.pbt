@@ -1,15 +1,9 @@
 Assets {
-  Id: 5433941360175035573
-  Name: "Schema_A"
+  Id: 15117509402381939450
+  Name: "CharacterStorage_A"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
-      Overrides {
-        Name: "cs:SchemaKeys"
-        AssetReference {
-          Id: 13318296234228990590
-        }
-      }
       Overrides {
         Name: "cs:Dump"
         AssetReference {
@@ -21,5 +15,4 @@ Assets {
   SerializationVersion: 118
   VirtualFolderPath: "Framework"
   VirtualFolderPath: "Storage"
-  VirtualFolderPath: "Schema"
 }
