@@ -22,6 +22,12 @@ Assets {
           Id: 11279245430205585369
         }
       }
+      Overrides {
+        Name: "cs:Strings"
+        AssetReference {
+          Id: 1312537665072127050
+        }
+      }
     }
   }
   SerializationVersion: 118
