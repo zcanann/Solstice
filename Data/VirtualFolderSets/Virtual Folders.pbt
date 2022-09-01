@@ -697,5 +697,10 @@ Assets {
       VirtualFolderPath: "Character"
       PlatformAssetType: 31
     }
+    Folders {
+      VirtualFolderPath: "Storage"
+      VirtualFolderPath: "Skills"
+      PlatformAssetType: 31
+    }
   }
 }

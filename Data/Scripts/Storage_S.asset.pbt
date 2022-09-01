@@ -11,9 +11,15 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:SchemaTable"
+        Name: "cs:AccountSchemaTable"
         AssetReference {
           Id: 5927156727079214317
+        }
+      }
+      Overrides {
+        Name: "cs:CharacterSchemaTable"
+        AssetReference {
+          Id: 13376466074009091413
         }
       }
     }

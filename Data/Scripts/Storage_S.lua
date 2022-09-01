@@ -1,14 +1,21 @@
 local FRAMEWORK = require(script:GetCustomProperty("Framework"))
-local SCHEMA_TABLE = require(script:GetCustomProperty("SchemaTable"))
+local ACCOUNT_SCHEMA_TABLE = require(script:GetCustomProperty("AccountSchemaTable"))
+local CHARACTER_SCHEMA_TABLE = require(script:GetCustomProperty("CharacterSchemaTable"))
 
 function ReadPlayerData(player)
 	local playerData = Storage.GetPlayerData(player) or { }
+	
+	-- Initialize account data to the schema default if none exists
+	if FRAMEWORK.Utils.Table.Count(playerData) <= 0 then
+		playerData = FRAMEWORK.Storage.LoadSchema(ACCOUNT_SCHEMA_TABLE)
+	end
 	
 	return playerData
 end
 
 function WritePlayerData(player, playerData)
 	if not playerData then
+		error("No data provided")
 		return
 	end
 
@@ -20,7 +27,7 @@ function WritePlayerData(player, playerData)
 	repeat
 		resultCode, errorMessage = Storage.SetPlayerData(player, playerData)
 		if resultCode == StorageResultCode.SUCCESS then
-			StorageAPI.ReplicateReadOnlyData(player)
+			ReplicateReadOnlyData(player)
 			return true, errorMessage
 		end
 		retryCount = retryCount - 1
@@ -30,12 +37,28 @@ function WritePlayerData(player, playerData)
 	return false, errorMessage
 end
 
+function DeleteAllPlayerData(player)
+	WritePlayerData(player, { })
+end
+
 function ReplicateReadOnlyData(player)
 	local playerData = ReadPlayerData(player)
 
 	-- Replicate all stored data to the client. If this has perf issues in the future, we may need to limit what we send here.
-	player:SetPrivateNetworkedData("storage", playerData)
+	player:SetPrivateNetworkedData(FRAMEWORK.Storage.ReplicationKey, playerData)
 end
+
+function OnPlayerJoined(player)
+	-- Debugging
+	DeleteAllPlayerData(player)
+	
+	local playerData = ReadPlayerData(player)
+	
+	-- Debugging
+	FRAMEWORK.Dump(FRAMEWORK.Storage.LoadSchema(CHARACTER_SCHEMA_TABLE))
+end
+
+Game.playerJoinedEvent:Connect(OnPlayerJoined)
 
 --[[
 function CreateTestingCharacter(player)

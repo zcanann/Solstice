@@ -1,4 +1,4 @@
-"Key[Int]","EventVerb[String]","EventParam[String]","Count[Int]"
+"key[Int]","eventVerb[String]","eventParam[String]","count[Int]"
 "1","kill","lost_soul","15"
 "2","smelt","copper_bar","1"
 "3","have_item","copper_ore","3"

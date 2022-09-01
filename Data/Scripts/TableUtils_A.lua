@@ -134,30 +134,8 @@ local function TableDiffKeys(diff)
 	return diffKeys
 end
 
-function Islist(t)
-	local itemcount = 0
-	local last_type = nil
-	for k,v in pairs(t) do
-		itemcount = itemcount + 1
-		if last_type == nil then
-			last_type = type(v)
-		end
-
-		if type(v) ~= last_type or (type(v) ~= "string" and type(v) ~= "number" and type(v) ~= "boolean") then
-			return false
-		end
-	
-		last_type = type(v)
-	end
-
-	if itemcount ~= #t then
-		return false
-	end
-
-	return true
-end
-
 -- Taken from https://github.com/gvx/Smallfolk/blob/master/smallfolk.lua
+-- Modified to remove reference memoization (which produces invalid jsons), and added support for arrays
 local M = {}
 local expect_object, dump_object
 local error, tostring, pairs, type, floor, huge, concat = error, tostring, pairs, type, math.floor, math.huge, table.concat
@@ -178,15 +156,16 @@ function dump_type:number(nmemo, memo, acc)
 end
 
 function dump_type:table(nmemo, memo, acc)
-	-- Zac: Disabled reference memoization. This produces invalid jsons during serialization.
-	-- if memo[self] then
-		-- acc[#acc + 1] = '@'
-		-- acc[#acc + 1] = tostring(memo[self])
-		-- return nmemo
-	-- end
+	local isArray = IsArray(self)
 	nmemo = nmemo + 1
 	memo[self] = nmemo
-	acc[#acc + 1] = '{'
+	
+	if isArray then
+		acc[#acc + 1] = '['
+	else
+		acc[#acc + 1] = '{'
+	end
+	
 	local nself = #self
 	for i = 1, nself do -- don't use ipairs here, we need the gaps
 		nmemo = dump_object(self[i], nmemo, memo, acc)
@@ -200,7 +179,13 @@ function dump_type:table(nmemo, memo, acc)
 			acc[#acc + 1] = ','
 		end
 	end
-	acc[#acc] = acc[#acc] == '{' and '{}' or '}'
+	
+	if isArray then
+		acc[#acc] = acc[#acc] == '[' and '[]' or ']'
+	else
+		acc[#acc] = acc[#acc] == '{' and '{}' or '}'
+	end
+	
 	return nmemo
 end
 
@@ -336,6 +321,32 @@ local expect_object_head = {
 			end
 		end
 	end,
+	['['] = function(string, i, tables)
+		local nt, k, v = {}
+		local j = 1
+		tables[#tables + 1] = nt
+		if string:sub(i, i) == ']' then
+			return nt, i + 1
+		end
+		while true do
+			k, i = expect_object(string, i, tables)
+			if string:sub(i, i) == ':' then
+				v, i = expect_object(string, i + 1, tables)
+				nt[k] = v
+			else
+				nt[j] = k
+				j = j + 1
+			end
+			local head = string:sub(i, i)
+			if head == ',' then
+				i = i + 1
+			elseif head == ']' then
+				return nt, i + 1
+			else
+				invalid(i)
+			end
+		end
+	end,
 	['@'] = function(string, i, tables)
 		local match = string:match('^%d+', i)
 		local ref = tonumber(match)
@@ -438,6 +449,46 @@ local function RemoveNils(inTable)
 
 	return outTable
 end
+
+function Islist(t)
+	local itemcount = 0
+	local last_type = nil
+	for k,v in pairs(t) do
+		itemcount = itemcount + 1
+		if last_type == nil then
+			last_type = type(v)
+		end
+
+		if type(v) ~= last_type or (type(v) ~= "string" and type(v) ~= "number" and type(v) ~= "boolean") then
+			return false
+		end
+	
+		last_type = type(v)
+	end
+
+	if itemcount ~= #t then
+		return false
+	end
+
+	return true
+end
+
+-- Returns true if all keys are ascending ints
+function IsArray(table)
+	if Count(table) <= 0 then
+		return false
+	end
+    local previous = 0
+    for k, v in pairs(table) do
+        if type(k) == "number" and k == previous + 1 then
+            previous = k
+        else
+            return false
+        end
+    end
+
+    return true
+end 
 
 -------------------------------------------
 
