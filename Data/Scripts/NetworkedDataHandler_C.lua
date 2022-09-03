@@ -14,78 +14,69 @@ local networkedDataCache = { }
 local localPlayer = Game.GetLocalPlayer()
 
 function OnPrivateNetworkedDataChanged(player, key)
-	if true then return end
     -- Perform a diff on the new data vs the previous. We can then figure out which top-level subkeys changed, and fire events for them.
     local data = player:GetPrivateNetworkedData(key)
     local diff = FRAMEWORK.Utils.Table.Diff(networkedDataCache[key], data)
-    local diffSubKeys = FRAMEWORK.Utils.Table.GetDiffKeys(diff)
 
     networkedDataCache[key] = data;
 
-    FRAMEWORK.Dump(diffSubKeys)
+    FRAMEWORK.Dump(diff)
+    
+    if key == FRAMEWORK.Storage.ReplicationKey then
+    	-- Handle the case where the networked data is storage data
+    	SendStorageDataEvents(data, diff)
+    else
+    	-- Handle the case where the networked data is runtime data (proximity data)
+        SendProximityDataEvents(key, data, diff)
+    end
+end
 
-    for subKey, _ in pairs(diffSubKeys) do
+function SendStorageDataEvents(data, diff)
+    local diffKeys = FRAMEWORK.Utils.Table.GetDiffKeys(diff)
+    
+    for diffKey, _ in pairs(diffKeys) do
+    	print(diffKey)
         -- Only send data for this particular subkey
+        --[[
         local subData = nil
         if data then
             subData = data[subKey]
         end
-
-        -- In this FRAMEWORK, it is assumed that only 2 types of data are networked over private player data: account and proximity data
-        if key == FRAMEWORK.Storage.ReplicationKey then
-            -- Broadcast character data changes
-            -- TODO: This seems to fire too often for too many keys. Diff problem?
-            if subData then
-                for characterDataKey, _ in pairs(subData) do
-                    FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
-                end
-            end
-        elseif key == FRAMEWORK.Storage.GlobalDataKey then
-            -- Nothing
-        else
-            SendProximityDataEvents(key, subKey, subData)
-        end
+	    
+		if subData then
+		    for characterDataKey, _ in pairs(subData) do
+		        FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
+		    end
+		end
+		--]]
     end
 end
 
-function SendStorageDataEvents()
-
-end
-
-function SendProximityDataEvents(proximityObjectId, dataKey, data)
+function SendProximityDataEvents(proximityObjectId, data, diff)
+    local diffKeys = FRAMEWORK.Utils.Table.GetDiffKeys(diff)
     local keyIsObject = string.match(proximityObjectId, '.+:.+') ~= nil
     local keyAsPlayer = Game.FindPlayer(proximityObjectId)
-
+    
     if not keyIsObject and not keyAsPlayer then
-        FRAMEWORK.Warn("Not a proxy object: " .. proximityObjectId)
+        FRAMEWORK.Warn("Not a proximity object: " .. proximityObjectId)
         FRAMEWORK.DumpStackTrace()
         return
     end
-
-    --[[
-    if not keyIsObject and retryCount < 256 then
-        -- local retryCountMax = 1024
-        if keyAsPlayer == nil then
-            Task.Spawn(function ()
-                SendProximityDataEvents(proximityObjectId, dataKey, data, retryCount + 1)
-            end, 0.1)
-            return
-        end
-    end
-    --]]
-
+	
     -- Note: These events are intentionally not reliable because there is no guarantee that a listener will be created for all networked pieces of data
     -- Also, the order of events is deliberately ENTERED/UPDATE/LEFT. Processing ENTERED events to set up listeners and immediately receive updates.
-
+    
     -- Broadcast entered proximity networking range events
     if data ~= nil and not proximityObjectIdsInRange[proximityObjectId] then
         proximityObjectIdsInRange[proximityObjectId] = true
         FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, { proximityObjectId })
     end
-
-    -- Forward the object data changed event
-    FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. dataKey, { proximityObjectId, data })
-
+    
+    for diffKey, _ in pairs(diffKeys) do
+	    -- Forward the object data changed event
+	    FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_NETWORKED_KEY_CHANGED_PREFIX .. proximityObjectId .. diffKey, { proximityObjectId, data and data[diffKey] })
+    end
+	
     -- Broadcast left proximity networking range events
     if data == nil and proximityObjectIdsInRange[proximityObjectId] then
         FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, { proximityObjectId })
