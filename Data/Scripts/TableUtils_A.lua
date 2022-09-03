@@ -474,12 +474,12 @@ function Islist(t)
 end
 
 -- Returns true if all keys are ascending ints
-function IsArray(table)
-	if Count(table) <= 0 then
+function IsArray(inTable)
+	if Count(inTable) <= 0 then
 		return false
 	end
     local previous = 0
-    for k, v in pairs(table) do
+    for k, v in pairs(inTable) do
         if type(k) == "number" and k == previous + 1 then
             previous = k
         else
@@ -490,8 +490,31 @@ function IsArray(table)
     return true
 end 
 
-function IsEmpty(table)
-	return Count(table) <= 0
+function IsEmpty(inTable)
+	return Count(inTable) <= 0
+end
+
+function Clone(inTable, copiesInternal)
+	copiesInternal = copiesInternal or { }
+    local origType = type(inTable)
+    local copy = nil
+    
+    if origType == 'table' then
+        if copiesInternal[inTable] then
+            copy = copiesInternal[inTable]
+        else
+            copy = { }
+            copiesInternal[inTable] = copy
+            for origKey, origValue in next, inTable, nil do
+                copy[Clone(origKey, copiesInternal)] = Clone(origValue, copiesInternal)
+            end
+            setmetatable(copy, Clone(getmetatable(inTable), copiesInternal))
+        end
+    else -- number, string, boolean, etc
+        copy = inTable
+    end
+    
+    return copy
 end
 
 -------------------------------------------
@@ -506,5 +529,6 @@ TableUtils.Count = Count
 TableUtils.IsEmpty = IsEmpty
 TableUtils.Contains = Contains
 TableUtils.RemoveNils = RemoveNils
+TableUtils.Clone = Clone
 
 return TableUtils
