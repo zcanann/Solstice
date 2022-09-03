@@ -1,6 +1,6 @@
 Assets {
   Id: 5064140465519957364
-  Name: "Storage_S"
+  Name: "StorageInitializer_S"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

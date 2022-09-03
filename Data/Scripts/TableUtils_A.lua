@@ -490,6 +490,10 @@ function IsArray(table)
     return true
 end 
 
+function IsEmpty(table)
+	return Count(table) <= 0
+end
+
 -------------------------------------------
 
 TableUtils.CondenseStringConstants = TableCondenseStringConstants
@@ -499,6 +503,7 @@ TableUtils.Diff = TableDiff
 TableUtils.GetDiffKeys = TableDiffKeys
 TableUtils.Patch = TablePatch
 TableUtils.Count = Count
+TableUtils.IsEmpty = IsEmpty
 TableUtils.Contains = Contains
 TableUtils.RemoveNils = RemoveNils
 

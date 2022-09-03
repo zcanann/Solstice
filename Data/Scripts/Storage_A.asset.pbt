@@ -17,6 +17,18 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:CharacterSchemaTable"
+        AssetReference {
+          Id: 13376466074009091413
+        }
+      }
+      Overrides {
+        Name: "cs:Logger"
+        AssetReference {
+          Id: 4739618440715284858
+        }
+      }
+      Overrides {
         Name: "cs:TableUtils"
         AssetReference {
           Id: 11279245430205585369
