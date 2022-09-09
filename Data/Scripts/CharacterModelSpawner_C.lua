@@ -1,4 +1,5 @@
-local Framework = require(script:GetCustomProperty("Framework"))
+local FRAMEWORK = require(script:GetCustomProperty("Framework"))
+local CHARACTER_MODEL_INDEXER = require(script:GetCustomProperty("CharacterModelIndexer"))
 
 -- Variables
 local playerModels = { }
@@ -6,64 +7,65 @@ local playerModels = { }
 local cachedPlayerRaces = { }
 local cachedPlayerGenders = { }
 local cachedPlayerHeights = { }
-local cachedPlayerCustomizations = { }
+local cachedPlayerCosmetics = { }
 
 local raceListeners = { }
 local genderListeners = { }
 local heightListeners = { }
-local customizationsListeners = { }
+local cosmeticsListeners = { }
 
 function OnEntityEnteredRange(proximityObjectId)
-    local objectInstance = Framework.Networking.GetProximityInstance(proximityObjectId)
+    local objectInstance = FRAMEWORK.Networking.GetProximityInstance(proximityObjectId)
 
-    if not Framework.IsEntity(objectInstance) then
+    if not FRAMEWORK.IsEntity(objectInstance) then
         return
     end
 
     if objectInstance:IsA("Player") then
         if not raceListeners[proximityObjectId] then
-            raceListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
+            raceListeners[proximityObjectId] = FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.RACE, OnEntityRaceChanged)
         end
         if not genderListeners[proximityObjectId] then
-            genderListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.GENDER, OnEntityGenderChanged)
+            genderListeners[proximityObjectId] = FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.GENDER, OnEntityGenderChanged)
         end
         if not heightListeners[proximityObjectId] then
-            heightListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
+            heightListeners[proximityObjectId] = FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.HEIGHT, OnEntityHeightChanged)
         end
-        if not customizationsListeners[proximityObjectId] then
-            customizationsListeners[proximityObjectId] = Framework.Events.ListenForProximityEvent(proximityObjectId, Framework.Networking.ProximityKeys.Entity.CUSTOMIZATIONS, OnEntityCustomizationsChanged)
+        if not cosmeticsListeners[proximityObjectId] then
+            cosmeticsListeners[proximityObjectId] = FRAMEWORK.Events.ListenForProximityEvent(proximityObjectId, FRAMEWORK.Networking.ProximityKeys.Entity.COSMETICS, OnEntityCosmeticsChanged)
         end
     end
 end
 
 function OnEntityLeftRange(proximityObjectId)
-    Framework.Events.Disconnect(raceListeners[proximityObjectId])
+    FRAMEWORK.Events.Disconnect(raceListeners[proximityObjectId])
     raceListeners[proximityObjectId] = nil
     cachedPlayerRaces[proximityObjectId] = nil
 
-    Framework.Events.Disconnect(genderListeners[proximityObjectId])
+    FRAMEWORK.Events.Disconnect(genderListeners[proximityObjectId])
     genderListeners[proximityObjectId] = nil
     cachedPlayerGenders[proximityObjectId] = nil
 
-    Framework.Events.Disconnect(heightListeners[proximityObjectId])
+    FRAMEWORK.Events.Disconnect(heightListeners[proximityObjectId])
     heightListeners[proximityObjectId] = nil
     cachedPlayerHeights[proximityObjectId] = nil
 
-    Framework.Events.Disconnect(customizationsListeners[proximityObjectId])
-    customizationsListeners[proximityObjectId] = nil
-    cachedPlayerCustomizations[proximityObjectId] = nil
+    FRAMEWORK.Events.Disconnect(cosmeticsListeners[proximityObjectId])
+    cosmeticsListeners[proximityObjectId] = nil
+    cachedPlayerCosmetics[proximityObjectId] = nil
 
     if Object.IsValid(playerModels[proximityObjectId]) then
         playerModels[proximityObjectId]:Destroy()
     end
+    
     local player = Game.FindPlayer(proximityObjectId)
     DestroyModel(player)
     playerModels[proximityObjectId] = nil
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
 end
 
 function RebuildModel(proximityObjectId)
-    local player = Framework.Networking.GetProximityInstance(proximityObjectId)
+    local player = FRAMEWORK.Networking.GetProximityInstance(proximityObjectId)
 
     if not player or not Object.IsValid(player) or not player:IsA("Player") then
         warn("Invalid player provided")
@@ -73,36 +75,26 @@ function RebuildModel(proximityObjectId)
     local race = cachedPlayerRaces[proximityObjectId]
     local gender = cachedPlayerGenders[proximityObjectId]
     local height = cachedPlayerHeights[proximityObjectId]
-    local customizations = cachedPlayerCustomizations[proximityObjectId]
+    local cosmetics = cachedPlayerCosmetics[proximityObjectId]
 
-    if not race or not gender or not height or not customizations then
+    if not race or not gender or not height or not cosmetics then
         -- Still waiting on the data we need to construct the model
         return
     end
 
-    -- TODO: Pick a default "invalid" player model
-    local playerModelAsset = Framework.Storage.Keys.CharacterCustomizations.Framework_ASCENDANT_FEMININE_VARIANT_A
+    local playerModelAsset = nil
     local playerModel = nil
-    local modelId = customizations[Framework.Storage.Keys.CharacterCustomizations.BASE_MODEL_ID] or 1
-
-    local modelTable = Framework.Storage.Keys.CharacterCustomizations.GetModelTable(race, gender)
-
-    if modelTable then
-        local modelCount = Framework.Utils.Table.Count(modelTable)
-        if modelCount > 0 then
-            modelId = CoreMath.Clamp(modelId, 1, modelCount)
-            if modelTable[modelId] then
-                playerModelAsset = modelTable[modelId]
-            end
-        end
-    end
+    local modelId = cosmetics.model
+	local playerModelAsset = CHARACTER_MODEL_INDEXER.Index({ race = race, gender = gender }, modelId)
+	
+	print(playerModelAsset)
 
     local playerModelAssetId, _ = CoreString.Split(playerModelAsset, ":")
 
     -- No need to destroy/respawn the model if it is already spawned
     if Object.IsValid(player.clientUserData.model) and player.clientUserData.model.sourceTemplateId == playerModelAssetId then
-        -- Customizations may have changed though
-        RebuildCustomizations(player.clientUserData.model, customizations, playerModelAsset)
+        -- Cosmetics may have changed though
+        RebuildCosmetics(player.clientUserData.model, cosmetics, playerModelAsset)
         return
     end
 
@@ -124,31 +116,33 @@ function RebuildModel(proximityObjectId)
         playerModel:SetWorldRotation(previousRotation)
     end
     playerModels[player.id] = playerModel
-    RebuildCustomizations(playerModel, customizations, playerModelAsset)
+    RebuildCosmetics(playerModel, cosmetics, playerModelAsset)
 
-    Framework.Events.Broadcast.LocalReliable(Framework.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
+    FRAMEWORK.Events.Broadcast.LocalReliable(FRAMEWORK.Events.Keys.Entities.NEARBY_ENTITY_MODEL_CHANGED, { player })
 end
 
-function RebuildCustomizations(playerModel, customizations, playerModelAsset)
-    local skinColorId = customizations[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLOR_ID] or 1
-    local decalId = customizations[Framework.Storage.Keys.CharacterCustomizations.DECAL_ID] or 1
-    local hairStyleId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_STYLE_ID] or 1
-    local hairColorId = customizations[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLOR_ID] or 1
-    local facialHairId = customizations[Framework.Storage.Keys.CharacterCustomizations.FACIAL_HAIR_ID] or 1
-    local customizationOptions = Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATION_OPTIONS[playerModelAsset]
+function RebuildCosmetics(playerModel, cosmetics, playerModelAsset)
+	-- TODO: Fix
+	if true then return end
+    local skinColorId = cosmetics[FRAMEWORK.Storage.Keys.CharacterCosmetics.SKIN_COLOR_ID] or 1
+    local decalId = cosmetics[FRAMEWORK.Storage.Keys.CharacterCosmetics.DECAL_ID] or 1
+    local hairStyleId = cosmetics[FRAMEWORK.Storage.Keys.CharacterCosmetics.HAIR_STYLE_ID] or 1
+    local hairColorId = cosmetics[FRAMEWORK.Storage.Keys.CharacterCosmetics.HAIR_COLOR_ID] or 1
+    local facialHairId = cosmetics[FRAMEWORK.Storage.Keys.CharacterCosmetics.FACIAL_HAIR_ID] or 1
+    local cosmeticOptions = FRAMEWORK.Storage.Keys.CharacterCosmetics.CUSTOMIZATION_OPTIONS[playerModelAsset]
 
-    if customizationOptions then
-        local hairOptions = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.HAIR_OPTIONS]
-        local skinColorOptions = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.SKIN_COLORS]
-        local colorAdjustments = customizationOptions[Framework.Storage.Keys.CharacterCustomizations.COLOR_ADJUSTMENTS]
+    if cosmeticOptions then
+        local hairOptions = cosmeticOptions[FRAMEWORK.Storage.Keys.CharacterCosmetics.HAIR_OPTIONS]
+        local skinColorOptions = cosmeticOptions[FRAMEWORK.Storage.Keys.CharacterCosmetics.SKIN_COLORS]
+        local colorAdjustments = cosmeticOptions[FRAMEWORK.Storage.Keys.CharacterCosmetics.COLOR_ADJUSTMENTS]
 
         if hairOptions then
             local hairOptionSet = hairOptions[hairStyleId]
 
             if hairOptionSet then
-                local hairMeshAsset = hairOptionSet[Framework.Storage.Keys.CharacterCustomizations.HAIR_MESH]
-                local materialOverride = hairOptionSet[Framework.Storage.Keys.CharacterCustomizations.MATERIAL_OVERRIDE]
-                local hairColorsSet = hairOptionSet[Framework.Storage.Keys.CharacterCustomizations.HAIR_COLORS]
+                local hairMeshAsset = hairOptionSet[FRAMEWORK.Storage.Keys.CharacterCosmetics.HAIR_MESH]
+                local materialOverride = hairOptionSet[FRAMEWORK.Storage.Keys.CharacterCosmetics.MATERIAL_OVERRIDE]
+                local hairColorsSet = hairOptionSet[FRAMEWORK.Storage.Keys.CharacterCosmetics.HAIR_COLORS]
                 local hairColorOverride = nil
 
                 if hairColorsSet then
@@ -156,15 +150,15 @@ function RebuildCustomizations(playerModel, customizations, playerModelAsset)
                 end
 
                 if hairMeshAsset then
-                    Framework.Utils.Meshes.AssignHairAsset(playerModel, hairMeshAsset, hairColorOverride, materialOverride)
+                    FRAMEWORK.Utils.Meshes.AssignHairAsset(playerModel, hairMeshAsset, hairColorOverride, materialOverride)
                 end
             end
         end
 
         if skinColorOptions and skinColorOptions[skinColorId] then
             local skinColorOption = skinColorOptions[skinColorId]
-            local skinColor = skinColorOption[Framework.Storage.Keys.CharacterCustomizations.Palette.SKIN_COLOR]
-            Framework.Utils.Meshes.AssignSkinColor(playerModel, skinColor, colorAdjustments)
+            local skinColor = skinColorOption[FRAMEWORK.Storage.Keys.CharacterCosmetics.Palette.SKIN_COLOR]
+            FRAMEWORK.Utils.Meshes.AssignSkinColor(playerModel, skinColor, colorAdjustments)
         end
     end
 end
@@ -193,8 +187,8 @@ function OnEntityHeightChanged(proximityObjectId, height)
     RebuildModel(proximityObjectId)
 end
 
-function OnEntityCustomizationsChanged(proximityObjectId, customizations)
-    cachedPlayerCustomizations[proximityObjectId] = customizations
+function OnEntityCosmeticsChanged(proximityObjectId, cosmetics)
+    cachedPlayerCosmetics[proximityObjectId] = cosmetics
     RebuildModel(proximityObjectId)
 end
 
@@ -205,6 +199,6 @@ function OnForceRebuildModel(player)
     end
 end
 
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnEntityEnteredRange)
-Framework.Events.Listen(Framework.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnEntityLeftRange)
-Framework.Events.Listen(Framework.Events.Keys.Entities.FORCE_REBUILD_NEARBY_ENTITY_MODEL, OnForceRebuildModel)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_ENTERED_PLAYER_RANGE, OnEntityEnteredRange)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Networking.EVENT_PROXIMITY_OBJECT_LEFT_PLAYER_RANGE, OnEntityLeftRange)
+FRAMEWORK.Events.Listen(FRAMEWORK.Events.Keys.Entities.FORCE_REBUILD_NEARBY_ENTITY_MODEL, OnForceRebuildModel)

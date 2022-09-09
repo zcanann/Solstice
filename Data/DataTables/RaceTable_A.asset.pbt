@@ -6,6 +6,5 @@ Assets {
   VirtualFolderPath: "Storage"
   VirtualFolderPath: "Character"
   DataTableAsset {
-    HasKeyColumn: true
   }
 }

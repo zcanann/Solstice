@@ -195,7 +195,7 @@ function RequestChangeCustomizations()
     end
     lastRequestedCustomizations = customizationsSerialized
 
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CUSTOMIZATIONS, { customizations })
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_COSMETICS, { customizations })
 end
 
 function BindSelectorButtons(selector, callback, argsLeft, argsRight)
@@ -218,7 +218,7 @@ function OnBeginCustomizeCharacterClicked()
 end
 
 function OnAcceptChangesButtonClicked()
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ACCEPT_CUSTOMIZATIONS)
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ACCEPT_COSMETICS)
 end
 
 function OnCancelChangesButtonClicked()
@@ -226,7 +226,7 @@ function OnCancelChangesButtonClicked()
         allCustomizations[activeCustomizationKey] = cancelCustomizatons
         RequestChangeCustomizations()
     end
-    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_CUSTOMIZATIONS)
+    Framework.Events.Broadcast.ClientToServerReliable(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_COSMETICS)
 end
 
 BindSelectorButtons(BASE_MODEL_SELECTOR, ChangeBaseModel, -1, 1)

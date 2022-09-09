@@ -165,7 +165,7 @@ function OnFinalizeCreateNewCharacterRequested(player)
     initialData[Framework.Storage.Keys.Characters.RACE] = characterSelectScreenStates[player].race
     initialData[Framework.Storage.Keys.Characters.NAME] = characterSelectScreenStates[player].name
     initialData[Framework.Storage.Keys.Characters.ZONE] = Framework.Storage.Keys.Zones.UNKNOWN
-    initialData[Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATIONS] = characterSelectScreenStates[player].customizations
+    initialData[Framework.Storage.Keys.CharacterCustomizations.COSMETICS] = characterSelectScreenStates[player].customizations
 
     -- Determine the faction from the provided race
     if Framework.Utils.Table.Contains(Framework.Storage.Keys.Races.ITHKUIL, initialData[Framework.Storage.Keys.Characters.RACE]) then
@@ -222,7 +222,7 @@ function OnRequestSelectCharacter(player, characterIdToSelect)
     SetActiveGender(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.GENDER))
     SetActiveRace(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.RACE))
     SetActiveName(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.Characters.NAME))
-    SetActiveCustomizations(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.CharacterCustomizations.CUSTOMIZATIONS))
+    SetActiveCustomizations(player, Framework.Storage.GetCharacterKey(player, Framework.Storage.Keys.CharacterCustomizations.COSMETICS))
     SendCharacterSelectStateData(player)
 end
 
@@ -301,7 +301,7 @@ function SetActiveCustomizations(player, customizations)
 
     UpdatePreviewEquipment(player)
 
-    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.CUSTOMIZATIONS, customizations)
+    Framework.Networking.SetProximityData(player.id, Framework.Networking.ProximityKeys.Entity.COSMETICS, customizations)
 end
 
 function SetActiveName(player, name)
@@ -394,7 +394,7 @@ Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQ
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_RACE, OnRequestSetActiveRace)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_GENDER, OnRequestSetActiveGender)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CLASS, OnRequestSetActiveClass)
-Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_CUSTOMIZATIONS, OnRequestSetActiveCustomizations)
-Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ACCEPT_CUSTOMIZATIONS, OnRequestAcceptCustomizations)
-Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_CUSTOMIZATIONS, OnRequestCancelCustomizations)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_SET_ACTIVE_COSMETICS, OnRequestSetActiveCustomizations)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ACCEPT_COSMETICS, OnRequestAcceptCustomizations)
+Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_CANCEL_COSMETICS, OnRequestCancelCustomizations)
 Framework.Events.ListenForPlayer(Framework.Events.Keys.CharacterSelect.EVENT_REQUEST_ENTER_WORLD, OnEnterWorldRequested)

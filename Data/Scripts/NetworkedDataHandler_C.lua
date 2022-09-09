@@ -15,40 +15,27 @@ local localPlayer = Game.GetLocalPlayer()
 
 function OnPrivateNetworkedDataChanged(player, key)
     -- Perform a diff on the new data vs the previous. We can then figure out which top-level subkeys changed, and fire events for them.
-    local data = player:GetPrivateNetworkedData(key)
-    local diff = FRAMEWORK.Utils.Table.Diff(networkedDataCache[key], data)
+    local networkedData = player:GetPrivateNetworkedData(key)
+    local diff = FRAMEWORK.Utils.Table.Diff(networkedDataCache[key], networkedData)
 
-    networkedDataCache[key] = data;
-
-    FRAMEWORK.Dump(diff)
+    networkedDataCache[key] = networkedData;
     
     if key == FRAMEWORK.Storage.ReplicationKey then
-    	-- Handle the case where the networked data is storage data
-    	SendStorageDataEvents(data, diff)
+    	-- Handle the case where the networked data is storage data (private data)
+    	SendStorageDataEvents(networkedData, diff)
     else
-    	-- Handle the case where the networked data is runtime data (proximity data)
-        SendProximityDataEvents(key, data, diff)
+    	-- Handle the case where the networked data is runtime data (public proximity data)
+        SendProximityDataEvents(key, networkedData, diff)
     end
 end
 
-function SendStorageDataEvents(data, diff)
+function SendStorageDataEvents(networkedData, diff)
     local diffKeys = FRAMEWORK.Utils.Table.GetDiffKeys(diff)
     
     for diffKey, _ in pairs(diffKeys) do
+    	local changedNetworkedData = networkedData and networkedData[diffKey]
     	print(diffKey)
-        -- Only send data for this particular subkey
-        --[[
-        local subData = nil
-        if data then
-            subData = data[subKey]
-        end
-	    
-		if subData then
-		    for characterDataKey, _ in pairs(subData) do
-		        FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. characterDataKey, { subData[characterDataKey] })
-		    end
-		end
-		--]]
+        FRAMEWORK.Events.Broadcast.Local(FRAMEWORK.Events.Keys.Storage.EVENT_CHARACTER_DATA_KEY_CHANGED_PREFIX .. diffKey, { changedNetworkedData })
     end
 end
 

@@ -24,7 +24,7 @@ Framework.Error = Framework.Logger.Error
 Framework.Dump = function (object)
     Framework.Print(Framework.Utils.Table.Serialize(object))
 end
-Framework.DumpStackTrace = function (object)
+Framework.DumpStackTrace = function ()
     Framework.Dump(CoreDebug.GetStackTrace())
 end
 

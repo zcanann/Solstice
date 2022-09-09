@@ -1,6 +1,9 @@
 -- Partial Framework includes
 local FRAMEWORK = { }
 FRAMEWORK.Dump = require(script:GetCustomProperty("Dump")).Dump
+FRAMEWORK.DumpStackTrace = function ()
+    FRAMEWORK.Dump(CoreDebug.GetStackTrace())
+end
 FRAMEWORK.Logger = require(script:GetCustomProperty("Logger"))
 FRAMEWORK.Strings = require(script:GetCustomProperty("Strings"))
 FRAMEWORK.Utils = { }
@@ -14,6 +17,8 @@ StorageAPI.ReplicationKey = "storage"
 
 -- Format: (name)_(Index|Object)Array(count)(strategy)
 local regexTableArray = "(.+)_(.*)Array(%d*)(.*)"
+-- Format: (name)_Indexer
+local regexTableIndexer = "(.+)_Indexer"
 -- Format: (name)_Index(strategy)
 local regexTableIndex = "(.+)_Index(.*)"
 -- Format: (name)_Import
@@ -28,7 +33,45 @@ function GenerateGuid()
     end)
 end
 
-function LoadSchema(schemaTable, extractedSchema)
+function InitializeIndex(schemaTable, extractedSchema, name, index, key, strategy, dataTable, extractedIndexers)
+	-- Check for an indexer script. These are custom scripts that help indexing into complex tables, which may depend on other data
+	-- For example, a character's hair style index depends on the player's model, which in turn depends on their race and gender
+	local indexer = schemaTable[name .. "_Indexer"]
+	
+	if indexer then
+		indexer = require(indexer)
+	end
+	
+	local initialValue = -1
+	
+	if strategy == "Rand" then
+		-- Compute the max. If using a custom indexer, this will be computed later due to potential dependencies
+		if indexer ~= nil then
+			initialValue = indexer
+		else
+			initialValue = math.random(1, FRAMEWORK.Utils.Tables.Count(dataTable))
+		end
+	elseif strategy == "Default" then
+		initialValue = 1
+	elseif strategy == "" or strategy == nil then
+		initialValue = -1
+	else
+		warn("Unknown index strategy provided in storage schema: " .. key)
+		warn("Expecting (name)_Index(strategy)")
+	end
+	
+	if type(initialValue) == "number" then
+		if index == nil then
+			extractedSchema[name] = initialValue
+		else
+			extractedSchema[name][index] = initialValue
+		end
+	else
+		table.insert(extractedIndexers, { extractedSchema, name, index, initialValue })
+	end
+end
+
+function LoadSchema(schemaTable, extractedSchema, extractedIndexers)
 	if schemaTable == nil then
 		return
 	end
@@ -36,11 +79,11 @@ function LoadSchema(schemaTable, extractedSchema)
 	for key, value in pairs(schemaTable) do
 		-- Array types
 		if string.match(key, regexTableArray) then
-			local name, type, count, strategy = string.match(key, regexTableArray)
+			local name, arrayType, count, strategy = string.match(key, regexTableArray)
 			count = count and tonumber(count) -- Convert nullable string to nullable int
 			extractedSchema[name] = { }
 			
-			if type == "Object" then
+			if arrayType == "Object" then
 				if count then
 					for index = 1, count do
 						extractedSchema[name][index] = { }
@@ -48,17 +91,10 @@ function LoadSchema(schemaTable, extractedSchema)
 				else
 					extractedSchema[name] = { }
 				end
-			elseif type == "Index" then
-				-- TODO: Check for an indexer, which is an optional custom script in value[1].indexer
+			elseif arrayType == "Index" then
 				if count then
 					for index = 1, count do
-						if strategy == "Rand" then
-							extractedSchema[name][index] = math.random(1, FRAMEWORK.Utils.Tables.Count(value))
-						elseif strategy == "Default" then
-							extractedSchema[name][index] = 1
-						else
-							extractedSchema[name][index] = -1
-						end
+						InitializeIndex(schemaTable, extractedSchema, name, index, key, strategy, value, extractedIndexers)
 					end
 				else
 					extractedSchema[name] = { }
@@ -68,19 +104,11 @@ function LoadSchema(schemaTable, extractedSchema)
 				warn("Expecting (name)_(Index|Object)Array(count)(strategy)")
 			end
 		-- Index types
+		elseif string.match(key, regexTableIndexer) then
+			-- No action required, handled below
 		elseif string.match(key, regexTableIndex) then
 			local name, strategy = string.match(key, regexTableIndex)
-			if strategy == "Rand" then
-				extractedSchema[name] = math.random(1, FRAMEWORK.Utils.Tables.Count(value))
-			elseif strategy == "Default" then
-				extractedSchema[name] = 1
-			elseif strategy == "" or strategy == nil then
-				extractedSchema[name] = -1
-			else
-				warn("Unknown index strategy provided in storage schema: " .. key)
-				warn("Expecting (name)_Index(strategy)")
-				extractedSchema[name] = -1
-			end
+			InitializeIndex(schemaTable, extractedSchema, name, nil, key, strategy, value, extractedIndexers)
 		-- Full table import
 		elseif string.match(key, regexTableImport) then
 			local name = string.match(key, regexTableImport)
@@ -89,7 +117,7 @@ function LoadSchema(schemaTable, extractedSchema)
 		elseif type(value) == "table" then
 			local name = key
 			extractedSchema[name] = { }
-			LoadSchema(value[1], extractedSchema[name])
+			LoadSchema(value[1], extractedSchema[name], extractedIndexers)
 		-- Random Guid generation
 		elseif string.match(key, regexGuid) then
 			local name = string.match(key, regexGuid)
@@ -99,6 +127,54 @@ function LoadSchema(schemaTable, extractedSchema)
 			local name = key
 			extractedSchema[name] = value
 		end
+	end
+end
+
+function ResolveDependencies(extractedSchema, extractedIndexers)
+	local lastCount = 0
+	local count = FRAMEWORK.Utils.Tables.Count(extractedIndexers)
+	
+	while count > 0 do
+		if count <= lastCount then
+			FRAMEWORK.Logger.Warn("Unable to resolve schema dependencies! Dumping remaining indexers:")
+			for _, params in ipairs(extractedIndexers) do
+				localSchema, name, localSchemaIndex, indexer = table.unpack(params)
+				FRAMEWORK.Logger.Warn(name)
+			end
+			return
+		end
+		
+		local toDelete = { }
+		
+		for index, params in ipairs(extractedIndexers) do
+			localSchema, name, localSchemaIndex, indexer = table.unpack(params)
+			
+			if indexer.AreDependenciesResolved(extractedSchema) then
+				local max = indexer.Max(extractedSchema)
+				local initialValue = max
+				
+				if max > 0 then
+					math.random(1,max)
+				end
+				
+				if localSchemaIndex == nil then
+					localSchema[name] = initialValue
+					print(localSchema[name])
+				else
+					localSchema[name][localSchemaIndex] = initialValue
+					print(localSchema[name][localSchemaIndex])
+				end
+				
+				table.insert(toDelete, index)
+			end
+			
+			for _, index in ipairs(toDelete) do
+				extractedIndexers[index] = nil
+			end
+		end
+		
+		lastCount = count
+		count = FRAMEWORK.Utils.Tables.Count(extractedIndexers)
 	end
 end
 
@@ -137,11 +213,13 @@ end
 
 StorageAPI.WritePlayerData = function(player, playerData)
 	if Environment.IsClient() then
+		FRAMEWORK.DumpStackTrace()
 		error("Attempting to write player storage from a client")
 		return
 	end
 	
 	if not playerData then
+		FRAMEWORK.DumpStackTrace()
 		error("No data provided (nil playerData)")
 		return
 	end
@@ -171,8 +249,10 @@ StorageAPI.LoadSchema = function(schema)
 	
 	local schema = schema[1]
 	local extractedSchema = { }
+	local extractedIndexers = { }
 	
-	LoadSchema(schema, extractedSchema)
+	LoadSchema(schema, extractedSchema, extractedIndexers)
+	ResolveDependencies(extractedSchema, extractedIndexers)
 	-- FRAMEWORK.Dump(extractedSchema)
 	
 	return extractedSchema
@@ -199,10 +279,8 @@ StorageAPI.GetActiveCharacterData = function(player)
 	
 	-- Fallback on a random character, and update the activeId to point to this character
 	playerData.activeId = activeCharacter and activeCharacter.id
-	StorageAPI.WritePlayerData(playerData)
+	StorageAPI.WritePlayerData(player, playerData)
 	return activeCharacter
 end
-
-StorageAPI.LoadSchema()
 
 return StorageAPI
